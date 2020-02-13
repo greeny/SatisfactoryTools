@@ -1,0 +1,36 @@
+{
+	"name": "satisfactory-tools",
+	"version": "0.0.1",
+	"description": "A collection of Satisfactory tools",
+	"author": "greeny",
+	"private": true,
+	"scripts": {
+		"build": "webpack --mode production",
+		"start": "webpack --mode development --progress --color --watch",
+		"parseDocs": "ts-node -r tsconfig-paths/register bin/parseDocs.ts"
+	},
+	"devDependencies": {
+		"@types/angular": "^1.6.56",
+		"@types/angular-ui-router": "^1.1.40",
+		"@types/node": "^13.7.1",
+		"ts-loader": "^6.2.1",
+		"tsconfig-paths": "^3.9.0",
+		"tsconfig-paths-webpack-plugin": "^3.2.0",
+		"tslint": "^5.20.1",
+		"tslint-webpack-plugin": "^2.1.0",
+		"typescript": "^3.7.2",
+		"webpack": "^4.41.2",
+		"webpack-cli": "^3.3.10"
+	},
+	"dependencies": {
+		"@types/angular-sanitize": "^1.7.0",
+		"@types/bootstrap": "^4.3.1",
+		"angular": "^1.7.8",
+		"angular-sanitize": "^1.7.9",
+		"angular-ui-router": "^1.0.25",
+		"bootstrap": "^4.4.1",
+		"jquery": "^3.4.1",
+		"popper.js": "^1.16.1",
+		"ts-node": "^8.6.2"
+	}
+}

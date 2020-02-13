@@ -1,0 +1,27 @@
+{
+	"extends": "tslint:recommended",
+	"rules": {
+		"callable-types": false,
+		"comment-format": false,
+		"indent": [true, "tabs", 4],
+		"max-line-length": {
+			"options": [200]
+		},
+		"new-parens": false,
+		"no-arg": true,
+		"no-bitwise": false,
+		"no-conditional-assignment": true,
+		"no-consecutive-blank-lines": false,
+		"no-console": {
+			"severity": "warning",
+			"options": ["debug", "info", "log", "time", "timeEnd", "trace"]
+		},
+		"no-empty": [true, "allow-empty-functions"],
+		"no-var-requires": false,
+		"object-literal-shorthand": [true, "never"],
+		"object-literal-sort-keys": false,
+		"one-line": [true, "check-catch", "check-finally", "check-else"],
+		"ordered-imports": false,
+		"quotemark": [true, "single", "avoid-escape", "avoid-template"]
+	}
+}

@@ -2,4 +2,11 @@
 .idea
 .vscode
 
-# Project
+# Satisfactory Data file for parsing
+data/Docs.json
+
+# Node stuff
+node_modules
+
+# Generated sources
+www/assets/app.js
