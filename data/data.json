@@ -3613,7 +3613,7 @@
 			"ingredients": [
 				{
 					"item": "Desc_HeavyOilResidue_C",
-					"amount": 3000
+					"amount": 5000
 				},
 				{
 					"item": "Desc_CompactedCoal_C",
@@ -3622,8 +3622,8 @@
 			],
 			"products": [
 				{
-					"item": "Desc_TurboFuel_C",
-					"amount": 5000
+					"item": "Desc_LiquidTurboFuel_C",
+					"amount": 4000
 				}
 			],
 			"producedIn": [
@@ -3650,6 +3650,33 @@
 			"products": [
 				{
 					"item": "Desc_TurboFuel_C",
+					"amount": 1
+				}
+			],
+			"producedIn": [
+				"Build_OilRefinery_C"
+			]
+		},
+		{
+			"slug": "unpackage-turbo-fuel",
+			"name": "Unpackage Turbo Fuel",
+			"className": "Recipe_UnpackageTurboFuel_C",
+			"alternate": false,
+			"time": 12,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_TurboFuel_C",
+					"amount": 1
+				}
+			],
+			"products": [
+				{
+					"item": "Desc_LiquidTurboFuel_C",
+					"amount": 1000
+				},
+				{
+					"item": "Desc_FluidCanister_C",
 					"amount": 1
 				}
 			],
@@ -5199,8 +5226,8 @@
 			],
 			"products": [
 				{
-					"item": "Desc_TurboFuel_C",
-					"amount": 5
+					"item": "Desc_LiquidTurboFuel_C",
+					"amount": 5000
 				}
 			],
 			"producedIn": [
@@ -5251,7 +5278,7 @@
 			"manualTimeMultiplier": 1,
 			"ingredients": [
 				{
-					"item": "Desc_UraniumCell_C",
+					"item": "Desc_UraniumPellet_C",
 					"amount": 40
 				},
 				{
@@ -7230,6 +7257,31 @@
 			]
 		},
 		{
+			"slug": "color-cartridge",
+			"name": "Color Cartridge",
+			"className": "Recipe_ColorCartridge_C",
+			"alternate": false,
+			"time": 40,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_FlowerPetals_C",
+					"amount": 25
+				}
+			],
+			"products": [
+				{
+					"item": "Desc_ColorCartridge_C",
+					"amount": 50
+				}
+			],
+			"producedIn": [
+				"Build_ConstructorMk1_C",
+				"BP_WorkBenchComponent_C",
+				"BP_WorkshopComponent_C"
+			]
+		},
+		{
 			"slug": "biomass-(mycelia)",
 			"name": "Biomass (Mycelia)",
 			"className": "Recipe_Biomass_Mycelia_C",
@@ -7619,7 +7671,7 @@
 				}
 			],
 			"producedIn": [
-				"Build_AssemblerMk1_C",
+				"Build_ManufacturerMk1_C",
 				"BP_WorkBenchComponent_C",
 				"BP_WorkshopComponent_C"
 			]
@@ -9778,20 +9830,20 @@
 			}
 		},
 		{
-			"slug": "packaged-turbofuel",
-			"className": "Desc_TurboFuel_C",
-			"name": "Packaged Turbofuel",
-			"description": "A more efficient alternative to Fuel. Used in Fuel Generators and vehicles.",
-			"stackSize": 100,
-			"energyValue": 2000,
+			"slug": "turbofuel",
+			"className": "Desc_LiquidTurboFuel_C",
+			"name": "Turbofuel",
+			"description": "A more efficient alternative to Fuel. Used in Fuel Generators.",
+			"stackSize": 50000,
+			"energyValue": 2,
 			"radioactiveDecay": 0,
 			"resourceSinkPoints": 1,
-			"liquid": false,
+			"liquid": true,
 			"fluidColor": {
-				"r": 0,
-				"g": 0,
-				"b": 0,
-				"a": 0
+				"r": 212,
+				"g": 41,
+				"b": 46,
+				"a": 255
 			}
 		},
 		{
@@ -9812,20 +9864,20 @@
 			}
 		},
 		{
-			"slug": "turbofuel",
-			"className": "Desc_LiquidTurboFuel_C",
-			"name": "Turbofuel",
-			"description": "A more efficient alternative to Fuel. Used in Fuel Generators and vehicles.",
-			"stackSize": 50000,
-			"energyValue": 2,
+			"slug": "packaged-turbofuel",
+			"className": "Desc_TurboFuel_C",
+			"name": "Packaged Turbofuel",
+			"description": "Packaged Turbofuel, a more efficient alternative to Fuel. Used in vehicles.",
+			"stackSize": 100,
+			"energyValue": 2000,
 			"radioactiveDecay": 0,
 			"resourceSinkPoints": 1,
-			"liquid": true,
+			"liquid": false,
 			"fluidColor": {
-				"r": 212,
-				"g": 41,
-				"b": 46,
-				"a": 255
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
 			}
 		},
 		{
@@ -9971,6 +10023,23 @@
 			"description": "A strange slug radiating a weak strange power.",
 			"stackSize": 50,
 			"energyValue": 0,
+			"radioactiveDecay": 0,
+			"resourceSinkPoints": 1,
+			"liquid": false,
+			"fluidColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			}
+		},
+		{
+			"slug": "color-cartridge",
+			"className": "Desc_ColorCartridge_C",
+			"name": "Color Cartridge",
+			"description": "Ammo for the Color Gun.\nNecessary to change the color of factory buildings and vehicles.",
+			"stackSize": 200,
+			"energyValue": 900,
 			"radioactiveDecay": 0,
 			"resourceSinkPoints": 1,
 			"liquid": false,
@@ -10175,6 +10244,23 @@
 			"description": "Organs from alien creatures.",
 			"stackSize": 50,
 			"energyValue": 250,
+			"radioactiveDecay": 0,
+			"resourceSinkPoints": 1,
+			"liquid": false,
+			"fluidColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			}
+		},
+		{
+			"slug": "flower-petals",
+			"className": "Desc_FlowerPetals_C",
+			"name": "Flower Petals",
+			"description": "Used for crafting.\nColorful native flower petals.",
+			"stackSize": 200,
+			"energyValue": 100,
 			"radioactiveDecay": 0,
 			"resourceSinkPoints": 1,
 			"liquid": false,
@@ -10828,7 +10914,8 @@
 				"Desc_LiquidBiofuel_C",
 				"Desc_PackagedBiofuel_C",
 				"Desc_HogParts_C",
-				"Desc_SpitterParts_C"
+				"Desc_SpitterParts_C",
+				"Desc_FlowerPetals_C"
 			],
 			"powerProduction": 30,
 			"powerProductionExponent": 1.3
@@ -12067,7 +12154,7 @@
 		{
 			"key": "pipeline",
 			"name": "Pipeline",
-			"description": "Outside indicators show volume, flow rate and direction.\nTransports up to 5m³ liters per minute.\nUsed to transport fluids.",
+			"description": "Outside indicators show volume, flow rate and direction.\nTransports up to 300m³ liters per minute.\nUsed to transport fluids.",
 			"categories": [
 				"SC_Pipes_C"
 			],
