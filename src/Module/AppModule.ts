@@ -16,7 +16,9 @@ export class AppModule
 
 	public register(): void
 	{
-		this.app.config(($locationProvider: ILocationProvider, $stateProvider: StateProvider, $urlRouterProvider: UrlRouterProvider, $sceProvider: ISCEProvider) => {
+		this.app.config([
+			'$locationProvider', '$stateProvider', '$urlRouterProvider', '$sceProvider',
+			($locationProvider: ILocationProvider, $stateProvider: StateProvider, $urlRouterProvider: UrlRouterProvider, $sceProvider: ISCEProvider) => {
 			$locationProvider.html5Mode({
 				enabled: true,
 				requireBase: false,
@@ -39,9 +41,9 @@ export class AppModule
 				url: '/items/{item}',
 				template: require('@templates/Controllers/item.html'),
 			});
-		});
+		}]);
 
-		this.app.run(($transitions: any) => {
+		this.app.run(['$transitions', ($transitions: any) => {
 			$transitions.onFinish({}, () => {
 				const elements = document.getElementsByClassName('tooltip'); // TODO fix jQLite and replace with angular.element
 				for (const index in elements) {
@@ -50,7 +52,7 @@ export class AppModule
 					}
 				}
 			});
-		});
+		}]);
 
 		this.app.directive('appx', () => {
 			return new AppDirective;

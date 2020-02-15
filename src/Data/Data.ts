@@ -93,7 +93,7 @@ export class Data
 				}
 			}
 		}
-		return schematics
+		return schematics;
 	}
 
 	public getItemByClassName(className: string): IItemSchema|null
