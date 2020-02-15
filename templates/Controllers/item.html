@@ -87,7 +87,7 @@
 									</a>
 									<br>
 								</span>
-								<span ng-if="recipe.inMachine">{{scope.getMachine(recipe).metadata.manufacturingSpeed * 60 / recipe.time * product.amount}}&nbsp;/&nbsp;min</span>
+								<span ng-if="recipe.inMachine">{{scope.getMachine(recipe).metadata.manufacturingSpeed * 60 / recipe.time * product.amount|number}}&nbsp;/&nbsp;min</span>
 							</div>
 						</td>
 						<td>
@@ -99,7 +99,7 @@
 									</a>
 									<br>
 								</span>
-								<span ng-if="recipe.inMachine">{{scope.getMachine(recipe).metadata.manufacturingSpeed * 60 / recipe.time * ingredient.amount}}&nbsp;/&nbsp;min</span>
+								<span ng-if="recipe.inMachine">{{scope.getMachine(recipe).metadata.manufacturingSpeed * 60 / recipe.time * ingredient.amount|number}}&nbsp;/&nbsp;min</span>
 							</div>
 						</td>
 						<td>
@@ -111,7 +111,7 @@
 								Workshop
 							</span>
 							<br>
-							<span ng-if="recipe.inMachine">{{recipe.time}}s ({{scope.getMachine(recipe).metadata.manufacturingSpeed * 60 / recipe.time}}&nbsp;/&nbsp;min)</span>
+							<span ng-if="recipe.inMachine">{{recipe.time}}s ({{scope.getMachine(recipe).metadata.manufacturingSpeed * 60 / recipe.time|number}}&nbsp;/&nbsp;min)</span>
 						</td>
 					</tr>
 				</tbody>
@@ -146,7 +146,7 @@
 									</a>
 									<br>
 								</span>
-								<span ng-if="recipe.inMachine">{{scope.getMachine(recipe).metadata.manufacturingSpeed * 60 / recipe.time * product.amount}}&nbsp;/&nbsp;min</span>
+								<span ng-if="recipe.inMachine">{{scope.getMachine(recipe).metadata.manufacturingSpeed * 60 / recipe.time * product.amount|number}}&nbsp;/&nbsp;min</span>
 							</div>
 						</td>
 						<td>
@@ -158,7 +158,7 @@
 									</a>
 									<br>
 								</span>
-								<span ng-if="recipe.inMachine">{{scope.getMachine(recipe).metadata.manufacturingSpeed * 60 / recipe.time * ingredient.amount}}&nbsp;/&nbsp;min</span>
+								<span ng-if="recipe.inMachine">{{scope.getMachine(recipe).metadata.manufacturingSpeed * 60 / recipe.time * ingredient.amount|number}}&nbsp;/&nbsp;min</span>
 							</div>
 						</td>
 						<td>
@@ -170,7 +170,7 @@
 								Workshop
 							</span>
 							<br>
-							<span ng-if="recipe.inMachine">{{recipe.time}}s ({{scope.getMachine(recipe).metadata.manufacturingSpeed * 60 / recipe.time}}&nbsp;/&nbsp;min)</span>
+							<span ng-if="recipe.inMachine">{{recipe.time}}s ({{scope.getMachine(recipe).metadata.manufacturingSpeed * 60 / recipe.time|number}}&nbsp;/&nbsp;min)</span>
 						</td>
 					</tr>
 				</tbody>

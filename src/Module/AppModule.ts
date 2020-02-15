@@ -10,6 +10,17 @@ import {RecentlyVisitedItemsService} from '@src/Module/Services/RecentlyVisitedI
 export class AppModule
 {
 
+	private static generateNumberFormattingFunction()
+	{
+		return (value: number) => {
+			if (value === ~~value) {
+				return value;
+			} else {
+				return value.toFixed(5).replace(/\.?0+$/, '');
+			}
+		};
+	}
+
 	public constructor(private readonly app: IModule)
 	{
 	}
@@ -54,6 +65,10 @@ export class AppModule
 				document.documentElement.scrollTop = 0;
 			});
 		}]);
+
+		this.app.filter('number', () => {
+			return AppModule.generateNumberFormattingFunction();
+		});
 
 		this.app.directive('appx', () => {
 			return new AppDirective;
