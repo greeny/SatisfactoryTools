@@ -51,12 +51,7 @@ export class Data
 		for (const key in recipeData) {
 			const recipe = recipeData[key];
 			for (const ingredient of recipe.ingredients) {
-				if (
-					ingredient.item === item.className &&
-					recipe.producedIn.indexOf('BP_BuildGun_C') === -1 &&
-					recipe.producedIn.indexOf('FGBuildGun') === -1 &&
-					recipe.producedIn.indexOf('BP_WorkshopComponent_C') === -1
-				) {
+				if (item.className === ingredient.item && !recipe.forBuilding) {
 					recipes[key] = recipe;
 				}
 			}
@@ -71,9 +66,7 @@ export class Data
 		for (const key in recipeData) {
 			const recipe = recipeData[key];
 			for (const ingredient of recipe.ingredients) {
-				if (
-					ingredient.item === item.className && (recipe.producedIn.indexOf('BP_BuildGun_C') !== -1 || recipe.producedIn.indexOf('FGBuildGun') !== -1)
-				) {
+				if (ingredient.item === item.className && recipe.forBuilding) {
 					recipes[key] = recipe;
 				}
 			}

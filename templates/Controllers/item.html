@@ -86,7 +86,7 @@
 								</a>
 								<br>
 							</span>
-							<span ng-if="recipe.producedIn.indexOf('BP_WorkshopComponent_C') === -1">{{scope.getMachine(recipe).metadata.manufacturingSpeed * 60 / recipe.time * product.amount}}&nbsp;/&nbsp;min</span>
+							<span ng-if="recipe.inMachine">{{scope.getMachine(recipe).metadata.manufacturingSpeed * 60 / recipe.time * product.amount}}&nbsp;/&nbsp;min</span>
 						</div>
 					</td>
 					<td>
@@ -98,15 +98,19 @@
 								</a>
 								<br>
 							</span>
-							<span ng-if="recipe.producedIn.indexOf('BP_WorkshopComponent_C') === -1">{{scope.getMachine(recipe).metadata.manufacturingSpeed * 60 / recipe.time * ingredient.amount}}&nbsp;/&nbsp;min</span>
+							<span ng-if="recipe.inMachine">{{scope.getMachine(recipe).metadata.manufacturingSpeed * 60 / recipe.time * ingredient.amount}}&nbsp;/&nbsp;min</span>
 						</div>
 					</td>
 					<td>
-						<span class="item-amount">
-							{{recipe.producedIn.indexOf('BP_WorkshopComponent_C') !== -1 ? 'Workshop' : scope.getMachine(recipe).name}}
+						<span class="item-amount" ng-if="recipe.inMachine">
+							{{scope.getMachine(recipe).name}}
+							<small ng-if="recipe.inWorkshop">(or Workshop)</small>
+						</span>
+						<span class="item-amoun" ng-if="!recipe.inMachine && recipe.inWorkshop">
+							Workshop
 						</span>
 						<br>
-						<span ng-if="recipe.producedIn.indexOf('BP_WorkshopComponent_C') === -1">{{recipe.time}}s ({{scope.getMachine(recipe).metadata.manufacturingSpeed * 60 / recipe.time}}&nbsp;/&nbsp;min)</span>
+						<span ng-if="recipe.inMachine">{{recipe.time}}s ({{scope.getMachine(recipe).metadata.manufacturingSpeed * 60 / recipe.time}}&nbsp;/&nbsp;min)</span>
 					</td>
 				</tr>
 			</tbody>
@@ -139,7 +143,7 @@
 								</a>
 								<br>
 							</span>
-							<span ng-if="recipe.producedIn.indexOf('BP_WorkshopComponent_C') === -1">{{scope.getMachine(recipe).metadata.manufacturingSpeed * 60 / recipe.time * product.amount}}&nbsp;/&nbsp;min</span>
+							<span ng-if="recipe.inMachine">{{scope.getMachine(recipe).metadata.manufacturingSpeed * 60 / recipe.time * product.amount}}&nbsp;/&nbsp;min</span>
 						</div>
 					</td>
 					<td>
@@ -151,15 +155,19 @@
 								</a>
 								<br>
 							</span>
-							<span ng-if="recipe.producedIn.indexOf('BP_WorkshopComponent_C') === -1">{{scope.getMachine(recipe).metadata.manufacturingSpeed * 60 / recipe.time * ingredient.amount}}&nbsp;/&nbsp;min</span>
+							<span ng-if="recipe.inMachine">{{scope.getMachine(recipe).metadata.manufacturingSpeed * 60 / recipe.time * ingredient.amount}}&nbsp;/&nbsp;min</span>
 						</div>
 					</td>
 					<td>
-						<span class="item-amount">
-							{{recipe.producedIn.indexOf('BP_WorkshopComponent_C') !== -1 ? 'Workshop' : scope.getMachine(recipe).name}}
+						<span class="item-amount" ng-if="recipe.inMachine">
+							{{scope.getMachine(recipe).name}}
+							<small ng-if="recipe.inWorkshop">(or Workshop)</small>
+						</span>
+						<span class="item-amoun" ng-if="!recipe.inMachine && recipe.inWorkshop">
+							Workshop
 						</span>
 						<br>
-						<span ng-if="recipe.producedIn.indexOf('BP_WorkshopComponent_C') === -1">{{recipe.time}}s ({{scope.getMachine(recipe).metadata.manufacturingSpeed * 60 / recipe.time}}&nbsp;/&nbsp;min)</span>
+						<span ng-if="recipe.inMachine">{{recipe.time}}s ({{scope.getMachine(recipe).metadata.manufacturingSpeed * 60 / recipe.time}}&nbsp;/&nbsp;min)</span>
 					</td>
 				</tr>
 			</tbody>

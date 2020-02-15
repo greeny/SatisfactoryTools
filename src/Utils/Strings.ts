@@ -1,4 +1,3 @@
-import {type} from 'os';
 import {Objects} from '@src/Utils/Objects';
 
 export class Strings
@@ -13,7 +12,7 @@ export class Strings
 
 	public static webalize(name: string): string
 	{
-		return name.replace(/[\s|.]+/gi, '-').replace('™', '').toLowerCase();
+		return name.replace(/[\s|.]+/gi, '-').replace(/[™:]/gi, '').toLowerCase();
 	}
 
 	public static stackSizeFromEnum(size: string): number

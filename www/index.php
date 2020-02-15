@@ -32,6 +32,7 @@
 			background-color: #2B3E50;
 		}
 	</style>
+	<base href="/">
 </head>
 <body>
 

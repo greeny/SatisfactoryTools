@@ -21,15 +21,17 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_ConveyorPole_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_ConveyorBeltMk1_C": {
 			"slug": "conveyor-belt",
@@ -44,15 +46,17 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_ConveyorBeltMk1_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_PowerLine_C": {
 			"slug": "power-line",
@@ -67,15 +71,17 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_PowerLine_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_PowerPoleMk1_C": {
 			"slug": "power-pole",
@@ -98,15 +104,17 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_PowerPoleMk1_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_TradingPost_C": {
 			"slug": "the-hub",
@@ -121,15 +129,17 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_TradingPost_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_SpaceElevator_C": {
 			"slug": "space-elevator",
@@ -156,15 +166,17 @@
 					"amount": 1500
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_SpaceElevator_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"FGBuildGun"
-			]
+			"producedIn": []
 		},
 		"Recipe_ConstructorMk1_C": {
 			"slug": "constructor",
@@ -183,15 +195,17 @@
 					"amount": 8
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_ConstructorMk1_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_MinerMk1_C": {
 			"slug": "miner-mk-1",
@@ -214,15 +228,17 @@
 					"amount": 10
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_MinerMk1_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_SmelterBasicMk1_C": {
 			"slug": "smelter",
@@ -241,15 +257,17 @@
 					"amount": 8
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_SmelterMk1_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_StorageContainerMk1_C": {
 			"slug": "storage-container",
@@ -268,15 +286,17 @@
 					"amount": 10
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_StorageContainerMk1_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_WorkBench_C": {
 			"slug": "craft-bench",
@@ -295,15 +315,17 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_WorkBench_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Workshop_C": {
 			"slug": "equipment-workshop",
@@ -322,15 +344,17 @@
 					"amount": 5
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Workshop_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_PortableMiner_C": {
 			"slug": "portable-miner",
@@ -349,15 +373,17 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": false,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": true,
 			"products": [
 				{
 					"item": "BP_ItemDescriptorPortableMiner_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_WorkshopComponent_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Cable_C": {
 			"slug": "cable",
@@ -372,6 +398,10 @@
 					"amount": 2
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Cable_C",
@@ -379,9 +409,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_ConstructorMk1_C",
-				"BP_WorkBenchComponent_C",
-				"FGBuildableAutomatedWorkBench"
+				"Desc_ConstructorMk1_C"
 			]
 		},
 		"Recipe_Wire_C": {
@@ -397,6 +425,10 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Wire_C",
@@ -404,9 +436,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_ConstructorMk1_C",
-				"BP_WorkBenchComponent_C",
-				"FGBuildableAutomatedWorkBench"
+				"Desc_ConstructorMk1_C"
 			]
 		},
 		"Recipe_IngotCopper_C": {
@@ -422,6 +452,10 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_CopperIngot_C",
@@ -429,9 +463,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_SmelterMk1_C",
-				"BP_WorkBenchComponent_C",
-				"FGBuildableAutomatedWorkBench"
+				"Desc_SmelterMk1_C"
 			]
 		},
 		"Recipe_IronPlateReinforced_C": {
@@ -451,6 +483,10 @@
 					"amount": 12
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_IronPlateReinforced_C",
@@ -458,9 +494,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_AssemblerMk1_C",
-				"BP_WorkBenchComponent_C",
-				"FGBuildableAutomatedWorkBench"
+				"Desc_AssemblerMk1_C"
 			]
 		},
 		"Recipe_Concrete_C": {
@@ -476,6 +510,10 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Cement_C",
@@ -483,9 +521,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_ConstructorMk1_C",
-				"BP_WorkBenchComponent_C",
-				"FGBuildableAutomatedWorkBench"
+				"Desc_ConstructorMk1_C"
 			]
 		},
 		"Recipe_Screw_C": {
@@ -501,6 +537,10 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_IronScrew_C",
@@ -508,9 +548,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_ConstructorMk1_C",
-				"BP_WorkBenchComponent_C",
-				"FGBuildableAutomatedWorkBench"
+				"Desc_ConstructorMk1_C"
 			]
 		},
 		"Recipe_Biomass_Leaves_C": {
@@ -526,6 +564,10 @@
 					"amount": 10
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_GenericBiomass_C",
@@ -533,9 +575,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_ConstructorMk1_C",
-				"BP_WorkBenchComponent_C",
-				"FGBuildableAutomatedWorkBench"
+				"Desc_ConstructorMk1_C"
 			]
 		},
 		"Recipe_Biomass_Wood_C": {
@@ -551,6 +591,10 @@
 					"amount": 4
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_GenericBiomass_C",
@@ -558,9 +602,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_ConstructorMk1_C",
-				"BP_WorkBenchComponent_C",
-				"FGBuildableAutomatedWorkBench"
+				"Desc_ConstructorMk1_C"
 			]
 		},
 		"Recipe_GeneratorBiomass_C": {
@@ -584,15 +626,17 @@
 					"amount": 25
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_GeneratorBiomass_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Biofuel_C": {
 			"slug": "solid-biofuel",
@@ -607,6 +651,10 @@
 					"amount": 8
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Biofuel_C",
@@ -615,7 +663,6 @@
 			],
 			"producedIn": [
 				"Desc_ConstructorMk1_C",
-				"BP_WorkBenchComponent_C",
 				"Desc_AutomatedWorkBench_C"
 			]
 		},
@@ -632,6 +679,10 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_IronPlate_C",
@@ -639,9 +690,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_ConstructorMk1_C",
-				"BP_WorkBenchComponent_C",
-				"FGBuildableAutomatedWorkBench"
+				"Desc_ConstructorMk1_C"
 			]
 		},
 		"Recipe_IronRod_C": {
@@ -657,6 +706,10 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_IronRod_C",
@@ -664,9 +717,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_ConstructorMk1_C",
-				"BP_WorkBenchComponent_C",
-				"FGBuildableAutomatedWorkBench"
+				"Desc_ConstructorMk1_C"
 			]
 		},
 		"Recipe_XenoZapper_C": {
@@ -694,15 +745,17 @@
 					"amount": 50
 				}
 			],
+			"forBuilding": false,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": true,
 			"products": [
 				{
 					"item": "BP_EquipmentDescriptorShockShank_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_WorkshopComponent_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_IngotIron_C": {
 			"slug": "iron-ingot",
@@ -717,6 +770,10 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_IronIngot_C",
@@ -724,9 +781,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_SmelterMk1_C",
-				"BP_WorkBenchComponent_C",
-				"FGBuildableAutomatedWorkBench"
+				"Desc_SmelterMk1_C"
 			]
 		},
 		"Recipe_Fence_01_C": {
@@ -742,15 +797,17 @@
 					"amount": 5
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Fence_01_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Stair_1b_C": {
 			"slug": "stairs",
@@ -769,15 +826,17 @@
 					"amount": 2
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Stair_1b_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Wall_Conveyor_8x4_04_C": {
 			"slug": "wall-conveyor-perpendicular",
@@ -796,15 +855,17 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Wall_Conveyor_8x4_04_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Wall_Conveyor_8x4_04_Steel_C": {
 			"slug": "wall-conveyor-perpendicular",
@@ -823,15 +884,17 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Wall_Conveyor_8x4_04_Steel_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Wall_Window_8x4_03_C": {
 			"slug": "window-8m-x-4m-03",
@@ -850,15 +913,17 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Wall_Window_8x4_03_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Wall_Window_8x4_03_Steel_C": {
 			"slug": "window-8m-x-4m-03",
@@ -877,18 +942,20 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Wall_Window_8x4_03_Steel_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Alternate_AdheredIronPlate_C": {
-			"slug": "alternate:-adhered-iron-plate",
+			"slug": "alternate-adhered-iron-plate",
 			"name": "Alternate: Adhered Iron Plate",
 			"className": "Recipe_Alternate_AdheredIronPlate_C",
 			"alternate": true,
@@ -904,6 +971,10 @@
 					"amount": 2
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_IronPlateReinforced_C",
@@ -931,6 +1002,10 @@
 					"amount": 4
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_CircuitBoard_C",
@@ -938,9 +1013,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_AssemblerMk1_C",
-				"BP_WorkBenchComponent_C",
-				"FGBuildableAutomatedWorkBench"
+				"Desc_AssemblerMk1_C"
 			]
 		},
 		"Recipe_OilPump_C": {
@@ -964,15 +1037,17 @@
 					"amount": 60
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_OilPump_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_OilRefinery_C": {
 			"slug": "refinery",
@@ -999,15 +1074,17 @@
 					"amount": 20
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_OilRefinery_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_LiquidFuel_C": {
 			"slug": "fuel",
@@ -1022,6 +1099,10 @@
 					"amount": 6
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_LiquidFuel_C",
@@ -1049,6 +1130,10 @@
 					"amount": 2
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_PetroleumCoke_C",
@@ -1072,6 +1157,10 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Plastic_C",
@@ -1099,6 +1188,10 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Rubber_C",
@@ -1126,6 +1219,10 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_LiquidFuel_C",
@@ -1153,6 +1250,10 @@
 					"amount": 2
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Plastic_C",
@@ -1180,6 +1281,10 @@
 					"amount": 4
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Rubber_C",
@@ -1191,7 +1296,7 @@
 			]
 		},
 		"Recipe_Alternate_BoltedFrame_C": {
-			"slug": "alternate:-bolted-frame",
+			"slug": "alternate-bolted-frame",
 			"name": "Alternate: Bolted Frame",
 			"className": "Recipe_Alternate_BoltedFrame_C",
 			"alternate": true,
@@ -1207,6 +1312,10 @@
 					"amount": 56
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_ModularFrame_C",
@@ -1234,6 +1343,10 @@
 					"amount": 12
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_ModularFrame_C",
@@ -1241,9 +1354,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_AssemblerMk1_C",
-				"BP_WorkBenchComponent_C",
-				"FGBuildableAutomatedWorkBench"
+				"Desc_AssemblerMk1_C"
 			]
 		},
 		"Recipe_Rotor_C": {
@@ -1263,6 +1374,10 @@
 					"amount": 25
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Rotor_C",
@@ -1270,9 +1385,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_AssemblerMk1_C",
-				"BP_WorkBenchComponent_C",
-				"FGBuildableAutomatedWorkBench"
+				"Desc_AssemblerMk1_C"
 			]
 		},
 		"Recipe_AssemblerMk1_C": {
@@ -1296,15 +1409,17 @@
 					"amount": 10
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_AssemblerMk1_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_CopperSheet_C": {
 			"slug": "copper-sheet",
@@ -1319,6 +1434,10 @@
 					"amount": 2
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_CopperSheet_C",
@@ -1326,9 +1445,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_ConstructorMk1_C",
-				"BP_WorkBenchComponent_C",
-				"FGBuildableAutomatedWorkBench"
+				"Desc_ConstructorMk1_C"
 			]
 		},
 		"Recipe_SpaceElevatorPart_1_C": {
@@ -1348,6 +1465,10 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_SpaceElevatorPart_1_C",
@@ -1359,7 +1480,7 @@
 			]
 		},
 		"Recipe_Alternate_CoatedCable_C": {
-			"slug": "alternate:-coated-cable",
+			"slug": "alternate-coated-cable",
 			"name": "Alternate: Coated Cable",
 			"className": "Recipe_Alternate_CoatedCable_C",
 			"alternate": true,
@@ -1375,6 +1496,10 @@
 					"amount": 2
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Cable_C",
@@ -1386,7 +1511,7 @@
 			]
 		},
 		"Recipe_Alternate_CoatedIronPlate_C": {
-			"slug": "alternate:-coated-iron-plate",
+			"slug": "alternate-coated-iron-plate",
 			"name": "Alternate: Coated Iron Plate",
 			"className": "Recipe_Alternate_CoatedIronPlate_C",
 			"alternate": true,
@@ -1402,6 +1527,10 @@
 					"amount": 4
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_IronPlate_C",
@@ -1413,7 +1542,7 @@
 			]
 		},
 		"Recipe_Alternate_CokeSteelIngot_C": {
-			"slug": "alternate:-coke-steel-ingot",
+			"slug": "alternate-coke-steel-ingot",
 			"name": "Alternate: Coke Steel Ingot",
 			"className": "Recipe_Alternate_CokeSteelIngot_C",
 			"alternate": true,
@@ -1429,6 +1558,10 @@
 					"amount": 15
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_SteelIngot_C",
@@ -1440,7 +1573,7 @@
 			]
 		},
 		"Recipe_Alternate_CopperAlloyIngot_C": {
-			"slug": "alternate:-copper-alloy-ingot",
+			"slug": "alternate-copper-alloy-ingot",
 			"name": "Alternate: Copper Alloy Ingot",
 			"className": "Recipe_Alternate_CopperAlloyIngot_C",
 			"alternate": true,
@@ -1456,6 +1589,10 @@
 					"amount": 5
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_CopperIngot_C",
@@ -1467,7 +1604,7 @@
 			]
 		},
 		"Recipe_Alternate_CopperRotor_C": {
-			"slug": "alternate:-copper-rotor",
+			"slug": "alternate-copper-rotor",
 			"name": "Alternate: Copper Rotor",
 			"className": "Recipe_Alternate_CopperRotor_C",
 			"alternate": true,
@@ -1483,6 +1620,10 @@
 					"amount": 52
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Rotor_C",
@@ -1494,7 +1635,7 @@
 			]
 		},
 		"Recipe_Alternate_DilutedPackagedFuel_C": {
-			"slug": "alternate:-diluted-packaged-fuel",
+			"slug": "alternate-diluted-packaged-fuel",
 			"name": "Alternate: Diluted Packaged Fuel",
 			"className": "Recipe_Alternate_DilutedPackagedFuel_C",
 			"alternate": true,
@@ -1510,6 +1651,10 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Fuel_C",
@@ -1521,7 +1666,7 @@
 			]
 		},
 		"Recipe_Alternate_ElectroAluminumScrap_C": {
-			"slug": "alternate:-electrode---aluminum-scrap",
+			"slug": "alternate-electrode---aluminum-scrap",
 			"name": "Alternate: Electrode - Aluminum Scrap",
 			"className": "Recipe_Alternate_ElectroAluminumScrap_C",
 			"alternate": true,
@@ -1537,6 +1682,10 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_AluminumScrap_C",
@@ -1568,6 +1717,10 @@
 					"amount": 2
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_ElectromagneticControlRod_C",
@@ -1575,9 +1728,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_AssemblerMk1_C",
-				"BP_WorkBenchComponent_C",
-				"FGBuildableAutomatedWorkBench"
+				"Desc_AssemblerMk1_C"
 			]
 		},
 		"Recipe_UraniumCell_C": {
@@ -1597,6 +1748,10 @@
 					"amount": 9
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_UraniumCell_C",
@@ -1604,9 +1759,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_AssemblerMk1_C",
-				"BP_WorkBenchComponent_C",
-				"FGBuildableAutomatedWorkBench"
+				"Desc_AssemblerMk1_C"
 			]
 		},
 		"Recipe_ConveyorBeltMk5_C": {
@@ -1622,15 +1775,17 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_ConveyorBeltMk5_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_ConveyorLiftMk5_C": {
 			"slug": "conveyor-lift-mk-5",
@@ -1645,15 +1800,17 @@
 					"amount": 2
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_ConveyorLiftMk5_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_GeneratorNuclear_C": {
 			"slug": "nuclear-power-plant",
@@ -1684,15 +1841,17 @@
 					"amount": 15
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_GeneratorNuclear_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_AluminumSheet_C": {
 			"slug": "alclad-aluminum-sheet",
@@ -1711,6 +1870,10 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_AluminumPlate_C",
@@ -1718,9 +1881,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_AssemblerMk1_C",
-				"BP_WorkBenchComponent_C",
-				"FGBuildableAutomatedWorkBench"
+				"Desc_AssemblerMk1_C"
 			]
 		},
 		"Recipe_NuclearFuelRod_C": {
@@ -1744,6 +1905,10 @@
 					"amount": 5
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_NuclearFuelRod_C",
@@ -1775,6 +1940,10 @@
 					"amount": 2
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": true,
 			"products": [
 				{
 					"item": "Desc_HazmatFilter_C",
@@ -1782,9 +1951,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_ManufacturerMk1_C",
-				"BP_WorkBenchComponent_C",
-				"BP_WorkshopComponent_C"
+				"Desc_ManufacturerMk1_C"
 			]
 		},
 		"Recipe_HazmatSuit_C": {
@@ -1812,15 +1979,17 @@
 					"amount": 50
 				}
 			],
+			"forBuilding": false,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": true,
 			"products": [
 				{
 					"item": "BP_EquipmentDescriptorHazmatSuit_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_WorkshopComponent_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_AluminaSolution_C": {
 			"slug": "alumina-solution",
@@ -1839,6 +2008,10 @@
 					"amount": 10
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_AluminaSolution_C",
@@ -1870,6 +2043,10 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_AluminumScrap_C",
@@ -1901,6 +2078,10 @@
 					"amount": 7
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_AluminumIngot_C",
@@ -1908,12 +2089,11 @@
 				}
 			],
 			"producedIn": [
-				"Desc_FoundryMk1_C",
-				"BP_WorkBenchComponent_C"
+				"Desc_FoundryMk1_C"
 			]
 		},
 		"Recipe_Alternate_ElectrodeCircuitBoard_C": {
-			"slug": "alternate:-electrode-circuit-board",
+			"slug": "alternate-electrode-circuit-board",
 			"name": "Alternate: Electrode Circuit Board",
 			"className": "Recipe_Alternate_ElectrodeCircuitBoard_C",
 			"alternate": true,
@@ -1929,6 +2109,10 @@
 					"amount": 9
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_CircuitBoard_C",
@@ -1940,7 +2124,7 @@
 			]
 		},
 		"Recipe_Alternate_FlexibleFramework_C": {
-			"slug": "alternate:-flexible-framework",
+			"slug": "alternate-flexible-framework",
 			"name": "Alternate: Flexible Framework",
 			"className": "Recipe_Alternate_FlexibleFramework_C",
 			"alternate": true,
@@ -1960,6 +2144,10 @@
 					"amount": 8
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_SpaceElevatorPart_2_C",
@@ -1971,7 +2159,7 @@
 			]
 		},
 		"Recipe_Alternate_FusedWire_C": {
-			"slug": "alternate:-fused-wire",
+			"slug": "alternate-fused-wire",
 			"name": "Alternate: Fused Wire",
 			"className": "Recipe_Alternate_FusedWire_C",
 			"alternate": true,
@@ -1987,6 +2175,10 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Wire_C",
@@ -2018,15 +2210,17 @@
 					"amount": 2
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_PowerPoleMk2_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_PowerPoleWallDoubleMk2_C": {
 			"slug": "double-sided-wall-power-pole-mk-2",
@@ -2045,15 +2239,17 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_PowerPoleWallDoubleMk2_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_PowerPoleWallMk2_C": {
 			"slug": "wall-power-pole-mk-2",
@@ -2072,15 +2268,17 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_PowerPoleWallMk2_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Quickwire_C": {
 			"slug": "quickwire",
@@ -2095,6 +2293,10 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_HighSpeedWire_C",
@@ -2102,9 +2304,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_ConstructorMk1_C",
-				"BP_WorkBenchComponent_C",
-				"FGBuildableAutomatedWorkBench"
+				"Desc_ConstructorMk1_C"
 			]
 		},
 		"Recipe_BladeRunners_C": {
@@ -2128,15 +2328,17 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": false,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": true,
 			"products": [
 				{
 					"item": "BP_EquipmentDescriptorJumpingStilts_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_WorkshopComponent_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_IngotCaterium_C": {
 			"slug": "caterium-ingot",
@@ -2151,6 +2353,10 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_GoldIngot_C",
@@ -2158,12 +2364,11 @@
 				}
 			],
 			"producedIn": [
-				"Desc_SmelterMk1_C",
-				"BP_WorkBenchComponent_C"
+				"Desc_SmelterMk1_C"
 			]
 		},
 		"Recipe_Alternate_HeavyFlexibleFrame_C": {
-			"slug": "alternate:-heavy-flexible-frame",
+			"slug": "alternate-heavy-flexible-frame",
 			"name": "Alternate: Heavy Flexible Frame",
 			"className": "Recipe_Alternate_HeavyFlexibleFrame_C",
 			"alternate": true,
@@ -2187,6 +2392,10 @@
 					"amount": 104
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_ModularFrameHeavy_C",
@@ -2222,15 +2431,17 @@
 					"amount": 50
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_ManufacturerMk1_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Computer_C": {
 			"slug": "computer",
@@ -2257,6 +2468,10 @@
 					"amount": 52
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Computer_C",
@@ -2264,9 +2479,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_ManufacturerMk1_C",
-				"BP_WorkBenchComponent_C",
-				"FGBuildableAutomatedWorkBench"
+				"Desc_ManufacturerMk1_C"
 			]
 		},
 		"Recipe_ModularFrameHeavy_C": {
@@ -2294,6 +2507,10 @@
 					"amount": 100
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_ModularFrameHeavy_C",
@@ -2301,9 +2518,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_ManufacturerMk1_C",
-				"BP_WorkBenchComponent_C",
-				"FGBuildableAutomatedWorkBench"
+				"Desc_ManufacturerMk1_C"
 			]
 		},
 		"Recipe_SpaceElevatorPart_4_C": {
@@ -2327,6 +2542,10 @@
 					"amount": 2
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_SpaceElevatorPart_4_C",
@@ -2362,6 +2581,10 @@
 					"amount": 2
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_SpaceElevatorPart_5_C",
@@ -2372,47 +2595,8 @@
 				"Desc_ManufacturerMk1_C"
 			]
 		},
-		"Recipe_Truck_C": {
-			"slug": "truck",
-			"name": "Truck",
-			"className": "Recipe_Truck_C",
-			"alternate": false,
-			"time": 1,
-			"manualTimeMultiplier": 1,
-			"ingredients": [
-				{
-					"item": "Desc_Motor_C",
-					"amount": 8
-				},
-				{
-					"item": "Desc_Computer_C",
-					"amount": 10
-				},
-				{
-					"item": "Desc_ModularFrameHeavy_C",
-					"amount": 4
-				},
-				{
-					"item": "Desc_Rubber_C",
-					"amount": 50
-				},
-				{
-					"item": "BP_EquipmentDescriptorBeacon_C",
-					"amount": 10
-				}
-			],
-			"products": [
-				{
-					"item": "Desc_Truck_C",
-					"amount": 1
-				}
-			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
-		},
 		"Recipe_Alternate_HeavyOilResidue_C": {
-			"slug": "alternate:-heavy-oil-residue",
+			"slug": "alternate-heavy-oil-residue",
 			"name": "Alternate: Heavy Oil Residue",
 			"className": "Recipe_Alternate_HeavyOilResidue_C",
 			"alternate": true,
@@ -2424,6 +2608,10 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_HeavyOilResidue_C",
@@ -2439,7 +2627,7 @@
 			]
 		},
 		"Recipe_Alternate_HighSpeedWiring_C": {
-			"slug": "alternate:-high-speed-wiring",
+			"slug": "alternate-high-speed-wiring",
 			"name": "Alternate: High-Speed Wiring",
 			"className": "Recipe_Alternate_HighSpeedWiring_C",
 			"alternate": true,
@@ -2459,6 +2647,10 @@
 					"amount": 2
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_SpaceElevatorPart_3_C",
@@ -2486,6 +2678,10 @@
 					"amount": 5
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_SteelPlateReinforced_C",
@@ -2493,9 +2689,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_AssemblerMk1_C",
-				"BP_WorkBenchComponent_C",
-				"FGBuildableAutomatedWorkBench"
+				"Desc_AssemblerMk1_C"
 			]
 		},
 		"Recipe_Motor_C": {
@@ -2515,6 +2709,10 @@
 					"amount": 2
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Motor_C",
@@ -2522,9 +2720,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_AssemblerMk1_C",
-				"BP_WorkBenchComponent_C",
-				"FGBuildableAutomatedWorkBench"
+				"Desc_AssemblerMk1_C"
 			]
 		},
 		"Recipe_Stator_C": {
@@ -2544,6 +2740,10 @@
 					"amount": 8
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Stator_C",
@@ -2551,9 +2751,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_AssemblerMk1_C",
-				"BP_WorkBenchComponent_C",
-				"FGBuildableAutomatedWorkBench"
+				"Desc_AssemblerMk1_C"
 			]
 		},
 		"Recipe_MinerMk2_C": {
@@ -2581,15 +2779,17 @@
 					"amount": 10
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_MinerMk2_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_SpaceElevatorPart_3_C": {
 			"slug": "automated-wiring",
@@ -2608,6 +2808,10 @@
 					"amount": 60
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_SpaceElevatorPart_3_C",
@@ -2635,6 +2839,10 @@
 					"amount": 20
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_CircuitBoardHighSpeed_C",
@@ -2642,13 +2850,11 @@
 				}
 			],
 			"producedIn": [
-				"Desc_AssemblerMk1_C",
-				"BP_WorkBenchComponent_C",
-				"FGBuildableAutomatedWorkBench"
+				"Desc_AssemblerMk1_C"
 			]
 		},
 		"Recipe_Alternate_PlasticSmartPlating_C": {
-			"slug": "alternate:-plastic-smart-plating",
+			"slug": "alternate-plastic-smart-plating",
 			"name": "Alternate: Plastic Smart Plating",
 			"className": "Recipe_Alternate_PlasticSmartPlating_C",
 			"alternate": true,
@@ -2668,6 +2874,10 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_SpaceElevatorPart_1_C",
@@ -2679,7 +2889,7 @@
 			]
 		},
 		"Recipe_Alternate_PolyesterFabric_C": {
-			"slug": "alternate:-polyester-fabric",
+			"slug": "alternate-polyester-fabric",
 			"name": "Alternate: Polyester Fabric",
 			"className": "Recipe_Alternate_PolyesterFabric_C",
 			"alternate": true,
@@ -2695,6 +2905,10 @@
 					"amount": 10
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Fabric_C",
@@ -2722,6 +2936,10 @@
 					"amount": 5
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Fabric_C",
@@ -2729,13 +2947,11 @@
 				}
 			],
 			"producedIn": [
-				"Desc_AssemblerMk1_C",
-				"BP_WorkBenchComponent_C",
-				"FGBuildableAutomatedWorkBench"
+				"Desc_AssemblerMk1_C"
 			]
 		},
 		"Recipe_Alternate_PolymerResin_C": {
-			"slug": "alternate:-polymer-resin",
+			"slug": "alternate-polymer-resin",
 			"name": "Alternate: Polymer Resin",
 			"className": "Recipe_Alternate_PolymerResin_C",
 			"alternate": true,
@@ -2747,6 +2963,10 @@
 					"amount": 6
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_PolymerResin_C",
@@ -2762,7 +2982,7 @@
 			]
 		},
 		"Recipe_PureAluminumIngot_C": {
-			"slug": "alternate:-pure-aluminum-ingot",
+			"slug": "alternate-pure-aluminum-ingot",
 			"name": "Alternate: Pure Aluminum Ingot",
 			"className": "Recipe_PureAluminumIngot_C",
 			"alternate": true,
@@ -2774,6 +2994,10 @@
 					"amount": 12
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_AluminumIngot_C",
@@ -2785,7 +3009,7 @@
 			]
 		},
 		"Recipe_Alternate_PureCateriumIngot_C": {
-			"slug": "alternate:-pure-caterium-ingot",
+			"slug": "alternate-pure-caterium-ingot",
 			"name": "Alternate: Pure Caterium Ingot",
 			"className": "Recipe_Alternate_PureCateriumIngot_C",
 			"alternate": true,
@@ -2801,6 +3025,10 @@
 					"amount": 2
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_GoldIngot_C",
@@ -2832,15 +3060,17 @@
 					"amount": 30
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_GeneratorCoal_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_PipeSupport_C": {
 			"slug": "pipeline-support",
@@ -2859,15 +3089,17 @@
 					"amount": 2
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_PipelineSupport_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Pipeline_C": {
 			"slug": "pipeline",
@@ -2882,15 +3114,17 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Pipeline_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_PipelineJunction_Cross_C": {
 			"slug": "pipeline-junction-cross",
@@ -2905,15 +3139,17 @@
 					"amount": 5
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_PipelineJunction_Cross_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_PipelinePump_C": {
 			"slug": "pipeline-pump",
@@ -2932,15 +3168,17 @@
 					"amount": 2
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_PipelinePump_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_PipeStorageTank_C": {
 			"slug": "industrial-fluid-buffer",
@@ -2959,15 +3197,17 @@
 					"amount": 5
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_PipeStorageTank_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_WaterPump_C": {
 			"slug": "water-extractor",
@@ -2990,18 +3230,20 @@
 					"amount": 10
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_WaterPump_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Alternate_PureCopperIngot_C": {
-			"slug": "alternate:-pure-copper-ingot",
+			"slug": "alternate-pure-copper-ingot",
 			"name": "Alternate: Pure Copper Ingot",
 			"className": "Recipe_Alternate_PureCopperIngot_C",
 			"alternate": true,
@@ -3017,6 +3259,10 @@
 					"amount": 4
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_CopperIngot_C",
@@ -3028,7 +3274,7 @@
 			]
 		},
 		"Recipe_Alternate_PureIronIngot_C": {
-			"slug": "alternate:-pure-iron-ingot",
+			"slug": "alternate-pure-iron-ingot",
 			"name": "Alternate: Pure Iron Ingot",
 			"className": "Recipe_Alternate_PureIronIngot_C",
 			"alternate": true,
@@ -3044,6 +3290,10 @@
 					"amount": 4
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_IronIngot_C",
@@ -3055,7 +3305,7 @@
 			]
 		},
 		"Recipe_Alternate_PureQuartzCrystal_C": {
-			"slug": "alternate:-pure-quartz-crystal",
+			"slug": "alternate-pure-quartz-crystal",
 			"name": "Alternate: Pure Quartz Crystal",
 			"className": "Recipe_Alternate_PureQuartzCrystal_C",
 			"alternate": true,
@@ -3071,6 +3321,10 @@
 					"amount": 5
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_QuartzCrystal_C",
@@ -3094,6 +3348,10 @@
 					"amount": 5
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_QuartzCrystal_C",
@@ -3101,13 +3359,11 @@
 				}
 			],
 			"producedIn": [
-				"Desc_ConstructorMk1_C",
-				"BP_WorkBenchComponent_C",
-				"FGBuildableAutomatedWorkBench"
+				"Desc_ConstructorMk1_C"
 			]
 		},
 		"Recipe_Alternate_RecycledRubber_C": {
-			"slug": "alternate:-recycled-rubber",
+			"slug": "alternate-recycled-rubber",
 			"name": "Alternate: Recycled Rubber",
 			"className": "Recipe_Alternate_RecycledRubber_C",
 			"alternate": true,
@@ -3123,6 +3379,10 @@
 					"amount": 6
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Rubber_C",
@@ -3134,7 +3394,7 @@
 			]
 		},
 		"Recipe_Alternate_RubberConcrete_C": {
-			"slug": "alternate:-rubber-concrete",
+			"slug": "alternate-rubber-concrete",
 			"name": "Alternate: Rubber Concrete",
 			"className": "Recipe_Alternate_RubberConcrete_C",
 			"alternate": true,
@@ -3150,6 +3410,10 @@
 					"amount": 4
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Cement_C",
@@ -3161,7 +3425,7 @@
 			]
 		},
 		"Recipe_Alternate_SteamedCopperSheet_C": {
-			"slug": "alternate:-steamed-copper-sheet",
+			"slug": "alternate-steamed-copper-sheet",
 			"name": "Alternate: Steamed Copper Sheet",
 			"className": "Recipe_Alternate_SteamedCopperSheet_C",
 			"alternate": true,
@@ -3177,6 +3441,10 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_CopperSheet_C",
@@ -3188,7 +3456,7 @@
 			]
 		},
 		"Recipe_Alternate_SteelCoatedPlate_C": {
-			"slug": "alternate:-steel-coated-plate",
+			"slug": "alternate-steel-coated-plate",
 			"name": "Alternate: Steel Coated Plate",
 			"className": "Recipe_Alternate_SteelCoatedPlate_C",
 			"alternate": true,
@@ -3204,6 +3472,10 @@
 					"amount": 4
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_IronPlate_C",
@@ -3215,7 +3487,7 @@
 			]
 		},
 		"Recipe_Alternate_SteelRod_C": {
-			"slug": "alternate:-steel-rod",
+			"slug": "alternate-steel-rod",
 			"name": "Alternate: Steel Rod",
 			"className": "Recipe_Alternate_SteelRod_C",
 			"alternate": true,
@@ -3227,6 +3499,10 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_IronRod_C",
@@ -3258,15 +3534,17 @@
 					"amount": 20
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_FoundryMk1_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_SteelBeam_C": {
 			"slug": "steel-beam",
@@ -3281,6 +3559,10 @@
 					"amount": 4
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_SteelPlate_C",
@@ -3288,9 +3570,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_ConstructorMk1_C",
-				"BP_WorkBenchComponent_C",
-				"FGBuildableAutomatedWorkBench"
+				"Desc_ConstructorMk1_C"
 			]
 		},
 		"Recipe_SteelPipe_C": {
@@ -3306,6 +3586,10 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_SteelPipe_C",
@@ -3313,9 +3597,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_ConstructorMk1_C",
-				"BP_WorkBenchComponent_C",
-				"FGBuildableAutomatedWorkBench"
+				"Desc_ConstructorMk1_C"
 			]
 		},
 		"Recipe_IngotSteel_C": {
@@ -3335,6 +3617,10 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_SteelIngot_C",
@@ -3342,8 +3628,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_FoundryMk1_C",
-				"BP_WorkBenchComponent_C"
+				"Desc_FoundryMk1_C"
 			]
 		},
 		"Recipe_SpaceElevatorPart_2_C": {
@@ -3363,6 +3648,10 @@
 					"amount": 12
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_SpaceElevatorPart_2_C",
@@ -3374,7 +3663,7 @@
 			]
 		},
 		"Recipe_Alternate_TurboHeavyFuel_C": {
-			"slug": "alternate:-turbo-heavy-fuel",
+			"slug": "alternate-turbo-heavy-fuel",
 			"name": "Alternate: Turbo Heavy Fuel",
 			"className": "Recipe_Alternate_TurboHeavyFuel_C",
 			"alternate": true,
@@ -3390,6 +3679,10 @@
 					"amount": 4
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_LiquidTurboFuel_C",
@@ -3417,6 +3710,10 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_TurboFuel_C",
@@ -3440,6 +3737,10 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_LiquidTurboFuel_C",
@@ -3455,7 +3756,7 @@
 			]
 		},
 		"Recipe_Alternate_Coal_1_C": {
-			"slug": "alternate:-wood-coal",
+			"slug": "alternate-wood-coal",
 			"name": "Alternate: Wood Coal",
 			"className": "Recipe_Alternate_Coal_1_C",
 			"alternate": true,
@@ -3467,6 +3768,10 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Coal_C",
@@ -3478,7 +3783,7 @@
 			]
 		},
 		"Recipe_Alternate_Coal_2_C": {
-			"slug": "alternate:-biomass-coal",
+			"slug": "alternate-biomass-coal",
 			"name": "Alternate: Biomass Coal",
 			"className": "Recipe_Alternate_Coal_2_C",
 			"alternate": true,
@@ -3490,6 +3795,10 @@
 					"amount": 5
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Coal_C",
@@ -3501,7 +3810,7 @@
 			]
 		},
 		"Recipe_Alternate_EnrichedCoal_C": {
-			"slug": "alternate:-compacted-coal",
+			"slug": "alternate-compacted-coal",
 			"name": "Alternate: Compacted Coal",
 			"className": "Recipe_Alternate_EnrichedCoal_C",
 			"alternate": true,
@@ -3517,6 +3826,10 @@
 					"amount": 5
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_CompactedCoal_C",
@@ -3528,7 +3841,7 @@
 			]
 		},
 		"Recipe_Alternate_WetConcrete_C": {
-			"slug": "alternate:-wet-concrete",
+			"slug": "alternate-wet-concrete",
 			"name": "Alternate: Wet Concrete",
 			"className": "Recipe_Alternate_WetConcrete_C",
 			"alternate": true,
@@ -3544,6 +3857,10 @@
 					"amount": 5
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Cement_C",
@@ -3555,7 +3872,7 @@
 			]
 		},
 		"Recipe_Alternate_Beacon_1_C": {
-			"slug": "alternate:-crystal-beacon",
+			"slug": "alternate-crystal-beacon",
 			"name": "Alternate: Crystal Beacon",
 			"className": "Recipe_Alternate_Beacon_1_C",
 			"alternate": true,
@@ -3575,6 +3892,10 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "BP_EquipmentDescriptorBeacon_C",
@@ -3586,7 +3907,7 @@
 			]
 		},
 		"Recipe_Alternate_Cable_1_C": {
-			"slug": "alternate:-insulated-cable",
+			"slug": "alternate-insulated-cable",
 			"name": "Alternate: Insulated Cable",
 			"className": "Recipe_Alternate_Cable_1_C",
 			"alternate": true,
@@ -3602,6 +3923,10 @@
 					"amount": 6
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Cable_C",
@@ -3613,7 +3938,7 @@
 			]
 		},
 		"Recipe_Alternate_Cable_2_C": {
-			"slug": "alternate:-quickwire-cable",
+			"slug": "alternate-quickwire-cable",
 			"name": "Alternate: Quickwire Cable",
 			"className": "Recipe_Alternate_Cable_2_C",
 			"alternate": true,
@@ -3629,6 +3954,10 @@
 					"amount": 2
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Cable_C",
@@ -3640,7 +3969,7 @@
 			]
 		},
 		"Recipe_Alternate_CircuitBoard_1_C": {
-			"slug": "alternate:-silicone-circuit-board",
+			"slug": "alternate-silicone-circuit-board",
 			"name": "Alternate: Silicone Circuit Board",
 			"className": "Recipe_Alternate_CircuitBoard_1_C",
 			"alternate": true,
@@ -3656,6 +3985,10 @@
 					"amount": 11
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_CircuitBoard_C",
@@ -3667,7 +4000,7 @@
 			]
 		},
 		"Recipe_Alternate_CircuitBoard_2_C": {
-			"slug": "alternate:-caterium-circuit-board",
+			"slug": "alternate-caterium-circuit-board",
 			"name": "Alternate: Caterium Circuit Board",
 			"className": "Recipe_Alternate_CircuitBoard_2_C",
 			"alternate": true,
@@ -3683,6 +4016,10 @@
 					"amount": 30
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_CircuitBoard_C",
@@ -3694,7 +4031,7 @@
 			]
 		},
 		"Recipe_Alternate_Computer_1_C": {
-			"slug": "alternate:-caterium-computer",
+			"slug": "alternate-caterium-computer",
 			"name": "Alternate: Caterium Computer",
 			"className": "Recipe_Alternate_Computer_1_C",
 			"alternate": true,
@@ -3714,6 +4051,10 @@
 					"amount": 12
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Computer_C",
@@ -3725,7 +4066,7 @@
 			]
 		},
 		"Recipe_Alternate_Computer_2_C": {
-			"slug": "alternate:-crystal-computer",
+			"slug": "alternate-crystal-computer",
 			"name": "Alternate: Crystal Computer",
 			"className": "Recipe_Alternate_Computer_2_C",
 			"alternate": true,
@@ -3741,6 +4082,10 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Computer_C",
@@ -3752,7 +4097,7 @@
 			]
 		},
 		"Recipe_Alternate_Concrete_C": {
-			"slug": "alternate:-fine-concrete",
+			"slug": "alternate-fine-concrete",
 			"name": "Alternate: Fine Concrete",
 			"className": "Recipe_Alternate_Concrete_C",
 			"alternate": true,
@@ -3768,6 +4113,10 @@
 					"amount": 12
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Cement_C",
@@ -3779,7 +4128,7 @@
 			]
 		},
 		"Recipe_Alternate_CrystalOscillator_C": {
-			"slug": "alternate:-insulated-crystal-oscillator",
+			"slug": "alternate-insulated-crystal-oscillator",
 			"name": "Alternate: Insulated Crystal Oscillator",
 			"className": "Recipe_Alternate_CrystalOscillator_C",
 			"alternate": true,
@@ -3799,6 +4148,10 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_CrystalOscillator_C",
@@ -3830,6 +4183,10 @@
 					"amount": 5
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_CrystalOscillator_C",
@@ -3837,13 +4194,11 @@
 				}
 			],
 			"producedIn": [
-				"Desc_ManufacturerMk1_C",
-				"BP_WorkBenchComponent_C",
-				"FGBuildableAutomatedWorkBench"
+				"Desc_ManufacturerMk1_C"
 			]
 		},
 		"Recipe_Alternate_ElectromagneticControlRod_1_C": {
-			"slug": "alternate:-electromagnetic-connection-rod",
+			"slug": "alternate-electromagnetic-connection-rod",
 			"name": "Alternate: Electromagnetic Connection Rod",
 			"className": "Recipe_Alternate_ElectromagneticControlRod_1_C",
 			"alternate": true,
@@ -3859,6 +4214,10 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_ElectromagneticControlRod_C",
@@ -3898,15 +4257,17 @@
 					"amount": 5
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_TrainDockingStation_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_TrainStation_C": {
 			"slug": "train-station",
@@ -3933,15 +4294,17 @@
 					"amount": 25
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_TrainStation_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_RailroadTrack_C": {
 			"slug": "railway",
@@ -3960,15 +4323,17 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_RailroadTrack_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_SulfuricAcid_C": {
 			"slug": "sulfuric-acid",
@@ -3987,6 +4352,10 @@
 					"amount": 5
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_SulfuricAcid_C",
@@ -4014,6 +4383,10 @@
 					"amount": 8
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_UraniumPellet_C",
@@ -4028,74 +4401,8 @@
 				"Desc_OilRefinery_C"
 			]
 		},
-		"Recipe_FreightWagon_C": {
-			"slug": "freight-car",
-			"name": "Freight Car",
-			"className": "Recipe_FreightWagon_C",
-			"alternate": false,
-			"time": 1,
-			"manualTimeMultiplier": 1,
-			"ingredients": [
-				{
-					"item": "Desc_ModularFrameHeavy_C",
-					"amount": 4
-				},
-				{
-					"item": "Desc_SteelPipe_C",
-					"amount": 10
-				}
-			],
-			"products": [
-				{
-					"item": "Desc_FreightWagon_C",
-					"amount": 1
-				}
-			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
-		},
-		"Recipe_Locomotive_C": {
-			"slug": "electric-locomotive",
-			"name": "Electric Locomotive",
-			"className": "Recipe_Locomotive_C",
-			"alternate": false,
-			"time": 1,
-			"manualTimeMultiplier": 1,
-			"ingredients": [
-				{
-					"item": "Desc_ModularFrameHeavy_C",
-					"amount": 5
-				},
-				{
-					"item": "Desc_Motor_C",
-					"amount": 10
-				},
-				{
-					"item": "Desc_SteelPipe_C",
-					"amount": 15
-				},
-				{
-					"item": "Desc_Computer_C",
-					"amount": 5
-				},
-				{
-					"item": "BP_EquipmentDescriptorBeacon_C",
-					"amount": 5
-				}
-			],
-			"products": [
-				{
-					"item": "Desc_Locomotive_C",
-					"amount": 1
-				}
-			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
-		},
 		"Recipe_Alternate_Gunpowder_1_C": {
-			"slug": "alternate:-fine-black-powder",
+			"slug": "alternate-fine-black-powder",
 			"name": "Alternate: Fine Black Powder",
 			"className": "Recipe_Alternate_Gunpowder_1_C",
 			"alternate": true,
@@ -4111,6 +4418,10 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Gunpowder_C",
@@ -4122,7 +4433,7 @@
 			]
 		},
 		"Recipe_Alternate_HeatSink_1_C": {
-			"slug": "alternate:-heat-exchanger",
+			"slug": "alternate-heat-exchanger",
 			"name": "Alternate: Heat Exchanger",
 			"className": "Recipe_Alternate_HeatSink_1_C",
 			"alternate": true,
@@ -4138,6 +4449,10 @@
 					"amount": 30
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_AluminumPlateReinforced_C",
@@ -4165,6 +4480,10 @@
 					"amount": 14
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_AluminumPlateReinforced_C",
@@ -4172,9 +4491,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_AssemblerMk1_C",
-				"BP_WorkBenchComponent_C",
-				"FGBuildableAutomatedWorkBench"
+				"Desc_AssemblerMk1_C"
 			]
 		},
 		"Recipe_MinerMk3_C": {
@@ -4206,15 +4523,17 @@
 					"amount": 5
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_MinerMk3_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Battery_C": {
 			"slug": "battery",
@@ -4241,6 +4560,10 @@
 					"amount": 8
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Battery_C",
@@ -4248,9 +4571,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_ManufacturerMk1_C",
-				"BP_WorkBenchComponent_C",
-				"FGBuildableAutomatedWorkBench"
+				"Desc_ManufacturerMk1_C"
 			]
 		},
 		"Recipe_MotorTurbo_C": {
@@ -4278,6 +4599,10 @@
 					"amount": 24
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_MotorLightweight_C",
@@ -4285,9 +4610,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_ManufacturerMk1_C",
-				"BP_WorkBenchComponent_C",
-				"FGBuildableAutomatedWorkBench"
+				"Desc_ManufacturerMk1_C"
 			]
 		},
 		"Recipe_RadioControlUnit_C": {
@@ -4315,6 +4638,10 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_ModularFrameLightweight_C",
@@ -4322,13 +4649,11 @@
 				}
 			],
 			"producedIn": [
-				"Desc_ManufacturerMk1_C",
-				"BP_WorkBenchComponent_C",
-				"FGBuildableAutomatedWorkBench"
+				"Desc_ManufacturerMk1_C"
 			]
 		},
 		"Recipe_Alternate_ModularFrameHeavy_C": {
-			"slug": "alternate:-heavy-encased-frame",
+			"slug": "alternate-heavy-encased-frame",
 			"name": "Alternate: Heavy Encased Frame",
 			"className": "Recipe_Alternate_ModularFrameHeavy_C",
 			"alternate": true,
@@ -4352,6 +4677,10 @@
 					"amount": 22
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_ModularFrameHeavy_C",
@@ -4363,7 +4692,7 @@
 			]
 		},
 		"Recipe_Alternate_HighSpeedConnector_C": {
-			"slug": "alternate:-silicone-high-speed-connector",
+			"slug": "alternate-silicone-high-speed-connector",
 			"name": "Alternate: Silicone High-Speed Connector",
 			"className": "Recipe_Alternate_HighSpeedConnector_C",
 			"alternate": true,
@@ -4383,6 +4712,10 @@
 					"amount": 2
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_HighSpeedConnector_C",
@@ -4414,6 +4747,10 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_HighSpeedConnector_C",
@@ -4421,13 +4758,11 @@
 				}
 			],
 			"producedIn": [
-				"Desc_ManufacturerMk1_C",
-				"BP_WorkBenchComponent_C",
-				"FGBuildableAutomatedWorkBench"
+				"Desc_ManufacturerMk1_C"
 			]
 		},
 		"Recipe_Alternate_IngotIron_C": {
-			"slug": "alternate:-iron-alloy-ingot",
+			"slug": "alternate-iron-alloy-ingot",
 			"name": "Alternate: Iron Alloy Ingot",
 			"className": "Recipe_Alternate_IngotIron_C",
 			"alternate": true,
@@ -4443,6 +4778,10 @@
 					"amount": 2
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_IronIngot_C",
@@ -4454,7 +4793,7 @@
 			]
 		},
 		"Recipe_Alternate_IngotSteel_1_C": {
-			"slug": "alternate:-solid-steel-ingot",
+			"slug": "alternate-solid-steel-ingot",
 			"name": "Alternate: Solid Steel Ingot",
 			"className": "Recipe_Alternate_IngotSteel_1_C",
 			"alternate": true,
@@ -4470,6 +4809,10 @@
 					"amount": 2
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_SteelIngot_C",
@@ -4481,7 +4824,7 @@
 			]
 		},
 		"Recipe_Alternate_IngotSteel_2_C": {
-			"slug": "alternate:-compacted-steel-ingot",
+			"slug": "alternate-compacted-steel-ingot",
 			"name": "Alternate: Compacted Steel Ingot",
 			"className": "Recipe_Alternate_IngotSteel_2_C",
 			"alternate": true,
@@ -4497,6 +4840,10 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_SteelIngot_C",
@@ -4508,7 +4855,7 @@
 			]
 		},
 		"Recipe_Alternate_ModularFrame_C": {
-			"slug": "alternate:-steeled-frame",
+			"slug": "alternate-steeled-frame",
 			"name": "Alternate: Steeled Frame",
 			"className": "Recipe_Alternate_ModularFrame_C",
 			"alternate": true,
@@ -4524,6 +4871,10 @@
 					"amount": 10
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_ModularFrame_C",
@@ -4535,7 +4886,7 @@
 			]
 		},
 		"Recipe_Alternate_Motor_1_C": {
-			"slug": "alternate:-rigour-motor",
+			"slug": "alternate-rigour-motor",
 			"name": "Alternate: Rigour Motor",
 			"className": "Recipe_Alternate_Motor_1_C",
 			"alternate": true,
@@ -4555,6 +4906,10 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Motor_C",
@@ -4566,7 +4921,7 @@
 			]
 		},
 		"Recipe_Alternate_Nobelisk_1_C": {
-			"slug": "alternate:-seismic-nobelisk",
+			"slug": "alternate-seismic-nobelisk",
 			"name": "Alternate: Seismic Nobelisk",
 			"className": "Recipe_Alternate_Nobelisk_1_C",
 			"alternate": true,
@@ -4586,6 +4941,10 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_NobeliskExplosive_C",
@@ -4613,6 +4972,10 @@
 					"amount": 10
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": true,
 			"products": [
 				{
 					"item": "Desc_NobeliskExplosive_C",
@@ -4620,12 +4983,11 @@
 				}
 			],
 			"producedIn": [
-				"BP_WorkshopComponent_C",
 				"Desc_AssemblerMk1_C"
 			]
 		},
 		"Recipe_Alternate_NuclearFuelRod_1_C": {
-			"slug": "alternate:-nuclear-fuel-unit",
+			"slug": "alternate-nuclear-fuel-unit",
 			"name": "Alternate: Nuclear Fuel Unit",
 			"className": "Recipe_Alternate_NuclearFuelRod_1_C",
 			"alternate": true,
@@ -4649,6 +5011,10 @@
 					"amount": 6
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_NuclearFuelRod_C",
@@ -4660,7 +5026,7 @@
 			]
 		},
 		"Recipe_Alternate_Plastic_1_C": {
-			"slug": "alternate:-recycled-plastic",
+			"slug": "alternate-recycled-plastic",
 			"name": "Alternate: Recycled Plastic",
 			"className": "Recipe_Alternate_Plastic_1_C",
 			"alternate": true,
@@ -4676,6 +5042,10 @@
 					"amount": 5
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Plastic_C",
@@ -4687,7 +5057,7 @@
 			]
 		},
 		"Recipe_Alternate_Quickwire_C": {
-			"slug": "alternate:-fused-quckwire",
+			"slug": "alternate-fused-quckwire",
 			"name": "Alternate: Fused Quckwire",
 			"className": "Recipe_Alternate_Quickwire_C",
 			"alternate": true,
@@ -4703,6 +5073,10 @@
 					"amount": 5
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_HighSpeedWire_C",
@@ -4714,7 +5088,7 @@
 			]
 		},
 		"Recipe_Alternate_RadioControlUnit_1_C": {
-			"slug": "alternate:-radio-control-system",
+			"slug": "alternate-radio-control-system",
 			"name": "Alternate: Radio Control System",
 			"className": "Recipe_Alternate_RadioControlUnit_1_C",
 			"alternate": true,
@@ -4734,6 +5108,10 @@
 					"amount": 30
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_ModularFrameLightweight_C",
@@ -4745,7 +5123,7 @@
 			]
 		},
 		"Recipe_Alternate_ReinforcedIronPlate_1_C": {
-			"slug": "alternate:-bolted-iron-plate",
+			"slug": "alternate-bolted-iron-plate",
 			"name": "Alternate: Bolted Iron Plate",
 			"className": "Recipe_Alternate_ReinforcedIronPlate_1_C",
 			"alternate": true,
@@ -4761,6 +5139,10 @@
 					"amount": 50
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_IronPlateReinforced_C",
@@ -4772,7 +5154,7 @@
 			]
 		},
 		"Recipe_Alternate_ReinforcedIronPlate_2_C": {
-			"slug": "alternate:-stitched-iron-plate",
+			"slug": "alternate-stitched-iron-plate",
 			"name": "Alternate: Stitched Iron Plate",
 			"className": "Recipe_Alternate_ReinforcedIronPlate_2_C",
 			"alternate": true,
@@ -4788,6 +5170,10 @@
 					"amount": 26
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_IronPlateReinforced_C",
@@ -4799,7 +5185,7 @@
 			]
 		},
 		"Recipe_Alternate_EncasedIndustrialBeam_C": {
-			"slug": "alternate:-encased-industrial-pipe",
+			"slug": "alternate-encased-industrial-pipe",
 			"name": "Alternate: Encased Industrial Pipe",
 			"className": "Recipe_Alternate_EncasedIndustrialBeam_C",
 			"alternate": true,
@@ -4815,6 +5201,10 @@
 					"amount": 5
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_SteelPlateReinforced_C",
@@ -4826,7 +5216,7 @@
 			]
 		},
 		"Recipe_Alternate_Rotor_C": {
-			"slug": "alternate:-steel-rotor",
+			"slug": "alternate-steel-rotor",
 			"name": "Alternate: Steel Rotor",
 			"className": "Recipe_Alternate_Rotor_C",
 			"alternate": true,
@@ -4842,6 +5232,10 @@
 					"amount": 12
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Rotor_C",
@@ -4853,7 +5247,7 @@
 			]
 		},
 		"Recipe_Alternate_Screw_C": {
-			"slug": "alternate:-casted-screw",
+			"slug": "alternate-casted-screw",
 			"name": "Alternate: Casted Screw",
 			"className": "Recipe_Alternate_Screw_C",
 			"alternate": true,
@@ -4865,6 +5259,10 @@
 					"amount": 5
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_IronScrew_C",
@@ -4876,7 +5274,7 @@
 			]
 		},
 		"Recipe_Alternate_Screw_2_C": {
-			"slug": "alternate:-steel-screw",
+			"slug": "alternate-steel-screw",
 			"name": "Alternate: Steel Screw",
 			"className": "Recipe_Alternate_Screw_2_C",
 			"alternate": true,
@@ -4888,6 +5286,10 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_IronScrew_C",
@@ -4899,7 +5301,7 @@
 			]
 		},
 		"Recipe_Alternate_Silica_C": {
-			"slug": "alternate:-cheap-silica",
+			"slug": "alternate-cheap-silica",
 			"name": "Alternate: Cheap Silica",
 			"className": "Recipe_Alternate_Silica_C",
 			"alternate": true,
@@ -4915,6 +5317,10 @@
 					"amount": 5
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Silica_C",
@@ -4938,6 +5344,10 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Silica_C",
@@ -4945,13 +5355,11 @@
 				}
 			],
 			"producedIn": [
-				"Desc_ConstructorMk1_C",
-				"BP_WorkBenchComponent_C",
-				"FGBuildableAutomatedWorkBench"
+				"Desc_ConstructorMk1_C"
 			]
 		},
 		"Recipe_Alternate_Stator_C": {
-			"slug": "alternate:-quickwire-stator",
+			"slug": "alternate-quickwire-stator",
 			"name": "Alternate: Quickwire Stator",
 			"className": "Recipe_Alternate_Stator_C",
 			"alternate": true,
@@ -4967,6 +5375,10 @@
 					"amount": 15
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Stator_C",
@@ -4994,6 +5406,10 @@
 					"amount": 4
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_LiquidTurboFuel_C",
@@ -5005,7 +5421,7 @@
 			]
 		},
 		"Recipe_Alternate_TurboMotor_1_C": {
-			"slug": "alternate:-turbo-rigour-motor",
+			"slug": "alternate-turbo-rigour-motor",
 			"name": "Alternate: Turbo Rigour Motor",
 			"className": "Recipe_Alternate_TurboMotor_1_C",
 			"alternate": true,
@@ -5029,6 +5445,10 @@
 					"amount": 8
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_MotorLightweight_C",
@@ -5040,7 +5460,7 @@
 			]
 		},
 		"Recipe_Alternate_UraniumCell_1_C": {
-			"slug": "alternate:-infused-uranium-cell",
+			"slug": "alternate-infused-uranium-cell",
 			"name": "Alternate: Infused Uranium Cell",
 			"className": "Recipe_Alternate_UraniumCell_1_C",
 			"alternate": true,
@@ -5064,6 +5484,10 @@
 					"amount": 75
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_UraniumCell_C",
@@ -5075,7 +5499,7 @@
 			]
 		},
 		"Recipe_Alternate_Wire_1_C": {
-			"slug": "alternate:-iron-wire",
+			"slug": "alternate-iron-wire",
 			"name": "Alternate: Iron Wire",
 			"className": "Recipe_Alternate_Wire_1_C",
 			"alternate": true,
@@ -5087,6 +5511,10 @@
 					"amount": 5
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Wire_C",
@@ -5098,7 +5526,7 @@
 			]
 		},
 		"Recipe_Alternate_Wire_2_C": {
-			"slug": "alternate:-caterium-wire",
+			"slug": "alternate-caterium-wire",
 			"name": "Alternate: Caterium Wire",
 			"className": "Recipe_Alternate_Wire_2_C",
 			"alternate": true,
@@ -5110,6 +5538,10 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Wire_C",
@@ -5133,15 +5565,17 @@
 					"amount": 6
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Foundation_8x1_01_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Foundation_8x2_01_C": {
 			"slug": "foundation-8m-x-2m",
@@ -5156,15 +5590,17 @@
 					"amount": 6
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Foundation_8x2_01_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Foundation_8x4_01_C": {
 			"slug": "foundation-8m-x-4m",
@@ -5179,15 +5615,17 @@
 					"amount": 6
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Foundation_8x4_01_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Ramp_8x1_01_C": {
 			"slug": "ramp-8m-x-1m",
@@ -5202,15 +5640,17 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Ramp_8x1_01_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Ramp_8x2_01_C": {
 			"slug": "ramp-8m-x-2m",
@@ -5225,15 +5665,17 @@
 					"amount": 4
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Ramp_8x2_01_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Ramp_8x4_01_C": {
 			"slug": "ramp-8m-x-4m",
@@ -5248,15 +5690,17 @@
 					"amount": 5
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Ramp_8x4_01_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_LookoutTower_C": {
 			"slug": "lookout-tower",
@@ -5275,15 +5719,17 @@
 					"amount": 5
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_LookoutTower_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Wall_8x4_01_C": {
 			"slug": "wall-8m-x-4m",
@@ -5302,15 +5748,17 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Wall_8x4_01_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Wall_8x4_02_C": {
 			"slug": "wall-8m-x-4m",
@@ -5329,15 +5777,17 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Wall_8x4_02_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_ConveyorAttachmentMerger_C": {
 			"slug": "conveyor-merger",
@@ -5356,15 +5806,17 @@
 					"amount": 2
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_ConveyorAttachmentMerger_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_ConveyorAttachmentSplitter_C": {
 			"slug": "conveyor-splitter",
@@ -5383,15 +5835,17 @@
 					"amount": 2
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_ConveyorAttachmentSplitter_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_ConveyorLiftMk1_C": {
 			"slug": "conveyor-lift",
@@ -5406,15 +5860,17 @@
 					"amount": 2
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_ConveyorLiftMk1_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Mam_C": {
 			"slug": "m-a-m-",
@@ -5437,15 +5893,17 @@
 					"amount": 45
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Mam_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_StoragePlayer_C": {
 			"slug": "personal-storage-box",
@@ -5464,15 +5922,17 @@
 					"amount": 6
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_StoragePlayer_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Beacon_C": {
 			"slug": "beacon",
@@ -5499,6 +5959,10 @@
 					"amount": 2
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": true,
 			"products": [
 				{
 					"item": "BP_EquipmentDescriptorBeacon_C",
@@ -5506,7 +5970,6 @@
 				}
 			],
 			"producedIn": [
-				"BP_WorkshopComponent_C",
 				"Desc_ManufacturerMk1_C"
 			]
 		},
@@ -5531,15 +5994,17 @@
 					"amount": 50
 				}
 			],
+			"forBuilding": false,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": true,
 			"products": [
 				{
 					"item": "BP_EquipmentDescriptorObjectScanner_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_WorkshopComponent_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Chainsaw_C": {
 			"slug": "chainsaw",
@@ -5566,15 +6031,17 @@
 					"amount": 15
 				}
 			],
+			"forBuilding": false,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": true,
 			"products": [
 				{
 					"item": "Desc_Chainsaw_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_WorkshopComponent_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_JumpPad_C": {
 			"slug": "jump-pad",
@@ -5597,15 +6064,17 @@
 					"amount": 10
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_JumpPad_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_JumpPadTilted_C": {
 			"slug": "tilted-jump-pad",
@@ -5628,15 +6097,17 @@
 					"amount": 10
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_JumpPadTilted_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_UJellyLandingPad_C": {
 			"slug": "u-jelly-landing-pad",
@@ -5659,15 +6130,17 @@
 					"amount": 200
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_LandingPad_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_ResourceSink_C": {
 			"slug": "awesome-sink",
@@ -5690,15 +6163,17 @@
 					"amount": 45
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_ResourceSink_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_ResourceSinkShop_C": {
 			"slug": "awesome-shop",
@@ -5721,15 +6196,17 @@
 					"amount": 10
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_ResourceSinkShop_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_ConveyorBeltMk2_C": {
 			"slug": "conveyor-belt-mk-2",
@@ -5744,15 +6221,17 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_ConveyorBeltMk2_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_ConveyorLiftMk2_C": {
 			"slug": "conveyor-lift-mk-2",
@@ -5767,15 +6246,17 @@
 					"amount": 2
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_ConveyorLiftMk2_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_ConveyorPoleStackable_C": {
 			"slug": "conveyor-pole-stackable",
@@ -5798,15 +6279,17 @@
 					"amount": 2
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_ConveyorPoleStackable_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_TruckStation_C": {
 			"slug": "truck-station",
@@ -5829,46 +6312,17 @@
 					"amount": 50
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_TruckStation_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
-		},
-		"Recipe_Tractor_C": {
-			"slug": "tractor",
-			"name": "Tractor",
-			"className": "Recipe_Tractor_C",
-			"alternate": false,
-			"time": 1,
-			"manualTimeMultiplier": 1,
-			"ingredients": [
-				{
-					"item": "Desc_ModularFrame_C",
-					"amount": 5
-				},
-				{
-					"item": "BP_EquipmentDescriptorBeacon_C",
-					"amount": 5
-				},
-				{
-					"item": "Desc_Rotor_C",
-					"amount": 10
-				}
-			],
-			"products": [
-				{
-					"item": "Desc_Tractor_C",
-					"amount": 1
-				}
-			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_XenoBasher_C": {
 			"slug": "xeno-basher",
@@ -5895,15 +6349,17 @@
 					"amount": 500
 				}
 			],
+			"forBuilding": false,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": true,
 			"products": [
 				{
 					"item": "BP_EquipmentDescriptorStunSpear_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_WorkshopComponent_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_PipeHyperStart_C": {
 			"slug": "hyper-tube-entrance",
@@ -5926,15 +6382,17 @@
 					"amount": 10
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_PipeHyperStart_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_PipeHyperSupport_C": {
 			"slug": "hyper-tube-support",
@@ -5953,15 +6411,17 @@
 					"amount": 2
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_PipeHyperSupport_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_PipeHyper_C": {
 			"slug": "hyper-tube",
@@ -5980,15 +6440,17 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_PipeHyper_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_ConveyorBeltMk3_C": {
 			"slug": "conveyor-belt-mk-3",
@@ -6003,15 +6465,17 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_ConveyorBeltMk3_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_ConveyorLiftMk3_C": {
 			"slug": "conveyor-lift-mk-3",
@@ -6026,15 +6490,17 @@
 					"amount": 2
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_ConveyorLiftMk3_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_PipeSupportStackable_C": {
 			"slug": "stackable-pipeline-support",
@@ -6057,15 +6523,17 @@
 					"amount": 2
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_PipeSupportStackable_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_StorageContainerMk2_C": {
 			"slug": "industrial-storage-container",
@@ -6084,15 +6552,17 @@
 					"amount": 20
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_StorageContainerMk2_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_UnpackageBioFuel_C": {
 			"slug": "unpackage-liquid-biofuel",
@@ -6107,6 +6577,10 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_LiquidBiofuel_C",
@@ -6134,6 +6608,10 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_LiquidFuel_C",
@@ -6161,6 +6639,10 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_LiquidOil_C",
@@ -6188,6 +6670,10 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_HeavyOilResidue_C",
@@ -6215,6 +6701,10 @@
 					"amount": 2
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Water_C",
@@ -6246,15 +6736,17 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_IndustrialTank_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_FluidCanister_C": {
 			"slug": "empty-canister",
@@ -6269,6 +6761,10 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_FluidCanister_C",
@@ -6276,9 +6772,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_ConstructorMk1_C",
-				"BP_WorkBenchComponent_C",
-				"FGBuildableAutomatedWorkBench"
+				"Desc_ConstructorMk1_C"
 			]
 		},
 		"Recipe_Fuel_C": {
@@ -6298,6 +6792,10 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Fuel_C",
@@ -6325,6 +6823,10 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_LiquidBiofuel_C",
@@ -6352,6 +6854,10 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_PackagedBiofuel_C",
@@ -6379,6 +6885,10 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_PackagedOil_C",
@@ -6406,6 +6916,10 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_PackagedOilResidue_C",
@@ -6433,6 +6947,10 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_PackagedWater_C",
@@ -6456,15 +6974,17 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_ConveyorBeltMk4_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_ConveyorLiftMk4_C": {
 			"slug": "conveyor-lift-mk-4",
@@ -6479,15 +6999,17 @@
 					"amount": 2
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_ConveyorLiftMk4_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_GeneratorFuel_C": {
 			"slug": "fuel-generator",
@@ -6518,15 +7040,17 @@
 					"amount": 50
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_GeneratorFuel_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_JetPack_C": {
 			"slug": "jetpack",
@@ -6553,15 +7077,17 @@
 					"amount": 25
 				}
 			],
+			"forBuilding": false,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": true,
 			"products": [
 				{
 					"item": "BP_EquipmentDescriptorJetPack_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_WorkshopComponent_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_TrainDockingStationLiquid_C": {
 			"slug": "freight-platform-liquid",
@@ -6592,15 +7118,17 @@
 					"amount": 5
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_TrainDockingStationLiquid_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_TrainPlatformEmpty_C": {
 			"slug": "empty-platform",
@@ -6619,15 +7147,17 @@
 					"amount": 50
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_TrainPlatformEmpty_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_FilterGasMask_C": {
 			"slug": "filter",
@@ -6650,6 +7180,10 @@
 					"amount": 2
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": true,
 			"products": [
 				{
 					"item": "Desc_Filter_C",
@@ -6657,9 +7191,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_ManufacturerMk1_C",
-				"BP_WorkBenchComponent_C",
-				"BP_WorkshopComponent_C"
+				"Desc_ManufacturerMk1_C"
 			]
 		},
 		"Recipe_Gasmask_C": {
@@ -6683,15 +7215,17 @@
 					"amount": 100
 				}
 			],
+			"forBuilding": false,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": true,
 			"products": [
 				{
 					"item": "BP_EquipmentDescriptorGasmask_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_WorkshopComponent_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Biomass_AlienCarapace_C": {
 			"slug": "biomass-(alien-carapace)",
@@ -6706,6 +7240,10 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_GenericBiomass_C",
@@ -6713,9 +7251,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_ConstructorMk1_C",
-				"BP_WorkBenchComponent_C",
-				"FGBuildableAutomatedWorkBench"
+				"Desc_ConstructorMk1_C"
 			]
 		},
 		"Recipe_RebarGun_C": {
@@ -6739,15 +7275,17 @@
 					"amount": 100
 				}
 			],
+			"forBuilding": false,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": true,
 			"products": [
 				{
 					"item": "Desc_RebarGunProjectile_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_WorkshopComponent_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_SpikedRebar_C": {
 			"slug": "spiked-rebar",
@@ -6762,6 +7300,10 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": true,
 			"products": [
 				{
 					"item": "Desc_SpikedRebar_C",
@@ -6769,9 +7311,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_ConstructorMk1_C",
-				"BP_WorkBenchComponent_C",
-				"BP_WorkshopComponent_C"
+				"Desc_ConstructorMk1_C"
 			]
 		},
 		"Recipe_Biomass_AlienOrgans_C": {
@@ -6787,6 +7327,10 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_GenericBiomass_C",
@@ -6794,13 +7338,11 @@
 				}
 			],
 			"producedIn": [
-				"Desc_ConstructorMk1_C",
-				"BP_WorkBenchComponent_C",
-				"FGBuildableAutomatedWorkBench"
+				"Desc_ConstructorMk1_C"
 			]
 		},
 		"Recipe_MedicinalInhalerAlienOrgans_C": {
-			"slug": "medicinal-inhaler:-alien-organs",
+			"slug": "medicinal-inhaler-alien-organs",
 			"name": "Medicinal Inhaler: Alien Organs",
 			"className": "Recipe_MedicinalInhalerAlienOrgans_C",
 			"alternate": false,
@@ -6816,15 +7358,17 @@
 					"amount": 5
 				}
 			],
+			"forBuilding": false,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": true,
 			"products": [
 				{
 					"item": "Desc_Medkit_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_WorkshopComponent_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_ConveyorAttachmentSplitterSmart_C": {
 			"slug": "smart-splitter",
@@ -6847,15 +7391,17 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_ConveyorAttachmentSplitterSmart_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_ComputerSuper_C": {
 			"slug": "supercomputer",
@@ -6882,6 +7428,10 @@
 					"amount": 28
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_ComputerSuper_C",
@@ -6889,9 +7439,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_ManufacturerMk1_C",
-				"BP_WorkBenchComponent_C",
-				"FGBuildableAutomatedWorkBench"
+				"Desc_ManufacturerMk1_C"
 			]
 		},
 		"Recipe_PowerPoleMk3_C": {
@@ -6915,15 +7463,17 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_PowerPoleMk3_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_ConveyorAttachmentSplitterProgrammable_C": {
 			"slug": "programmable-splitter",
@@ -6946,15 +7496,17 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_ConveyorAttachmentSplitterProgrammable_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_GeneratorGeoThermal_C": {
 			"slug": "geo-thermal-generator",
@@ -6985,15 +7537,17 @@
 					"amount": 80
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_GeneratorGeoThermal_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_ColorGun_C": {
 			"slug": "color-gun",
@@ -7016,15 +7570,17 @@
 					"amount": 40
 				}
 			],
+			"forBuilding": false,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": true,
 			"products": [
 				{
 					"item": "BP_EquipmentDescriptorColorGun_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_WorkshopComponent_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_ColorCartridge_C": {
 			"slug": "color-cartridge",
@@ -7039,6 +7595,10 @@
 					"amount": 25
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": true,
 			"products": [
 				{
 					"item": "Desc_ColorCartridge_C",
@@ -7046,9 +7606,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_ConstructorMk1_C",
-				"BP_WorkBenchComponent_C",
-				"BP_WorkshopComponent_C"
+				"Desc_ConstructorMk1_C"
 			]
 		},
 		"Recipe_Biomass_Mycelia_C": {
@@ -7064,6 +7622,10 @@
 					"amount": 10
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_GenericBiomass_C",
@@ -7071,9 +7633,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_ConstructorMk1_C",
-				"BP_WorkBenchComponent_C",
-				"FGBuildableAutomatedWorkBench"
+				"Desc_ConstructorMk1_C"
 			]
 		},
 		"Recipe_Parachute_C": {
@@ -7093,15 +7653,17 @@
 					"amount": 5
 				}
 			],
+			"forBuilding": false,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": true,
 			"products": [
 				{
 					"item": "Desc_Parachute_C",
 					"amount": 5
 				}
 			],
-			"producedIn": [
-				"BP_WorkshopComponent_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_MedicinalInhaler_C": {
 			"slug": "nutritional-inhaler",
@@ -7128,15 +7690,17 @@
 					"amount": 5
 				}
 			],
+			"forBuilding": false,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": true,
 			"products": [
 				{
 					"item": "Desc_Medkit_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_WorkshopComponent_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_NutritionalInhaler_C": {
 			"slug": "medicinal-inhaler",
@@ -7159,15 +7723,17 @@
 					"amount": 7
 				}
 			],
+			"forBuilding": false,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": true,
 			"products": [
 				{
 					"item": "Desc_Medkit_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_WorkshopComponent_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_PowerCrystalShard_1_C": {
 			"slug": "power-shard-(1)",
@@ -7182,6 +7748,10 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_CrystalShard_C",
@@ -7189,9 +7759,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_ConstructorMk1_C",
-				"BP_WorkBenchComponent_C",
-				"FGBuildableAutomatedWorkBench"
+				"Desc_ConstructorMk1_C"
 			]
 		},
 		"Recipe_PowerCrystalShard_2_C": {
@@ -7207,6 +7775,10 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_CrystalShard_C",
@@ -7214,9 +7786,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_ConstructorMk1_C",
-				"BP_WorkBenchComponent_C",
-				"FGBuildableAutomatedWorkBench"
+				"Desc_ConstructorMk1_C"
 			]
 		},
 		"Recipe_PowerCrystalShard_3_C": {
@@ -7232,6 +7802,10 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_CrystalShard_C",
@@ -7239,44 +7813,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_ConstructorMk1_C",
-				"BP_WorkBenchComponent_C",
-				"FGBuildableAutomatedWorkBench"
-			]
-		},
-		"Recipe_Explorer_C": {
-			"slug": "explorer",
-			"name": "Explorer",
-			"className": "Recipe_Explorer_C",
-			"alternate": false,
-			"time": 1,
-			"manualTimeMultiplier": 1,
-			"ingredients": [
-				{
-					"item": "Desc_CrystalOscillator_C",
-					"amount": 5
-				},
-				{
-					"item": "Desc_Motor_C",
-					"amount": 5
-				},
-				{
-					"item": "BP_EquipmentDescriptorBeacon_C",
-					"amount": 15
-				},
-				{
-					"item": "Desc_ModularFrameHeavy_C",
-					"amount": 5
-				}
-			],
-			"products": [
-				{
-					"item": "Desc_Explorer_C",
-					"amount": 1
-				}
-			],
-			"producedIn": [
-				"BP_BuildGun_C"
+				"Desc_ConstructorMk1_C"
 			]
 		},
 		"Recipe_RadarTower_C": {
@@ -7304,15 +7841,17 @@
 					"amount": 100
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_RadarTower_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Gunpowder_C": {
 			"slug": "black-powder",
@@ -7331,6 +7870,10 @@
 					"amount": 2
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": true,
 			"products": [
 				{
 					"item": "Desc_Gunpowder_C",
@@ -7338,9 +7881,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_AssemblerMk1_C",
-				"BP_WorkBenchComponent_C",
-				"BP_WorkshopComponent_C"
+				"Desc_AssemblerMk1_C"
 			]
 		},
 		"Recipe_NobeliskDetonator_C": {
@@ -7364,15 +7905,17 @@
 					"amount": 50
 				}
 			],
+			"forBuilding": false,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": true,
 			"products": [
 				{
 					"item": "BP_EquipmentDescriptorNobeliskDetonator_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_WorkshopComponent_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_SpaceRifleMk1_C": {
 			"slug": "rifle",
@@ -7399,15 +7942,17 @@
 					"amount": 250
 				}
 			],
+			"forBuilding": false,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": true,
 			"products": [
 				{
 					"item": "BP_EquipmentDescriptorRifle_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_WorkshopComponent_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Cartridge_C": {
 			"slug": "cartridge",
@@ -7434,6 +7979,10 @@
 					"amount": 10
 				}
 			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": true,
 			"products": [
 				{
 					"item": "Desc_CartridgeStandard_C",
@@ -7441,9 +7990,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_ManufacturerMk1_C",
-				"BP_WorkBenchComponent_C",
-				"BP_WorkshopComponent_C"
+				"Desc_ManufacturerMk1_C"
 			]
 		},
 		"Recipe_Wall_Conveyor_8x4_01_Steel_C": {
@@ -7463,15 +8010,17 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Wall_Conveyor_8x4_01_Steel_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Wall_Conveyor_8x4_02_Steel_C": {
 			"slug": "wall-conveyor-x2",
@@ -7490,15 +8039,17 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Wall_Conveyor_8x4_02_Steel_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Wall_Conveyor_8x4_03_Steel_C": {
 			"slug": "wall-conveyor-x1",
@@ -7517,15 +8068,17 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Wall_Conveyor_8x4_03_Steel_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Wall_Conveyor_8x4_01_C": {
 			"slug": "wall-conveyor-x3",
@@ -7544,15 +8097,17 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Wall_Conveyor_8x4_01_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Wall_Conveyor_8x4_02_C": {
 			"slug": "wall-conveyor-x2",
@@ -7571,15 +8126,17 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Wall_Conveyor_8x4_02_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Wall_Conveyor_8x4_03_C": {
 			"slug": "wall-conveyor-x1",
@@ -7598,15 +8155,17 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Wall_Conveyor_8x4_03_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_ConveyorPoleWall_C": {
 			"slug": "conveyor-wall-mount",
@@ -7629,15 +8188,17 @@
 					"amount": 2
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_ConveyorPoleWall_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_QuarterPipe_C": {
 			"slug": "curved-foundation",
@@ -7652,15 +8213,17 @@
 					"amount": 6
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_QuarterPipe_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_QuarterPipe_02_C": {
 			"slug": "curved-inverted-foundation",
@@ -7675,15 +8238,17 @@
 					"amount": 6
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_QuarterPipe_02_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_QuarterPipeCorner_01_C": {
 			"slug": "curved-corner-foundation",
@@ -7698,15 +8263,17 @@
 					"amount": 6
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_QuarterPipeCorner_01_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_QuarterPipeCorner_02_C": {
 			"slug": "curved-corner-inverted-foundation",
@@ -7721,38 +8288,17 @@
 					"amount": 6
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_QuarterPipeCorner_02_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
-		},
-		"Recipe_CyberWagon_C": {
-			"slug": "cyber-wagon",
-			"name": "Cyber Wagon",
-			"className": "Recipe_CyberWagon_C",
-			"alternate": false,
-			"time": 1,
-			"manualTimeMultiplier": 1,
-			"ingredients": [
-				{
-					"item": "Desc_IronPlateReinforced_C",
-					"amount": 10
-				}
-			],
-			"products": [
-				{
-					"item": "Desc_CyberWagon_C",
-					"amount": 1
-				}
-			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Ramp_Diagonal_8x1_01_C": {
 			"slug": "corner-ramp-down-8m-x-1m",
@@ -7767,15 +8313,17 @@
 					"amount": 2
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Ramp_Diagonal_8x1_01_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Ramp_Diagonal_8x1_02_C": {
 			"slug": "corner-ramp-up-8m-x-1m",
@@ -7790,15 +8338,17 @@
 					"amount": 2
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Ramp_Diagonal_8x1_02_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Ramp_Diagonal_8x2_01_C": {
 			"slug": "corner-ramp-down-8m-x-2m",
@@ -7813,15 +8363,17 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Ramp_Diagonal_8x2_01_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Ramp_Diagonal_8x2_02_C": {
 			"slug": "corner-ramp-up-8m-x-2m",
@@ -7836,15 +8388,17 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Ramp_Diagonal_8x2_02_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Ramp_Diagonal_8x4_01_C": {
 			"slug": "corner-ramp-down-8m-x-4m",
@@ -7859,15 +8413,17 @@
 					"amount": 4
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Ramp_Diagonal_8x4_01_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Ramp_Diagonal_8x4_02_C": {
 			"slug": "corner-ramp-up-8m-x-4m",
@@ -7882,15 +8438,17 @@
 					"amount": 4
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Ramp_Diagonal_8x4_02_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Wall_Door_8x4_01_Steel_C": {
 			"slug": "wall-door-center",
@@ -7909,15 +8467,17 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Wall_Door_8x4_01_Steel_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Wall_Door_8x4_02_Steel_C": {
 			"slug": "wall-door-left",
@@ -7936,15 +8496,17 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Wall_Door_8x4_02_Steel_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Wall_Door_8x4_03_Steel_C": {
 			"slug": "wall-door-right",
@@ -7963,15 +8525,17 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Wall_Door_8x4_03_Steel_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Wall_Door_8x4_01_C": {
 			"slug": "wall-door-center",
@@ -7990,15 +8554,17 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Wall_Door_8x4_01_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Wall_Door_8x4_02_C": {
 			"slug": "wall-door-left",
@@ -8017,15 +8583,17 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Wall_Door_8x4_02_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Wall_Door_8x4_03_C": {
 			"slug": "wall-door-right",
@@ -8044,15 +8612,17 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Wall_Door_8x4_03_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Wall_Gate_8x4_01_C": {
 			"slug": "gate-8m-x-4m",
@@ -8071,15 +8641,17 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Wall_Gate_8x4_01_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_FactoryCart_C": {
 			"slug": "factory-cart",
@@ -8102,15 +8674,17 @@
 					"amount": 2
 				}
 			],
+			"forBuilding": false,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": true,
 			"products": [
 				{
 					"item": "Desc_GolfCart_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_WorkshopComponent_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_PillarBase_C": {
 			"slug": "pillar-base",
@@ -8125,15 +8699,17 @@
 					"amount": 6
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_PillarBase_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_PillarMiddle_C": {
 			"slug": "pillar-middle",
@@ -8148,15 +8724,17 @@
 					"amount": 6
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_PillarMiddle_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_PillarTop_C": {
 			"slug": "pillar-top",
@@ -8171,15 +8749,17 @@
 					"amount": 6
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_PillarTop_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Ramp_8x4_Inverted_01_C": {
 			"slug": "ramp-inverted-8m-x-4m",
@@ -8194,15 +8774,17 @@
 					"amount": 5
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Ramp_8x4_Inverted_01_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Ramp_8x8x8_C": {
 			"slug": "ramp-double-8m-x-8m",
@@ -8217,15 +8799,17 @@
 					"amount": 5
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Ramp_8x8x8_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Foundation_Frame_01_C": {
 			"slug": "foundation-frame",
@@ -8240,15 +8824,17 @@
 					"amount": 6
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Foundation_Frame_01_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_FoundationGlass_01_C": {
 			"slug": "foundation-glass",
@@ -8263,15 +8849,17 @@
 					"amount": 6
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_FoundationGlass_01_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_PipeSupportWall_C": {
 			"slug": "pipeline-wall-support",
@@ -8294,15 +8882,17 @@
 					"amount": 2
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_PipelineSupportWall_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_PipeSupportWallHole_C": {
 			"slug": "pipeline-wall-through-hole",
@@ -8325,15 +8915,17 @@
 					"amount": 2
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_PipelineSupportWallHole_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Stairs_Left_01_C": {
 			"slug": "stairs-left",
@@ -8352,15 +8944,17 @@
 					"amount": 4
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Stairs_Left_01_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Stairs_Right_01_C": {
 			"slug": "stairs-right",
@@ -8379,15 +8973,17 @@
 					"amount": 4
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Stairs_Right_01_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Walkway_Cross_C": {
 			"slug": "walkway-crossing",
@@ -8406,15 +9002,17 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_WalkwayCross_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Walkway_Ramp_C": {
 			"slug": "walkway-ramp",
@@ -8433,15 +9031,17 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_WalkwayRamp_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Walkway_Straight_C": {
 			"slug": "walkway-straight",
@@ -8460,15 +9060,17 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_WalkwayStraight_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Walkway_T_C": {
 			"slug": "walkway-t-crossing",
@@ -8487,15 +9089,17 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_WalkwayT_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Walkway_Turn_C": {
 			"slug": "walkway-turn",
@@ -8514,15 +9118,17 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_WalkwayTurn_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_PowerPoleWall_C": {
 			"slug": "wall-power-pole",
@@ -8541,15 +9147,17 @@
 					"amount": 1
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_PowerPoleWall_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_PowerPoleWallDouble_C": {
 			"slug": "double-sided-wall-power-pole",
@@ -8568,15 +9176,17 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_PowerPoleWallDouble_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_PowerPoleWallDoubleMk3_C": {
 			"slug": "double-sided-wall-power-pole-mk-3",
@@ -8595,15 +9205,17 @@
 					"amount": 5
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_PowerPoleWallDoubleMk3_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_PowerPoleWallMk3_C": {
 			"slug": "wall-power-pole-mk-3",
@@ -8622,15 +9234,17 @@
 					"amount": 2
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_PowerPoleWallMk3_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Wall_Window_8x4_01_C": {
 			"slug": "wall-window-8m-x-4m-01",
@@ -8649,15 +9263,17 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Wall_Window_8x4_01_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Wall_Window_8x4_02_C": {
 			"slug": "wall-window-8m-x-4m-02",
@@ -8676,15 +9292,17 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Wall_Window_8x4_02_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		},
 		"Recipe_Wall_Window_8x4_04_C": {
 			"slug": "wall-window-8m-x-4m-04",
@@ -8703,15 +9321,17 @@
 					"amount": 3
 				}
 			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Wall_Window_8x4_04_C",
 					"amount": 1
 				}
 			],
-			"producedIn": [
-				"BP_BuildGun_C"
-			]
+			"producedIn": []
 		}
 	},
 	"items": {
@@ -16591,60 +17211,6 @@
 				"powerConsumption": 0,
 				"powerConsumptionExponent": 1.6
 			}
-		},
-		"Desc_Truck_C": {
-			"slug": "",
-			"name": "",
-			"description": "",
-			"categories": [],
-			"buildMenuPriority": 0,
-			"className": "Desc_Truck_C",
-			"metadata": {}
-		},
-		"Desc_FreightWagon_C": {
-			"slug": "",
-			"name": "",
-			"description": "",
-			"categories": [],
-			"buildMenuPriority": 0,
-			"className": "Desc_FreightWagon_C",
-			"metadata": {}
-		},
-		"Desc_Locomotive_C": {
-			"slug": "",
-			"name": "",
-			"description": "",
-			"categories": [],
-			"buildMenuPriority": 0,
-			"className": "Desc_Locomotive_C",
-			"metadata": {}
-		},
-		"Desc_Tractor_C": {
-			"slug": "",
-			"name": "",
-			"description": "",
-			"categories": [],
-			"buildMenuPriority": 0,
-			"className": "Desc_Tractor_C",
-			"metadata": {}
-		},
-		"Desc_Explorer_C": {
-			"slug": "",
-			"name": "",
-			"description": "",
-			"categories": [],
-			"buildMenuPriority": 0,
-			"className": "Desc_Explorer_C",
-			"metadata": {}
-		},
-		"Desc_CyberWagon_C": {
-			"slug": "",
-			"name": "",
-			"description": "",
-			"categories": [],
-			"buildMenuPriority": 0,
-			"className": "Desc_CyberWagon_C",
-			"metadata": {}
 		},
 		"Desc_PipelineSupport_C": {
 			"slug": "pipeline-support",

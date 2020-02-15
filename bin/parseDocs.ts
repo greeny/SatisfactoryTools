@@ -69,11 +69,11 @@ for (const definitions of docs) {
 				json.items[mapNameType(item.className, 'item')] = item;
 			}
 			break;
-		case 'Class\'/Script/FactoryGame.FGVehicleDescriptor\'':
+		/*case 'Class\'/Script/FactoryGame.FGVehicleDescriptor\'':
 			for (const building of parseBuildings(definitions.Classes)) {
 				json.buildings[mapNameType(building.className, 'building')] = building;
 			}
-			break;
+			break;*/
 		case 'Class\'/Script/FactoryGame.FGBuildablePole\'':
 		case 'Class\'/Script/FactoryGame.FGBuildableConveyorBelt\'':
 		case 'Class\'/Script/FactoryGame.FGBuildableWire\'':
