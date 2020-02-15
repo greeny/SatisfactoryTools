@@ -33,14 +33,18 @@ export class Data
 	{
 		const recipeData = this.getRawData().recipes;
 		const recipes: {[key: string]: IRecipeSchema} = {};
-		for (const key in recipeData) {
-			const recipe = recipeData[key];
-			for (const product of recipe.products) {
-				if (product.item === item.className) {
-					recipes[key] = recipe;
+		function addRecipes(alt: boolean) {
+			for (const key in recipeData) {
+				const recipe = recipeData[key];
+				for (const product of recipe.products) {
+					if (product.item === item.className && recipe.alternate === alt) {
+						recipes[key] = recipe;
+					}
 				}
 			}
 		}
+		addRecipes(false);
+		addRecipes(true);
 		return recipes;
 	}
 
@@ -48,14 +52,18 @@ export class Data
 	{
 		const recipeData = this.getRawData().recipes;
 		const recipes: {[key: string]: IRecipeSchema} = {};
-		for (const key in recipeData) {
-			const recipe = recipeData[key];
-			for (const ingredient of recipe.ingredients) {
-				if (item.className === ingredient.item && !recipe.forBuilding) {
-					recipes[key] = recipe;
+		function addRecipes(alt: boolean) {
+			for (const key in recipeData) {
+				const recipe = recipeData[key];
+				for (const ingredient of recipe.ingredients) {
+					if (item.className === ingredient.item && !recipe.forBuilding && recipe.alternate === alt) {
+						recipes[key] = recipe;
+					}
 				}
 			}
 		}
+		addRecipes(false);
+		addRecipes(true);
 		return recipes;
 	}
 
