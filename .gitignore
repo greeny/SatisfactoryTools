@@ -1,0 +1,13 @@
+# IDE stuff
+.idea
+.vscode
+
+# Satisfactory Data file for parsing
+data/Docs.json
+
+# Node stuff
+node_modules
+yarn-error.log
+
+# Generated sources
+www/assets/app.js
