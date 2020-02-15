@@ -51,6 +51,7 @@ export class AppModule
 						elements[index].remove();
 					}
 				}
+				document.documentElement.scrollTop = 0;
 			});
 		}]);
 
