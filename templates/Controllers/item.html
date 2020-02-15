@@ -1,0 +1,238 @@
+<ol class="breadcrumb">
+	<li class="breadcrumb-item"><a ui-sref="home">Satisfactory Tools</a></li>
+	<li class="breadcrumb-item"><a ui-sref="home">Item Browser</a></li>
+	<li class="breadcrumb-item active">{{scope.item.name}}</li>
+</ol>
+
+<div class="d-flex flex-column flex-sm-row">
+	<div class="p-2 flex-grow-1">
+		<h1>{{scope.item.name}}</h1>
+	</div>
+	<div class="p-2">
+		<a ui-sref="home" class="btn btn-secondary">Back to item list</a>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-6">
+		<div class="card">
+			<div class="card-body">
+				<span class="float-left mr-3">
+					<img ng-src="/assets/images/items/{{scope.item.slug}}_256.png" width="128" height="128" class="float-left" title="{{scope.item.name}}" tooltip>
+				</span>
+				<p>
+					{{scope.item.description}}
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-6">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Item</th>
+					<th>{{scope.item.name}}</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Form</td>
+					<td>{{scope.item.liquid ? 'Liquid' : 'Solid'}}</td>
+				</tr>
+				<tr ng-if="!scope.item.liquid">
+					<td>Stack size</td>
+					<td>{{scope.item.stackSize}}</td>
+				</tr>
+				<tr ng-if="scope.item.energyValue && scope.item.liquid">
+					<td>Energy value</td>
+					<td>{{scope.item.energyValue * 1000}} MJ/m<sup>3</sup></td>
+				</tr>
+				<tr ng-if="scope.item.energyValue && !scope.item.liquid">
+					<td>Energy value</td>
+					<td>{{scope.item.energyValue}} MJ</td>
+				</tr>
+				<tr>
+					<td>Radioactive</td>
+					<td>{{scope.item.radioactiveDecay > 0 ? 'Yes' : 'No'}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-lg-6">
+		<h2>Recipes</h2>
+
+		<table class="table recipe-table table-hover">
+			<thead>
+				<tr>
+					<th>Recipe name</th>
+					<th>Products</th>
+					<th>Ingredients</th>
+					<th>Machine</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="recipe in scope.recipes">
+					<td>
+						{{recipe.name}}
+					</td>
+					<td>
+						<div ng-repeat="product in recipe.products" class="d-inline-block p-2">
+							<span class="item-amount">
+								{{product.amount}}x
+								<a ui-sref="item({item: scope.getItem(product.item).slug})">
+									<img ng-src="/assets/images/items/{{scope.getItem(product.item).slug}}_64.png" width="32" height="32" title="{{scope.getItem(product.item).name}}" tooltip>
+								</a>
+								<br>
+							</span>
+							{{scope.getMachine(recipe).metadata.manufacturingSpeed * 60 / recipe.time * product.amount}}&nbsp;/&nbsp;min
+						</div>
+					</td>
+					<td>
+						<div ng-repeat="ingredient in recipe.ingredients" class="d-inline-block p-2">
+							<span class="item-amount">
+								{{ingredient.amount}}x
+								<a ui-sref="item({item: scope.getItem(ingredient.item).slug})">
+									<img ng-src="/assets/images/items/{{scope.getItem(ingredient.item).slug}}_64.png" width="32" height="32" title="{{scope.getItem(ingredient.item).name}}" tooltip>
+								</a>
+								<br>
+							</span>
+							{{scope.getMachine(recipe).metadata.manufacturingSpeed * 60 / recipe.time * ingredient.amount}}&nbsp;/&nbsp;min
+						</div>
+					</td>
+					<td>
+						<span class="item-amount">
+							{{scope.getMachine(recipe).name}}
+						</span>
+						<br>
+						{{recipe.time}}s ({{scope.getMachine(recipe).metadata.manufacturingSpeed * 60 / recipe.time}}&nbsp;/&nbsp;min)
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div class="col-lg-6">
+		<h2>Usages as ingredient</h2>
+
+		<table class="table recipe-table table-hover">
+			<thead>
+				<tr>
+					<th>Recipe name</th>
+					<th>Products</th>
+					<th>Ingredients</th>
+					<th>Machine</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="recipe in scope.usagesAsIngredient">
+					<td>
+						{{recipe.name}}
+					</td>
+					<td>
+						<div ng-repeat="product in recipe.products" class="d-inline-block p-2">
+							<span class="item-amount">
+								{{product.amount}}x
+								<a ui-sref="item({item: scope.getItem(product.item).slug})">
+									<img ng-src="/assets/images/items/{{scope.getItem(product.item).slug}}_64.png" width="32" height="32" title="{{scope.getItem(product.item).name}}" tooltip>
+								</a>
+								<br>
+							</span>
+							{{scope.getMachine(recipe).metadata.manufacturingSpeed * 60 / recipe.time * product.amount}}&nbsp;/&nbsp;min
+						</div>
+					</td>
+					<td>
+						<div ng-repeat="ingredient in recipe.ingredients" class="d-inline-block p-2">
+							<span class="item-amount">
+								{{ingredient.amount}}x
+								<a ui-sref="item({item: scope.getItem(ingredient.item).slug})">
+									<img ng-src="/assets/images/items/{{scope.getItem(ingredient.item).slug}}_64.png" width="32" height="32" title="{{scope.getItem(ingredient.item).name}}" tooltip>
+								</a>
+								<br>
+							</span>
+							{{scope.getMachine(recipe).metadata.manufacturingSpeed * 60 / recipe.time * ingredient.amount}}&nbsp;/&nbsp;min
+						</div>
+					</td>
+					<td>
+						<span class="item-amount">
+							{{scope.getMachine(recipe).name}}
+						</span>
+						<br>
+						{{recipe.time}}s ({{scope.getMachine(recipe).metadata.manufacturingSpeed * 60 / recipe.time}}&nbsp;/&nbsp;min)
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div class="col-lg-6">
+		<h2>Usages for building</h2>
+
+		<table class="table recipe-table table-hover">
+			<thead>
+				<tr>
+					<th>Item name</th>
+					<th>Ingredients</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="recipe in scope.usagesForBuilding">
+					<td>
+						<div ng-repeat="product in recipe.products" class="d-inline-block p-2">
+							{{scope.getBuilding(product.item).name}}
+						</div>
+					</td>
+					<td>
+						<div ng-repeat="ingredient in recipe.ingredients" class="d-inline-block p-2">
+							<span class="item-amount">
+								{{ingredient.amount}}x
+								<a ui-sref="item({item: scope.getItem(ingredient.item).slug})">
+									<img ng-src="/assets/images/items/{{scope.getItem(ingredient.item).slug}}_64.png" width="32" height="32" title="{{scope.getItem(ingredient.item).name}}" tooltip>
+								</a>
+							</span>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div class="col-lg-6">
+		<h2>Usages for schematics</h2>
+
+		<table class="table recipe-table table-hover">
+			<thead>
+				<tr>
+					<th>Schematic</th>
+					<!--<th>Unlocks</th>-->
+					<th>Ingredients</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="schematic in scope.usagesForSchematics">
+					<td>
+						{{schematic.name}}
+					</td>
+					<!--<td>
+						<div ng-repeat="unlock in schematic.unlock" class="d-inline-block p-2">
+							{{unlock}}
+						</div>
+					</td>-->
+					<td>
+						<div ng-repeat="ingredient in schematic.cost" class="d-inline-block p-2">
+							<span class="item-amount">
+								{{ingredient.amount}}x
+								<a ui-sref="item({item: scope.getItem(ingredient.item).slug})">
+									<img ng-src="/assets/images/items/{{scope.getItem(ingredient.item).slug}}_64.png" width="32" height="32" title="{{scope.getItem(ingredient.item).name}}" tooltip>
+								</a>
+							</span>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

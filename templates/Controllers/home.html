@@ -1,0 +1,43 @@
+<ol class="breadcrumb">
+	<li class="breadcrumb-item"><a ui-sref="home">Satisfactory Tools</a></li>
+	<li class="breadcrumb-item active">Item Browser</li>
+</ol>
+
+<div class="row">
+	<div class="col-sm-6">
+		<h1>Item browser</h1>
+	</div>
+
+	<div class="col-sm-6">
+		<div class="form-group">
+			<input type="text" class="form-control" placeholder="Search for an item" ng-model="scope.filter">
+		</div>
+	</div>
+</div>
+
+<div class="card bg-tertiary p-3 mb-3" ng-if="scope.recentlyVisited.recent.length">
+	<h3>Recently visited</h3>
+	<div class="recipe-list">
+		<div class="card text-center cursor-pointer item-card" ng-repeat="className in scope.recentlyVisited.recent">
+			<div class="mt-2">
+				<img class="recipe-image" ng-src="/assets/images/items/{{scope.getItemByClassName(className).slug}}_64.png">
+			</div>
+			<a class="card-title mt-3 p-1 stretched-link text-white" ui-sref="item({item: scope.getItemByClassName(className).slug})">
+				{{scope.getItemByClassName(className).name}}
+			</a>
+
+			{{scope.getItemByClassName(item)}}
+		</div>
+	</div>
+</div>
+
+<div class="recipe-list">
+	<div class="card text-center cursor-pointer item-card" ng-repeat="item in scope.getFilteredItems()|orderBy:'name'|filter:scope.filter">
+		<div class="mt-2">
+			<img class="recipe-image" ng-src="/assets/images/items/{{item.slug}}_64.png">
+		</div>
+		<a class="card-title mt-3 p-1 stretched-link text-white" ui-sref="item({item: item.slug})">
+			{{item.name}}
+		</a>
+	</div>
+</div>

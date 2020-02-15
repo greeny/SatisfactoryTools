@@ -13,7 +13,7 @@ export class Strings
 
 	public static webalize(name: string): string
 	{
-		return name.replace(/[\s|.]+/gi, '-').toLowerCase();
+		return name.replace(/[\s|.]+/gi, '-').replace('™', '').toLowerCase();
 	}
 
 	public static stackSizeFromEnum(size: string): number
@@ -41,7 +41,7 @@ export class Strings
 		const parsers: {[index: string]: RegExp} = {};
 		parsers[Strings.OPENING_BRACE] = /\(/;
 		parsers[Strings.CLOSING_BRACE] = /\)/;
-		parsers[Strings.STRING] = /[a-zA-Z0-9\\/.'"_\-]+/;
+		parsers[Strings.STRING] = /[a-zA-Z0-9:\\/.'"_\-]+/;
 		parsers[Strings.EQUAL_SIGN] = /=/;
 		parsers[Strings.SEPARATOR] = /,/;
 

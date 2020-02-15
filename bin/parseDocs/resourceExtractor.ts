@@ -4,6 +4,7 @@ import {Strings} from '@src/Utils/Strings';
 import parseBlueprintClass from '@bin/parseDocs/blueprintClass';
 
 export default function parseResourceExtractors(resourceExtractors: {
+	ClassName: string,
 	mAllowedResources: string,
 	mAllowedResourceForms: string,
 	mItemsPerCycle: string,
@@ -24,6 +25,7 @@ export default function parseResourceExtractors(resourceExtractors: {
 		}
 
 		const minerSchema: IMinerSchema = {
+			className: resourceExtractor.ClassName,
 			allowedResources: [],
 			itemsPerCycle: parseFloat(resourceExtractor.mItemsPerCycle),
 			allowLiquids: allowLiquids,

@@ -16,6 +16,14 @@ export default function parseRecipes(recipes: {
 {
 	const result: IRecipeSchema[] = [];
 	for (const recipe of recipes) {
+		const producedIn = Arrays.ensureArray(Strings.unserializeDocs(recipe.mProducedIn)).map(parseBlueprintClass).map((className: string) => {
+			return className.replace('Build_', 'Desc_');
+		});
+
+		// ignore converter recipes
+		if (producedIn.indexOf('Desc_Converter_C') !== -1) {
+			continue;
+		}
 		result.push({
 			slug: Strings.webalize(recipe.mDisplayName),
 			name: recipe.mDisplayName,
@@ -25,7 +33,7 @@ export default function parseRecipes(recipes: {
 			manualTimeMultiplier: parseFloat(recipe.mManualManufacturingMultiplier),
 			ingredients: Arrays.ensureArray(Strings.unserializeDocs(recipe.mIngredients)).map(parseItemAmount),
 			products: Arrays.ensureArray(Strings.unserializeDocs(recipe.mProduct)).map(parseItemAmount),
-			producedIn: Arrays.ensureArray(Strings.unserializeDocs(recipe.mProducedIn)).map(parseBlueprintClass),
+			producedIn: producedIn,
 		});
 	}
 	return result;

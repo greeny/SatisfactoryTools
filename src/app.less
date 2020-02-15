@@ -1,0 +1,63 @@
+.navbar-brand {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+* {
+	font-size: 1rem;
+}
+
+a:hover {
+	color: #e77a31;
+}
+
+.bg-tertiary {
+	background-color: #33475e;
+}
+
+.recipe-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+	grid-gap: 20px;
+	justify-content: stretch;
+
+	.card {
+		max-width: 150px;
+
+		.recipe-image {
+			width: 64px;
+			height: 64px;
+
+			@media(max-width: 767px) {
+				& {
+					width: 48px;
+					height: 48px;
+				}
+			}
+
+			@media(max-width: 575px) {
+				& {
+					width: 48px;
+					height: 48px;
+				}
+			}
+		}
+	}
+}
+
+.recipe-table {
+	tr {
+		td, th {
+			vertical-align: middle;
+			text-align: center;
+		}
+
+		td:first-of-type {
+			text-align: left;
+		}
+	}
+
+	.item-amount {
+		font-size: 1.25em;
+	}
+}

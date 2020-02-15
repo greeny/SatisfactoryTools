@@ -75,7 +75,7 @@ export default function parseBuildings(buildings: {
 		}
 
 		result.push({
-			key: Strings.webalize(building.mDisplayName),
+			slug: Strings.webalize(building.mDisplayName),
 			name: building.mDisplayName,
 			description: building.mDescription.replace(/\r\n/ig, '\n'),
 			categories: [],

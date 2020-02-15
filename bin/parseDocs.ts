@@ -9,42 +9,70 @@ import parseBuildings from '@bin/parseDocs/building';
 import parseResourceExtractors from '@bin/parseDocs/resourceExtractor';
 import parseGenerators from '@bin/parseDocs/generator';
 import parseBuildingDescriptors from '@bin/parseDocs/buildingDescriptor';
+import parseSchematics from '@bin/parseDocs/schematic';
 
 const docs = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'Docs.json')).toString());
 
 const json: IJsonSchema = {
-	recipes: [],
-	items: [],
-	generators: [],
-	resources: [],
-	miners: [],
-	buildings: [],
+	recipes: {},
+	items: {},
+	schematics: {},
+	generators: {},
+	resources: {},
+	miners: {},
+	buildings: {},
 };
 
 let biomass: IItemSchema[] = [];
 let extraInfo: any[] = [];
+const mapping: {[key: string]: string} = {};
 
-for (const item of docs) {
-	switch (item.NativeClass) {
+function mapNameType(className: string, type: string): string {
+	return className;
+	/*const match = className.match(/\w+_(.*)_C/);
+	if (!match) {
+		throw new Error('Invliad className: ' + className);
+	}
+	const key = Strings.webalize(type + ' ' + match[1]);
+	if (className in mapping && mapping[className] !== key) {
+		throw new Error('Duplicated className: ' + className);
+	}
+	return mapping[className] = key;*/
+}
+
+for (const definitions of docs) {
+	switch (definitions.NativeClass) {
 		case 'Class\'/Script/FactoryGame.FGItemDescriptor\'':
 		case 'Class\'/Script/FactoryGame.FGEquipmentDescriptor\'':
 		case 'Class\'/Script/FactoryGame.FGConsumableDescriptor\'':
 		case 'Class\'/Script/FactoryGame.FGItemDescriptorNuclearFuel\'':
-			json.items.push(...parseItemDescriptors(item.Classes));
+			for (const item of parseItemDescriptors(definitions.Classes)) {
+				json.items[mapNameType(item.className, 'item')] = item;
+			}
 			break;
 		case 'Class\'/Script/FactoryGame.FGRecipe\'':
-			json.recipes.push(...parseRecipes(item.Classes));
+			for (const recipe of parseRecipes(definitions.Classes)) {
+				json.recipes[mapNameType(recipe.className, 'recipe')] = recipe;
+			}
 			break;
 		case 'Class\'/Script/FactoryGame.FGResourceDescriptor\'':
-			json.items.push(...parseItemDescriptors(item.Classes));
-			json.resources.push(...parseResourceDescriptors(item.Classes));
+			for (const item of parseItemDescriptors(definitions.Classes)) {
+				json.items[mapNameType(item.className, 'item')] = item;
+			}
+			for (const resource of parseResourceDescriptors(definitions.Classes)) {
+				json.resources[mapNameType(resource.item, 'item')] = resource;
+			}
 			break;
 		case 'Class\'/Script/FactoryGame.FGItemDescriptorBiomass\'':
-			biomass = parseItemDescriptors(item.Classes);
-			json.items.push(...biomass);
+			biomass = parseItemDescriptors(definitions.Classes);
+			for (const item of biomass) {
+				json.items[mapNameType(item.className, 'item')] = item;
+			}
 			break;
 		case 'Class\'/Script/FactoryGame.FGVehicleDescriptor\'':
-			json.buildings.push(...parseBuildings(item.Classes));
+			for (const building of parseBuildings(definitions.Classes)) {
+				json.buildings[mapNameType(building.className, 'building')] = building;
+			}
 			break;
 		case 'Class\'/Script/FactoryGame.FGBuildablePole\'':
 		case 'Class\'/Script/FactoryGame.FGBuildableConveyorBelt\'':
@@ -79,45 +107,96 @@ for (const item of docs) {
 		case 'Class\'/Script/FactoryGame.FGBuildableTrainPlatformEmpty\'':
 		case 'Class\'/Script/FactoryGame.FGBuildableSplitterSmart\'':
 		case 'Class\'/Script/FactoryGame.FGBuildableWalkway\'':
-			json.buildings.push(...parseBuildings(item.Classes, true));
+			for (const building of parseBuildings(definitions.Classes, true)) {
+				json.buildings[mapNameType(building.className, 'building')] = building;
+			}
 			break;
 		case 'Class\'/Script/FactoryGame.FGBuildableResourceExtractor\'':
-			json.miners.push(...parseResourceExtractors(item.Classes));
-			json.buildings.push(...parseBuildings(item.Classes, true));
+			for (const miner of parseResourceExtractors(definitions.Classes)) {
+				json.miners[mapNameType(miner.className, 'building')] = miner;
+			}
+			for (const building of parseBuildings(definitions.Classes, true)) {
+				json.buildings[mapNameType(building.className, 'building')] = building;
+			}
 			break;
 		case 'Class\'/Script/FactoryGame.FGBuildableGeneratorFuel\'':
 		case 'Class\'/Script/FactoryGame.FGBuildableGeneratorNuclear\'':
 		case 'Class\'/Script/FactoryGame.FGBuildableGeneratorGeoThermal\'':
-			json.buildings.push(...parseBuildings(item.Classes, true));
-			json.generators.push(...parseGenerators(item.Classes));
+			for (const building of parseBuildings(definitions.Classes, true)) {
+				json.buildings[mapNameType(building.className, 'building')] = building;
+			}
+			for (const generator of parseGenerators(definitions.Classes)) {
+				json.generators[mapNameType(generator.className, 'building')] = generator;
+			}
 			break;
 		case 'Class\'/Script/FactoryGame.FGBuildingDescriptor\'':
-			extraInfo = parseBuildingDescriptors(item.Classes);
+			extraInfo = parseBuildingDescriptors(definitions.Classes);
+			break;
+		case 'Class\'/Script/FactoryGame.FGSchematic\'':
+			for (const schematic of parseSchematics(definitions.Classes)) {
+				json.schematics[mapNameType(schematic.className, 'schematic')] = schematic;
+			}
 			break;
 	}
 }
 
+// add missing radar tower
+json.buildings['Desc_RadarTower_C'] = {
+	className: 'Desc_RadarTower_C',
+	categories: [],
+	buildMenuPriority: 0,
+	description: 'Reveals an area around itself on the map. The area grows over time to a max. Placing the tower higher up increases the max area revealed.',
+	slug: 'radarTower',
+	metadata: {},
+	name: 'Radar Tower',
+};
+
+// add extra info to buildings
 for (const info of extraInfo) {
-	for (const building of json.buildings) {
-		if (info.className === building.className) {
-			building.buildMenuPriority = info.priority;
-			building.categories = info.categories;
+	for (const key in json.buildings) {
+		if (info.className === json.buildings[key].className) {
+			json.buildings[key].buildMenuPriority = info.priority;
+			json.buildings[key].categories = info.categories;
 			break;
 		}
 	}
 }
 
-for (const generator of json.generators) {
-	const index = generator.fuel.indexOf('FGItemDescriptorBiomass');
+// add biomass stuff to biomass burner
+for (const key in json.generators) {
+	const index = json.generators[key].fuel.indexOf('FGItemDescriptorBiomass');
 	if (index !== -1) {
-		generator.fuel.splice(index, 1);
-		generator.fuel.push(...biomass.map((bio) => {
+		json.generators[key].fuel.splice(index, 1);
+		json.generators[key].fuel.push(...biomass.map((bio) => {
 			return bio.className;
 		}));
 	}
 }
 
-function findItem(className: string) {
+// convert liquid requirements to m3
+for (const key in json.recipes) {
+	const recipe = json.recipes[key];
+
+	for (const ingredient of recipe.ingredients) {
+		if (!json.items[ingredient.item]) {
+			throw new Error('Invalid item ' + ingredient.item);
+		}
+		if (json.items[ingredient.item].liquid) {
+			ingredient.amount /= 1000;
+		}
+	}
+	for (const product of recipe.products) {
+		if (!json.items[product.item]) {
+			continue;
+		}
+		if (json.items[product.item].liquid) {
+			product.amount /= 1000;
+		}
+	}
+}
+
+
+/*function findItem(className: string) {
 	if (className.match(/PowerPoleWall/) || className === 'Desc_RadarTower_C') {
 		return true;
 	}
@@ -133,11 +212,11 @@ function findItem(className: string) {
 		}
 	}
 	return false;
-}
+}*/
 
 fs.writeFileSync(path.join(__dirname, '..', 'data', 'data.json'), JSON.stringify(json, null, '\t'));
 
-for (const recipe of json.recipes) {
+/*for (const recipe of json.recipes) {
 	for (const ingredient of recipe.ingredients) {
 		if (!findItem(ingredient.item)) {
 			throw new Error('Unknown item ' + ingredient.item);
@@ -148,4 +227,4 @@ for (const recipe of json.recipes) {
 			throw new Error('Unknown item ' + product.item);
 		}
 	}
-}
+}*/

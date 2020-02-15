@@ -3,6 +3,7 @@
 	"rules": {
 		"callable-types": false,
 		"comment-format": false,
+		"forin": false,
 		"indent": [true, "tabs", 4],
 		"max-line-length": {
 			"options": [200]

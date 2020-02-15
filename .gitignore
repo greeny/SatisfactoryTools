@@ -7,6 +7,7 @@ data/Docs.json
 
 # Node stuff
 node_modules
+yarn-error.log
 
 # Generated sources
 www/assets/app.js

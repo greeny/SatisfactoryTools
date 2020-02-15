@@ -26,6 +26,18 @@ module.exports = {
 				loader: 'ts-loader',
 				exclude: '/node_modules/',
 			},
+			{
+				test: /\.html$/,
+				loader: "angular-templatecache-loader?module=app",
+			},
+			{
+				test: /\.css$/i,
+				use: ['style-loader', 'css-loader'],
+			},
+			{
+				test: /\.less$/,
+				use: ['style-loader', 'css-loader', 'less-loader'],
+			},
 		],
 	},
 	performance: {

@@ -3,7 +3,7 @@ import {IBuildingMetadataSchema, IManufacturerMetadataSchema} from '@src/Schema/
 export interface IBuildingSchema
 {
 
-	key: string;
+	slug: string;
 	name: string;
 	description: string;
 	className: string;

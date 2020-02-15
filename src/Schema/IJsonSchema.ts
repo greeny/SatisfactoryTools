@@ -4,15 +4,17 @@ import {IResourceSchema} from '@src/Schema/IResourceSchema';
 import {IBuildingSchema} from '@src/Schema/IBuildingSchema';
 import {IMinerSchema} from '@src/Schema/IMinerSchema';
 import {IGeneratorSchema} from '@src/Schema/IGeneratorSchema';
+import {ISchematicSchema} from '@src/Schema/ISchematicSchema';
 
 export interface IJsonSchema
 {
 
-	items: IItemSchema[];
-	recipes: IRecipeSchema[];
-	generators: IGeneratorSchema[];
-	resources: IResourceSchema[];
-	miners: IMinerSchema[];
-	buildings: IBuildingSchema[];
+	items: {[key: string]: IItemSchema};
+	recipes: {[key: string]: IRecipeSchema};
+	schematics: {[key: string]: ISchematicSchema};
+	generators: {[key: string]: IGeneratorSchema};
+	resources: {[key: string]: IResourceSchema};
+	miners: {[key: string]: IMinerSchema};
+	buildings: {[key: string]: IBuildingSchema};
 
 }
