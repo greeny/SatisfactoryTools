@@ -32,6 +32,7 @@
 			background-color: #2B3E50;
 		}
 	</style>
+	<link rel="stylesheet" href="/assets/css/fontawesome.min.css">
 	<base href="/">
 </head>
 <body>

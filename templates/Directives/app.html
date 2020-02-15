@@ -11,10 +11,18 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item" ui-sref-active="active">
-					<a class="nav-link" ui-sref="home">Recipe browser</a>
+					<a class="nav-link" ui-sref="home">
+						<span class="fas fa-th-large"></span>
+						Recipe browser
+					</a>
 				</li>
-				<li class="nav-item" ui-sref-active="active">
-					<a class="nav-link" ui-sref="about">About</a>
+			</ul>
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="https://discord.gg/pcGyj8p" target="_blank">
+						<span class="fab fa-discord"></span>
+						Discord server
+					</a>
 				</li>
 			</ul>
 		</div>
@@ -23,5 +31,13 @@
 
 <div class="container-fluid px-xl-5 px-lg-4 px-md-3 px-sm-2 px-1" style="margin-top: 60px;">
 	<div ui-view></div>
+
+	<hr>
+
+	<footer>
+		<p class="text-secondary">
+			Made by greeny. Old website available here: <a href="https://satisfactory.greeny.dev/">https://satisfactory.greeny.dev/</a>.
+		</p>
+	</footer>
 </div>
 
