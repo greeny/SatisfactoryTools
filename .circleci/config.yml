@@ -27,7 +27,7 @@ jobs:
                 command: |
                     if [ "${CIRCLE_BRANCH}" == "master" ]
                     then
-                        scp -r www/* $DEPLOY_USER@$DEPLOY_SERVER:$DEPLOY_PATH
+                        scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -r www/* $DEPLOY_USER@$DEPLOY_SERVER:$DEPLOY_PATH
                     else
-                        scp -r www/* $DEPLOY_USER@$DEPLOY_SERVER:$DEPLOY_PATH_TEST
+                        scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -r www/* $DEPLOY_USER@$DEPLOY_SERVER:$DEPLOY_PATH_TEST
                     fi
