@@ -23,7 +23,6 @@ jobs:
 
             - run: yarn build
     deployement:
-        production:
-            branch: master
-            steps:
-                - run: scp -r www/* DEPLOY_USER@DEPLOY_SERVER:DEPLOY_PATH
+        branch: master
+        steps:
+            - run: scp -r www/* DEPLOY_USER@DEPLOY_SERVER:DEPLOY_PATH
