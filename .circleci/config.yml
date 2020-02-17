@@ -25,5 +25,5 @@ jobs:
     deployement:
         production:
             branch: master
-            commands:
-                - scp -r www/* DEPLOY_USER@DEPLOY_SERVER:DEPLOY_PATH
+            steps:
+                - run: scp -r www/* DEPLOY_USER@DEPLOY_SERVER:DEPLOY_PATH
