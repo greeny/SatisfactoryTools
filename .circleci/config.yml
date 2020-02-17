@@ -10,19 +10,24 @@ jobs:
             - checkout
 
             - restore_cache:
-                  keys:
-                      - v1-dependencies-{{ checksum "package.json" }}
-                      - v1-dependencies-
+                keys:
+                    - v1-dependencies-{{ checksum "package.json" }}
+                    - v1-dependencies-
 
             - run: yarn install
 
             - save_cache:
-                  paths:
-                      - node_modules
-                  key: v1-dependencies-{{ checksum "package.json" }}
+                paths:
+                    - node_modules
+                key: v1-dependencies-{{ checksum "package.json" }}
 
             - run: yarn build
-    deployement:
-        branch: master
-        steps:
-            - run: scp -r www/* DEPLOY_USER@DEPLOY_SERVER:DEPLOY_PATH
+
+            - deploy:
+                command: |
+                    if [ "${CIRCLE_BRANCH}" == "master" ]
+                    then
+                        scp -r www/* DEPLOY_USER@DEPLOY_SERVER:DEPLOY_PATH
+                    else
+                        scp -r www/* DEPLOY_USER@DEPLOY_SERVER:DEPLOY_PATH_TEST
+                    fi
