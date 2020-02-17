@@ -37,7 +37,7 @@
 </head>
 <body>
 
-<appx></appx>
+<app></app>
 
 <script src="/assets/app.js?v=<?= filemtime(__DIR__ . '/assets/app.js') ?>" async></script>
 </body>
