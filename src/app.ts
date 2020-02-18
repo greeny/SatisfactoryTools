@@ -10,3 +10,5 @@ import 'script-loader!../node_modules/angular-ui-router/release/angular-ui-route
 import {AppModule} from '@src/Module/AppModule';
 
 new AppModule(angular.module('app', ['ui.router', 'ngSanitize'])).register();
+
+console.log('this is bad');
