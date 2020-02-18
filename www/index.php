@@ -32,11 +32,12 @@
 			background-color: #2B3E50;
 		}
 	</style>
+	<link rel="stylesheet" href="/assets/css/fontawesome.min.css">
 	<base href="/">
 </head>
 <body>
 
-<appx></appx>
+<app></app>
 
 <script src="/assets/app.js?v=<?= filemtime(__DIR__ . '/assets/app.js') ?>" async></script>
 </body>

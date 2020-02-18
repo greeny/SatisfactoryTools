@@ -11,10 +11,39 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item" ui-sref-active="active">
-					<a class="nav-link" ui-sref="home">Recipe browser</a>
+					<a class="nav-link" ui-sref="home">
+						<span class="fas fa-th-large"></span>
+						Recipe browser
+					</a>
 				</li>
-				<li class="nav-item" ui-sref-active="active">
-					<a class="nav-link" ui-sref="about">About</a>
+			</ul>
+			<ul class="navbar-nav">
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="javascript: void(0);" data-toggle="dropdown">
+						<span class="fas fa-users"></span>
+						Community
+					</a>
+					<div class="dropdown-menu dropdown-menu-right">
+						<h6 class="dropdown-header">Contribute</h6>
+						<a class="dropdown-item" href="https://discord.gg/pcGyj8p" target="_blank">
+							<span class="fab fa-fw fa-discord"></span>
+							Discord server
+						</a>
+						<a class="dropdown-item" href="https://github.com/greeny/SatisfactoryTools" target="_blank">
+							<span class="fab fa-fw fa-github"></span>
+							Github repository
+						</a>
+						<div class="dropdown-divider"></div>
+						<h6 class="dropdown-header">Support me</h6>
+						<a class="dropdown-item" href="https://www.paypal.me/greenydev" target="_blank">
+							<span class="fab fa-fw fa-paypal"></span>
+							Donate through Paypal
+						</a>
+						<a class="dropdown-item" href="https://patreon.com/greeny_dev" target="_blank">
+							<span class="fab fa-fw fa-patreon"></span>
+							Pledge on Patreon
+						</a>
+					</div>
 				</li>
 			</ul>
 		</div>
@@ -23,5 +52,14 @@
 
 <div class="container-fluid px-xl-5 px-lg-4 px-md-3 px-sm-2 px-1" style="margin-top: 60px;">
 	<div ui-view></div>
+
+	<hr>
+
+	<footer>
+		<p class="text-secondary">
+			Made by <a href="https://github.com/greeny">greeny</a>. Source code available at <a href="https://github.com/greeny/SatisfactoryTools">Github</a>.
+			Old website: <a href="https://satisfactory.greeny.dev/">https://satisfactory.greeny.dev/</a>.
+		</p>
+	</footer>
 </div>
 

@@ -70,7 +70,7 @@ export class AppModule
 			return AppModule.generateNumberFormattingFunction();
 		});
 
-		this.app.directive('appx', () => {
+		this.app.directive('app', () => {
 			return new AppDirective;
 		});
 

@@ -2232,11 +2232,11 @@
 			"ingredients": [
 				{
 					"item": "Desc_HighSpeedWire_C",
-					"amount": 8
+					"amount": 16
 				},
 				{
 					"item": "Desc_IronRod_C",
-					"amount": 3
+					"amount": 4
 				}
 			],
 			"forBuilding": true,
@@ -2261,11 +2261,11 @@
 			"ingredients": [
 				{
 					"item": "Desc_HighSpeedWire_C",
-					"amount": 4
+					"amount": 8
 				},
 				{
 					"item": "Desc_IronRod_C",
-					"amount": 1
+					"amount": 2
 				}
 			],
 			"forBuilding": true,
@@ -2796,16 +2796,16 @@
 			"name": "Automated Wiring",
 			"className": "Recipe_SpaceElevatorPart_3_C",
 			"alternate": false,
-			"time": 72,
+			"time": 24,
 			"manualTimeMultiplier": 1,
 			"ingredients": [
 				{
 					"item": "Desc_Stator_C",
-					"amount": 3
+					"amount": 1
 				},
 				{
 					"item": "Desc_Cable_C",
-					"amount": 60
+					"amount": 20
 				}
 			],
 			"forBuilding": false,
@@ -2815,7 +2815,7 @@
 			"products": [
 				{
 					"item": "Desc_SpaceElevatorPart_3_C",
-					"amount": 3
+					"amount": 1
 				}
 			],
 			"producedIn": [
@@ -3756,8 +3756,8 @@
 			]
 		},
 		"Recipe_Alternate_Coal_1_C": {
-			"slug": "alternate-wood-coal",
-			"name": "Alternate: Wood Coal",
+			"slug": "alternate-charcoal",
+			"name": "Alternate: Charcoal",
 			"className": "Recipe_Alternate_Coal_1_C",
 			"alternate": true,
 			"time": 4,
@@ -3783,8 +3783,8 @@
 			]
 		},
 		"Recipe_Alternate_Coal_2_C": {
-			"slug": "alternate-biomass-coal",
-			"name": "Alternate: Biomass Coal",
+			"slug": "alternate-biocoal",
+			"name": "Alternate: Biocoal",
 			"className": "Recipe_Alternate_Coal_2_C",
 			"alternate": true,
 			"time": 8,
@@ -8895,8 +8895,8 @@
 			"producedIn": []
 		},
 		"Recipe_PipeSupportWallHole_C": {
-			"slug": "pipeline-wall-through-hole",
-			"name": "Pipeline Wall Through Hole",
+			"slug": "pipeline-wall-hole",
+			"name": "Pipeline Wall Hole",
 			"className": "Recipe_PipeSupportWallHole_C",
 			"alternate": false,
 			"time": 1,
@@ -9173,7 +9173,7 @@
 				},
 				{
 					"item": "Desc_IronRod_C",
-					"amount": 3
+					"amount": 2
 				}
 			],
 			"forBuilding": true,
@@ -9198,11 +9198,11 @@
 			"ingredients": [
 				{
 					"item": "Desc_HighSpeedConnector_C",
-					"amount": 2
+					"amount": 6
 				},
 				{
 					"item": "Desc_SteelPipe_C",
-					"amount": 5
+					"amount": 6
 				}
 			],
 			"forBuilding": true,
@@ -9227,11 +9227,11 @@
 			"ingredients": [
 				{
 					"item": "Desc_HighSpeedConnector_C",
-					"amount": 4
+					"amount": 3
 				},
 				{
 					"item": "Desc_SteelPipe_C",
-					"amount": 2
+					"amount": 3
 				}
 			],
 			"forBuilding": true,
@@ -9839,9 +9839,9 @@
 			"resourceSinkPoints": 1,
 			"liquid": true,
 			"fluidColor": {
-				"r": 244,
-				"g": 131,
-				"b": 122,
+				"r": 235,
+				"g": 125,
+				"b": 21,
 				"a": 255
 			}
 		},
@@ -10699,7 +10699,7 @@
 			"slug": "hazmat-suit",
 			"className": "BP_EquipmentDescriptorHazmatSuit_C",
 			"name": "Hazmat Suit",
-			"description": "Slot: Body\n\nShields you from the adverse effects of radiation. \nConsumes Iodine INfused Filters from your inventory when you are in radioactive areas.",
+			"description": "Slot: Body\n\nShields you from the adverse effects of radiation. \nConsumes Iodine Infused Filters from your inventory when you are in radioactive areas.",
 			"stackSize": 1,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
@@ -11289,6 +11289,23 @@
 				"b": 0,
 				"a": 0
 			}
+		},
+		"Desc_NuclearWaste_C": {
+			"className": "Desc_NuclearWaste_C",
+			"liquid": false,
+			"radioactiveDecay": 0.1,
+			"resourceSinkPoints": 1,
+			"energyValue": 0,
+			"stackSize": 500,
+			"description": "Nuclear Waste is the byproduct of nuclear power plants. You gotta find a way to handle all of this.",
+			"name": "Nuclear Waste",
+			"fluidColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			},
+			"slug": "nuclear-waste"
 		}
 	},
 	"schematics": {
@@ -12321,7 +12338,7 @@
 		},
 		"Schematic_Alternate_Coal1_C": {
 			"className": "Schematic_Alternate_Coal1_C",
-			"name": "Alternate: Wood Coal",
+			"name": "Alternate: Charcoal",
 			"tier": 3,
 			"cost": [],
 			"unlock": [
@@ -12334,7 +12351,7 @@
 		},
 		"Schematic_Alternate_Coal2_C": {
 			"className": "Schematic_Alternate_Coal2_C",
-			"name": "Alternate: Biomass Coal",
+			"name": "Alternate: Biocoal",
 			"tier": 3,
 			"cost": [],
 			"unlock": [
@@ -16039,6 +16056,16 @@
 		}
 	},
 	"generators": {
+		"Build_GeneratorFuel_C": {
+			"className": "Build_GeneratorFuel_C",
+			"fuel": [
+				"Desc_LiquidFuel_C",
+				"Desc_LiquidTurboFuel_C",
+				"Desc_LiquidBiofuel_C"
+			],
+			"powerProduction": 150,
+			"powerProductionExponent": 1.3
+		},
 		"Build_GeneratorBiomass_C": {
 			"className": "Build_GeneratorBiomass_C",
 			"fuel": [
@@ -16065,16 +16092,6 @@
 				"Desc_PetroleumCoke_C"
 			],
 			"powerProduction": 75,
-			"powerProductionExponent": 1.3
-		},
-		"Build_GeneratorFuel_C": {
-			"className": "Build_GeneratorFuel_C",
-			"fuel": [
-				"Desc_LiquidFuel_C",
-				"Desc_LiquidTurboFuel_C",
-				"Desc_LiquidBiofuel_C"
-			],
-			"powerProduction": 150,
 			"powerProductionExponent": 1.3
 		},
 		"Build_GeneratorNuclear_C": {
@@ -16433,6 +16450,48 @@
 			"className": "Desc_PowerPoleMk3_C",
 			"metadata": {}
 		},
+		"Desc_GeneratorFuel_C": {
+			"slug": "fuel-generator",
+			"name": "Fuel Generator",
+			"description": "Consumes Fuel to generate electricity for your power grid.\nHas an input so feeding Fuel can be automated.",
+			"categories": [
+				"SC_Generators_C"
+			],
+			"buildMenuPriority": 22,
+			"className": "Desc_GeneratorFuel_C",
+			"metadata": {
+				"powerConsumption": 0,
+				"powerConsumptionExponent": 1.6
+			}
+		},
+		"Desc_GeneratorBiomass_C": {
+			"slug": "biomass-burner",
+			"name": "Biomass Burner",
+			"description": "Burns various forms of biomass to generate electricity for the power grid.\nHas no input and must therefore be fed biomass manually.",
+			"categories": [
+				"SC_Generators_C"
+			],
+			"buildMenuPriority": 20,
+			"className": "Desc_GeneratorBiomass_C",
+			"metadata": {
+				"powerConsumption": 0,
+				"powerConsumptionExponent": 1.6
+			}
+		},
+		"Desc_GeneratorCoal_C": {
+			"slug": "coal-generator",
+			"name": "Coal Generator",
+			"description": "Burns coal to generate electricity for your power grid.\nHas an input so feeding coal can be automated.",
+			"categories": [
+				"SC_Generators_C"
+			],
+			"buildMenuPriority": 21,
+			"className": "Desc_GeneratorCoal_C",
+			"metadata": {
+				"powerConsumption": 0,
+				"powerConsumptionExponent": 1.6
+			}
+		},
 		"Desc_TradingPost_C": {
 			"slug": "the-hub",
 			"name": "The HUB",
@@ -16447,17 +16506,31 @@
 				"powerConsumptionExponent": 1.6
 			}
 		},
-		"Desc_FoundryMk1_C": {
-			"slug": "foundry",
-			"name": "Foundry",
-			"description": "Smelts two resources into alloy ingots.\n\nCan be automated by feeding ore into it with a conveyor belt connected to the inputs. The produced ingots can be automatically extracted by connecting a conveyor belt to the output.",
+		"Desc_SpaceElevator_C": {
+			"slug": "space-elevator",
+			"name": "Space Elevator",
+			"description": "Funnel resources to complete Project Assembly.\nCompleting stages here allows you to unlock later tiers of milestones in the HUB.",
 			"categories": [
-				"SC_Smelters_C"
+				"SC_Special_C"
 			],
-			"buildMenuPriority": 8,
-			"className": "Desc_FoundryMk1_C",
+			"buildMenuPriority": 35,
+			"className": "Desc_SpaceElevator_C",
 			"metadata": {
-				"powerConsumption": 16,
+				"powerConsumption": 0,
+				"powerConsumptionExponent": 1.6
+			}
+		},
+		"Desc_ConstructorMk1_C": {
+			"slug": "constructor",
+			"name": "Constructor",
+			"description": "Crafts one part into another part.\n\nCan be automated by feeding parts into it with a conveyor belt connected to the input. The produced parts can be automatically extracted by connecting a conveyor belt to the output.",
+			"categories": [
+				"SC_Manufacturers_C"
+			],
+			"buildMenuPriority": 10,
+			"className": "Desc_ConstructorMk1_C",
+			"metadata": {
+				"powerConsumption": 4,
 				"powerConsumptionExponent": 1.6,
 				"manufacturingSpeed": 1
 			}
@@ -16471,21 +16544,6 @@
 			],
 			"buildMenuPriority": 6,
 			"className": "Desc_SmelterMk1_C",
-			"metadata": {
-				"powerConsumption": 4,
-				"powerConsumptionExponent": 1.6,
-				"manufacturingSpeed": 1
-			}
-		},
-		"Desc_ConstructorMk1_C": {
-			"slug": "constructor",
-			"name": "Constructor",
-			"description": "Crafts one part into another part.\n\nCan be automated by feeding parts into it with a conveyor belt connected to the input. The produced parts can be automatically extracted by connecting a conveyor belt to the output.",
-			"categories": [
-				"SC_Manufacturers_C"
-			],
-			"buildMenuPriority": 10,
-			"className": "Desc_ConstructorMk1_C",
 			"metadata": {
 				"powerConsumption": 4,
 				"powerConsumptionExponent": 1.6,
@@ -16537,24 +16595,25 @@
 				"manufacturingSpeed": 1
 			}
 		},
-		"Desc_SpaceElevator_C": {
-			"slug": "space-elevator",
-			"name": "Space Elevator",
-			"description": "Funnel resources to complete Project Assembly.\nCompleting stages here allows you to unlock later tiers of milestones in the HUB.",
+		"Desc_FoundryMk1_C": {
+			"slug": "foundry",
+			"name": "Foundry",
+			"description": "Smelts two resources into alloy ingots.\n\nCan be automated by feeding ore into it with a conveyor belt connected to the inputs. The produced ingots can be automatically extracted by connecting a conveyor belt to the output.",
 			"categories": [
-				"SC_Special_C"
+				"SC_Smelters_C"
 			],
-			"buildMenuPriority": 35,
-			"className": "Desc_SpaceElevator_C",
+			"buildMenuPriority": 8,
+			"className": "Desc_FoundryMk1_C",
 			"metadata": {
-				"powerConsumption": 0,
-				"powerConsumptionExponent": 1.6
+				"powerConsumption": 16,
+				"powerConsumptionExponent": 1.6,
+				"manufacturingSpeed": 1
 			}
 		},
 		"Desc_WaterPump_C": {
 			"slug": "water-extractor",
 			"name": "Water Extractor",
-			"description": "Default extraction rate: 120k liter per minute.\nDefault pressure: 10, allowing a 10 meter vertical rise of fluids.\n\nExtracts water from the body of water it is build on.\nNote that the water needs to be deep enough and that rivesr do not commonly suffice.",
+			"description": "Default extraction rate: 120m³ water per minute.\nDefault pressure: 10, allowing a 10 meter vertical rise of fluids.\n\nExtracts water from the body of water it is build on.\nNote that the water needs to be deep enough and that rivers do not commonly suffice.",
 			"categories": [
 				"SC_OilProduction_C"
 			],
@@ -16582,7 +16641,7 @@
 		"Desc_OilPump_C": {
 			"slug": "oil-extractor",
 			"name": "Oil Extractor",
-			"description": "Normal extraction rate: 120k liter per minute.\nDefault pressure: 10, allowing a 10 meter vertical rise of fluids.\n\nExtracts Crude Oil from a Crude Oil node it is build on. Extraction rates depend on node purity.\nOutputs all extracted Crude Oil from the pipe output connection.",
+			"description": "Normal extraction rate: 120m³ oil per minute.\nDefault pressure: 10, allowing a 10 meter vertical rise of fluids.\n\nExtracts Crude Oil from a Crude Oil node it is build on. Extraction rates depend on node purity.\nOutputs all extracted Crude Oil from the pipe output connection.",
 			"categories": [
 				"SC_OilProduction_C"
 			],
@@ -16742,7 +16801,7 @@
 		"Desc_ConveyorPoleWall_C": {
 			"slug": "conveyor-wall-mount",
 			"name": "Conveyor Wall Mount",
-			"description": "PROTOTYPE PROTOTYPE PROTOTYPE PROTOTYPE PROTOTYPE PROTOTYPE PROTOTYPE PROTOTYPE PROTOTYPE PROTOTYPE",
+			"description": "Can be attached to walls and is used as a connection for conveyor belts.\nUseful to route conveyor belts in a more controlled manner and over long distances.",
 			"categories": [
 				"SC_ConverPole_C"
 			],
@@ -16753,7 +16812,7 @@
 		"Desc_PipelineSupportWall_C": {
 			"slug": "pipeline-wall-support",
 			"name": "Pipeline Wall Support",
-			"description": "PROTOTYPE PROTOTYPE PROTOTYPE PROTOTYPE PROTOTYPE PROTOTYPE PROTOTYPE PROTOTYPE PROTOTYPE PROTOTYPE",
+			"description": "Can be attached to walls.\nUsed to connect Pipelines over longer distances.",
 			"categories": [
 				"SC_PipeSupport_C"
 			],
@@ -16762,9 +16821,9 @@
 			"metadata": {}
 		},
 		"Desc_PipelineSupportWallHole_C": {
-			"slug": "pipeline-wall-through-hole",
-			"name": "Pipeline Wall Through Hole",
-			"description": "PROTOTYPE PROTOTYPE PROTOTYPE PROTOTYPE PROTOTYPE PROTOTYPE PROTOTYPE PROTOTYPE PROTOTYPE PROTOTYPE",
+			"slug": "pipeline-wall-hole",
+			"name": "Pipeline Wall Hole",
+			"description": "Can be attached to walls, allowing Pipelines to pass through them.",
 			"categories": [
 				"SC_PipeSupport_C"
 			],
@@ -16789,48 +16848,6 @@
 			"buildMenuPriority": 0,
 			"className": "Desc_PowerPoleWall_Mk3_C",
 			"metadata": {}
-		},
-		"Desc_GeneratorBiomass_C": {
-			"slug": "biomass-burner",
-			"name": "Biomass Burner",
-			"description": "Burns various forms of biomass to generate electricity for the power grid.\nHas no input and must therefore be fed biomass manually.",
-			"categories": [
-				"SC_Generators_C"
-			],
-			"buildMenuPriority": 20,
-			"className": "Desc_GeneratorBiomass_C",
-			"metadata": {
-				"powerConsumption": 0,
-				"powerConsumptionExponent": 1.6
-			}
-		},
-		"Desc_GeneratorCoal_C": {
-			"slug": "coal-generator",
-			"name": "Coal Generator",
-			"description": "Burns coal to generate electricity for your power grid.\nHas an input so feeding coal can be automated.",
-			"categories": [
-				"SC_Generators_C"
-			],
-			"buildMenuPriority": 21,
-			"className": "Desc_GeneratorCoal_C",
-			"metadata": {
-				"powerConsumption": 0,
-				"powerConsumptionExponent": 1.6
-			}
-		},
-		"Desc_GeneratorFuel_C": {
-			"slug": "fuel-generator",
-			"name": "Fuel Generator",
-			"description": "Consumes Fuel to generate electricity for your power grid.\nHas an input so feeding Fuel can be automated.",
-			"categories": [
-				"SC_Generators_C"
-			],
-			"buildMenuPriority": 22,
-			"className": "Desc_GeneratorFuel_C",
-			"metadata": {
-				"powerConsumption": 0,
-				"powerConsumptionExponent": 1.6
-			}
 		},
 		"Desc_Fence_01_C": {
 			"slug": "fence",
@@ -17242,7 +17259,7 @@
 		"Desc_Pipeline_C": {
 			"slug": "pipeline",
 			"name": "Pipeline",
-			"description": "Outside indicators show volume, flow rate and direction.\nTransports up to 300m³ liters per minute.\nUsed to transport fluids.",
+			"description": "Outside indicators show volume, flow rate and direction.\nTransports up to 300m³ of fluid per minute.\nUsed to transport fluids.",
 			"categories": [
 				"SC_Pipes_C"
 			],
@@ -17269,7 +17286,7 @@
 		"Desc_PipelinePump_C": {
 			"slug": "pipeline-pump",
 			"name": "Pipeline Pump",
-			"description": "Applies 20 pressure, allowing a 20 meter vertical rise of fluids.\nCan be attached to a pipeline to apply additional pressure.\nUseful for overcoming verticality and balancing out throughput.",
+			"description": "Applies 20 pressure, allowing a 20 meter vertical rise of fluids.\nOutputs fluids at 300m³ per minute.\n\nCan be attached to a pipeline to apply additional pressure.\nUseful for overcoming verticality and balancing out throughput.",
 			"categories": [
 				"SC_Pipes_C"
 			],
@@ -17742,7 +17759,7 @@
 		"Desc_TruckStation_C": {
 			"slug": "truck-station",
 			"name": "Truck Station",
-			"description": "Either send or recieve resources to vehicles. Has an inventory with 48 slots.\nTransfers up to 120 stacks per minute to/from docked vehicle. \nAlways refuels vehicles if it has access to a matching fuel type..\n",
+			"description": "Either send or receive resources to vehicles. Has an inventory with 48 slots.\nTransfers up to 120 stacks per minute to/from docked vehicle. \nAlways refuels vehicles if it has access to a matching fuel type..\n",
 			"categories": [
 				"SC_Vehicles_C"
 			],

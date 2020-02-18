@@ -1,5 +1,5 @@
-import '@src/styles/bootstrap-theme.css';
-import '@src/app.less';
+import '@src/../styles/bootstrap-theme.css';
+import '@src/../styles/app.less';
 
 import * as angular from 'angular';
 import 'script-loader!../node_modules/jquery/dist/jquery.min.js';
