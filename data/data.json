@@ -11289,6 +11289,23 @@
 				"b": 0,
 				"a": 0
 			}
+		},
+		"Desc_NuclearWaste_C": {
+			"className": "Desc_NuclearWaste_C",
+			"liquid": false,
+			"radioactiveDecay": 0.1,
+			"resourceSinkPoints": 1,
+			"energyValue": 0,
+			"stackSize": 500,
+			"description": "Nuclear Waste is the byproduct of nuclear power plants. You gotta find a way to handle all of this.",
+			"name": "Nuclear Waste",
+			"fluidColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			},
+			"slug": "nuclear-waste"
 		}
 	},
 	"schematics": {
