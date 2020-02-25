@@ -25,11 +25,20 @@ export default function parseResourceDescriptors(descriptors: {
 {
 	const result = [];
 	for (const descriptor of descriptors) {
-		result.push({
-			item: descriptor.ClassName,
-			pingColor: parseColor(Strings.unserializeDocs(descriptor.mPingColor)),
-			speed: parseFloat(descriptor.mCollectSpeedMultiplier),
-		});
+		switch (descriptor.ClassName) {
+			case 'Desc_UraniumCell_C':
+			case 'Desc_UraniumPellet_C':
+			case 'Desc_CompactedCoal_C':
+			case 'Desc_PackagedOil_C':
+			case 'Desc_PackagedWater_C':
+				continue;
+			default:
+				result.push({
+					item: descriptor.ClassName,
+					pingColor: parseColor(Strings.unserializeDocs(descriptor.mPingColor)),
+					speed: parseFloat(descriptor.mCollectSpeedMultiplier),
+				});
+		}
 	}
 	return result;
 }
