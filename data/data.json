@@ -16219,56 +16219,6 @@
 				"a": 1
 			},
 			"speed": 1
-		},
-		"Desc_UraniumCell_C": {
-			"item": "Desc_UraniumCell_C",
-			"pingColor": {
-				"r": 0,
-				"g": 1,
-				"b": 0,
-				"a": 1
-			},
-			"speed": 1
-		},
-		"Desc_UraniumPellet_C": {
-			"item": "Desc_UraniumPellet_C",
-			"pingColor": {
-				"r": 0,
-				"g": 1,
-				"b": 0,
-				"a": 1
-			},
-			"speed": 1
-		},
-		"Desc_CompactedCoal_C": {
-			"item": "Desc_CompactedCoal_C",
-			"pingColor": {
-				"r": 0,
-				"g": 0,
-				"b": 0,
-				"a": 1
-			},
-			"speed": 1
-		},
-		"Desc_PackagedOil_C": {
-			"item": "Desc_PackagedOil_C",
-			"pingColor": {
-				"r": 0,
-				"g": 0,
-				"b": 0,
-				"a": 1
-			},
-			"speed": 1
-		},
-		"Desc_PackagedWater_C": {
-			"item": "Desc_PackagedWater_C",
-			"pingColor": {
-				"r": 0,
-				"g": 0,
-				"b": 0,
-				"a": 0
-			},
-			"speed": 1
 		}
 	},
 	"miners": {
