@@ -10,7 +10,6 @@ export interface IItemSchema
 	stackSize: number;
 	energyValue: number;
 	radioactiveDecay: number;
-	resourceSinkPoints: number;
 	liquid: boolean;
 	fluidColor: IColorSchema;
 
