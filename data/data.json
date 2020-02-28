@@ -940,7 +940,7 @@
 				},
 				{
 					"item": "Desc_Rubber_C",
-					"amount": 2
+					"amount": 1
 				}
 			],
 			"forBuilding": false,
@@ -1099,7 +1099,7 @@
 			"ingredients": [
 				{
 					"item": "Desc_HeavyOilResidue_C",
-					"amount": 2
+					"amount": 4
 				}
 			],
 			"forBuilding": false,
@@ -1109,7 +1109,7 @@
 			"products": [
 				{
 					"item": "Desc_PetroleumCoke_C",
-					"amount": 6
+					"amount": 12
 				}
 			],
 			"producedIn": [
@@ -1140,7 +1140,7 @@
 				},
 				{
 					"item": "Desc_HeavyOilResidue_C",
-					"amount": 2
+					"amount": 1
 				}
 			],
 			"producedIn": [
@@ -1171,7 +1171,7 @@
 				},
 				{
 					"item": "Desc_HeavyOilResidue_C",
-					"amount": 1
+					"amount": 2
 				}
 			],
 			"producedIn": [
@@ -1188,7 +1188,7 @@
 			"ingredients": [
 				{
 					"item": "Desc_HeavyOilResidue_C",
-					"amount": 3
+					"amount": 6
 				}
 			],
 			"forBuilding": false,
@@ -1198,7 +1198,7 @@
 			"products": [
 				{
 					"item": "Desc_LiquidFuel_C",
-					"amount": 2
+					"amount": 4
 				}
 			],
 			"producedIn": [
@@ -1215,7 +1215,7 @@
 			"ingredients": [
 				{
 					"item": "Desc_PolymerResin_C",
-					"amount": 3
+					"amount": 6
 				},
 				{
 					"item": "Desc_Water_C",
@@ -1229,7 +1229,7 @@
 			"products": [
 				{
 					"item": "Desc_Plastic_C",
-					"amount": 1
+					"amount": 2
 				}
 			],
 			"producedIn": [
@@ -1246,7 +1246,7 @@
 			"ingredients": [
 				{
 					"item": "Desc_PolymerResin_C",
-					"amount": 2
+					"amount": 4
 				},
 				{
 					"item": "Desc_Water_C",
@@ -1260,7 +1260,7 @@
 			"products": [
 				{
 					"item": "Desc_Rubber_C",
-					"amount": 1
+					"amount": 2
 				}
 			],
 			"producedIn": [
@@ -1461,7 +1461,7 @@
 			"ingredients": [
 				{
 					"item": "Desc_Wire_C",
-					"amount": 7
+					"amount": 5
 				},
 				{
 					"item": "Desc_HeavyOilResidue_C",
@@ -1496,7 +1496,7 @@
 				},
 				{
 					"item": "Desc_Plastic_C",
-					"amount": 4
+					"amount": 2
 				}
 			],
 			"forBuilding": false,
@@ -1611,16 +1611,16 @@
 			"name": "Alternate: Diluted Packaged Fuel",
 			"className": "Recipe_Alternate_DilutedPackagedFuel_C",
 			"alternate": true,
-			"time": 4,
+			"time": 2,
 			"manualTimeMultiplier": 1,
 			"ingredients": [
 				{
-					"item": "Desc_PackagedOilResidue_C",
-					"amount": 3
+					"item": "Desc_HeavyOilResidue_C",
+					"amount": 1
 				},
 				{
-					"item": "Desc_Water_C",
-					"amount": 3
+					"item": "Desc_PackagedWater_C",
+					"amount": 2
 				}
 			],
 			"forBuilding": false,
@@ -1630,7 +1630,7 @@
 			"products": [
 				{
 					"item": "Desc_Fuel_C",
-					"amount": 4
+					"amount": 2
 				}
 			],
 			"producedIn": [
@@ -2211,8 +2211,8 @@
 			]
 		},
 		"Recipe_Alternate_HighSpeedWiring_C": {
-			"slug": "alternate-high-speed-wiring",
-			"name": "Alternate: High-Speed Wiring",
+			"slug": "alternate-automated-speed-wiring",
+			"name": "Alternate: Automated Speed Wiring",
 			"className": "Recipe_Alternate_HighSpeedWiring_C",
 			"alternate": true,
 			"time": 32,
@@ -2223,12 +2223,12 @@
 					"amount": 2
 				},
 				{
-					"item": "Desc_Cable_C",
+					"item": "Desc_Wire_C",
 					"amount": 40
 				},
 				{
 					"item": "Desc_HighSpeedConnector_C",
-					"amount": 2
+					"amount": 1
 				}
 			],
 			"forBuilding": false,
@@ -2451,7 +2451,7 @@
 				},
 				{
 					"item": "Desc_Rotor_C",
-					"amount": 2
+					"amount": 1
 				},
 				{
 					"item": "Desc_Plastic_C",
@@ -2956,7 +2956,7 @@
 			"ingredients": [
 				{
 					"item": "Desc_Plastic_C",
-					"amount": 5
+					"amount": 6
 				},
 				{
 					"item": "Desc_LiquidFuel_C",
@@ -2991,7 +2991,7 @@
 				},
 				{
 					"item": "Desc_Rubber_C",
-					"amount": 4
+					"amount": 2
 				}
 			],
 			"forBuilding": false,
@@ -3049,11 +3049,11 @@
 			"ingredients": [
 				{
 					"item": "Desc_SteelIngot_C",
-					"amount": 4
+					"amount": 3
 				},
 				{
 					"item": "Desc_Plastic_C",
-					"amount": 4
+					"amount": 2
 				}
 			],
 			"forBuilding": false,
@@ -3063,7 +3063,7 @@
 			"products": [
 				{
 					"item": "Desc_IronPlate_C",
-					"amount": 15
+					"amount": 18
 				}
 			],
 			"producedIn": [
@@ -3287,11 +3287,11 @@
 			"ingredients": [
 				{
 					"item": "Desc_LiquidTurboFuel_C",
-					"amount": 1
+					"amount": 2
 				},
 				{
 					"item": "Desc_FluidCanister_C",
-					"amount": 1
+					"amount": 2
 				}
 			],
 			"forBuilding": false,
@@ -3301,7 +3301,7 @@
 			"products": [
 				{
 					"item": "Desc_TurboFuel_C",
-					"amount": 1
+					"amount": 2
 				}
 			],
 			"producedIn": [
@@ -3313,12 +3313,12 @@
 			"name": "Unpackage Turbo Fuel",
 			"className": "Recipe_UnpackageTurboFuel_C",
 			"alternate": false,
-			"time": 12,
+			"time": 6,
 			"manualTimeMultiplier": 1,
 			"ingredients": [
 				{
 					"item": "Desc_TurboFuel_C",
-					"amount": 1
+					"amount": 2
 				}
 			],
 			"forBuilding": false,
@@ -3328,11 +3328,11 @@
 			"products": [
 				{
 					"item": "Desc_LiquidTurboFuel_C",
-					"amount": 1
+					"amount": 2
 				},
 				{
 					"item": "Desc_FluidCanister_C",
-					"amount": 1
+					"amount": 2
 				}
 			],
 			"producedIn": [
@@ -3429,12 +3429,12 @@
 			"name": "Alternate: Wet Concrete",
 			"className": "Recipe_Alternate_WetConcrete_C",
 			"alternate": true,
-			"time": 6,
+			"time": 3,
 			"manualTimeMultiplier": 1,
 			"ingredients": [
 				{
 					"item": "Desc_Stone_C",
-					"amount": 12
+					"amount": 6
 				},
 				{
 					"item": "Desc_Water_C",
@@ -3448,7 +3448,7 @@
 			"products": [
 				{
 					"item": "Desc_Cement_C",
-					"amount": 8
+					"amount": 4
 				}
 			],
 			"producedIn": [
@@ -3545,7 +3545,7 @@
 			"products": [
 				{
 					"item": "Desc_Cable_C",
-					"amount": 9
+					"amount": 11
 				}
 			],
 			"producedIn": [
@@ -3717,7 +3717,7 @@
 			"ingredients": [
 				{
 					"item": "Desc_Silica_C",
-					"amount": 5
+					"amount": 3
 				},
 				{
 					"item": "Desc_Stone_C",
@@ -3818,11 +3818,11 @@
 			"ingredients": [
 				{
 					"item": "Desc_Stator_C",
-					"amount": 6
+					"amount": 10
 				},
 				{
 					"item": "Desc_HighSpeedConnector_C",
-					"amount": 3
+					"amount": 5
 				}
 			],
 			"forBuilding": false,
@@ -3832,7 +3832,7 @@
 			"products": [
 				{
 					"item": "Desc_ElectromagneticControlRod_C",
-					"amount": 6
+					"amount": 10
 				}
 			],
 			"producedIn": [
@@ -4493,7 +4493,7 @@
 			"name": "Alternate: Rigour Motor",
 			"className": "Recipe_Alternate_Motor_1_C",
 			"alternate": true,
-			"time": 40,
+			"time": 48,
 			"manualTimeMultiplier": 1,
 			"ingredients": [
 				{
@@ -4516,7 +4516,7 @@
 			"products": [
 				{
 					"item": "Desc_Motor_C",
-					"amount": 5
+					"amount": 6
 				}
 			],
 			"producedIn": [
@@ -4642,7 +4642,7 @@
 				},
 				{
 					"item": "Desc_LiquidFuel_C",
-					"amount": 5
+					"amount": 6
 				}
 			],
 			"forBuilding": false,
@@ -4774,7 +4774,7 @@
 			"ingredients": [
 				{
 					"item": "Desc_IronPlate_C",
-					"amount": 16
+					"amount": 18
 				},
 				{
 					"item": "Desc_IronScrew_C",
@@ -4809,7 +4809,7 @@
 				},
 				{
 					"item": "Desc_Wire_C",
-					"amount": 26
+					"amount": 20
 				}
 			],
 			"forBuilding": false,
@@ -4871,7 +4871,7 @@
 				},
 				{
 					"item": "Desc_Wire_C",
-					"amount": 12
+					"amount": 6
 				}
 			],
 			"forBuilding": false,
@@ -5072,19 +5072,19 @@
 			"ingredients": [
 				{
 					"item": "Desc_Motor_C",
-					"amount": 8
+					"amount": 7
 				},
 				{
 					"item": "Desc_ModularFrameLightweight_C",
-					"amount": 4
+					"amount": 5
 				},
 				{
 					"item": "Desc_CircuitBoardHighSpeed_C",
-					"amount": 8
+					"amount": 9
 				},
 				{
 					"item": "Desc_Stator_C",
-					"amount": 8
+					"amount": 7
 				}
 			],
 			"forBuilding": false,
@@ -6244,7 +6244,7 @@
 			"ingredients": [
 				{
 					"item": "Desc_PackagedBiofuel_C",
-					"amount": 1
+					"amount": 2
 				}
 			],
 			"forBuilding": false,
@@ -6254,11 +6254,11 @@
 			"products": [
 				{
 					"item": "Desc_LiquidBiofuel_C",
-					"amount": 1
+					"amount": 2
 				},
 				{
 					"item": "Desc_FluidCanister_C",
-					"amount": 1
+					"amount": 2
 				}
 			],
 			"producedIn": [
@@ -6275,7 +6275,7 @@
 			"ingredients": [
 				{
 					"item": "Desc_Fuel_C",
-					"amount": 1
+					"amount": 2
 				}
 			],
 			"forBuilding": false,
@@ -6285,11 +6285,11 @@
 			"products": [
 				{
 					"item": "Desc_LiquidFuel_C",
-					"amount": 1
+					"amount": 2
 				},
 				{
 					"item": "Desc_FluidCanister_C",
-					"amount": 1
+					"amount": 2
 				}
 			],
 			"producedIn": [
@@ -6306,7 +6306,7 @@
 			"ingredients": [
 				{
 					"item": "Desc_PackagedOil_C",
-					"amount": 1
+					"amount": 2
 				}
 			],
 			"forBuilding": false,
@@ -6316,11 +6316,11 @@
 			"products": [
 				{
 					"item": "Desc_LiquidOil_C",
-					"amount": 1
+					"amount": 2
 				},
 				{
 					"item": "Desc_FluidCanister_C",
-					"amount": 1
+					"amount": 2
 				}
 			],
 			"producedIn": [
@@ -6337,7 +6337,7 @@
 			"ingredients": [
 				{
 					"item": "Desc_PackagedOilResidue_C",
-					"amount": 1
+					"amount": 2
 				}
 			],
 			"forBuilding": false,
@@ -6347,7 +6347,7 @@
 			"products": [
 				{
 					"item": "Desc_HeavyOilResidue_C",
-					"amount": 1
+					"amount": 2
 				},
 				{
 					"item": "Desc_FluidCanister_C",
@@ -6363,7 +6363,7 @@
 			"name": "Unpackage Water",
 			"className": "Recipe_UnpackageWater_C",
 			"alternate": false,
-			"time": 2,
+			"time": 1,
 			"manualTimeMultiplier": 1,
 			"ingredients": [
 				{
@@ -6423,12 +6423,12 @@
 			"name": "Empty Canister",
 			"className": "Recipe_FluidCanister_C",
 			"alternate": false,
-			"time": 6,
+			"time": 4,
 			"manualTimeMultiplier": 1,
 			"ingredients": [
 				{
 					"item": "Desc_Plastic_C",
-					"amount": 3
+					"amount": 2
 				}
 			],
 			"forBuilding": false,
@@ -6438,7 +6438,7 @@
 			"products": [
 				{
 					"item": "Desc_FluidCanister_C",
-					"amount": 1
+					"amount": 4
 				}
 			],
 			"producedIn": [
@@ -6455,11 +6455,11 @@
 			"ingredients": [
 				{
 					"item": "Desc_LiquidFuel_C",
-					"amount": 1
+					"amount": 2
 				},
 				{
 					"item": "Desc_FluidCanister_C",
-					"amount": 1
+					"amount": 2
 				}
 			],
 			"forBuilding": false,
@@ -6469,7 +6469,7 @@
 			"products": [
 				{
 					"item": "Desc_Fuel_C",
-					"amount": 1
+					"amount": 2
 				}
 			],
 			"producedIn": [
@@ -6512,16 +6512,16 @@
 			"name": "Packaged Liquid Biofuel",
 			"className": "Recipe_PackagedBiofuel_C",
 			"alternate": false,
-			"time": 4,
+			"time": 3,
 			"manualTimeMultiplier": 1,
 			"ingredients": [
 				{
 					"item": "Desc_LiquidBiofuel_C",
-					"amount": 1
+					"amount": 2
 				},
 				{
 					"item": "Desc_FluidCanister_C",
-					"amount": 1
+					"amount": 2
 				}
 			],
 			"forBuilding": false,
@@ -6531,7 +6531,7 @@
 			"products": [
 				{
 					"item": "Desc_PackagedBiofuel_C",
-					"amount": 1
+					"amount": 2
 				}
 			],
 			"producedIn": [
@@ -6543,16 +6543,16 @@
 			"name": "Packaged Oil",
 			"className": "Recipe_PackagedCrudeOil_C",
 			"alternate": false,
-			"time": 5,
+			"time": 4,
 			"manualTimeMultiplier": 1,
 			"ingredients": [
 				{
 					"item": "Desc_LiquidOil_C",
-					"amount": 1
+					"amount": 2
 				},
 				{
 					"item": "Desc_FluidCanister_C",
-					"amount": 1
+					"amount": 2
 				}
 			],
 			"forBuilding": false,
@@ -6562,7 +6562,7 @@
 			"products": [
 				{
 					"item": "Desc_PackagedOil_C",
-					"amount": 1
+					"amount": 2
 				}
 			],
 			"producedIn": [
@@ -6574,16 +6574,16 @@
 			"name": "Packaged Heavy Oil Residue",
 			"className": "Recipe_PackagedOilResidue_C",
 			"alternate": false,
-			"time": 6,
+			"time": 4,
 			"manualTimeMultiplier": 1,
 			"ingredients": [
 				{
 					"item": "Desc_HeavyOilResidue_C",
-					"amount": 1
+					"amount": 2
 				},
 				{
 					"item": "Desc_FluidCanister_C",
-					"amount": 1
+					"amount": 2
 				}
 			],
 			"forBuilding": false,
@@ -6593,7 +6593,7 @@
 			"products": [
 				{
 					"item": "Desc_PackagedOilResidue_C",
-					"amount": 1
+					"amount": 2
 				}
 			],
 			"producedIn": [
@@ -6610,11 +6610,11 @@
 			"ingredients": [
 				{
 					"item": "Desc_Water_C",
-					"amount": 1
+					"amount": 2
 				},
 				{
 					"item": "Desc_FluidCanister_C",
-					"amount": 1
+					"amount": 2
 				}
 			],
 			"forBuilding": false,
@@ -6624,7 +6624,7 @@
 			"products": [
 				{
 					"item": "Desc_PackagedWater_C",
-					"amount": 1
+					"amount": 2
 				}
 			],
 			"producedIn": [
@@ -10194,22 +10194,6 @@
 				"a": 0
 			}
 		},
-		"Desc_PackagedOilResidue_C": {
-			"slug": "packaged-heavy-oil-residue",
-			"className": "Desc_PackagedOilResidue_C",
-			"name": "Packaged Heavy Oil Residue",
-			"description": "Heavy Oil Residue, packaged for alternative transport.",
-			"stackSize": 100,
-			"energyValue": 400,
-			"radioactiveDecay": 0,
-			"liquid": false,
-			"fluidColor": {
-				"r": 0,
-				"g": 0,
-				"b": 0,
-				"a": 0
-			}
-		},
 		"Desc_AluminaSolution_C": {
 			"slug": "alumina-solution",
 			"className": "Desc_AluminaSolution_C",
@@ -10633,6 +10617,22 @@
 			"description": "A strange slug radiating a weak strange power.",
 			"stackSize": 50,
 			"energyValue": 0,
+			"radioactiveDecay": 0,
+			"liquid": false,
+			"fluidColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			}
+		},
+		"Desc_PackagedOilResidue_C": {
+			"slug": "packaged-heavy-oil-residue",
+			"className": "Desc_PackagedOilResidue_C",
+			"name": "Packaged Heavy Oil Residue",
+			"description": "Heavy Oil Residue, packaged for alternative transport.",
+			"stackSize": 100,
+			"energyValue": 400,
 			"radioactiveDecay": 0,
 			"liquid": false,
 			"fluidColor": {
@@ -11266,6 +11266,22 @@
 				"a": 0
 			}
 		},
+		"Desc_PackagedWater_C": {
+			"slug": "packaged-water",
+			"className": "Desc_PackagedWater_C",
+			"name": "Packaged Water",
+			"description": "Water, packaged for alternative transport.",
+			"stackSize": 100,
+			"energyValue": 0,
+			"radioactiveDecay": 0,
+			"liquid": false,
+			"fluidColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			}
+		},
 		"Desc_CompactedCoal_C": {
 			"slug": "compacted-coal",
 			"className": "Desc_CompactedCoal_C",
@@ -11321,22 +11337,6 @@
 			"description": "Crude Oil, packaged for transportation or to be used as vehicle fuel.",
 			"stackSize": 100,
 			"energyValue": 320,
-			"radioactiveDecay": 0,
-			"liquid": false,
-			"fluidColor": {
-				"r": 0,
-				"g": 0,
-				"b": 0,
-				"a": 0
-			}
-		},
-		"Desc_PackagedWater_C": {
-			"slug": "packaged-water",
-			"className": "Desc_PackagedWater_C",
-			"name": "Packaged Water",
-			"description": "Water, packaged for alternative transport.",
-			"stackSize": 100,
-			"energyValue": 0,
 			"radioactiveDecay": 0,
 			"liquid": false,
 			"fluidColor": {
@@ -16713,7 +16713,7 @@
 			"buildMenuPriority": 17,
 			"className": "Desc_OilRefinery_C",
 			"metadata": {
-				"powerConsumption": 50,
+				"powerConsumption": 30,
 				"powerConsumptionExponent": 1.6,
 				"manufacturingSpeed": 1
 			}
