@@ -142,7 +142,6 @@ json.items['Desc_NuclearWaste_C'] = {
 	className: 'Desc_NuclearWaste_C',
 	liquid: false,
 	radioactiveDecay: 0.1,
-	resourceSinkPoints: 1,
 	energyValue: 0,
 	stackSize: 500,
 	description: 'Nuclear Waste is the byproduct of nuclear power plants. You gotta find a way to handle all of this.',

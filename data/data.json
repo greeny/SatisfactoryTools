@@ -551,6 +551,39 @@
 				"Desc_ConstructorMk1_C"
 			]
 		},
+		"Recipe_GeneratorBiomass_C": {
+			"slug": "biomass-burner",
+			"name": "Biomass Burner",
+			"className": "Recipe_GeneratorBiomass_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_IronPlate_C",
+					"amount": 15
+				},
+				{
+					"item": "Desc_IronRod_C",
+					"amount": 15
+				},
+				{
+					"item": "Desc_Wire_C",
+					"amount": 25
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_GeneratorBiomass_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
 		"Recipe_Biomass_Leaves_C": {
 			"slug": "biomass-(leaves)",
 			"name": "Biomass (Leaves)",
@@ -603,67 +636,6 @@
 			],
 			"producedIn": [
 				"Desc_ConstructorMk1_C"
-			]
-		},
-		"Recipe_GeneratorBiomass_C": {
-			"slug": "biomass-burner",
-			"name": "Biomass Burner",
-			"className": "Recipe_GeneratorBiomass_C",
-			"alternate": false,
-			"time": 1,
-			"manualTimeMultiplier": 1,
-			"ingredients": [
-				{
-					"item": "Desc_IronPlate_C",
-					"amount": 15
-				},
-				{
-					"item": "Desc_IronRod_C",
-					"amount": 15
-				},
-				{
-					"item": "Desc_Wire_C",
-					"amount": 25
-				}
-			],
-			"forBuilding": true,
-			"inMachine": false,
-			"inHand": false,
-			"inWorkshop": false,
-			"products": [
-				{
-					"item": "Desc_GeneratorBiomass_C",
-					"amount": 1
-				}
-			],
-			"producedIn": []
-		},
-		"Recipe_Biofuel_C": {
-			"slug": "solid-biofuel",
-			"name": "Solid Biofuel",
-			"className": "Recipe_Biofuel_C",
-			"alternate": false,
-			"time": 4,
-			"manualTimeMultiplier": 5,
-			"ingredients": [
-				{
-					"item": "Desc_GenericBiomass_C",
-					"amount": 8
-				}
-			],
-			"forBuilding": false,
-			"inMachine": true,
-			"inHand": true,
-			"inWorkshop": false,
-			"products": [
-				{
-					"item": "Desc_Biofuel_C",
-					"amount": 4
-				}
-			],
-			"producedIn": [
-				"Desc_ConstructorMk1_C",
-				"Desc_AutomatedWorkBench_C"
 			]
 		},
 		"Recipe_IronPlate_C": {
@@ -1700,68 +1672,6 @@
 				"Desc_OilRefinery_C"
 			]
 		},
-		"Recipe_ElectromagneticControlRod_C": {
-			"slug": "electromagnetic-control-rod",
-			"name": "Electromagnetic Control Rod",
-			"className": "Recipe_ElectromagneticControlRod_C",
-			"alternate": false,
-			"time": 30,
-			"manualTimeMultiplier": 1,
-			"ingredients": [
-				{
-					"item": "Desc_Stator_C",
-					"amount": 3
-				},
-				{
-					"item": "Desc_CircuitBoardHighSpeed_C",
-					"amount": 2
-				}
-			],
-			"forBuilding": false,
-			"inMachine": true,
-			"inHand": true,
-			"inWorkshop": false,
-			"products": [
-				{
-					"item": "Desc_ElectromagneticControlRod_C",
-					"amount": 2
-				}
-			],
-			"producedIn": [
-				"Desc_AssemblerMk1_C"
-			]
-		},
-		"Recipe_UraniumCell_C": {
-			"slug": "encased-uranium-cell",
-			"name": "Encased Uranium Cell",
-			"className": "Recipe_UraniumCell_C",
-			"alternate": false,
-			"time": 60,
-			"manualTimeMultiplier": 0.5,
-			"ingredients": [
-				{
-					"item": "Desc_UraniumPellet_C",
-					"amount": 40
-				},
-				{
-					"item": "Desc_Cement_C",
-					"amount": 9
-				}
-			],
-			"forBuilding": false,
-			"inMachine": true,
-			"inHand": true,
-			"inWorkshop": false,
-			"products": [
-				{
-					"item": "Desc_UraniumCell_C",
-					"amount": 10
-				}
-			],
-			"producedIn": [
-				"Desc_AssemblerMk1_C"
-			]
-		},
 		"Recipe_ConveyorBeltMk5_C": {
 			"slug": "conveyor-belt-mk-5",
 			"name": "Conveyor Belt Mk.5",
@@ -1812,47 +1722,6 @@
 			],
 			"producedIn": []
 		},
-		"Recipe_GeneratorNuclear_C": {
-			"slug": "nuclear-power-plant",
-			"name": "Nuclear Power Plant",
-			"className": "Recipe_GeneratorNuclear_C",
-			"alternate": false,
-			"time": 1,
-			"manualTimeMultiplier": 1,
-			"ingredients": [
-				{
-					"item": "Desc_Cement_C",
-					"amount": 150
-				},
-				{
-					"item": "Desc_ModularFrameHeavy_C",
-					"amount": 10
-				},
-				{
-					"item": "Desc_ComputerSuper_C",
-					"amount": 5
-				},
-				{
-					"item": "Desc_Cable_C",
-					"amount": 50
-				},
-				{
-					"item": "Desc_HighSpeedConnector_C",
-					"amount": 15
-				}
-			],
-			"forBuilding": true,
-			"inMachine": false,
-			"inHand": false,
-			"inWorkshop": false,
-			"products": [
-				{
-					"item": "Desc_GeneratorNuclear_C",
-					"amount": 1
-				}
-			],
-			"producedIn": []
-		},
 		"Recipe_AluminumSheet_C": {
 			"slug": "alclad-aluminum-sheet",
 			"name": "Alclad Aluminum Sheet",
@@ -1883,113 +1752,6 @@
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
 			]
-		},
-		"Recipe_NuclearFuelRod_C": {
-			"slug": "nuclear-fuel-rod",
-			"name": "Nuclear Fuel Rod",
-			"className": "Recipe_NuclearFuelRod_C",
-			"alternate": false,
-			"time": 150,
-			"manualTimeMultiplier": 1,
-			"ingredients": [
-				{
-					"item": "Desc_UraniumCell_C",
-					"amount": 25
-				},
-				{
-					"item": "Desc_SteelPlateReinforced_C",
-					"amount": 3
-				},
-				{
-					"item": "Desc_ElectromagneticControlRod_C",
-					"amount": 5
-				}
-			],
-			"forBuilding": false,
-			"inMachine": true,
-			"inHand": false,
-			"inWorkshop": false,
-			"products": [
-				{
-					"item": "Desc_NuclearFuelRod_C",
-					"amount": 1
-				}
-			],
-			"producedIn": [
-				"Desc_ManufacturerMk1_C"
-			]
-		},
-		"Recipe_FilterHazmat_C": {
-			"slug": "iodine-infused-filter",
-			"name": "Iodine Infused Filter",
-			"className": "Recipe_FilterHazmat_C",
-			"alternate": false,
-			"time": 16,
-			"manualTimeMultiplier": 1,
-			"ingredients": [
-				{
-					"item": "Desc_Filter_C",
-					"amount": 1
-				},
-				{
-					"item": "Desc_HighSpeedWire_C",
-					"amount": 8
-				},
-				{
-					"item": "Desc_Rubber_C",
-					"amount": 2
-				}
-			],
-			"forBuilding": false,
-			"inMachine": true,
-			"inHand": true,
-			"inWorkshop": true,
-			"products": [
-				{
-					"item": "Desc_HazmatFilter_C",
-					"amount": 1
-				}
-			],
-			"producedIn": [
-				"Desc_ManufacturerMk1_C"
-			]
-		},
-		"Recipe_HazmatSuit_C": {
-			"slug": "hazmat-suit",
-			"name": "Hazmat Suit",
-			"className": "Recipe_HazmatSuit_C",
-			"alternate": false,
-			"time": 120,
-			"manualTimeMultiplier": 1,
-			"ingredients": [
-				{
-					"item": "Desc_Rubber_C",
-					"amount": 50
-				},
-				{
-					"item": "Desc_Plastic_C",
-					"amount": 50
-				},
-				{
-					"item": "Desc_AluminumPlate_C",
-					"amount": 50
-				},
-				{
-					"item": "Desc_Fabric_C",
-					"amount": 50
-				}
-			],
-			"forBuilding": false,
-			"inMachine": false,
-			"inHand": false,
-			"inWorkshop": true,
-			"products": [
-				{
-					"item": "BP_EquipmentDescriptorHazmatSuit_C",
-					"amount": 1
-				}
-			],
-			"producedIn": []
 		},
 		"Recipe_AluminaSolution_C": {
 			"slug": "alumina-solution",
@@ -2187,184 +1949,6 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
-		},
-		"Recipe_PowerPoleMk2_C": {
-			"slug": "power-pole-mk-2",
-			"name": "Power Pole Mk.2",
-			"className": "Recipe_PowerPoleMk2_C",
-			"alternate": false,
-			"time": 1,
-			"manualTimeMultiplier": 1,
-			"ingredients": [
-				{
-					"item": "Desc_HighSpeedWire_C",
-					"amount": 6
-				},
-				{
-					"item": "Desc_IronRod_C",
-					"amount": 2
-				},
-				{
-					"item": "Desc_Cement_C",
-					"amount": 2
-				}
-			],
-			"forBuilding": true,
-			"inMachine": false,
-			"inHand": false,
-			"inWorkshop": false,
-			"products": [
-				{
-					"item": "Desc_PowerPoleMk2_C",
-					"amount": 1
-				}
-			],
-			"producedIn": []
-		},
-		"Recipe_PowerPoleWallDoubleMk2_C": {
-			"slug": "double-sided-wall-power-pole-mk-2",
-			"name": "Double-sided Wall Power Pole Mk.2",
-			"className": "Recipe_PowerPoleWallDoubleMk2_C",
-			"alternate": false,
-			"time": 1,
-			"manualTimeMultiplier": 1,
-			"ingredients": [
-				{
-					"item": "Desc_HighSpeedWire_C",
-					"amount": 16
-				},
-				{
-					"item": "Desc_IronRod_C",
-					"amount": 4
-				}
-			],
-			"forBuilding": true,
-			"inMachine": false,
-			"inHand": false,
-			"inWorkshop": false,
-			"products": [
-				{
-					"item": "Desc_PowerPoleWallDoubleMk2_C",
-					"amount": 1
-				}
-			],
-			"producedIn": []
-		},
-		"Recipe_PowerPoleWallMk2_C": {
-			"slug": "wall-power-pole-mk-2",
-			"name": "Wall Power Pole Mk.2",
-			"className": "Recipe_PowerPoleWallMk2_C",
-			"alternate": false,
-			"time": 1,
-			"manualTimeMultiplier": 1,
-			"ingredients": [
-				{
-					"item": "Desc_HighSpeedWire_C",
-					"amount": 8
-				},
-				{
-					"item": "Desc_IronRod_C",
-					"amount": 2
-				}
-			],
-			"forBuilding": true,
-			"inMachine": false,
-			"inHand": false,
-			"inWorkshop": false,
-			"products": [
-				{
-					"item": "Desc_PowerPoleWallMk2_C",
-					"amount": 1
-				}
-			],
-			"producedIn": []
-		},
-		"Recipe_Quickwire_C": {
-			"slug": "quickwire",
-			"name": "Quickwire",
-			"className": "Recipe_Quickwire_C",
-			"alternate": false,
-			"time": 5,
-			"manualTimeMultiplier": 2,
-			"ingredients": [
-				{
-					"item": "Desc_GoldIngot_C",
-					"amount": 1
-				}
-			],
-			"forBuilding": false,
-			"inMachine": true,
-			"inHand": true,
-			"inWorkshop": false,
-			"products": [
-				{
-					"item": "Desc_HighSpeedWire_C",
-					"amount": 5
-				}
-			],
-			"producedIn": [
-				"Desc_ConstructorMk1_C"
-			]
-		},
-		"Recipe_BladeRunners_C": {
-			"slug": "blade-runners",
-			"name": "Blade Runners",
-			"className": "Recipe_BladeRunners_C",
-			"alternate": false,
-			"time": 80,
-			"manualTimeMultiplier": 1,
-			"ingredients": [
-				{
-					"item": "Desc_HighSpeedWire_C",
-					"amount": 50
-				},
-				{
-					"item": "Desc_ModularFrame_C",
-					"amount": 3
-				},
-				{
-					"item": "Desc_Rotor_C",
-					"amount": 3
-				}
-			],
-			"forBuilding": false,
-			"inMachine": false,
-			"inHand": false,
-			"inWorkshop": true,
-			"products": [
-				{
-					"item": "BP_EquipmentDescriptorJumpingStilts_C",
-					"amount": 1
-				}
-			],
-			"producedIn": []
-		},
-		"Recipe_IngotCaterium_C": {
-			"slug": "caterium-ingot",
-			"name": "Caterium Ingot",
-			"className": "Recipe_IngotCaterium_C",
-			"alternate": false,
-			"time": 4,
-			"manualTimeMultiplier": 2,
-			"ingredients": [
-				{
-					"item": "Desc_OreGold_C",
-					"amount": 3
-				}
-			],
-			"forBuilding": false,
-			"inMachine": true,
-			"inHand": true,
-			"inWorkshop": false,
-			"products": [
-				{
-					"item": "Desc_GoldIngot_C",
-					"amount": 1
-				}
-			],
-			"producedIn": [
-				"Desc_SmelterMk1_C"
 			]
 		},
 		"Recipe_Alternate_HeavyFlexibleFrame_C": {
@@ -3968,6 +3552,33 @@
 				"Desc_AssemblerMk1_C"
 			]
 		},
+		"Recipe_IngotCaterium_C": {
+			"slug": "caterium-ingot",
+			"name": "Caterium Ingot",
+			"className": "Recipe_IngotCaterium_C",
+			"alternate": false,
+			"time": 4,
+			"manualTimeMultiplier": 2,
+			"ingredients": [
+				{
+					"item": "Desc_OreGold_C",
+					"amount": 3
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_GoldIngot_C",
+					"amount": 1
+				}
+			],
+			"producedIn": [
+				"Desc_SmelterMk1_C"
+			]
+		},
 		"Recipe_Alternate_CircuitBoard_1_C": {
 			"slug": "alternate-silicone-circuit-board",
 			"name": "Alternate: Silicone Circuit Board",
@@ -4228,112 +3839,143 @@
 				"Desc_AssemblerMk1_C"
 			]
 		},
-		"Recipe_TrainDockingStation_C": {
-			"slug": "freight-platform",
-			"name": "Freight Platform",
-			"className": "Recipe_TrainDockingStation_C",
+		"Recipe_ElectromagneticControlRod_C": {
+			"slug": "electromagnetic-control-rod",
+			"name": "Electromagnetic Control Rod",
+			"className": "Recipe_ElectromagneticControlRod_C",
+			"alternate": false,
+			"time": 30,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Stator_C",
+					"amount": 3
+				},
+				{
+					"item": "Desc_CircuitBoardHighSpeed_C",
+					"amount": 2
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_ElectromagneticControlRod_C",
+					"amount": 2
+				}
+			],
+			"producedIn": [
+				"Desc_AssemblerMk1_C"
+			]
+		},
+		"Recipe_UraniumCell_C": {
+			"slug": "encased-uranium-cell",
+			"name": "Encased Uranium Cell",
+			"className": "Recipe_UraniumCell_C",
+			"alternate": false,
+			"time": 60,
+			"manualTimeMultiplier": 0.5,
+			"ingredients": [
+				{
+					"item": "Desc_UraniumPellet_C",
+					"amount": 40
+				},
+				{
+					"item": "Desc_Cement_C",
+					"amount": 9
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_UraniumCell_C",
+					"amount": 10
+				}
+			],
+			"producedIn": [
+				"Desc_AssemblerMk1_C"
+			]
+		},
+		"Recipe_GeneratorNuclear_C": {
+			"slug": "nuclear-power-plant",
+			"name": "Nuclear Power Plant",
+			"className": "Recipe_GeneratorNuclear_C",
 			"alternate": false,
 			"time": 1,
 			"manualTimeMultiplier": 1,
 			"ingredients": [
 				{
-					"item": "Desc_ModularFrameHeavy_C",
-					"amount": 6
-				},
-				{
-					"item": "Desc_Computer_C",
-					"amount": 2
-				},
-				{
 					"item": "Desc_Cement_C",
-					"amount": 50
+					"amount": 150
+				},
+				{
+					"item": "Desc_ModularFrameHeavy_C",
+					"amount": 10
+				},
+				{
+					"item": "Desc_ComputerSuper_C",
+					"amount": 5
 				},
 				{
 					"item": "Desc_Cable_C",
+					"amount": 50
+				},
+				{
+					"item": "Desc_HighSpeedConnector_C",
+					"amount": 15
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_GeneratorNuclear_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
+		"Recipe_NuclearFuelRod_C": {
+			"slug": "nuclear-fuel-rod",
+			"name": "Nuclear Fuel Rod",
+			"className": "Recipe_NuclearFuelRod_C",
+			"alternate": false,
+			"time": 150,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_UraniumCell_C",
 					"amount": 25
 				},
 				{
-					"item": "Desc_Motor_C",
+					"item": "Desc_SteelPlateReinforced_C",
+					"amount": 3
+				},
+				{
+					"item": "Desc_ElectromagneticControlRod_C",
 					"amount": 5
 				}
 			],
-			"forBuilding": true,
-			"inMachine": false,
+			"forBuilding": false,
+			"inMachine": true,
 			"inHand": false,
 			"inWorkshop": false,
 			"products": [
 				{
-					"item": "Desc_TrainDockingStation_C",
+					"item": "Desc_NuclearFuelRod_C",
 					"amount": 1
 				}
 			],
-			"producedIn": []
-		},
-		"Recipe_TrainStation_C": {
-			"slug": "train-station",
-			"name": "Train Station",
-			"className": "Recipe_TrainStation_C",
-			"alternate": false,
-			"time": 1,
-			"manualTimeMultiplier": 1,
-			"ingredients": [
-				{
-					"item": "Desc_ModularFrameHeavy_C",
-					"amount": 4
-				},
-				{
-					"item": "Desc_Computer_C",
-					"amount": 8
-				},
-				{
-					"item": "Desc_Cement_C",
-					"amount": 50
-				},
-				{
-					"item": "Desc_Cable_C",
-					"amount": 25
-				}
-			],
-			"forBuilding": true,
-			"inMachine": false,
-			"inHand": false,
-			"inWorkshop": false,
-			"products": [
-				{
-					"item": "Desc_TrainStation_C",
-					"amount": 1
-				}
-			],
-			"producedIn": []
-		},
-		"Recipe_RailroadTrack_C": {
-			"slug": "railway",
-			"name": "Railway",
-			"className": "Recipe_RailroadTrack_C",
-			"alternate": false,
-			"time": 1,
-			"manualTimeMultiplier": 1,
-			"ingredients": [
-				{
-					"item": "Desc_SteelPipe_C",
-					"amount": 1
-				},
-				{
-					"item": "Desc_SteelPlate_C",
-					"amount": 1
-				}
-			],
-			"forBuilding": true,
-			"inMachine": false,
-			"inHand": false,
-			"inWorkshop": false,
-			"products": [
-				{
-					"item": "Desc_RailroadTrack_C",
-					"amount": 1
-				}
-			],
-			"producedIn": []
+			"producedIn": [
+				"Desc_ManufacturerMk1_C"
+			]
 		},
 		"Recipe_SulfuricAcid_C": {
 			"slug": "sulfuric-acid",
@@ -4606,45 +4248,6 @@
 			"products": [
 				{
 					"item": "Desc_MotorLightweight_C",
-					"amount": 1
-				}
-			],
-			"producedIn": [
-				"Desc_ManufacturerMk1_C"
-			]
-		},
-		"Recipe_RadioControlUnit_C": {
-			"slug": "radio-control-unit",
-			"name": "Radio Control Unit",
-			"className": "Recipe_RadioControlUnit_C",
-			"alternate": false,
-			"time": 24,
-			"manualTimeMultiplier": 1.5,
-			"ingredients": [
-				{
-					"item": "Desc_AluminumPlateReinforced_C",
-					"amount": 4
-				},
-				{
-					"item": "Desc_Rubber_C",
-					"amount": 16
-				},
-				{
-					"item": "Desc_CrystalOscillator_C",
-					"amount": 1
-				},
-				{
-					"item": "Desc_Computer_C",
-					"amount": 1
-				}
-			],
-			"forBuilding": false,
-			"inMachine": true,
-			"inHand": true,
-			"inWorkshop": false,
-			"products": [
-				{
-					"item": "Desc_ModularFrameLightweight_C",
 					"amount": 1
 				}
 			],
@@ -5116,6 +4719,45 @@
 				{
 					"item": "Desc_ModularFrameLightweight_C",
 					"amount": 3
+				}
+			],
+			"producedIn": [
+				"Desc_ManufacturerMk1_C"
+			]
+		},
+		"Recipe_RadioControlUnit_C": {
+			"slug": "radio-control-unit",
+			"name": "Radio Control Unit",
+			"className": "Recipe_RadioControlUnit_C",
+			"alternate": false,
+			"time": 24,
+			"manualTimeMultiplier": 1.5,
+			"ingredients": [
+				{
+					"item": "Desc_AluminumPlateReinforced_C",
+					"amount": 4
+				},
+				{
+					"item": "Desc_Rubber_C",
+					"amount": 16
+				},
+				{
+					"item": "Desc_CrystalOscillator_C",
+					"amount": 1
+				},
+				{
+					"item": "Desc_Computer_C",
+					"amount": 1
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_ModularFrameLightweight_C",
+					"amount": 1
 				}
 			],
 			"producedIn": [
@@ -6005,6 +5647,34 @@
 				}
 			],
 			"producedIn": []
+		},
+		"Recipe_Biofuel_C": {
+			"slug": "solid-biofuel",
+			"name": "Solid Biofuel",
+			"className": "Recipe_Biofuel_C",
+			"alternate": false,
+			"time": 4,
+			"manualTimeMultiplier": 5,
+			"ingredients": [
+				{
+					"item": "Desc_GenericBiomass_C",
+					"amount": 8
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_Biofuel_C",
+					"amount": 4
+				}
+			],
+			"producedIn": [
+				"Desc_ConstructorMk1_C",
+				"Desc_AutomatedWorkBench_C"
+			]
 		},
 		"Recipe_Chainsaw_C": {
 			"slug": "chainsaw",
@@ -7089,9 +6759,50 @@
 			],
 			"producedIn": []
 		},
+		"Recipe_TrainDockingStation_C": {
+			"slug": "freight-platform",
+			"name": "Freight Platform",
+			"className": "Recipe_TrainDockingStation_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_ModularFrameHeavy_C",
+					"amount": 6
+				},
+				{
+					"item": "Desc_Computer_C",
+					"amount": 2
+				},
+				{
+					"item": "Desc_Cement_C",
+					"amount": 50
+				},
+				{
+					"item": "Desc_Cable_C",
+					"amount": 25
+				},
+				{
+					"item": "Desc_Motor_C",
+					"amount": 5
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_TrainDockingStation_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
 		"Recipe_TrainDockingStationLiquid_C": {
-			"slug": "freight-platform-liquid",
-			"name": "Freight Platform Liquid",
+			"slug": "fluid-freight-platform",
+			"name": "Fluid Freight Platform",
 			"className": "Recipe_TrainDockingStationLiquid_C",
 			"alternate": false,
 			"time": 1,
@@ -7154,6 +6865,72 @@
 			"products": [
 				{
 					"item": "Desc_TrainPlatformEmpty_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
+		"Recipe_TrainStation_C": {
+			"slug": "train-station",
+			"name": "Train Station",
+			"className": "Recipe_TrainStation_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_ModularFrameHeavy_C",
+					"amount": 4
+				},
+				{
+					"item": "Desc_Computer_C",
+					"amount": 8
+				},
+				{
+					"item": "Desc_Cement_C",
+					"amount": 50
+				},
+				{
+					"item": "Desc_Cable_C",
+					"amount": 25
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_TrainStation_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
+		"Recipe_RailroadTrack_C": {
+			"slug": "railway",
+			"name": "Railway",
+			"className": "Recipe_RailroadTrack_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_SteelPipe_C",
+					"amount": 1
+				},
+				{
+					"item": "Desc_SteelPlate_C",
+					"amount": 1
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_RailroadTrack_C",
 					"amount": 1
 				}
 			],
@@ -7222,6 +6999,78 @@
 			"products": [
 				{
 					"item": "BP_EquipmentDescriptorGasmask_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
+		"Recipe_FilterHazmat_C": {
+			"slug": "iodine-infused-filter",
+			"name": "Iodine Infused Filter",
+			"className": "Recipe_FilterHazmat_C",
+			"alternate": false,
+			"time": 16,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Filter_C",
+					"amount": 1
+				},
+				{
+					"item": "Desc_HighSpeedWire_C",
+					"amount": 8
+				},
+				{
+					"item": "Desc_Rubber_C",
+					"amount": 2
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": true,
+			"products": [
+				{
+					"item": "Desc_HazmatFilter_C",
+					"amount": 1
+				}
+			],
+			"producedIn": [
+				"Desc_ManufacturerMk1_C"
+			]
+		},
+		"Recipe_HazmatSuit_C": {
+			"slug": "hazmat-suit",
+			"name": "Hazmat Suit",
+			"className": "Recipe_HazmatSuit_C",
+			"alternate": false,
+			"time": 120,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Rubber_C",
+					"amount": 50
+				},
+				{
+					"item": "Desc_Plastic_C",
+					"amount": 50
+				},
+				{
+					"item": "Desc_AluminumPlate_C",
+					"amount": 50
+				},
+				{
+					"item": "Desc_Fabric_C",
+					"amount": 50
+				}
+			],
+			"forBuilding": false,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": true,
+			"products": [
+				{
+					"item": "BP_EquipmentDescriptorHazmatSuit_C",
 					"amount": 1
 				}
 			],
@@ -7370,6 +7219,33 @@
 			],
 			"producedIn": []
 		},
+		"Recipe_Quickwire_C": {
+			"slug": "quickwire",
+			"name": "Quickwire",
+			"className": "Recipe_Quickwire_C",
+			"alternate": false,
+			"time": 5,
+			"manualTimeMultiplier": 2,
+			"ingredients": [
+				{
+					"item": "Desc_GoldIngot_C",
+					"amount": 1
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_HighSpeedWire_C",
+					"amount": 5
+				}
+			],
+			"producedIn": [
+				"Desc_ConstructorMk1_C"
+			]
+		},
 		"Recipe_ConveyorAttachmentSplitterSmart_C": {
 			"slug": "smart-splitter",
 			"name": "Smart Splitter",
@@ -7398,6 +7274,72 @@
 			"products": [
 				{
 					"item": "Desc_ConveyorAttachmentSplitterSmart_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
+		"Recipe_PowerPoleMk2_C": {
+			"slug": "power-pole-mk-2",
+			"name": "Power Pole Mk.2",
+			"className": "Recipe_PowerPoleMk2_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_HighSpeedWire_C",
+					"amount": 6
+				},
+				{
+					"item": "Desc_IronRod_C",
+					"amount": 2
+				},
+				{
+					"item": "Desc_Cement_C",
+					"amount": 2
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_PowerPoleMk2_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
+		"Recipe_BladeRunners_C": {
+			"slug": "blade-runners",
+			"name": "Blade Runners",
+			"className": "Recipe_BladeRunners_C",
+			"alternate": false,
+			"time": 80,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_HighSpeedWire_C",
+					"amount": 50
+				},
+				{
+					"item": "Desc_ModularFrame_C",
+					"amount": 3
+				},
+				{
+					"item": "Desc_Rotor_C",
+					"amount": 3
+				}
+			],
+			"forBuilding": false,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": true,
+			"products": [
+				{
+					"item": "BP_EquipmentDescriptorJumpingStilts_C",
 					"amount": 1
 				}
 			],
@@ -8201,8 +8143,8 @@
 			"producedIn": []
 		},
 		"Recipe_QuarterPipe_C": {
-			"slug": "curved-foundation",
-			"name": "Curved Foundation",
+			"slug": "quarter-pipe",
+			"name": "Quarter Pipe",
 			"className": "Recipe_QuarterPipe_C",
 			"alternate": false,
 			"time": 1,
@@ -8226,8 +8168,8 @@
 			"producedIn": []
 		},
 		"Recipe_QuarterPipe_02_C": {
-			"slug": "curved-inverted-foundation",
-			"name": "Curved Inverted Foundation",
+			"slug": "inverted-quarter-pipe",
+			"name": "Inverted Quarter Pipe",
 			"className": "Recipe_QuarterPipe_02_C",
 			"alternate": false,
 			"time": 1,
@@ -8251,8 +8193,8 @@
 			"producedIn": []
 		},
 		"Recipe_QuarterPipeCorner_01_C": {
-			"slug": "curved-corner-foundation",
-			"name": "Curved Corner Foundation",
+			"slug": "inner-corner-quarter-pipe",
+			"name": "Inner-Corner Quarter Pipe",
 			"className": "Recipe_QuarterPipeCorner_01_C",
 			"alternate": false,
 			"time": 1,
@@ -8276,8 +8218,8 @@
 			"producedIn": []
 		},
 		"Recipe_QuarterPipeCorner_02_C": {
-			"slug": "curved-corner-inverted-foundation",
-			"name": "Curved Corner Inverted Foundation",
+			"slug": "inverted-inner-corner-quarter-pipe",
+			"name": "Inverted Inner-Corner Quarter Pipe",
 			"className": "Recipe_QuarterPipeCorner_02_C",
 			"alternate": false,
 			"time": 1,
@@ -8295,6 +8237,56 @@
 			"products": [
 				{
 					"item": "Desc_QuarterPipeCorner_02_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
+		"Recipe_QuarterPipeCorner_03_C": {
+			"slug": "outer-corner-quarter-pipe",
+			"name": "Outer-Corner Quarter Pipe",
+			"className": "Recipe_QuarterPipeCorner_03_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Cement_C",
+					"amount": 6
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_QuarterPipeCorner_03_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
+		"Recipe_QuarterPipeCorner_04_C": {
+			"slug": "inverted-outer-corner-quarter-pipe",
+			"name": "Inverted Outer-Corner Quarter Pipe",
+			"className": "Recipe_QuarterPipeCorner_04_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Cement_C",
+					"amount": 6
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_QuarterPipeCorner_04_C",
 					"amount": 1
 				}
 			],
@@ -8658,8 +8650,8 @@
 			"name": "Factory Cart™",
 			"className": "Recipe_FactoryCart_C",
 			"alternate": false,
-			"time": 1,
-			"manualTimeMultiplier": 1,
+			"time": 20,
+			"manualTimeMultiplier": 2,
 			"ingredients": [
 				{
 					"item": "Desc_IronPlateReinforced_C",
@@ -8761,34 +8753,9 @@
 			],
 			"producedIn": []
 		},
-		"Recipe_Ramp_8x4_Inverted_01_C": {
-			"slug": "ramp-inverted-8m-x-4m",
-			"name": "Ramp Inverted 8m x 4m",
-			"className": "Recipe_Ramp_8x4_Inverted_01_C",
-			"alternate": false,
-			"time": 1,
-			"manualTimeMultiplier": 1,
-			"ingredients": [
-				{
-					"item": "Desc_Cement_C",
-					"amount": 5
-				}
-			],
-			"forBuilding": true,
-			"inMachine": false,
-			"inHand": false,
-			"inWorkshop": false,
-			"products": [
-				{
-					"item": "Desc_Ramp_8x4_Inverted_01_C",
-					"amount": 1
-				}
-			],
-			"producedIn": []
-		},
 		"Recipe_Ramp_8x8x8_C": {
-			"slug": "ramp-double-8m-x-8m",
-			"name": "Ramp Double 8m x 8m",
+			"slug": "double-ramp-8m-x-8m",
+			"name": "Double Ramp 8m x 8m",
 			"className": "Recipe_Ramp_8x8x8_C",
 			"alternate": false,
 			"time": 1,
@@ -8806,6 +8773,56 @@
 			"products": [
 				{
 					"item": "Desc_Ramp_8x8x8_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
+		"Recipe_RampDouble_C": {
+			"slug": "double-ramp-8m-x-4m",
+			"name": "Double Ramp 8m x 4m",
+			"className": "Recipe_RampDouble_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Cement_C",
+					"amount": 5
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_RampDouble_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
+		"Recipe_RampDouble_8x1_C": {
+			"slug": "double-ramp-8m-x-2m",
+			"name": "Double Ramp 8m x 2m",
+			"className": "Recipe_RampDouble_8x1_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Cement_C",
+					"amount": 5
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_RampDouble_8x1_C",
 					"amount": 1
 				}
 			],
@@ -8837,8 +8854,8 @@
 			"producedIn": []
 		},
 		"Recipe_FoundationGlass_01_C": {
-			"slug": "foundation-glass",
-			"name": "Foundation Glass",
+			"slug": "glass-foundation-8m-x-1m",
+			"name": "Glass Foundation 8m x 1m",
 			"className": "Recipe_FoundationGlass_01_C",
 			"alternate": false,
 			"time": 1,
@@ -8856,6 +8873,214 @@
 			"products": [
 				{
 					"item": "Desc_FoundationGlass_01_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
+		"Recipe_HyperTubeWallHole_C": {
+			"slug": "hyper-tube-wall-hole",
+			"name": "Hyper Tube Wall Hole",
+			"className": "Recipe_HyperTubeWallHole_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_IronPlate_C",
+					"amount": 2
+				},
+				{
+					"item": "Desc_Cement_C",
+					"amount": 2
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_HyperTubeWallHole_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
+		"Recipe_HyperTubeWallSupport_C": {
+			"slug": "hyper-tube-wall-support",
+			"name": "Hyper Tube Wall Support",
+			"className": "Recipe_HyperTubeWallSupport_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_IronPlate_C",
+					"amount": 2
+				},
+				{
+					"item": "Desc_Cement_C",
+					"amount": 2
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_HyperTubeWallSupport_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
+		"Recipe_Ramp_8x4_Inverted_01_C": {
+			"slug": "inverted-ramp-8m-x-4m",
+			"name": "Inverted Ramp 8m x 4m",
+			"className": "Recipe_Ramp_8x4_Inverted_01_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Cement_C",
+					"amount": 5
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_Ramp_8x4_Inverted_01_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
+		"Recipe_RampInverted_8x1_C": {
+			"slug": "inverted-ramp-8m-x-1m",
+			"name": "Inverted Ramp 8m x 1m",
+			"className": "Recipe_RampInverted_8x1_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Cement_C",
+					"amount": 5
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_RampInverted_8x1_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
+		"Recipe_RampInverted_8x1_Corner_01_C": {
+			"slug": "inverted-ramp-corner-8m-x-1m",
+			"name": "Inverted Ramp Corner 8m x 1m",
+			"className": "Recipe_RampInverted_8x1_Corner_01_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Cement_C",
+					"amount": 5
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_RampInverted_8x1_Corner_01_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
+		"Recipe_RampInverted_8x2_01_C": {
+			"slug": "inverted-ramp-8m-x-2m",
+			"name": "Inverted Ramp 8m x 2m",
+			"className": "Recipe_RampInverted_8x2_01_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Cement_C",
+					"amount": 5
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_RampInverted_8x2_01_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
+		"Recipe_RampInverted_8x2_Corner_01_C": {
+			"slug": "inverted-ramp-corner-8m-x-2m",
+			"name": "Inverted Ramp Corner 8m x 2m",
+			"className": "Recipe_RampInverted_8x2_Corner_01_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Cement_C",
+					"amount": 5
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_RampInverted_8x2_Corner_01_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
+		"Recipe_RampInverted_8x4_Corner_01_C": {
+			"slug": "inverted-ramp-corner-8m-x-4m",
+			"name": "Inverted Ramp Corner 8m x 4m",
+			"className": "Recipe_RampInverted_8x4_Corner_01_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Cement_C",
+					"amount": 5
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_RampInverted_8x4_Corner_01_C",
 					"amount": 1
 				}
 			],
@@ -9188,6 +9413,64 @@
 			],
 			"producedIn": []
 		},
+		"Recipe_PowerPoleWallDoubleMk2_C": {
+			"slug": "double-sided-wall-power-pole-mk-2",
+			"name": "Double-sided Wall Power Pole Mk.2",
+			"className": "Recipe_PowerPoleWallDoubleMk2_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_HighSpeedWire_C",
+					"amount": 16
+				},
+				{
+					"item": "Desc_IronRod_C",
+					"amount": 4
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_PowerPoleWallDoubleMk2_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
+		"Recipe_PowerPoleWallMk2_C": {
+			"slug": "wall-power-pole-mk-2",
+			"name": "Wall Power Pole Mk.2",
+			"className": "Recipe_PowerPoleWallMk2_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_HighSpeedWire_C",
+					"amount": 8
+				},
+				{
+					"item": "Desc_IronRod_C",
+					"amount": 2
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_PowerPoleWallMk2_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
 		"Recipe_PowerPoleWallDoubleMk3_C": {
 			"slug": "double-sided-wall-power-pole-mk-3",
 			"name": "Double-sided Wall Power Pole Mk.3",
@@ -9343,7 +9626,6 @@
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -9360,7 +9642,6 @@
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -9377,7 +9658,6 @@
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -9394,7 +9674,6 @@
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -9411,7 +9690,6 @@
 			"stackSize": 100,
 			"energyValue": 600,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -9428,7 +9706,6 @@
 			"stackSize": 50,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -9445,7 +9722,6 @@
 			"stackSize": 50,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -9462,7 +9738,6 @@
 			"stackSize": 50,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -9479,7 +9754,6 @@
 			"stackSize": 1,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -9496,7 +9770,6 @@
 			"stackSize": 500,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -9513,7 +9786,6 @@
 			"stackSize": 50,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -9530,7 +9802,6 @@
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -9547,7 +9818,6 @@
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -9564,7 +9834,6 @@
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -9581,7 +9850,6 @@
 			"stackSize": 500,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -9598,7 +9866,6 @@
 			"stackSize": 50,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -9615,7 +9882,6 @@
 			"stackSize": 50,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -9632,7 +9898,6 @@
 			"stackSize": 50,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -9649,7 +9914,6 @@
 			"stackSize": 50,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -9666,7 +9930,6 @@
 			"stackSize": 50,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -9683,7 +9946,6 @@
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -9700,7 +9962,6 @@
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -9717,7 +9978,6 @@
 			"stackSize": 50,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -9734,7 +9994,6 @@
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -9751,7 +10010,6 @@
 			"stackSize": 200,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -9768,7 +10026,6 @@
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -9785,7 +10042,6 @@
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -9802,7 +10058,6 @@
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -9819,7 +10074,6 @@
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -9836,7 +10090,6 @@
 			"stackSize": 50000,
 			"energyValue": 0.6,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": true,
 			"fluidColor": {
 				"r": 235,
@@ -9853,7 +10106,6 @@
 			"stackSize": 200,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -9870,7 +10122,6 @@
 			"stackSize": 50000,
 			"energyValue": 0.4,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": true,
 			"fluidColor": {
 				"r": 109,
@@ -9887,7 +10138,6 @@
 			"stackSize": 200,
 			"energyValue": 180,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -9904,7 +10154,6 @@
 			"stackSize": 50,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -9921,7 +10170,6 @@
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -9938,7 +10186,6 @@
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -9955,7 +10202,6 @@
 			"stackSize": 100,
 			"energyValue": 400,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -9972,7 +10218,6 @@
 			"stackSize": 50000,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": true,
 			"fluidColor": {
 				"r": 193,
@@ -9989,109 +10234,6 @@
 			"stackSize": 500,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
-			"liquid": false,
-			"fluidColor": {
-				"r": 0,
-				"g": 0,
-				"b": 0,
-				"a": 0
-			}
-		},
-		"Desc_CircuitBoardHighSpeed_C": {
-			"slug": "a-i-limiter",
-			"className": "Desc_CircuitBoardHighSpeed_C",
-			"name": "A.I. Limiter",
-			"description": "A.I. Limiter are super advanced electronics that are used to control A.I.s and keep them from evolving in malicious ways.",
-			"stackSize": 100,
-			"energyValue": 0,
-			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
-			"liquid": false,
-			"fluidColor": {
-				"r": 0,
-				"g": 0,
-				"b": 0,
-				"a": 0
-			}
-		},
-		"Desc_ElectromagneticControlRod_C": {
-			"slug": "electromagnetic-control-rod",
-			"className": "Desc_ElectromagneticControlRod_C",
-			"name": "Electromagnetic Control Rod",
-			"description": "Control Rods regulate power expenditure via electromagnetism.",
-			"stackSize": 100,
-			"energyValue": 0,
-			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
-			"liquid": false,
-			"fluidColor": {
-				"r": 0,
-				"g": 0,
-				"b": 0,
-				"a": 0
-			}
-		},
-		"Desc_Stator_C": {
-			"slug": "stator",
-			"className": "Desc_Stator_C",
-			"name": "Stator",
-			"description": "The static parts of a motor",
-			"stackSize": 100,
-			"energyValue": 0,
-			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
-			"liquid": false,
-			"fluidColor": {
-				"r": 0,
-				"g": 0,
-				"b": 0,
-				"a": 0
-			}
-		},
-		"Desc_ComputerSuper_C": {
-			"slug": "supercomputer",
-			"className": "Desc_ComputerSuper_C",
-			"name": "Supercomputer",
-			"description": "The supercomputer is the next-gen version of the computer.",
-			"stackSize": 50,
-			"energyValue": 0,
-			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
-			"liquid": false,
-			"fluidColor": {
-				"r": 0,
-				"g": 0,
-				"b": 0,
-				"a": 0
-			}
-		},
-		"Desc_HighSpeedConnector_C": {
-			"slug": "high-speed-connector",
-			"className": "Desc_HighSpeedConnector_C",
-			"name": "High-Speed Connector",
-			"description": "The high-speed connector connects several cables and wires in a very efficient way. Uses a standard pattern so its applications are many and varied.",
-			"stackSize": 100,
-			"energyValue": 0,
-			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
-			"liquid": false,
-			"fluidColor": {
-				"r": 0,
-				"g": 0,
-				"b": 0,
-				"a": 0
-			}
-		},
-		"Desc_ModularFrameHeavy_C": {
-			"slug": "heavy-modular-frame",
-			"className": "Desc_ModularFrameHeavy_C",
-			"name": "Heavy Modular Frame",
-			"description": "A more robust multi-purpose frame.",
-			"stackSize": 50,
-			"energyValue": 0,
-			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -10108,24 +10250,6 @@
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
-			"liquid": false,
-			"fluidColor": {
-				"r": 0,
-				"g": 0,
-				"b": 0,
-				"a": 0
-			}
-		},
-		"Desc_HighSpeedWire_C": {
-			"slug": "quickwire",
-			"className": "Desc_HighSpeedWire_C",
-			"name": "Quickwire",
-			"description": "Caterium's high conductivity and resistance to corrosion makes it ideal for small, advanced electronics.",
-			"stackSize": 500,
-			"energyValue": 0,
-			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -10142,7 +10266,6 @@
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -10159,7 +10282,22 @@
 			"stackSize": 50,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
+			"liquid": false,
+			"fluidColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			}
+		},
+		"Desc_ModularFrameHeavy_C": {
+			"slug": "heavy-modular-frame",
+			"className": "Desc_ModularFrameHeavy_C",
+			"name": "Heavy Modular Frame",
+			"description": "A more robust multi-purpose frame.",
+			"stackSize": 50,
+			"energyValue": 0,
+			"radioactiveDecay": 0,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -10176,7 +10314,6 @@
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -10193,7 +10330,70 @@
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
+			"liquid": false,
+			"fluidColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			}
+		},
+		"Desc_HighSpeedConnector_C": {
+			"slug": "high-speed-connector",
+			"className": "Desc_HighSpeedConnector_C",
+			"name": "High-Speed Connector",
+			"description": "The high-speed connector connects several cables and wires in a very efficient way. Uses a standard pattern so its applications are many and varied.",
+			"stackSize": 100,
+			"energyValue": 0,
+			"radioactiveDecay": 0,
+			"liquid": false,
+			"fluidColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			}
+		},
+		"Desc_Stator_C": {
+			"slug": "stator",
+			"className": "Desc_Stator_C",
+			"name": "Stator",
+			"description": "The static parts of a motor",
+			"stackSize": 100,
+			"energyValue": 0,
+			"radioactiveDecay": 0,
+			"liquid": false,
+			"fluidColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			}
+		},
+		"Desc_CircuitBoardHighSpeed_C": {
+			"slug": "a-i-limiter",
+			"className": "Desc_CircuitBoardHighSpeed_C",
+			"name": "A.I. Limiter",
+			"description": "A.I. Limiter are super advanced electronics that are used to control A.I.s and keep them from evolving in malicious ways.",
+			"stackSize": 100,
+			"energyValue": 0,
+			"radioactiveDecay": 0,
+			"liquid": false,
+			"fluidColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			}
+		},
+		"Desc_HighSpeedWire_C": {
+			"slug": "quickwire",
+			"className": "Desc_HighSpeedWire_C",
+			"name": "Quickwire",
+			"description": "Caterium's high conductivity and resistance to corrosion makes it ideal for small, advanced electronics.",
+			"stackSize": 500,
+			"energyValue": 0,
+			"radioactiveDecay": 0,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -10210,7 +10410,6 @@
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -10227,7 +10426,6 @@
 			"stackSize": 50000,
 			"energyValue": 2,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": true,
 			"fluidColor": {
 				"r": 212,
@@ -10244,7 +10442,6 @@
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -10261,7 +10458,6 @@
 			"stackSize": 100,
 			"energyValue": 2000,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -10278,7 +10474,38 @@
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
+			"liquid": false,
+			"fluidColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			}
+		},
+		"Desc_ElectromagneticControlRod_C": {
+			"slug": "electromagnetic-control-rod",
+			"className": "Desc_ElectromagneticControlRod_C",
+			"name": "Electromagnetic Control Rod",
+			"description": "Control Rods regulate power expenditure via electromagnetism.",
+			"stackSize": 100,
+			"energyValue": 0,
+			"radioactiveDecay": 0,
+			"liquid": false,
+			"fluidColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			}
+		},
+		"Desc_ComputerSuper_C": {
+			"slug": "supercomputer",
+			"className": "Desc_ComputerSuper_C",
+			"name": "Supercomputer",
+			"description": "The supercomputer is the next-gen version of the computer.",
+			"stackSize": 50,
+			"energyValue": 0,
+			"radioactiveDecay": 0,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -10295,7 +10522,6 @@
 			"stackSize": 50000,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": true,
 			"fluidColor": {
 				"r": 255,
@@ -10312,7 +10538,6 @@
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -10329,7 +10554,6 @@
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -10346,7 +10570,6 @@
 			"stackSize": 50,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -10363,7 +10586,6 @@
 			"stackSize": 100,
 			"energyValue": 6000,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -10380,7 +10602,6 @@
 			"stackSize": 50,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -10397,7 +10618,6 @@
 			"stackSize": 50,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -10414,7 +10634,6 @@
 			"stackSize": 50,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -10431,7 +10650,6 @@
 			"stackSize": 200,
 			"energyValue": 900,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -10448,7 +10666,6 @@
 			"stackSize": 50,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -10465,7 +10682,6 @@
 			"stackSize": 50,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -10482,7 +10698,6 @@
 			"stackSize": 200,
 			"energyValue": 450,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -10499,7 +10714,6 @@
 			"stackSize": 200,
 			"energyValue": 180,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -10516,7 +10730,6 @@
 			"stackSize": 500,
 			"energyValue": 15,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -10533,7 +10746,6 @@
 			"stackSize": 100,
 			"energyValue": 100,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -10550,7 +10762,6 @@
 			"stackSize": 100,
 			"energyValue": 15,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -10567,7 +10778,6 @@
 			"stackSize": 200,
 			"energyValue": 20,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -10584,7 +10794,6 @@
 			"stackSize": 50000,
 			"energyValue": 0.75,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": true,
 			"fluidColor": {
 				"r": 59,
@@ -10601,7 +10810,6 @@
 			"stackSize": 100,
 			"energyValue": 750,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -10618,7 +10826,6 @@
 			"stackSize": 50,
 			"energyValue": 250,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -10635,7 +10842,6 @@
 			"stackSize": 50,
 			"energyValue": 250,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -10652,7 +10858,6 @@
 			"stackSize": 200,
 			"energyValue": 100,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -10669,7 +10874,6 @@
 			"stackSize": 1,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -10686,7 +10890,6 @@
 			"stackSize": 1,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -10703,7 +10906,6 @@
 			"stackSize": 1,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -10720,7 +10922,6 @@
 			"stackSize": 1,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -10737,7 +10938,6 @@
 			"stackSize": 1,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -10754,7 +10954,6 @@
 			"stackSize": 1,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -10771,7 +10970,6 @@
 			"stackSize": 1,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -10788,7 +10986,6 @@
 			"stackSize": 1,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -10805,7 +11002,6 @@
 			"stackSize": 1,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -10822,7 +11018,6 @@
 			"stackSize": 1,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -10839,7 +11034,6 @@
 			"stackSize": 1,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -10856,7 +11050,6 @@
 			"stackSize": 1,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -10873,7 +11066,6 @@
 			"stackSize": 1,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -10890,7 +11082,6 @@
 			"stackSize": 1,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -10907,7 +11098,6 @@
 			"stackSize": 50000,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": true,
 			"fluidColor": {
 				"r": 122,
@@ -10924,7 +11114,6 @@
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -10941,7 +11130,6 @@
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -10958,7 +11146,6 @@
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -10975,7 +11162,6 @@
 			"stackSize": 100,
 			"energyValue": 300,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -10992,7 +11178,6 @@
 			"stackSize": 50000,
 			"energyValue": 0.32,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": true,
 			"fluidColor": {
 				"r": 25,
@@ -11009,7 +11194,6 @@
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -11026,7 +11210,6 @@
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -11043,7 +11226,6 @@
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 15,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -11060,7 +11242,6 @@
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -11077,41 +11258,6 @@
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
-			"liquid": false,
-			"fluidColor": {
-				"r": 0,
-				"g": 0,
-				"b": 0,
-				"a": 0
-			}
-		},
-		"Desc_UraniumCell_C": {
-			"slug": "encased-uranium-cell",
-			"className": "Desc_UraniumCell_C",
-			"name": "Encased Uranium Cell",
-			"description": "Uranium Cells are concrete encased uranium pellets. Primarily used to make Nuclear Fuel Rods\nModerately radioactive.",
-			"stackSize": 200,
-			"energyValue": 0,
-			"radioactiveDecay": 7.5,
-			"resourceSinkPoints": 1,
-			"liquid": false,
-			"fluidColor": {
-				"r": 0,
-				"g": 0,
-				"b": 0,
-				"a": 0
-			}
-		},
-		"Desc_UraniumPellet_C": {
-			"slug": "uranium-pellet",
-			"className": "Desc_UraniumPellet_C",
-			"name": "Uranium Pellet",
-			"description": "Uranium Pellets are purified and casted from Uranium Ore. Primarily used to make Uranium Cells.\nModerately radioactive.",
-			"stackSize": 200,
-			"energyValue": 0,
-			"radioactiveDecay": 7.5,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -11128,7 +11274,38 @@
 			"stackSize": 100,
 			"energyValue": 630,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
+			"liquid": false,
+			"fluidColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			}
+		},
+		"Desc_UraniumCell_C": {
+			"slug": "encased-uranium-cell",
+			"className": "Desc_UraniumCell_C",
+			"name": "Encased Uranium Cell",
+			"description": "Uranium Cells are concrete encased uranium pellets. Primarily used to make Nuclear Fuel Rods\nModerately radioactive.",
+			"stackSize": 200,
+			"energyValue": 0,
+			"radioactiveDecay": 7.5,
+			"liquid": false,
+			"fluidColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			}
+		},
+		"Desc_UraniumPellet_C": {
+			"slug": "uranium-pellet",
+			"className": "Desc_UraniumPellet_C",
+			"name": "Uranium Pellet",
+			"description": "Uranium Pellets are purified and casted from Uranium Ore. Primarily used to make Uranium Cells.\nModerately radioactive.",
+			"stackSize": 200,
+			"energyValue": 0,
+			"radioactiveDecay": 7.5,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -11145,7 +11322,6 @@
 			"stackSize": 100,
 			"energyValue": 320,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -11162,24 +11338,6 @@
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
-			"liquid": false,
-			"fluidColor": {
-				"r": 0,
-				"g": 0,
-				"b": 0,
-				"a": 0
-			}
-		},
-		"Desc_NuclearFuelRod_C": {
-			"slug": "nuclear-fuel-rod",
-			"className": "Desc_NuclearFuelRod_C",
-			"name": "Nuclear Fuel Rod",
-			"description": "Nuclear Fuel Rods are used as fuel in nuclear reactors.\nVERY RADIOACTIVE",
-			"stackSize": 50,
-			"energyValue": 750000,
-			"radioactiveDecay": 60,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -11196,7 +11354,6 @@
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -11213,7 +11370,6 @@
 			"stackSize": 50,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -11230,7 +11386,6 @@
 			"stackSize": 50,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -11247,7 +11402,6 @@
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -11264,7 +11418,6 @@
 			"stackSize": 50,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -11281,7 +11434,22 @@
 			"stackSize": 50,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
-			"resourceSinkPoints": 1,
+			"liquid": false,
+			"fluidColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			}
+		},
+		"Desc_NuclearFuelRod_C": {
+			"slug": "nuclear-fuel-rod",
+			"className": "Desc_NuclearFuelRod_C",
+			"name": "Nuclear Fuel Rod",
+			"description": "Nuclear Fuel Rods are used as fuel in nuclear reactors.\nVERY RADIOACTIVE",
+			"stackSize": 50,
+			"energyValue": 750000,
+			"radioactiveDecay": 60,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -11294,7 +11462,6 @@
 			"className": "Desc_NuclearWaste_C",
 			"liquid": false,
 			"radioactiveDecay": 0.1,
-			"resourceSinkPoints": 1,
 			"energyValue": 0,
 			"stackSize": 500,
 			"description": "Nuclear Waste is the byproduct of nuclear power plants. You gotta find a way to handle all of this.",
@@ -11482,7 +11649,7 @@
 				"Default__Schematic_StartingRecipes_C:BP_UnlockScannableResource_C_0"
 			],
 			"type": "EST_Custom",
-			"time": 600,
+			"time": 0,
 			"alternate": false,
 			"mam": false
 		},
@@ -11511,7 +11678,7 @@
 				"Default__Schematic_SaveCompatibility_C:BP_UnlockRecipe_C_0"
 			],
 			"type": "EST_Custom",
-			"time": 600,
+			"time": 0,
 			"alternate": false,
 			"mam": false
 		},
@@ -11873,7 +12040,7 @@
 				"Default__Schematic_4-1_C:BP_UnlockRecipe_C_0"
 			],
 			"type": "EST_Milestone",
-			"time": 600,
+			"time": 0,
 			"alternate": false,
 			"mam": false
 		},
@@ -13265,7 +13432,7 @@
 				"Default__Schematic_4-4_C:BP_UnlockRecipe_C_0"
 			],
 			"type": "EST_Milestone",
-			"time": 600,
+			"time": 0,
 			"alternate": false,
 			"mam": false
 		},
@@ -13493,9 +13660,7 @@
 					"amount": 1
 				}
 			],
-			"unlock": [
-				"Default__Research_ACarapace_0_C:BP_UnlockRecipe_C_0"
-			],
+			"unlock": [],
 			"type": "EST_MAM",
 			"time": 3,
 			"alternate": false,
@@ -13511,7 +13676,9 @@
 					"amount": 10
 				}
 			],
-			"unlock": [],
+			"unlock": [
+				"Default__Research_ACarapace_1_C:BP_UnlockRecipe_C_0"
+			],
 			"type": "EST_MAM",
 			"time": 3,
 			"alternate": false,
@@ -13627,7 +13794,7 @@
 			],
 			"unlock": [],
 			"type": "EST_MAM",
-			"time": 600,
+			"time": 0,
 			"alternate": false,
 			"mam": false
 		},
@@ -14034,7 +14201,7 @@
 				"Default__Research_Mycelia_3_C:BP_UnlockRecipe_C_0"
 			],
 			"type": "EST_MAM",
-			"time": 600,
+			"time": 0,
 			"alternate": false,
 			"mam": false
 		},
@@ -14084,7 +14251,7 @@
 				"Default__Research_Mycelia_5_C:BP_UnlockRecipe_C_0"
 			],
 			"type": "EST_MAM",
-			"time": 600,
+			"time": 0,
 			"alternate": false,
 			"mam": false
 		},
@@ -14182,7 +14349,7 @@
 				"Default__Research_Nutrients_4_C:BP_UnlockRecipe_C_0"
 			],
 			"type": "EST_MAM",
-			"time": 600,
+			"time": 0,
 			"alternate": false,
 			"mam": false
 		},
@@ -14388,7 +14555,7 @@
 				"Default__Research_Quartz_4_C:BP_UnlockRecipe_C_0"
 			],
 			"type": "EST_MAM",
-			"time": 600,
+			"time": 0,
 			"alternate": false,
 			"mam": false
 		},
@@ -14724,7 +14891,7 @@
 		},
 		"ResourceSink_CurvedFoundationPack_C": {
 			"className": "ResourceSink_CurvedFoundationPack_C",
-			"name": "Curved Foundation Pack",
+			"name": "Quarter Pipes Pack",
 			"tier": 1,
 			"cost": [
 				{
@@ -14868,12 +15035,12 @@
 		},
 		"ResourceSink_FoundationExpansionPack_C": {
 			"className": "ResourceSink_FoundationExpansionPack_C",
-			"name": "Ramp Expansion Pack",
+			"name": "Double Ramp Pack",
 			"tier": 1,
 			"cost": [
 				{
 					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 4
+					"amount": 3
 				}
 			],
 			"unlock": [
@@ -14896,6 +15063,42 @@
 			],
 			"unlock": [
 				"Default__ResourceSink_FrameworkFoundations_C:BP_UnlockRecipe_C_0"
+			],
+			"type": "EST_ResourceSink",
+			"time": 0,
+			"alternate": false,
+			"mam": false
+		},
+		"ResourceSink_HyperTubeWallAttachements_C": {
+			"className": "ResourceSink_HyperTubeWallAttachements_C",
+			"name": "Hyper Tube Wall Attachments",
+			"tier": 1,
+			"cost": [
+				{
+					"item": "Desc_ResourceSinkCoupon_C",
+					"amount": 2
+				}
+			],
+			"unlock": [
+				"Default__ResourceSink_HyperTubeWallAttachements_C:BP_UnlockRecipe_C_0"
+			],
+			"type": "EST_ResourceSink",
+			"time": 0,
+			"alternate": false,
+			"mam": false
+		},
+		"ResourceSink_InvertedRampPack_C": {
+			"className": "ResourceSink_InvertedRampPack_C",
+			"name": "Inverted Ramp Pack",
+			"tier": 1,
+			"cost": [
+				{
+					"item": "Desc_ResourceSinkCoupon_C",
+					"amount": 6
+				}
+			],
+			"unlock": [
+				"Default__ResourceSink_InvertedRampPack_C:BP_UnlockRecipe_C_0"
 			],
 			"type": "EST_ResourceSink",
 			"time": 0,
@@ -16697,46 +16900,6 @@
 			"className": "Desc_Workshop_C",
 			"metadata": {}
 		},
-		"Desc_PowerPoleWallDouble_C": {
-			"slug": "double-sided-wall-power-pole",
-			"name": "Double-sided Wall Power Pole",
-			"description": "Power Pole that attaches to a wall. Has one connector on each side of the wall.\n\nCan handle up to 4 Power Line connections.\n\nConnect Power Poles, Power Generators and factory buildings together with Power Lines to create a power grid. The power grid supplies the connected buildings with power.",
-			"categories": [
-				"SC_WallPoles_C"
-			],
-			"buildMenuPriority": 4,
-			"className": "Desc_PowerPoleWallDouble_C",
-			"metadata": {}
-		},
-		"Desc_PowerPoleWallDouble_Mk2_C": {
-			"slug": "double-sided-wall-power-pole-mk-2",
-			"name": "Double-sided Wall Power Pole Mk.2",
-			"description": "Power Pole that attaches to a wall. Has one connector on each side of the wall.\n\nCan handle up to 7 Power Line connections.\n\nConnect Power Poles, Power Generators and factory buildings together with Power Lines to create a power grid. The power grid supplies the connected buildings with power.",
-			"categories": [],
-			"buildMenuPriority": 0,
-			"className": "Desc_PowerPoleWallDouble_Mk2_C",
-			"metadata": {}
-		},
-		"Desc_PowerPoleWall_C": {
-			"slug": "wall-power-pole",
-			"name": "Wall Power Pole",
-			"description": "Power Pole that attaches to a wall.\n\nCan handle up to 4 Power Line connections.\n\nConnect Power Poles, Power Generators and factory buildings together with Power Lines to create a power grid. The power grid supplies the connected buildings with power.",
-			"categories": [
-				"SC_WallPoles_C"
-			],
-			"buildMenuPriority": 1,
-			"className": "Desc_PowerPoleWall_C",
-			"metadata": {}
-		},
-		"Desc_PowerPoleWall_Mk2_C": {
-			"slug": "wall-power-pole-mk-2",
-			"name": "Wall Power Pole Mk.2",
-			"description": "Power Pole that attaches to a wall.\n\nCan handle up to 7 Power Line connections.\n\nConnect Power Poles, Power Generators and factory buildings together with Power Lines to create a power grid. The power grid supplies the connected buildings with power.",
-			"categories": [],
-			"buildMenuPriority": 0,
-			"className": "Desc_PowerPoleWall_Mk2_C",
-			"metadata": {}
-		},
 		"Desc_Mam_C": {
 			"slug": "m-a-m-",
 			"name": "M.A.M.",
@@ -16759,6 +16922,28 @@
 			"className": "Desc_ConveyorPoleWall_C",
 			"metadata": {}
 		},
+		"Desc_HyperTubeWallHole_C": {
+			"slug": "hyper-tube-wall-hole",
+			"name": "Hyper Tube Wall Hole",
+			"description": "Can be attached to walls to allow Hyper Tubes to pass through them.",
+			"categories": [
+				"SC_HyperTubes_C"
+			],
+			"buildMenuPriority": 6,
+			"className": "Desc_HyperTubeWallHole_C",
+			"metadata": {}
+		},
+		"Desc_HyperTubeWallSupport_C": {
+			"slug": "hyper-tube-wall-support",
+			"name": "Hyper Tube Wall Support",
+			"description": "Can be attached to walls. \nSupports for Hyper Tubes to allow for longer distances.",
+			"categories": [
+				"SC_HyperTubes_C"
+			],
+			"buildMenuPriority": 5,
+			"className": "Desc_HyperTubeWallSupport_C",
+			"metadata": {}
+		},
 		"Desc_PipelineSupportWall_C": {
 			"slug": "pipeline-wall-support",
 			"name": "Pipeline Wall Support",
@@ -16779,6 +16964,46 @@
 			],
 			"buildMenuPriority": 3,
 			"className": "Desc_PipelineSupportWallHole_C",
+			"metadata": {}
+		},
+		"Desc_PowerPoleWall_C": {
+			"slug": "wall-power-pole",
+			"name": "Wall Power Pole",
+			"description": "Power Pole that attaches to a wall.\n\nCan handle up to 4 Power Line connections.\n\nConnect Power Poles, Power Generators and factory buildings together with Power Lines to create a power grid. The power grid supplies the connected buildings with power.",
+			"categories": [
+				"SC_WallPoles_C"
+			],
+			"buildMenuPriority": 1,
+			"className": "Desc_PowerPoleWall_C",
+			"metadata": {}
+		},
+		"Desc_PowerPoleWallDouble_C": {
+			"slug": "double-sided-wall-power-pole",
+			"name": "Double-sided Wall Power Pole",
+			"description": "Power Pole that attaches to a wall. Has one connector on each side of the wall.\n\nCan handle up to 4 Power Line connections.\n\nConnect Power Poles, Power Generators and factory buildings together with Power Lines to create a power grid. The power grid supplies the connected buildings with power.",
+			"categories": [
+				"SC_WallPoles_C"
+			],
+			"buildMenuPriority": 4,
+			"className": "Desc_PowerPoleWallDouble_C",
+			"metadata": {}
+		},
+		"Desc_PowerPoleWallDouble_Mk2_C": {
+			"slug": "double-sided-wall-power-pole-mk-2",
+			"name": "Double-sided Wall Power Pole Mk.2",
+			"description": "Power Pole that attaches to a wall. Has one connector on each side of the wall.\n\nCan handle up to 7 Power Line connections.\n\nConnect Power Poles, Power Generators and factory buildings together with Power Lines to create a power grid. The power grid supplies the connected buildings with power.",
+			"categories": [],
+			"buildMenuPriority": 0,
+			"className": "Desc_PowerPoleWallDouble_Mk2_C",
+			"metadata": {}
+		},
+		"Desc_PowerPoleWall_Mk2_C": {
+			"slug": "wall-power-pole-mk-2",
+			"name": "Wall Power Pole Mk.2",
+			"description": "Power Pole that attaches to a wall.\n\nCan handle up to 7 Power Line connections.\n\nConnect Power Poles, Power Generators and factory buildings together with Power Lines to create a power grid. The power grid supplies the connected buildings with power.",
+			"categories": [],
+			"buildMenuPriority": 0,
+			"className": "Desc_PowerPoleWall_Mk2_C",
 			"metadata": {}
 		},
 		"Desc_PowerPoleWallDouble_Mk3_C": {
@@ -17165,20 +17390,6 @@
 				"maxLength": 4900
 			}
 		},
-		"Desc_GeneratorNuclear_C": {
-			"slug": "nuclear-power-plant",
-			"name": "Nuclear Power Plant",
-			"description": "Consumes Nuclear Fuel Rods and Water to produce power.\nHas a conveyor belt and pipeline input so loading can be automated.  \nProduces Nuclear Waste, which is extracted from the conveyor belt output.",
-			"categories": [
-				"SC_Generators_C"
-			],
-			"buildMenuPriority": 23,
-			"className": "Desc_GeneratorNuclear_C",
-			"metadata": {
-				"powerConsumption": 0,
-				"powerConsumptionExponent": 1.6
-			}
-		},
 		"Desc_PipelineSupport_C": {
 			"slug": "pipeline-support",
 			"name": "Pipeline Support",
@@ -17279,58 +17490,19 @@
 				"storageCapacity": 1200
 			}
 		},
-		"Desc_TrainDockingStation_C": {
-			"slug": "freight-platform",
-			"name": "Freight Platform",
-			"description": "As Freight Cars stop this they will either unload or load their goods, depending on what you've set it to.\nThe Freight Platform snaps to Railway, each other and Train Stations.",
+		"Desc_GeneratorNuclear_C": {
+			"slug": "nuclear-power-plant",
+			"name": "Nuclear Power Plant",
+			"description": "Consumes Nuclear Fuel Rods and Water to produce power.\nHas a conveyor belt and pipeline input so loading can be automated.  \nProduces Nuclear Waste, which is extracted from the conveyor belt output.",
 			"categories": [
-				"SC_Trains_C"
+				"SC_Generators_C"
 			],
-			"buildMenuPriority": 52,
-			"className": "Desc_TrainDockingStation_C",
+			"buildMenuPriority": 23,
+			"className": "Desc_GeneratorNuclear_C",
 			"metadata": {
-				"powerConsumption": 50,
+				"powerConsumption": 0,
 				"powerConsumptionExponent": 1.6
 			}
-		},
-		"Desc_TrainDockingStationLiquid_C": {
-			"slug": "freight-platform-liquid",
-			"name": "Freight Platform Liquid",
-			"description": "As Freight Cars stop this they will either unload or load their goods, depending on what you've set it to.\nThe Freight Platform snaps to Railway, each other and Train Stations.",
-			"categories": [
-				"SC_Trains_C"
-			],
-			"buildMenuPriority": 52,
-			"className": "Desc_TrainDockingStationLiquid_C",
-			"metadata": {
-				"powerConsumption": 50,
-				"powerConsumptionExponent": 1.6
-			}
-		},
-		"Desc_TrainStation_C": {
-			"slug": "train-station",
-			"name": "Train Station",
-			"description": "Locomotives can be set to drive to and stop at the Train Station.\nYou can connect power to the train station to power up the trains on the railway as well as transport the power to other stations.",
-			"categories": [
-				"SC_Trains_C"
-			],
-			"buildMenuPriority": 51,
-			"className": "Desc_TrainStation_C",
-			"metadata": {
-				"powerConsumption": 50,
-				"powerConsumptionExponent": 1.6
-			}
-		},
-		"Desc_RailroadTrack_C": {
-			"slug": "railway",
-			"name": "Railway",
-			"description": "Used to transport trains in a reliable and fast manner.\nHas a wide turn angle so make sure to plan it out properly.",
-			"categories": [
-				"SC_Trains_C"
-			],
-			"buildMenuPriority": 53,
-			"className": "Desc_RailroadTrack_C",
-			"metadata": {}
 		},
 		"Desc_Foundation_8x1_01_C": {
 			"slug": "foundation-8m-x-1m",
@@ -17399,47 +17571,69 @@
 			"metadata": {}
 		},
 		"Desc_QuarterPipe_C": {
-			"slug": "curved-foundation",
-			"name": "Curved Foundation",
+			"slug": "quarter-pipe",
+			"name": "Quarter Pipe",
 			"description": "Provides a flat floor to build your factory on. \nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.",
 			"categories": [
-				"SC_Floors_C"
+				"SC_QuatPipes_C"
 			],
 			"buildMenuPriority": 72,
 			"className": "Desc_QuarterPipe_C",
 			"metadata": {}
 		},
 		"Desc_QuarterPipe_02_C": {
-			"slug": "curved-inverted-foundation",
-			"name": "Curved Inverted Foundation",
+			"slug": "inverted-quarter-pipe",
+			"name": "Inverted Quarter Pipe",
 			"description": "Provides a flat floor to build your factory on. \nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.",
 			"categories": [
-				"SC_Floors_C"
+				"SC_QuatPipes_C"
 			],
 			"buildMenuPriority": 72,
 			"className": "Desc_QuarterPipe_02_C",
 			"metadata": {}
 		},
 		"Desc_QuarterPipeCorner_01_C": {
-			"slug": "curved-corner-foundation",
-			"name": "Curved Corner Foundation",
+			"slug": "inner-corner-quarter-pipe",
+			"name": "Inner-Corner Quarter Pipe",
 			"description": "Provides a flat floor to build your factory on. \nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.",
 			"categories": [
-				"SC_Floors_C"
+				"SC_QuatPipes_C"
 			],
 			"buildMenuPriority": 72,
 			"className": "Desc_QuarterPipeCorner_01_C",
 			"metadata": {}
 		},
 		"Desc_QuarterPipeCorner_02_C": {
-			"slug": "curved-corner-inverted-foundation",
-			"name": "Curved Corner Inverted Foundation",
+			"slug": "inverted-inner-corner-quarter-pipe",
+			"name": "Inverted Inner-Corner Quarter Pipe",
 			"description": "Provides a flat floor to build your factory on. \nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.",
 			"categories": [
-				"SC_Floors_C"
+				"SC_QuatPipes_C"
 			],
 			"buildMenuPriority": 72,
 			"className": "Desc_QuarterPipeCorner_02_C",
+			"metadata": {}
+		},
+		"Desc_QuarterPipeCorner_03_C": {
+			"slug": "outer-corner-quarter-pipe",
+			"name": "Outer-Corner Quarter Pipe",
+			"description": "Provides a flat floor to build your factory on. \nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.",
+			"categories": [
+				"SC_QuatPipes_C"
+			],
+			"buildMenuPriority": 72,
+			"className": "Desc_QuarterPipeCorner_03_C",
+			"metadata": {}
+		},
+		"Desc_QuarterPipeCorner_04_C": {
+			"slug": "inverted-outer-corner-quarter-pipe",
+			"name": "Inverted Outer-Corner Quarter Pipe",
+			"description": "Provides a flat floor to build your factory on. \nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.",
+			"categories": [
+				"SC_QuatPipes_C"
+			],
+			"buildMenuPriority": 72,
+			"className": "Desc_QuarterPipeCorner_04_C",
 			"metadata": {}
 		},
 		"Desc_Ramp_Diagonal_8x1_01_C": {
@@ -17541,26 +17735,37 @@
 			"className": "Desc_PillarTop_C",
 			"metadata": {}
 		},
-		"Desc_Ramp_8x4_Inverted_01_C": {
-			"slug": "ramp-inverted-8m-x-4m",
-			"name": "Ramp Inverted 8m x 4m",
-			"description": "Snaps to foundations to make it easier to get on top of them. Works especially well with vehicles.",
-			"categories": [
-				"SC_Ramps_C"
-			],
-			"buildMenuPriority": 94,
-			"className": "Desc_Ramp_8x4_Inverted_01_C",
-			"metadata": {}
-		},
 		"Desc_Ramp_8x8x8_C": {
-			"slug": "ramp-double-8m-x-8m",
-			"name": "Ramp Double 8m x 8m",
+			"slug": "double-ramp-8m-x-8m",
+			"name": "Double Ramp 8m x 8m",
 			"description": "Snaps to foundations to make it easier to get on top of them. Works especially well with vehicles.",
 			"categories": [
 				"SC_Ramps_C"
 			],
 			"buildMenuPriority": 94,
 			"className": "Desc_Ramp_8x8x8_C",
+			"metadata": {}
+		},
+		"Desc_RampDouble_C": {
+			"slug": "double-ramp-8m-x-4m",
+			"name": "Double Ramp 8m x 4m",
+			"description": "Snaps to foundations to make it easier to get on top of them. Works especially well with vehicles.",
+			"categories": [
+				"SC_Ramps_C"
+			],
+			"buildMenuPriority": 94,
+			"className": "Desc_RampDouble_C",
+			"metadata": {}
+		},
+		"Desc_RampDouble_8x1_C": {
+			"slug": "double-ramp-8m-x-2m",
+			"name": "Double Ramp 8m x 2m",
+			"description": "Snaps to foundations to make it easier to get on top of them. Works especially well with vehicles.",
+			"categories": [
+				"SC_Ramps_C"
+			],
+			"buildMenuPriority": 94,
+			"className": "Desc_RampDouble_8x1_C",
 			"metadata": {}
 		},
 		"Desc_Foundation_Frame_01_C": {
@@ -17575,14 +17780,80 @@
 			"metadata": {}
 		},
 		"Desc_FoundationGlass_01_C": {
-			"slug": "foundation-glass",
-			"name": "Foundation Glass",
+			"slug": "glass-foundation-8m-x-1m",
+			"name": "Glass Foundation 8m x 1m",
 			"description": "Provides a flat floor to build your factory on. \nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.",
 			"categories": [
 				"SC_Floors_C"
 			],
 			"buildMenuPriority": 72,
 			"className": "Desc_FoundationGlass_01_C",
+			"metadata": {}
+		},
+		"Desc_Ramp_8x4_Inverted_01_C": {
+			"slug": "inverted-ramp-8m-x-4m",
+			"name": "Inverted Ramp 8m x 4m",
+			"description": "Snaps to foundations to make it easier to get on top of them. Works especially well with vehicles.",
+			"categories": [
+				"SC_Ramps_C"
+			],
+			"buildMenuPriority": 94,
+			"className": "Desc_Ramp_8x4_Inverted_01_C",
+			"metadata": {}
+		},
+		"Desc_RampInverted_8x1_C": {
+			"slug": "inverted-ramp-8m-x-1m",
+			"name": "Inverted Ramp 8m x 1m",
+			"description": "Snaps to foundations to make it easier to get on top of them. Works especially well with vehicles.",
+			"categories": [
+				"SC_Ramps_C"
+			],
+			"buildMenuPriority": 94,
+			"className": "Desc_RampInverted_8x1_C",
+			"metadata": {}
+		},
+		"Desc_RampInverted_8x1_Corner_01_C": {
+			"slug": "inverted-ramp-corner-8m-x-1m",
+			"name": "Inverted Ramp Corner 8m x 1m",
+			"description": "Snaps to foundations to make it easier to get on top of them. Works especially well with vehicles.",
+			"categories": [
+				"SC_Ramps_C"
+			],
+			"buildMenuPriority": 94,
+			"className": "Desc_RampInverted_8x1_Corner_01_C",
+			"metadata": {}
+		},
+		"Desc_RampInverted_8x2_01_C": {
+			"slug": "inverted-ramp-8m-x-2m",
+			"name": "Inverted Ramp 8m x 2m",
+			"description": "Snaps to foundations to make it easier to get on top of them. Works especially well with vehicles.",
+			"categories": [
+				"SC_Ramps_C"
+			],
+			"buildMenuPriority": 94,
+			"className": "Desc_RampInverted_8x2_01_C",
+			"metadata": {}
+		},
+		"Desc_RampInverted_8x2_Corner_01_C": {
+			"slug": "inverted-ramp-corner-8m-x-2m",
+			"name": "Inverted Ramp Corner 8m x 2m",
+			"description": "Snaps to foundations to make it easier to get on top of them. Works especially well with vehicles.",
+			"categories": [
+				"SC_Ramps_C"
+			],
+			"buildMenuPriority": 94,
+			"className": "Desc_RampInverted_8x2_Corner_01_C",
+			"metadata": {}
+		},
+		"Desc_RampInverted_8x4_Corner_01_C": {
+			"slug": "inverted-ramp-corner-8m-x-4m",
+			"name": "Inverted Ramp Corner 8m x 4m",
+			"description": "Snaps to foundations to make it easier to get on top of them. Works especially well with vehicles.",
+			"categories": [
+				"SC_Ramps_C"
+			],
+			"buildMenuPriority": 94,
+			"className": "Desc_RampInverted_8x4_Corner_01_C",
 			"metadata": {}
 		},
 		"Desc_LookoutTower_C": {
@@ -17745,6 +18016,34 @@
 			"className": "Desc_PipeHyper_C",
 			"metadata": {}
 		},
+		"Desc_TrainDockingStation_C": {
+			"slug": "freight-platform",
+			"name": "Freight Platform",
+			"description": "As Freight Cars stop this they will either unload or load their goods, depending on what you've set it to.\nThe Freight Platform snaps to Railway, each other and Train Stations.",
+			"categories": [
+				"SC_Trains_C"
+			],
+			"buildMenuPriority": 52,
+			"className": "Desc_TrainDockingStation_C",
+			"metadata": {
+				"powerConsumption": 50,
+				"powerConsumptionExponent": 1.6
+			}
+		},
+		"Desc_TrainDockingStationLiquid_C": {
+			"slug": "fluid-freight-platform",
+			"name": "Fluid Freight Platform",
+			"description": "As Freight Cars stop this they will either unload or load their goods, depending on what you've set it to.\nThe Freight Platform snaps to Railway, each other and Train Stations.",
+			"categories": [
+				"SC_Trains_C"
+			],
+			"buildMenuPriority": 52,
+			"className": "Desc_TrainDockingStationLiquid_C",
+			"metadata": {
+				"powerConsumption": 50,
+				"powerConsumptionExponent": 1.6
+			}
+		},
 		"Desc_TrainPlatformEmpty_C": {
 			"slug": "empty-platform",
 			"name": "Empty Platform",
@@ -17758,6 +18057,31 @@
 				"powerConsumption": 0,
 				"powerConsumptionExponent": 1.6
 			}
+		},
+		"Desc_TrainStation_C": {
+			"slug": "train-station",
+			"name": "Train Station",
+			"description": "Locomotives can be set to drive to and stop at the Train Station.\nYou can connect power to the train station to power up the trains on the railway as well as transport the power to other stations.",
+			"categories": [
+				"SC_Trains_C"
+			],
+			"buildMenuPriority": 51,
+			"className": "Desc_TrainStation_C",
+			"metadata": {
+				"powerConsumption": 50,
+				"powerConsumptionExponent": 1.6
+			}
+		},
+		"Desc_RailroadTrack_C": {
+			"slug": "railway",
+			"name": "Railway",
+			"description": "Used to transport trains in a reliable and fast manner.\nHas a wide turn angle so make sure to plan it out properly.",
+			"categories": [
+				"SC_Trains_C"
+			],
+			"buildMenuPriority": 53,
+			"className": "Desc_RailroadTrack_C",
+			"metadata": {}
 		},
 		"Desc_ConveyorAttachmentSplitterSmart_C": {
 			"slug": "smart-splitter",
