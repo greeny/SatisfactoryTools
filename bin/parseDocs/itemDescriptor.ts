@@ -29,7 +29,6 @@ export default function parseItemDescriptors(items: {
 			stackSize: Strings.stackSizeFromEnum(item.mStackSize),
 			energyValue: parseFloat(item.mEnergyValue),
 			radioactiveDecay: parseFloat(item.mRadioactiveDecay),
-			resourceSinkPoints: parseInt(item.mResourceSinkPoints),
 			liquid: item.mForm === 'RF_LIQUID',
 			fluidColor: parseColor(Strings.unserializeDocs(item.mFluidColor)),
 		});

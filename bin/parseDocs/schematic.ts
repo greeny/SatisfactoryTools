@@ -11,7 +11,7 @@ export default function parseSchematics(schematics: {
 	mDisplayName: string,
 	mCost: string,
 	mUnlocks: string,
-	mShipTravelTimeAfterPurchase: string
+	mTimeToComplete: string
 }[]): ISchematicSchema[]
 {
 	const result: ISchematicSchema[] = [];
@@ -23,7 +23,7 @@ export default function parseSchematics(schematics: {
 			cost: schematic.mCost ? Arrays.ensureArray(Strings.unserializeDocs(schematic.mCost)).map(parseItemAmount) : [],
 			unlock: schematic.mUnlocks ? Arrays.ensureArray(Strings.unserializeDocs(schematic.mUnlocks)).map(parseBlueprintClass) : [],
 			type: schematic.mType,
-			time: parseFloat(schematic.mShipTravelTimeAfterPurchase),
+			time: parseFloat(schematic.mTimeToComplete),
 			alternate: false,
 			mam: false,
 		});
