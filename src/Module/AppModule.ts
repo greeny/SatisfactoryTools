@@ -1,25 +1,15 @@
-import {ILocationProvider, IModule, IRootScopeService, ISCEProvider} from 'angular';
+import {ILocationProvider, IModule, ISCEProvider} from 'angular';
 import {StateProvider, UrlRouterProvider} from 'angular-ui-router';
 import {HomeController} from '@src/Module/Controllers/HomeController';
 import {AppDirective} from '@src/Module/Directives/AppDirective';
 import {ItemController} from '@src/Module/Controllers/ItemController';
 import {ItemIconDirective} from '@src/Module/Directives/ItemIconDirective';
-import * as angular from 'angular';
 import {RecentlyVisitedItemsService} from '@src/Module/Services/RecentlyVisitedItemsService';
+import {ProductionController} from '@src/Module/Controllers/ProductionController';
 
 export class AppModule
 {
 
-	private static generateNumberFormattingFunction()
-	{
-		return (value: number) => {
-			if (value === ~~value) {
-				return value;
-			} else {
-				return value.toFixed(5).replace(/\.?0+$/, '');
-			}
-		};
-	}
 
 	public constructor(private readonly app: IModule)
 	{
@@ -51,6 +41,13 @@ export class AppModule
 				controllerAs: 'scope',
 				url: '/items/{item}',
 				template: require('@templates/Controllers/item.html'),
+			});
+
+			$stateProvider.state('production', {
+				controller: 'ProductionController',
+				controllerAs: 'scope',
+				url: '/production',
+				template: require('@templates/Controllers/production.html'),
 			});
 		}]);
 
@@ -98,6 +95,18 @@ export class AppModule
 
 		this.app.controller('HomeController', HomeController);
 		this.app.controller('ItemController', ItemController);
+		this.app.controller('ProductionController', ProductionController);
+	}
+
+	private static generateNumberFormattingFunction()
+	{
+		return (value: number) => {
+			if (value === ~~value) {
+				return value;
+			} else {
+				return value.toFixed(5).replace(/\.?0+$/, '');
+			}
+		};
 	}
 
 }

@@ -8,6 +8,26 @@
 		"max-line-length": {
 			"options": [200]
 		},
+		"member-ordering": [
+			true,
+			{
+				"order": [
+					"public-instance-field",
+					"public-static-field",
+					"protected-instance-field",
+					"protected-static-field",
+					"private-instance-field",
+					"private-static-field",
+					"constructor",
+					"public-instance-method",
+					"public-static-method",
+					"protected-instance-method",
+					"protected-static-method",
+					"private-instance-method",
+					"private-static-method"
+				]
+			}
+		],
 		"new-parens": false,
 		"no-arg": true,
 		"no-bitwise": false,

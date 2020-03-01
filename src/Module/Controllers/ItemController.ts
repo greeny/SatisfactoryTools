@@ -9,12 +9,13 @@ import {RecentlyVisitedItemsService} from '@src/Module/Services/RecentlyVisitedI
 export class ItemController
 {
 
-	public static $inject = ['$state', '$transition$', 'RecentlyVisitedItemsService'];
 	public item: IItemSchema;
 	public recipes: IRecipeSchema[];
 	public usagesAsIngredient: IRecipeSchema[];
 	public usagesForBuilding: IRecipeSchema[];
 	public usagesForSchematics: ISchematicSchema[];
+
+	public static $inject = ['$state', '$transition$', 'RecentlyVisitedItemsService'];
 
 	public constructor($state: any, $transition$: ITransitionObject<{item: string}>, recentlyVisitedItemsService: RecentlyVisitedItemsService)
 	{

@@ -5,10 +5,10 @@ import {RecentlyVisitedItemsService} from '@src/Module/Services/RecentlyVisitedI
 export class HomeController
 {
 
-	public static $inject = ['RecentlyVisitedItemsService'];
-
 	public items: IItemSchema[] = Object.values(data.getAllItems());
 	public filter = '';
+
+	public static $inject = ['RecentlyVisitedItemsService'];
 
 	public constructor(public recentlyVisited: RecentlyVisitedItemsService) {}
 

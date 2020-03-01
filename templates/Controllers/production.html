@@ -1,0 +1,29 @@
+<ol class="breadcrumb">
+	<li class="breadcrumb-item"><a ui-sref="home">Satisfactory Tools</a></li>
+	<li class="breadcrumb-item active">Production</li>
+</ol>
+
+<h1>Production</h1>
+
+<div>
+	<span class="btn btn-success" ng-click="scope.addEmptyProduct()">
+		<span class="fas fa-plus"></span>
+		Add product
+	</span>
+</div>
+
+<div>
+	<div ng-repeat="product in scope.tool.production">
+		<select ng-model="product.item" ng-options="item as item.prototype.name for item in scope.craftableItems|orderBy:'prototype.name'"></select>
+		<input type="number" ng-model="product.amount">
+		<span class="btn btn-danger" ng-click="scope.removeProduct(product)">
+			<span class="fas fa-times"></span>
+		</span>
+	</div>
+</div>
+
+<pre>
+{{scope.result}}
+</pre>
+
+<div id="visualization" style="margin: 20px 0; width: 100%; height: 800px; border: 1px solid #4e5d6c;"></div>
