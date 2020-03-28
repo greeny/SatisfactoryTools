@@ -194,4 +194,27 @@ for (const key in json.recipes) {
 	}
 }
 
+// attach extractable resources instead of keeping empty array with "everything allowed"
+for (const minerKey in json.miners) {
+	if (json.miners[minerKey].allowedResources.length > 0) {
+		continue;
+	}
+
+	const allowedResources = [] as string[];
+	for (const resourceKey in json.resources) {
+		if (!json.items[resourceKey]) {
+			throw new Error(`Item of resource type "${resourceKey}" was not found.`);
+		}
+
+		const item = json.items[resourceKey];
+
+		if (item.liquid === json.miners[minerKey].allowLiquids) {
+			allowedResources.push(resourceKey);
+		}
+	}
+
+	json.miners[minerKey].allowedResources = allowedResources;
+}
+
+
 fs.writeFileSync(path.join(__dirname, '..', 'data', 'data.json'), JSON.stringify(json, null, '\t') + '\n');
