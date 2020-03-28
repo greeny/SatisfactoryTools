@@ -2066,45 +2066,6 @@
 				"Desc_ManufacturerMk1_C"
 			]
 		},
-		"Recipe_ModularFrameHeavy_C": {
-			"slug": "heavy-modular-frame",
-			"name": "Heavy Modular Frame",
-			"className": "Recipe_ModularFrameHeavy_C",
-			"alternate": false,
-			"time": 30,
-			"manualTimeMultiplier": 0.6,
-			"ingredients": [
-				{
-					"item": "Desc_ModularFrame_C",
-					"amount": 5
-				},
-				{
-					"item": "Desc_SteelPipe_C",
-					"amount": 15
-				},
-				{
-					"item": "Desc_SteelPlateReinforced_C",
-					"amount": 5
-				},
-				{
-					"item": "Desc_IronScrew_C",
-					"amount": 100
-				}
-			],
-			"forBuilding": false,
-			"inMachine": true,
-			"inHand": true,
-			"inWorkshop": false,
-			"products": [
-				{
-					"item": "Desc_ModularFrameHeavy_C",
-					"amount": 1
-				}
-			],
-			"producedIn": [
-				"Desc_ManufacturerMk1_C"
-			]
-		},
 		"Recipe_SpaceElevatorPart_4_C": {
 			"slug": "modular-engine",
 			"name": "Modular Engine",
@@ -2374,6 +2335,45 @@
 				}
 			],
 			"producedIn": []
+		},
+		"Recipe_ModularFrameHeavy_C": {
+			"slug": "heavy-modular-frame",
+			"name": "Heavy Modular Frame",
+			"className": "Recipe_ModularFrameHeavy_C",
+			"alternate": false,
+			"time": 30,
+			"manualTimeMultiplier": 0.6,
+			"ingredients": [
+				{
+					"item": "Desc_ModularFrame_C",
+					"amount": 5
+				},
+				{
+					"item": "Desc_SteelPipe_C",
+					"amount": 15
+				},
+				{
+					"item": "Desc_SteelPlateReinforced_C",
+					"amount": 5
+				},
+				{
+					"item": "Desc_IronScrew_C",
+					"amount": 100
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_ModularFrameHeavy_C",
+					"amount": 1
+				}
+			],
+			"producedIn": [
+				"Desc_ManufacturerMk1_C"
+			]
 		},
 		"Recipe_SpaceElevatorPart_3_C": {
 			"slug": "automated-wiring",
@@ -6064,6 +6064,39 @@
 			],
 			"producedIn": []
 		},
+		"Recipe_HyperPoleStackable_C": {
+			"slug": "stackable-hyper-tube-support",
+			"name": "Stackable Hyper Tube Support",
+			"className": "Recipe_HyperPoleStackable_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_IronPlate_C",
+					"amount": 4
+				},
+				{
+					"item": "Desc_IronRod_C",
+					"amount": 2
+				},
+				{
+					"item": "Desc_Cement_C",
+					"amount": 2
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_HyperPoleStackable_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
 		"Recipe_PipeHyperSupport_C": {
 			"slug": "hyper-tube-support",
 			"name": "Hyper Tube Support",
@@ -6351,7 +6384,7 @@
 				},
 				{
 					"item": "Desc_FluidCanister_C",
-					"amount": 1
+					"amount": 2
 				}
 			],
 			"producedIn": [
@@ -16267,7 +16300,8 @@
 				"Desc_LiquidBiofuel_C"
 			],
 			"powerProduction": 150,
-			"powerProductionExponent": 1.3
+			"powerProductionExponent": 1.3,
+			"waterToPowerRatio": 0
 		},
 		"Build_GeneratorBiomass_C": {
 			"className": "Build_GeneratorBiomass_C",
@@ -16285,7 +16319,8 @@
 				"Desc_FlowerPetals_C"
 			],
 			"powerProduction": 30,
-			"powerProductionExponent": 1.3
+			"powerProductionExponent": 1.3,
+			"waterToPowerRatio": 0
 		},
 		"Build_GeneratorCoal_C": {
 			"className": "Build_GeneratorCoal_C",
@@ -16295,7 +16330,8 @@
 				"Desc_PetroleumCoke_C"
 			],
 			"powerProduction": 75,
-			"powerProductionExponent": 1.3
+			"powerProductionExponent": 1.3,
+			"waterToPowerRatio": 10
 		},
 		"Build_GeneratorNuclear_C": {
 			"className": "Build_GeneratorNuclear_C",
@@ -16303,13 +16339,15 @@
 				"Desc_NuclearFuelRod_C"
 			],
 			"powerProduction": 2500,
-			"powerProductionExponent": 1.321928
+			"powerProductionExponent": 1.321928,
+			"waterToPowerRatio": 2
 		},
 		"Build_GeneratorGeoThermal_C": {
 			"className": "Build_GeneratorGeoThermal_C",
 			"fuel": [],
 			"powerProduction": 200,
-			"powerProductionExponent": 1.3
+			"powerProductionExponent": 1.3,
+			"waterToPowerRatio": 0
 		}
 	},
 	"resources": {
@@ -17397,6 +17435,15 @@
 			"categories": [],
 			"buildMenuPriority": 0,
 			"className": "Desc_PipelineSupport_C",
+			"metadata": {}
+		},
+		"Desc_HyperPoleStackable_C": {
+			"slug": "stackable-hyper-tube-support",
+			"name": "Stackable Hyper Tube Support",
+			"description": "Support for Hyper Tubes. Can be stacked on other stackable supports.",
+			"categories": [],
+			"buildMenuPriority": 0,
+			"className": "Desc_HyperPoleStackable_C",
 			"metadata": {}
 		},
 		"Desc_PipeHyperSupport_C": {
