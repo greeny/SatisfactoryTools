@@ -6,5 +6,5 @@ export interface IMinerSchema
 	allowLiquids: boolean;
 	allowSolids: boolean;
 	itemsPerCycle: number;
-
+	extractCycleTime: number;
 }

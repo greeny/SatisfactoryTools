@@ -16469,6 +16469,7 @@
 				"Desc_Water_C"
 			],
 			"itemsPerCycle": 2000,
+			"extractCycleTime": 1,
 			"allowLiquids": true,
 			"allowSolids": false
 		},
@@ -16476,6 +16477,7 @@
 			"className": "Build_MinerMk1_C",
 			"allowedResources": [],
 			"itemsPerCycle": 1,
+			"extractCycleTime": 1,
 			"allowLiquids": false,
 			"allowSolids": true
 		},
@@ -16485,6 +16487,7 @@
 				"Desc_LiquidOil_C"
 			],
 			"itemsPerCycle": 2000,
+			"extractCycleTime": 1,
 			"allowLiquids": true,
 			"allowSolids": false
 		},
@@ -16492,6 +16495,7 @@
 			"className": "Build_MinerMk2_C",
 			"allowedResources": [],
 			"itemsPerCycle": 1,
+			"extractCycleTime": 0.5,
 			"allowLiquids": false,
 			"allowSolids": true
 		},
@@ -16499,6 +16503,7 @@
 			"className": "Build_MinerMk3_C",
 			"allowedResources": [],
 			"itemsPerCycle": 1,
+			"extractCycleTime": 0.25,
 			"allowLiquids": false,
 			"allowSolids": true
 		}
