@@ -8,6 +8,7 @@ export default function parseGenerators(generators: {
 	mDefaultFuelClasses: string,
 	mPowerProduction: string,
 	mPowerProductionExponent: string,
+	mSupplementalToPowerRatio?: string,
 }[]): IGeneratorSchema[]
 {
 	const result: IGeneratorSchema[] = [];
@@ -17,7 +18,8 @@ export default function parseGenerators(generators: {
 			fuel: Arrays.ensureArray(Strings.unserializeDocs(generator.mDefaultFuelClasses || '())')).map(parseBlueprintClass),
 			powerProduction: parseFloat(generator.mPowerProduction),
 			powerProductionExponent: parseFloat(generator.mPowerProductionExponent),
-		})
+			waterToPowerRatio: parseFloat(generator.mSupplementalToPowerRatio || '0'),
+		});
 	}
 	return result;
 }
