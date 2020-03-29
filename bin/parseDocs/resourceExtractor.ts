@@ -8,6 +8,7 @@ export default function parseResourceExtractors(resourceExtractors: {
 	mAllowedResources: string,
 	mAllowedResourceForms: string,
 	mItemsPerCycle: string,
+	mExtractCycleTime: string,
 }[]): IMinerSchema[]
 {
 	const result: IMinerSchema[] = [];
@@ -28,6 +29,7 @@ export default function parseResourceExtractors(resourceExtractors: {
 			className: resourceExtractor.ClassName,
 			allowedResources: [],
 			itemsPerCycle: parseFloat(resourceExtractor.mItemsPerCycle),
+			extractCycleTime: parseFloat(resourceExtractor.mExtractCycleTime),
 			allowLiquids: allowLiquids,
 			allowSolids: allowSolids,
 		};
