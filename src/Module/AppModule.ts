@@ -51,7 +51,21 @@ export class AppModule
 			});
 		}]);
 
-		this.app.run(['$transitions', ($transitions: any) => {
+		this.app.run(['$transitions', '$rootScope', ($transitions: any, $rootScope: any) => {
+			$rootScope.aprilMode = false;
+
+			const now = new Date();
+			if (now.getDate() === 1 && now.getMonth() === 3) {
+				$rootScope.aprilMode = true;
+				document.body.className += ' april-mode';
+				window.scrollTo(0, document.body.scrollHeight);
+			}
+
+			$rootScope.disableApril = () => {
+				$('body').removeClass('april-mode');
+				$rootScope.aprilMode = false;
+			};
+
 			$transitions.onFinish({}, () => {
 				const elements = document.getElementsByClassName('tooltip'); // TODO fix jQLite and replace with angular.element
 				for (const index in elements) {
@@ -59,7 +73,13 @@ export class AppModule
 						elements[index].remove();
 					}
 				}
-				document.documentElement.scrollTop = 0;
+				if ($rootScope.aprilMode) {
+					setTimeout(() => {
+						window.scrollTo(0, document.body.scrollHeight);
+					}, 0);
+				} else {
+					document.documentElement.scrollTop = 0;
+				}
 			});
 		}]);
 

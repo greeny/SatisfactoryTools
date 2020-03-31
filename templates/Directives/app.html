@@ -24,6 +24,13 @@
 				</li>
 			</ul>
 			<ul class="navbar-nav">
+				<li class="april-mode-toggle nav-item" ng-if="$root.aprilMode">
+					<a class="nav-link" href="javascript: void(0);" ng-click="$root.disableApril();">
+						<b>
+							<span class="fas fa-sync-alt"></span> Disable April mode
+						</b>
+					</a>
+				</li>
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="javascript: void(0);" data-toggle="dropdown">
 						<span class="fas fa-users"></span>
