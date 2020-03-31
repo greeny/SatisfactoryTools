@@ -16475,7 +16475,17 @@
 		},
 		"Build_MinerMk1_C": {
 			"className": "Build_MinerMk1_C",
-			"allowedResources": [],
+			"allowedResources": [
+				"Desc_OreIron_C",
+				"Desc_OreCopper_C",
+				"Desc_Stone_C",
+				"Desc_Coal_C",
+				"Desc_OreBauxite_C",
+				"Desc_OreGold_C",
+				"Desc_OreUranium_C",
+				"Desc_RawQuartz_C",
+				"Desc_Sulfur_C"
+			],
 			"itemsPerCycle": 1,
 			"extractCycleTime": 1,
 			"allowLiquids": false,
@@ -16493,7 +16503,17 @@
 		},
 		"Build_MinerMk2_C": {
 			"className": "Build_MinerMk2_C",
-			"allowedResources": [],
+			"allowedResources": [
+				"Desc_OreIron_C",
+				"Desc_OreCopper_C",
+				"Desc_Stone_C",
+				"Desc_Coal_C",
+				"Desc_OreBauxite_C",
+				"Desc_OreGold_C",
+				"Desc_OreUranium_C",
+				"Desc_RawQuartz_C",
+				"Desc_Sulfur_C"
+			],
 			"itemsPerCycle": 1,
 			"extractCycleTime": 0.5,
 			"allowLiquids": false,
@@ -16501,7 +16521,17 @@
 		},
 		"Build_MinerMk3_C": {
 			"className": "Build_MinerMk3_C",
-			"allowedResources": [],
+			"allowedResources": [
+				"Desc_OreIron_C",
+				"Desc_OreCopper_C",
+				"Desc_Stone_C",
+				"Desc_Coal_C",
+				"Desc_OreBauxite_C",
+				"Desc_OreGold_C",
+				"Desc_OreUranium_C",
+				"Desc_RawQuartz_C",
+				"Desc_Sulfur_C"
+			],
 			"itemsPerCycle": 1,
 			"extractCycleTime": 0.25,
 			"allowLiquids": false,
