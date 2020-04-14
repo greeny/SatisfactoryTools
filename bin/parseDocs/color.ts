@@ -5,12 +5,13 @@ export default function parseColor(color: {
 	B: string;
 	G: string;
 	A: string;
-}): IColorSchema
+}, convert: boolean = false): IColorSchema
 {
+	const multiplier = convert ? 255 : 1;
 	return {
-		r: parseInt(color.R),
-		g: parseInt(color.G),
-		b: parseInt(color.B),
-		a: parseInt(color.A),
+		r: parseInt('' + parseFloat(color.R) * multiplier),
+		g: parseInt('' + parseFloat(color.G) * multiplier),
+		b: parseInt('' + parseFloat(color.B) * multiplier),
+		a: parseFloat(color.A),
 	}
 }

@@ -10,8 +10,12 @@ import parseResourceExtractors from '@bin/parseDocs/resourceExtractor';
 import parseGenerators from '@bin/parseDocs/generator';
 import parseBuildingDescriptors from '@bin/parseDocs/buildingDescriptor';
 import parseSchematics from '@bin/parseDocs/schematic';
+import {Objects} from '@src/Utils/Objects';
+import {DiffGenerator} from '@src/Utils/DiffGenerator/DiffGenerator';
+import {DiffFormatter} from '@src/Utils/DiffGenerator/DiffFormatter';
 
 const docs = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'Docs.json')).toString());
+const oldData: IJsonSchema = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'data.json')).toString()) as IJsonSchema;
 
 const json: IJsonSchema = {
 	recipes: {},
@@ -25,8 +29,18 @@ const json: IJsonSchema = {
 
 let biomass: IItemSchema[] = [];
 let extraInfo: any[] = [];
+const sinkPoints: {[key: string]: number} = {};
 
 for (const definitions of docs) {
+	if (definitions['Resource Sink points']) {
+		let item: {[key: string]: number};
+		for (item of definitions['Resource Sink points']) {
+			for (const key in item) {
+				sinkPoints[key] = item[key];
+			}
+		}
+	}
+
 	switch (definitions.NativeClass) {
 		case 'Class\'/Script/FactoryGame.FGItemDescriptor\'':
 		case 'Class\'/Script/FactoryGame.FGEquipmentDescriptor\'':
@@ -137,19 +151,6 @@ json.buildings['Desc_RadarTower_C'] = {
 	name: 'Radar Tower',
 };
 
-// add missing nuclear waste
-json.items['Desc_NuclearWaste_C'] = {
-	className: 'Desc_NuclearWaste_C',
-	liquid: false,
-	radioactiveDecay: 0.1,
-	energyValue: 0,
-	stackSize: 500,
-	description: 'Nuclear Waste is the byproduct of nuclear power plants. You gotta find a way to handle all of this.',
-	name: 'Nuclear Waste',
-	fluidColor: {r: 0, g: 0, b: 0, a: 0},
-	slug: 'nuclear-waste',
-};
-
 // add extra info to buildings
 for (const info of extraInfo) {
 	for (const key in json.buildings) {
@@ -169,6 +170,13 @@ for (const key in json.generators) {
 		json.generators[key].fuel.push(...biomass.map((bio) => {
 			return bio.className;
 		}));
+	}
+}
+
+// add
+for (const key in json.items) {
+	if (sinkPoints[json.items[key].name]) {
+		json.items[key].sinkPoints = sinkPoints[json.items[key].name];
 	}
 }
 
@@ -216,5 +224,13 @@ for (const minerKey in json.miners) {
 	json.miners[minerKey].allowedResources = allowedResources;
 }
 
+for (const key in json) {
+	if (json.hasOwnProperty(key)) {
+		json[key as keyof IJsonSchema] = Objects.sortByKeys(json[key as keyof IJsonSchema]);
+	}
+}
 
 fs.writeFileSync(path.join(__dirname, '..', 'data', 'data.json'), JSON.stringify(json, null, '\t') + '\n');
+
+const diffGenerator = new DiffGenerator();
+fs.writeFileSync(path.join(__dirname, '..', 'data', 'diff.txt'), DiffFormatter.diffToMarkdown(diffGenerator.generateDiff(oldData, json)));

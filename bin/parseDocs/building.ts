@@ -71,7 +71,7 @@ export default function parseBuildings(buildings: {
 			metadata.firstPieceCostMultiplier = 2;
 			metadata.lengthPerCost = 12;
 		} else if (building.ClassName === 'Build_WalkwayTrun_C') { // nice typo CSS
-			building.ClassName = 'Desc_WalkwayTurn_C'
+			building.ClassName = 'Desc_WalkwayTurn_C';
 		}
 
 		result.push({

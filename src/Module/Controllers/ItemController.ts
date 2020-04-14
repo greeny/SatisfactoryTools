@@ -37,6 +37,11 @@ export class ItemController
 		return data.getRawData().items[className];
 	}
 
+	public getRecipe(className: string): IRecipeSchema|null
+	{
+		return data.getRawData().recipes[className];
+	}
+
 	public getBuilding(className: string): IBuildingSchema|null
 	{
 		return data.getRawData().buildings[className];

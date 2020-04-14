@@ -37,6 +37,10 @@
 					</thead>
 					<tbody>
 						<tr>
+							<td>Sink points</td>
+							<td>{{scope.item.sinkPoints ? scope.item.sinkPoints : 'Can\'t be put into the sink.'}}</td>
+						</tr>
+						<tr>
 							<td>Form</td>
 							<td>{{scope.item.liquid ? 'Liquid' : 'Solid'}}</td>
 						</tr>
@@ -239,6 +243,7 @@
 							<tr>
 								<th>Schematic</th>
 								<th>Ingredients</th>
+								<th>Unlocks</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -255,6 +260,11 @@
 											</a>
 										</span>
 									</div>
+								</td>
+								<td>
+									<span ng-if="schematic.unlock.inventorySlots">{{schematic.unlock.inventorySlots}} inventory slots</span><br ng-if="schematic.unlock.inventorySlots">
+									<span ng-repeat="resource in schematic.unlock.scannerResources">{{scope.getItem(resource).name}} added to scanner{{$last ? '' : ', '}}</span><br ng-if="schematic.unlock.scannerResources.length">
+									<span ng-repeat="unlock in schematic.unlock.recipes">{{scope.getRecipe(unlock).name}}{{$last ? '' : ', '}}</span>
 								</td>
 							</tr>
 						</tbody>
