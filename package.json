@@ -38,7 +38,7 @@
 		"angular-ui-router": "^1.0.25",
 		"bootstrap": "^4.4.1",
 		"javascript-lp-solver": "^0.4.24",
-		"jquery": "^3.4.1",
+		"jquery": "^3.5.0",
 		"popper.js": "^1.16.1",
 		"vis-data": "^6.4.1",
 		"vis-network": "^7.3.6"
