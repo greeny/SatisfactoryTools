@@ -6,6 +6,7 @@ import {ItemController} from '@src/Module/Controllers/ItemController';
 import {ItemIconDirective} from '@src/Module/Directives/ItemIconDirective';
 import {RecentlyVisitedItemsService} from '@src/Module/Services/RecentlyVisitedItemsService';
 import {ProductionController} from '@src/Module/Controllers/ProductionController';
+import {VisualizationComponent} from '@src/Module/Components/VisualizationComponent';
 
 export class AppModule
 {
@@ -31,21 +32,21 @@ export class AppModule
 
 			$stateProvider.state('home', {
 				controller: 'HomeController',
-				controllerAs: 'scope',
+				controllerAs: 'ctrl',
 				url: '/',
 				template: require('@templates/Controllers/home.html'),
 			});
 
 			$stateProvider.state('item', {
 				controller: 'ItemController',
-				controllerAs: 'scope',
+				controllerAs: 'ctrl',
 				url: '/items/{item}',
 				template: require('@templates/Controllers/item.html'),
 			});
 
 			$stateProvider.state('production', {
 				controller: 'ProductionController',
-				controllerAs: 'scope',
+				controllerAs: 'ctrl',
 				url: '/production',
 				template: require('@templates/Controllers/production.html'),
 			});
@@ -110,6 +111,8 @@ export class AppModule
 				},
 			};
 		});
+
+		this.app.component('visualization', new VisualizationComponent);
 
 		this.app.service('RecentlyVisitedItemsService', RecentlyVisitedItemsService);
 

@@ -8,6 +8,34 @@ import {ISchematicSchema} from '@src/Schema/ISchematicSchema';
 export class Data
 {
 
+	public static resourceAmounts = {
+		Desc_Coal_C: 30900,
+		Desc_LiquidOil_C: 7500,
+		Desc_OreBauxite_C: 7800,
+		Desc_OreCopper_C: 28860,
+		Desc_OreGold_C: 11040,
+		Desc_OreIron_C: 70380,
+		Desc_OreUranium_C: 1800,
+		Desc_RawQuartz_C: 11280,
+		Desc_Stone_C: 52860,
+		Desc_Sulfur_C: 6840,
+		Desc_Water_C: Number.MAX_SAFE_INTEGER,
+	};
+
+	public static resourceWeights = {
+		Desc_Coal_C: 7.419,
+		Desc_LiquidOil_C: 30.568,
+		Desc_OreBauxite_C: 29.392,
+		Desc_OreCopper_C: 7.944,
+		Desc_OreGold_C: 20.766,
+		Desc_OreIron_C: 3.257,
+		Desc_OreUranium_C: 127.367,
+		Desc_RawQuartz_C: 20.324,
+		Desc_Stone_C: 4.337,
+		Desc_Sulfur_C: 33.518,
+		Desc_Water_C: 0,
+	};
+
 	public getRawData(): IJsonSchema
 	{
 		return rawData as any;

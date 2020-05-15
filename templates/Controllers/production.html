@@ -5,25 +5,39 @@
 
 <h1>Production</h1>
 
-<div>
-	<span class="btn btn-success" ng-click="scope.addEmptyProduct()">
-		<span class="fas fa-plus"></span>
-		Add product
-	</span>
-</div>
+<ul class="nav nav-tabs">
+	<li class="nav-item" ng-repeat="tab in ctrl.tabs">
+		<a class="nav-link" href="javascript: void(0);" ng-class="{active: tab === ctrl.tab}" ng-click="ctrl.tab = tab">
+			<span ng-if="!tab.item">
+				<span class="fas fa-question"></span>
+			</span>
+			<img ng-if="tab.item" ng-src="/assets/images/items/{{tab.item.slug}}_64.png" width="32" height="32" title="{{tab.item.name}}" tooltip>
+		</a>
+	</li>
+	<li class="nav-item bg-success text-light">
+		<a class="nav-link" href="javascript: void(0);" ng-click="ctrl.addNewTab();" title="Add new production line" tooltip>
+			<span class="fas fa-plus"></span>
+		</a>
+	</li>
+</ul>
 
-<div>
-	<div ng-repeat="product in scope.tool.production">
-		<select ng-model="product.item" ng-options="item as item.prototype.name for item in scope.craftableItems|orderBy:'prototype.name'"></select>
-		<input type="number" ng-model="product.amount">
-		<span class="btn btn-danger" ng-click="scope.removeProduct(product)">
+<div ng-repeat="tab in ctrl.tabs">
+	<div ng-show="ctrl.tab === tab">
+		<span class="btn btn-success" ng-click="ctrl.addEmptyProduct()">
+			<span class="fas fa-plus"></span>
+			Add product
+		</span>
+
+		<div ng-repeat="product in tab.tool.productionRequest.production">
+			<select ng-model="product.item" ng-options="item as item.prototype.name for item in ctrl.craftableItems|orderBy:'prototype.name'"></select>
+			<!--<input type="checkbox" ng-model="product.max"> Max-->
+			<input ng-hide="product.max" type="number" ng-model="product.amount">
+			<input ng-show="product.max" type="range" ng-model="product.ratio" min="0" max="100" step="2">
+			<span class="btn btn-danger" ng-click="tab.removeProduct(product)">
 			<span class="fas fa-times"></span>
 		</span>
+		</div>
+
+		<visualization result="tab.tool.result" class="visualization"></visualization>
 	</div>
 </div>
-
-<pre>
-{{scope.result}}
-</pre>
-
-<div id="visualization" style="margin: 20px 0; width: 100%; height: 800px; border: 1px solid #4e5d6c;"></div>

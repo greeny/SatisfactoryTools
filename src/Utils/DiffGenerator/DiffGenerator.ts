@@ -161,7 +161,8 @@ export class DiffGenerator
 		}
 
 		if (originalIngredient.item !== newIngredient.item) {
-			return 'Replaced ' + originalIngredient.amount + ' ' + this.originalSchema.items[originalIngredient.item].name + ' ' + type + ' with ' + newIngredient.amount + ' ' + this.newSchema.items[newIngredient.item].name;
+			return 'Replaced ' + originalIngredient.amount + ' ' + this.originalSchema.items[originalIngredient.item].name + ' ' + type
+				+ ' with ' + newIngredient.amount + ' ' + this.newSchema.items[newIngredient.item].name;
 		} else if (originalIngredient.amount !== newIngredient.amount) {
 			return 'Changed ' + this.originalSchema.items[originalIngredient.item].name + ' ' + type + ' from ' + originalIngredient.amount + ' to ' + newIngredient.amount;
 		}
