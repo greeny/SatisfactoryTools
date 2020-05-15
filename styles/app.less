@@ -29,7 +29,7 @@ a:hover {
 	grid-gap: 20px;
 	justify-content: stretch;
 
-	@media(max-width: 575px) {
+	@media (max-width: 575px) {
 		grid-gap: 10px;
 		grid-template-columns: 1fr;
 	}
@@ -38,7 +38,7 @@ a:hover {
 		text-align: center;
 		max-width: 150px;
 
-		@media(max-width: 575px) {
+		@media (max-width: 575px) {
 			max-width: unset;
 		}
 
@@ -48,12 +48,12 @@ a:hover {
 			width: 64px;
 			height: 64px;
 
-			@media(max-width: 767px) {
+			@media (max-width: 767px) {
 				width: 48px;
 				height: 48px;
 			}
 
-			@media(max-width: 575px) {
+			@media (max-width: 575px) {
 				display: inline-block;
 				width: 32px;
 				height: 32px;
@@ -68,7 +68,7 @@ a:hover {
 			padding: 0 10px;
 			margin-bottom: 10px;
 
-			@media(max-width: 575px) {
+			@media (max-width: 575px) {
 				margin-bottom: unset;
 			}
 		}
@@ -90,4 +90,12 @@ a:hover {
 	.item-amount {
 		font-size: 1.25em;
 	}
+}
+
+.visualization {
+	display: block;
+	margin: 20px 0;
+	width: 100%;
+	height: 800px;
+	border: 1px solid #4e5d6c;
 }

@@ -6,6 +6,9 @@ import {ItemController} from '@src/Module/Controllers/ItemController';
 import {ItemIconDirective} from '@src/Module/Directives/ItemIconDirective';
 import {RecentlyVisitedItemsService} from '@src/Module/Services/RecentlyVisitedItemsService';
 import {ProductionController} from '@src/Module/Controllers/ProductionController';
+import {VisualizationComponent} from '@src/Module/Components/VisualizationComponent';
+import {VisualizationComponentController} from '@src/Module/Components/VisualizationComponentController';
+import {VisualizationDirective} from '@src/Module/Directives/VisualizationDirective';
 
 export class AppModule
 {
@@ -31,21 +34,21 @@ export class AppModule
 
 			$stateProvider.state('home', {
 				controller: 'HomeController',
-				controllerAs: 'scope',
+				controllerAs: 'ctrl',
 				url: '/',
 				template: require('@templates/Controllers/home.html'),
 			});
 
 			$stateProvider.state('item', {
 				controller: 'ItemController',
-				controllerAs: 'scope',
+				controllerAs: 'ctrl',
 				url: '/items/{item}',
 				template: require('@templates/Controllers/item.html'),
 			});
 
 			$stateProvider.state('production', {
 				controller: 'ProductionController',
-				controllerAs: 'scope',
+				controllerAs: 'ctrl',
 				url: '/production',
 				template: require('@templates/Controllers/production.html'),
 			});
@@ -95,6 +98,10 @@ export class AppModule
 			return new ItemIconDirective;
 		});
 
+		this.app.directive('visualization', () => {
+			return new VisualizationDirective();
+		});
+
 		this.app.directive('tooltip', () => {
 			return {
 				restrict: 'A',
@@ -110,6 +117,9 @@ export class AppModule
 				},
 			};
 		});
+
+		this.app.controller('VisualizationComponentController', VisualizationComponentController);
+		this.app.component('visualizationxxx', new VisualizationComponent);
 
 		this.app.service('RecentlyVisitedItemsService', RecentlyVisitedItemsService);
 
