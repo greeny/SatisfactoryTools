@@ -1,5 +1,4 @@
 import {RecipeResult} from '@src/Tools/Production/RecipeResult';
-import {ItemAmount} from '@src/Data/ItemAmount';
 import vis from 'vis-network';
 import model from '@src/Data/Model';
 
@@ -80,6 +79,7 @@ export class ProductionToolResult
 				const resource = this.rawResources[k];
 				const item = model.getItem(k);
 
+				// TODO add miners
 				this.nodes.add({
 					id: id,
 					label: ProductionToolResult.getRecipeDisplayedName(item.prototype.name) + '\n' + resource.amount.toFixed(2) + ' / min',

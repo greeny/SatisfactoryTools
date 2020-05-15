@@ -16,6 +16,8 @@ export class Solver
 			variables: {},
 		};
 
+		const rawResources: {[key: string]: number} = {};
+
 		for (const k in data.items) {
 			if (data.items.hasOwnProperty(k)) {
 				const item = data.items[k];
@@ -27,12 +29,17 @@ export class Solver
 					model.constraints[item.className] = {
 						max: 0,
 					};
+					rawResources[item.className] = 1; // TODO add weights
 				}
 			}
 		}
 
+		// TODO optimize for whatever is needed
+		model.variables['rawResources'] = rawResources;
+		model.optimize['rawResources'] = 'max';
+
 		for (const itemAmount of production) {
-			delete model.optimize[itemAmount.item.prototype.className];
+			//delete model.optimize[itemAmount.item.prototype.className];
 			model.constraints[itemAmount.item.prototype.className] = {
 				equal: parseFloat(itemAmount.amount + ''),
 			};
@@ -42,7 +49,7 @@ export class Solver
 			if (data.recipes.hasOwnProperty(k)) {
 				const recipe: IRecipeSchema = data.recipes[k];
 				if (recipe.alternate) {
-					continue; // TODO
+					continue; // TODO enable based on user's preferences
 				}
 
 				if (!recipe.inMachine) {
@@ -50,10 +57,16 @@ export class Solver
 				}
 				const def: {[key: string]: number} = {};
 				for (const ingredient of recipe.ingredients) {
-					def[ingredient.item] = -ingredient.amount;
+					if (!(ingredient.item in def)) {
+						def[ingredient.item] = 0;
+					}
+					def[ingredient.item] += -ingredient.amount;
 				}
 				for (const product of recipe.products) {
-					def[product.item] = product.amount;
+					if (!(product.item in def)) {
+						def[product.item] = 0;
+					}
+					def[product.item] += product.amount;
 				}
 				model.variables[recipe.className] = def;
 			}
