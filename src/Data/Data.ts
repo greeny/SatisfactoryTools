@@ -2,7 +2,7 @@ import rawData from '@data/data.json';
 import {IJsonSchema} from '@src/Schema/IJsonSchema';
 import {IItemSchema} from '@src/Schema/IItemSchema';
 import {IRecipeSchema} from '@src/Schema/IRecipeSchema';
-import {IManufacturerSchema} from '@src/Schema/IBuildingSchema';
+import {IBuildingSchema, IManufacturerSchema} from '@src/Schema/IBuildingSchema';
 import {ISchematicSchema} from '@src/Schema/ISchematicSchema';
 
 export class Data
@@ -103,6 +103,17 @@ export class Data
 		for (const key in items) {
 			if (items[key].className === className) {
 				return items[key];
+			}
+		}
+		return null;
+	}
+
+	public getBuildingByClassName(className: string): IBuildingSchema|null
+	{
+		const buildings = this.getRawData().buildings;
+		for (const key in buildings) {
+			if (buildings[key].className === className) {
+				return buildings[key];
 			}
 		}
 		return null;

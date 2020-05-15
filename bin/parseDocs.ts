@@ -29,18 +29,8 @@ const json: IJsonSchema = {
 
 let biomass: IItemSchema[] = [];
 let extraInfo: any[] = [];
-const sinkPoints: {[key: string]: number} = {};
 
 for (const definitions of docs) {
-	if (definitions['Resource Sink points']) {
-		let item: {[key: string]: number};
-		for (item of definitions['Resource Sink points']) {
-			for (const key in item) {
-				sinkPoints[key] = item[key];
-			}
-		}
-	}
-
 	switch (definitions.NativeClass) {
 		case 'Class\'/Script/FactoryGame.FGItemDescriptor\'':
 		case 'Class\'/Script/FactoryGame.FGEquipmentDescriptor\'':
@@ -173,13 +163,6 @@ for (const key in json.generators) {
 	}
 }
 
-// add
-for (const key in json.items) {
-	if (sinkPoints[json.items[key].name]) {
-		json.items[key].sinkPoints = sinkPoints[json.items[key].name];
-	}
-}
-
 // convert liquid requirements to m3
 for (const key in json.recipes) {
 	const recipe = json.recipes[key];
@@ -221,6 +204,7 @@ for (const minerKey in json.miners) {
 		}
 	}
 
+	allowedResources.sort();
 	json.miners[minerKey].allowedResources = allowedResources;
 }
 

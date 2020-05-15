@@ -38,12 +38,17 @@ export class Model
 	public getAutomatableItems(): Item[]
 	{
 		const items: Item[] = [];
+		itemLoop:
 		for (const k in this.items) {
 			if (this.items.hasOwnProperty(k)) {
 				for (const l in this.recipes) {
 					if (this.recipes.hasOwnProperty(l) && this.recipes[l].prototype.inMachine) {
-						items.push(this.items[k]);
-						break;
+						for (const product of this.recipes[l].products) {
+							if (product.item === this.items[k]) {
+								items.push(this.items[k]);
+								continue itemLoop;
+							}
+						}
 					}
 				}
 			}

@@ -2302,7 +2302,7 @@
 			"className": "Recipe_AluminumSheet_C",
 			"alternate": false,
 			"time": 8,
-			"manualTimeMultiplier": 1,
+			"manualTimeMultiplier": 2,
 			"ingredients": [
 				{
 					"item": "Desc_AluminumIngot_C",
@@ -2743,7 +2743,7 @@
 			"className": "Recipe_CircuitBoard_C",
 			"alternate": false,
 			"time": 8,
-			"manualTimeMultiplier": 1,
+			"manualTimeMultiplier": 1.5,
 			"ingredients": [
 				{
 					"item": "Desc_CopperSheet_C",
@@ -2773,12 +2773,12 @@
 			"name": "Color Cartridge",
 			"className": "Recipe_ColorCartridge_C",
 			"alternate": false,
-			"time": 40,
+			"time": 8,
 			"manualTimeMultiplier": 1,
 			"ingredients": [
 				{
 					"item": "Desc_FlowerPetals_C",
-					"amount": 25
+					"amount": 5
 				}
 			],
 			"forBuilding": false,
@@ -2788,7 +2788,7 @@
 			"products": [
 				{
 					"item": "Desc_ColorCartridge_C",
-					"amount": 50
+					"amount": 10
 				}
 			],
 			"producedIn": [
@@ -4197,7 +4197,7 @@
 			"className": "Recipe_HeatSink_C",
 			"alternate": false,
 			"time": 12,
-			"manualTimeMultiplier": 1,
+			"manualTimeMultiplier": 1.5,
 			"ingredients": [
 				{
 					"item": "Desc_AluminumPlate_C",
@@ -4383,7 +4383,7 @@
 			"className": "Recipe_IngotAluminum_C",
 			"alternate": false,
 			"time": 3,
-			"manualTimeMultiplier": 1,
+			"manualTimeMultiplier": 3,
 			"ingredients": [
 				{
 					"item": "Desc_AluminumScrap_C",
@@ -4495,7 +4495,7 @@
 			"className": "Recipe_IngotSteel_C",
 			"alternate": false,
 			"time": 4,
-			"manualTimeMultiplier": 6,
+			"manualTimeMultiplier": 3,
 			"ingredients": [
 				{
 					"item": "Desc_OreIron_C",
@@ -5122,7 +5122,7 @@
 			"className": "Recipe_MotorTurbo_C",
 			"alternate": false,
 			"time": 32,
-			"manualTimeMultiplier": 1,
+			"manualTimeMultiplier": 2,
 			"ingredients": [
 				{
 					"item": "Desc_AluminumPlateReinforced_C",
@@ -6099,7 +6099,7 @@
 			"name": "Power Shard (1)",
 			"className": "Recipe_PowerCrystalShard_1_C",
 			"alternate": false,
-			"time": 10,
+			"time": 8,
 			"manualTimeMultiplier": 1,
 			"ingredients": [
 				{
@@ -6126,8 +6126,8 @@
 			"name": "Power Shard (2)",
 			"className": "Recipe_PowerCrystalShard_2_C",
 			"alternate": false,
-			"time": 15,
-			"manualTimeMultiplier": 1.2,
+			"time": 12,
+			"manualTimeMultiplier": 1,
 			"ingredients": [
 				{
 					"item": "Desc_Crystal_mk2_C",
@@ -6153,8 +6153,8 @@
 			"name": "Power Shard (5)",
 			"className": "Recipe_PowerCrystalShard_3_C",
 			"alternate": false,
-			"time": 20,
-			"manualTimeMultiplier": 1.2,
+			"time": 24,
+			"manualTimeMultiplier": 1,
 			"ingredients": [
 				{
 					"item": "Desc_Crystal_mk3_C",
@@ -6909,6 +6909,31 @@
 			],
 			"producedIn": []
 		},
+		"Recipe_RampInverted_8x1_Corner_02_C": {
+			"slug": "down-corner-8m-x-1m-inverted",
+			"name": "Down Corner 8m x 1m Inverted",
+			"className": "Recipe_RampInverted_8x1_Corner_02_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Cement_C",
+					"amount": 5
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_RampInverted_8x1_Corner_02_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
 		"Recipe_RampInverted_8x2_01_C": {
 			"slug": "inverted-ramp-8m-x-2m",
 			"name": "Inverted Ramp 8m x 2m",
@@ -6959,6 +6984,31 @@
 			],
 			"producedIn": []
 		},
+		"Recipe_RampInverted_8x2_Corner_02_C": {
+			"slug": "down-corner-8m-x-2m-inverted",
+			"name": "Down Corner 8m x 2m Inverted",
+			"className": "Recipe_RampInverted_8x2_Corner_02_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Cement_C",
+					"amount": 5
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_RampInverted_8x2_Corner_02_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
 		"Recipe_RampInverted_8x4_Corner_01_C": {
 			"slug": "up-corner-8m-x-4m-inverted",
 			"name": "Up Corner   8m x 4m Inverted",
@@ -6979,6 +7029,31 @@
 			"products": [
 				{
 					"item": "Desc_RampInverted_8x4_Corner_01_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
+		"Recipe_RampInverted_8x4_Corner_02_C": {
+			"slug": "down-corner-8m-x-4m-inverted",
+			"name": "Down Corner 8m x 4m Inverted",
+			"className": "Recipe_RampInverted_8x4_Corner_02_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Cement_C",
+					"amount": 5
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_RampInverted_8x4_Corner_02_C",
 					"amount": 1
 				}
 			],
@@ -14316,6 +14391,34 @@
 			"alternate": false,
 			"mam": false
 		},
+		"ResourceSink_InvertedCornerRamps_C": {
+			"className": "ResourceSink_InvertedCornerRamps_C",
+			"name": "Inverted Corner Ramp Pack",
+			"tier": 1,
+			"cost": [
+				{
+					"item": "Desc_ResourceSinkCoupon_C",
+					"amount": 5
+				}
+			],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_RampInverted_8x1_Corner_01_C",
+					"Recipe_RampInverted_8x2_Corner_01_C",
+					"Recipe_RampInverted_8x4_Corner_01_C",
+					"Recipe_RampInverted_8x1_Corner_02_C",
+					"Recipe_RampInverted_8x2_Corner_02_C",
+					"Recipe_RampInverted_8x4_Corner_02_C"
+				],
+				"scannerResources": []
+			},
+			"requiredSchematics": [],
+			"type": "EST_ResourceSink",
+			"time": 0,
+			"alternate": false,
+			"mam": false
+		},
 		"ResourceSink_InvertedRampPack_C": {
 			"className": "ResourceSink_InvertedRampPack_C",
 			"name": "Inverted Ramp Pack",
@@ -14323,7 +14426,7 @@
 			"cost": [
 				{
 					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 6
+					"amount": 2
 				}
 			],
 			"unlock": {
@@ -14331,10 +14434,7 @@
 				"recipes": [
 					"Recipe_RampInverted_8x1_C",
 					"Recipe_RampInverted_8x2_01_C",
-					"Recipe_Ramp_8x4_Inverted_01_C",
-					"Recipe_RampInverted_8x1_Corner_01_C",
-					"Recipe_RampInverted_8x2_Corner_01_C",
-					"Recipe_RampInverted_8x4_Corner_01_C"
+					"Recipe_Ramp_8x4_Inverted_01_C"
 				],
 				"scannerResources": []
 			},
@@ -17731,16 +17831,16 @@
 			"className": "Build_GeneratorBiomass_C",
 			"fuel": [
 				"Desc_Biofuel_C",
-				"Desc_HogParts_C",
-				"Desc_SpitterParts_C",
 				"Desc_GenericBiomass_C",
-				"Desc_FlowerPetals_C",
-				"Desc_Mycelia_C",
 				"Desc_Leaves_C",
 				"Desc_Wood_C",
 				"Desc_Fabric_C",
+				"Desc_Mycelia_C",
 				"Desc_LiquidBiofuel_C",
-				"Desc_PackagedBiofuel_C"
+				"Desc_PackagedBiofuel_C",
+				"Desc_HogParts_C",
+				"Desc_SpitterParts_C",
+				"Desc_FlowerPetals_C"
 			],
 			"powerProduction": 30,
 			"powerProductionExponent": 1.3,
@@ -17901,15 +18001,15 @@
 		"Build_MinerMk1_C": {
 			"className": "Build_MinerMk1_C",
 			"allowedResources": [
-				"Desc_OreGold_C",
 				"Desc_Coal_C",
-				"Desc_OreCopper_C",
-				"Desc_OreIron_C",
-				"Desc_RawQuartz_C",
-				"Desc_Sulfur_C",
-				"Desc_Stone_C",
 				"Desc_OreBauxite_C",
-				"Desc_OreUranium_C"
+				"Desc_OreCopper_C",
+				"Desc_OreGold_C",
+				"Desc_OreIron_C",
+				"Desc_OreUranium_C",
+				"Desc_RawQuartz_C",
+				"Desc_Stone_C",
+				"Desc_Sulfur_C"
 			],
 			"itemsPerCycle": 1,
 			"extractCycleTime": 1,
@@ -17919,15 +18019,15 @@
 		"Build_MinerMk2_C": {
 			"className": "Build_MinerMk2_C",
 			"allowedResources": [
-				"Desc_OreGold_C",
 				"Desc_Coal_C",
-				"Desc_OreCopper_C",
-				"Desc_OreIron_C",
-				"Desc_RawQuartz_C",
-				"Desc_Sulfur_C",
-				"Desc_Stone_C",
 				"Desc_OreBauxite_C",
-				"Desc_OreUranium_C"
+				"Desc_OreCopper_C",
+				"Desc_OreGold_C",
+				"Desc_OreIron_C",
+				"Desc_OreUranium_C",
+				"Desc_RawQuartz_C",
+				"Desc_Stone_C",
+				"Desc_Sulfur_C"
 			],
 			"itemsPerCycle": 1,
 			"extractCycleTime": 0.5,
@@ -17937,15 +18037,15 @@
 		"Build_MinerMk3_C": {
 			"className": "Build_MinerMk3_C",
 			"allowedResources": [
-				"Desc_OreGold_C",
 				"Desc_Coal_C",
-				"Desc_OreCopper_C",
-				"Desc_OreIron_C",
-				"Desc_RawQuartz_C",
-				"Desc_Sulfur_C",
-				"Desc_Stone_C",
 				"Desc_OreBauxite_C",
-				"Desc_OreUranium_C"
+				"Desc_OreCopper_C",
+				"Desc_OreGold_C",
+				"Desc_OreIron_C",
+				"Desc_OreUranium_C",
+				"Desc_RawQuartz_C",
+				"Desc_Stone_C",
+				"Desc_Sulfur_C"
 			],
 			"itemsPerCycle": 1,
 			"extractCycleTime": 0.25,
@@ -18434,7 +18534,7 @@
 		"Desc_IndustrialTank_C": {
 			"slug": "industrial-fluid-buffer",
 			"name": "Industrial Fluid Buffer",
-			"description": "Can contain up to 1200m³ of fluid.\nHas an in and output for pipes.",
+			"description": "Can contain up to 2400m³ of fluid.\nHas an in and output for pipes.",
 			"categories": [
 				"SC_Storage_C"
 			],
@@ -18443,7 +18543,7 @@
 			"metadata": {
 				"powerConsumption": 0,
 				"powerConsumptionExponent": 1.6,
-				"storageCapacity": 1200
+				"storageCapacity": 2400
 			}
 		},
 		"Desc_JumpPadTilted_C": {
@@ -18669,7 +18769,7 @@
 		"Desc_PipeStorageTank_C": {
 			"slug": "fluid-buffer",
 			"name": "Fluid Buffer",
-			"description": "Can contain up to 300m³ of fluid.\nHas an in and output for pipes.",
+			"description": "Can contain up to 400m³ of fluid.\nHas an in and output for pipes.",
 			"categories": [
 				"SC_Storage_C"
 			],
@@ -18678,7 +18778,7 @@
 			"metadata": {
 				"powerConsumption": 0,
 				"powerConsumptionExponent": 1.6,
-				"storageCapacity": 300
+				"storageCapacity": 400
 			}
 		},
 		"Desc_PipeSupportStackable_C": {
@@ -18707,7 +18807,7 @@
 		"Desc_PipelinePump_C": {
 			"slug": "pipeline-pump",
 			"name": "Pipeline Pump",
-			"description": "Can be attached to a Pipeline to apply Head Lift, allowing fluids to be transported upwards.\nMaximum Head Lift: 20 meters\n(Allows fluids to be transported 20 meters upwards.)\nOutputs fluids at 300m³ per minute.\n\nNote: Head Lift does not stack, so space between Pumps is recommended.",
+			"description": "Can be attached to a Pipeline to apply Head Lift.\nMaximum Head Lift: 20 meters\n(Allows fluids to be transported 20 meters upwards.)\nOutputs fluids at 300m³ per minute.\n\nNOTE: Has an in- and output direction.\nNOTE: Head Lift does not stack, so space between Pumps is recommended.",
 			"categories": [
 				"SC_Pipes_C"
 			],
@@ -19002,6 +19102,17 @@
 			"className": "Desc_RampInverted_8x1_Corner_01_C",
 			"metadata": {}
 		},
+		"Desc_RampInverted_8x1_Corner_02_C": {
+			"slug": "down-corner-8m-x-1m-inverted",
+			"name": "Down Corner 8m x 1m Inverted",
+			"description": "Inverted Ramps mostly provide aesthetic options.\nStill utilizes the standard foundation building grid for improved building placement.",
+			"categories": [
+				"SC_Inverted_C"
+			],
+			"buildMenuPriority": 7,
+			"className": "Desc_RampInverted_8x1_Corner_02_C",
+			"metadata": {}
+		},
 		"Desc_RampInverted_8x2_01_C": {
 			"slug": "inverted-ramp-8m-x-2m",
 			"name": "Inverted Ramp 8m x 2m",
@@ -19024,6 +19135,17 @@
 			"className": "Desc_RampInverted_8x2_Corner_01_C",
 			"metadata": {}
 		},
+		"Desc_RampInverted_8x2_Corner_02_C": {
+			"slug": "down-corner-8m-x-2m-inverted",
+			"name": "Down Corner 8m x 2m Inverted",
+			"description": "Inverted Ramps mostly provide aesthetic options.\nStill utilizes the standard foundation building grid for improved building placement.",
+			"categories": [
+				"SC_Inverted_C"
+			],
+			"buildMenuPriority": 8,
+			"className": "Desc_RampInverted_8x2_Corner_02_C",
+			"metadata": {}
+		},
 		"Desc_RampInverted_8x4_Corner_01_C": {
 			"slug": "up-corner-8m-x-4m-inverted",
 			"name": "Up Corner   8m x 4m Inverted",
@@ -19033,6 +19155,17 @@
 			],
 			"buildMenuPriority": 6,
 			"className": "Desc_RampInverted_8x4_Corner_01_C",
+			"metadata": {}
+		},
+		"Desc_RampInverted_8x4_Corner_02_C": {
+			"slug": "down-corner-8m-x-4m-inverted",
+			"name": "Down Corner 8m x 4m Inverted",
+			"description": "Inverted Ramps mostly provide aesthetic options.\nStill utilizes the standard foundation building grid for improved building placement.",
+			"categories": [
+				"SC_Inverted_C"
+			],
+			"buildMenuPriority": 9,
+			"className": "Desc_RampInverted_8x4_Corner_02_C",
 			"metadata": {}
 		},
 		"Desc_Ramp_8x1_01_C": {
@@ -19308,7 +19441,7 @@
 		"Desc_TrainDockingStationLiquid_C": {
 			"slug": "fluid-freight-platform",
 			"name": "Fluid Freight Platform",
-			"description": "As Freight Cars stop this they will either unload or load their goods, depending on what you've set it to.\nThe Freight Platform snaps to Railway, each other and Train Stations.",
+			"description": "Freight Cars that stop at the Freight Platform will be loaded or unloaded by the Freight Platform.\nLoading and unloading options can be set inside the building.\nSnaps to other Platforms, Stations, and Rails.\nNeeds to be connected to a powered Railway to function.",
 			"categories": [
 				"SC_Trains_C"
 			],
@@ -19322,7 +19455,7 @@
 		"Desc_TrainDockingStation_C": {
 			"slug": "freight-platform",
 			"name": "Freight Platform",
-			"description": "As Freight Cars stop this they will either unload or load their goods, depending on what you've set it to.\nThe Freight Platform snaps to Railway, each other and Train Stations.",
+			"description": "Freight Cars that stop at the Freight Platform will be loaded or unloaded by the Freight Platform.\nLoading and unloading options can be set inside the building.\nSnaps to other Platforms, Stations, and Rails.\nNeeds to be connected to a powered Railway to function.",
 			"categories": [
 				"SC_Trains_C"
 			],
