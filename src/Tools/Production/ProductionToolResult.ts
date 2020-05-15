@@ -1,10 +1,11 @@
 import {RecipeResult} from '@src/Tools/Production/RecipeResult';
-import vis from 'vis-network';
+import vis, {Data} from 'vis-network';
 import model from '@src/Data/Model';
 
 export class ProductionToolResult
 {
 
+	public data: Data;
 	public readonly nodes = new vis.DataSet<{
 		id: number,
 		label: string,
@@ -97,6 +98,11 @@ export class ProductionToolResult
 				id++;
 			}
 		}
+
+		this.data = {
+			nodes: this.nodes,
+			edges: this.edges,
+		};
 	}
 
 	public updateNode(id: number): void

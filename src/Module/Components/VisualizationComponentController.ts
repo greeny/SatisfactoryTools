@@ -1,29 +1,43 @@
-import {Data, Network} from 'vis-network';
-import {IScope} from 'angular';
+import {Network} from 'vis-network';
+import {IController, IScope} from 'angular';
 import {ProductionToolResult} from '@src/Tools/Production/ProductionToolResult';
 
-export class VisualizationComponentController
+export class VisualizationComponentController implements IController
 {
-
-	private network: Network;
-
-	public $onInit(): void
-	{
-		console.log('a');
-	}
 
 	public result: ProductionToolResult;
 
 	public static $inject = ['$element', '$scope'];
 
-	public constructor($element: any, $scope: IScope)
+	public constructor(private $element: any, private $scope: IScope) {}
+
+	private unregisterWatcherCallback: () => void;
+
+	public $onInit(): void
 	{
-		setTimeout(() => {
-			console.log(this.result);
-		}, 1000);
-		this.network = new Network($element[0], {
-			nodes: this.result.nodes,
-			edges: this.result.edges,
+		this.unregisterWatcherCallback = this.$scope.$watch(() => {
+			return this.result;
+		}, (newValue) => {
+			this.updateData(newValue);
+		});
+	}
+
+	public $onDestroy(): void
+	{
+		this.unregisterWatcherCallback();
+	}
+
+	public updateData(result: ProductionToolResult|undefined): void
+	{
+		if (!result) {
+			return;
+		}
+		const network = new Network(this.$element[0], result ? {
+			nodes: result.nodes,
+			edges: result.edges,
+		} : {
+			nodes: [],
+			edges: [],
 		}, {
 			edges: {
 				labelHighlightBold: false,
@@ -76,16 +90,11 @@ export class VisualizationComponentController
 				},
 			},
 		});
-		this.network.setOptions({
+		network.setOptions({
 			layout: {
 				hierarchical: false,
-			},
+			}
 		});
-	}
-
-	public updateData(result: Data)
-	{
-		this.network.setData(result);
 	}
 
 }

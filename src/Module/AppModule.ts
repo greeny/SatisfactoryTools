@@ -7,8 +7,6 @@ import {ItemIconDirective} from '@src/Module/Directives/ItemIconDirective';
 import {RecentlyVisitedItemsService} from '@src/Module/Services/RecentlyVisitedItemsService';
 import {ProductionController} from '@src/Module/Controllers/ProductionController';
 import {VisualizationComponent} from '@src/Module/Components/VisualizationComponent';
-import {VisualizationComponentController} from '@src/Module/Components/VisualizationComponentController';
-import {VisualizationDirective} from '@src/Module/Directives/VisualizationDirective';
 
 export class AppModule
 {
@@ -98,10 +96,6 @@ export class AppModule
 			return new ItemIconDirective;
 		});
 
-		this.app.directive('visualization', () => {
-			return new VisualizationDirective();
-		});
-
 		this.app.directive('tooltip', () => {
 			return {
 				restrict: 'A',
@@ -118,8 +112,7 @@ export class AppModule
 			};
 		});
 
-		this.app.controller('VisualizationComponentController', VisualizationComponentController);
-		this.app.component('visualizationxxx', new VisualizationComponent);
+		this.app.component('visualization', new VisualizationComponent);
 
 		this.app.service('RecentlyVisitedItemsService', RecentlyVisitedItemsService);
 
