@@ -28,7 +28,7 @@
 			Add product
 		</span>
 
-		<div ng-repeat="product in ctrl.tab.tool.productionRequest.production">
+		<div ng-repeat="product in tab.tool.productionRequest.production">
 			<select ng-model="product.item" ng-options="item as item.prototype.name for item in ctrl.craftableItems|orderBy:'prototype.name'"></select>
 			<!--<input type="checkbox" ng-model="product.max"> Max-->
 			<input ng-hide="product.max" type="number" ng-model="product.amount">
@@ -38,7 +38,6 @@
 		</span>
 		</div>
 
-		<visualization result="ctrl.tab.tool.result" class="visualization"></visualization>
-		<!--<div id="visualization" style="margin: 20px 0; width: 100%; height: 800px; border: 1px solid #4e5d6c;"></div>-->
+		<visualization result="tab.tool.result" class="visualization"></visualization>
 	</div>
 </div>

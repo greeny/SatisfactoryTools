@@ -1,17 +1,17 @@
 import {RecipeResult} from '@src/Tools/Production/RecipeResult';
-import vis, {Data} from 'vis-network';
+import {Data, DataSet} from 'vis-network';
 import model from '@src/Data/Model';
 
 export class ProductionToolResult
 {
 
 	public data: Data;
-	public readonly nodes = new vis.DataSet<{
+	public readonly nodes = new DataSet<{
 		id: number,
 		label: string,
 		title?: string,
 	}>();
-	public readonly edges = new vis.DataSet<{
+	public readonly edges = new DataSet<{
 		from: number,
 		to: number,
 		label?: string,
