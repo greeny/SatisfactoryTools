@@ -18,7 +18,7 @@
 		<div class="card mb-3">
 			<div class="card-body">
 				<span class="float-left mr-3">
-					<img ng-src="/assets/images/items/{{ctrl.item.slug}}_256.png" width="128" height="128" class="float-left" title="{{ctrl.item.name}}" tooltip>
+					<item-icon item="ctrl.item" size="128"></item-icon>
 				</span>
 				<p style="white-space: pre-line;">{{ctrl.item.description}}</p>
 			</div>
@@ -93,7 +93,7 @@
 										<span class="item-amount">
 											{{ingredient.amount}}x
 											<a ui-sref="item({item: ctrl.getItem(ingredient.item).slug})">
-												<img ng-src="/assets/images/items/{{ctrl.getItem(ingredient.item).slug}}_64.png" width="32" height="32" title="{{ctrl.getItem(ingredient.item).name}}" tooltip>
+												<item-icon item="ingredient.item"></item-icon>
 											</a>
 											<br>
 										</span>
@@ -105,7 +105,7 @@
 										<span class="item-amount">
 											{{product.amount}}x
 											<a ui-sref="item({item: ctrl.getItem(product.item).slug})">
-												<img ng-src="/assets/images/items/{{ctrl.getItem(product.item).slug}}_64.png" width="32" height="32" title="{{ctrl.getItem(product.item).name}}" tooltip>
+												<item-icon item="product.item"></item-icon>
 											</a>
 											<br>
 										</span>
@@ -156,7 +156,7 @@
 										<span class="item-amount">
 											{{ingredient.amount}}x
 											<a ui-sref="item({item: ctrl.getItem(ingredient.item).slug})">
-												<img ng-src="/assets/images/items/{{ctrl.getItem(ingredient.item).slug}}_64.png" width="32" height="32" title="{{ctrl.getItem(ingredient.item).name}}" tooltip>
+												<item-icon item="ingredient.item"></item-icon>
 											</a>
 											<br>
 										</span>
@@ -168,7 +168,7 @@
 										<span class="item-amount">
 											{{product.amount}}x
 											<a ui-sref="item({item: ctrl.getItem(product.item).slug})">
-												<img ng-src="/assets/images/items/{{ctrl.getItem(product.item).slug}}_64.png" width="32" height="32" title="{{ctrl.getItem(product.item).name}}" tooltip>
+												<item-icon item="product.item"></item-icon>
 											</a>
 											<br>
 										</span>
@@ -211,6 +211,7 @@
 							<tr ng-repeat="recipe in ctrl.usagesForBuilding">
 								<td>
 									<div ng-repeat="product in recipe.products" class="d-inline-block p-2">
+										<item-icon item="product.item"></item-icon>
 										{{ctrl.getBuilding(product.item).name}}
 									</div>
 								</td>
@@ -219,7 +220,7 @@
 										<span class="item-amount">
 											{{ingredient.amount}}x
 											<a ui-sref="item({item: ctrl.getItem(ingredient.item).slug})">
-												<img ng-src="/assets/images/items/{{ctrl.getItem(ingredient.item).slug}}_64.png" width="32" height="32" title="{{ctrl.getItem(ingredient.item).name}}" tooltip>
+												<item-icon item="ingredient.item"></item-icon>
 											</a>
 										</span>
 									</div>
@@ -256,7 +257,7 @@
 										<span class="item-amount">
 											{{ingredient.amount}}x
 											<a ui-sref="item({item: ctrl.getItem(ingredient.item).slug})">
-												<img ng-src="/assets/images/items/{{ctrl.getItem(ingredient.item).slug}}_64.png" width="32" height="32" title="{{ctrl.getItem(ingredient.item).name}}" tooltip>
+												<item-icon item="ingredient.item"></item-icon>
 											</a>
 										</span>
 									</div>
