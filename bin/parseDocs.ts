@@ -13,6 +13,7 @@ import parseSchematics from '@bin/parseDocs/schematic';
 import {Objects} from '@src/Utils/Objects';
 import {DiffGenerator} from '@src/Utils/DiffGenerator/DiffGenerator';
 import {DiffFormatter} from '@src/Utils/DiffGenerator/DiffFormatter';
+import parseImageMapping from '@bin/parseDocs/imageMapping';
 
 const docs = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'Docs.json')).toString());
 const oldData: IJsonSchema = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'data.json')).toString()) as IJsonSchema;
@@ -29,6 +30,7 @@ const json: IJsonSchema = {
 
 let biomass: IItemSchema[] = [];
 let extraInfo: any[] = [];
+let imageMapping: {[key: string]: string} = {};
 
 for (const definitions of docs) {
 	switch (definitions.NativeClass) {
@@ -38,6 +40,9 @@ for (const definitions of docs) {
 		case 'Class\'/Script/FactoryGame.FGItemDescriptorNuclearFuel\'':
 			for (const item of parseItemDescriptors(definitions.Classes)) {
 				json.items[item.className] = item;
+			}
+			for (const item of parseImageMapping(definitions.Classes)) {
+				imageMapping[item.className] = item.image;
 			}
 			break;
 		case 'Class\'/Script/FactoryGame.FGRecipe\'':
@@ -49,6 +54,9 @@ for (const definitions of docs) {
 			for (const item of parseItemDescriptors(definitions.Classes)) {
 				json.items[item.className] = item;
 			}
+			for (const item of parseImageMapping(definitions.Classes)) {
+				imageMapping[item.className] = item.image;
+			}
 			for (const resource of parseResourceDescriptors(definitions.Classes)) {
 				json.resources[resource.item] = resource;
 			}
@@ -57,6 +65,9 @@ for (const definitions of docs) {
 			biomass = parseItemDescriptors(definitions.Classes);
 			for (const item of biomass) {
 				json.items[item.className] = item;
+			}
+			for (const item of parseImageMapping(definitions.Classes)) {
+				imageMapping[item.className] = item.image;
 			}
 			break;
 		/*case 'Class\'/Script/FactoryGame.FGVehicleDescriptor\'': TODO add vehicles, images and name+description
@@ -100,13 +111,19 @@ for (const definitions of docs) {
 			for (const building of parseBuildings(definitions.Classes, true)) {
 				json.buildings[building.className] = building;
 			}
+			for (const item of parseImageMapping(definitions.Classes)) {
+				imageMapping[item.className] = item.image;
+			}
 			break;
 		case 'Class\'/Script/FactoryGame.FGBuildableResourceExtractor\'':
-			for (const miner of parseResourceExtractors(definitions.Classes)) {
-				json.miners[miner.className] = miner;
-			}
 			for (const building of parseBuildings(definitions.Classes, true)) {
 				json.buildings[building.className] = building;
+			}
+			for (const item of parseImageMapping(definitions.Classes)) {
+				imageMapping[item.className] = item.image;
+			}
+			for (const miner of parseResourceExtractors(definitions.Classes)) {
+				json.miners[miner.className] = miner;
 			}
 			break;
 		case 'Class\'/Script/FactoryGame.FGBuildableGeneratorFuel\'':
@@ -115,12 +132,18 @@ for (const definitions of docs) {
 			for (const building of parseBuildings(definitions.Classes, true)) {
 				json.buildings[building.className] = building;
 			}
+			for (const item of parseImageMapping(definitions.Classes)) {
+				imageMapping[item.className] = item.image;
+			}
 			for (const generator of parseGenerators(definitions.Classes)) {
 				json.generators[generator.className] = generator;
 			}
 			break;
 		case 'Class\'/Script/FactoryGame.FGBuildingDescriptor\'':
 			extraInfo = parseBuildingDescriptors(definitions.Classes);
+			for (const item of parseImageMapping(definitions.Classes)) {
+				imageMapping[item.className] = item.image;
+			}
 			break;
 		case 'Class\'/Script/FactoryGame.FGSchematic\'':
 			for (const schematic of parseSchematics(definitions.Classes)) {
@@ -218,3 +241,5 @@ fs.writeFileSync(path.join(__dirname, '..', 'data', 'data.json'), JSON.stringify
 
 const diffGenerator = new DiffGenerator();
 fs.writeFileSync(path.join(__dirname, '..', 'data', 'diff.txt'), DiffFormatter.diffToMarkdown(diffGenerator.generateDiff(oldData, json)));
+
+fs.writeFileSync(path.join(__dirname, '..', 'data', 'imageMapping.json'), JSON.stringify(imageMapping, null, '\t') + '\n');

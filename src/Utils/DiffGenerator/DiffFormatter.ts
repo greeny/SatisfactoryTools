@@ -5,6 +5,7 @@ export class DiffFormatter
 
 	public static diffToMarkdown(diffs: IDiffSchema[], limit: number = 2000): string
 	{
+		//console.log(diffs);
 		const parts: string[] = [];
 		let part = '';
 		let text = '';
@@ -13,6 +14,7 @@ export class DiffFormatter
 				text = '- ' + (diff.name === null ? '' : diff.name + ': ') + diff.changes[0];
 			} else {
 				text = '**' + diff.name + '**:\n\t' + diff.changes.join('\n\t');
+				//console.log(text);
 			}
 
 			if ((part + text + '\n').length >= limit - 10) {
@@ -21,6 +23,7 @@ export class DiffFormatter
 			}
 			part += text + '\n';
 		}
+		parts.push(part);
 		return parts.join('\n=====\n');
 	}
 

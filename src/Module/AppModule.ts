@@ -92,7 +92,7 @@ export class AppModule
 			return new AppDirective;
 		});
 
-		this.app.directive('item-icon', () => {
+		this.app.directive('itemIcon', () => {
 			return new ItemIconDirective;
 		});
 

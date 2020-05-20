@@ -81,7 +81,7 @@ export class DiffGenerator
 		}
 
 		if (originalItem.sinkPoints !== newItem.sinkPoints) {
-			changes.push('Changed sink point value from ' + originalItem.sinkPoints + ' to ' + newItem.sinkPoints);
+			//changes.push('Changed sink point value from ' + originalItem.sinkPoints + ' to ' + newItem.sinkPoints);
 		}
 
 		if (originalItem.energyValue !== newItem.energyValue) {
@@ -129,16 +129,26 @@ export class DiffGenerator
 		}
 
 		for (const k in (originalRecipe.ingredients.length > newRecipe.ingredients.length ? originalRecipe.ingredients : newRecipe.ingredients)) {
-			this.checkRecipeIngredient(originalRecipe.ingredients[k], newRecipe.ingredients[k], 'cost');
+			const change = this.checkRecipeIngredient(originalRecipe.ingredients[k], newRecipe.ingredients[k], 'cost');
+			if (change !== null) {
+				console.log(change);
+				changes.push(change);
+			}
 		}
 
 		if (!newRecipe.forBuilding) {
 			for (const k in (originalRecipe.products.length > newRecipe.products.length ? originalRecipe.products : newRecipe.products)) {
-				this.checkRecipeIngredient(originalRecipe.products[k], newRecipe.products[k], 'product');
+				const change = this.checkRecipeIngredient(originalRecipe.products[k], newRecipe.products[k], 'product');
+				if (change !== null) {
+					changes.push(change);
+				}
 			}
 		}
 
 		if (changes.length) {
+			if (changes.length > 1) {
+				console.log(changes);
+			}
 			this.diff.push({
 				name: originalRecipe.name,
 				changes: changes,
