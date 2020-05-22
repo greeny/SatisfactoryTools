@@ -1,3 +1,3 @@
 <img ng-if="itemEntity" ng-src="/assets/images/items/{{itemEntity.slug}}_{{imageSize}}.png"
-     width="{{size}}" height="{{size}}" title="{{itemEntity.name}}" alt="{{itemEntity.name}}" tooltip>
-<span ng-if="!itemEntity" class="fas fa-question" title="Item not found" tooltip></span>
+     width="{{size}}" height="{{size}}" uib-tooltip="{{itemEntity.name}}" alt="{{itemEntity.name}}">
+<span ng-if="!itemEntity" class="fas fa-question" uib-tooltip="Item not found"></span>

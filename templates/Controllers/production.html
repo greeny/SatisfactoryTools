@@ -11,11 +11,11 @@
 			<span ng-if="!tab.item">
 				<span class="fas fa-question"></span>
 			</span>
-			<img ng-if="tab.item" ng-src="/assets/images/items/{{tab.item.slug}}_64.png" width="32" height="32" title="{{tab.item.name}}" tooltip>
+			<item-icon ng-if="tab.item" item="tab.item" size="32" ></item-icon>
 		</a>
 	</li>
 	<li class="nav-item bg-success text-light">
-		<a class="nav-link" href="javascript: void(0);" ng-click="ctrl.addNewTab();" title="Add new production line" tooltip>
+		<a class="nav-link" href="javascript: void(0);" ng-click="ctrl.addNewTab();" uib-tooltip="Add new production line">
 			<span class="fas fa-plus"></span>
 		</a>
 	</li>

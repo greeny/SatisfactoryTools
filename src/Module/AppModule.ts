@@ -63,7 +63,6 @@ export class AppModule
 			}
 
 			$rootScope.disableApril = () => {
-				$('body').removeClass('april-mode');
 				$rootScope.aprilMode = false;
 			};
 
@@ -94,22 +93,6 @@ export class AppModule
 
 		this.app.directive('itemIcon', () => {
 			return new ItemIconDirective;
-		});
-
-		this.app.directive('tooltip', () => {
-			return {
-				restrict: 'A',
-				link: (scope: any, element: any, attrs: any) => {
-					element = $(element);
-					element.data('boundary', 'window');
-					element.on('mouseenter', () => {
-						element.tooltip('_fixTitle')
-							.tooltip('show');
-					}).on('mouseleave', () => {
-						element.tooltip('hide');
-					});
-				},
-			};
 		});
 
 		this.app.component('visualization', new VisualizationComponent);
