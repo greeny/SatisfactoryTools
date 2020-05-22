@@ -33,7 +33,7 @@
 		}
 	</style>
 	<link rel="stylesheet" href="/assets/css/fontawesome.min.css">
-	<base href="/">
+	<base href="/" ng-class="{'april-mode': $root.aprilMode}">
 </head>
 <body>
 

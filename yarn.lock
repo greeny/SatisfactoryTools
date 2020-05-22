@@ -274,6 +274,11 @@ amdefine@>=0.0.4:
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
   integrity sha1-SlKCrBZHKek2Gbz9OtFR+BfOkfU=
 
+angular-animate@^1.7.9:
+  version "1.7.9"
+  resolved "https://registry.yarnpkg.com/angular-animate/-/angular-animate-1.7.9.tgz#a397f82434c1e7ed5b7a298fa70fc3de989a6785"
+  integrity sha512-fV+AISy/HTzurQH2ngsJg+lLIvfu0ahc1h4AYKauaXVw97rZc2k4iUA1bMstiEyClsdayQX568kjQc1NK+oYhw==
+
 angular-sanitize@^1.7.9:
   version "1.7.9"
   resolved "https://registry.yarnpkg.com/angular-sanitize/-/angular-sanitize-1.7.9.tgz#6b4d5e826abdabd352b13a7c65c8c74daf6a7b15"
@@ -3865,6 +3870,11 @@ uglify-to-browserify@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/uglify-to-browserify/-/uglify-to-browserify-1.0.2.tgz#6e0924d6bda6b5afe349e39a6d632850a0f882b7"
   integrity sha1-bgkk1r2mta/jSeOabWMoUKD4grc=
+
+ui-bootstrap4@^3.0.6:
+  version "3.0.6"
+  resolved "https://registry.yarnpkg.com/ui-bootstrap4/-/ui-bootstrap4-3.0.6.tgz#bec796879455569872a1575786ca643ab00172ea"
+  integrity sha512-Kh38WAu/S8EiyKRMaATkFjsbQplJHvP+g2lxitE5SbjQTDieua8T7d+mQNxbxTjfmJqGtVzsHQCHRmBVdKPeOg==
 
 union-value@^1.0.0:
   version "1.0.1"

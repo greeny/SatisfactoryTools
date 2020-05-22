@@ -5,6 +5,8 @@ import {IRecipeSchema} from '@src/Schema/IRecipeSchema';
 import {IBuildingSchema, IManufacturerSchema} from '@src/Schema/IBuildingSchema';
 import {ISchematicSchema} from '@src/Schema/ISchematicSchema';
 import {RecentlyVisitedItemsService} from '@src/Module/Services/RecentlyVisitedItemsService';
+import {IScope} from 'angular';
+import {ItemFiltersService} from '@src/Module/Services/ItemFiltersService';
 
 export class ItemController
 {
@@ -15,21 +17,29 @@ export class ItemController
 	public usagesForBuilding: IRecipeSchema[];
 	public usagesForSchematics: ISchematicSchema[];
 
-	public static $inject = ['$state', '$transition$', 'RecentlyVisitedItemsService'];
+	public static $inject = ['$state', '$transition$', 'RecentlyVisitedItemsService', 'ItemFiltersService', '$scope'];
 
-	public constructor($state: any, $transition$: ITransitionObject<{item: string}>, recentlyVisitedItemsService: RecentlyVisitedItemsService)
+	public constructor($state: any, $transition$: ITransitionObject<{ item: string }>, recentlyVisitedItemsService: RecentlyVisitedItemsService, private itemFilterService: ItemFiltersService, private $scope: IScope)
 	{
 		const item = data.getItemBySlug($transition$.params().item);
 		if (item === null) {
 			$state.go('home');
 			return;
 		}
+		this.itemFilterService.filter.query = item.name;
 		recentlyVisitedItemsService.addVisited(item.className);
 		this.item = item;
 		this.recipes = Object.values(data.getRecipesForItem(item));
 		this.usagesAsIngredient = Object.values(data.getUsagesAsIngredientForItem(item));
 		this.usagesForBuilding = Object.values(data.getUsagesForBuildingForItem(item));
 		this.usagesForSchematics = Object.values(data.getUsagesForSchematicsForItem(item));
+		this.$scope.$watch(() => {
+			return this.itemFilterService.filter.query;
+		}, (newValue) => {
+			if (newValue !== item.name) {
+				$state.go('home');
+			}
+		});
 	}
 
 	public getItem(className: string): IItemSchema|null
@@ -52,4 +62,8 @@ export class ItemController
 		return data.getManufacturerByClassName(recipe.producedIn[0]);
 	}
 
+	public resetFilter(): void
+	{
+		this.itemFilterService.resetFilters();
+	}
 }

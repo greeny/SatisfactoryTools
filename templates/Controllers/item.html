@@ -4,12 +4,18 @@
 	<li class="breadcrumb-item active">{{ctrl.item.name}}</li>
 </ol>
 
-<div class="d-flex flex-column flex-sm-row">
-	<div class="p-2 flex-grow-1">
+<div class="row">
+	<div class="col-sm-6">
 		<h1>{{ctrl.item.name}}</h1>
 	</div>
-	<div class="p-2">
-		<a ui-sref="home" class="btn btn-secondary">Back to item list</a>
+
+	<div class="col-sm-6">
+		<item-filter>
+			<a ui-sref="home" class="btn btn-outline-warning" ng-click="ctrl.resetFilter()">
+				<i class="fas fa-chevron-left"></i>
+				Back to item list
+			</a>
+		</item-filter>
 	</div>
 </div>
 

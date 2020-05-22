@@ -3,10 +3,9 @@ import {VisualizationComponentController} from '@src/Module/Components/Visualiza
 
 export class VisualizationComponent implements IComponentOptions
 {
-
-	template: string = '';
-	controller = VisualizationComponentController;
-	bindings = {
+	public template: string = '';
+	public controller = VisualizationComponentController;
+	public bindings = {
 		result: '=',
 	};
 

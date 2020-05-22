@@ -1,0 +1,48 @@
+<div class="input-group">
+	<input type="text" class="form-control" placeholder="Search for an item" ng-model="ctrl.filter.query" ng-focus="true" id="queryInput">
+	<div class="input-group-append">
+		<a class="btn btn-secondary" ng-click="ctrl.filter.showAdvanced = !ctrl.filter.showAdvanced">
+			{{ ctrl.filter.showAdvanced ? 'Hide' : 'Show' }} advanced filters
+			<i ng-class="{'fas fa-chevron-down': !ctrl.filter.showAdvanced, 'fas fa-chevron-up': ctrl.filter.showAdvanced}"></i>
+		</a>
+	</div>
+</div>
+<div class="d-flex flex-row">
+	<div uib-collapse="!ctrl.filter.showAdvanced">
+		<div class="d-flex flex-row justify-content-start align-items-center">
+			<div class="d-flex flex-column justify-content-center align-items-start" style="margin-right: 10px;">
+				<div class="form-check">
+					<label class="form-check-label">
+						<input type="checkbox" class="form-check-input" ng-model="ctrl.filter.onlyRadioactive">
+						<span>Show only radioactive</span>
+					</label>
+				</div>
+				<div class="form-check">
+					<label class="form-check-label">
+						<input type="checkbox" class="form-check-input" ng-model="ctrl.filter.onlyWithEnergyValue">
+						<span>With energy value only</span>
+					</label>
+				</div>
+			</div>
+			<div class="form-group" style="margin-right: 10px;">
+				<label>Stack size
+					<select ng-model="ctrl.filter.stackSize" class="form-control">
+						<option ng-repeat="option in ctrl.stackSizes" value="{{option.value}}">{{option.key}}</option>
+					</select>
+				</label>
+			</div>
+			<div class="form-group" style="margin-right: 10px;">
+				<label>Physical state
+					<select ng-model="ctrl.filter.physicalState" class="form-control">
+						<option ng-repeat="option in ctrl.physicalStates" value="{{option.value}}">{{option.key}}
+						</option>
+					</select>
+				</label>
+			</div>
+		</div>
+	</div>
+	<div class="mr-auto"></div>
+	<div class="filter-actions align-self-start">
+		<ng-transclude></ng-transclude>
+	</div>
+</div>
