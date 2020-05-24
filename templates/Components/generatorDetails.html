@@ -1,0 +1,17 @@
+<table class="table" ng-if="ctrl.building">
+	<tbody>
+		<tr>
+			<td>Power production</td>
+			<td>{{ ctrl.getGenerator(ctrl.building.className).powerProduction }} MW</td>
+		</tr>
+		<tr>
+			<td>Power production exponent</td>
+			<td>{{ ctrl.getGenerator(ctrl.building.className).powerProductionExponent }}</td>
+		</tr>
+		<tr>
+			<td>Require water</td>
+			<td>{{ ctrl.getGenerator(ctrl.building.className).waterToPowerRatio > 0 ? 'Yes' : 'No' }}
+			</td>
+		</tr>
+	</tbody>
+</table>

@@ -1,10 +1,4 @@
-<ol class="breadcrumb">
-	<li class="breadcrumb-item"><a ui-sref="home">Satisfactory Tools</a></li>
-	<li class="breadcrumb-item active">Production</li>
-</ol>
-
-<h1>Production</h1>
-
+<h2>Production</h2>
 <div class="alert alert-warning alert-dismissible fade show">
 	<b>Warning!</b> The tool is still in it's early stage. It took me a long time to make it but unfortunately I couldn't make it work in all cases.<br>
 	Currently I'm resolving the most obvious issues, but I didn't want to leave you waiting longer, so I'm just putting the tool out there.<br>
@@ -15,16 +9,15 @@
 		<span>&times;</span>
 	</button>
 </div>
-
 <ul class="nav nav-tabs production-nav-tabs">
 	<li class="nav-item" ng-repeat="tab in ctrl.tabs">
-		<span class="nav-link cursor-pointer" href="javascript: void(0);" ng-class="{active: tab === ctrl.tab}" ng-click="ctrl.tab = tab" tooltip title="{{tab.tool.name}}">
+		<span class="nav-link cursor-pointer"  ng-class="{active: tab === ctrl.tab}" ng-click="ctrl.tab = tab" tooltip title="{{tab.tool.name}}">
 			<item-icon hide-tooltip="true" dynamic="true" item="tab.tool.icon" size="32" ng-if="tab.tool.icon"></item-icon>
 			<span class="fas fa-fw fa-question" ng-if="!tab.tool.icon"></span>
 		</span>
 	</li>
 	<li class="nav-item d-flex new-tab">
-		<a class="nav-link align-self-center" href="javascript: void(0);" ng-click="ctrl.addEmptyTab();" title="Add new production line" tooltip>
+		<a class="nav-link align-self-center"  ng-click="ctrl.addEmptyTab();" title="Add new production line" tooltip>
 			<span ng-class="{'fas': true, 'fa-plus': !ctrl.addingInProgress, 'fa-spin': ctrl.addingInProgress, 'fa-sync-alt': ctrl.addingInProgress}"></span>
 		</a>
 	</li>

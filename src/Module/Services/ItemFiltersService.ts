@@ -1,11 +1,12 @@
 import {IItemFilterSet} from '@src/Types/IItemFilterSet';
 import {IItemSchema} from '@src/Schema/IItemSchema';
 import data from '@src/Data/Data';
+import {IFilterService} from '@src/Types/IFilterService';
 
-export class ItemFiltersService
+export class ItemFiltersService implements IFilterService<IItemSchema>
 {
 	public filter: IItemFilterSet;
-	public items: IItemSchema[] = Object.values(data.getAllItems());
+	public entities: IItemSchema[] = Object.values(data.getAllItems());
 
 	private defaultFilterState: IItemFilterSet = {
 		showAdvanced: false,
@@ -27,10 +28,10 @@ export class ItemFiltersService
 		this.filter = {...this.defaultFilterState, showAdvanced: this.filter.showAdvanced};
 	}
 
-	public filterItems(): IItemSchema[]
+	public filterEntities(): IItemSchema[]
 	{
 		// Copy instead of working on original collection
-		let itemsToFilter = [...this.items];
+		let itemsToFilter = [...this.entities];
 		if (this.filter.onlyRadioactive) {
 			itemsToFilter = itemsToFilter.filter((item) => {
 				return item.radioactiveDecay > 0;

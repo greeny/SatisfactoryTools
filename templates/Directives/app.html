@@ -10,11 +10,21 @@
 
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item" ui-sref-active="active">
-					<a class="nav-link" ui-sref="home">
-						<span class="fas fa-fw fa-th-large"></span>
+				<li class="nav-item" ui-sref-active="active" uib-dropdown>
+					<a class="nav-link dropdown-toggle" data-toggle="dropdown" id="browser_toggle">
+						<i class="fas fa-fw fa-th-large"></i>
 						Codex
 					</a>
+					<div class="dropdown-menu" role="menu" aria-labelledby="browser_toggle">
+						<a class="dropdown-item" ui-sref="items" ui-sref-active="active">
+							<i class="fas fa-sign-in-alt fa-fw"></i>
+							Items
+						</a>
+						<a class="dropdown-item" ui-sref="buildings" ui-sref-active="active">
+							<i class="fa fa-industry"></i>
+							<span>Buildings</span>
+						</a>
+					</div>
 				</li>
 				<li class="nav-item" ui-sref-active="active">
 					<a class="nav-link" ui-sref="production">
@@ -25,7 +35,7 @@
 			</ul>
 			<ul class="navbar-nav">
 				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="javascript: void(0);" data-toggle="dropdown">
+					<a class="nav-link dropdown-toggle"  data-toggle="dropdown">
 						<span class="fas fa-users"></span>
 						Community
 					</a>

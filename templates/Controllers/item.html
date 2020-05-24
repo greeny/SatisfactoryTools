@@ -1,27 +1,7 @@
-<ol class="breadcrumb">
-	<li class="breadcrumb-item"><a ui-sref="home">Satisfactory Tools</a></li>
-	<li class="breadcrumb-item"><a ui-sref="home">Item Browser</a></li>
-	<li class="breadcrumb-item active">{{ctrl.item.name}}</li>
-</ol>
-
-<div class="row">
-	<div class="col-sm-6">
-		<h1>{{ctrl.item.name}}</h1>
-	</div>
-
-	<div class="col-sm-6">
-		<item-filter>
-			<a ui-sref="home" class="btn btn-outline-warning" ng-click="ctrl.resetFilter()">
-				<i class="fas fa-chevron-left"></i>
-				Back to item list
-			</a>
-		</item-filter>
-	</div>
-</div>
-
 <div class="row">
 	<div class="col-md-6">
 		<div class="card mb-3">
+			<h2 class="card-header">{{ctrl.item.name}}</h2>
 			<div class="card-body">
 				<span class="float-left mr-3">
 					<item-icon item="ctrl.item" size="128"></item-icon>
@@ -33,14 +13,9 @@
 
 	<div class="col-md-6">
 		<div class="card mb-3">
+			<h2 class="card-header">{{ctrl.item.name}} details</h2>
 			<div class="card-body">
 				<table class="table">
-					<thead>
-						<tr>
-							<th>Item</th>
-							<th>{{ctrl.item.name}}</th>
-						</tr>
-					</thead>
 					<tbody>
 						<tr>
 							<td>Sink points</td>
@@ -76,134 +51,26 @@
 <div class="row">
 	<div class="col-lg-6">
 		<div class="card mb-3">
+			<h2 class="card-header">Recipes</h2>
 			<div class="card-body">
-				<h2>Recipes</h2>
-
-				<div class="table-responsive">
-					<table class="table recipe-table table-hover">
-						<thead>
-							<tr>
-								<th>Recipe name</th>
-								<th>Ingredients</th>
-								<th>Products</th>
-								<th>Machine</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr ng-repeat="recipe in ctrl.recipes">
-								<td>
-									{{recipe.name}}
-								</td>
-								<td>
-									<div ng-repeat="ingredient in recipe.ingredients" class="d-inline-block p-2">
-										<span class="item-amount">
-											{{ingredient.amount}}x
-											<a ui-sref="item({item: ctrl.getItem(ingredient.item).slug})">
-												<item-icon item="ingredient.item"></item-icon>
-											</a>
-											<br>
-										</span>
-										<span ng-if="recipe.inMachine">{{ctrl.getMachine(recipe).metadata.manufacturingSpeed * 60 / recipe.time * ingredient.amount|number}}&nbsp;/&nbsp;min</span>
-									</div>
-								</td>
-								<td>
-									<div ng-repeat="product in recipe.products" class="d-inline-block p-2 font-weight-bold">
-										<span class="item-amount">
-											{{product.amount}}x
-											<a ui-sref="item({item: ctrl.getItem(product.item).slug})">
-												<item-icon item="product.item"></item-icon>
-											</a>
-											<br>
-										</span>
-										<span ng-if="recipe.inMachine">{{ctrl.getMachine(recipe).metadata.manufacturingSpeed * 60 / recipe.time * product.amount|number}}&nbsp;/&nbsp;min</span>
-									</div>
-								</td>
-								<td>
-									<span class="item-amount" ng-if="recipe.inMachine">
-										{{ctrl.getMachine(recipe).name}}
-										<small ng-if="recipe.inWorkshop">(or Workshop)</small>
-									</span>
-									<span class="item-amount" ng-if="!recipe.inMachine && recipe.inWorkshop">
-										Workshop
-									</span>
-									<br>
-									<span ng-if="recipe.inMachine">{{recipe.time}}s ({{ctrl.getMachine(recipe).metadata.manufacturingSpeed * 60 / recipe.time|number}} cycles&nbsp;/&nbsp;min)</span>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
+				<recipes-table recipes="ctrl.recipes"></recipes-table>
 			</div>
 		</div>
 	</div>
 
 	<div class="col-lg-6">
 		<div class="card mb-3">
+			<h2 class="card-header">Usages as ingredient</h2>
 			<div class="card-body">
-				<h2>Usages as ingredient</h2>
-
-				<div class="table-responsive">
-					<table class="table recipe-table table-hover">
-						<thead>
-							<tr>
-								<th>Recipe name</th>
-								<th>Ingredients</th>
-								<th>Products</th>
-								<th>Machine</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr ng-repeat="recipe in ctrl.usagesAsIngredient">
-								<td>
-									{{recipe.name}}
-								</td>
-								<td>
-									<div ng-repeat="ingredient in recipe.ingredients" class="d-inline-block p-2">
-										<span class="item-amount">
-											{{ingredient.amount}}x
-											<a ui-sref="item({item: ctrl.getItem(ingredient.item).slug})">
-												<item-icon item="ingredient.item"></item-icon>
-											</a>
-											<br>
-										</span>
-										<span ng-if="recipe.inMachine">{{ctrl.getMachine(recipe).metadata.manufacturingSpeed * 60 / recipe.time * ingredient.amount|number}}&nbsp;/&nbsp;min</span>
-									</div>
-								</td>
-								<td>
-									<div ng-repeat="product in recipe.products" class="d-inline-block p-2 font-weight-bold">
-										<span class="item-amount">
-											{{product.amount}}x
-											<a ui-sref="item({item: ctrl.getItem(product.item).slug})">
-												<item-icon item="product.item"></item-icon>
-											</a>
-											<br>
-										</span>
-										<span ng-if="recipe.inMachine">{{ctrl.getMachine(recipe).metadata.manufacturingSpeed * 60 / recipe.time * product.amount|number}}&nbsp;/&nbsp;min</span>
-									</div>
-								</td>
-								<td>
-									<span class="item-amount" ng-if="recipe.inMachine">
-										{{ctrl.getMachine(recipe).name}}
-										<small ng-if="recipe.inWorkshop">(or Workshop)</small>
-									</span>
-									<span class="item-amount" ng-if="!recipe.inMachine && recipe.inWorkshop">
-										Workshop
-									</span>
-									<br>
-									<span ng-if="recipe.inMachine">{{recipe.time}}s ({{ctrl.getMachine(recipe).metadata.manufacturingSpeed * 60 / recipe.time|number}} cycles&nbsp;/&nbsp;min)</span>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
+				<recipes-table recipes="ctrl.usagesAsIngredient"></recipes-table>
 			</div>
 		</div>
 	</div>
 
 	<div class="col-lg-6">
 		<div class="card mb-3">
+			<h2 class="card-header">Usages for building</h2>
 			<div class="card-body">
-				<h2>Usages for building</h2>
 
 				<div class="table-responsive">
 					<table class="table recipe-table table-hover">
@@ -217,8 +84,10 @@
 							<tr ng-repeat="recipe in ctrl.usagesForBuilding">
 								<td>
 									<div ng-repeat="product in recipe.products" class="d-inline-block p-2">
-										<item-icon item="product.item"></item-icon>
-										{{ctrl.getBuilding(product.item).name}}
+										<a ui-sref="building({item: ctrl.getBuilding(product.item).slug})">
+											<item-icon item="ctrl.getBuilding(product.item)" size="32"></item-icon>
+											{{ ctrl.getBuilding(product.item).name }}
+										</a>
 									</div>
 								</td>
 								<td>
@@ -241,8 +110,8 @@
 
 	<div class="col-lg-6">
 		<div class="card mb-3">
+			<h2 class="card-header">Usages for schematics</h2>
 			<div class="card-body">
-				<h2>Usages for schematics</h2>
 
 				<div class="table-responsive">
 					<table class="table recipe-table table-hover">

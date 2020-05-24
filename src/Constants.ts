@@ -1,6 +1,6 @@
 export class Constants
 {
-	public static STACK_SIZE: {[key: string]: number} = {
+	public static STACK_SIZE: { [key: string]: number } = {
 		ONE: 1,
 		SMALL: 50,
 		MEDIUM: 100,
@@ -8,16 +8,25 @@ export class Constants
 		LARGE: 500,
 	};
 
-	public static PHYSICAL_STATE: {[key: string]: string} = {
+	public static PHYSICAL_STATE: { [key: string]: string } = {
 		SOLID: 'solid',
 		LIQUID: 'liquid',
 	};
 
-	public static PRODUCTION_TYPE: {PER_MINUTE: string, MAXIMIZE: string} = {
+	public static PRODUCTION_TYPE: { PER_MINUTE: string, MAXIMIZE: string } = {
 		PER_MINUTE: 'perMinute',
 		MAXIMIZE: 'max',
 	};
+	public static WORKBENCH_CLASSNAME = 'Desc_WorkBench_C';
+	public static WORKSHOP_CLASSNAME = 'Desc_Workshop_C';
+	public static WATER_EXTRACTOR_CLASSNAME = 'Desc_WaterPump_C';
+	public static WATER_CLASSNAME = 'Desc_Water_C';
+	public static NUCLEAR_WASTE_CLASSNAME = 'Desc_NuclearWaste_C';
+	public static NUCLEAR_FUEL_ROD_CLASSNAME = 'Desc_NuclearFuelRod_C';
 
+	public static RESOURCE_MULTIPLIER_IMPURE = 0.5;
+	public static RESOURCE_MULTIPLIER_NORMAL = 1;
+	public static RESOURCE_MULTIPLIER_PURE = 2;
 }
 
 export type STACK_SIZE_ONE = 1;

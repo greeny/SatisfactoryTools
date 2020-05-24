@@ -1,0 +1,16 @@
+<table class="table">
+	<tbody>
+		<tr ng-if="ctrl.isAutonomousManufacturer(ctrl.building)">
+			<td>Power consumption</td>
+			<td>{{ ctrl.building.metadata.powerConsumption }} MW</td>
+		</tr>
+		<tr ng-if="ctrl.isAutonomousManufacturer(ctrl.building)">
+			<td>Power consumption exponent</td>
+			<td>{{ ctrl.building.metadata.powerConsumptionExponent }}</td>
+		</tr>
+		<tr ng-if="ctrl.isAutonomousManufacturer(ctrl.building)">
+			<td>Manufacturing speed multiplier</td>
+			<td>x{{ ctrl.building.metadata.manufacturingSpeed }}</td>
+		</tr>
+	</tbody>
+</table>
