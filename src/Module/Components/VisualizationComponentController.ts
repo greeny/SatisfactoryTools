@@ -8,10 +8,10 @@ export class VisualizationComponentController implements IController
 	public result: ProductionToolResult;
 
 	public static $inject = ['$element', '$scope'];
+	private unregisterWatcherCallback: () => void;
 
 	public constructor(private $element: any, private $scope: IScope) {}
 
-	private unregisterWatcherCallback: () => void;
 
 	public $onInit(): void
 	{
@@ -93,7 +93,7 @@ export class VisualizationComponentController implements IController
 		network.setOptions({
 			layout: {
 				hierarchical: false,
-			}
+			},
 		});
 	}
 

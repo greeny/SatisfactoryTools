@@ -7,6 +7,8 @@ import {ItemIconDirective} from '@src/Module/Directives/ItemIconDirective';
 import {RecentlyVisitedItemsService} from '@src/Module/Services/RecentlyVisitedItemsService';
 import {ProductionController} from '@src/Module/Controllers/ProductionController';
 import {VisualizationComponent} from '@src/Module/Components/VisualizationComponent';
+import {ItemFilterComponent} from '@src/Module/Components/ItemFilterComponent';
+import {ItemFiltersService} from '@src/Module/Services/ItemFiltersService';
 
 export class AppModule
 {
@@ -28,19 +30,17 @@ export class AppModule
 
 			$sceProvider.enabled(false);
 
-			$urlRouterProvider.when('', '/');
-
 			$stateProvider.state('home', {
+				url: '/',
 				controller: 'HomeController',
 				controllerAs: 'ctrl',
-				url: '/',
 				template: require('@templates/Controllers/home.html'),
 			});
 
 			$stateProvider.state('item', {
+				url: '/items/{item}',
 				controller: 'ItemController',
 				controllerAs: 'ctrl',
-				url: '/items/{item}',
 				template: require('@templates/Controllers/item.html'),
 			});
 
@@ -113,8 +113,10 @@ export class AppModule
 		});
 
 		this.app.component('visualization', new VisualizationComponent);
+		this.app.component('itemFilter', new ItemFilterComponent);
 
 		this.app.service('RecentlyVisitedItemsService', RecentlyVisitedItemsService);
+		this.app.service('ItemFiltersService', ItemFiltersService);
 
 		this.app.controller('HomeController', HomeController);
 		this.app.controller('ItemController', ItemController);
