@@ -3,6 +3,7 @@ import {default as solver, ISolverModel, ISolverResult, ISolverResultSingle} fro
 import {IRecipeSchema} from '@src/Schema/IRecipeSchema';
 import {IJsonSchema} from '@src/Schema/IJsonSchema';
 import {IProductionToolRequest} from '@src/Tools/Production/IProductionToolRequest';
+import {IBuildingSchema} from '@src/Schema/IBuildingSchema';
 
 export class Solver
 {
@@ -67,6 +68,11 @@ export class Solver
 					continue;
 				}
 
+				let machine: IBuildingSchema|null = null;
+				if (recipe.producedIn.length > 0) {
+					machine = data.buildings[recipe.producedIn[0]];
+				}
+
 				const def: {[key: string]: number} = {};
 				for (const ingredient of recipe.ingredients) {
 					if (!(ingredient.item in def)) {
@@ -79,6 +85,9 @@ export class Solver
 						def[product.item] = 0;
 					}
 					def[product.item] += product.amount;
+				}
+				if (machine && machine.metadata.powerConsumption) {
+					def.power = -machine.metadata.powerConsumption * recipe.time;
 				}
 				model.variables[recipe.className] = def;
 			}

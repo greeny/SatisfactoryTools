@@ -74,8 +74,13 @@ export default function parseBuildings(buildings: {
 			building.ClassName = 'Desc_WalkwayTurn_C';
 		}
 
+		let slug = Strings.webalize(building.mDisplayName);
+		if (building.ClassName.match(/Steel/) || building.ClassName === 'Build_Wall_8x4_02_C') {
+			slug += '-steel';
+		}
+
 		result.push({
-			slug: Strings.webalize(building.mDisplayName),
+			slug: slug,
 			name: building.mDisplayName,
 			description: building.mDescription.replace(/\r\n/ig, '\n'),
 			categories: [],

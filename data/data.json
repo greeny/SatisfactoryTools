@@ -2462,8 +2462,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_ConstructorMk1_C",
-				"Desc_AutomatedWorkBench_C"
+				"Desc_ConstructorMk1_C"
 			]
 		},
 		"Recipe_Biomass_AlienCarapace_C": {
@@ -11877,7 +11876,7 @@
 			},
 			"requiredSchematics": [],
 			"type": "EST_MAM",
-			"time": 0,
+			"time": 3,
 			"alternate": false,
 			"mam": false
 		},
@@ -12543,7 +12542,7 @@
 			},
 			"requiredSchematics": [],
 			"type": "EST_MAM",
-			"time": 0,
+			"time": 3,
 			"alternate": false,
 			"mam": false
 		},
@@ -12603,7 +12602,7 @@
 			},
 			"requiredSchematics": [],
 			"type": "EST_MAM",
-			"time": 0,
+			"time": 3,
 			"alternate": false,
 			"mam": false
 		},
@@ -12726,7 +12725,7 @@
 			},
 			"requiredSchematics": [],
 			"type": "EST_MAM",
-			"time": 0,
+			"time": 3,
 			"alternate": false,
 			"mam": false
 		},
@@ -13125,7 +13124,7 @@
 			},
 			"requiredSchematics": [],
 			"type": "EST_MAM",
-			"time": 0,
+			"time": 3,
 			"alternate": false,
 			"mam": false
 		},
@@ -18111,7 +18110,7 @@
 			"categories": [
 				"SC_ConveyorAttachments_C"
 			],
-			"buildMenuPriority": 38,
+			"buildMenuPriority": 1,
 			"className": "Desc_ConveyorAttachmentMerger_C",
 			"metadata": {
 				"powerConsumption": 0,
@@ -18125,7 +18124,7 @@
 			"categories": [
 				"SC_ConveyorAttachments_C"
 			],
-			"buildMenuPriority": 37,
+			"buildMenuPriority": 4,
 			"className": "Desc_ConveyorAttachmentSplitterProgrammable_C",
 			"metadata": {
 				"powerConsumption": 0,
@@ -18139,7 +18138,7 @@
 			"categories": [
 				"SC_ConveyorAttachments_C"
 			],
-			"buildMenuPriority": 37,
+			"buildMenuPriority": 3,
 			"className": "Desc_ConveyorAttachmentSplitterSmart_C",
 			"metadata": {
 				"powerConsumption": 0,
@@ -18153,7 +18152,7 @@
 			"categories": [
 				"SC_ConveyorAttachments_C"
 			],
-			"buildMenuPriority": 37,
+			"buildMenuPriority": 2,
 			"className": "Desc_ConveyorAttachmentSplitter_C",
 			"metadata": {
 				"powerConsumption": 0,
@@ -18349,6 +18348,24 @@
 			"className": "Desc_ConveyorPole_C",
 			"metadata": {}
 		},
+		"Desc_CyberWagon_C": {
+			"slug": "cyber-wagon",
+			"name": "Cyber Wagon",
+			"description": "Absolutely indestructible.\nNeeds no further introduction.",
+			"categories": [],
+			"buildMenuPriority": 0,
+			"className": "Desc_CyberWagon_C",
+			"metadata": {}
+		},
+		"Desc_Explorer_C": {
+			"slug": "explorer",
+			"name": "Explorer",
+			"description": "24 slot inventory. Has a built in craft bench. Fast and nimble exploration vehicle. Tuned for really rough terrain and can climb almost vertical surfaces.",
+			"categories": [],
+			"buildMenuPriority": 0,
+			"className": "Desc_Explorer_C",
+			"metadata": {}
+		},
 		"Desc_Fence_01_C": {
 			"slug": "fence",
 			"name": "Fence",
@@ -18429,6 +18446,15 @@
 				"powerConsumptionExponent": 1.6,
 				"manufacturingSpeed": 1
 			}
+		},
+		"Desc_FreightWagon_C": {
+			"slug": "freight-car",
+			"name": "Freight Car",
+			"description": "The Freight Car is used to transport large quantity of resources from one place to another. Resources are loaded or unloaded at Freight Platforms.\nMust be build on Railway.",
+			"categories": [],
+			"buildMenuPriority": 0,
+			"className": "Desc_FreightWagon_C",
+			"metadata": {}
 		},
 		"Desc_GeneratorBiomass_C": {
 			"slug": "biomass-burner",
@@ -18587,6 +18613,15 @@
 				"powerConsumption": 5,
 				"powerConsumptionExponent": 1.6
 			}
+		},
+		"Desc_Locomotive_C": {
+			"slug": "electric-locomotive",
+			"name": "Electric Locomotive",
+			"description": "This locomotive is used to move Freight Cars from station to station.\nRequires 25-110MW of Power to drive.\nMust be built on railway.\nNamed 'Leif' by FISCIT pioneers because of its reliability.",
+			"categories": [],
+			"buildMenuPriority": 0,
+			"className": "Desc_Locomotive_C",
+			"metadata": {}
 		},
 		"Desc_LookoutTower_C": {
 			"slug": "lookout-tower",
@@ -19424,6 +19459,15 @@
 				"inventorySize": 25
 			}
 		},
+		"Desc_Tractor_C": {
+			"slug": "tractor",
+			"name": "Tractor",
+			"description": "25 slot inventory. Has a built in Craft Bench. Can be automated to pick up and deliver resources at Truck Stations. Nicknamed the Sugarcube by FICSIT pioneers.",
+			"categories": [],
+			"buildMenuPriority": 0,
+			"className": "Desc_Tractor_C",
+			"metadata": {}
+		},
 		"Desc_TradingPost_C": {
 			"slug": "the-hub",
 			"name": "The HUB",
@@ -19508,6 +19552,15 @@
 				"powerConsumptionExponent": 1.6
 			}
 		},
+		"Desc_Truck_C": {
+			"slug": "truck",
+			"name": "Truck",
+			"description": "48 slot inventory. Has a built in Craft Bench. Can be automated to pick up and deliver resources at Truck Stations. Nicknamed the Unit by FICSIT pioneers because of its massive frame.",
+			"categories": [],
+			"buildMenuPriority": 0,
+			"className": "Desc_Truck_C",
+			"metadata": {}
+		},
 		"Desc_WalkwayCross_C": {
 			"slug": "walkway-crossing",
 			"name": "Walkway Crossing",
@@ -19575,7 +19628,7 @@
 			"metadata": {}
 		},
 		"Desc_Wall_8x4_02_C": {
-			"slug": "wall-8m-x-4m",
+			"slug": "wall-8m-x-4m-steel",
 			"name": "Wall 8m x 4m",
 			"description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.",
 			"categories": [
@@ -19597,7 +19650,7 @@
 			"metadata": {}
 		},
 		"Desc_Wall_Conveyor_8x4_01_Steel_C": {
-			"slug": "wall-conveyor-x3",
+			"slug": "wall-conveyor-x3-steel",
 			"name": "Wall Conveyor x3",
 			"description": "Walls connect to other Walls and Floors. Use these to make buildings with several floors.\nHas 3 conveyor belt connections.\nHeight: 4",
 			"categories": [
@@ -19619,7 +19672,7 @@
 			"metadata": {}
 		},
 		"Desc_Wall_Conveyor_8x4_02_Steel_C": {
-			"slug": "wall-conveyor-x2",
+			"slug": "wall-conveyor-x2-steel",
 			"name": "Wall Conveyor x2",
 			"description": "Walls connect to other Walls and Floors. Use these to make buildings with several floors.\nHas 2 conveyor belt connections.\nHeight: 4",
 			"categories": [
@@ -19641,7 +19694,7 @@
 			"metadata": {}
 		},
 		"Desc_Wall_Conveyor_8x4_03_Steel_C": {
-			"slug": "wall-conveyor-x1",
+			"slug": "wall-conveyor-x1-steel",
 			"name": "Wall Conveyor x1",
 			"description": "Walls connect to other Walls and Floors. Use these to make buildings with several floors.\nHas 1 conveyor belt connection.\nHeight: 4",
 			"categories": [
@@ -19663,7 +19716,7 @@
 			"metadata": {}
 		},
 		"Desc_Wall_Conveyor_8x4_04_Steel_C": {
-			"slug": "wall-conveyor-perpendicular",
+			"slug": "wall-conveyor-perpendicular-steel",
 			"name": "Wall Conveyor Perpendicular",
 			"description": "Walls connect to other Walls and Floors. Use these to make buildings with several floors.\nHas 1 conveyor belt connection perpendicular to the wall.\nHeight: 4",
 			"categories": [
@@ -19685,7 +19738,7 @@
 			"metadata": {}
 		},
 		"Desc_Wall_Door_8x4_01_Steel_C": {
-			"slug": "center-door-wall",
+			"slug": "center-door-wall-steel",
 			"name": "Center Door Wall",
 			"description": "Snaps to foundations and other walls.\nThe door allows Pioneers to pass through the wall.",
 			"categories": [
@@ -19707,7 +19760,7 @@
 			"metadata": {}
 		},
 		"Desc_Wall_Door_8x4_02_Steel_C": {
-			"slug": "left-door-wall",
+			"slug": "left-door-wall-steel",
 			"name": "Left Door Wall",
 			"description": "Snaps to foundations and other walls.\nThe door allows Pioneers to pass through the wall.",
 			"categories": [
@@ -19729,7 +19782,7 @@
 			"metadata": {}
 		},
 		"Desc_Wall_Door_8x4_03_Steel_C": {
-			"slug": "right-door-wall",
+			"slug": "right-door-wall-steel",
 			"name": "Right Door Wall",
 			"description": "Snaps to foundations and other walls.\nThe door allows Pioneers to pass through the wall.",
 			"categories": [
@@ -19784,7 +19837,7 @@
 			"metadata": {}
 		},
 		"Desc_Wall_Window_8x4_03_Steel_C": {
-			"slug": "panel-window",
+			"slug": "panel-window-steel",
 			"name": "Panel Window",
 			"description": "Snaps to foundations and other walls.\nThe windows allow Pioneers to see through the wall..",
 			"categories": [
