@@ -6,11 +6,11 @@ export class RecipeResult
 
 	public machines: IMachinesResult[] = [];
 	public nodeId: number;
-	public productAmountCache: Array<{
+	public productAmountCache: {
 		product: string,
 		amount: number,
 		maxAmount: number,
-	}> = [];
+	}[] = [];
 
 	public constructor(public readonly recipe: Recipe, public readonly amount: number)
 	{

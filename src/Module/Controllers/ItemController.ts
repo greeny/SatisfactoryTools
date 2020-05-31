@@ -19,7 +19,9 @@ export class ItemController
 
 	public static $inject = ['$state', '$transition$', 'RecentlyVisitedItemsService', 'ItemFiltersService', '$scope'];
 
-	public constructor($state: any, $transition$: ITransitionObject<{ item: string }>, recentlyVisitedItemsService: RecentlyVisitedItemsService, private itemFilterService: ItemFiltersService, private $scope: IScope)
+	public constructor(
+		$state: any, $transition$: ITransitionObject<{item: string}>, recentlyVisitedItemsService: RecentlyVisitedItemsService, private itemFilterService: ItemFiltersService, private $scope: IScope,
+	)
 	{
 		const item = data.getItemBySlug($transition$.params().item);
 		if (item === null) {

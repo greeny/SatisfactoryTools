@@ -18,7 +18,7 @@ export class ProductionToolResult
 		title?: string,
 		id?: number,
 	}>();
-	public rawResources: {[key: string]: {amount: number, data: Array<{amount: number, id: number}>}} = {};
+	public rawResources: {[key: string]: {amount: number, data: {amount: number, id: number}[]}} = {};
 
 	public constructor(public readonly recipes: RecipeResult[])
 	{
