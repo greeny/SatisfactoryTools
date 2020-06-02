@@ -16,6 +16,7 @@
 		"@types/angular-ui-router": "^1.1.40",
 		"@types/bootstrap": "^4.3.1",
 		"@types/node": "^13.7.1",
+		"@types/sharp": "^0.24.0",
 		"angular-templatecache-loader": "^0.2.0",
 		"css-loader": "^3.4.2",
 		"less": "^3.11.1",
@@ -34,7 +35,6 @@
 		"webpack-cli": "^3.3.10"
 	},
 	"dependencies": {
-		"@types/sharp": "^0.24.0",
 		"angular": "^1.7.8",
 		"angular-animate": "^1.7.9",
 		"angular-sanitize": "^1.7.9",

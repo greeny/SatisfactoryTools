@@ -47,7 +47,6 @@ export class Solver
 		model.optimize.rawResources = 'max';
 
 		for (const itemAmount of productionRequest.production) {
-			//delete model.optimize[itemAmount.item.prototype.className];
 			model.constraints[itemAmount.item.prototype.className] = {
 				equal: parseFloat(itemAmount.amount + ''),
 			};
