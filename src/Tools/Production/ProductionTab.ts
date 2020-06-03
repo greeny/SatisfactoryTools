@@ -8,7 +8,6 @@ export class ProductionTab
 {
 
 	public tool: ProductionTool;
-	public item: IItemSchema|null = null;
 
 	public expanded: boolean = true;
 	public renaming: boolean = false;
@@ -24,6 +23,11 @@ export class ProductionTab
 		}, () => {
 			this.recalculate();
 		}, true);
+	}
+
+	get item(): string|null
+	{
+		return this.tool.productionRequest.production.length > 0 ? this.tool.productionRequest.production[0].item : null;
 	}
 
 	public unregister(): void

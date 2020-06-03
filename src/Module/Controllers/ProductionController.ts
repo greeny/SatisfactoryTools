@@ -4,6 +4,7 @@ import {IScope} from 'angular';
 import {ProductionTab} from '@src/Tools/Production/ProductionTab';
 import {IItemSchema} from '@src/Schema/IItemSchema';
 import {Constants} from '@src/Constants';
+import {IProductionToolRequestItem} from '@src/Tools/Production/IProductionToolRequest';
 
 export class ProductionController
 {
@@ -49,6 +50,29 @@ export class ProductionController
 			tab.unregister();
 			this.tabs.splice(index, 1);
 		}
+	}
+
+	public clearAllTabs(): void
+	{
+		this.tabs.forEach((tab: ProductionTab, index: number) => {
+			tab.unregister();
+		});
+		this.tabs = [];
+	}
+
+	public cloneTab(tab: ProductionTab): void
+	{
+		const clone = new ProductionTab(this.scope);
+		tab.tool.productionRequest.production.forEach((requestItem: IProductionToolRequestItem) => {
+			const clonedRequest = {...requestItem};
+			clone.addProduct(clonedRequest);
+		});
+		this.tabs.push(clone);
+	}
+
+	public clearTabItems(tab: ProductionTab): void
+	{
+		tab.tool.productionRequest.production = [];
 	}
 
 }

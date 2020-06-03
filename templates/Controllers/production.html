@@ -11,11 +11,11 @@
 			<span ng-if="!tab.item">
 				<span class="fas fa-question"></span>
 			</span>
-			<img ng-if="tab.item" ng-src="/assets/images/items/{{tab.item.slug}}_64.png" width="32" height="32" title="{{tab.item.name}}" tooltip>
+			<item-icon ng-if="tab.item" item="tab.item" size="32" title="{{tab.item.name}}" tooltip></item-icon>
 		</a>
 	</li>
-	<li class="nav-item bg-success text-light">
-		<a class="nav-link" href="javascript: void(0);" ng-click="ctrl.addNewTab();" title="Add new production line" tooltip>
+	<li class="nav-item bg-success text-light d-flex">
+		<a class="nav-link align-self-center" href="javascript: void(0);" ng-click="ctrl.addNewTab();" title="Add new production line" tooltip>
 			<span class="fas fa-plus"></span>
 		</a>
 	</li>
@@ -26,29 +26,30 @@
 		<div class="card production-input">
 			<div class="card-header d-flex">
 				<span class="production-image">
-					<item-icon ng-if="tab.productionRequest.icon" item="tab.productionRequest.icon" size="48"></item-icon>
+					<item-icon ng-if="tab.item" item="tab.item" size="32"></item-icon>
 				</span>
-
 				<span class="production-line-name flex-grow-1">
 					<span class="production-line-name-title mr-2" ng-hide="ctrl.renaming">{{tab.productionRequest.name}}</span>
-					<input class="form-control mr-2" ng-model="tab.productionRequest.name" ng-show="ctrl.renaming">
+					<form class="mr-2 flex-grow-1" ng-submit="ctrl.renaming = false" ng-show="ctrl.renaming">
+						<input class="form-control" ng-model="tab.productionRequest.name">
+						<button type="submit" class="btn btn-outline-success" ng-show="ctrl.renaming">
+							<span class="fas fa-check"></span>
+						</button>
+					</form>
 					<span class="btn btn-outline-light" ng-hide="ctrl.renaming" tooltip title="Click to rename production line" ng-click="ctrl.renaming = true">
 						<span class="fas fa-pencil-alt"></span>
-					</span>
-					<span class="btn btn-outline-success" ng-show="ctrl.renaming" ng-click="ctrl.renaming = false">
-						<span class="fas fa-check"></span>
 					</span>
 				</span>
 
 				<span class="btn-group">
-					<a class="btn btn-success">
+					<a class="btn btn-success" ng-click="ctrl.cloneTab(tab)" tooltip title="Clone">
 						<span class="far fa-fw fa-clone"></span>
 					</a>
-					<a class="btn btn-warning">
+					<a class="btn btn-warning" tooltip title="Clear items" ng-click="ctrl.clearTabItems(tab)">
 						<span class="fas fa-fw fa-eraser"></span>
 					</a>
-					<a class="btn btn-danger">
-						<span class="fas fa-fw fa-trash-alt"></span>
+					<a class="btn btn-danger" tooltip title="Remove tab" ng-click="ctrl.removeTab(tab)">
+						<span class="fas fa-fw fa-trash-alt" ng-click="ctrl.removeTab(tab)"></span>
 					</a>
 					<a class="btn btn-secondary" ng-click="tab.expanded = !tab.expanded" tooltip title="{{tab.expanded ? 'Collapse' : 'Expand'}}">
 						<span ng-if="tab.expanded" class="fas fa-fw fa-chevron-up"></span>
