@@ -62,6 +62,11 @@
   resolved "https://registry.yarnpkg.com/@types/json5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
   integrity sha1-7ihweulOEdK4J7y+UnC86n8+ce4=
 
+"@types/ngstorage@^0.3.36":
+  version "0.3.36"
+  resolved "https://registry.yarnpkg.com/@types/ngstorage/-/ngstorage-0.3.36.tgz#0f12cc4e3fbb862e864371cef167cf980d7344fe"
+  integrity sha512-nNpOPkzCKovk+CzQRrpQKykYvhbTRt2OKnLS6CVAdYZaBkfs9XwgAyRat8NwQJGhy2hZF//jucWpCtUm0jXa2g==
+
 "@types/node@*":
   version "14.0.1"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.0.1.tgz#5d93e0a099cd0acd5ef3d5bde3c086e1f49ff68c"
@@ -2503,6 +2508,11 @@ neo-async@^2.5.0, neo-async@^2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.1.tgz#ac27ada66167fa8849a6addd837f6b189ad2081c"
   integrity sha512-iyam8fBuCUpWeKPGpaNMetEocMt364qkCsfL9JuhjXX6dRnguRVOfk2GZaDpPjcOKiiXCPINZC1GczQ7iTq3Zw==
+
+ngstorage@^0.3.11:
+  version "0.3.11"
+  resolved "https://registry.yarnpkg.com/ngstorage/-/ngstorage-0.3.11.tgz#1637c45b872d909d9cc7e18b374898d50b2e844f"
+  integrity sha1-FjfEW4ctkJ2cx+GLN0iY1QsuhE8=
 
 nice-try@^1.0.4:
   version "1.0.5"

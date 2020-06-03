@@ -29,15 +29,14 @@
 		</span>
 
 		<div ng-repeat="product in tab.tool.productionRequest.production">
-			<select ng-model="product.item" ng-options="item as item.prototype.name for item in ctrl.craftableItems|orderBy:'prototype.name'"></select>
+			<select ng-model="product.item" ng-change="ctrl.modelChanged()" ng-options="item as item.prototype.name for item in ctrl.craftableItems|orderBy:'prototype.name'"></select>
 			<!--<input type="checkbox" ng-model="product.max"> Max-->
-			<input ng-hide="product.max" type="number" ng-model="product.amount">
-			<input ng-show="product.max" type="range" ng-model="product.ratio" min="0" max="100" step="2">
-			<span class="btn btn-danger" ng-click="tab.removeProduct(product)">
+			<input ng-hide="product.max" type="number" ng-model="product.amount" ng-change="ctrl.modelChanged()">
+			<input ng-show="product.max" type="range" ng-model="product.ratio" min="0" max="100" step="2" ng-change="ctrl.modelChanged()">
+			<span class="btn btn-danger" ng-click="tab.removeProduct(product); ctrl.modelChanged()">
 			<span class="fas fa-times"></span>
 		</span>
 		</div>
-
-		<visualization result="tab.tool.result" class="visualization"></visualization>
+<!--		<visualization result="tab.tool.result" class="visualization"></visualization>-->
 	</div>
 </div>
