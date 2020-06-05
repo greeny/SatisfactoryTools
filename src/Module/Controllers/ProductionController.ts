@@ -1,9 +1,9 @@
 import {ProductionTool} from '@src/Tools/Production/ProductionTool';
 import model from '@src/Data/Model';
-import {Item} from '@src/Data/Item';
 import {IScope} from 'angular';
 import {ProductionTab} from '@src/Tools/Production/ProductionTab';
-import {ItemAmount} from '@src/Data/ItemAmount';
+import {IItemSchema} from '@src/Schema/IItemSchema';
+import {Constants} from '@src/Constants';
 
 export class ProductionController
 {
@@ -11,8 +11,13 @@ export class ProductionController
 	public tab: ProductionTab|null = null;
 	public tabs: ProductionTab[] = [];
 	public readonly tool: ProductionTool;
-	public readonly craftableItems: Item[] = model.getAutomatableItems();
+	public readonly craftableItems: IItemSchema[] = model.getAutomatableItems();
 	public result: string;
+
+	public options: {} = {
+		'items/min': Constants.PRODUCTION_TYPE.PER_MINUTE,
+		'maximize': Constants.PRODUCTION_TYPE.MAXIMIZE,
+	};
 
 	public static $inject = ['$scope'];
 	private readonly scope: IScope;
@@ -44,11 +49,6 @@ export class ProductionController
 			tab.unregister();
 			this.tabs.splice(index, 1);
 		}
-	}
-
-	public addEmptyProduct(): void
-	{
-		this.tab?.addProduct(new ItemAmount(this.craftableItems[0], 1));
 	}
 
 }

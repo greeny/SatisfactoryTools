@@ -10,6 +10,8 @@ export class ProductionTool
 {
 
 	public productionRequest: IProductionToolRequest = {
+		name: null,
+		icon: null,
 		allowedAlternateRecipes: [],
 		blockedRecipes: [],
 		blockedResources: [],

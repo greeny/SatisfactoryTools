@@ -16,18 +16,20 @@ export class ItemIconDirective implements IDirective
 
 	public link(scope: IItemIconDirectiveScope)
 	{
-		if (typeof scope.item === 'object') {
-			scope.itemEntity = scope.item;
-		} else {
-			scope.itemEntity = data.getItemByClassName(scope.item);
-			if (!scope.itemEntity) {
-				scope.itemEntity = data.getBuildingByClassName(scope.item);
+		scope.$watch('item', () => {
+			if (typeof scope.item === 'object') {
+				scope.itemEntity = scope.item;
+			} else {
+				scope.itemEntity = data.getItemByClassName(scope.item);
+				if (!scope.itemEntity) {
+					scope.itemEntity = data.getBuildingByClassName(scope.item);
+				}
 			}
-		}
-		if (!scope.size) {
-			scope.size = 32;
-		}
-		scope.imageSize = scope.size > 64 ? 256 : 64;
+			if (!scope.size) {
+				scope.size = 32;
+			}
+			scope.imageSize = scope.size > 64 ? 256 : 64;
+		});
 	}
 
 }

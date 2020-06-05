@@ -4329,6 +4329,11 @@ ui-bootstrap4@^3.0.6:
   resolved "https://registry.yarnpkg.com/ui-bootstrap4/-/ui-bootstrap4-3.0.6.tgz#bec796879455569872a1575786ca643ab00172ea"
   integrity sha512-Kh38WAu/S8EiyKRMaATkFjsbQplJHvP+g2lxitE5SbjQTDieua8T7d+mQNxbxTjfmJqGtVzsHQCHRmBVdKPeOg==
 
+ui-select@^0.19.8:
+  version "0.19.8"
+  resolved "https://registry.yarnpkg.com/ui-select/-/ui-select-0.19.8.tgz#74860848a7fd8bc494d9856d2f62776ea98637c1"
+  integrity sha1-dIYISKf9i8SU2YVtL2J3bqmGN8E=
+
 union-value@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/union-value/-/union-value-1.0.1.tgz#0b6fe7b835aecda61c6ea4d4f02c14221e109847"
@@ -4461,15 +4466,22 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
-vis-data@^6.4.1:
-  version "6.5.1"
-  resolved "https://registry.yarnpkg.com/vis-data/-/vis-data-6.5.1.tgz#cd11f8bbf4a17064559b7c75532c3d6f419ff290"
-  integrity sha512-bOIG0REskXot0JbuAYLFRR61xf4ls+nIYNnZ7X04iq2y/Vrg896A/bfquQjhsERZipOmCgllAR0d58OGyo9s0g==
+vis-data@6.4.1:
+  version "6.4.1"
+  resolved "https://registry.yarnpkg.com/vis-data/-/vis-data-6.4.1.tgz#2ee74ae3b376d3b911751a168c16b3d97c3fbca7"
+  integrity sha512-kFCFQg1adQbC1hDMKtNLaLjYUe4hCDhg2/iqM6qAFvLu0x58IDolZwBluMJuaJfhU3ScC2W1higqglIWNKIJeQ==
+  optionalDependencies:
+    vis-util "3.0.0"
 
-vis-network@^7.3.6:
-  version "7.6.4"
-  resolved "https://registry.yarnpkg.com/vis-network/-/vis-network-7.6.4.tgz#64d59f65072ce164e8abcdc520a2bab480673980"
-  integrity sha512-ywaigcV75m3SbZLeKeR1ZYfLeL88EraIdH0G6O6drr62TsosJ6p1HGWmgGy0YfGJ4DaEf/hnJ5JaQNzBpIRGbQ==
+vis-network@7.3.6:
+  version "7.3.6"
+  resolved "https://registry.yarnpkg.com/vis-network/-/vis-network-7.3.6.tgz#b0fe0a2a4fea027327f15fe095e395d2ec81c305"
+  integrity sha512-XmcjZaKmwEuDMUkcOV1zDaQOo6ANVwIlAfFDSEtOkWbUi34sZLYbxhpr4UFPYxpQA//TnNC9Rgvoivt7uqdxTw==
+
+vis-util@3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/vis-util/-/vis-util-3.0.0.tgz#9b0da1e86e9beb5fbea17f5af3a49263c48d7c87"
+  integrity sha512-1B66y7E1Trc+SBjR8zhEULa4NzmPLitZoYoyw685Xi9CYn5UyJrNIB9TI/MAnwN+UioSQ4ogDQYOtO501CjREg==
 
 vm-browserify@^1.0.1:
   version "1.1.2"

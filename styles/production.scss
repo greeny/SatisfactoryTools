@@ -1,0 +1,92 @@
+@import 'theme/theme_variables';
+
+.production-input {
+	table {
+		width: 100%;
+	}
+
+	margin-top: 10px;
+
+	.card-header {
+		padding: 0;
+		min-height: 48px;
+		vertical-align: middle;
+
+		.production-line-name {
+			display: flex;
+			align-items: center;
+			font-size: 24px;
+
+			input {
+				display: inline-block;
+				max-width: 50%;
+			}
+		}
+
+		.production-line-name-title {
+			font-size: 24px;
+		}
+
+		.production-image {
+			display: inline-block;
+			width: 48px;
+			height: 48px;
+			padding: 8px;
+		}
+
+		.btn-group {
+			display: flex;
+
+			.btn {
+				display: flex;
+				width: 48px;
+				align-items: center;
+				justify-content: center;
+
+				span:before {
+					font-size: 18px;
+				}
+			}
+		}
+	}
+}
+
+.production-item-picker {
+	.ui-select-toggle, .form-control {
+		background-color: $gray-300;
+	}
+
+	.ui-select-choices {
+		display: block;
+	}
+
+	i.caret {
+		top: 25% !important;
+		right: 13px !important;
+	}
+
+	i.caret:before {
+		color: $gray-200;
+		font-style: normal;
+		font-weight: 900;
+		font-family: "Font Awesome 5 Free";
+		content: "\f078";
+	}
+
+	.ui-select-placeholder {
+		display: inline-block !important;
+		color: $gray-600 !important;
+	}
+
+	.ui-select-placeholder.ng-hide {
+		display: none !important;
+	}
+
+	.ui-select-match-text {
+		color: $gray-700;
+
+		span {
+			margin-right: 15px;
+		}
+	}
+}
