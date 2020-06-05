@@ -1,11 +1,14 @@
-@import "~ui-bootstrap4/dist/ui-bootstrap-csp.css";
+@import '~ui-bootstrap4/dist/ui-bootstrap-csp.css';
+@import "~perfect-scrollbar/css/perfect-scrollbar.css";
+@import 'recipe-list.scss';
+@import 'production.scss';
 
-body.april-mode {
-	transform: rotate(180deg);
+:focus, .btn-default-focus {
+	outline: none;
 }
 
-.april-mode-toggle {
-	transform: rotate(180deg);
+.form-control {
+	background-color: $gray-300;
 }
 
 .navbar-brand {
@@ -25,75 +28,6 @@ a:hover {
 	background-color: #33475e;
 }
 
-.recipe-list {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-	grid-gap: 20px;
-	justify-content: stretch;
-
-	@media (max-width: 575px) {
-		grid-gap: 10px;
-		grid-template-columns: 1fr;
-	}
-
-	.card {
-		text-align: center;
-		max-width: 150px;
-
-		@media (max-width: 575px) {
-			max-width: unset;
-		}
-
-		.recipe-image {
-			margin: 10px auto;
-			display: block;
-			width: 64px;
-			height: 64px;
-
-			@media (max-width: 767px) {
-				width: 48px;
-				height: 48px;
-			}
-
-			@media (max-width: 575px) {
-				display: inline-block;
-				width: 32px;
-				height: 32px;
-				margin-right: 10px;
-				margin-top: 5px;
-				margin-bottom: 5px;
-			}
-		}
-
-		.recipe-name {
-			color: #eeeeee;
-			padding: 0 10px;
-			margin-bottom: 10px;
-
-			@media (max-width: 575px) {
-				margin-bottom: unset;
-			}
-		}
-	}
-}
-
-.recipe-table {
-	tr {
-		td, th {
-			vertical-align: middle;
-			text-align: center;
-		}
-
-		td:first-of-type {
-			text-align: left;
-		}
-	}
-
-	.item-amount {
-		font-size: 1.25em;
-	}
-}
-
 .visualization {
 	display: block;
 	margin: 20px 0;
@@ -106,4 +40,16 @@ a:hover {
 	a {
 		margin: 10px 0;
 	}
+}
+
+.cursor-pointer {
+	cursor: pointer;
+}
+
+.cursor-drag {
+	cursor: move;
+}
+
+.ui-select-choices-row {
+	margin-bottom: 0.3px;
 }

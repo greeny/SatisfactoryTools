@@ -18,7 +18,9 @@
 	<div class="recipe-list">
 		<div class="card text-center item-card" ng-repeat="className in ctrl.recentlyVisited.recent">
 			<a class="stretched-link recipe-name" ui-sref="item({item: ctrl.getItemByClassName(className).slug})">
-				<img class="recipe-image" ng-src="/assets/images/items/{{ctrl.getItemByClassName(className).slug}}_64.png">
+				<img class="recipe-image" lazy-load
+				     src="/assets/images/64x64_placeholder.png"
+				     img-src="/assets/images/items/{{ctrl.getItemByClassName(className).slug}}_64.png">
 				{{ctrl.getItemByClassName(className).name}}
 			</a>
 		</div>

@@ -19381,17 +19381,6 @@
 				"powerConsumptionExponent": 1.6
 			}
 		},
-		"Desc_Stair_1b_C": {
-			"slug": "stairs",
-			"name": "Stairs",
-			"description": "The Stairs allow you to move to the upper floors of your buildings. Height: 4",
-			"categories": [
-				"SC_Stair_C"
-			],
-			"buildMenuPriority": 97,
-			"className": "Desc_Stair_1b_C",
-			"metadata": {}
-		},
 		"Desc_Stairs_Left_01_C": {
 			"slug": "stairs-left",
 			"name": "Stairs Left",
@@ -19834,17 +19823,6 @@
 			],
 			"buildMenuPriority": 85,
 			"className": "Desc_Wall_Window_8x4_03_C",
-			"metadata": {}
-		},
-		"Desc_Wall_Window_8x4_03_Steel_C": {
-			"slug": "panel-window-steel",
-			"name": "Panel Window",
-			"description": "Snaps to foundations and other walls.\nThe windows allow Pioneers to see through the wall..",
-			"categories": [
-				"SC_Walls_C"
-			],
-			"buildMenuPriority": 85,
-			"className": "Desc_Wall_Window_8x4_03_Steel_C",
 			"metadata": {}
 		},
 		"Desc_Wall_Window_8x4_04_C": {

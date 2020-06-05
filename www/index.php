@@ -31,6 +31,52 @@
 			text-align: left;
 			background-color: #2B3E50;
 		}
+
+		.fullscreen-loader {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			display: flex;
+			background-color: #2B3E50;
+
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			z-index: 10000;
+		}
+
+		@keyframes loading {
+			0% {
+				opacity: 1;
+			}
+			99% {
+				opacity: 0;
+			}
+			100% {
+				z-index: -10;
+				opacity: 0;
+			}
+		}
+
+		.fullscreen-loader.hidden {
+			animation: loading 0.7s ease-in-out;
+			animation-fill-mode: forwards;
+		}
+
+		.fullscreen-loader .logo {
+			margin-bottom: 20px;
+		}
+
+		.fullscreen-loader .loader {
+			font-size: 50px;
+		}
+
+		.fullscreen-loader .loader-text, .fullscreen-loader .loader-text span {
+			margin-top: 20px;
+			font-size: 32px;
+		}
 	</style>
 	<link rel="stylesheet" href="/assets/css/fontawesome.min.css">
 	<base href="/" ng-class="{'april-mode': $root.aprilMode}">
@@ -38,6 +84,19 @@
 <body>
 
 <app></app>
+
+<div class="fullscreen-loader" ng-class="{hidden: true}">
+	<div class="logo">
+		<img src="/assets/images/logo/satisfactorySmall.png" height="60">
+		<img src="/assets/images/logo/tools.png" height="60">
+	</div>
+	<div>
+		<span class="loader fas fa-spin fa-sync-alt"></span>
+	</div>
+	<div class="loader-text">
+		<span ng-bind="'Entering'">Loading</span> the A.W.E.S.O.M.E.!
+	</div>
+</div>
 
 <script src="/assets/app.js?v=<?= filemtime(__DIR__ . '/assets/app.js') ?>" async></script>
 </body>

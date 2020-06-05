@@ -1,4 +1,4 @@
-import {ILocationProvider, IModule, ISCEProvider} from 'angular';
+import {ILocationProvider, IModule, ISCEProvider, IScope} from 'angular';
 import {StateProvider, UrlRouterProvider} from 'angular-ui-router';
 import {HomeController} from '@src/Module/Controllers/HomeController';
 import {AppDirective} from '@src/Module/Directives/AppDirective';
@@ -9,6 +9,8 @@ import {ProductionController} from '@src/Module/Controllers/ProductionController
 import {VisualizationComponent} from '@src/Module/Components/VisualizationComponent';
 import {ItemFilterComponent} from '@src/Module/Components/ItemFilterComponent';
 import {ItemFiltersService} from '@src/Module/Services/ItemFiltersService';
+import {PerfectScrollbarDirective} from '@src/Module/Directives/PerfectScrollbarDirective';
+import {LazyLoadDirective} from '@src/Module/Directives/LazyLoadDirective';
 
 export class AppModule
 {
@@ -55,31 +57,12 @@ export class AppModule
 		this.app.run(['$transitions', '$rootScope', ($transitions: any, $rootScope: any) => {
 			$rootScope.aprilMode = false;
 
-			const now = new Date();
-			if (now.getDate() === 1 && now.getMonth() === 3) {
-				$rootScope.aprilMode = true;
-				document.body.className += ' april-mode';
-				window.scrollTo(0, document.body.scrollHeight);
-			}
-
-			$rootScope.disableApril = () => {
-				$('body').removeClass('april-mode');
-				$rootScope.aprilMode = false;
-			};
-
 			$transitions.onFinish({}, () => {
-				const elements = document.getElementsByClassName('tooltip'); // TODO fix jQLite and replace with angular.element
+				const elements = document.getElementsByClassName('tooltip');
 				for (const index in elements) {
 					if (elements.hasOwnProperty(index)) {
 						elements[index].remove();
 					}
-				}
-				if ($rootScope.aprilMode) {
-					setTimeout(() => {
-						window.scrollTo(0, document.body.scrollHeight);
-					}, 0);
-				} else {
-					document.documentElement.scrollTop = 0;
 				}
 			});
 		}]);
@@ -96,16 +79,26 @@ export class AppModule
 			return new ItemIconDirective;
 		});
 
+		this.app.directive('perfectScrollbar', () => {
+			return new PerfectScrollbarDirective;
+		});
+
+		this.app.directive('lazyLoad', () => {
+			return new LazyLoadDirective;
+		});
+
 		this.app.directive('tooltip', () => {
 			return {
 				restrict: 'A',
-				link: (scope: any, element: any, attrs: any) => {
+				link: (scope: IScope, element: any, attrs: any) => {
 					element = $(element);
 					element.data('boundary', 'window');
 					element.on('mouseenter', () => {
 						element.tooltip('_fixTitle')
 							.tooltip('show');
 					}).on('mouseleave', () => {
+						element.tooltip('hide');
+					}).on('click', () => {
 						element.tooltip('hide');
 					});
 				},

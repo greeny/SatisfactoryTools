@@ -3,6 +3,7 @@ import {IJsonSchema} from '@src/Schema/IJsonSchema';
 import {Item} from '@src/Data/Item';
 import {Recipe} from '@src/Data/Recipe';
 import {IMinerSchema} from '@src/Schema/IMinerSchema';
+import {IItemSchema} from '@src/Schema/IItemSchema';
 
 export class Model
 {
@@ -35,7 +36,7 @@ export class Model
 		throw new Error('Unknown item ' + className);
 	}
 
-	public getAutomatableItems(): Item[]
+	public getAutomatableItems(): IItemSchema[]
 	{
 		const items: Item[] = [];
 		itemLoop:
@@ -53,7 +54,11 @@ export class Model
 				}
 			}
 		}
-		return items;
+		return items.sort((item1: Item, item2: Item) => {
+			return item1.prototype.name.localeCompare(item2.prototype.name);
+		}).map((item: Item) => {
+			return item.prototype;
+		});
 	}
 
 	public isRawResource(item: Item): boolean
