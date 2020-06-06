@@ -12,6 +12,8 @@ import 'script-loader!../node_modules/angular-ui-router/release/angular-ui-route
 import 'script-loader!../node_modules/ui-bootstrap4/dist/ui-bootstrap.js';
 import 'script-loader!../node_modules/ui-bootstrap4/dist/ui-bootstrap-tpls.js';
 import 'script-loader!../node_modules/ui-select/dist/select.js';
+import 'script-loader!../node_modules/perfect-scrollbar/dist/perfect-scrollbar.min';
+
 import {AppModule} from '@src/Module/AppModule';
 
 new AppModule(angular.module('app', ['ui.select', 'ui.router', 'ui.bootstrap', 'ngSanitize', 'ngAnimate'])).register();

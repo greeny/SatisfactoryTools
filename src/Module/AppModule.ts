@@ -9,6 +9,7 @@ import {ProductionController} from '@src/Module/Controllers/ProductionController
 import {VisualizationComponent} from '@src/Module/Components/VisualizationComponent';
 import {ItemFilterComponent} from '@src/Module/Components/ItemFilterComponent';
 import {ItemFiltersService} from '@src/Module/Services/ItemFiltersService';
+import {PerfectScrollbarDirective} from '@src/Module/Directives/PerfectScrollbarDirective';
 
 export class AppModule
 {
@@ -94,6 +95,10 @@ export class AppModule
 
 		this.app.directive('itemIcon', () => {
 			return new ItemIconDirective;
+		});
+
+		this.app.directive('perfectScrollbar', () => {
+			return new PerfectScrollbarDirective;
 		});
 
 		this.app.directive('tooltip', () => {

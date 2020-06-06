@@ -46,6 +46,11 @@ export class Data
 		return this.getRawData().items;
 	}
 
+	public getAllBuildings(): { [key: string]: IBuildingSchema }
+	{
+		return this.getRawData().buildings;
+	}
+
 	public getItemBySlug(slug: string): IItemSchema|null
 	{
 		const items = this.getRawData().items;

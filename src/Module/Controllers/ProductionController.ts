@@ -5,6 +5,7 @@ import {ProductionTab} from '@src/Tools/Production/ProductionTab';
 import {IItemSchema} from '@src/Schema/IItemSchema';
 import {Constants} from '@src/Constants';
 import {IProductionToolRequestItem} from '@src/Tools/Production/IProductionToolRequest';
+import data from '@src/Data/Data';
 
 export class ProductionController
 {
@@ -75,4 +76,10 @@ export class ProductionController
 		tab.tool.productionRequest.production = [];
 	}
 
+	public getIconSet(): string[]
+	{
+		const itemsArray = Object.values(data.getAllItems());
+		const buildingsArray = Object.values(data.getAllBuildings());
+		return [...itemsArray, ...buildingsArray].map((entry) => entry.className);
+	}
 }

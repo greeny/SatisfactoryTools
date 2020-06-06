@@ -28,10 +28,33 @@
 		}
 
 		.production-image {
-			display: inline-block;
-			width: 48px;
-			height: 48px;
-			padding: 8px;
+			//padding: 8px;
+			align-items: center;
+
+			.dropdown-menu {
+				$defaultPadding: 8px;
+				$maxEntryWidth: 48px;
+				$entriesLimit: 6;
+				.dropdown-menu-content{
+					display: flex;
+					position: relative;
+					flex-direction: row;
+					flex-wrap: wrap;
+					max-width: ($maxEntryWidth * $entriesLimit) + 2 * $defaultPadding;
+					padding: $defaultPadding;
+					max-height: 30vh;
+
+					.dropdown-item {
+						flex: 100/$entriesLimit ($maxEntryWidth - $defaultPadding);
+						max-width: $maxEntryWidth;
+						padding: $defaultPadding;
+
+						&.active, &:hover {
+							background-color: $primary;
+						}
+					}
+				}
+			}
 		}
 
 		.btn-group {

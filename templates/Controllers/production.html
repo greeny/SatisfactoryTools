@@ -25,9 +25,24 @@
 	<div ng-show="ctrl.tab === tab">
 		<div class="card production-input">
 			<div class="card-header d-flex">
-				<span class="production-image">
-					<item-icon ng-if="tab.item" item="tab.item" size="32"></item-icon>
-				</span>
+				<div class="production-image d-flex">
+					<span class="btn btn-outline-light dropdown-toggle" id="itemIconPickerToggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tooltip title="Change production line icon">
+						<span ng-if="tab.tool.productionRequest.icon">
+							<item-icon item="tab.tool.productionRequest.icon" size="32"></item-icon>
+						</span>
+						<span ng-if="!tab.tool.productionRequest.icon && tab.tool.productionRequest.production[0].item">
+							<item-icon item="tab.tool.productionRequest.production[0].item" size="32"></item-icon>
+						</span>
+						<span ng-if="!tab.tool.productionRequest.icon && !tab.tool.productionRequest.production[0].item">
+							<span class="fas fa-question"></span>
+						</span>
+					</span>
+					<div class="dropdown-menu" aria-labelledby="itemIconPickerToggle">
+						<div class="dropdown-menu-content" perfect-scrollbar>
+							<item-icon class="dropdown-item" item="icon" ng-class="{'active': icon === tab.tool.productionRequest.icon || (!tab.tool.productionRequest.icon && icon === tab.tool.productionRequest.production[0].item)}" size="32" ng-repeat="icon in ctrl.getIconSet()" ng-click="tab.tool.productionRequest.icon = icon"></item-icon>
+						</div>
+					</div>
+				</div>
 				<span class="production-line-name flex-grow-1">
 					<span class="production-line-name-title mr-2" ng-hide="ctrl.renaming">{{tab.productionRequest.name}}</span>
 					<form class="mr-2 flex-grow-1" ng-submit="ctrl.renaming = false" ng-show="ctrl.renaming">
