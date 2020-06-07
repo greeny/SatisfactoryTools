@@ -7,6 +7,7 @@ import {IItemSchema} from '@src/Schema/IItemSchema';
 import {Constants} from '@src/Constants';
 import data from '@src/Data/Data';
 import {IRecipeSchema} from '@src/Schema/IRecipeSchema';
+import {IResourceSchema} from '@src/Schema/IResourceSchema';
 
 export class ProductionController
 {
@@ -16,6 +17,7 @@ export class ProductionController
 	public addingInProgress: boolean;
 	public cloningInProgress: boolean;
 	public readonly tool: ProductionTool;
+	public readonly rawResources: IResourceSchema[] = data.getResources();
 	public readonly craftableItems: IItemSchema[] = model.getAutomatableItems();
 	public readonly alternateRecipes: IRecipeSchema[] = data.getAlternateRecipes();
 	public readonly basicRecipes: IRecipeSchema[] = data.getBaseItemRecipes();

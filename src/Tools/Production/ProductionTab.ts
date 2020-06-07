@@ -1,8 +1,8 @@
 import {ProductionTool} from '@src/Tools/Production/ProductionTool';
-import {IScope} from 'angular';
-import {IProductionToolRequestItem} from '@src/Tools/Production/IProductionToolRequest';
+import angular, {IScope} from 'angular';
+import {IProductionToolRequest, IProductionToolRequestItem} from '@src/Tools/Production/IProductionToolRequest';
 import {Constants} from '@src/Constants';
-import data from '@src/Data/Data';
+import data, {Data} from '@src/Data/Data';
 
 export class ProductionTab
 {
@@ -16,23 +16,28 @@ export class ProductionTab
 		basicRecipesExpanded: true,
 		alternateRecipesQuery: '',
 		basicRecipesQuery: '',
+		resultLoading: false,
 	};
 
 	public tab: string = 'production';
 
 	private readonly unregisterCallback: () => void;
 
-	public constructor(private readonly scope: IScope)
+	public constructor(private readonly scope: IScope, productionToolRequest?: IProductionToolRequest)
 	{
 		this.tool = new ProductionTool;
+
+		if (productionToolRequest) {
+			this.tool.productionRequest = productionToolRequest;
+		} else {
+			this.addEmptyProduct();
+		}
 
 		this.unregisterCallback = scope.$watch(() => {
 			return this.tool.productionRequest;
 		}, () => {
 			this.tool.calculate();
 		}, true);
-
-		this.addEmptyProduct();
 	}
 
 	public unregister(): void
@@ -104,6 +109,21 @@ export class ProductionTab
 		}
 	}
 
+	public isResourceEnabled(className: string): boolean
+	{
+		return this.tool.productionRequest.blockedResources.indexOf(className) === -1;
+	}
+
+	public toggleResource(className: string): void
+	{
+		const index = this.tool.productionRequest.blockedResources.indexOf(className);
+		if (index === -1) {
+			this.tool.productionRequest.blockedResources.push(className);
+		} else {
+			this.tool.productionRequest.blockedResources.splice(index, 1);
+		}
+	}
+
 	public isBasicRecipeEnabled(className: string): boolean
 	{
 		return this.tool.productionRequest.blockedRecipes.indexOf(className) === -1;
@@ -136,6 +156,18 @@ export class ProductionTab
 		}
 	}
 
+	public setDefaultRawResources(): void
+	{
+		this.tool.productionRequest.resourceMax = angular.copy(Data.resourceAmounts);
+	}
+
+	public zeroRawResources(): void
+	{
+		for (const key in this.tool.productionRequest.resourceMax) {
+			this.tool.productionRequest.resourceMax[key] = 0;
+		}
+	}
+
 	public getIconSet(): string[]
 	{
 		const productionArray = this.tool.productionRequest.production.filter((product) => {
@@ -151,5 +183,4 @@ export class ProductionTab
 		});
 		return result;
 	}
-
 }

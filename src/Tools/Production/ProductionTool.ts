@@ -5,6 +5,7 @@ import {RecipeResult} from '@src/Tools/Production/RecipeResult';
 import {ProductionToolResult} from '@src/Tools/Production/ProductionToolResult';
 import {IProductionToolRequest} from '@src/Tools/Production/IProductionToolRequest';
 import data, {Data} from '@src/Data/Data';
+import angular from 'angular';
 
 export class ProductionTool
 {
@@ -48,8 +49,8 @@ export class ProductionTool
 			blockedRecipes: [],
 			blockedResources: [],
 			production: [],
-			resourceMax: Data.resourceAmounts,
-			resourceWeight: Data.resourceWeights,
+			resourceMax: angular.copy(Data.resourceAmounts),
+			resourceWeight: angular.copy(Data.resourceWeights),
 		};
 	}
 

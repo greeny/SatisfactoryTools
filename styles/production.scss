@@ -166,6 +166,34 @@ $border: 1px solid rgba(0, 0, 0, 0.125);
 	}
 }
 
+.card-header-with-buttons {
+	display: flex;
+	padding: 0;
+	height: $header-height;
+	background-color: transparent;
+
+	.card-header-text {
+		display: flex;
+		align-items: center;
+		margin-left: 20px;
+		margin-right: 10px;
+		font-size: 20px;
+		flex-grow: 1;
+	}
+
+	.btn-group {
+		height: 100%;
+		display: flex !important;
+
+		.btn {
+			display: flex !important;
+			min-width: $header-height;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+}
+
 .recipe-list-card {
 	vertical-align: middle;
 
@@ -212,10 +240,6 @@ $border: 1px solid rgba(0, 0, 0, 0.125);
 			padding-left: 6px;
 			width: 28px;
 		}
-
-		td:nth-child(3) {
-			text-align: right;
-		}
 	}
 
 	input {
@@ -236,10 +260,6 @@ $border: 1px solid rgba(0, 0, 0, 0.125);
 			min-width: $header-height;
 			align-items: center;
 			justify-content: center;
-
-			span:before {
-				font-size: 16px;
-			}
 		}
 	}
 }
@@ -288,6 +308,25 @@ $border: 1px solid rgba(0, 0, 0, 0.125);
 
 		span {
 			margin-right: 15px;
+		}
+	}
+}
+
+.item-list {
+	width: 100%;
+
+	tbody {
+		tr:hover {
+			background-color: $gray-700;
+		}
+	}
+
+	td {
+		width: 50%;
+
+		&:nth-child(1) {
+			padding-left: 10px;
+			cursor: pointer;
 		}
 	}
 }
