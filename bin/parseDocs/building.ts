@@ -21,6 +21,10 @@ export default function parseBuildings(buildings: {
 {
 	const result: IBuildingSchema[] = [];
 	for (const building of buildings) {
+		if (building.ClassName === 'Build_Stair_1b_C') {
+			continue;
+		}
+
 		const metadata: IBuildingMetadataSchema = {};
 
 		if (typeof building.mSpeed !== 'undefined') {
@@ -88,11 +92,6 @@ export default function parseBuildings(buildings: {
 			className: fixClassName ? building.ClassName.replace('Build_', 'Desc_') : building.ClassName,
 			metadata: metadata,
 		});
-
-		if (building.ClassName === 'Build_Wall_Window_8x4_03_C') {
-			building.ClassName = 'Build_Wall_Window_8x4_03_Steel_C'; // fix for steel window wall which isn't present in Docs.json
-			result.push(...parseBuildings([building], true));
-		}
 	}
 	return result;
 }

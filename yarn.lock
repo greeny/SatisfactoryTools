@@ -77,6 +77,13 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-13.13.6.tgz#caa6756b64d30547a2082235531fa0dd8cba1b6e"
   integrity sha512-zqRj8ugfROCjXCNbmPBe2mmQ0fJWP9lQaN519hwunOgpHgVykme4G6FW95++dyNFDvJUk4rtExkVkL0eciu5NA==
 
+"@types/perfect-scrollbar@^1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@types/perfect-scrollbar/-/perfect-scrollbar-1.3.0.tgz#3db3f5564ad31399ac90ad78906aedc511ea00b1"
+  integrity sha512-pyHgZJMMo0vUMrI3xIQPeG1fJ52OAZdvph8RbUQNAguJhI/67cS1Jo0zkMsR4DFwohcV4KPFfdeCEp55T4a21A==
+  dependencies:
+    perfect-scrollbar "*"
+
 "@types/sharp@^0.24.0":
   version "0.24.0"
   resolved "https://registry.yarnpkg.com/@types/sharp/-/sharp-0.24.0.tgz#28abfeac45b4dcb472305503105322e97a6c2672"
@@ -311,6 +318,20 @@ angular-ui-router@^1.0.25:
   integrity sha512-jg5nohfbfSujxdQXcAWZCYG3R1xG9OSlUwa/wsEGGZ06met5rkZopcysc4dq0tcCZToL8CxwBgLyqldTvbXfjw==
   dependencies:
     "@uirouter/core" "6.0.5"
+
+angular-ui-sortable@^0.19.0:
+  version "0.19.0"
+  resolved "https://registry.yarnpkg.com/angular-ui-sortable/-/angular-ui-sortable-0.19.0.tgz#4ac4391fc4d4de57110db4b5d31a7c198d314fd0"
+  integrity sha512-u/uc981Nzg4XN1bMU9qKleMTSt7F1XjMWnyGw6gxPLIeQeLZm8jWNy7tj8y2r2HmvzXFbQVq2z6rObznFKAekQ==
+  dependencies:
+    angular ">=1.2.x"
+    jquery ">=3.1.x"
+    jquery-ui-dist ">=1.12.x"
+
+angular@>=1.2.x:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/angular/-/angular-1.8.0.tgz#b1ec179887869215cab6dfd0df2e42caa65b1b51"
+  integrity sha512-VdaMx+Qk0Skla7B5gw77a8hzlcOakwF8mjlW13DpIWIDlfqwAbSSLfd8N/qZnzEmQF4jC4iofInd3gE7vL8ZZg==
 
 angular@^1.5.0-beta.0, angular@^1.7.8:
   version "1.7.9"
@@ -2183,7 +2204,12 @@ javascript-lp-solver@^0.4.24:
   resolved "https://registry.yarnpkg.com/javascript-lp-solver/-/javascript-lp-solver-0.4.24.tgz#3bb5f8aa051f0bf04747e39130133a0f738f635c"
   integrity sha512-5edoDKnMrt/u3M6GnZKDDIPxOyFOg+WrwDv8mjNiMC2DePhy2H9/FFQgf4ggywaXT1utvkxusJcjQUER72cZmA==
 
-jquery@^3.4.1:
+jquery-ui-dist@>=1.12.x:
+  version "1.12.1"
+  resolved "https://registry.yarnpkg.com/jquery-ui-dist/-/jquery-ui-dist-1.12.1.tgz#5c0815d3cc6f90ff5faaf5b268a6e23b4ca904fa"
+  integrity sha1-XAgV08xvkP9fqvWyaKbiO0ypBPo=
+
+jquery@>=3.1.x, jquery@^3.4.1:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.5.1.tgz#d7b4d08e1bfdb86ad2f1a3d039ea17304717abb5"
   integrity sha512-XwIBPqcMn57FxfT+Go5pzySnm4KWkT1Tv7gjrpT1srtf8Weynl6R273VJ5GjkRb51IzMp5nbaPjJXMWeju2MKg==
@@ -3059,6 +3085,11 @@ pbkdf2@^3.0.3:
     ripemd160 "^2.0.1"
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
+
+perfect-scrollbar@*, perfect-scrollbar@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/perfect-scrollbar/-/perfect-scrollbar-1.5.0.tgz#821d224ed8ff61990c23f26db63048cdc75b6b83"
+  integrity sha512-NrNHJn5mUGupSiheBTy6x+6SXCFbLlm8fVZh9moIzw/LgqElN5q4ncR4pbCBCYuCJ8Kcl9mYM0NgDxvW+b4LxA==
 
 performance-now@^2.1.0:
   version "2.1.0"
@@ -4329,6 +4360,11 @@ ui-bootstrap4@^3.0.6:
   resolved "https://registry.yarnpkg.com/ui-bootstrap4/-/ui-bootstrap4-3.0.6.tgz#bec796879455569872a1575786ca643ab00172ea"
   integrity sha512-Kh38WAu/S8EiyKRMaATkFjsbQplJHvP+g2lxitE5SbjQTDieua8T7d+mQNxbxTjfmJqGtVzsHQCHRmBVdKPeOg==
 
+ui-select@^0.19.8:
+  version "0.19.8"
+  resolved "https://registry.yarnpkg.com/ui-select/-/ui-select-0.19.8.tgz#74860848a7fd8bc494d9856d2f62776ea98637c1"
+  integrity sha1-dIYISKf9i8SU2YVtL2J3bqmGN8E=
+
 union-value@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/union-value/-/union-value-1.0.1.tgz#0b6fe7b835aecda61c6ea4d4f02c14221e109847"
@@ -4461,15 +4497,22 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
-vis-data@^6.4.1:
-  version "6.5.1"
-  resolved "https://registry.yarnpkg.com/vis-data/-/vis-data-6.5.1.tgz#cd11f8bbf4a17064559b7c75532c3d6f419ff290"
-  integrity sha512-bOIG0REskXot0JbuAYLFRR61xf4ls+nIYNnZ7X04iq2y/Vrg896A/bfquQjhsERZipOmCgllAR0d58OGyo9s0g==
+vis-data@6.4.1:
+  version "6.4.1"
+  resolved "https://registry.yarnpkg.com/vis-data/-/vis-data-6.4.1.tgz#2ee74ae3b376d3b911751a168c16b3d97c3fbca7"
+  integrity sha512-kFCFQg1adQbC1hDMKtNLaLjYUe4hCDhg2/iqM6qAFvLu0x58IDolZwBluMJuaJfhU3ScC2W1higqglIWNKIJeQ==
+  optionalDependencies:
+    vis-util "3.0.0"
 
-vis-network@^7.3.6:
-  version "7.6.4"
-  resolved "https://registry.yarnpkg.com/vis-network/-/vis-network-7.6.4.tgz#64d59f65072ce164e8abcdc520a2bab480673980"
-  integrity sha512-ywaigcV75m3SbZLeKeR1ZYfLeL88EraIdH0G6O6drr62TsosJ6p1HGWmgGy0YfGJ4DaEf/hnJ5JaQNzBpIRGbQ==
+vis-network@7.3.6:
+  version "7.3.6"
+  resolved "https://registry.yarnpkg.com/vis-network/-/vis-network-7.3.6.tgz#b0fe0a2a4fea027327f15fe095e395d2ec81c305"
+  integrity sha512-XmcjZaKmwEuDMUkcOV1zDaQOo6ANVwIlAfFDSEtOkWbUi34sZLYbxhpr4UFPYxpQA//TnNC9Rgvoivt7uqdxTw==
+
+vis-util@3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/vis-util/-/vis-util-3.0.0.tgz#9b0da1e86e9beb5fbea17f5af3a49263c48d7c87"
+  integrity sha512-1B66y7E1Trc+SBjR8zhEULa4NzmPLitZoYoyw685Xi9CYn5UyJrNIB9TI/MAnwN+UioSQ4ogDQYOtO501CjREg==
 
 vm-browserify@^1.0.1:
   version "1.1.2"

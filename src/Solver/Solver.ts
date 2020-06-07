@@ -46,9 +46,12 @@ export class Solver
 		model.variables.rawResources = rawResources;
 		model.optimize.rawResources = 'max';
 
-		for (const itemAmount of productionRequest.production) {
-			model.constraints[itemAmount.item.prototype.className] = {
-				equal: parseFloat(itemAmount.amount + ''),
+		for (const production of productionRequest.production) {
+			if (production.item === null) {
+				continue;
+			}
+			model.constraints[production.item] = {
+				equal: parseFloat(production.amount + ''),
 			};
 		}
 

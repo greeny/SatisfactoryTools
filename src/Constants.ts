@@ -12,6 +12,12 @@ export class Constants
 		SOLID: 'solid',
 		LIQUID: 'liquid',
 	};
+
+	public static PRODUCTION_TYPE: {PER_MINUTE: string, MAXIMIZE: string} = {
+		PER_MINUTE: 'perMinute',
+		MAXIMIZE: 'max',
+	};
+
 }
 
 export type STACK_SIZE_ONE = 1;

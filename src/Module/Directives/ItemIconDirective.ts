@@ -12,22 +12,36 @@ export class ItemIconDirective implements IDirective
 	public scope = {
 		item: '=',
 		size: '=?',
+		hideTooltip: '=?',
+		dynamic: '=?',
 	};
 
 	public link(scope: IItemIconDirectiveScope)
 	{
-		if (typeof scope.item === 'object') {
-			scope.itemEntity = scope.item;
-		} else {
-			scope.itemEntity = data.getItemByClassName(scope.item);
-			if (!scope.itemEntity) {
-				scope.itemEntity = data.getBuildingByClassName(scope.item);
+		if (!scope.hideTooltip) {
+			scope.hideTooltip = false; // to make sure, that's always false if not set
+		}
+		const update = () => {
+			if (typeof scope.item === 'object') {
+				scope.itemEntity = scope.item;
+			} else {
+				scope.itemEntity = data.getItemByClassName(scope.item);
+				if (!scope.itemEntity) {
+					scope.itemEntity = data.getBuildingByClassName(scope.item);
+				}
 			}
+			if (!scope.size) {
+				scope.size = 32;
+			}
+
+			scope.imageSize = scope.size > 64 ? 256 : 64;
+		};
+
+		if (scope.dynamic) {
+			scope.$on('$destroy', scope.$watch('item', update));
+		} else {
+			update();
 		}
-		if (!scope.size) {
-			scope.size = 32;
-		}
-		scope.imageSize = scope.size > 64 ? 256 : 64;
 	}
 
 }
@@ -39,5 +53,6 @@ interface IItemIconDirectiveScope extends IScope
 	itemEntity: IItemSchema|IBuildingSchema|null;
 	size: number;
 	imageSize: number;
-
+	dynamic: any;
+	hideTooltip: boolean|null;
 }
