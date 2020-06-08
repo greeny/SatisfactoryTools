@@ -18,6 +18,13 @@ $border: 1px solid rgba(0, 0, 0, 0.125);
 	background-color: $activeColor;
 }
 
+.visualization-result {
+	text-align: center;
+	font-size: 24px;
+	padding: 30px 10px;
+	border: 1px solid #4e5d6c;
+}
+
 .production-nav-tabs {
 	border-bottom: 0;
 

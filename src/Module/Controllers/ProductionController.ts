@@ -31,9 +31,10 @@ export class ProductionController
 
 	public static $inject = ['$scope', '$timeout'];
 
-	public constructor(private readonly scope: IScope, private readonly $timeout: ITimeoutService)
+	public constructor(private readonly scope: IProductionControllerScope, private readonly $timeout: ITimeoutService)
 	{
 		this.tool = new ProductionTool;
+		scope.$timeout = $timeout;
 		this.addEmptyTab();
 	}
 
@@ -92,5 +93,12 @@ export class ProductionController
 	{
 		return model.getItem(className).prototype;
 	}
+
+}
+
+export interface IProductionControllerScope extends IScope
+{
+
+	$timeout: ITimeoutService;
 
 }

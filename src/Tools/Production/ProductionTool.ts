@@ -5,12 +5,14 @@ import {RecipeResult} from '@src/Tools/Production/RecipeResult';
 import {ProductionToolResult} from '@src/Tools/Production/ProductionToolResult';
 import {IProductionToolRequest} from '@src/Tools/Production/IProductionToolRequest';
 import data, {Data} from '@src/Data/Data';
-import angular from 'angular';
+import angular, {ITimeoutService} from 'angular';
+import {ResultStatus} from '@src/Tools/Production/ResultStatus';
 
 export class ProductionTool
 {
 
 	public productionRequest: IProductionToolRequest;
+	public resultStatus: ResultStatus = ResultStatus.NO_INPUT;
 	public result: ProductionToolResult|undefined;
 
 	public constructor()
@@ -54,34 +56,65 @@ export class ProductionTool
 		};
 	}
 
-	public calculate(): void
+	public calculate($timeout?: ITimeoutService): void
 	{
-		const result = this.getResult();
+		let request = false;
 
-		if (!result.feasible) {
-			this.result = undefined;
-			return;
-		}
-
-		const recipes: RecipeResult[] = [];
-
-		for (const k in result) {
-			if (!result.hasOwnProperty(k) || !(k in model.recipes) || result[k] < 1e-8) {
-				continue;
+		for (const product of this.productionRequest.production) {
+			if (product.item && product.amount > 0) {
+				request = true;
+				break;
 			}
-			recipes.push(new RecipeResult(model.recipes[k], result[k] / 60));
 		}
 
-		if (!recipes.length) {
-			this.result = undefined;
+		if (!request) {
+			this.resultStatus = ResultStatus.NO_INPUT;
 			return;
 		}
 
-		this.result = new ProductionToolResult(recipes);
+		this.resultStatus = ResultStatus.CALCULATING;
+
+		const calc = () => {
+			console.log('calculation started');
+			const result = this.getResult();
+			console.log(angular.copy(result));
+
+			if (!result.feasible) {
+				this.result = undefined;
+				this.resultStatus = ResultStatus.NO_RESULT;
+				return;
+			}
+
+			const recipes: RecipeResult[] = [];
+
+			for (const k in result) {
+				if (!result.hasOwnProperty(k) || !(k in model.recipes) || result[k] < 1e-8) {
+					continue;
+				}
+				recipes.push(new RecipeResult(model.recipes[k], result[k] / 60));
+			}
+
+			if (!recipes.length) {
+				this.result = undefined;
+				this.resultStatus = ResultStatus.NO_RESULT;
+				return;
+			}
+
+			this.result = new ProductionToolResult(recipes);
+			console.log('result');
+			this.resultStatus = ResultStatus.RESULT;
+		};
+
+		if ($timeout) {
+			$timeout(0).then(calc);
+		} else {
+			calc();
+		}
 	}
 
 	private getResult(): ISolverResultSingle
 	{
+		console.log(angular.copy(this.productionRequest));
 		const result = Solver.solveProduction(this.productionRequest);
 		if ('midpoint' in result) {
 			return result.midpoint;

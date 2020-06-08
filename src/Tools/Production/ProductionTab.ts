@@ -1,8 +1,9 @@
 import {ProductionTool} from '@src/Tools/Production/ProductionTool';
-import angular, {IScope} from 'angular';
+import angular from 'angular';
 import {IProductionToolRequest, IProductionToolRequestItem} from '@src/Tools/Production/IProductionToolRequest';
 import {Constants} from '@src/Constants';
 import data, {Data} from '@src/Data/Data';
+import {IProductionControllerScope} from '@src/Module/Controllers/ProductionController';
 
 export class ProductionTab
 {
@@ -23,7 +24,7 @@ export class ProductionTab
 
 	private readonly unregisterCallback: () => void;
 
-	public constructor(private readonly scope: IScope, productionToolRequest?: IProductionToolRequest)
+	public constructor(private readonly scope: IProductionControllerScope, productionToolRequest?: IProductionToolRequest)
 	{
 		this.tool = new ProductionTool;
 
@@ -36,7 +37,7 @@ export class ProductionTab
 		this.unregisterCallback = scope.$watch(() => {
 			return this.tool.productionRequest;
 		}, () => {
-			this.tool.calculate();
+			this.tool.calculate(this.scope.$timeout);
 		}, true);
 	}
 

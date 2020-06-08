@@ -321,5 +321,15 @@
 		</div>
 	</div>
 
-	<visualization result="ctrl.tab.tool.result" class="visualization" ng-class="{visualization: 1, loading: ctrl.tab.state.resultLoading}"></visualization>
+	<div ng-show="ctrl.tab.tool.resultStatus === 'noResult'" class="visualization-result">
+		Unfortunately we couldn't calculate any result.
+	</div>
+	<div ng-show="ctrl.tab.tool.resultStatus === 'calculating'" class="visualization-result">
+		<span class="fas fa-spin fa-sync-alt"></span>
+		Calculating ...
+	</div>
+	<div ng-show="ctrl.tab.tool.resultStatus === 'noInput'" class="visualization-result">
+		Select an item to calculate.
+	</div>
+	<visualization ng-show="ctrl.tab.tool.resultStatus === 'result'" result="ctrl.tab.tool.result" class="visualization" ng-class="{visualization: 1, loading: ctrl.tab.state.resultLoading}"></visualization>
 </div>

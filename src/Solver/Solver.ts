@@ -25,20 +25,20 @@ export class Solver
 			if (data.items.hasOwnProperty(k)) {
 				const item = data.items[k];
 				if (!(item.className in data.resources)) {
-					model.constraints[item.className] = {
-						min: 0,
-					};
-				} else {
 					if (productionRequest.blockedResources.indexOf(item.className) !== -1) {
 						model.constraints[item.className] = {
 							equal: 0,
 						};
 					} else {
 						model.constraints[item.className] = {
-							max: 0,
-							min: productionRequest.blockedResources.indexOf(item.className) ? 0 : -productionRequest.resourceMax[item.className],
+							min: 0,
 						};
 					}
+				} else {
+					model.constraints[item.className] = {
+						max: 0,
+						min: -productionRequest.resourceMax[item.className],
+					};
 				}
 			}
 		}
