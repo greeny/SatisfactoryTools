@@ -4,6 +4,7 @@ import {IItemSchema} from '@src/Schema/IItemSchema';
 import {IRecipeSchema} from '@src/Schema/IRecipeSchema';
 import {IBuildingSchema, IManufacturerSchema} from '@src/Schema/IBuildingSchema';
 import {ISchematicSchema} from '@src/Schema/ISchematicSchema';
+import {IResourceSchema} from '@src/Schema/IResourceSchema';
 
 export class Data
 {
@@ -187,6 +188,11 @@ export class Data
 			}
 		}
 		return null;
+	}
+
+	public getResources(): IResourceSchema[]
+	{
+		return Object.values(this.getRawData().resources);
 	}
 
 }

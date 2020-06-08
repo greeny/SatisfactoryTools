@@ -3,21 +3,27 @@
 @import 'recipe-list.scss';
 @import 'production.scss';
 
+// hey bootswatch, we don't need microtext, thx!
+.navbar, .dropdown-menu, .dropdown-header, .table, label, .radio label, .checkbox label, .help-block {
+	font-size: 1rem;
+}
+
 :focus, .btn-default-focus {
 	outline: none;
 }
 
 .form-control {
 	background-color: $gray-300;
+
+	&:disabled {
+		background-color: $gray-500;
+		cursor: not-allowed;
+	}
 }
 
 .navbar-brand {
 	padding-top: 0;
 	padding-bottom: 0;
-}
-
-* {
-	font-size: 1rem;
 }
 
 a:hover {
@@ -30,7 +36,6 @@ a:hover {
 
 .visualization {
 	display: block;
-	margin: 20px 0;
 	width: 100%;
 	height: 800px;
 	border: 1px solid #4e5d6c;

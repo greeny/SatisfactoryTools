@@ -15,9 +15,11 @@ export class Solver
 			optimize: {},
 			constraints: {},
 			variables: {},
+			/*options: {
+				timeout: 2000,
+				tolerance: 0.1,
+			},*/
 		};
-
-		const rawResources: {[key: string]: number} = {};
 
 		for (const k in data.items) {
 			if (data.items.hasOwnProperty(k)) {
@@ -34,17 +36,15 @@ export class Solver
 					} else {
 						model.constraints[item.className] = {
 							max: 0,
-							min: -productionRequest.resourceMax[item.className],
+							min: productionRequest.blockedResources.indexOf(item.className) ? 0 : -productionRequest.resourceMax[item.className],
 						};
-						rawResources[item.className] = productionRequest.resourceWeight[item.className];
 					}
 				}
 			}
 		}
 
 		// TODO optimize for whatever is needed
-		model.variables.rawResources = rawResources;
-		model.optimize.rawResources = 'max';
+		model.optimize.weight = 'min';
 
 		for (const production of productionRequest.production) {
 			if (production.item === null) {
@@ -70,6 +70,10 @@ export class Solver
 					continue;
 				}
 
+				model.constraints[recipe.className] = {
+					min: 0,
+				};
+
 				let machine: IBuildingSchema|null = null;
 				if (recipe.producedIn.length > 0) {
 					machine = data.buildings[recipe.producedIn[0]];
@@ -81,12 +85,26 @@ export class Solver
 						def[ingredient.item] = 0;
 					}
 					def[ingredient.item] += -ingredient.amount;
+
+					if (ingredient.item in productionRequest.resourceWeight) {
+						if (!('weight' in def)) {
+							def.weight = 0;
+						}
+						def.weight += ingredient.amount * productionRequest.resourceWeight[ingredient.item];
+					}
 				}
 				for (const product of recipe.products) {
 					if (!(product.item in def)) {
 						def[product.item] = 0;
 					}
 					def[product.item] += product.amount;
+
+					if (product.item in productionRequest.resourceWeight) {
+						if (!('weight' in def)) {
+							def.weight = 0;
+						}
+						def.weight -= product.amount * productionRequest.resourceWeight[product.item];
+					}
 				}
 				if (machine && machine.metadata.powerConsumption) {
 					def.power = -machine.metadata.powerConsumption * recipe.time;

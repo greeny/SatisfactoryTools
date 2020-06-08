@@ -11,14 +11,12 @@ import {ItemFilterComponent} from '@src/Module/Components/ItemFilterComponent';
 import {ItemFiltersService} from '@src/Module/Services/ItemFiltersService';
 import {PerfectScrollbarDirective} from '@src/Module/Directives/PerfectScrollbarDirective';
 import {LazyLoadDirective} from '@src/Module/Directives/LazyLoadDirective';
+import {DataStorageService} from '@src/Module/Services/DataStorageService';
 
 export class AppModule
 {
 
-
-	public constructor(private readonly app: IModule)
-	{
-	}
+	public constructor(private readonly app: IModule) {}
 
 	public register(): void
 	{
@@ -110,6 +108,7 @@ export class AppModule
 
 		this.app.service('RecentlyVisitedItemsService', RecentlyVisitedItemsService);
 		this.app.service('ItemFiltersService', ItemFiltersService);
+		this.app.service('DataStorageService', DataStorageService);
 
 		this.app.controller('HomeController', HomeController);
 		this.app.controller('ItemController', ItemController);

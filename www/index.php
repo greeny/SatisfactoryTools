@@ -50,13 +50,16 @@
 		@keyframes loading {
 			0% {
 				opacity: 1;
+				font-size: 1em;
 			}
 			99% {
 				opacity: 0;
+				font-size: 30em;
 			}
 			100% {
 				z-index: -10;
 				opacity: 0;
+				font-size: 20em;
 			}
 		}
 
