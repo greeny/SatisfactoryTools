@@ -15,30 +15,26 @@ export class Solver
 			optimize: {},
 			constraints: {},
 			variables: {},
-			/*options: {
-				timeout: 2000,
-				tolerance: 0.1,
-			},*/
 		};
 
 		for (const k in data.items) {
 			if (data.items.hasOwnProperty(k)) {
 				const item = data.items[k];
 				if (!(item.className in data.resources)) {
+					model.constraints[item.className] = {
+						min: 0,
+					};
+				} else {
 					if (productionRequest.blockedResources.indexOf(item.className) !== -1) {
 						model.constraints[item.className] = {
 							equal: 0,
 						};
 					} else {
 						model.constraints[item.className] = {
-							min: 0,
+							max: 0,
+							min: -productionRequest.resourceMax[item.className],
 						};
 					}
-				} else {
-					model.constraints[item.className] = {
-						max: 0,
-						min: -productionRequest.resourceMax[item.className],
-					};
 				}
 			}
 		}
@@ -106,9 +102,9 @@ export class Solver
 						def.weight -= product.amount * productionRequest.resourceWeight[product.item];
 					}
 				}
-				if (machine && machine.metadata.powerConsumption) {
+				/*if (machine && machine.metadata.powerConsumption) {
 					def.power = -machine.metadata.powerConsumption * recipe.time;
-				}
+				}*/
 				model.variables[recipe.className] = def;
 			}
 		}

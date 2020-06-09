@@ -5,6 +5,17 @@
 
 <h1>Production</h1>
 
+<div class="alert alert-warning alert-dismissible fade show">
+	<b>Warning!</b> The tool is still in it's early stage. It took me a long time to make it but unfortunately I couldn't make it work in all cases.<br>
+	Currently I'm resolving the most obvious issues, but I didn't want to leave you waiting longer, so I'm just putting the tool out there.<br>
+	Calculations should be in most cases correct, but there are several cases where the tool just gives up and doesn't return any result. Usually this can be fixed by removing some alternate recipes or changing the number of items produced.<br>
+	I'm sorry to publish it in this stage, but I thought it would be better than delaying it again and again. Have fun!
+
+	<button type="button" class="close" data-dismiss="alert">
+		<span>&times;</span>
+	</button>
+</div>
+
 <ul class="nav nav-tabs production-nav-tabs">
 	<li class="nav-item" ng-repeat="tab in ctrl.tabs">
 		<span class="nav-link cursor-pointer" href="javascript: void(0);" ng-class="{active: tab === ctrl.tab}" ng-click="ctrl.tab = tab" tooltip title="{{tab.tool.name}}">
@@ -86,7 +97,7 @@
 								Recipes
 							</a>
 						</li>
-						<li class="nav-item">
+						<!--<li class="nav-item">
 							<a href="javascript: void(0);" class="nav-link" ng-class="{active: ctrl.tab.tab === 'power'}" ng-click="ctrl.tab.tab = 'power'">
 								<span class="fas fa-fw fa-bolt mr-1"></span>
 								Power
@@ -97,7 +108,7 @@
 								<span class="fas fa-fw fa-wrench mr-1"></span>
 								Nodes, miners, belts
 							</a>
-						</li>
+						</li>-->
 					</ul>
 				</div>
 
