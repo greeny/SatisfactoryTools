@@ -6074,11 +6074,11 @@
 			"ingredients": [
 				{
 					"item": "Desc_IronPlate_C",
-					"amount": 3
+					"amount": 2
 				},
 				{
 					"item": "Desc_IronRod_C",
-					"amount": 3
+					"amount": 4
 				}
 			],
 			"forBuilding": false,
@@ -9630,11 +9630,11 @@
 			"ingredients": [
 				{
 					"item": "Desc_IronPlate_C",
-					"amount": 5
+					"amount": 6
 				},
 				{
 					"item": "Desc_IronRod_C",
-					"amount": 5
+					"amount": 4
 				}
 			],
 			"forBuilding": true,
