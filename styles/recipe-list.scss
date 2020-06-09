@@ -1,28 +1,3 @@
-body.april-mode {
-	transform: rotate(180deg);
-}
-
-.april-mode-toggle {
-	transform: rotate(180deg);
-}
-
-.navbar-brand {
-	padding-top: 0;
-	padding-bottom: 0;
-}
-
-* {
-	font-size: 1rem;
-}
-
-a:hover {
-	color: #e77a31;
-}
-
-.bg-tertiary {
-	background-color: #33475e;
-}
-
 .recipe-list {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
@@ -90,12 +65,4 @@ a:hover {
 	.item-amount {
 		font-size: 1.25em;
 	}
-}
-
-.visualization {
-	display: block;
-	margin: 20px 0;
-	width: 100%;
-	height: 800px;
-	border: 1px solid #4e5d6c;
 }

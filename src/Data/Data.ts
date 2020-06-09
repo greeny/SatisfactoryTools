@@ -4,6 +4,7 @@ import {IItemSchema} from '@src/Schema/IItemSchema';
 import {IRecipeSchema} from '@src/Schema/IRecipeSchema';
 import {IBuildingSchema, IManufacturerSchema} from '@src/Schema/IBuildingSchema';
 import {ISchematicSchema} from '@src/Schema/ISchematicSchema';
+import {IResourceSchema} from '@src/Schema/IResourceSchema';
 
 export class Data
 {
@@ -46,6 +47,11 @@ export class Data
 		return this.getRawData().items;
 	}
 
+	public getAllBuildings(): { [key: string]: IBuildingSchema }
+	{
+		return this.getRawData().buildings;
+	}
+
 	public getItemBySlug(slug: string): IItemSchema|null
 	{
 		const items = this.getRawData().items;
@@ -55,6 +61,32 @@ export class Data
 			}
 		}
 		return null;
+	}
+
+	public getBaseItemRecipes(): IRecipeSchema[]
+	{
+		const recipes: IRecipeSchema[] = [];
+		const data = this.getRawData();
+		for (const key in data.recipes) {
+			const recipe = data.recipes[key];
+			if (!recipe.alternate && recipe.inMachine) {
+				recipes.push(recipe);
+			}
+		}
+		return recipes;
+	}
+
+	public getAlternateRecipes(): IRecipeSchema[]
+	{
+		const recipes: IRecipeSchema[] = [];
+		const data = this.getRawData();
+		for (const key in data.recipes) {
+			const recipe = data.recipes[key];
+			if (recipe.alternate) {
+				recipes.push(recipe);
+			}
+		}
+		return recipes;
 	}
 
 	public getRecipesForItem(item: IItemSchema): {[key: string]: IRecipeSchema}
@@ -157,6 +189,12 @@ export class Data
 		}
 		return null;
 	}
+
+	public getResources(): IResourceSchema[]
+	{
+		return Object.values(this.getRawData().resources);
+	}
+
 }
 
 export default new Data;

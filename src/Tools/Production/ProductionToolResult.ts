@@ -1,15 +1,17 @@
 import {RecipeResult} from '@src/Tools/Production/RecipeResult';
-import {Data, DataSet} from 'vis-network';
+import {DataSet} from 'vis-network';
 import model from '@src/Data/Model';
+import {IElkGraph} from '@src/Solver/IElkGraph';
 
 export class ProductionToolResult
 {
 
-	public data: Data;
 	public readonly nodes = new DataSet<{
 		id: number,
 		label: string,
 		title?: string,
+		x?: number,
+		y?: number,
 	}>();
 	public readonly edges = new DataSet<{
 		from: number,
@@ -18,17 +20,37 @@ export class ProductionToolResult
 		title?: string,
 		id?: number,
 	}>();
-	public rawResources: {[key: string]: {amount: number, data: Array<{amount: number, id: number}>}} = {};
+	public readonly elkGraph: IElkGraph = {
+		id: 'root',
+		layoutOptions: {
+			'elk.algorithm': 'org.eclipse.elk.conn.gmf.layouter.Draw2D',
+			//'elk.algorithm': 'org.eclipse.elk.layered',
+			'org.eclipse.elk.spacing.nodeNode': 40 + '',
+		},
+		children: [],
+		edges: [],
+	};
+	public rawResources: {[key: string]: {amount: number, data: {amount: number, id: number}[]}} = {};
+
+	private nodeWidth = 300;
+	private nodeHeight = 100;
 
 	public constructor(public readonly recipes: RecipeResult[])
 	{
 		let id = 1;
+		let nodeId = 1;
 		for (const recipe of recipes) {
 			this.nodes.add({
 				id: id,
 				label: '',
 				title: '',
 			});
+			this.elkGraph.children.push({
+				id: id.toString(),
+				width: this.nodeWidth,
+				height: this.nodeHeight,
+			});
+
 			recipe.nodeId = id;
 			this.updateNode(id);
 			id++;
@@ -50,6 +72,12 @@ export class ProductionToolResult
 								to: recipe.nodeId,
 								label: ingredient.item.prototype.name + '\n' + diff.toFixed(2) + '/min',
 							});
+							this.elkGraph.edges.push({
+								id: nodeId.toString(),
+								source: re.nodeId.toString(),
+								target: recipe.nodeId.toString(),
+							});
+							nodeId++;
 
 							amount -= diff;
 							if (amount <= 1e-6) {
@@ -86,6 +114,11 @@ export class ProductionToolResult
 					label: ProductionToolResult.getRecipeDisplayedName(item.prototype.name) + '\n' + resource.amount.toFixed(2) + ' / min',
 					title: '',
 				});
+				this.elkGraph.children.push({
+					id: id.toString(),
+					width: this.nodeWidth,
+					height: this.nodeHeight,
+				});
 
 				for (const data of resource.data) {
 					this.edges.add({
@@ -93,16 +126,17 @@ export class ProductionToolResult
 						to: data.id,
 						label: item.prototype.name + '\n' + data.amount.toFixed(2) + ' / min',
 					});
+					this.elkGraph.edges.push({
+						id: nodeId.toString(),
+						source: id.toString(),
+						target: data.id.toString(),
+					});
+					nodeId++;
 				}
 
 				id++;
 			}
 		}
-
-		this.data = {
-			nodes: this.nodes,
-			edges: this.edges,
-		};
 	}
 
 	public updateNode(id: number): void

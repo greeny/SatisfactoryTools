@@ -3,6 +3,7 @@ import {default as solver, ISolverModel, ISolverResult, ISolverResultSingle} fro
 import {IRecipeSchema} from '@src/Schema/IRecipeSchema';
 import {IJsonSchema} from '@src/Schema/IJsonSchema';
 import {IProductionToolRequest} from '@src/Tools/Production/IProductionToolRequest';
+import {IBuildingSchema} from '@src/Schema/IBuildingSchema';
 
 export class Solver
 {
@@ -14,41 +15,43 @@ export class Solver
 			optimize: {},
 			constraints: {},
 			variables: {},
+			/*options: {
+				timeout: 2000,
+				tolerance: 0.1,
+			},*/
 		};
-
-		const rawResources: {[key: string]: number} = {};
 
 		for (const k in data.items) {
 			if (data.items.hasOwnProperty(k)) {
 				const item = data.items[k];
 				if (!(item.className in data.resources)) {
-					model.constraints[item.className] = {
-						min: 0,
-					};
-				} else {
 					if (productionRequest.blockedResources.indexOf(item.className) !== -1) {
 						model.constraints[item.className] = {
 							equal: 0,
 						};
 					} else {
 						model.constraints[item.className] = {
-							max: 0,
-							min: -productionRequest.resourceMax[item.className],
+							min: 0,
 						};
-						rawResources[item.className] = productionRequest.resourceWeight[item.className];
 					}
+				} else {
+					model.constraints[item.className] = {
+						max: 0,
+						min: -productionRequest.resourceMax[item.className],
+					};
 				}
 			}
 		}
 
 		// TODO optimize for whatever is needed
-		model.variables.rawResources = rawResources;
-		model.optimize.rawResources = 'max';
+		model.optimize.weight = 'min';
 
-		for (const itemAmount of productionRequest.production) {
-			//delete model.optimize[itemAmount.item.prototype.className];
-			model.constraints[itemAmount.item.prototype.className] = {
-				equal: parseFloat(itemAmount.amount + ''),
+		for (const production of productionRequest.production) {
+			if (production.item === null) {
+				continue;
+			}
+			model.constraints[production.item] = {
+				equal: parseFloat(production.amount + ''),
 			};
 		}
 
@@ -67,18 +70,44 @@ export class Solver
 					continue;
 				}
 
+				model.constraints[recipe.className] = {
+					min: 0,
+				};
+
+				let machine: IBuildingSchema|null = null;
+				if (recipe.producedIn.length > 0) {
+					machine = data.buildings[recipe.producedIn[0]];
+				}
+
 				const def: {[key: string]: number} = {};
 				for (const ingredient of recipe.ingredients) {
 					if (!(ingredient.item in def)) {
 						def[ingredient.item] = 0;
 					}
 					def[ingredient.item] += -ingredient.amount;
+
+					if (ingredient.item in productionRequest.resourceWeight) {
+						if (!('weight' in def)) {
+							def.weight = 0;
+						}
+						def.weight += ingredient.amount * productionRequest.resourceWeight[ingredient.item];
+					}
 				}
 				for (const product of recipe.products) {
 					if (!(product.item in def)) {
 						def[product.item] = 0;
 					}
 					def[product.item] += product.amount;
+
+					if (product.item in productionRequest.resourceWeight) {
+						if (!('weight' in def)) {
+							def.weight = 0;
+						}
+						def.weight -= product.amount * productionRequest.resourceWeight[product.item];
+					}
+				}
+				if (machine && machine.metadata.powerConsumption) {
+					def.power = -machine.metadata.powerConsumption * recipe.time;
 				}
 				model.variables[recipe.className] = def;
 			}

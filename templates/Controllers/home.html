@@ -9,9 +9,7 @@
 	</div>
 
 	<div class="col-sm-6">
-		<div class="form-group">
-			<input type="text" class="form-control" placeholder="Search for an item" ng-model="ctrl.filter">
-		</div>
+		<item-filter></item-filter>
 	</div>
 </div>
 
@@ -20,7 +18,9 @@
 	<div class="recipe-list">
 		<div class="card text-center item-card" ng-repeat="className in ctrl.recentlyVisited.recent">
 			<a class="stretched-link recipe-name" ui-sref="item({item: ctrl.getItemByClassName(className).slug})">
-				<img class="recipe-image" ng-src="/assets/images/items/{{ctrl.getItemByClassName(className).slug}}_64.png">
+				<img class="recipe-image" lazy-load
+				     src="/assets/images/64x64_placeholder.png"
+				     img-src="/assets/images/items/{{ctrl.getItemByClassName(className).slug}}_64.png">
 				{{ctrl.getItemByClassName(className).name}}
 			</a>
 		</div>
@@ -28,7 +28,7 @@
 </div>
 
 <div class="recipe-list">
-	<div class="card text-center item-card" ng-repeat="item in ctrl.getFilteredItems()|orderBy:'name'|filter:ctrl.filter">
+	<div class="card text-center item-card" ng-repeat="item in ctrl.getFilteredItems() | orderBy:'name'">
 		<a class="recipe-name stretched-link" ui-sref="item({item: item.slug})">
 			<img class="recipe-image" ng-src="/assets/images/items/{{item.slug}}_64.png">
 			{{item.name}}

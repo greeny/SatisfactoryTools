@@ -8,7 +8,7 @@ export default function parseImageMapping(value: {
 {
 	const result = [];
 	for (const item of value) {
-		if (item.mPersistentBigIcon) {
+		if (item.mPersistentBigIcon && item.mPersistentBigIcon !== 'None') {
 			result.push({
 				className: item.ClassName,
 				image: item.mPersistentBigIcon.replace('Texture2D\'', '').replace('\'', '').replace(/\..*/, '.png'),
