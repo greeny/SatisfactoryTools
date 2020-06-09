@@ -5,5 +5,5 @@ export interface IGeneratorSchema
 	fuel: string[];
 	powerProduction: number;
 	powerProductionExponent: number;
-
+	waterToPowerRatio: number;
 }

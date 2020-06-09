@@ -10,8 +10,14 @@ import parseResourceExtractors from '@bin/parseDocs/resourceExtractor';
 import parseGenerators from '@bin/parseDocs/generator';
 import parseBuildingDescriptors from '@bin/parseDocs/buildingDescriptor';
 import parseSchematics from '@bin/parseDocs/schematic';
+import {Objects} from '@src/Utils/Objects';
+import {DiffGenerator} from '@src/Utils/DiffGenerator/DiffGenerator';
+import {DiffFormatter} from '@src/Utils/DiffGenerator/DiffFormatter';
+import parseImageMapping from '@bin/parseDocs/imageMapping';
+import {Strings} from '@src/Utils/Strings';
 
 const docs = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'Docs.json')).toString());
+const oldData: IJsonSchema = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'data.json')).toString()) as IJsonSchema;
 
 const json: IJsonSchema = {
 	recipes: {},
@@ -25,6 +31,7 @@ const json: IJsonSchema = {
 
 let biomass: IItemSchema[] = [];
 let extraInfo: any[] = [];
+let imageMapping: {[key: string]: string} = {};
 
 for (const definitions of docs) {
 	switch (definitions.NativeClass) {
@@ -34,6 +41,9 @@ for (const definitions of docs) {
 		case 'Class\'/Script/FactoryGame.FGItemDescriptorNuclearFuel\'':
 			for (const item of parseItemDescriptors(definitions.Classes)) {
 				json.items[item.className] = item;
+			}
+			for (const item of parseImageMapping(definitions.Classes)) {
+				imageMapping[item.className] = item.image;
 			}
 			break;
 		case 'Class\'/Script/FactoryGame.FGRecipe\'':
@@ -45,6 +55,9 @@ for (const definitions of docs) {
 			for (const item of parseItemDescriptors(definitions.Classes)) {
 				json.items[item.className] = item;
 			}
+			for (const item of parseImageMapping(definitions.Classes)) {
+				imageMapping[item.className] = item.image;
+			}
 			for (const resource of parseResourceDescriptors(definitions.Classes)) {
 				json.resources[resource.item] = resource;
 			}
@@ -54,12 +67,10 @@ for (const definitions of docs) {
 			for (const item of biomass) {
 				json.items[item.className] = item;
 			}
-			break;
-		/*case 'Class\'/Script/FactoryGame.FGVehicleDescriptor\'': TODO add vehicles, images and name+description
-			for (const building of parseBuildings(definitions.Classes)) {
-				json.buildings[building.className] = building;
+			for (const item of parseImageMapping(definitions.Classes)) {
+				imageMapping[item.className] = item.image;
 			}
-			break;*/
+			break;
 		case 'Class\'/Script/FactoryGame.FGBuildablePole\'':
 		case 'Class\'/Script/FactoryGame.FGBuildableConveyorBelt\'':
 		case 'Class\'/Script/FactoryGame.FGBuildableWire\'':
@@ -93,16 +104,23 @@ for (const definitions of docs) {
 		case 'Class\'/Script/FactoryGame.FGBuildableTrainPlatformEmpty\'':
 		case 'Class\'/Script/FactoryGame.FGBuildableSplitterSmart\'':
 		case 'Class\'/Script/FactoryGame.FGBuildableWalkway\'':
+		case 'Class\'/Script/FactoryGame.FGVehicleDescriptor\'':
 			for (const building of parseBuildings(definitions.Classes, true)) {
 				json.buildings[building.className] = building;
+			}
+			for (const item of parseImageMapping(definitions.Classes)) {
+				imageMapping[item.className] = item.image;
 			}
 			break;
 		case 'Class\'/Script/FactoryGame.FGBuildableResourceExtractor\'':
-			for (const miner of parseResourceExtractors(definitions.Classes)) {
-				json.miners[miner.className] = miner;
-			}
 			for (const building of parseBuildings(definitions.Classes, true)) {
 				json.buildings[building.className] = building;
+			}
+			for (const item of parseImageMapping(definitions.Classes)) {
+				imageMapping[item.className] = item.image;
+			}
+			for (const miner of parseResourceExtractors(definitions.Classes)) {
+				json.miners[miner.className] = miner;
 			}
 			break;
 		case 'Class\'/Script/FactoryGame.FGBuildableGeneratorFuel\'':
@@ -111,12 +129,18 @@ for (const definitions of docs) {
 			for (const building of parseBuildings(definitions.Classes, true)) {
 				json.buildings[building.className] = building;
 			}
+			for (const item of parseImageMapping(definitions.Classes)) {
+				imageMapping[item.className] = item.image;
+			}
 			for (const generator of parseGenerators(definitions.Classes)) {
 				json.generators[generator.className] = generator;
 			}
 			break;
 		case 'Class\'/Script/FactoryGame.FGBuildingDescriptor\'':
 			extraInfo = parseBuildingDescriptors(definitions.Classes);
+			for (const item of parseImageMapping(definitions.Classes)) {
+				imageMapping[item.className] = item.image;
+			}
 			break;
 		case 'Class\'/Script/FactoryGame.FGSchematic\'':
 			for (const schematic of parseSchematics(definitions.Classes)) {
@@ -137,18 +161,48 @@ json.buildings['Desc_RadarTower_C'] = {
 	name: 'Radar Tower',
 };
 
-// add missing nuclear waste
-json.items['Desc_NuclearWaste_C'] = {
-	className: 'Desc_NuclearWaste_C',
-	liquid: false,
-	radioactiveDecay: 0.1,
-	energyValue: 0,
-	stackSize: 500,
-	description: 'Nuclear Waste is the byproduct of nuclear power plants. You gotta find a way to handle all of this.',
-	name: 'Nuclear Waste',
-	fluidColor: {r: 0, g: 0, b: 0, a: 0},
-	slug: 'nuclear-waste',
-};
+const vehicleMapping: {
+	key: string,
+	name: string,
+	description: string,
+}[] = [
+	{
+		key: 'Desc_Truck_C',
+		name: 'Truck',
+		description: '48 slot inventory. Has a built in Craft Bench. Can be automated to pick up and deliver resources at Truck Stations. Nicknamed the Unit by FICSIT pioneers because of its massive frame.',
+	},
+	{
+		key: 'Desc_Tractor_C',
+		name: 'Tractor',
+		description: '25 slot inventory. Has a built in Craft Bench. Can be automated to pick up and deliver resources at Truck Stations. Nicknamed the Sugarcube by FICSIT pioneers.',
+	},
+	{
+		key: 'Desc_FreightWagon_C',
+		name: 'Freight Car',
+		description: 'The Freight Car is used to transport large quantity of resources from one place to another. Resources are loaded or unloaded at Freight Platforms.\nMust be build on Railway.',
+	},
+	{
+		key: 'Desc_Locomotive_C',
+		name: 'Electric Locomotive',
+		description: 'This locomotive is used to move Freight Cars from station to station.\nRequires 25-110MW of Power to drive.\nMust be built on railway.\nNamed \'Leif\' by FISCIT pioneers because of its reliability.',
+	},
+	{
+		key: 'Desc_Explorer_C',
+		name: 'Explorer',
+		description: '24 slot inventory. Has a built in craft bench. Fast and nimble exploration vehicle. Tuned for really rough terrain and can climb almost vertical surfaces.',
+	},
+	{
+		key: 'Desc_CyberWagon_C',
+		name: 'Cyber Wagon',
+		description: 'Absolutely indestructible.\nNeeds no further introduction.',
+	},
+];
+
+for (const item of vehicleMapping) {
+	json.buildings[item.key].name = item.name;
+	json.buildings[item.key].description = item.description;
+	json.buildings[item.key].slug = Strings.webalize(item.name);
+}
 
 // add extra info to buildings
 for (const info of extraInfo) {
@@ -194,4 +248,54 @@ for (const key in json.recipes) {
 	}
 }
 
+// attach extractable resources instead of keeping empty array with "everything allowed"
+for (const minerKey in json.miners) {
+	if (json.miners[minerKey].allowedResources.length > 0) {
+		continue;
+	}
+
+	const allowedResources = [] as string[];
+	for (const resourceKey in json.resources) {
+		if (!json.items[resourceKey]) {
+			throw new Error(`Item of resource type "${resourceKey}" was not found.`);
+		}
+
+		const item = json.items[resourceKey];
+
+		if (item.liquid === json.miners[minerKey].allowLiquids) {
+			allowedResources.push(resourceKey);
+		}
+	}
+
+	allowedResources.sort();
+	json.miners[minerKey].allowedResources = allowedResources;
+}
+
+for (const key in json) {
+	if (json.hasOwnProperty(key)) {
+		json[key as keyof IJsonSchema] = Objects.sortByKeys(json[key as keyof IJsonSchema]);
+	}
+}
+
+const slugs: string[] = [];
+for (const key in json.items) {
+	const slug = json.items[key].slug;
+	if (slugs.indexOf(slug) !== -1) {
+		console.error('Duplicate slug: ' + slug);
+	}
+	slugs.push(slug);
+}
+for (const key in json.buildings) {
+	const slug = json.buildings[key].slug;
+	if (slugs.indexOf(slug) !== -1) {
+		console.error('Duplicate slug: ' + slug);
+	}
+	slugs.push(slug);
+}
+
 fs.writeFileSync(path.join(__dirname, '..', 'data', 'data.json'), JSON.stringify(json, null, '\t') + '\n');
+
+const diffGenerator = new DiffGenerator();
+fs.writeFileSync(path.join(__dirname, '..', 'data', 'diff.txt'), DiffFormatter.diffToMarkdown(diffGenerator.generateDiff(oldData, json)));
+
+fs.writeFileSync(path.join(__dirname, '..', 'data', 'imageMapping.json'), JSON.stringify(imageMapping, null, '\t') + '\n');

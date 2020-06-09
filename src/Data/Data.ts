@@ -2,11 +2,40 @@ import rawData from '@data/data.json';
 import {IJsonSchema} from '@src/Schema/IJsonSchema';
 import {IItemSchema} from '@src/Schema/IItemSchema';
 import {IRecipeSchema} from '@src/Schema/IRecipeSchema';
-import {IManufacturerSchema} from '@src/Schema/IBuildingSchema';
+import {IBuildingSchema, IManufacturerSchema} from '@src/Schema/IBuildingSchema';
 import {ISchematicSchema} from '@src/Schema/ISchematicSchema';
+import {IResourceSchema} from '@src/Schema/IResourceSchema';
 
 export class Data
 {
+
+	public static resourceAmounts = {
+		Desc_Coal_C: 30900,
+		Desc_LiquidOil_C: 7500,
+		Desc_OreBauxite_C: 7800,
+		Desc_OreCopper_C: 28860,
+		Desc_OreGold_C: 11040,
+		Desc_OreIron_C: 70380,
+		Desc_OreUranium_C: 1800,
+		Desc_RawQuartz_C: 11280,
+		Desc_Stone_C: 52860,
+		Desc_Sulfur_C: 6840,
+		Desc_Water_C: Number.MAX_SAFE_INTEGER,
+	};
+
+	public static resourceWeights = {
+		Desc_Coal_C: 7.419,
+		Desc_LiquidOil_C: 30.568,
+		Desc_OreBauxite_C: 29.392,
+		Desc_OreCopper_C: 7.944,
+		Desc_OreGold_C: 20.766,
+		Desc_OreIron_C: 3.257,
+		Desc_OreUranium_C: 127.367,
+		Desc_RawQuartz_C: 20.324,
+		Desc_Stone_C: 4.337,
+		Desc_Sulfur_C: 33.518,
+		Desc_Water_C: 0,
+	};
 
 	public getRawData(): IJsonSchema
 	{
@@ -18,6 +47,11 @@ export class Data
 		return this.getRawData().items;
 	}
 
+	public getAllBuildings(): { [key: string]: IBuildingSchema }
+	{
+		return this.getRawData().buildings;
+	}
+
 	public getItemBySlug(slug: string): IItemSchema|null
 	{
 		const items = this.getRawData().items;
@@ -27,6 +61,32 @@ export class Data
 			}
 		}
 		return null;
+	}
+
+	public getBaseItemRecipes(): IRecipeSchema[]
+	{
+		const recipes: IRecipeSchema[] = [];
+		const data = this.getRawData();
+		for (const key in data.recipes) {
+			const recipe = data.recipes[key];
+			if (!recipe.alternate && recipe.inMachine) {
+				recipes.push(recipe);
+			}
+		}
+		return recipes;
+	}
+
+	public getAlternateRecipes(): IRecipeSchema[]
+	{
+		const recipes: IRecipeSchema[] = [];
+		const data = this.getRawData();
+		for (const key in data.recipes) {
+			const recipe = data.recipes[key];
+			if (recipe.alternate) {
+				recipes.push(recipe);
+			}
+		}
+		return recipes;
 	}
 
 	public getRecipesForItem(item: IItemSchema): {[key: string]: IRecipeSchema}
@@ -108,6 +168,17 @@ export class Data
 		return null;
 	}
 
+	public getBuildingByClassName(className: string): IBuildingSchema|null
+	{
+		const buildings = this.getRawData().buildings;
+		for (const key in buildings) {
+			if (buildings[key].className === className) {
+				return buildings[key];
+			}
+		}
+		return null;
+	}
+
 	public getManufacturerByClassName(className: string): IManufacturerSchema|null
 	{
 		const buildings = this.getRawData().buildings;
@@ -118,6 +189,12 @@ export class Data
 		}
 		return null;
 	}
+
+	public getResources(): IResourceSchema[]
+	{
+		return Object.values(this.getRawData().resources);
+	}
+
 }
 
 export default new Data;

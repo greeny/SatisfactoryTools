@@ -5,6 +5,7 @@ export interface IItemSchema
 
 	slug: string;
 	name: string;
+	sinkPoints: number;
 	description: string;
 	className: string;
 	stackSize: number;

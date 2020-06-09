@@ -26,6 +26,7 @@ export default function parseResourceDescriptors(descriptors: {
 	const result = [];
 	for (const descriptor of descriptors) {
 		switch (descriptor.ClassName) {
+			// ignore non-resource entries
 			case 'Desc_UraniumCell_C':
 			case 'Desc_UraniumPellet_C':
 			case 'Desc_CompactedCoal_C':
@@ -35,7 +36,7 @@ export default function parseResourceDescriptors(descriptors: {
 			default:
 				result.push({
 					item: descriptor.ClassName,
-					pingColor: parseColor(Strings.unserializeDocs(descriptor.mPingColor)),
+					pingColor: parseColor(Strings.unserializeDocs(descriptor.mPingColor), true),
 					speed: parseFloat(descriptor.mCollectSpeedMultiplier),
 				});
 		}

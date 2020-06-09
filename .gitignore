@@ -4,6 +4,11 @@
 
 # Satisfactory Data file for parsing
 data/Docs.json
+data/icons
+data/imageMapping.json
+
+# Diff file
+data/diff.txt
 
 # Node stuff
 node_modules

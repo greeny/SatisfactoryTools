@@ -1,5 +1,6 @@
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const TSLintPlugin = require('tslint-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
 	mode: 'development',
@@ -9,6 +10,7 @@ module.exports = {
 		filename: './www/assets/app.js'
 	},
 	plugins: [
+		new webpack.IgnorePlugin(/(fs|child_process)/),
 		new TSLintPlugin({
 			files: ['./src/**/*.ts'],
 		}),
@@ -35,8 +37,8 @@ module.exports = {
 				use: ['style-loader', 'css-loader'],
 			},
 			{
-				test: /\.less$/,
-				use: ['style-loader', 'css-loader', 'less-loader'],
+				test: /\.scss$/,
+				use: ['style-loader', 'css-loader', 'sass-loader'],
 			},
 		],
 	},

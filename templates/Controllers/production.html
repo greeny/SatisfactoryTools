@@ -1,0 +1,346 @@
+<ol class="breadcrumb">
+	<li class="breadcrumb-item"><a ui-sref="home">Satisfactory Tools</a></li>
+	<li class="breadcrumb-item active">Production</li>
+</ol>
+
+<h1>Production</h1>
+
+<div class="alert alert-warning alert-dismissible fade show">
+	<b>Warning!</b> The tool is still in it's early stage. It took me a long time to make it but unfortunately I couldn't make it work in all cases.<br>
+	Currently I'm resolving the most obvious issues, but I didn't want to leave you waiting longer, so I'm just putting the tool out there.<br>
+	Calculations should be in most cases correct, but there are several cases where the tool just gives up and doesn't return any result. Usually this can be fixed by removing some alternate recipes or changing the number of items produced.<br>
+	I'm sorry to publish it in this stage, but I thought it would be better than delaying it again and again. Have fun!
+
+	<button type="button" class="close" data-dismiss="alert">
+		<span>&times;</span>
+	</button>
+</div>
+
+<ul class="nav nav-tabs production-nav-tabs">
+	<li class="nav-item" ng-repeat="tab in ctrl.tabs">
+		<span class="nav-link cursor-pointer" href="javascript: void(0);" ng-class="{active: tab === ctrl.tab}" ng-click="ctrl.tab = tab" tooltip title="{{tab.tool.name}}">
+			<item-icon hide-tooltip="true" dynamic="true" item="tab.tool.icon" size="32" ng-if="tab.tool.icon"></item-icon>
+			<span class="fas fa-fw fa-question" ng-if="!tab.tool.icon"></span>
+		</span>
+	</li>
+	<li class="nav-item d-flex new-tab">
+		<a class="nav-link align-self-center" href="javascript: void(0);" ng-click="ctrl.addEmptyTab();" title="Add new production line" tooltip>
+			<span ng-class="{'fas': true, 'fa-plus': !ctrl.addingInProgress, 'fa-spin': ctrl.addingInProgress, 'fa-sync-alt': ctrl.addingInProgress}"></span>
+		</a>
+	</li>
+</ul>
+
+<div ng-show="ctrl.tab">
+	<div class="card production-input">
+		<div class="card-header d-flex">
+			<div class="production-image d-flex">
+				<span class="image-picker dropdown-toggle" data-toggle="dropdown" tooltip title="Change tab icon">
+					<item-icon dynamic="true" ng-if="ctrl.tab.tool.icon" item="ctrl.tab.tool.icon" size="32" hide-tooltip="true"></item-icon>
+					<span ng-if="!ctrl.tab.tool.icon" class="fas fa-fw fa-question"></span>
+				</span>
+				<div class="dropdown-menu">
+					<div class="dropdown-menu-content" perfect-scrollbar>
+						<item-icon hide-tooltip="true" class="dropdown-item cursor-pointer" item="icon" ng-class="{'active': icon === ctrl.tab.tool.icon}" size="32" ng-repeat="icon in ctrl.tab.getIconSet()" ng-click="ctrl.tab.tool.productionRequest.icon = icon"></item-icon>
+					</div>
+				</div>
+			</div>
+			<span class="production-line-name flex-grow-1">
+				<span class="production-line-name-title mr-2" ng-hide="ctrl.tab.state.renaming">
+					<span>{{ctrl.tab.tool.name}}</span>
+				</span>
+				<form class="mr-2 flex-grow-1" ng-submit="ctrl.tab.state.renaming = false" ng-show="ctrl.tab.state.renaming">
+					<input class="form-control" ng-model="ctrl.tab.tool.productionRequest.name">
+					<button type="submit" class="btn btn-outline-success" ng-show="ctrl.tab.state.renaming">
+						<span class="fas fa-check"></span>
+					</button>
+				</form>
+				<span class="btn btn-outline-light" ng-hide="ctrl.tab.state.renaming" tooltip title="Rename tab" ng-click="ctrl.tab.state.renaming = true">
+					<span class="fas fa-pencil-alt"></span>
+				</span>
+			</span>
+
+			<span class="btn-group">
+				<a class="btn btn-success" ng-click="ctrl.cloneTab(ctrl.tab)" tooltip title="Clone tab">
+					<span ng-class="{'far': !ctrl.cloningInProgress, 'fas': ctrl.cloningInProgress, 'fa-fw': true, 'fa-clone': !ctrl.cloningInProgress, 'fa-spin': ctrl.cloningInProgress, 'fa-sync-alt': ctrl.cloningInProgress}"></span>
+				</a>
+				<a class="btn btn-warning" ng-click="ctrl.tab.tool.resetProductionRequest()" tooltip title="Reset tab to default">
+					<span class="fas fa-fw fa-eraser"></span>
+				</a>
+				<a class="btn btn-danger" ng-click="ctrl.removeTab(ctrl.tab)" tooltip title="Remove tab">
+					<span class="fas fa-fw fa-trash-alt"></span>
+				</a>
+				<a class="btn btn-secondary" ng-click="ctrl.tab.state.expanded = !ctrl.tab.state.expanded" tooltip title="{{ctrl.tab.state.expanded ? 'Collapse' : 'Expand'}}">
+					<span ng-if="ctrl.tab.state.expanded" class="fas fa-fw fa-chevron-up"></span>
+					<span ng-if="!ctrl.tab.state.expanded" class="fas fa-fw fa-chevron-down"></span>
+				</a>
+			</span>
+		</div>
+		<div class="card-body" ng-show="ctrl.tab.state.expanded">
+			<div class="row">
+				<div class="col-md-2 border-right border-light">
+					<ul class="nav nav-tabs flex-column">
+						<li class="nav-item">
+							<a href="javascript: void(0);" class="nav-link" ng-class="{active: ctrl.tab.tab === 'production'}" ng-click="ctrl.tab.tab = 'production'">
+								<span class="fas fa-fw fa-chart-line mr-1"></span>
+								Production
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="javascript: void(0);" class="nav-link" ng-class="{active: ctrl.tab.tab === 'items'}" ng-click="ctrl.tab.tab = 'items'">
+								<span class="fas fa-fw fa-box-open mr-1"></span>
+								Items, Input
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="javascript: void(0);" class="nav-link" ng-class="{active: ctrl.tab.tab === 'recipes'}" ng-click="ctrl.tab.tab = 'recipes'">
+								<span class="fas fa-fw fa-scroll mr-1"></span>
+								Recipes
+							</a>
+						</li>
+						<!--<li class="nav-item">
+							<a href="javascript: void(0);" class="nav-link" ng-class="{active: ctrl.tab.tab === 'power'}" ng-click="ctrl.tab.tab = 'power'">
+								<span class="fas fa-fw fa-bolt mr-1"></span>
+								Power
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="javascript: void(0);" class="nav-link" ng-class="{active: ctrl.tab.tab === 'nodes'}" ng-click="ctrl.tab.tab = 'nodes'">
+								<span class="fas fa-fw fa-wrench mr-1"></span>
+								Nodes, miners, belts
+							</a>
+						</li>-->
+					</ul>
+				</div>
+
+				<div class="col-md-10" ng-if="ctrl.tab.tab === 'production'">
+					<table class="production-input-table">
+						<tbody ui-sortable="{axis: 'y',  'ui-floating': true, handle: '> .sortable-handler'}" ng-model="ctrl.tab.tool.productionRequest.production">
+							<tr ng-repeat="product in ctrl.tab.tool.productionRequest.production track by $index">
+								<td class="sortable-handler">
+									<span class="fas fa-arrows-alt-v cursor-drag"></span>
+								</td>
+								<td>
+									<ui-select ng-model="product.item" class="production-item-picker">
+										<ui-select-match placeholder="Search or select item">
+											<span>
+												<item-icon dynamic="true" item="$select.selected.className" class="mr-2" size="24" hide-tooltip="true"></item-icon>
+												{{$select.selected.name}}
+											</span>
+										</ui-select-match>
+										<ui-select-choices repeat="item.className as item in (ctrl.craftableItems|filter:{name:$select.search}) track by item.className">
+											<item-icon item="item" hide-tooltip="true"></item-icon>
+											<span class="pl-2" ng-bind="item.name"></span>
+										</ui-select-choices>
+									</ui-select>
+								</td>
+								<td>
+									<select ng-show="product.item" class="form-control" ng-model="product.type" ng-options="value as key disable when value === 'max' for (key, value) in ctrl.options"></select>
+								</td>
+								<td>
+									<input class="form-control" ng-show="product.item && product.type === 'perMinute'" type="number" ng-model="product.amount">
+									<input class="form-control" ng-show="product.item && product.type === 'max'" type="range" ng-model="product.ratio" min="0" max="100" step="2">
+								</td>
+								<td>
+									<span class="btn btn-success" ng-click="ctrl.tab.cloneProduct(product)" tooltip title="Clone item">
+										<span class="far fa-fw fa-clone"></span>
+									</span>
+									<span class="btn btn-danger" ng-click="ctrl.tab.removeProduct(product)" tooltip title="Remove item">
+										<span class="fas fa-fw fa-times"></span>
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>
+									<span class="btn btn-outline-success btn-block" ng-click="ctrl.tab.addEmptyProduct()">
+										<span class="fas fa-plus"></span>
+										Add product
+									</span>
+								</td>
+								<td></td>
+								<td></td>
+								<td>
+									<span class="btn btn-outline-danger" ng-click="ctrl.tab.clearProducts()" tooltip title="Clear production line">
+										<span class="fas fa-fw fa-trash-alt"></span>
+									</span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div ng-repeat="product in ctrl.tab.tool.productionRequest.production">
+					</div>
+				</div>
+
+				<div class="col-md-10" ng-show="ctrl.tab.tab === 'items'">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="card">
+								<h3 class="card-header card-header-with-buttons">
+									<span class="card-header-text">
+										Raw resources
+									</span>
+
+									<span class="btn-group">
+										<span class="btn btn-secondary px-3" ng-click="ctrl.tab.setDefaultRawResources()">
+											Set from map limits
+										</span>
+										<span class="btn btn-secondary px-3" ng-click="ctrl.tab.zeroRawResources()">
+											Set to 0
+										</span>
+									</span>
+								</h3>
+								<div class="card-body">
+									<table class="item-list">
+										<thead>
+											<tr>
+												<th>
+													Resource
+												</th>
+												<th>
+													Limit
+												</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr ng-repeat="resource in ctrl.rawResources">
+												<td ng-click="ctrl.tab.toggleResource(resource.item)">
+													<span class="fas fa-check-square" ng-show="ctrl.tab.isResourceEnabled(resource.item)"></span>
+													<span class="fas fa-square" ng-show="!ctrl.tab.isResourceEnabled(resource.item)"></span>
+													<span class="ml-2">
+													{{ctrl.getItem(resource.item).name}}
+												</span>
+												</td>
+												<td>
+													<input type="number" ng-disabled="!ctrl.tab.isResourceEnabled(resource.item)" class="form-control" ng-model="ctrl.tab.tool.productionRequest.resourceMax[resource.item]">
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-10" ng-show="ctrl.tab.tab === 'recipes'">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="recipe-list-card card">
+								<div class="card-header d-flex">
+									<span class="recipe-list-card-title text-nowrap">
+										Alternate recipes
+									</span>
+
+									<input type="text" ng-model="ctrl.tab.state.alternateRecipesQuery" class="form-control" placeholder="Search for a recipe">
+
+									<span class="btn-group">
+										<span class="btn btn-secondary px-3" ng-click="ctrl.tab.setAllAlternateRecipes(true)">
+											All
+										</span>
+										<span class="btn btn-secondary px-3" ng-click="ctrl.tab.setAllAlternateRecipes(false)">
+											None
+										</span>
+										<span class="btn btn-secondary" ng-click="ctrl.tab.state.alternateRecipesExpanded = !ctrl.tab.state.alternateRecipesExpanded">
+											<span ng-if="ctrl.tab.state.alternateRecipesExpanded" class="fas fa-fw fa-chevron-up"></span>
+											<span ng-if="!ctrl.tab.state.alternateRecipesExpanded" class="fas fa-fw fa-chevron-down"></span>
+										</span>
+									</span>
+								</div>
+
+								<div class="card-body" ng-show="ctrl.tab.state.alternateRecipesExpanded">
+									<table class="alternate-recipe-list">
+										<tr ng-repeat="recipe in ctrl.alternateRecipes | filter: {name: ctrl.tab.state.alternateRecipesQuery} | orderBy:'name'" ng-click="ctrl.tab.toggleAlternateRecipe(recipe.className)">
+											<td>
+												<span class="fas fa-check-square" ng-show="ctrl.tab.isAlternateRecipeEnabled(recipe.className)"></span>
+												<span class="fas fa-square" ng-show="!ctrl.tab.isAlternateRecipeEnabled(recipe.className)"></span>
+											</td>
+											<td class="d-flex justify-content-between">
+												<span>{{ctrl.tab.convertAlternateRecipeName(recipe.name)}}</span>
+												<span>
+													<span ng-repeat="ingredient in recipe.ingredients" class="recipe-item">
+														{{ingredient.amount}}&times;
+														<item-icon item="ingredient.item" size="20" tooltip="1"></item-icon>
+													</span>
+												</span>
+											</td>
+											<td>
+												<span class="fas fa-fw fa-chevron-right"></span>
+												<span ng-repeat="product in recipe.products" class="recipe-item">
+													{{product.amount}}&times;
+													<item-icon item="product.item" size="20" tooltip="1"></item-icon>
+												</span>
+											</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="recipe-list-card card">
+								<h3 class="card-header d-flex">
+									<span class="recipe-list-card-title text-nowrap">
+										Base recipes
+									</span>
+
+									<input type="text" ng-model="ctrl.tab.state.basicRecipesQuery" class="form-control" placeholder="Search for a recipe">
+
+									<span class="btn-group">
+										<span class="btn btn-secondary px-3" ng-click="ctrl.tab.setAllBasicRecipes(true)">
+											All
+										</span>
+										<span class="btn btn-secondary px-3" ng-click="ctrl.tab.setAllBasicRecipes(false)">
+											None
+										</span>
+										<span class="btn btn-secondary" ng-click="ctrl.tab.state.basicRecipesExpanded = !ctrl.tab.state.basicRecipesExpanded">
+											<span ng-if="ctrl.tab.state.basicRecipesExpanded" class="fas fa-fw fa-chevron-up"></span>
+											<span ng-if="!ctrl.tab.state.basicRecipesExpanded" class="fas fa-fw fa-chevron-down"></span>
+										</span>
+									</span>
+								</h3>
+								<div class="card-body" ng-show="ctrl.tab.state.basicRecipesExpanded">
+									<table class="alternate-recipe-list">
+										<tr ng-repeat="recipe in ctrl.basicRecipes | filter: {name: ctrl.tab.state.basicRecipesQuery} | orderBy:'name'" ng-click="ctrl.tab.toggleBasicRecipe(recipe.className)">
+											<td>
+												<span class="fas fa-check-square" ng-show="ctrl.tab.isBasicRecipeEnabled(recipe.className)"></span>
+												<span class="fas fa-square" ng-show="!ctrl.tab.isBasicRecipeEnabled(recipe.className)"></span>
+											</td>
+											<td class="d-flex justify-content-between">
+												<span>{{recipe.name}}</span>
+												<span>
+													<span ng-repeat="ingredient in recipe.ingredients" class="recipe-item">
+														{{ingredient.amount}}&times;
+														<item-icon item="ingredient.item" size="20"></item-icon>
+													</span>
+												</span>
+											</td>
+											<td>
+												<span class="fas fa-fw fa-chevron-right"></span>
+												<span ng-repeat="product in recipe.products" class="recipe-item">
+													{{product.amount}}&times;
+													<item-icon item="product.item" size="20"></item-icon>
+												</span>
+											</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div ng-show="ctrl.tab.tool.resultStatus === 'noResult'" class="visualization-result">
+		Unfortunately we couldn't calculate any result.
+	</div>
+	<div ng-show="ctrl.tab.tool.resultStatus === 'calculating'" class="visualization-result">
+		<span class="fas fa-spin fa-sync-alt"></span>
+		Calculating ...
+	</div>
+	<div ng-show="ctrl.tab.tool.resultStatus === 'noInput'" class="visualization-result">
+		Select an item to calculate.
+	</div>
+	<visualization ng-show="ctrl.tab.tool.resultStatus === 'result'" result="ctrl.tab.tool.result" class="visualization" ng-class="{visualization: 1, loading: ctrl.tab.state.resultLoading}"></visualization>
+</div>

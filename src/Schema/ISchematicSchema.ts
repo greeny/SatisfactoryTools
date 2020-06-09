@@ -7,10 +7,20 @@ export interface ISchematicSchema
 	type: string;
 	name: string;
 	cost: IItemAmountSchema[];
-	unlock: string[];
+	unlock: ISchematicUnlockSchema;
+	requiredSchematics: string[];
 	tier: number;
 	time: number;
 	mam: boolean;
 	alternate: boolean;
+
+}
+
+export interface ISchematicUnlockSchema
+{
+
+	recipes: string[];
+	scannerResources: string[];
+	inventorySlots: number;
 
 }

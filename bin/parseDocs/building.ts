@@ -21,6 +21,10 @@ export default function parseBuildings(buildings: {
 {
 	const result: IBuildingSchema[] = [];
 	for (const building of buildings) {
+		if (building.ClassName === 'Build_Stair_1b_C') {
+			continue;
+		}
+
 		const metadata: IBuildingMetadataSchema = {};
 
 		if (typeof building.mSpeed !== 'undefined') {
@@ -71,11 +75,16 @@ export default function parseBuildings(buildings: {
 			metadata.firstPieceCostMultiplier = 2;
 			metadata.lengthPerCost = 12;
 		} else if (building.ClassName === 'Build_WalkwayTrun_C') { // nice typo CSS
-			building.ClassName = 'Desc_WalkwayTurn_C'
+			building.ClassName = 'Desc_WalkwayTurn_C';
+		}
+
+		let slug = Strings.webalize(building.mDisplayName);
+		if (building.ClassName.match(/Steel/) || building.ClassName === 'Build_Wall_8x4_02_C') {
+			slug += '-steel';
 		}
 
 		result.push({
-			slug: Strings.webalize(building.mDisplayName),
+			slug: slug,
 			name: building.mDisplayName,
 			description: building.mDescription.replace(/\r\n/ig, '\n'),
 			categories: [],
@@ -83,11 +92,6 @@ export default function parseBuildings(buildings: {
 			className: fixClassName ? building.ClassName.replace('Build_', 'Desc_') : building.ClassName,
 			metadata: metadata,
 		});
-
-		if (building.ClassName === 'Build_Wall_Window_8x4_03_C') {
-			building.ClassName = 'Build_Wall_Window_8x4_03_Steel_C'; // fix for steel window wall which isn't present in Docs.json
-			result.push(...parseBuildings([building], true));
-		}
 	}
 	return result;
 }

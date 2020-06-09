@@ -1,4 +1,5 @@
 import {Objects} from '@src/Utils/Objects';
+import {Constants} from '@src/Constants';
 
 export class Strings
 {
@@ -19,15 +20,15 @@ export class Strings
 	{
 		switch (size) {
 			case 'SS_ONE':
-				return 1;
+				return Constants.STACK_SIZE.ONE;
 			case 'SS_SMALL':
-				return 50;
+				return Constants.STACK_SIZE.SMALL;
 			case 'SS_MEDIUM':
-				return 100;
+				return Constants.STACK_SIZE.MEDIUM;
 			case 'SS_BIG':
-				return 200;
+				return Constants.STACK_SIZE.BIG;
 			case 'SS_HUGE':
-				return 500;
+				return Constants.STACK_SIZE.LARGE;
 			case 'SS_FLUID':
 				return 50000;
 			default:

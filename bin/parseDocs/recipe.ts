@@ -54,7 +54,7 @@ export default function parseRecipes(recipes: {
 				forBuilding = true;
 			} else if (producer === 'BP_WorkshopComponent_C') {
 				inWorkshop = true;
-			} else if (producer === 'BP_WorkBenchComponent_C' || producer === 'FGBuildableAutomatedWorkBench') {
+			} else if (producer === 'BP_WorkBenchComponent_C' || producer === 'FGBuildableAutomatedWorkBench' || producer === 'Desc_AutomatedWorkBench_C') {
 				inHand = true;
 			} else {
 				inMachine = true;
