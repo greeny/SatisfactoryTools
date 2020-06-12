@@ -23,6 +23,14 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
+"@types/angular-breadcrumb@^0.4.22":
+  version "0.4.22"
+  resolved "https://registry.yarnpkg.com/@types/angular-breadcrumb/-/angular-breadcrumb-0.4.22.tgz#1fa92b40677da756821caae886080a65d971390d"
+  integrity sha512-OAE8k6qRJ2nBIDnKYN3fJBGKybEsZ5pCUGp9kBb7KmWDUzSDH1VgeEbYLth6t4J0PEKyN4ouf3/4/wUo1b3Vww==
+  dependencies:
+    "@types/angular" "*"
+    "@types/angular-ui-router" "*"
+
 "@types/angular-sanitize@^1.7.0":
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/@types/angular-sanitize/-/angular-sanitize-1.7.0.tgz#a9a1c43621e89d3bd8b7aca6379a4a78a7c889fe"
@@ -30,7 +38,7 @@
   dependencies:
     "@types/angular" "*"
 
-"@types/angular-ui-router@^1.1.40":
+"@types/angular-ui-router@*", "@types/angular-ui-router@^1.1.40":
   version "1.1.40"
   resolved "https://registry.yarnpkg.com/@types/angular-ui-router/-/angular-ui-router-1.1.40.tgz#d8a10fe4af86a069f8c3302946363f1149e5a6b3"
   integrity sha512-4xMwNeSNrRHj2uaLAbeACVjgTCLCDHqwMQOKE0lq6MIXngVuvc0zucGKg2WYd4i+goxl9R3agH3w4qnEseIbxw==
@@ -295,6 +303,11 @@ angular-animate@^1.7.9:
   version "1.7.9"
   resolved "https://registry.yarnpkg.com/angular-animate/-/angular-animate-1.7.9.tgz#a397f82434c1e7ed5b7a298fa70fc3de989a6785"
   integrity sha512-fV+AISy/HTzurQH2ngsJg+lLIvfu0ahc1h4AYKauaXVw97rZc2k4iUA1bMstiEyClsdayQX568kjQc1NK+oYhw==
+
+angular-breadcrumb@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/angular-breadcrumb/-/angular-breadcrumb-0.5.0.tgz#058abe6984f1b82ff6ac37888ef9afccbc8f63b2"
+  integrity sha1-BYq+aYTxuC/2rDeIjvmvzLyPY7I=
 
 angular-sanitize@^1.7.9:
   version "1.7.9"

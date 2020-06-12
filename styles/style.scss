@@ -26,8 +26,16 @@
 	padding-bottom: 0;
 }
 
-a:hover {
-	color: #e77a31;
+* {
+	font-size: 1rem;
+}
+
+a {
+	cursor: pointer;
+
+	&:hover {
+		color: #e77a31;
+	}
 }
 
 .bg-tertiary {
@@ -57,4 +65,15 @@ a:hover {
 
 .ui-select-choices-row {
 	margin-bottom: 0.3px;
+}
+
+ui-view[name="content"] {
+	margin-top: 10px;
+	display: block;
+}
+
+table {
+	a {
+		text-decoration: none !important;
+	}
 }

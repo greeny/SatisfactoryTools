@@ -1,0 +1,44 @@
+<div class="row">
+	<div class="col-md-6">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="card mb-3">
+					<h2 class="card-header">{{ctrl.building.name}}</h2>
+					<div class="card-body">
+						<span class="float-left mr-3">
+							<item-icon item="ctrl.building" size="128"></item-icon>
+						</span>
+						<p style="white-space: pre-line;">{{ctrl.building.description}}</p>
+						<div ng-if="ctrl.buildingRecipe">
+							<hr/>
+							<h3>Cost</h3>
+							<div ng-repeat="ingredient in ctrl.buildingRecipe.ingredients" class="d-inline-block p-2">
+								<span class="item-amount">
+									{{ingredient.amount}}x
+									<a ui-sref="item({item: ctrl.getItem(ingredient.item).slug})">
+										<item-icon item="ingredient.item"></item-icon>
+									</a>
+									<br>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="card mb-3">
+			<h2 class="card-header">{{ctrl.building.name}} details</h2>
+			<div class="card-body">
+				<ui-view name="building_details"></ui-view>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-lg-12">
+		<ui-view name="building_related"></ui-view>
+	</div>
+</div>

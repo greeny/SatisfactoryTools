@@ -1,0 +1,32 @@
+<table class="table">
+	<tbody>
+		<tr ng-if="ctrl.building.metadata.powerConsumption">
+			<td>Power consumption</td>
+			<td>{{ ctrl.building.metadata.powerConsumption }} MW</td>
+		</tr>
+		<tr ng-if="ctrl.building.metadata.powerConsumptionExponent">
+			<td>Power consumption exponent</td>
+			<td>{{ ctrl.building.metadata.powerConsumptionExponent }}</td>
+		</tr>
+		<tr ng-if="ctrl.building.metadata.manufacturingSpeed">
+			<td>Manufacturing speed multiplier</td>
+			<td>x{{ ctrl.building.metadata.manufacturingSpeed }}</td>
+		</tr>
+		<tr ng-if="ctrl.building.metadata.beltSpeed">
+			<td>Belt speed</td>
+			<td>{{ ctrl.building.metadata.beltSpeed }} / min</td>
+		</tr>
+		<tr ng-if="ctrl.building.metadata.lengthPerCost">
+			<td>Length per cost</td>
+			<td>{{ ctrl.building.metadata.lengthPerCost / 100 }} m</td>
+		</tr>
+		<tr ng-if="ctrl.building.metadata.maxLength">
+			<td>Maximum length</td>
+			<td>{{ ctrl.building.metadata.maxLength / 100 }} m</td>
+		</tr>
+		<tr ng-if="ctrl.building.metadata.maxPressure">
+			<td>Maximum headlift</td>
+			<td>{{ ctrl.building.metadata.maxPressure }} m</td>
+		</tr>
+	</tbody>
+</table>

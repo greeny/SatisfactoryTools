@@ -15,7 +15,8 @@ import 'script-loader!../node_modules/ui-bootstrap4/dist/ui-bootstrap-tpls';
 import 'script-loader!../node_modules/ui-select/dist/select.min';
 import 'script-loader!../node_modules/angular-ui-sortable/dist/sortable.min';
 import 'script-loader!../node_modules/perfect-scrollbar/dist/perfect-scrollbar.min';
+import 'script-loader!../node_modules/angular-breadcrumb/dist/angular-breadcrumb.min';
 
 import {AppModule} from '@src/Module/AppModule';
 
-new AppModule(angular.module('app', ['ui.sortable', 'ui.select', 'ui.router', 'ui.bootstrap', 'ngSanitize', 'ngAnimate'])).register();
+new AppModule(angular.module('app', ['ui.sortable', 'ui.select', 'ui.router', 'ui.bootstrap', 'ngSanitize', 'ngAnimate', 'ncy-angular-breadcrumb'])).register();

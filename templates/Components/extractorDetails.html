@@ -1,0 +1,34 @@
+<table class="table">
+	<tbody ng-init="extractor = ctrl.getExtractor(ctrl.building.className)">
+		<tr>
+			<td>Power consumption</td>
+			<td>{{ ctrl.building.metadata.powerConsumption }} MW</td>
+		</tr>
+		<tr>
+			<td>Power consumption exponent</td>
+			<td>{{ ctrl.building.metadata.powerConsumptionExponent }}</td>
+		</tr>
+		<tr ng-if="ctrl.isAutonomousManufacturer(ctrl.building)">
+			<td>Manufacturing speed multiplier</td>
+			<td>x{{ ctrl.building.metadata.manufacturingSpeed }}</td>
+		</tr>
+		<tr>
+			<td>Liquid resource allowed</td>
+			<td>{{ extractor.allowLiquids ? 'Yes' : 'No' }}</td>
+		</tr>
+		<tr>
+			<td>Solid resource allowed</td>
+			<td>{{ extractor.allowSolids ? 'Yes' : 'No' }}</td>
+		</tr>
+		<tr>
+			<td>Extracted resources per cycle</td>
+			<td>{{ extractor.itemsPerCycle / (extractor.allowLiquids ? 1000: 1) }} {{ extractor.allowLiquids ? 'm3':
+				''}}
+			</td>
+		</tr>
+		<tr>
+			<td>Cycles in minute</td>
+			<td>{{ 60 / extractor.extractCycleTime }}</td>
+		</tr>
+	</tbody>
+</table>

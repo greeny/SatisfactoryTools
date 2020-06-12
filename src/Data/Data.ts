@@ -5,6 +5,8 @@ import {IRecipeSchema} from '@src/Schema/IRecipeSchema';
 import {IBuildingSchema, IManufacturerSchema} from '@src/Schema/IBuildingSchema';
 import {ISchematicSchema} from '@src/Schema/ISchematicSchema';
 import {IResourceSchema} from '@src/Schema/IResourceSchema';
+import {BuildingTypes} from '@src/Types/BuildingTypes';
+import {Constants} from '@src/Constants';
 
 export class Data
 {
@@ -58,6 +60,17 @@ export class Data
 		for (const key in items) {
 			if (items[key].slug === slug) {
 				return items[key];
+			}
+		}
+		return null;
+	}
+
+	public getBuildingBySlug(slug: string): IBuildingSchema|null
+	{
+		const buildings = this.getRawData().buildings;
+		for (const key in buildings) {
+			if (buildings[key].slug === slug) {
+				return buildings[key];
 			}
 		}
 		return null;
@@ -188,6 +201,79 @@ export class Data
 			}
 		}
 		return null;
+	}
+
+	public isItem(entity: BuildingTypes): entity is IItemSchema
+	{
+		return entity.hasOwnProperty('fluid');
+	}
+
+	public isResource(entity: BuildingTypes): boolean
+	{
+		return this.getRawData().resources.hasOwnProperty(entity.className);
+	}
+
+	public isBuilding(entity: BuildingTypes): entity is IBuildingSchema
+	{
+		if (this.isItem(entity)) {
+			return false;
+		}
+
+		return entity.hasOwnProperty('categories');
+	}
+
+	public isPowerConsumingBuilding(entity: BuildingTypes): entity is IBuildingSchema
+	{
+		if (!this.isBuilding(entity)) {
+			return false;
+		}
+
+		if (this.isGeneratorBuilding(entity)) {
+			return false;
+		}
+
+		return entity.hasOwnProperty('categories');
+	}
+
+	public isGeneratorBuilding(entity: BuildingTypes): boolean
+	{
+		if (!this.isBuilding(entity)) {
+			return false;
+		}
+		return this.getRawData().generators.hasOwnProperty(entity.className.replace('Desc', 'Build'));
+	}
+
+	public isManualManufacturer(entity: BuildingTypes): boolean{
+		return Constants.WORKBENCH_CLASSNAME === entity.className || Constants.WORKSHOP_CLASSNAME === entity.className;
+	}
+
+	public isManufacturerBuilding(entity: BuildingTypes): boolean
+	{
+		if (!this.isBuilding(entity)) {
+			return false;
+		}
+		if (this.isGeneratorBuilding(entity) || this.isExtractorBuilding(entity)) {
+			return false;
+		}
+		if (this.isManualManufacturer(entity)) {
+			return true;
+		}
+		const acceptableCategories = [
+			'SC_Manufacturers_C',
+			'SC_OilProduction_C',
+			'SC_Smelters_C',
+		];
+		return acceptableCategories.filter((acceptableCategory: string) => {
+			return (entity as IBuildingSchema).categories.indexOf(acceptableCategory) >= 0;
+		}).length > 0;
+	}
+
+	public isExtractorBuilding(entity: BuildingTypes): boolean
+	{
+		if (!this.isBuilding(entity)) {
+			return false;
+		}
+		return this.getRawData().miners.hasOwnProperty(entity.className.replace('Desc', 'Build'));
 	}
 
 	public getResources(): IResourceSchema[]
