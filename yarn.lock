@@ -50,6 +50,13 @@
   resolved "https://registry.yarnpkg.com/@types/angular/-/angular-1.7.0.tgz#3dd8d3b2d3b7ce2cca51b9fc3691b48b638eb468"
   integrity sha512-zneUmi5I6oSkGBqkRP9rxbWX1mi6Yj7gNV+WNffmJLf8x4cnV0MGqXFNSP90NZ1kRRLCOdKBf9RIVD1TMg4aog==
 
+"@types/axios@^0.14.0":
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/@types/axios/-/axios-0.14.0.tgz#ec2300fbe7d7dddd7eb9d3abf87999964cafce46"
+  integrity sha1-7CMA++fX3d1+udOr+HmZlkyvzkY=
+  dependencies:
+    axios "*"
+
 "@types/bootstrap@^4.3.1":
   version "4.3.3"
   resolved "https://registry.yarnpkg.com/@types/bootstrap/-/bootstrap-4.3.3.tgz#3f602b1e4c3fd9328683a3d96fe32e7f14a58244"
@@ -504,6 +511,13 @@ aws4@^1.8.0:
   version "1.9.1"
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.9.1.tgz#7e33d8f7d449b3f673cd72deb9abdc552dbe528e"
   integrity sha512-wMHVg2EOHaMRxbzgFJ9gtjOOCrI80OHLG14rxi28XwOW8ux6IiEbRCGGGqCtdAIg4FQCbW20k9RsT4y3gJlFug==
+
+axios@*, axios@^0.19.2:
+  version "0.19.2"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.19.2.tgz#3ea36c5d8818d0d5f8a8a97a6d36b86cdc00cb27"
+  integrity sha512-fjgm5MvRHLhx+osE2xoekY70AhARk3a6hkN+3Io1jc00jtquGvxYlKlsFUhmUET0V5te6CcZI7lcv2Ym61mjHA==
+  dependencies:
+    follow-redirects "1.5.10"
 
 balanced-match@^1.0.0:
   version "1.0.0"
@@ -1180,6 +1194,13 @@ dashdash@^1.12.0:
   dependencies:
     assert-plus "^1.0.0"
 
+debug@=3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-3.1.0.tgz#5bb5a0672628b64149566ba16819e61518c67261"
+  integrity sha512-OX8XqP7/1a9cqkxYw2yXss15f26NKWBpDXQd0/uK/KPqdQhxbPa994hnzjcE2VqQpDslf55723cKPUOGSmMY3g==
+  dependencies:
+    ms "2.0.0"
+
 debug@^2.2.0, debug@^2.3.3:
   version "2.6.9"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
@@ -1583,6 +1604,13 @@ flush-write-stream@^1.0.0:
   dependencies:
     inherits "^2.0.3"
     readable-stream "^2.3.6"
+
+follow-redirects@1.5.10:
+  version "1.5.10"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.5.10.tgz#7b7a9f9aea2fdff36786a94ff643ed07f4ff5e2a"
+  integrity sha512-0V5l4Cizzvqt5D44aTXbFZz+FtyXV1vrDN6qrelxtfYQKW0KO0W2T/hkE8xvGa/540LkZlkaUjO4ailYTFtHVQ==
+  dependencies:
+    debug "=3.1.0"
 
 for-in@^1.0.2:
   version "1.0.2"
@@ -2216,11 +2244,6 @@ isstream@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
   integrity sha1-R+Y/evVa+m+S4VAOaQ64uFKcCZo=
-
-javascript-lp-solver@^0.4.24:
-  version "0.4.24"
-  resolved "https://registry.yarnpkg.com/javascript-lp-solver/-/javascript-lp-solver-0.4.24.tgz#3bb5f8aa051f0bf04747e39130133a0f738f635c"
-  integrity sha512-5edoDKnMrt/u3M6GnZKDDIPxOyFOg+WrwDv8mjNiMC2DePhy2H9/FFQgf4ggywaXT1utvkxusJcjQUER72cZmA==
 
 jquery-ui-dist@>=1.12.x:
   version "1.12.1"
