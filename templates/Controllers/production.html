@@ -201,8 +201,9 @@
 													<span class="fas fa-check-square" ng-show="ctrl.tab.isResourceEnabled(resource.item)"></span>
 													<span class="fas fa-square" ng-show="!ctrl.tab.isResourceEnabled(resource.item)"></span>
 													<span class="ml-2">
-													{{ctrl.getItem(resource.item).name}}
-												</span>
+														<item-icon item="resource.item" size="32"></item-icon>
+														{{ctrl.getItem(resource.item).name}}
+													</span>
 												</td>
 												<td>
 													<input type="number" ng-disabled="!ctrl.tab.isResourceEnabled(resource.item)" class="form-control" ng-model="ctrl.tab.tool.productionRequest.resourceMax[resource.item]">

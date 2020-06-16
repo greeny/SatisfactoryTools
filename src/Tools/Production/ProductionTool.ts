@@ -1,4 +1,3 @@
-import {ISolverResultSingle} from 'javascript-lp-solver';
 import {Solver} from '@src/Solver/Solver';
 import model from '@src/Data/Model';
 import {RecipeResult} from '@src/Tools/Production/RecipeResult';
@@ -75,51 +74,39 @@ export class ProductionTool
 		this.resultStatus = ResultStatus.CALCULATING;
 
 		const calc = () => {
-			console.log('calculation started');
-			const result = this.getResult();
-			console.log(angular.copy(result));
+			Solver.solveProduction(this.productionRequest, (result) => {
+				const res = () => {
+					const recipes: RecipeResult[] = [];
 
-			if (!result.feasible) {
-				this.result = undefined;
-				this.resultStatus = ResultStatus.NO_RESULT;
-				return;
-			}
+					for (const k in result) {
+						if (!result.hasOwnProperty(k) || !(k in model.recipes) || result[k] < 1e-8) {
+							continue;
+						}
+						recipes.push(new RecipeResult(model.recipes[k], result[k] / 60));
+					}
 
-			const recipes: RecipeResult[] = [];
+					if (!recipes.length) {
+						this.result = undefined;
+						this.resultStatus = ResultStatus.NO_RESULT;
+						return;
+					}
+					this.result = new ProductionToolResult(recipes);
+					this.resultStatus = ResultStatus.RESULT;
+				};
 
-			for (const k in result) {
-				if (!result.hasOwnProperty(k) || !(k in model.recipes) || result[k] < 1e-8) {
-					continue;
+				if ($timeout) {
+					$timeout(0).then(res);
+				} else {
+					res();
 				}
-				recipes.push(new RecipeResult(model.recipes[k], result[k] / 60));
-			}
+			});
 
-			if (!recipes.length) {
-				this.result = undefined;
-				this.resultStatus = ResultStatus.NO_RESULT;
-				return;
-			}
-
-			this.result = new ProductionToolResult(recipes);
-			console.log('result');
-			this.resultStatus = ResultStatus.RESULT;
 		};
 
 		if ($timeout) {
 			$timeout(0).then(calc);
 		} else {
 			calc();
-		}
-	}
-
-	private getResult(): ISolverResultSingle
-	{
-		console.log(angular.copy(this.productionRequest));
-		const result = Solver.solveProduction(this.productionRequest);
-		if ('midpoint' in result) {
-			return result.midpoint;
-		} else {
-			return result;
 		}
 	}
 
