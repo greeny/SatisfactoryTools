@@ -6387,7 +6387,7 @@
 		},
 		"Recipe_PowerPoleWallMk2_C": {
 			"slug": "wall-outlet-mk-2",
-			"name": "Wall Outlet  Mk.2",
+			"name": "Wall Outlet Mk.2",
 			"className": "Recipe_PowerPoleWallMk2_C",
 			"alternate": false,
 			"time": 1,
@@ -6416,7 +6416,7 @@
 		},
 		"Recipe_PowerPoleWallMk3_C": {
 			"slug": "wall-outlet-mk-3",
-			"name": "Wall Outlet  Mk.3",
+			"name": "Wall Outlet Mk.3",
 			"className": "Recipe_PowerPoleWallMk3_C",
 			"alternate": false,
 			"time": 1,
@@ -6445,7 +6445,7 @@
 		},
 		"Recipe_PowerPoleWall_C": {
 			"slug": "wall-outlet-mk-1",
-			"name": "Wall Outlet  Mk.1",
+			"name": "Wall Outlet Mk.1",
 			"className": "Recipe_PowerPoleWall_C",
 			"alternate": false,
 			"time": 1,
@@ -10512,7 +10512,7 @@
 			"className": "Desc_GolfCart_C",
 			"name": "Factory Cart™",
 			"sinkPoints": 1552,
-			"description": "The one and only FICSIT Factory Cart™\nNow with special - FICIST Foundation only - Grip Wheels, for an even smoother and faster factory floor experience!",
+			"description": "The one and only FICSIT Factory Cart™\nNow with special - FICSIT Foundation only - Grip Wheels, for an even smoother and faster factory floor experience!",
 			"stackSize": 1,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
@@ -11634,7 +11634,7 @@
 			"className": "Desc_UraniumPellet_C",
 			"name": "Uranium Pellet",
 			"sinkPoints": 112,
-			"description": "Produced in the Refniery, Uranium Pellets are purified and cast from Uranium Ore. \nPrimarily used to make Uranium Cells.\nModerately radioactive.",
+			"description": "Produced in the Refinery, Uranium Pellets are purified and cast from Uranium Ore. \nPrimarily used to make Uranium Cells.\nModerately radioactive.",
 			"stackSize": 200,
 			"energyValue": 0,
 			"radioactiveDecay": 7.5,
@@ -17630,7 +17630,7 @@
 		},
 		"Schematic_Tutorial1_5_C": {
 			"className": "Schematic_Tutorial1_5_C",
-			"name": "Hub Upgrade 2",
+			"name": "HUB Upgrade 2",
 			"tier": 0,
 			"cost": [
 				{
@@ -17663,7 +17663,7 @@
 		},
 		"Schematic_Tutorial1_C": {
 			"className": "Schematic_Tutorial1_C",
-			"name": "Hub Upgrade 1",
+			"name": "HUB Upgrade 1",
 			"tier": 0,
 			"cost": [
 				{
@@ -17687,7 +17687,7 @@
 		},
 		"Schematic_Tutorial2_C": {
 			"className": "Schematic_Tutorial2_C",
-			"name": "Hub Upgrade 3",
+			"name": "HUB Upgrade 3",
 			"tier": 0,
 			"cost": [
 				{
@@ -17724,7 +17724,7 @@
 		},
 		"Schematic_Tutorial3_C": {
 			"className": "Schematic_Tutorial3_C",
-			"name": "Hub Upgrade 4",
+			"name": "HUB Upgrade 4",
 			"tier": 0,
 			"cost": [
 				{
@@ -17756,7 +17756,7 @@
 		},
 		"Schematic_Tutorial4_C": {
 			"className": "Schematic_Tutorial4_C",
-			"name": "Hub Upgrade 5",
+			"name": "HUB Upgrade 5",
 			"tier": 0,
 			"cost": [
 				{
@@ -17788,7 +17788,7 @@
 		},
 		"Schematic_Tutorial5_C": {
 			"className": "Schematic_Tutorial5_C",
-			"name": "Hub Upgrade 6",
+			"name": "HUB Upgrade 6",
 			"tier": 0,
 			"cost": [
 				{
@@ -18640,7 +18640,7 @@
 		"Desc_Mam_C": {
 			"slug": "m-a-m-",
 			"name": "M.A.M.",
-			"description": "The Molecular Analysis Machine is used to analyse new and exotic materials found on alien planets.\nR&D will assist Pioneers through the M.A.M to turn any valuable data into usable research options and new technologies.",
+			"description": "The Molecular Analysis Machine is used to analyse new and exotic materials found on alien planets.\nR&D will assist Pioneers through the M.A.M. to turn any valuable data into usable research options and new technologies.",
 			"categories": [
 				"SC_Special_C"
 			],
@@ -18793,7 +18793,7 @@
 		"Desc_PipeHyper_C": {
 			"slug": "hyper-tube",
 			"name": "Hyper Tube",
-			"description": "Tubes for transporting Ficsit employees.\nA Hyper Tube Entrance needs to be attached to power and enter a Hyper Tube system.",
+			"description": "Tubes for transporting FICSIT employees.\nA Hyper Tube Entrance needs to be attached to power and enter a Hyper Tube system.",
 			"categories": [
 				"SC_HyperTubes_C"
 			],
@@ -18978,7 +18978,7 @@
 		},
 		"Desc_PowerPoleWall_C": {
 			"slug": "wall-outlet-mk-1",
-			"name": "Wall Outlet  Mk.1",
+			"name": "Wall Outlet Mk.1",
 			"description": "Power Pole that attaches to a wall.\n\nCan handle up to 4 Power Line connections.\n\nConnect Power Poles, Power Generators and factory buildings together with Power Lines to create a power grid. The power grid supplies the connected buildings with power.",
 			"categories": [
 				"SC_WallPoles_C"
@@ -18989,7 +18989,7 @@
 		},
 		"Desc_PowerPoleWall_Mk2_C": {
 			"slug": "wall-outlet-mk-2",
-			"name": "Wall Outlet  Mk.2",
+			"name": "Wall Outlet Mk.2",
 			"description": "Power Pole that attaches to a wall.\n\nCan handle up to 7 Power Line connections.\n\nConnect Power Poles, Power Generators and factory buildings together with Power Lines to create a power grid. The power grid supplies the connected buildings with power.",
 			"categories": [],
 			"buildMenuPriority": 0,
@@ -18998,7 +18998,7 @@
 		},
 		"Desc_PowerPoleWall_Mk3_C": {
 			"slug": "wall-outlet-mk-3",
-			"name": "Wall Outlet  Mk.3",
+			"name": "Wall Outlet Mk.3",
 			"description": "Power Pole that attaches to a wall.\n\nCan handle up to 10 Power Line connections.\n\nConnect Power Poles, Power Generators and factory buildings together with Power Lines to create a power grid. The power grid supplies the connected buildings with power.",
 			"categories": [],
 			"buildMenuPriority": 0,
@@ -19530,7 +19530,7 @@
 		"Desc_TruckStation_C": {
 			"slug": "truck-station",
 			"name": "Truck Station",
-			"description": "Either send or receive resources to vehicles. Has an inventory with 48 slots.\nTransfers up to 120 stacks per minute to/from docked vehicle. \nAlways refuels vehicles if it has access to a matching fuel type..\n",
+			"description": "Either send or receive resources to vehicles. Has an inventory with 48 slots.\nTransfers up to 120 stacks per minute to/from docked vehicle. \nAlways refuels vehicles if it has access to a matching fuel type.\n",
 			"categories": [
 				"SC_Vehicles_C"
 			],
@@ -19817,7 +19817,7 @@
 		"Desc_Wall_Window_8x4_03_C": {
 			"slug": "panel-window",
 			"name": "Panel Window",
-			"description": "Snaps to foundations and other walls.\nThe windows allow Pioneers to see through the wall..",
+			"description": "Snaps to foundations and other walls.\nThe windows allow Pioneers to see through the wall.",
 			"categories": [
 				"SC_Windows_C"
 			],
