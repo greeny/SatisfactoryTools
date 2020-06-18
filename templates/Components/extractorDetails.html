@@ -1,0 +1,47 @@
+<table class="table two-columns">
+	<tbody ng-init="extractor = ctrl.getExtractor(ctrl.building.className)">
+		<tr>
+			<td>Overclock</td>
+			<td>
+				{{ctrl.options.overclock}}%
+				<input class="w-100" ng-model="ctrl.options.overclock" type="range" min="1" max="250" step="1">
+			</td>
+		</tr>
+		<tr>
+			<td>Power consumption</td>
+			<td>{{ctrl.powerConsumption|number}} MW</td>
+		</tr>
+		<tr ng-if="ctrl.isAutonomousManufacturer(ctrl.building)">
+			<td>Manufacturing speed multiplier</td>
+			<td>x{{ctrl.manufacturingSpeed|number}}</td>
+		</tr>
+		<tr>
+			<td>Liquid resource allowed</td>
+			<td>{{extractor.allowLiquids ? 'Yes' : 'No'}}</td>
+		</tr>
+		<tr>
+			<td>Solid resource allowed</td>
+			<td>{{extractor.allowSolids ? 'Yes' : 'No'}}</td>
+		</tr>
+		<tr ng-if="!ctrl.isWaterExtractor">
+			<td>
+				Purity
+			</td>
+			<td>
+				<span class="btn-group w-100 align-items-center justify-content-center">
+					<span class="btn" ng-class="{'btn-primary': ctrl.purity === 'impure', 'btn-secondary': ctrl.purity !== 'impure'}" ng-click="ctrl.purity = 'impure'">Impure</span>
+					<span class="btn" ng-class="{'btn-primary': ctrl.purity === 'normal', 'btn-secondary': ctrl.purity !== 'normal'}" ng-click="ctrl.purity = 'normal'">Normal</span>
+					<span class="btn" ng-class="{'btn-primary': ctrl.purity === 'pure', 'btn-secondary': ctrl.purity !== 'pure'}" ng-click="ctrl.purity = 'pure'">Pure</span>
+				</span>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Extraction rate
+			</td>
+			<td>
+				{{ctrl.extractionRate|number}} / min
+			</td>
+		</tr>
+	</tbody>
+</table>

@@ -66,3 +66,36 @@
 		font-size: 1.25em;
 	}
 }
+
+.visualization {
+	display: block;
+	margin: 20px 0;
+	width: 100%;
+	height: 800px;
+	border: 1px solid #4e5d6c;
+}
+
+.filter-actions {
+	a {
+		margin: 10px 0;
+	}
+}
+
+.filter {
+	.input-group-append {
+		position: relative;
+
+		a.clear-filter {
+			position: absolute;
+			top: 0;
+			left: -38px;
+			z-index: 1000;
+			color: #b1b1b1;
+			padding: 7px 14px;
+			&.has-content{
+				cursor: pointer;
+				color: #000;
+			}
+		}
+	}
+}

@@ -1,0 +1,19 @@
+<table class="table two-columns">
+	<tbody>
+		<tr ng-if="ctrl.isAutonomousManufacturer(ctrl.building)">
+			<td>Overclock</td>
+			<td>
+				{{ctrl.options.overclock}}%
+				<input class="w-100" ng-model="ctrl.options.overclock" type="range" min="1" max="250" step="1">
+			</td>
+		</tr>
+		<tr ng-if="ctrl.isAutonomousManufacturer(ctrl.building)">
+			<td>Power consumption</td>
+			<td>{{ctrl.powerConsumption|number}} MW</td>
+		</tr>
+		<tr ng-if="ctrl.isAutonomousManufacturer(ctrl.building)">
+			<td>Manufacturing speed multiplier</td>
+			<td>x{{ctrl.manufacturingSpeed|number}}</td>
+		</tr>
+	</tbody>
+</table>

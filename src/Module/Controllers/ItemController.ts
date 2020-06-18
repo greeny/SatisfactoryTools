@@ -25,7 +25,7 @@ export class ItemController
 	{
 		const item = data.getItemBySlug($transition$.params().item);
 		if (item === null) {
-			$state.go('home');
+			$state.go($state.current.parent);
 			return;
 		}
 		this.itemFilterService.filter.query = item.name;
@@ -39,7 +39,7 @@ export class ItemController
 			return this.itemFilterService.filter.query;
 		}, (newValue) => {
 			if (newValue !== item.name) {
-				$state.go('home');
+				$state.go($state.current.parent);
 			}
 		});
 	}
@@ -68,4 +68,5 @@ export class ItemController
 	{
 		this.itemFilterService.resetFilters();
 	}
+
 }

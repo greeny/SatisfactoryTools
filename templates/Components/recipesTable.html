@@ -1,0 +1,62 @@
+<div class="table-responsive">
+	<table class="table recipe-table table-hover">
+		<thead>
+			<tr>
+				<th>Recipe name</th>
+				<th>Ingredients</th>
+				<th>Products</th>
+				<th>Machine</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="recipe in ctrl.recipes">
+				<td>
+					{{recipe.name}}
+				</td>
+				<td>
+					<div ng-repeat="ingredient in recipe.ingredients" class="d-inline-block p-2">
+						<span class="item-amount">
+							{{ingredient.amount}}x
+							<a ui-sref="item({item: ctrl.getItem(ingredient.item).slug})">
+								<item-icon item="ingredient.item"></item-icon>
+							</a>
+							<br>
+						</span>
+						<span ng-if="recipe.inMachine">{{ctrl.getMachine(recipe).metadata.manufacturingSpeed * 60 / recipe.time * ingredient.amount * (ctrl.options.overclock / 100)|number}}&nbsp;/&nbsp;min</span>
+					</div>
+				</td>
+				<td>
+					<div ng-repeat="product in recipe.products" class="d-inline-block p-2 font-weight-bold">
+						<span class="item-amount">
+							{{product.amount}}x
+							<a ui-sref="item({item: ctrl.getItem(product.item).slug})">
+								<item-icon item="product.item"></item-icon>
+							</a>
+							<br>
+						</span>
+						<span ng-if="recipe.inMachine">{{ctrl.getMachine(recipe).metadata.manufacturingSpeed * 60 / recipe.time * product.amount * (ctrl.options.overclock / 100)|number}}&nbsp;/&nbsp;min</span>
+					</div>
+				</td>
+				<td>
+					<span class="item-amount" ng-if="recipe.inMachine">
+						<a ui-sref="building({item: ctrl.getMachine(recipe).slug})">
+							<item-icon item="ctrl.getMachine(recipe)" size="32"></item-icon>
+						</a>
+					</span>
+					<span class="item-amount" ng-if="recipe.inWorkshop">
+						<a ui-sref="building({item: ctrl.getBuilding('Desc_Workshop_C').slug})">
+							<item-icon item="ctrl.getBuilding('Desc_Workshop_C')" size="32"></item-icon>
+						</a>
+					</span>
+					<span class="item-amount" ng-if="!recipe.inWorkshop && recipe.inHand">
+						<a ui-sref="building({item: ctrl.getBuilding('Desc_WorkBench_C').slug})">
+							<item-icon item="ctrl.getBuilding('Desc_WorkBench_C')" size="32"></item-icon>
+						</a>
+					</span>
+					<br>
+					<span ng-if="recipe.inMachine">{{recipe.time}}s ({{ctrl.getMachine(recipe).metadata.manufacturingSpeed * 60 / recipe.time * (ctrl.options.overclock / 100)|number}} cycles&nbsp;/&nbsp;min)</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

@@ -16,6 +16,48 @@ export class Strings
 		return name.replace(/[\s|.]+/gi, '-').replace(/[™:]/gi, '').toLowerCase();
 	}
 
+	public static copyToClipboard(text: string, displayNotification: string = ''): boolean
+	{
+		const textArea = document.createElement('textarea');
+		textArea.style.position = 'fixed';
+		textArea.style.top = '0';
+		textArea.style.left = '0';
+		textArea.style.width = '2em';
+		textArea.style.height = '2em';
+		textArea.style.padding = '0';
+		textArea.style.border = 'none';
+		textArea.style.outline = 'none';
+		textArea.style.boxShadow = 'none';
+		textArea.style.background = 'transparent';
+		textArea.value = text;
+
+		document.body.appendChild(textArea);
+		textArea.focus();
+		textArea.select();
+
+		let result = false;
+		try {
+			result = document.execCommand('copy');
+		} catch (err) {
+			console.error(err);
+		}
+
+		document.body.removeChild(textArea);
+
+		if (displayNotification !== '') {
+			const toast = document.createElement('div');
+			toast.className = 'toast';
+			toast.innerHTML = '<div class="toast-header"><span class="far fa-copy mr-2"></span><strong class="mr-auto">Copied</strong><button type="button" class="close" data-dismiss="toast"><span class="fas fa-times"></span></button></div>' +
+				'<div class="toast-body">' + displayNotification + '</div>';
+			document.getElementById('toasts')?.appendChild(toast);
+			$(toast).toast({
+				delay: 3000,
+			}).toast('show');
+		}
+
+		return result;
+	}
+
 	public static stackSizeFromEnum(size: string): number
 	{
 		switch (size) {

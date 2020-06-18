@@ -1,0 +1,21 @@
+<div class="card">
+	<h2 class="card-header">Extractable resources</h2>
+	<div class="card-body">
+		<div class="table-responsive">
+			<table class="table recipe-table table-hover">
+				<tbody>
+					<tr ng-repeat="resource in ctrl.resources">
+						<td>
+							<span class="item-amount">
+								<a ui-sref="item({item: resource.slug})">
+									<item-icon item="resource"></item-icon>
+									{{resource.name}}
+								</a>
+							</span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

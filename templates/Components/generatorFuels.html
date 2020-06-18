@@ -1,0 +1,35 @@
+<div class="card" ng-init="water = ctrl.getWater(); waste = ctrl.getWaste()">
+	<h2 class="card-header">Fuel</h2>
+	<div class="card-body">
+		<div class="table-responsive">
+			<table class="table recipe-table table-hover">
+				<tbody>
+					<tr ng-repeat="resource in ctrl.fuels">
+						<td>
+							<span class="item-amount">
+								<a ui-sref="item({item: resource.slug})">
+									<item-icon item="resource"></item-icon>
+								</a>
+								<small>{{ctrl.calculateFuelConsumption(resource)|number}} / min</small>
+							</span>
+							<span class="item-amount" ng-if="ctrl.generator.waterToPowerRatio > 0">
+								<span class="fas fa-fw fa-plus"></span>
+								<a ui-sref="item({item: water.slug})">
+									<item-icon item="water"></item-icon>
+								</a>
+								<small>{{ctrl.calculateWaterConsumption()|number}} m3 / min</small>
+							</span>
+							<span class="item-amount" ng-if="ctrl.getNuclearFuelRod().className === resource.className">
+								<span class="fas fa-fw fa-arrow-right"></span>
+								<a ui-sref="item({item: waste.slug})">
+									<item-icon item="waste"></item-icon>
+								</a>
+								<small>{{ctrl.calculateWasteProduction()|number}} / min</small>
+							</span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

@@ -1,11 +1,9 @@
-import {IItemFilterSet} from '@src/Types/IItemFilterSet';
 import {Constants} from '@src/Constants';
 import {ItemFiltersService} from '@src/Module/Services/ItemFiltersService';
 import {IOnInit, ITimeoutService} from 'angular';
 
 export class ItemFilterController implements IOnInit
 {
-	public filter: IItemFilterSet = this.filtersService.filter;
 
 	public physicalStates: { key: string, value?: string }[] = [
 		{
@@ -44,4 +42,5 @@ export class ItemFilterController implements IOnInit
 			document.getElementById('queryInput')?.focus();
 		});
 	}
+
 }

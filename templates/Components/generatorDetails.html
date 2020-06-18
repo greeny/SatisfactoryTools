@@ -1,0 +1,21 @@
+<table class="table two-columns" ng-if="ctrl.building">
+	<tbody>
+		<tr>
+			<td>Overclock</td>
+			<td>
+				{{ctrl.options.overclock}}%
+				<input class="w-100" ng-model="ctrl.options.overclock" type="range" min="1" max="250" step="1">
+			</td>
+		</tr>
+		<tr>
+			<td>Power production</td>
+			<td>{{ctrl.powerProduction|number}} MW</td>
+		</tr>
+		<tr>
+			<td>Require water</td>
+			<td>
+				{{ctrl.generator.waterToPowerRatio > 0 ? 'Yes' : 'No'}}
+			</td>
+		</tr>
+	</tbody>
+</table>
