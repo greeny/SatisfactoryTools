@@ -3,8 +3,10 @@ import {BuildingFilterController} from '@src/Module/Components/BuildingFilterCon
 
 export class BuildingFilterComponent implements IComponentOptions
 {
+
 	public template: string = require('@templates/Components/buildingFilters.html');
 	public controller = BuildingFilterController;
 	public controllerAs = 'ctrl';
 	public transclude = true;
+
 }

@@ -4,6 +4,7 @@ import {IOnInit, ITimeoutService} from 'angular';
 
 export class ItemFilterController implements IOnInit
 {
+
 	public physicalStates: { key: string, value?: string }[] = [
 		{
 			key: 'any',
@@ -41,4 +42,5 @@ export class ItemFilterController implements IOnInit
 			document.getElementById('queryInput')?.focus();
 		});
 	}
+
 }

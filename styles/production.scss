@@ -23,6 +23,11 @@ $border: 1px solid rgba(0, 0, 0, 0.125);
 	font-size: 24px;
 	padding: 30px 10px;
 	border: 1px solid #4e5d6c;
+
+	span {
+		font-size: 16px;
+		display: inline-block;
+	}
 }
 
 .production-nav-tabs {
