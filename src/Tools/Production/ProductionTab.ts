@@ -4,6 +4,8 @@ import {IProductionToolRequest, IProductionToolRequestItem} from '@src/Tools/Pro
 import {Constants} from '@src/Constants';
 import data, {Data} from '@src/Data/Data';
 import {IProductionControllerScope} from '@src/Module/Controllers/ProductionController';
+import axios from 'axios';
+import {Strings} from '@src/Utils/Strings';
 
 export class ProductionTab
 {
@@ -21,6 +23,7 @@ export class ProductionTab
 	};
 
 	public tab: string = 'production';
+	public shareLink: string = '';
 
 	private readonly unregisterCallback: () => void;
 
@@ -37,8 +40,36 @@ export class ProductionTab
 		this.unregisterCallback = scope.$watch(() => {
 			return this.tool.productionRequest;
 		}, () => {
+			this.scope.saveState();
+			this.shareLink = '';
 			this.tool.calculate(this.scope.$timeout);
 		}, true);
+	}
+
+	public copyShareLink(): void
+	{
+		if (this.shareLink) {
+			Strings.copyToClipboard(this.shareLink, 'Link for sharing has been copied to clipboard.');
+			return;
+		}
+		const shareData = angular.copy(this.tool.productionRequest);
+		shareData.name = this.tool.name;
+		shareData.icon = this.tool.icon;
+		axios({
+			method: 'POST',
+			url: 'http://api.satisfactorytools.local/v1/share',
+			data: shareData,
+		}).then((response) => {
+			this.scope.$timeout(0).then(() => {
+				this.shareLink = response.data.link;
+				Strings.copyToClipboard(response.data.link, 'Link for sharing has been copied to clipboard.');
+			});
+		}).catch(() => {
+			this.scope.$timeout(0).then(() => {
+				this.shareLink = '';
+				alert('Couldn\'t get the share link.');
+			});
+		});
 	}
 
 	public unregister(): void

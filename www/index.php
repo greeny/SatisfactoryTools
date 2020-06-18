@@ -86,6 +86,8 @@
 </head>
 <body>
 
+<div id="toasts" class="toasts"></div>
+
 <app></app>
 
 <div class="fullscreen-loader" ng-class="{hidden: true}">

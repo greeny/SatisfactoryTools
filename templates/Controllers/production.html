@@ -44,6 +44,9 @@
 			</span>
 
 			<span class="btn-group">
+				<a class="btn btn-info" ng-click="ctrl.tab.copyShareLink()" tooltip title="Share tab">
+					<span class="fas fa-share-alt"></span>
+				</a>
 				<a class="btn btn-success" ng-click="ctrl.cloneTab(ctrl.tab)" tooltip title="Clone tab">
 					<span ng-class="{'far': !ctrl.cloningInProgress, 'fas': ctrl.cloningInProgress, 'fa-fw': true, 'fa-clone': !ctrl.cloningInProgress, 'fa-spin': ctrl.cloningInProgress, 'fa-sync-alt': ctrl.cloningInProgress}"></span>
 				</a>

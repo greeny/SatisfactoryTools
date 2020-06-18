@@ -21,6 +21,17 @@
 	}
 }
 
+.toasts {
+	z-index: 10000;
+	position: fixed;
+	top: 60px;
+	right: 10px;
+
+	.toast {
+		z-index: 10000;
+	}
+}
+
 .disabled {
 	cursor: not-allowed;
 }

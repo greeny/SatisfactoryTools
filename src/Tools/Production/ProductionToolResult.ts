@@ -56,6 +56,7 @@ export class ProductionToolResult
 			id++;
 		}
 
+		const edges: {[key: string]: {from: number, to: number, label: string, arrows?: string}} = {};
 		for (const recipe of recipes) {
 			ingredientLoop:
 			for (const ingredient of recipe.recipe.ingredients) {
@@ -67,11 +68,18 @@ export class ProductionToolResult
 
 							product.amount -= diff;
 
-							this.edges.add({
-								from: re.nodeId,
-								to: recipe.nodeId,
-								label: ingredient.item.prototype.name + '\n' + diff.toFixed(2) + '/min',
-							});
+							const key = re.nodeId + '-' + recipe.nodeId;
+							const reverseKey = recipe.nodeId + '-' + re.nodeId;
+							if (!(reverseKey in edges)) {
+								edges[key] = {
+									from: re.nodeId,
+									to: recipe.nodeId,
+									label: ingredient.item.prototype.name + '\n' + diff.toFixed(2) + '/min',
+								};
+							} else {
+								edges[reverseKey].arrows = 'from,to';
+								edges[reverseKey].label = edges[reverseKey].label.replace('\n', ': ') + '\n' + ingredient.item.prototype.name + ': ' + diff.toFixed(2) + '/min';
+							}
 							this.elkGraph.edges.push({
 								id: nodeId.toString(),
 								source: re.nodeId.toString(),
@@ -80,14 +88,14 @@ export class ProductionToolResult
 							nodeId++;
 
 							amount -= diff;
-							if (amount <= 1e-6) {
+							if (amount <= 1e-8) {
 								continue ingredientLoop;
 							}
 						}
 					}
 				}
 
-				if (amount >= 1e-6 && model.isRawResource(ingredient.item)) {
+				if (amount >= 1e-8 && model.isRawResource(ingredient.item)) {
 					if (!(ingredient.item.prototype.className in this.rawResources)) {
 						this.rawResources[ingredient.item.prototype.className] = {
 							amount: 0,
@@ -101,6 +109,10 @@ export class ProductionToolResult
 					});
 				}
 			}
+		}
+
+		for (const key in edges) {
+			this.edges.add(edges[key]);
 		}
 
 		for (const k in this.rawResources) {
@@ -142,7 +154,7 @@ export class ProductionToolResult
 		const producedItems: {[key: string]: {[nodeId: string]: number}} = {};
 		for (const recipe of recipes) {
 			for (const cache of recipe.productAmountCache) {
-				if (Math.abs(cache.amount) > 1e-3) {
+				if (Math.abs(cache.amount) >= 1e-2) {
 					if (!(cache.product in producedItems)) {
 						producedItems[cache.product] = {};
 					}

@@ -1,13 +1,15 @@
-import {ProductionTool} from '@src/Tools/Production/ProductionTool';
 import model from '@src/Data/Model';
 import * as angular from 'angular';
-import {IScope, ITimeoutService} from 'angular';
+import {ILocationService, IScope, ITimeoutService} from 'angular';
 import {ProductionTab} from '@src/Tools/Production/ProductionTab';
 import {IItemSchema} from '@src/Schema/IItemSchema';
 import {Constants} from '@src/Constants';
 import data from '@src/Data/Data';
 import {IRecipeSchema} from '@src/Schema/IRecipeSchema';
 import {IResourceSchema} from '@src/Schema/IResourceSchema';
+import {DataStorageService} from '@src/Module/Services/DataStorageService';
+import {IProductionToolRequest} from '@src/Tools/Production/IProductionToolRequest';
+import axios from 'axios';
 
 export class ProductionController
 {
@@ -16,7 +18,6 @@ export class ProductionController
 	public tabs: ProductionTab[] = [];
 	public addingInProgress: boolean;
 	public cloningInProgress: boolean;
-	public readonly tool: ProductionTool;
 	public readonly rawResources: IResourceSchema[] = data.getResources();
 	public readonly craftableItems: IItemSchema[] = model.getAutomatableItems();
 	public readonly alternateRecipes: IRecipeSchema[] = data.getAlternateRecipes();
@@ -29,13 +30,35 @@ export class ProductionController
 		'maximize': Constants.PRODUCTION_TYPE.MAXIMIZE,
 	};
 
-	public static $inject = ['$scope', '$timeout'];
+	public static $inject = ['$scope', '$timeout', 'DataStorageService', '$location'];
 
-	public constructor(private readonly scope: IProductionControllerScope, private readonly $timeout: ITimeoutService)
+	public constructor(
+		private readonly scope: IProductionControllerScope,
+		private readonly $timeout: ITimeoutService,
+		private readonly dataStorageService: DataStorageService,
+		private readonly $location: ILocationService,
+	)
 	{
-		this.tool = new ProductionTool;
 		scope.$timeout = $timeout;
-		this.addEmptyTab();
+		scope.saveState = () => {
+			this.saveState();
+		};
+		this.loadState();
+		const query = this.$location.search();
+		if ('share' in query) {
+			axios({
+				method: 'GET',
+				url: 'https://api.satisfactorytools.com/v1/share/' + encodeURIComponent(query.share),
+			}).then((response) => {
+				$timeout(0).then(() => {
+					const tabData: IProductionToolRequest = response.data.data;
+					tabData.name = 'Shared: ' + tabData.name;
+					const tab = new ProductionTab(this.scope, tabData);
+					this.tabs.push(tab);
+					this.tab = tab;
+				});
+			});
+		}
 	}
 
 	public addEmptyTab(): void
@@ -94,11 +117,38 @@ export class ProductionController
 		return model.getItem(className).prototype;
 	}
 
+	private saveState(): void
+	{
+		const save: IProductionToolRequest[] = [];
+		for (const tab of this.tabs) {
+			save.push(tab.tool.productionRequest);
+		}
+		this.dataStorageService.saveData('production', save);
+	}
+
+	private loadState(): void
+	{
+		const loaded = this.dataStorageService.loadData('production', null);
+		if (loaded === null) {
+			this.addEmptyTab();
+		} else {
+			for (const item of loaded) {
+				this.tabs.push(new ProductionTab(this.scope, item));
+			}
+			if (this.tabs.length) {
+				this.tab = this.tabs[0];
+			} else {
+				this.addEmptyTab();
+			}
+		}
+	}
+
 }
 
 export interface IProductionControllerScope extends IScope
 {
 
 	$timeout: ITimeoutService;
+	saveState: () => void;
 
 }
