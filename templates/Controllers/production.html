@@ -124,7 +124,7 @@
 									<select ng-show="product.item" class="form-control" ng-model="product.type" ng-options="value as key for (key, value) in ctrl.options"></select>
 								</td>
 								<td>
-									<input class="form-control" ng-show="product.item && product.type === 'perMinute'" type="number" ng-model="product.amount">
+									<input class="form-control" ng-show="product.item && product.type === 'perMinute'" type="number" ng-model="product.amount" step="any">
 									<input class="w-100" ng-show="product.item && product.type === 'max'" type="range" ng-model="product.ratio" min="0" max="100" step="2">
 								</td>
 								<td>
@@ -200,7 +200,7 @@
 													</span>
 												</td>
 												<td>
-													<input type="number" ng-disabled="!ctrl.tab.isResourceEnabled(resource.item)" class="form-control" ng-model="ctrl.tab.tool.productionRequest.resourceMax[resource.item]">
+													<input type="number" ng-disabled="!ctrl.tab.isResourceEnabled(resource.item)" class="form-control" ng-model="ctrl.tab.tool.productionRequest.resourceMax[resource.item]" step="any">
 												</td>
 											</tr>
 										</tbody>

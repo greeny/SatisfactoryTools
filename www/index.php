@@ -104,5 +104,18 @@
 </div>
 
 <script src="/assets/app.js?v=<?= filemtime(__DIR__ . '/assets/app.js') ?>" async></script>
+<script type="text/javascript">
+	var _paq = window._paq || [];
+	_paq.push(["setDoNotTrack", true]);
+	_paq.push(['trackPageView']);
+	_paq.push(['enableLinkTracking']);
+	(function() {
+		var u="//analytics.greeny.dev/";
+		_paq.push(['setTrackerUrl', u+'matomo.php']);
+		_paq.push(['setSiteId', '4']);
+		var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+		g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+	})();
+</script>
 </body>
 </html>
