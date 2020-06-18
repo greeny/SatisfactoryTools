@@ -31,6 +31,7 @@ import {IFilterService} from '@src/Types/IFilterService';
 import {GeneratorFuelsComponent} from '@src/Module/Components/GeneratorFuelsComponent';
 import {ExtractorResourcesComponent} from '@src/Module/Components/ExtractorResourcesComponent';
 import {ManufacturerRecipesComponent} from '@src/Module/Components/ManufacturerRecipesComponent';
+import {ComponentOptionsService} from '@src/Module/Services/ComponentOptionsService';
 
 export class AppModule
 {
@@ -143,9 +144,13 @@ export class AppModule
 					ncyBreadcrumb: {
 						parent: 'buildings',
 					},
-					onEnter: ['$stateParams', '$state$', ($stateParams: StateParams, $state$: IAppState) => {
+					onEnter: ['$stateParams', '$state$', 'ComponentOptionsService', ($stateParams: StateParams, $state$: IAppState, options: ComponentOptionsService) => {
 						$state$.ncyBreadcrumb = $state$.ncyBreadcrumb || {};
 						$state$.ncyBreadcrumb.label = data.getBuildingBySlug($stateParams.item)?.name;
+						options.reset();
+					}],
+					onExit: ['ComponentOptionsService', (options: ComponentOptionsService) => {
+						options.reset();
 					}],
 					resolve: {
 						building: ['$transition$', ($transition$: ITransitionObject<{ item: string }>) => {
@@ -334,6 +339,7 @@ export class AppModule
 		this.app.service('ItemFiltersService', ItemFiltersService);
 		this.app.service('BuildingFiltersService', BuildingFiltersService);
 		this.app.service('DataStorageService', DataStorageService);
+		this.app.service('ComponentOptionsService', ComponentOptionsService);
 
 		this.app.controller('HomeController', HomeController);
 		this.app.controller('ItemController', ItemController);

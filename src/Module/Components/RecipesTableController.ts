@@ -2,10 +2,17 @@ import {IItemSchema} from '@src/Schema/IItemSchema';
 import data from '@src/Data/Data';
 import {IRecipeSchema} from '@src/Schema/IRecipeSchema';
 import {IBuildingSchema, IManufacturerSchema} from '@src/Schema/IBuildingSchema';
+import {ComponentOptionsService} from '@src/Module/Services/ComponentOptionsService';
 
 export class RecipesTableController
 {
 
+	public static $inject = ['ComponentOptionsService'];
+
+	public constructor(public options: ComponentOptionsService)
+	{
+
+	}
 	public getItem(className: string): IItemSchema|null
 	{
 		return data.getRawData().items[className];
