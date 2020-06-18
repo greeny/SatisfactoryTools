@@ -9,6 +9,7 @@
 							<item-icon item="ctrl.building" size="128"></item-icon>
 						</span>
 						<p style="white-space: pre-line;">{{ctrl.building.description}}</p>
+						<div class="clearfix"></div>
 						<div ng-if="ctrl.buildingRecipe">
 							<hr/>
 							<h3>Cost</h3>
@@ -18,9 +19,9 @@
 									<a ui-sref="item({item: ctrl.getItem(ingredient.item).slug})">
 										<item-icon item="ingredient.item"></item-icon>
 									</a>
-									<br>
 								</span>
 							</div>
+							<span ng-if="ctrl.building.metadata.lengthPerCost">/ {{ ctrl.building.metadata.lengthPerCost / 100 }} m</span>
 						</div>
 					</div>
 				</div>

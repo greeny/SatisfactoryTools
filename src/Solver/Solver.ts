@@ -15,6 +15,8 @@ export class Solver
 			if ('result' in response.data) {
 				callback(response.data.result);
 			}
+		}).catch(() => {
+			callback({});
 		});
 	}
 

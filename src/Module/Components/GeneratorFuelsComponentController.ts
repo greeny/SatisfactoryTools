@@ -7,6 +7,7 @@ import {Constants} from '@src/Constants';
 
 export class GeneratorFuelsComponentController implements IOnInit
 {
+
 	public building: IBuildingSchema;
 	public generator: IGeneratorSchema;
 	public fuels: IItemSchema[];
@@ -39,12 +40,10 @@ export class GeneratorFuelsComponentController implements IOnInit
 		return 5;
 	}
 
-
 	public getWater(): IItemSchema
 	{
 		return data.getRawData().items[Constants.WATER_CLASSNAME];
 	}
-
 
 	public getWaste(): IItemSchema
 	{
@@ -55,4 +54,5 @@ export class GeneratorFuelsComponentController implements IOnInit
 	{
 		return data.getRawData().items[Constants.NUCLEAR_FUEL_ROD_CLASSNAME];
 	}
+
 }

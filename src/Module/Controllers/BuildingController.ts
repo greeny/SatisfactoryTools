@@ -1,14 +1,10 @@
 import data from '@src/Data/Data';
 import {ITransitionObject} from '@src/Types/ITransitionObject';
 import {IRecipeSchema} from '@src/Schema/IRecipeSchema';
-import {IBuildingSchema, IManufacturerSchema} from '@src/Schema/IBuildingSchema';
+import {IBuildingSchema} from '@src/Schema/IBuildingSchema';
 import {ISchematicSchema} from '@src/Schema/ISchematicSchema';
 import {IScope} from 'angular';
 import {BuildingFiltersService} from '@src/Module/Services/BuildingFiltersService';
-import {IItemSchema} from '@src/Schema/IItemSchema';
-import {IMinerSchema} from '@src/Schema/IMinerSchema';
-import {IGeneratorSchema} from '@src/Schema/IGeneratorSchema';
-import {Constants} from '@src/Constants';
 
 export class BuildingController
 {
@@ -55,4 +51,5 @@ export class BuildingController
 	{
 		this.itemFilterService.resetFilters();
 	}
+
 }

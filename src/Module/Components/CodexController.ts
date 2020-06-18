@@ -3,7 +3,9 @@ import {IItemSchema} from '@src/Schema/IItemSchema';
 import data from '@src/Data/Data';
 import {IFilterService} from '@src/Types/IFilterService';
 
-export class CodexController{
+export class CodexController
+{
+
 	public filtersService: IFilterService<any>;
 	public entityPreviewState: string;
 	public static $inject = ['RecentlyVisitedItemsService'];
@@ -21,4 +23,5 @@ export class CodexController{
 	{
 		return this.filtersService.filterEntities();
 	}
+
 }

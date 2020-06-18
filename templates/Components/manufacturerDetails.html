@@ -1,16 +1,19 @@
-<table class="table">
+<table class="table two-columns">
 	<tbody>
 		<tr ng-if="ctrl.isAutonomousManufacturer(ctrl.building)">
-			<td>Power consumption</td>
-			<td>{{ ctrl.building.metadata.powerConsumption }} MW</td>
+			<td>Overclock</td>
+			<td>
+				{{ctrl.overclock}}%
+				<input class="w-100" ng-model="ctrl.overclock" type="range" min="1" max="250" step="1">
+			</td>
 		</tr>
 		<tr ng-if="ctrl.isAutonomousManufacturer(ctrl.building)">
-			<td>Power consumption exponent</td>
-			<td>{{ ctrl.building.metadata.powerConsumptionExponent }}</td>
+			<td>Power consumption</td>
+			<td>{{ctrl.powerConsumption|number}} MW</td>
 		</tr>
 		<tr ng-if="ctrl.isAutonomousManufacturer(ctrl.building)">
 			<td>Manufacturing speed multiplier</td>
-			<td>x{{ ctrl.building.metadata.manufacturingSpeed }}</td>
+			<td>x{{ctrl.manufacturingSpeed|number}}</td>
 		</tr>
 	</tbody>
 </table>

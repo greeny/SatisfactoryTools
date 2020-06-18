@@ -1,16 +1,10 @@
-import {IOnInit} from 'angular';
 import {IItemSchema} from '@src/Schema/IItemSchema';
 import data from '@src/Data/Data';
 import {IRecipeSchema} from '@src/Schema/IRecipeSchema';
 import {IBuildingSchema, IManufacturerSchema} from '@src/Schema/IBuildingSchema';
 
-export class RecipesTableController implements IOnInit
+export class RecipesTableController
 {
-	public static $inject = [];
-
-	public constructor()
-	{
-	}
 
 	public getItem(className: string): IItemSchema|null
 	{
@@ -32,7 +26,4 @@ export class RecipesTableController implements IOnInit
 		return data.getManufacturerByClassName(recipe.producedIn[0]);
 	}
 
-	public $onInit(): void
-	{
-	}
 }

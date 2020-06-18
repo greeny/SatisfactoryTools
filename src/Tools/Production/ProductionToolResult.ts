@@ -10,6 +10,7 @@ export class ProductionToolResult
 		id: number,
 		label: string,
 		title?: string,
+		color?: string,
 		x?: number,
 		y?: number,
 	}>();
@@ -112,6 +113,7 @@ export class ProductionToolResult
 					id: id,
 					label: ProductionToolResult.getRecipeDisplayedName(item.prototype.name) + '\n' + resource.amount.toFixed(2) + ' / min',
 					title: '',
+					color: '#4e5d6c',
 				});
 				this.elkGraph.children.push({
 					id: id.toString(),
@@ -135,6 +137,55 @@ export class ProductionToolResult
 
 				id++;
 			}
+		}
+
+		const producedItems: {[key: string]: {[nodeId: string]: number}} = {};
+		for (const recipe of recipes) {
+			for (const cache of recipe.productAmountCache) {
+				if (Math.abs(cache.amount) > 1e-3) {
+					if (!(cache.product in producedItems)) {
+						producedItems[cache.product] = {};
+					}
+					producedItems[cache.product][recipe.nodeId] = cache.amount;
+				}
+			}
+		}
+
+		for (const index in producedItems) {
+			const itemName = model.getItem(index).prototype.name;
+			const producedItem = producedItems[index];
+
+			let amount = 0;
+			let producedNodeId;
+			for (producedNodeId in producedItem) {
+				amount += producedItem[producedNodeId];
+			}
+
+			this.nodes.add({
+				id: id,
+				label: ProductionToolResult.getRecipeDisplayedName(itemName) + '\n' + amount.toFixed(2) + ' / min',
+				color: '#5cb85c',
+			});
+			this.elkGraph.children.push({
+				id: id.toString(),
+				width: this.nodeWidth,
+				height: this.nodeHeight,
+			});
+
+			for (producedNodeId in producedItem) {
+				this.edges.add({
+					from: parseInt(producedNodeId, 10),
+					to: id,
+					label: itemName + '\n' + producedItem[producedNodeId].toFixed(2) + ' / min',
+				});
+				this.elkGraph.edges.push({
+					id: nodeId.toString(),
+					source: producedNodeId,
+					target: id.toString(),
+				});
+				nodeId++;
+			}
+			id++;
 		}
 	}
 

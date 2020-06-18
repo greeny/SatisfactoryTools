@@ -10,6 +10,12 @@
 
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
+				<li class="nav-item" ui-sref-active="active">
+					<a class="nav-link" ui-sref="home">
+						<span class="fas fa-fw fa-home"></span>
+						Home
+					</a>
+				</li>
 				<li class="nav-item" ui-sref-active="active" uib-dropdown>
 					<a class="nav-link dropdown-toggle" data-toggle="dropdown" id="browser_toggle">
 						<i class="fas fa-fw fa-th-large"></i>
@@ -17,11 +23,11 @@
 					</a>
 					<div class="dropdown-menu" role="menu" aria-labelledby="browser_toggle">
 						<a class="dropdown-item" ui-sref="items" ui-sref-active="active">
-							<i class="fas fa-sign-in-alt fa-fw"></i>
+							<i class="fas fa-fw fa-box-open"></i>
 							Items
 						</a>
 						<a class="dropdown-item" ui-sref="buildings" ui-sref-active="active">
-							<i class="fa fa-industry"></i>
+							<i class="fas fa-fw fa-industry"></i>
 							<span>Buildings</span>
 						</a>
 					</div>

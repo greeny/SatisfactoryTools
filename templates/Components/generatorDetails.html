@@ -1,16 +1,20 @@
-<table class="table" ng-if="ctrl.building">
+<table class="table two-columns" ng-if="ctrl.building">
 	<tbody>
 		<tr>
-			<td>Power production</td>
-			<td>{{ ctrl.getGenerator(ctrl.building.className).powerProduction }} MW</td>
+			<td>Overclock</td>
+			<td>
+				{{ctrl.overclock}}%
+				<input class="w-100" ng-model="ctrl.overclock" type="range" min="1" max="250" step="1">
+			</td>
 		</tr>
 		<tr>
-			<td>Power production exponent</td>
-			<td>{{ ctrl.getGenerator(ctrl.building.className).powerProductionExponent }}</td>
+			<td>Power production</td>
+			<td>{{ctrl.powerProduction|number}} MW</td>
 		</tr>
 		<tr>
 			<td>Require water</td>
-			<td>{{ ctrl.getGenerator(ctrl.building.className).waterToPowerRatio > 0 ? 'Yes' : 'No' }}
+			<td>
+				{{ctrl.generator.waterToPowerRatio > 0 ? 'Yes' : 'No'}}
 			</td>
 		</tr>
 	</tbody>

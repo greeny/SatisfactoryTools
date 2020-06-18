@@ -21,6 +21,10 @@
 	}
 }
 
+.disabled {
+	cursor: not-allowed;
+}
+
 .navbar-brand {
 	padding-top: 0;
 	padding-bottom: 0;
@@ -75,5 +79,11 @@ ui-view[name="content"] {
 table {
 	a {
 		text-decoration: none !important;
+	}
+}
+
+table.two-columns {
+	td {
+		width: 50%;
 	}
 }

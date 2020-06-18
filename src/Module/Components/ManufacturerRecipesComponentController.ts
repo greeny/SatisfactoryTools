@@ -6,6 +6,7 @@ import {IOnInit} from 'angular';
 
 export class ManufacturerRecipesComponentController implements IOnInit
 {
+
 	public building: IBuildingSchema;
 	public recipes: IRecipeSchema[];
 
@@ -41,4 +42,5 @@ export class ManufacturerRecipesComponentController implements IOnInit
 			return recipe.producedIn.indexOf(this.building.className) > -1;
 		});
 	}
+
 }

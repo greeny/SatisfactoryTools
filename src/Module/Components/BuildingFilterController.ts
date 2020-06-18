@@ -3,6 +3,7 @@ import {BuildingFiltersService} from '@src/Module/Services/BuildingFiltersServic
 
 export class BuildingFilterController implements IOnInit
 {
+
 	public static $inject = ['BuildingFiltersService', '$timeout'];
 
 	public constructor(public filtersService: BuildingFiltersService, private $timeout: ITimeoutService)
@@ -15,4 +16,5 @@ export class BuildingFilterController implements IOnInit
 			document.getElementById('queryInput')?.focus();
 		});
 	}
+
 }

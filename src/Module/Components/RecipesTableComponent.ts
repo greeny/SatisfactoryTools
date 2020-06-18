@@ -3,6 +3,7 @@ import {RecipesTableController} from '@src/Module/Components/RecipesTableControl
 
 export class RecipesTableComponent implements IComponentOptions
 {
+
 	public template: string = require('@templates/Components/recipesTable.html');
 	public controller = RecipesTableController;
 	public controllerAs = 'ctrl';
@@ -10,4 +11,5 @@ export class RecipesTableComponent implements IComponentOptions
 	public bindings = {
 		recipes: '=',
 	};
+
 }

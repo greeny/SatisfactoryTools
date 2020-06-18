@@ -68,4 +68,5 @@ export class ItemController
 	{
 		this.itemFilterService.resetFilters();
 	}
+
 }

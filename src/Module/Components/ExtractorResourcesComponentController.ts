@@ -6,6 +6,7 @@ import {IOnInit} from 'angular';
 
 export class ExtractorResourcesComponentController implements IOnInit
 {
+
 	public building: IBuildingSchema;
 	public extractor: IMinerSchema;
 	public resources: IItemSchema[];
@@ -17,4 +18,5 @@ export class ExtractorResourcesComponentController implements IOnInit
 			return data.getRawData().items[resource];
 		});
 	}
+
 }
