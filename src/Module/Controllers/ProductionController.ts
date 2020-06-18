@@ -51,12 +51,15 @@ export class ProductionController
 				url: 'https://api.satisfactorytools.com/v1/share/' + encodeURIComponent(query.share),
 			}).then((response) => {
 				$timeout(0).then(() => {
+					this.$location.search('');
 					const tabData: IProductionToolRequest = response.data.data;
 					tabData.name = 'Shared: ' + tabData.name;
 					const tab = new ProductionTab(this.scope, tabData);
 					this.tabs.push(tab);
 					this.tab = tab;
 				});
+			}).catch(() => {
+				this.$location.search('');
 			});
 		}
 	}
