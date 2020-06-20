@@ -5,6 +5,7 @@ import {IOnInit} from 'angular';
 import {IItemSchema} from '@src/Schema/IItemSchema';
 import {Constants} from '@src/Constants';
 import {ComponentOptionsService} from '@src/Module/Services/ComponentOptionsService';
+import {Formula} from '@src/Formula';
 
 export class GeneratorFuelsComponentController implements IOnInit
 {
@@ -12,6 +13,8 @@ export class GeneratorFuelsComponentController implements IOnInit
 	public building: IBuildingSchema;
 	public generator: IGeneratorSchema;
 	public fuels: IItemSchema[];
+	public calculateFuelConsumption = Formula.calculateFuelConsumption;
+	public calculateWaterConsumption = Formula.calculateGeneratorWaterConsumption;
 
 	public static $inject = ['ComponentOptionsService'];
 
@@ -31,16 +34,6 @@ export class GeneratorFuelsComponentController implements IOnInit
 		this.fuels = this.getGenerator(this.building.className).fuel.map((fuel: string) => {
 			return data.getRawData().items[fuel];
 		});
-	}
-
-	public calculateFuelConsumption(fuel: IItemSchema): number
-	{
-		return (((this.generator.powerProduction / fuel.energyValue) * 60) / (fuel.liquid ? 1000 : 1)) * (this.options.overclock / 100);
-	}
-
-	public calculateWaterConsumption(): number
-	{
-		return ((60 * (this.generator.powerProduction * this.generator.waterToPowerRatio)) / 1000) * (this.options.overclock / 100);
 	}
 
 	public calculateWasteProduction(): number
