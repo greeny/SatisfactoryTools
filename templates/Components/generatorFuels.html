@@ -10,14 +10,14 @@
 								<a ui-sref="item({item: resource.slug})">
 									<item-icon item="resource"></item-icon>
 								</a>
-								<small>{{ctrl.calculateFuelConsumption(resource)|number}} / min</small>
+								<small>{{ctrl.calculateFuelConsumption(ctrl.generator, resource, ctrl.options.overclock)|number}} / min</small>
 							</span>
 							<span class="item-amount" ng-if="ctrl.generator.waterToPowerRatio > 0">
 								<span class="fas fa-fw fa-plus"></span>
 								<a ui-sref="item({item: water.slug})">
 									<item-icon item="water"></item-icon>
 								</a>
-								<small>{{ctrl.calculateWaterConsumption()|number}} m3 / min</small>
+								<small>{{ctrl.calculateWaterConsumption(ctrl.generator, ctrl.options.overclock)|number}} m3 / min</small>
 							</span>
 							<span class="item-amount" ng-if="ctrl.getNuclearFuelRod().className === resource.className">
 								<span class="fas fa-fw fa-arrow-right"></span>
