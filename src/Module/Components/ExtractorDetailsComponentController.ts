@@ -1,7 +1,7 @@
 import {IBuildingSchema} from '@src/Schema/IBuildingSchema';
 import {IMinerSchema} from '@src/Schema/IMinerSchema';
 import data from '@src/Data/Data';
-import {Constants} from '@src/Constants';
+import {Constants, RESOURCE_PURITY} from '@src/Constants';
 import {ComponentOptionsService} from '@src/Module/Services/ComponentOptionsService';
 
 export class ExtractorDetailsComponentController
@@ -51,7 +51,7 @@ export class ExtractorDetailsComponentController
 		return data.getRawData().miners[className.replace('Desc', 'Build')];
 	}
 
-	public getExtractionValues(building: IBuildingSchema, extractor: IMinerSchema, purity: 'impure'|'normal'|'pure'): number
+	public getExtractionValues(building: IBuildingSchema, extractor: IMinerSchema, purity: RESOURCE_PURITY): number
 	{
 		const extractorMultiplier = Constants.WATER_EXTRACTOR_CLASSNAME === building.className ? 0 : 1;
 		const extractedValue = (60 / extractor.extractCycleTime) * (extractor.itemsPerCycle / (extractor.allowLiquids ? 1000 : 1));
