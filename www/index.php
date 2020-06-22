@@ -18,7 +18,6 @@
 	<meta name="theme-color" content="#df691a">
 	<meta name="title" content="Satisfactory Tools" />
 	<meta name="type" content="website" />
-	<meta name="url" content="https://www.satisfactorytools.com/" />
 	<meta name="image" content="https://www.satisfactorytools.com/assets/images/icons/android-chrome-512x512.png" />
 	<meta name="description" content="A collection of powerful tools for planning and building the perfect base. Calculate your production or consumption, browse items, buildings, and schematics and share your builds with others!" />
 	<!-- Open Graph / Facebook -->
@@ -28,7 +27,7 @@
 	<meta property="og:description" content="A collection of powerful tools for planning and building the perfect base. Calculate your production or consumption, browse items, buildings, and schematics and share your builds with others!">
 	<meta property="og:image" content="https://www.satisfactorytools.com/assets/images/icons/android-chrome-512x512.png">
 	<!-- Twitter -->
-	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:card" content="summary">
 	<meta property="twitter:url" content="https://www.satisfactorytools.com/">
 	<meta property="twitter:title" content="Satisfactory Tools">
 	<meta property="twitter:description" content="A collection of powerful tools for planning and building the perfect base. Calculate your production or consumption, browse items, buildings, and schematics and share your builds with others!">
