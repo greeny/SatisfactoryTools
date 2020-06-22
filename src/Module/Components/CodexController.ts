@@ -1,7 +1,7 @@
 import {RecentlyVisitedItemsService} from '@src/Module/Services/RecentlyVisitedItemsService';
 import {IItemSchema} from '@src/Schema/IItemSchema';
-import data from '@src/Data/Data';
 import {IFilterService} from '@src/Types/IFilterService';
+import {Strings} from '@src/Utils/Strings';
 
 export class CodexController
 {
@@ -14,9 +14,9 @@ export class CodexController
 	{
 	}
 
-	public getItemByClassName(className: string): IItemSchema|null
+	public getSchematicType(type: string): string
 	{
-		return data.getItemByClassName(className);
+		return Strings.convertSchematicType(type);
 	}
 
 	public getFilteredItems(): IItemSchema[]

@@ -32,6 +32,9 @@ import {GeneratorFuelsComponent} from '@src/Module/Components/GeneratorFuelsComp
 import {ExtractorResourcesComponent} from '@src/Module/Components/ExtractorResourcesComponent';
 import {ManufacturerRecipesComponent} from '@src/Module/Components/ManufacturerRecipesComponent';
 import {ComponentOptionsService} from '@src/Module/Services/ComponentOptionsService';
+import {SchematicFiltersService} from '@src/Module/Services/SchematicFiltersService';
+import {SchematicFilterComponent} from '@src/Module/Components/SchematicFilterComponent';
+import {SchematicController} from '@src/Module/Controllers/SchematicController';
 
 export class AppModule
 {
@@ -112,6 +115,60 @@ export class AppModule
 					},
 				},
 				{
+					name: 'schematics',
+					url: '/schematics',
+					ncyBreadcrumb: {
+						label: 'Schematics browser',
+						parent: 'codex',
+					},
+					onRetain: ['$transition$', 'filterService', ($transition: any, filterService: IFilterService<any>) => {
+						if ('schematic' === $transition.from().name) {
+							filterService.resetFilters();
+						}
+					}],
+					parent: 'codex',
+					resolve: {
+						filterService: ['SchematicFiltersService', (service: SchematicFiltersService) => {
+							return service;
+						}],
+						entityPreviewState: [() => {
+							return 'schematic';
+						}],
+					},
+					views: {
+						'content@listing': 'codex',
+						'filters@listing': 'schematicFilter',
+					},
+				},
+				{
+					name: 'schematic',
+					url: '/{item}',
+					parent: 'schematics',
+					ncyBreadcrumb: {
+						parent: 'schematics',
+					},
+					onEnter: ['$stateParams', '$state$', 'ComponentOptionsService', ($stateParams: StateParams, $state$: IAppState, options: ComponentOptionsService) => {
+						$state$.ncyBreadcrumb = $state$.ncyBreadcrumb || {};
+						$state$.ncyBreadcrumb.label = data.getSchematicBySlug($stateParams.item)?.name;
+						options.reset();
+					}],
+					onExit: ['ComponentOptionsService', (options: ComponentOptionsService) => {
+						options.reset();
+					}],
+					resolve: {
+						schematic: ['$transition$', ($transition$: ITransitionObject<{item: string}>) => {
+							return data.getSchematicBySlug($transition$.params().item);
+						}],
+					},
+					views: {
+						'content@listing': {
+							controller: 'SchematicController',
+							controllerAs: 'ctrl',
+							template: require('@templates/Controllers/schematic.html'),
+						},
+					},
+				},
+				{
 					name: 'buildings',
 					url: '/buildings',
 					ncyBreadcrumb: {
@@ -153,7 +210,7 @@ export class AppModule
 						options.reset();
 					}],
 					resolve: {
-						building: ['$transition$', ($transition$: ITransitionObject<{ item: string }>) => {
+						building: ['$transition$', ($transition$: ITransitionObject<{item: string}>) => {
 							return data.getBuildingBySlug($transition$.params().item);
 						}],
 					},
@@ -322,6 +379,7 @@ export class AppModule
 		this.app.component('visualization', new VisualizationComponent);
 		this.app.component('itemFilter', new ItemFilterComponent);
 		this.app.component('buildingFilter', new BuildingFilterComponent);
+		this.app.component('schematicFilter', new SchematicFilterComponent);
 		this.app.component('applicationBreadcrumbs', new ApplicationBreadcrumbsComponent);
 		this.app.component('entityListing', new EntityListingComponent);
 		this.app.component('codex', new CodexComponent);
@@ -338,12 +396,14 @@ export class AppModule
 		this.app.service('RecentlyVisitedItemsService', RecentlyVisitedItemsService);
 		this.app.service('ItemFiltersService', ItemFiltersService);
 		this.app.service('BuildingFiltersService', BuildingFiltersService);
+		this.app.service('SchematicFiltersService', SchematicFiltersService);
 		this.app.service('DataStorageService', DataStorageService);
 		this.app.service('ComponentOptionsService', ComponentOptionsService);
 
 		this.app.controller('HomeController', HomeController);
 		this.app.controller('ItemController', ItemController);
 		this.app.controller('BuildingController', BuildingController);
+		this.app.controller('SchematicController', SchematicController);
 		this.app.controller('ProductionController', ProductionController);
 	}
 

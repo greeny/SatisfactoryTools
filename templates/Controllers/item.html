@@ -73,7 +73,7 @@
 			<div class="card-body">
 
 				<div class="table-responsive">
-					<table class="table recipe-table table-hover">
+					<table class="table recipe-table table-hover two-columns">
 						<thead>
 							<tr>
 								<th>Building name</th>
@@ -114,18 +114,19 @@
 			<div class="card-body">
 
 				<div class="table-responsive">
-					<table class="table recipe-table table-hover">
+					<table class="table recipe-table table-hover two-columns">
 						<thead>
 							<tr>
 								<th>Schematic</th>
 								<th>Ingredients</th>
-								<th>Unlocks</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr ng-repeat="schematic in ctrl.usagesForSchematics">
 								<td>
-									{{schematic.name}}
+									<a class="btn btn-link" ui-sref="schematic({item: schematic.slug})">
+										{{schematic.name}}
+									</a>
 								</td>
 								<td>
 									<div ng-repeat="ingredient in schematic.cost" class="d-inline-block p-2">
@@ -136,11 +137,6 @@
 											</a>
 										</span>
 									</div>
-								</td>
-								<td>
-									<span ng-if="schematic.unlock.inventorySlots">{{schematic.unlock.inventorySlots}} inventory slots</span><br ng-if="schematic.unlock.inventorySlots">
-									<span ng-repeat="resource in schematic.unlock.scannerResources">{{ctrl.getItem(resource).name}} added to scanner{{$last ? '' : ', '}}</span><br ng-if="schematic.unlock.scannerResources.length">
-									<span ng-repeat="unlock in schematic.unlock.recipes">{{ctrl.getRecipe(unlock).name}}{{$last ? '' : ', '}}</span>
 								</td>
 							</tr>
 						</tbody>

@@ -5,6 +5,7 @@ import {IBuildingFilterSet} from '@src/Types/IBuildingFilterSet';
 
 export class BuildingFiltersService implements IFilterService<IBuildingSchema>
 {
+
 	public filter: IBuildingFilterSet;
 	public entities: IBuildingSchema[] = Object.values(data.getAllBuildings());
 
@@ -37,4 +38,5 @@ export class BuildingFiltersService implements IFilterService<IBuildingSchema>
 
 		return itemsToFilter;
 	}
+
 }

@@ -18,7 +18,7 @@ export class Data
 		Desc_Coal_C: 30900,
 		Desc_OreGold_C: 11040,
 		Desc_LiquidOil_C: 7500,
-		Desc_RawQuartz_C: 11280,
+		Desc_RawQuartz_C: 10500,
 		Desc_Sulfur_C: 6840,
 		Desc_OreBauxite_C: 7800,
 		Desc_OreUranium_C: 1800,
@@ -49,9 +49,56 @@ export class Data
 		return this.getRawData().items;
 	}
 
-	public getAllBuildings(): { [key: string]: IBuildingSchema }
+	public getAllBuildings(): {[key: string]: IBuildingSchema}
 	{
 		return this.getRawData().buildings;
+	}
+
+	public getAllSchematics(): {[key: string]: ISchematicSchema}
+	{
+		return this.getRawData().schematics;
+	}
+
+	public getRelevantSchematics(schematic: ISchematicSchema): ISchematicSchema[]
+	{
+		const allSchematics = this.getAllSchematics();
+		const result: ISchematicSchema[] = [schematic];
+
+		function addParentSchematics(s: ISchematicSchema) {
+			for (const dependencyClass of s.requiredSchematics) {
+				const dependency = allSchematics[dependencyClass];
+				if (result.indexOf(dependency) === -1) {
+					result.push(dependency);
+					addParentSchematics(dependency);
+				}
+			}
+		}
+
+		function addChildSchematics(s: ISchematicSchema) {
+			for (const key in allSchematics) {
+				const child = allSchematics[key];
+				if (child.requiredSchematics.indexOf(s.className) !== -1 && result.indexOf(child) === -1) {
+					result.push(child);
+					addChildSchematics(child);
+				}
+			}
+		}
+
+		addParentSchematics(schematic);
+		addChildSchematics(schematic);
+
+		return result;
+	}
+
+	public getSchematicBySlug(slug: string): ISchematicSchema|null
+	{
+		const schematics = this.getRawData().schematics;
+		for (const key in schematics) {
+			if (schematics[key].slug === slug) {
+				return schematics[key];
+			}
+		}
+		return null;
 	}
 
 	public getItemBySlug(slug: string): IItemSchema|null
@@ -170,37 +217,34 @@ export class Data
 		return schematics;
 	}
 
+	public getSchematicByClassName(className: string): ISchematicSchema|null
+	{
+		const schematics = this.getRawData().schematics;
+		return (className in schematics) ? schematics[className] : null;
+	}
+
 	public getItemByClassName(className: string): IItemSchema|null
 	{
 		const items = this.getRawData().items;
-		for (const key in items) {
-			if (items[key].className === className) {
-				return items[key];
-			}
-		}
-		return null;
+		return (className in items) ? items[className] : null;
+	}
+
+	public getRecipeByClassName(className: string): IRecipeSchema|null
+	{
+		const recipes = this.getRawData().recipes;
+		return (className in recipes) ? recipes[className] : null;
 	}
 
 	public getBuildingByClassName(className: string): IBuildingSchema|null
 	{
 		const buildings = this.getRawData().buildings;
-		for (const key in buildings) {
-			if (buildings[key].className === className) {
-				return buildings[key];
-			}
-		}
-		return null;
+		return (className in buildings) ? buildings[className] : null;
 	}
 
 	public getManufacturerByClassName(className: string): IManufacturerSchema|null
 	{
 		const buildings = this.getRawData().buildings;
-		for (const key in buildings) {
-			if (buildings[key].className === className) {
-				return buildings[key] as IManufacturerSchema;
-			}
-		}
-		return null;
+		return (className in buildings) ? buildings[className] as IManufacturerSchema : null;
 	}
 
 	public isItem(entity: BuildingTypes): entity is IItemSchema

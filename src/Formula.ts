@@ -18,7 +18,7 @@ export class Formula
 
 	public static calculateBuildingPowerConsumption(building: IBuildingSchema, overclock: number)
 	{
-		return Math.pow(overclock / Formula.defaultClock, building.metadata.powerConsumptionExponent || Formula.defaultPowerProductionExponent) * (building.metadata.powerConsumption || 0);
+		return Math.pow(overclock / 100, building.metadata.powerConsumptionExponent || Formula.defaultPowerProductionExponent) * (building.metadata.powerConsumption || 0);
 	}
 
 	public static calculateExtractorExtractionValue(extractor: IMinerSchema, purity: RESOURCE_PURITY): number
@@ -36,7 +36,7 @@ export class Formula
 
 	public static calculateFuelConsumption(generator: IGeneratorSchema, fuel: IItemSchema, overclock: number)
 	{
-		return (((generator.powerProduction / fuel.energyValue) * 60) / (fuel.liquid ? 1000 : 1)) * (overclock / 100);
+		return (((generator.powerProduction / fuel.energyValue) * 60) / (fuel.liquid ? 1000 : 1)) * Math.pow(overclock / 100, 1 / generator.powerProductionExponent);
 	}
 
 	public static calculateProductAmountsPerMinute(building: IManufacturerSchema, recipe: IRecipeSchema, recipeProductAmount: number, overclock: number): number
@@ -52,7 +52,7 @@ export class Formula
 
 	public static calculatePowerGeneratorPowerCapacity(generator: IGeneratorSchema, overclock: number)
 	{
-		return (generator.powerProduction * Math.pow(overclock / Formula.defaultClock, 1 / generator.powerProductionExponent));
+		return (generator.powerProduction * Math.pow(overclock / 100, 1 / generator.powerProductionExponent));
 	}
-	
+
 }
