@@ -15,12 +15,12 @@
 	<meta name="msapplication-config" content="/assets/images/icons/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
 	<!-- Meta tags for previewing in Discord, or other such apps. -->
-	<meta property="og:title" content="Satisfactory Tools" />
-	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://www.satisfactorytools.com/" />
-	<meta property="og:image" content="https://www.satisfactorytools.com/assets/images/icons/android-chrome-512x512.png" />
-	<meta property="og:description" content="A collection of powerful tools for planning and building the perfect base. Calculate your production or consumption, browse items, buildings, and schematics and share your builds with others!" />
 	<meta name="theme-color" content="#df691a">
+	<meta name="title" content="Satisfactory Tools" />
+	<meta name="type" content="website" />
+	<meta name="url" content="https://www.satisfactorytools.com/" />
+	<meta name="image" content="https://www.satisfactorytools.com/assets/images/icons/android-chrome-512x512.png" />
+	<meta name="description" content="A collection of powerful tools for planning and building the perfect base. Calculate your production or consumption, browse items, buildings, and schematics and share your builds with others!" />
 
 	<style>
 		[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
