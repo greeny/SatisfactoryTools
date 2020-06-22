@@ -5,6 +5,7 @@ import {IFilterService} from '@src/Types/IFilterService';
 
 export class ItemFiltersService implements IFilterService<IItemSchema>
 {
+
 	public filter: IItemFilterSet;
 	public entities: IItemSchema[] = Object.values(data.getAllItems());
 
@@ -69,4 +70,5 @@ export class ItemFiltersService implements IFilterService<IItemSchema>
 
 		return itemsToFilter;
 	}
+
 }

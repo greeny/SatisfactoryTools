@@ -16,6 +16,7 @@ export default function parseSchematics(schematics: {
 		mNumInventorySlotsToUnlock?: string;
 	}[],
 	mSchematicDependencies: {
+		Class?: string;
 		mSchematics?: string;
 		mRequireAllSchematicsToBePurchased?: string;
 	}[],
@@ -24,6 +25,11 @@ export default function parseSchematics(schematics: {
 {
 	const result: ISchematicSchema[] = [];
 	for (const schematic of schematics) {
+		// ignore resource sink purchases and custom schematics
+		if (schematic.mType === 'EST_ResourceSink' || schematic.mType === 'EST_Custom') {
+			continue;
+		}
+
 		const requiredSchematics: string[] = [];
 		const unlockData: ISchematicUnlockSchema = {
 			inventorySlots: 0,
@@ -43,11 +49,25 @@ export default function parseSchematics(schematics: {
 			}
 		}
 
+		for (const requirement of schematic.mSchematicDependencies) {
+			if (requirement.Class === 'BP_SchematicPurchasedDependency_C' && requirement.mSchematics) {
+				requiredSchematics.push(...Arrays.ensureArray(Strings.unserializeDocs(requirement.mSchematics)).map(parseBlueprintClass));
+			}
+		}
+
+		const cost = schematic.mCost ? Arrays.ensureArray(Strings.unserializeDocs(schematic.mCost)).map(parseItemAmount) : [];
+		let slug = Strings.webalize(schematic.mDisplayName);
+		// add suffix to slug to prevent duplicates
+		if ((schematic.mDisplayName === 'Inflated Pocket Dimension' || schematic.mDisplayName === 'Medicinal Inhaler') && cost.length) {
+			slug += '-' + Strings.webalize(cost[0].item.replace('Desc_', '').replace('_C', ''));
+		}
+
 		result.push({
 			className: schematic.ClassName,
 			name: schematic.mDisplayName,
+			slug: slug,
 			tier: parseInt(schematic.mTechTier),
-			cost: schematic.mCost ? Arrays.ensureArray(Strings.unserializeDocs(schematic.mCost)).map(parseItemAmount) : [],
+			cost: cost,
 			unlock: unlockData,
 			requiredSchematics: requiredSchematics,
 			type: schematic.mType,

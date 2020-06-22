@@ -11,6 +11,14 @@ export class Strings
 	public static readonly SEPARATOR = 'separator';
 	public static readonly UNKNOWN = 'unknown';
 
+	private static schematicTypes: {[key: string]: string} = {
+		EST_Milestone: 'Milestone',
+		EST_MAM: 'M.A.M. Research',
+		EST_Alternate: 'Alternate recipe',
+		EST_Tutorial: 'Tutorial',
+		EST_HardDrive: 'HDD Research',
+	};
+
 	public static webalize(name: string): string
 	{
 		return name.replace(/[\s|.]+/gi, '-').replace(/[™:]/gi, '').toLowerCase();
@@ -76,6 +84,11 @@ export class Strings
 			default:
 				throw new Error('Invalid stack size ' + size);
 		}
+	}
+
+	public static convertSchematicType(type: string): string
+	{
+		return Strings.schematicTypes[type] ? Strings.schematicTypes[type] : type;
 	}
 
 	public static unserializeDocs(text: string): any

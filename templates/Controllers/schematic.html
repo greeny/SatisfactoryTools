@@ -1,0 +1,100 @@
+<div class="row">
+	<div class="col-md-6">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="card mb-3">
+					<h2 class="card-header">Schematic: {{ctrl.schematic.name}}</h2>
+					<div class="card-body">
+						<table class="table two-columns">
+							<tbody>
+								<tr>
+									<td>Type</td>
+									<td>{{ctrl.getSchematicType(ctrl.schematic.type)}}</td>
+								</tr>
+								<tr>
+									<td>Tier</td>
+									<td>{{ctrl.schematic.tier}}</td>
+								</tr>
+								<tr>
+									<td>Time to research:</td>
+									<td>{{ctrl.schematic.time}} seconds</td>
+								</tr>
+								<tr>
+									<td>Cost</td>
+									<td>
+										<span class="item-amount" ng-repeat="ingredient in ctrl.schematic.cost">
+											{{ingredient.amount}}x
+											<a ui-sref="item({item: ctrl.getItem(ingredient.item).slug})">
+												<item-icon item="ingredient.item"></item-icon>
+											</a>
+										</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="card mb-3">
+			<h2 class="card-header">Schematic details</h2>
+			<div class="card-body">
+				<table class="table two-columns">
+					<tbody>
+						<tr ng-if="ctrl.schematic.requiredSchematics.length">
+							<td>
+								Requires schematics:
+							</td>
+							<td>
+								<div ng-repeat="schematic in ctrl.schematic.requiredSchematics">
+									<a class="btn btn-link" ui-sref="schematic({item: ctrl.getSchematic(schematic).slug})">
+										{{ctrl.getSchematic(schematic).name}}
+									</a>
+								</div>
+							</td>
+						</tr>
+						<tr ng-if="ctrl.schematic.unlock.recipes.length">
+							<td>
+								Unlocks recipes/buildings:
+							</td>
+							<td>
+								<div ng-repeat="recipe in ctrl.schematic.unlock.recipes">
+									{{ctrl.getRecipe(recipe).name}}
+								</div>
+							</td>
+						</tr>
+						<tr ng-if="ctrl.schematic.unlock.scannerResources.length">
+							<td>
+								Unlocks scanner resources:
+							</td>
+							<td>
+								<div ng-repeat="item in ctrl.schematic.unlock.scannerResources">
+									{{ctrl.getItem(item).name}}
+								</div>
+							</td>
+						</tr>
+						<tr ng-if="ctrl.schematic.unlock.inventorySlots > 0">
+							<td>
+								Adds inventory slots:
+							</td>
+							<td>
+								+{{ctrl.schematic.unlock.inventorySlots}}
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-12">
+		<h3>
+			Schematic dependency tree
+			<span class="text-muted">(doubleclick on a node to open that schematic's page)</span>
+		</h3>
+
+		<div id="schematic-tree" class="visualization"></div>
+	</div>
+</div>

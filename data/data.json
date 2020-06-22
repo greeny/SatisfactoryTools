@@ -11702,6 +11702,7 @@
 		"Research_ACarapace_0_C": {
 			"className": "Research_ACarapace_0_C",
 			"name": "Alien Carapace",
+			"slug": "alien-carapace",
 			"tier": 3,
 			"cost": [
 				{
@@ -11723,6 +11724,7 @@
 		"Research_ACarapace_1_C": {
 			"className": "Research_ACarapace_1_C",
 			"name": "Structural Analysis",
+			"slug": "structural-analysis",
 			"tier": 3,
 			"cost": [
 				{
@@ -11746,6 +11748,7 @@
 		"Research_ACarapace_2_1_C": {
 			"className": "Research_ACarapace_2_1_C",
 			"name": "Spiked Rebars",
+			"slug": "spiked-rebars",
 			"tier": 3,
 			"cost": [
 				{
@@ -11773,6 +11776,7 @@
 		"Research_ACarapace_2_C": {
 			"className": "Research_ACarapace_2_C",
 			"name": "Rebar Gun",
+			"slug": "rebar-gun",
 			"tier": 3,
 			"cost": [
 				{
@@ -11804,6 +11808,7 @@
 		"Research_ACarapace_3_C": {
 			"className": "Research_ACarapace_3_C",
 			"name": "Expanded Toolbelt",
+			"slug": "expanded-toolbelt",
 			"tier": 3,
 			"cost": [
 				{
@@ -11829,6 +11834,7 @@
 		"Research_AOrganisms_1_C": {
 			"className": "Research_AOrganisms_1_C",
 			"name": "Object Scanner Improvements",
+			"slug": "object-scanner-improvements",
 			"tier": 3,
 			"cost": [
 				{
@@ -11858,6 +11864,7 @@
 		"Research_AOrganisms_2_C": {
 			"className": "Research_AOrganisms_2_C",
 			"name": "Hostile Organism Detection",
+			"slug": "hostile-organism-detection",
 			"tier": 3,
 			"cost": [
 				{
@@ -11883,6 +11890,7 @@
 		"Research_AOrgans_0_C": {
 			"className": "Research_AOrgans_0_C",
 			"name": "Alien Organs",
+			"slug": "alien-organs",
 			"tier": 3,
 			"cost": [
 				{
@@ -11904,6 +11912,7 @@
 		"Research_AOrgans_1_C": {
 			"className": "Research_AOrgans_1_C",
 			"name": "Organic Properties",
+			"slug": "organic-properties",
 			"tier": 3,
 			"cost": [
 				{
@@ -11927,6 +11936,7 @@
 		"Research_AOrgans_2_C": {
 			"className": "Research_AOrgans_2_C",
 			"name": "Medicinal Inhaler",
+			"slug": "medicinal-inhaler-spitterparts",
 			"tier": 3,
 			"cost": [
 				{
@@ -11958,6 +11968,7 @@
 		"Research_AOrgans_3_C": {
 			"className": "Research_AOrgans_3_C",
 			"name": "Inflated Pocket Dimension",
+			"slug": "inflated-pocket-dimension-spitterparts",
 			"tier": 3,
 			"cost": [
 				{
@@ -11983,6 +11994,7 @@
 		"Research_Caterium_0_C": {
 			"className": "Research_Caterium_0_C",
 			"name": "Caterium",
+			"slug": "caterium",
 			"tier": 3,
 			"cost": [
 				{
@@ -12006,6 +12018,7 @@
 		"Research_Caterium_1_C": {
 			"className": "Research_Caterium_1_C",
 			"name": "Caterium Ingots",
+			"slug": "caterium-ingots",
 			"tier": 3,
 			"cost": [
 				{
@@ -12029,6 +12042,7 @@
 		"Research_Caterium_2_C": {
 			"className": "Research_Caterium_2_C",
 			"name": "Quickwire",
+			"slug": "quickwire",
 			"tier": 3,
 			"cost": [
 				{
@@ -12052,6 +12066,7 @@
 		"Research_Caterium_3_1_C": {
 			"className": "Research_Caterium_3_1_C",
 			"name": "Inflated Pocket Dimension",
+			"slug": "inflated-pocket-dimension-highspeedwire",
 			"tier": 3,
 			"cost": [
 				{
@@ -12081,6 +12096,7 @@
 		"Research_Caterium_3_C": {
 			"className": "Research_Caterium_3_C",
 			"name": "Caterium Electronics",
+			"slug": "caterium-electronics",
 			"tier": 3,
 			"cost": [
 				{
@@ -12102,6 +12118,7 @@
 		"Research_Caterium_4_1_1_C": {
 			"className": "Research_Caterium_4_1_1_C",
 			"name": "Smart Splitter",
+			"slug": "smart-splitter",
 			"tier": 3,
 			"cost": [
 				{
@@ -12129,6 +12146,7 @@
 		"Research_Caterium_4_1_C": {
 			"className": "Research_Caterium_4_1_C",
 			"name": "AI Limiter",
+			"slug": "ai-limiter",
 			"tier": 3,
 			"cost": [
 				{
@@ -12156,6 +12174,7 @@
 		"Research_Caterium_4_2_C": {
 			"className": "Research_Caterium_4_2_C",
 			"name": "Power Poles MK2",
+			"slug": "power-poles-mk2",
 			"tier": 3,
 			"cost": [
 				{
@@ -12179,6 +12198,7 @@
 		"Research_Caterium_4_3_C": {
 			"className": "Research_Caterium_4_3_C",
 			"name": "Blade Runners",
+			"slug": "blade-runners",
 			"tier": 3,
 			"cost": [
 				{
@@ -12206,6 +12226,7 @@
 		"Research_Caterium_5_C": {
 			"className": "Research_Caterium_5_C",
 			"name": "High Speed Connector",
+			"slug": "high-speed-connector",
 			"tier": 3,
 			"cost": [
 				{
@@ -12233,6 +12254,7 @@
 		"Research_Caterium_6_1_C": {
 			"className": "Research_Caterium_6_1_C",
 			"name": "Supercomputer",
+			"slug": "supercomputer",
 			"tier": 3,
 			"cost": [
 				{
@@ -12264,6 +12286,7 @@
 		"Research_Caterium_6_2_C": {
 			"className": "Research_Caterium_6_2_C",
 			"name": "Power Poles MK3",
+			"slug": "power-poles-mk3",
 			"tier": 3,
 			"cost": [
 				{
@@ -12291,6 +12314,7 @@
 		"Research_Caterium_6_3_C": {
 			"className": "Research_Caterium_6_3_C",
 			"name": "Inflated Pocket Dimension",
+			"slug": "inflated-pocket-dimension-highspeedconnector",
 			"tier": 3,
 			"cost": [
 				{
@@ -12316,6 +12340,7 @@
 		"Research_Caterium_7_1_C": {
 			"className": "Research_Caterium_7_1_C",
 			"name": "Programmable Splitter",
+			"slug": "programmable-splitter",
 			"tier": 3,
 			"cost": [
 				{
@@ -12343,6 +12368,7 @@
 		"Research_Caterium_7_2_C": {
 			"className": "Research_Caterium_7_2_C",
 			"name": "Geothermal Generator",
+			"slug": "geothermal-generator",
 			"tier": 3,
 			"cost": [
 				{
@@ -12376,6 +12402,7 @@
 		"Research_FlowerPetals_1_C": {
 			"className": "Research_FlowerPetals_1_C",
 			"name": "Flower Petals",
+			"slug": "flower-petals",
 			"tier": 3,
 			"cost": [
 				{
@@ -12397,6 +12424,7 @@
 		"Research_FlowerPetals_2_C": {
 			"className": "Research_FlowerPetals_2_C",
 			"name": "Color Gun",
+			"slug": "color-gun",
 			"tier": 3,
 			"cost": [
 				{
@@ -12428,6 +12456,7 @@
 		"Research_FlowerPetals_3_C": {
 			"className": "Research_FlowerPetals_3_C",
 			"name": "Color Cartridges",
+			"slug": "color-cartridges",
 			"tier": 3,
 			"cost": [
 				{
@@ -12451,6 +12480,7 @@
 		"Research_HardDrive_0_C": {
 			"className": "Research_HardDrive_0_C",
 			"name": "Hard Drive",
+			"slug": "hard-drive",
 			"tier": 0,
 			"cost": [
 				{
@@ -12472,6 +12502,7 @@
 		"Research_Mycelia_1_C": {
 			"className": "Research_Mycelia_1_C",
 			"name": "Mycelia",
+			"slug": "mycelia",
 			"tier": 3,
 			"cost": [
 				{
@@ -12495,6 +12526,7 @@
 		"Research_Mycelia_2_C": {
 			"className": "Research_Mycelia_2_C",
 			"name": "Fabric",
+			"slug": "fabric",
 			"tier": 3,
 			"cost": [
 				{
@@ -12522,6 +12554,7 @@
 		"Research_Mycelia_3_C": {
 			"className": "Research_Mycelia_3_C",
 			"name": "Parachute",
+			"slug": "parachute",
 			"tier": 3,
 			"cost": [
 				{
@@ -12549,6 +12582,7 @@
 		"Research_Mycelia_4_C": {
 			"className": "Research_Mycelia_4_C",
 			"name": "Medical Properties",
+			"slug": "medical-properties",
 			"tier": 3,
 			"cost": [
 				{
@@ -12578,6 +12612,7 @@
 		"Research_Mycelia_5_C": {
 			"className": "Research_Mycelia_5_C",
 			"name": "Medicinal Inhaler",
+			"slug": "medicinal-inhaler-mycelia",
 			"tier": 3,
 			"cost": [
 				{
@@ -12609,6 +12644,7 @@
 		"Research_Nutrients_0_C": {
 			"className": "Research_Nutrients_0_C",
 			"name": "Paleberry",
+			"slug": "paleberry",
 			"tier": 3,
 			"cost": [
 				{
@@ -12630,6 +12666,7 @@
 		"Research_Nutrients_1_C": {
 			"className": "Research_Nutrients_1_C",
 			"name": "Beryl Nut",
+			"slug": "beryl-nut",
 			"tier": 3,
 			"cost": [
 				{
@@ -12651,6 +12688,7 @@
 		"Research_Nutrients_2_C": {
 			"className": "Research_Nutrients_2_C",
 			"name": "Bacon Agaric",
+			"slug": "bacon-agaric",
 			"tier": 3,
 			"cost": [
 				{
@@ -12672,6 +12710,7 @@
 		"Research_Nutrients_3_C": {
 			"className": "Research_Nutrients_3_C",
 			"name": "Nutritional Mixture",
+			"slug": "nutritional-mixture",
 			"tier": 3,
 			"cost": [
 				{
@@ -12701,6 +12740,7 @@
 		"Research_Nutrients_4_C": {
 			"className": "Research_Nutrients_4_C",
 			"name": "Nutritional Inhaler",
+			"slug": "nutritional-inhaler",
 			"tier": 3,
 			"cost": [
 				{
@@ -12732,6 +12772,7 @@
 		"Research_PowerSlugs_1_C": {
 			"className": "Research_PowerSlugs_1_C",
 			"name": "Green Power Slugs",
+			"slug": "green-power-slugs",
 			"tier": 3,
 			"cost": [
 				{
@@ -12755,6 +12796,7 @@
 		"Research_PowerSlugs_2_C": {
 			"className": "Research_PowerSlugs_2_C",
 			"name": "Overclock Production",
+			"slug": "overclock-production",
 			"tier": 3,
 			"cost": [
 				{
@@ -12784,6 +12826,7 @@
 		"Research_PowerSlugs_3_C": {
 			"className": "Research_PowerSlugs_3_C",
 			"name": "Slug Scanning",
+			"slug": "slug-scanning",
 			"tier": 3,
 			"cost": [
 				{
@@ -12813,6 +12856,7 @@
 		"Research_PowerSlugs_4_C": {
 			"className": "Research_PowerSlugs_4_C",
 			"name": "Yellow Power Shards",
+			"slug": "yellow-power-shards",
 			"tier": 3,
 			"cost": [
 				{
@@ -12844,6 +12888,7 @@
 		"Research_PowerSlugs_5_C": {
 			"className": "Research_PowerSlugs_5_C",
 			"name": "Purple Power Shards",
+			"slug": "purple-power-shards",
 			"tier": 3,
 			"cost": [
 				{
@@ -12875,6 +12920,7 @@
 		"Research_Quartz_0_C": {
 			"className": "Research_Quartz_0_C",
 			"name": "Quartz",
+			"slug": "quartz",
 			"tier": 3,
 			"cost": [
 				{
@@ -12898,6 +12944,7 @@
 		"Research_Quartz_1_1_C": {
 			"className": "Research_Quartz_1_1_C",
 			"name": "Quartz Crystals",
+			"slug": "quartz-crystals",
 			"tier": 3,
 			"cost": [
 				{
@@ -12921,6 +12968,7 @@
 		"Research_Quartz_1_2_C": {
 			"className": "Research_Quartz_1_2_C",
 			"name": "Silica",
+			"slug": "silica",
 			"tier": 3,
 			"cost": [
 				{
@@ -12944,6 +12992,7 @@
 		"Research_Quartz_2_C": {
 			"className": "Research_Quartz_2_C",
 			"name": "Crystal Oscillator",
+			"slug": "crystal-oscillator",
 			"tier": 3,
 			"cost": [
 				{
@@ -12971,6 +13020,7 @@
 		"Research_Quartz_3_1_C": {
 			"className": "Research_Quartz_3_1_C",
 			"name": "The Explorer",
+			"slug": "the-explorer",
 			"tier": 3,
 			"cost": [
 				{
@@ -12998,6 +13048,7 @@
 		"Research_Quartz_3_2_C": {
 			"className": "Research_Quartz_3_2_C",
 			"name": "Frequency Mapping",
+			"slug": "frequency-mapping",
 			"tier": 3,
 			"cost": [
 				{
@@ -13023,6 +13074,7 @@
 		"Research_Quartz_3_3_C": {
 			"className": "Research_Quartz_3_3_C",
 			"name": "Radio Control Unit",
+			"slug": "radio-control-unit",
 			"tier": 3,
 			"cost": [
 				{
@@ -13050,6 +13102,7 @@
 		"Research_Quartz_3_C": {
 			"className": "Research_Quartz_3_C",
 			"name": "Signal Technologies",
+			"slug": "signal-technologies",
 			"tier": 3,
 			"cost": [
 				{
@@ -13071,6 +13124,7 @@
 		"Research_Quartz_4_1_C": {
 			"className": "Research_Quartz_4_1_C",
 			"name": "Radio Signal Scanning",
+			"slug": "radio-signal-scanning",
 			"tier": 3,
 			"cost": [
 				{
@@ -13100,6 +13154,7 @@
 		"Research_Quartz_4_C": {
 			"className": "Research_Quartz_4_C",
 			"name": "Radar Technology",
+			"slug": "radar-technology",
 			"tier": 3,
 			"cost": [
 				{
@@ -13131,6 +13186,7 @@
 		"Research_Sulfur_0_C": {
 			"className": "Research_Sulfur_0_C",
 			"name": "Sulfur",
+			"slug": "sulfur",
 			"tier": 3,
 			"cost": [
 				{
@@ -13154,6 +13210,7 @@
 		"Research_Sulfur_1_C": {
 			"className": "Research_Sulfur_1_C",
 			"name": "Black Powder",
+			"slug": "black-powder",
 			"tier": 3,
 			"cost": [
 				{
@@ -13181,6 +13238,7 @@
 		"Research_Sulfur_2_C": {
 			"className": "Research_Sulfur_2_C",
 			"name": "Volatile Applications",
+			"slug": "volatile-applications",
 			"tier": 3,
 			"cost": [
 				{
@@ -13202,6 +13260,7 @@
 		"Research_Sulfur_3_1_C": {
 			"className": "Research_Sulfur_3_1_C",
 			"name": "Nobelisk Detonator",
+			"slug": "nobelisk-detonator",
 			"tier": 3,
 			"cost": [
 				{
@@ -13233,6 +13292,7 @@
 		"Research_Sulfur_3_2_1_C": {
 			"className": "Research_Sulfur_3_2_1_C",
 			"name": "Nobelisk Explosives",
+			"slug": "nobelisk-explosives",
 			"tier": 3,
 			"cost": [
 				{
@@ -13260,6 +13320,7 @@
 		"Research_Sulfur_3_2_C": {
 			"className": "Research_Sulfur_3_2_C",
 			"name": "Prototype Explosives",
+			"slug": "prototype-explosives",
 			"tier": 3,
 			"cost": [
 				{
@@ -13285,6 +13346,7 @@
 		"Research_Sulfur_3_C": {
 			"className": "Research_Sulfur_3_C",
 			"name": "Detonator Prototype",
+			"slug": "detonator-prototype",
 			"tier": 3,
 			"cost": [
 				{
@@ -13314,6 +13376,7 @@
 		"Research_Sulfur_4_1_C": {
 			"className": "Research_Sulfur_4_1_C",
 			"name": "The Rifle",
+			"slug": "the-rifle",
 			"tier": 3,
 			"cost": [
 				{
@@ -13345,6 +13408,7 @@
 		"Research_Sulfur_4_2_1_C": {
 			"className": "Research_Sulfur_4_2_1_C",
 			"name": "Rifle Cartridges",
+			"slug": "rifle-cartridges",
 			"tier": 3,
 			"cost": [
 				{
@@ -13376,6 +13440,7 @@
 		"Research_Sulfur_4_2_C": {
 			"className": "Research_Sulfur_4_2_C",
 			"name": "Prototype Cartridges",
+			"slug": "prototype-cartridges",
 			"tier": 3,
 			"cost": [
 				{
@@ -13405,6 +13470,7 @@
 		"Research_Sulfur_4_C": {
 			"className": "Research_Sulfur_4_C",
 			"name": "Rifle Prototype",
+			"slug": "rifle-prototype",
 			"tier": 3,
 			"cost": [
 				{
@@ -13434,6 +13500,7 @@
 		"Research_Sulfur_5_C": {
 			"className": "Research_Sulfur_5_C",
 			"name": "Expanded Toolbelt",
+			"slug": "expanded-toolbelt",
 			"tier": 3,
 			"cost": [
 				{
@@ -13459,6 +13526,7 @@
 		"Research_Sulfur_6_C": {
 			"className": "Research_Sulfur_6_C",
 			"name": "Inflated Pocket Dimension",
+			"slug": "inflated-pocket-dimension-gunpowder",
 			"tier": 3,
 			"cost": [
 				{
@@ -13481,1795 +13549,10 @@
 			"alternate": false,
 			"mam": false
 		},
-		"ResourceSink_AILimiter_C": {
-			"className": "ResourceSink_AILimiter_C",
-			"name": "AI Limiter",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 3
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_AdvancedAmmoPack_C": {
-			"className": "ResourceSink_AdvancedAmmoPack_C",
-			"name": "Advanced Ammo Pack",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 1
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_AlcladSheet_C": {
-			"className": "ResourceSink_AlcladSheet_C",
-			"name": "Aluminum Alclad Sheet",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 2
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_AmmoPack_C": {
-			"className": "ResourceSink_AmmoPack_C",
-			"name": "Ammo Pack",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 1
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_Battery_C": {
-			"className": "ResourceSink_Battery_C",
-			"name": "Battery",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 5
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_Beacons_C": {
-			"className": "ResourceSink_Beacons_C",
-			"name": "Beacons",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 1
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_Biofuel_C": {
-			"className": "ResourceSink_Biofuel_C",
-			"name": "Biofuel",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 2
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_Biomass_C": {
-			"className": "ResourceSink_Biomass_C",
-			"name": "Biomass",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 1
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_BlackPowder_C": {
-			"className": "ResourceSink_BlackPowder_C",
-			"name": "Black Powder",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 3
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_Cable_C": {
-			"className": "ResourceSink_Cable_C",
-			"name": "Cable",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 2
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_CircuitBoard_C": {
-			"className": "ResourceSink_CircuitBoard_C",
-			"name": "Circuit Board",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 3
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_CoffeeCup_C": {
-			"className": "ResourceSink_CoffeeCup_C",
-			"name": "FICSIT™ Coffee Cup",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 1
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_ColoredAmmoPack_C": {
-			"className": "ResourceSink_ColoredAmmoPack_C",
-			"name": "Color Ammo Pack",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 1
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_Computer_C": {
-			"className": "ResourceSink_Computer_C",
-			"name": "Computer",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 6
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_Concrete_C": {
-			"className": "ResourceSink_Concrete_C",
-			"name": "Concrete",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 1
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_ConveryWalls_Metal_C": {
-			"className": "ResourceSink_ConveryWalls_Metal_C",
-			"name": "Metal Conveyor Walls",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 7
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [
-					"Recipe_Wall_Conveyor_8x4_01_Steel_C",
-					"Recipe_Wall_Conveyor_8x4_02_Steel_C",
-					"Recipe_Wall_Conveyor_8x4_03_Steel_C"
-				],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_ConveryWalls_Normal_C": {
-			"className": "ResourceSink_ConveryWalls_Normal_C",
-			"name": "Conveyor Walls",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 5
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [
-					"Recipe_Wall_Conveyor_8x4_01_C",
-					"Recipe_Wall_Conveyor_8x4_02_C",
-					"Recipe_Wall_Conveyor_8x4_03_C"
-				],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_ConveyorWallMount_C": {
-			"className": "ResourceSink_ConveyorWallMount_C",
-			"name": "Conveyor Wall Mount",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 2
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [
-					"Recipe_ConveyorPoleWall_C"
-				],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_CopperSheet_C": {
-			"className": "ResourceSink_CopperSheet_C",
-			"name": "Copper Sheet",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 1
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_CrystalOscillator_C": {
-			"className": "ResourceSink_CrystalOscillator_C",
-			"name": "Crystal Oscillator",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 4
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_CurvedFoundationPack_C": {
-			"className": "ResourceSink_CurvedFoundationPack_C",
-			"name": "Quarter Pipes Pack",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 8
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [
-					"Recipe_QuarterPipe_C",
-					"Recipe_QuarterPipe_02_C",
-					"Recipe_QuarterPipeCorner_01_C",
-					"Recipe_QuarterPipeCorner_02_C",
-					"Recipe_QuarterPipeCorner_03_C",
-					"Recipe_QuarterPipeCorner_04_C"
-				],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_CyberWagon_C": {
-			"className": "ResourceSink_CyberWagon_C",
-			"name": "Cyber Wagon",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 20
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [
-					"Recipe_CyberWagon_C"
-				],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_CyberWagon_Unlock_C": {
-			"className": "ResourceSink_CyberWagon_Unlock_C",
-			"name": "Cyberwagon Available In The A.W.E.S.O.M.E. Shop",
-			"tier": 1,
-			"cost": [],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_Custom",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_DiagonalRamps_C": {
-			"className": "ResourceSink_DiagonalRamps_C",
-			"name": "Corner Ramp Pack",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 6
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [
-					"Recipe_Ramp_Diagonal_8x1_02_C",
-					"Recipe_Ramp_Diagonal_8x2_02_C",
-					"Recipe_Ramp_Diagonal_8x4_02_C",
-					"Recipe_Ramp_Diagonal_8x1_01_C",
-					"Recipe_Ramp_Diagonal_8x2_01_C",
-					"Recipe_Ramp_Diagonal_8x4_01_C"
-				],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_DoorWalls_Metal_C": {
-			"className": "ResourceSink_DoorWalls_Metal_C",
-			"name": "Metal Door Walls",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 4
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [
-					"Recipe_Wall_Door_8x4_01_Steel_C",
-					"Recipe_Wall_Door_8x4_02_Steel_C",
-					"Recipe_Wall_Door_8x4_03_Steel_C"
-				],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_DoorWalls_Normal_C": {
-			"className": "ResourceSink_DoorWalls_Normal_C",
-			"name": "Door Walls",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 2
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [
-					"Recipe_Wall_Door_8x4_01_C",
-					"Recipe_Wall_Door_8x4_02_C",
-					"Recipe_Wall_Door_8x4_03_C",
-					"Recipe_Wall_Gate_8x4_01_C"
-				],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_EmptyCanister_C": {
-			"className": "ResourceSink_EmptyCanister_C",
-			"name": "Empty Canister",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 2
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_EncasedIndustrialBeam_C": {
-			"className": "ResourceSink_EncasedIndustrialBeam_C",
-			"name": "Encased Industrial Beam",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 3
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_Explosives_C": {
-			"className": "ResourceSink_Explosives_C",
-			"name": "Explosives",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 1
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_Fabric_C": {
-			"className": "ResourceSink_Fabric_C",
-			"name": "Fabric",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 3
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_FactoryCart_C": {
-			"className": "ResourceSink_FactoryCart_C",
-			"name": "FICSIT Factory Cart™",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 10
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [
-					"Recipe_FactoryCart_C"
-				],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_FactoryRailing_C": {
-			"className": "ResourceSink_FactoryRailing_C",
-			"name": "Factory Railing",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 1
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [
-					"Recipe_Fence_01_C"
-				],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_FoudationPillar_C": {
-			"className": "ResourceSink_FoudationPillar_C",
-			"name": "Foundation Pillar",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 2
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [
-					"Recipe_PillarTop_C",
-					"Recipe_PillarMiddle_C",
-					"Recipe_PillarBase_C"
-				],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_FoundationExpansionPack_C": {
-			"className": "ResourceSink_FoundationExpansionPack_C",
-			"name": "Double Ramp Pack",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 3
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [
-					"Recipe_RampDouble_8x1_C",
-					"Recipe_RampDouble_C",
-					"Recipe_Ramp_8x8x8_C"
-				],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_FrameworkFoundations_C": {
-			"className": "ResourceSink_FrameworkFoundations_C",
-			"name": "Foundations Expansion Pack",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 3
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [
-					"Recipe_Foundation_Frame_01_C",
-					"Recipe_FoundationGlass_01_C"
-				],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_GasFilters_C": {
-			"className": "ResourceSink_GasFilters_C",
-			"name": "Gas Filters",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 1
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_HealthPack_C": {
-			"className": "ResourceSink_HealthPack_C",
-			"name": "Health Pack",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 1
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_HeatSink_C": {
-			"className": "ResourceSink_HeatSink_C",
-			"name": "Heat Sink",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 3
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_HeavyModularFrame_C": {
-			"className": "ResourceSink_HeavyModularFrame_C",
-			"name": "Heavy Modular Frame",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 6
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_HighSpeedConnector_C": {
-			"className": "ResourceSink_HighSpeedConnector_C",
-			"name": "High-Speed Connector",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 4
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_HyperTubeWallAttachements_C": {
-			"className": "ResourceSink_HyperTubeWallAttachements_C",
-			"name": "Hyper Tube Wall Attachments",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 2
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [
-					"Recipe_HyperTubeWallSupport_C",
-					"Recipe_HyperTubeWallHole_C"
-				],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_InvertedCornerRamps_C": {
-			"className": "ResourceSink_InvertedCornerRamps_C",
-			"name": "Inverted Corner Ramp Pack",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 5
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [
-					"Recipe_RampInverted_8x1_Corner_01_C",
-					"Recipe_RampInverted_8x2_Corner_01_C",
-					"Recipe_RampInverted_8x4_Corner_01_C",
-					"Recipe_RampInverted_8x1_Corner_02_C",
-					"Recipe_RampInverted_8x2_Corner_02_C",
-					"Recipe_RampInverted_8x4_Corner_02_C"
-				],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_InvertedRampPack_C": {
-			"className": "ResourceSink_InvertedRampPack_C",
-			"name": "Inverted Ramp Pack",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 2
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [
-					"Recipe_RampInverted_8x1_C",
-					"Recipe_RampInverted_8x2_01_C",
-					"Recipe_Ramp_8x4_Inverted_01_C"
-				],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_ModularFrame_C": {
-			"className": "ResourceSink_ModularFrame_C",
-			"name": "Modular Frame",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 4
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_Motor_C": {
-			"className": "ResourceSink_Motor_C",
-			"name": "Motor",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 5
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_PackagedBiofuel_C": {
-			"className": "ResourceSink_PackagedBiofuel_C",
-			"name": "Packaged Liquid Biofuel",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 3
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_PackagedFuel_C": {
-			"className": "ResourceSink_PackagedFuel_C",
-			"name": "Packaged Fuel",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 3
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_Parachutes_C": {
-			"className": "ResourceSink_Parachutes_C",
-			"name": "Parachutes",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 1
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_PetroleumCoke_C": {
-			"className": "ResourceSink_PetroleumCoke_C",
-			"name": "Petroleum Coke",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 1
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_PipelineWallAttachments_C": {
-			"className": "ResourceSink_PipelineWallAttachments_C",
-			"name": "Pipeline Wall Attachments",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 3
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [
-					"Recipe_PipeSupportWall_C",
-					"Recipe_PipeSupportWallHole_C"
-				],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_Plastic_C": {
-			"className": "ResourceSink_Plastic_C",
-			"name": "Plastic",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 1
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_Plate_C": {
-			"className": "ResourceSink_Plate_C",
-			"name": "Iron Plate",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 1
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_PolymerResin_C": {
-			"className": "ResourceSink_PolymerResin_C",
-			"name": "Polymer Resin",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 1
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_Quickwire_C": {
-			"className": "ResourceSink_Quickwire_C",
-			"name": "Quickwire",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 1
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_RadiationFilters_C": {
-			"className": "ResourceSink_RadiationFilters_C",
-			"name": "Radiation Filters",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 1
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_RadioControlUnit_C": {
-			"className": "ResourceSink_RadioControlUnit_C",
-			"name": "Radio Control Unit",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 7
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_ReinforcedIronPlate_C": {
-			"className": "ResourceSink_ReinforcedIronPlate_C",
-			"name": "Reinforced Iron Plate",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 3
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_Rod_C": {
-			"className": "ResourceSink_Rod_C",
-			"name": "Iron Rod",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 1
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_Rotor_C": {
-			"className": "ResourceSink_Rotor_C",
-			"name": "Rotor",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 3
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_Rubber_C": {
-			"className": "ResourceSink_Rubber_C",
-			"name": "Rubber",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 1
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_Screw_C": {
-			"className": "ResourceSink_Screw_C",
-			"name": "Screw",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 2
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_Silica_C": {
-			"className": "ResourceSink_Silica_C",
-			"name": "Silica",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 1
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_Stairs_C": {
-			"className": "ResourceSink_Stairs_C",
-			"name": "Stairs",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 2
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [
-					"Recipe_Stairs_Left_01_C",
-					"Recipe_Stairs_Right_01_C"
-				],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_Stator_C": {
-			"className": "ResourceSink_Stator_C",
-			"name": "Stator",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 3
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_StatueBronzePioneer_C": {
-			"className": "ResourceSink_StatueBronzePioneer_C",
-			"name": "Adequate Pioneering",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 25
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_StatueGoldPioneer_C": {
-			"className": "ResourceSink_StatueGoldPioneer_C",
-			"name": "Satisfactory Pioneering",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 150
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_StatueGoldenNut_C": {
-			"className": "ResourceSink_StatueGoldenNut_C",
-			"name": "Golden Nut",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 1000
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_StatueLizardDoggo_C": {
-			"className": "ResourceSink_StatueLizardDoggo_C",
-			"name": "Lizard Doggo",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 100
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_StatueSilverPioneer_C": {
-			"className": "ResourceSink_StatueSilverPioneer_C",
-			"name": "Pretty Good Pioneering",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 50
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_StatueSpaceGiraffe_C": {
-			"className": "ResourceSink_StatueSpaceGiraffe_C",
-			"name": "Confusing Creature",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 200
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_Statue_Hoggo_C": {
-			"className": "ResourceSink_Statue_Hoggo_C",
-			"name": "Silver Hog",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 50
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_SteelBeam_C": {
-			"className": "ResourceSink_SteelBeam_C",
-			"name": "Steel Beam",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 1
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_SteelPipe_C": {
-			"className": "ResourceSink_SteelPipe_C",
-			"name": "Steel Pipe",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 1
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_SuperComputer_C": {
-			"className": "ResourceSink_SuperComputer_C",
-			"name": "Supercomputer",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 8
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_TurboMotor_C": {
-			"className": "ResourceSink_TurboMotor_C",
-			"name": "Turbo Motor",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 8
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_Walkways_C": {
-			"className": "ResourceSink_Walkways_C",
-			"name": "Walkways",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 6
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [
-					"Recipe_Walkway_Straight_C",
-					"Recipe_Walkway_Ramp_C",
-					"Recipe_Walkway_Turn_C",
-					"Recipe_Walkway_T_C",
-					"Recipe_Walkway_Cross_C"
-				],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_WallPowerPolesMK2_C": {
-			"className": "ResourceSink_WallPowerPolesMK2_C",
-			"name": "Wall Power Outlets Mk.2",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 5
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [
-					"Recipe_PowerPoleWallMk2_C",
-					"Recipe_PowerPoleWallDoubleMk2_C"
-				],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_WallPowerPolesMK3_C": {
-			"className": "ResourceSink_WallPowerPolesMK3_C",
-			"name": "Wall Power Outlets Mk.3",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 6
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [
-					"Recipe_PowerPoleWallMk3_C",
-					"Recipe_PowerPoleWallDoubleMk3_C"
-				],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_WallPowerPoles_C": {
-			"className": "ResourceSink_WallPowerPoles_C",
-			"name": "Wall Power Outlets Mk.1",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 4
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [
-					"Recipe_PowerPoleWall_C",
-					"Recipe_PowerPoleWallDouble_C"
-				],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_WindowedWalls_C": {
-			"className": "ResourceSink_WindowedWalls_C",
-			"name": "Windowed Walls",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 9
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [
-					"Recipe_Wall_Window_8x4_01_C",
-					"Recipe_Wall_Window_8x4_02_C",
-					"Recipe_Wall_Window_8x4_03_C",
-					"Recipe_Wall_Window_8x4_04_C"
-				],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"ResourceSink_Wire_C": {
-			"className": "ResourceSink_Wire_C",
-			"name": "Wire",
-			"tier": 1,
-			"cost": [
-				{
-					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 1
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_ResourceSink",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
 		"Schematic_1-1_C": {
 			"className": "Schematic_1-1_C",
 			"name": "Base Building",
+			"slug": "base-building",
 			"tier": 1,
 			"cost": [
 				{
@@ -15309,6 +13592,7 @@
 		"Schematic_1-2_C": {
 			"className": "Schematic_1-2_C",
 			"name": "Logistics",
+			"slug": "logistics",
 			"tier": 1,
 			"cost": [
 				{
@@ -15342,6 +13626,7 @@
 		"Schematic_1-3_C": {
 			"className": "Schematic_1-3_C",
 			"name": "Field Research",
+			"slug": "field-research",
 			"tier": 1,
 			"cost": [
 				{
@@ -15376,6 +13661,7 @@
 		"Schematic_2-1_C": {
 			"className": "Schematic_2-1_C",
 			"name": "Part Assembly",
+			"slug": "part-assembly",
 			"tier": 2,
 			"cost": [
 				{
@@ -15415,6 +13701,7 @@
 		"Schematic_2-2_C": {
 			"className": "Schematic_2-2_C",
 			"name": "Obstacle Clearing",
+			"slug": "obstacle-clearing",
 			"tier": 2,
 			"cost": [
 				{
@@ -15447,6 +13734,7 @@
 		"Schematic_2-3_C": {
 			"className": "Schematic_2-3_C",
 			"name": "Jump Pads",
+			"slug": "jump-pads",
 			"tier": 2,
 			"cost": [
 				{
@@ -15480,6 +13768,7 @@
 		"Schematic_2-5_C": {
 			"className": "Schematic_2-5_C",
 			"name": "Resource Sink Bonus Program",
+			"slug": "resource-sink-bonus-program",
 			"tier": 2,
 			"cost": [
 				{
@@ -15516,6 +13805,7 @@
 		"Schematic_3-1_C": {
 			"className": "Schematic_3-1_C",
 			"name": "Coal Power",
+			"slug": "coal-power",
 			"tier": 3,
 			"cost": [
 				{
@@ -15555,6 +13845,7 @@
 		"Schematic_3-2_C": {
 			"className": "Schematic_3-2_C",
 			"name": "Logistics Mk.2",
+			"slug": "logistics-mk-2",
 			"tier": 2,
 			"cost": [
 				{
@@ -15592,6 +13883,7 @@
 		"Schematic_3-3_C": {
 			"className": "Schematic_3-3_C",
 			"name": "Vehicular Transport",
+			"slug": "vehicular-transport",
 			"tier": 3,
 			"cost": [
 				{
@@ -15628,6 +13920,7 @@
 		"Schematic_3-4_C": {
 			"className": "Schematic_3-4_C",
 			"name": "Basic Steel Production",
+			"slug": "basic-steel-production",
 			"tier": 3,
 			"cost": [
 				{
@@ -15667,6 +13960,7 @@
 		"Schematic_4-1_C": {
 			"className": "Schematic_4-1_C",
 			"name": "Advanced Steel Production",
+			"slug": "advanced-steel-production",
 			"tier": 4,
 			"cost": [
 				{
@@ -15707,6 +14001,7 @@
 		"Schematic_4-2_C": {
 			"className": "Schematic_4-2_C",
 			"name": "Improved Melee Combat",
+			"slug": "improved-melee-combat",
 			"tier": 4,
 			"cost": [
 				{
@@ -15742,6 +14037,7 @@
 		"Schematic_4-4_C": {
 			"className": "Schematic_4-4_C",
 			"name": "Hyper Tubes",
+			"slug": "hyper-tubes",
 			"tier": 4,
 			"cost": [
 				{
@@ -15773,29 +14069,10 @@
 			"alternate": false,
 			"mam": false
 		},
-		"Schematic_5-1-1_C": {
-			"className": "Schematic_5-1-1_C",
-			"name": "Oil Processing 2",
-			"tier": 5,
-			"cost": [],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [
-					"Recipe_ResidualPlastic_C",
-					"Recipe_ResidualRubber_C",
-					"Recipe_ResidualFuel_C"
-				],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_Custom",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
 		"Schematic_5-1_C": {
 			"className": "Schematic_5-1_C",
 			"name": "Oil Processing",
+			"slug": "oil-processing",
 			"tier": 5,
 			"cost": [
 				{
@@ -15839,6 +14116,7 @@
 		"Schematic_5-2_C": {
 			"className": "Schematic_5-2_C",
 			"name": "Industrial Manufacturing",
+			"slug": "industrial-manufacturing",
 			"tier": 5,
 			"cost": [
 				{
@@ -15878,6 +14156,7 @@
 		"Schematic_5-3_C": {
 			"className": "Schematic_5-3_C",
 			"name": "Logistics Mk.3",
+			"slug": "logistics-mk-3",
 			"tier": 4,
 			"cost": [
 				{
@@ -15909,31 +14188,10 @@
 			"alternate": false,
 			"mam": false
 		},
-		"Schematic_5-4-1_C": {
-			"className": "Schematic_5-4-1_C",
-			"name": " Alternative Fluid Transport 2",
-			"tier": 5,
-			"cost": [],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [
-					"Recipe_UnpackageWater_C",
-					"Recipe_UnpackageOil_C",
-					"Recipe_UnpackageFuel_C",
-					"Recipe_UnpackageOilResidue_C",
-					"Recipe_UnpackageBioFuel_C"
-				],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_Custom",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
 		"Schematic_5-4_C": {
 			"className": "Schematic_5-4_C",
 			"name": "Alternative Fluid Transport",
+			"slug": "alternative-fluid-transport",
 			"tier": 5,
 			"cost": [
 				{
@@ -15976,6 +14234,7 @@
 		"Schematic_6-1_C": {
 			"className": "Schematic_6-1_C",
 			"name": "Expanded Power Infrastructure",
+			"slug": "expanded-power-infrastructure",
 			"tier": 6,
 			"cost": [
 				{
@@ -16015,6 +14274,7 @@
 		"Schematic_6-2_C": {
 			"className": "Schematic_6-2_C",
 			"name": "Jetpack",
+			"slug": "jetpack",
 			"tier": 6,
 			"cost": [
 				{
@@ -16050,6 +14310,7 @@
 		"Schematic_6-3_C": {
 			"className": "Schematic_6-3_C",
 			"name": "Monorail Train Technology",
+			"slug": "monorail-train-technology",
 			"tier": 6,
 			"cost": [
 				{
@@ -16091,6 +14352,7 @@
 		"Schematic_6-4_C": {
 			"className": "Schematic_6-4_C",
 			"name": "GasMask",
+			"slug": "gasmask",
 			"tier": 5,
 			"cost": [
 				{
@@ -16123,6 +14385,7 @@
 		"Schematic_7-1_C": {
 			"className": "Schematic_7-1_C",
 			"name": "Bauxite Refinement",
+			"slug": "bauxite-refinement",
 			"tier": 7,
 			"cost": [
 				{
@@ -16162,6 +14425,7 @@
 		"Schematic_7-2_C": {
 			"className": "Schematic_7-2_C",
 			"name": "Advanced Aluminum Production",
+			"slug": "advanced-aluminum-production",
 			"tier": 7,
 			"cost": [
 				{
@@ -16200,6 +14464,7 @@
 		"Schematic_7-3_C": {
 			"className": "Schematic_7-3_C",
 			"name": "Hazmat Suit",
+			"slug": "hazmat-suit",
 			"tier": 7,
 			"cost": [
 				{
@@ -16232,6 +14497,7 @@
 		"Schematic_7-4_C": {
 			"className": "Schematic_7-4_C",
 			"name": "Nuclear Power",
+			"slug": "nuclear-power",
 			"tier": 7,
 			"cost": [
 				{
@@ -16275,6 +14541,7 @@
 		"Schematic_Alternate_AdheredIronPlate_C": {
 			"className": "Schematic_Alternate_AdheredIronPlate_C",
 			"name": "Alternate: Adhered Iron Plate",
+			"slug": "alternate-adhered-iron-plate",
 			"tier": 0,
 			"cost": [],
 			"unlock": {
@@ -16284,7 +14551,9 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_5-1_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -16293,6 +14562,7 @@
 		"Schematic_Alternate_Beacon1_C": {
 			"className": "Schematic_Alternate_Beacon1_C",
 			"name": "Alternate: Signal Beacon",
+			"slug": "alternate-signal-beacon",
 			"tier": 4,
 			"cost": [],
 			"unlock": {
@@ -16302,7 +14572,10 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_3-4_C",
+				"Research_Quartz_1_1_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -16311,6 +14584,7 @@
 		"Schematic_Alternate_BoltedFrame_C": {
 			"className": "Schematic_Alternate_BoltedFrame_C",
 			"name": "Alternate: Bolted Frame",
+			"slug": "alternate-bolted-frame",
 			"tier": 0,
 			"cost": [],
 			"unlock": {
@@ -16320,7 +14594,9 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_2-1_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -16329,6 +14605,7 @@
 		"Schematic_Alternate_Cable1_C": {
 			"className": "Schematic_Alternate_Cable1_C",
 			"name": "Alternate: Rubber Cable",
+			"slug": "alternate-rubber-cable",
 			"tier": 5,
 			"cost": [],
 			"unlock": {
@@ -16338,7 +14615,9 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_5-1_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -16347,6 +14626,7 @@
 		"Schematic_Alternate_Cable2_C": {
 			"className": "Schematic_Alternate_Cable2_C",
 			"name": "Alternate: Quickwire Cable",
+			"slug": "alternate-quickwire-cable",
 			"tier": 5,
 			"cost": [],
 			"unlock": {
@@ -16356,7 +14636,10 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_5-1_C",
+				"Research_Caterium_1_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -16365,6 +14648,7 @@
 		"Schematic_Alternate_CircuitBoard1_C": {
 			"className": "Schematic_Alternate_CircuitBoard1_C",
 			"name": "Alternate: Silicone Circuit Board",
+			"slug": "alternate-silicone-circuit-board",
 			"tier": 5,
 			"cost": [],
 			"unlock": {
@@ -16374,7 +14658,10 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_5-1_C",
+				"Research_Quartz_0_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -16383,6 +14670,7 @@
 		"Schematic_Alternate_CircuitBoard2_C": {
 			"className": "Schematic_Alternate_CircuitBoard2_C",
 			"name": "Alternate: Caterium Circuit Board",
+			"slug": "alternate-caterium-circuit-board",
 			"tier": 5,
 			"cost": [],
 			"unlock": {
@@ -16392,7 +14680,10 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_5-1_C",
+				"Research_Caterium_1_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -16401,6 +14692,7 @@
 		"Schematic_Alternate_Coal1_C": {
 			"className": "Schematic_Alternate_Coal1_C",
 			"name": "Alternate: Charcoal",
+			"slug": "alternate-charcoal",
 			"tier": 3,
 			"cost": [],
 			"unlock": {
@@ -16410,7 +14702,9 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_3-1_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -16419,6 +14713,7 @@
 		"Schematic_Alternate_Coal2_C": {
 			"className": "Schematic_Alternate_Coal2_C",
 			"name": "Alternate: Biocoal",
+			"slug": "alternate-biocoal",
 			"tier": 3,
 			"cost": [],
 			"unlock": {
@@ -16428,7 +14723,9 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_3-1_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -16437,6 +14734,7 @@
 		"Schematic_Alternate_CoatedCable_C": {
 			"className": "Schematic_Alternate_CoatedCable_C",
 			"name": "Alternate: Coated Cable",
+			"slug": "alternate-coated-cable",
 			"tier": 0,
 			"cost": [],
 			"unlock": {
@@ -16446,7 +14744,9 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_5-1_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -16455,6 +14755,7 @@
 		"Schematic_Alternate_CoatedIronPlate_C": {
 			"className": "Schematic_Alternate_CoatedIronPlate_C",
 			"name": "Alternate: Coated Iron Plate",
+			"slug": "alternate-coated-iron-plate",
 			"tier": 0,
 			"cost": [],
 			"unlock": {
@@ -16464,7 +14765,9 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_5-1_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -16473,6 +14776,7 @@
 		"Schematic_Alternate_CokeSteelIngot_C": {
 			"className": "Schematic_Alternate_CokeSteelIngot_C",
 			"name": "Alternate: Coke Steel Ingot",
+			"slug": "alternate-coke-steel-ingot",
 			"tier": 0,
 			"cost": [],
 			"unlock": {
@@ -16482,7 +14786,9 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_5-1_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -16491,6 +14797,7 @@
 		"Schematic_Alternate_Computer1_C": {
 			"className": "Schematic_Alternate_Computer1_C",
 			"name": "Alternate: Caterium Computer",
+			"slug": "alternate-caterium-computer",
 			"tier": 5,
 			"cost": [],
 			"unlock": {
@@ -16500,7 +14807,10 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_5-2_C",
+				"Research_Caterium_1_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -16509,6 +14819,7 @@
 		"Schematic_Alternate_Computer2_C": {
 			"className": "Schematic_Alternate_Computer2_C",
 			"name": "Alternate: CrystalComputer",
+			"slug": "alternate-crystalcomputer",
 			"tier": 5,
 			"cost": [],
 			"unlock": {
@@ -16518,7 +14829,10 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_5-2_C",
+				"Research_Quartz_1_1_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -16527,6 +14841,7 @@
 		"Schematic_Alternate_Concrete_C": {
 			"className": "Schematic_Alternate_Concrete_C",
 			"name": "Alternate: Fine Concrete",
+			"slug": "alternate-fine-concrete",
 			"tier": 4,
 			"cost": [],
 			"unlock": {
@@ -16536,7 +14851,9 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Research_Quartz_0_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -16545,6 +14862,7 @@
 		"Schematic_Alternate_CopperAlloyIngot_C": {
 			"className": "Schematic_Alternate_CopperAlloyIngot_C",
 			"name": "Alternate: Copper Alloy Ingot",
+			"slug": "alternate-copper-alloy-ingot",
 			"tier": 0,
 			"cost": [],
 			"unlock": {
@@ -16563,6 +14881,7 @@
 		"Schematic_Alternate_CopperRotor_C": {
 			"className": "Schematic_Alternate_CopperRotor_C",
 			"name": "Alternate: Copper Rotor",
+			"slug": "alternate-copper-rotor",
 			"tier": 0,
 			"cost": [],
 			"unlock": {
@@ -16572,7 +14891,9 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_2-1_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -16581,6 +14902,7 @@
 		"Schematic_Alternate_CrystalOscillator_C": {
 			"className": "Schematic_Alternate_CrystalOscillator_C",
 			"name": "Alternate: Insulated Crystal Oscillator",
+			"slug": "alternate-insulated-crystal-oscillator",
 			"tier": 5,
 			"cost": [],
 			"unlock": {
@@ -16590,7 +14912,11 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Research_Quartz_2_C",
+				"Research_Caterium_3_C",
+				"Schematic_5-1_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -16599,6 +14925,7 @@
 		"Schematic_Alternate_DilutedPackagedFuel_C": {
 			"className": "Schematic_Alternate_DilutedPackagedFuel_C",
 			"name": "Alternate: Diluted Packaged Fuel ",
+			"slug": "alternate-diluted-packaged-fuel-",
 			"tier": 0,
 			"cost": [],
 			"unlock": {
@@ -16608,7 +14935,9 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_5-1_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -16617,6 +14946,7 @@
 		"Schematic_Alternate_ElectroAluminumScrap_C": {
 			"className": "Schematic_Alternate_ElectroAluminumScrap_C",
 			"name": "Alternate: Electrode - Aluminum Scrap",
+			"slug": "alternate-electrode---aluminum-scrap",
 			"tier": 0,
 			"cost": [],
 			"unlock": {
@@ -16626,7 +14956,9 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_7-1_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -16635,6 +14967,7 @@
 		"Schematic_Alternate_ElectrodeCircuitBoard_C": {
 			"className": "Schematic_Alternate_ElectrodeCircuitBoard_C",
 			"name": "Alternate: Electrode Circuit Board",
+			"slug": "alternate-electrode-circuit-board",
 			"tier": 0,
 			"cost": [],
 			"unlock": {
@@ -16644,7 +14977,9 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_5-1_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -16653,6 +14988,7 @@
 		"Schematic_Alternate_ElectromagneticControlRod1_C": {
 			"className": "Schematic_Alternate_ElectromagneticControlRod1_C",
 			"name": "Alternate: Electromagnetic Connection Rod",
+			"slug": "alternate-electromagnetic-connection-rod",
 			"tier": 7,
 			"cost": [],
 			"unlock": {
@@ -16662,7 +14998,10 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_7-4_C",
+				"Research_Caterium_4_1_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -16671,6 +15010,7 @@
 		"Schematic_Alternate_EnrichedCoal_C": {
 			"className": "Schematic_Alternate_EnrichedCoal_C",
 			"name": "Alternate: Compacted Coal",
+			"slug": "alternate-compacted-coal",
 			"tier": 4,
 			"cost": [],
 			"unlock": {
@@ -16682,7 +15022,10 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_3-1_C",
+				"Research_Sulfur_0_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -16691,6 +15034,7 @@
 		"Schematic_Alternate_FlexibleFramework_C": {
 			"className": "Schematic_Alternate_FlexibleFramework_C",
 			"name": "Alternate: Flexible Framework ",
+			"slug": "alternate-flexible-framework-",
 			"tier": 0,
 			"cost": [],
 			"unlock": {
@@ -16700,7 +15044,9 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_5-1_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -16709,6 +15055,7 @@
 		"Schematic_Alternate_FusedWire_C": {
 			"className": "Schematic_Alternate_FusedWire_C",
 			"name": "Alternate: Fused Wire",
+			"slug": "alternate-fused-wire",
 			"tier": 0,
 			"cost": [],
 			"unlock": {
@@ -16718,7 +15065,9 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Research_Caterium_0_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -16727,6 +15076,7 @@
 		"Schematic_Alternate_Gunpowder1_C": {
 			"className": "Schematic_Alternate_Gunpowder1_C",
 			"name": "Alternate: Gun Powder",
+			"slug": "alternate-gun-powder",
 			"tier": 4,
 			"cost": [],
 			"unlock": {
@@ -16736,7 +15086,9 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_Alternate_EnrichedCoal_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -16745,6 +15097,7 @@
 		"Schematic_Alternate_HeatSink1_C": {
 			"className": "Schematic_Alternate_HeatSink1_C",
 			"name": "Alternate: Heat Exchanger",
+			"slug": "alternate-heat-exchanger",
 			"tier": 7,
 			"cost": [],
 			"unlock": {
@@ -16754,7 +15107,9 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_7-2_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -16763,6 +15118,7 @@
 		"Schematic_Alternate_HeavyFlexibleFrame_C": {
 			"className": "Schematic_Alternate_HeavyFlexibleFrame_C",
 			"name": "Alternate: Heavy Flexible Frame",
+			"slug": "alternate-heavy-flexible-frame",
 			"tier": 0,
 			"cost": [],
 			"unlock": {
@@ -16772,7 +15128,9 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_5-2_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -16781,6 +15139,7 @@
 		"Schematic_Alternate_HeavyModularFrame_C": {
 			"className": "Schematic_Alternate_HeavyModularFrame_C",
 			"name": "Alternate: Heavy Modular Frame",
+			"slug": "alternate-heavy-modular-frame",
 			"tier": 4,
 			"cost": [],
 			"unlock": {
@@ -16790,7 +15149,9 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_5-2_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -16799,6 +15160,7 @@
 		"Schematic_Alternate_HeavyOilResidue_C": {
 			"className": "Schematic_Alternate_HeavyOilResidue_C",
 			"name": "Alternate: Heavy Oil Residue",
+			"slug": "alternate-heavy-oil-residue",
 			"tier": 0,
 			"cost": [],
 			"unlock": {
@@ -16808,7 +15170,9 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_5-1_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -16817,6 +15181,7 @@
 		"Schematic_Alternate_HighSpeedConnector_C": {
 			"className": "Schematic_Alternate_HighSpeedConnector_C",
 			"name": "Alternate: Silicone High-Speed Connector",
+			"slug": "alternate-silicone-high-speed-connector",
 			"tier": 5,
 			"cost": [],
 			"unlock": {
@@ -16826,7 +15191,11 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Research_Caterium_5_C",
+				"Schematic_5-1_C",
+				"Research_Quartz_0_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -16835,6 +15204,7 @@
 		"Schematic_Alternate_HighSpeedWiring_C": {
 			"className": "Schematic_Alternate_HighSpeedWiring_C",
 			"name": "Alternate: High-Speed Wiring",
+			"slug": "alternate-high-speed-wiring",
 			"tier": 0,
 			"cost": [],
 			"unlock": {
@@ -16844,7 +15214,10 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_4-1_C",
+				"Research_Caterium_4_1_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -16853,6 +15226,7 @@
 		"Schematic_Alternate_IngotIron_C": {
 			"className": "Schematic_Alternate_IngotIron_C",
 			"name": "Alternate: Iron Alloy Ingot",
+			"slug": "alternate-iron-alloy-ingot",
 			"tier": 1,
 			"cost": [],
 			"unlock": {
@@ -16871,6 +15245,7 @@
 		"Schematic_Alternate_IngotSteel1_C": {
 			"className": "Schematic_Alternate_IngotSteel1_C",
 			"name": "Alternate: Solid Steel Ingot",
+			"slug": "alternate-solid-steel-ingot",
 			"tier": 4,
 			"cost": [],
 			"unlock": {
@@ -16880,7 +15255,9 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_3-4_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -16889,6 +15266,7 @@
 		"Schematic_Alternate_IngotSteel2_C": {
 			"className": "Schematic_Alternate_IngotSteel2_C",
 			"name": "Alternate: Compacted Steel Ingot",
+			"slug": "alternate-compacted-steel-ingot",
 			"tier": 4,
 			"cost": [],
 			"unlock": {
@@ -16898,7 +15276,10 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_Alternate_EnrichedCoal_C",
+				"Schematic_3-4_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -16907,6 +15288,7 @@
 		"Schematic_Alternate_InventorySlots1_C": {
 			"className": "Schematic_Alternate_InventorySlots1_C",
 			"name": "Expanded Pocket Dimension",
+			"slug": "expanded-pocket-dimension",
 			"tier": 2,
 			"cost": [],
 			"unlock": {
@@ -16923,6 +15305,7 @@
 		"Schematic_Alternate_InventorySlots2_C": {
 			"className": "Schematic_Alternate_InventorySlots2_C",
 			"name": "Inflated Pocket Dimension",
+			"slug": "inflated-pocket-dimension",
 			"tier": 5,
 			"cost": [],
 			"unlock": {
@@ -16930,7 +15313,9 @@
 				"recipes": [],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_5-2_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -16939,6 +15324,7 @@
 		"Schematic_Alternate_ModularFrame_C": {
 			"className": "Schematic_Alternate_ModularFrame_C",
 			"name": "Alternate: Steeled Frame",
+			"slug": "alternate-steeled-frame",
 			"tier": 4,
 			"cost": [],
 			"unlock": {
@@ -16948,7 +15334,9 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_3-4_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -16957,6 +15345,7 @@
 		"Schematic_Alternate_Motor1_C": {
 			"className": "Schematic_Alternate_Motor1_C",
 			"name": "Alternate: Rigour Motor",
+			"slug": "alternate-rigour-motor",
 			"tier": 4,
 			"cost": [],
 			"unlock": {
@@ -16966,7 +15355,10 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_4-1_C",
+				"Research_Quartz_1_1_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -16975,6 +15367,7 @@
 		"Schematic_Alternate_Nobelisk1_C": {
 			"className": "Schematic_Alternate_Nobelisk1_C",
 			"name": "Alternate: Seismic Nobelisk",
+			"slug": "alternate-seismic-nobelisk",
 			"tier": 4,
 			"cost": [],
 			"unlock": {
@@ -16984,7 +15377,10 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Research_Sulfur_3_2_1_C",
+				"Research_Quartz_1_1_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -16993,6 +15389,7 @@
 		"Schematic_Alternate_NuclearFuelRod1_C": {
 			"className": "Schematic_Alternate_NuclearFuelRod1_C",
 			"name": "Alternate: Nuclear Fuel Unit",
+			"slug": "alternate-nuclear-fuel-unit",
 			"tier": 7,
 			"cost": [],
 			"unlock": {
@@ -17002,7 +15399,10 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_7-4_C",
+				"Research_Quartz_1_1_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -17011,6 +15411,7 @@
 		"Schematic_Alternate_Plastic1_C": {
 			"className": "Schematic_Alternate_Plastic1_C",
 			"name": "Alternate: Recycled Plastic",
+			"slug": "alternate-recycled-plastic",
 			"tier": 5,
 			"cost": [],
 			"unlock": {
@@ -17020,7 +15421,9 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_5-1_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -17029,6 +15432,7 @@
 		"Schematic_Alternate_PlasticSmartPlating_C": {
 			"className": "Schematic_Alternate_PlasticSmartPlating_C",
 			"name": "Alternate: Plastic Smart Plating",
+			"slug": "alternate-plastic-smart-plating",
 			"tier": 0,
 			"cost": [],
 			"unlock": {
@@ -17038,7 +15442,9 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_5-1_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -17047,6 +15453,7 @@
 		"Schematic_Alternate_PolyesterFabric_C": {
 			"className": "Schematic_Alternate_PolyesterFabric_C",
 			"name": "Alternate: Polyester Fabric",
+			"slug": "alternate-polyester-fabric",
 			"tier": 0,
 			"cost": [],
 			"unlock": {
@@ -17056,7 +15463,10 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Research_Mycelia_2_C",
+				"Schematic_5-1_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -17065,6 +15475,7 @@
 		"Schematic_Alternate_PolymerResin_C": {
 			"className": "Schematic_Alternate_PolymerResin_C",
 			"name": "Alternate: Polymer Resin",
+			"slug": "alternate-polymer-resin",
 			"tier": 0,
 			"cost": [],
 			"unlock": {
@@ -17074,7 +15485,9 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_5-1_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -17083,6 +15496,7 @@
 		"Schematic_Alternate_PureAluminumIngot_C": {
 			"className": "Schematic_Alternate_PureAluminumIngot_C",
 			"name": "Alternate: Pure Aluminum Ingot",
+			"slug": "alternate-pure-aluminum-ingot",
 			"tier": 0,
 			"cost": [],
 			"unlock": {
@@ -17092,7 +15506,9 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_7-1_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -17101,6 +15517,7 @@
 		"Schematic_Alternate_PureCateriumIngot_C": {
 			"className": "Schematic_Alternate_PureCateriumIngot_C",
 			"name": "Alternate: Pure Caterium Ingot",
+			"slug": "alternate-pure-caterium-ingot",
 			"tier": 0,
 			"cost": [],
 			"unlock": {
@@ -17110,7 +15527,10 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Research_Caterium_0_C",
+				"Schematic_3-1_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -17119,6 +15539,7 @@
 		"Schematic_Alternate_PureCopperIngot_C": {
 			"className": "Schematic_Alternate_PureCopperIngot_C",
 			"name": "Alternate: Pure Copper Ingot",
+			"slug": "alternate-pure-copper-ingot",
 			"tier": 0,
 			"cost": [],
 			"unlock": {
@@ -17128,7 +15549,9 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_3-1_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -17137,6 +15560,7 @@
 		"Schematic_Alternate_PureIronIngot_C": {
 			"className": "Schematic_Alternate_PureIronIngot_C",
 			"name": "Alternate: Pure Iron Ingot",
+			"slug": "alternate-pure-iron-ingot",
 			"tier": 0,
 			"cost": [],
 			"unlock": {
@@ -17146,7 +15570,9 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_3-1_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -17155,6 +15581,7 @@
 		"Schematic_Alternate_PureQuartzCrystal_C": {
 			"className": "Schematic_Alternate_PureQuartzCrystal_C",
 			"name": "Alternate: Pure Quartz Crystal ",
+			"slug": "alternate-pure-quartz-crystal-",
 			"tier": 0,
 			"cost": [],
 			"unlock": {
@@ -17164,7 +15591,10 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Research_Quartz_1_1_C",
+				"Schematic_3-1_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -17173,6 +15603,7 @@
 		"Schematic_Alternate_Quickwire_C": {
 			"className": "Schematic_Alternate_Quickwire_C",
 			"name": "Alternate: Fused Quickwire",
+			"slug": "alternate-fused-quickwire",
 			"tier": 3,
 			"cost": [],
 			"unlock": {
@@ -17182,7 +15613,9 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Research_Caterium_1_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -17191,6 +15624,7 @@
 		"Schematic_Alternate_RadioControlUnit1_C": {
 			"className": "Schematic_Alternate_RadioControlUnit1_C",
 			"name": "Alternate: Radio Control System",
+			"slug": "alternate-radio-control-system",
 			"tier": 7,
 			"cost": [],
 			"unlock": {
@@ -17200,7 +15634,10 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Research_Quartz_3_3_C",
+				"Research_Caterium_5_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -17209,6 +15646,7 @@
 		"Schematic_Alternate_RecycledRubber_C": {
 			"className": "Schematic_Alternate_RecycledRubber_C",
 			"name": "Alternate: Recycled Rubber",
+			"slug": "alternate-recycled-rubber",
 			"tier": 0,
 			"cost": [],
 			"unlock": {
@@ -17218,7 +15656,9 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_5-1_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -17227,6 +15667,7 @@
 		"Schematic_Alternate_ReinforcedIronPlate1_C": {
 			"className": "Schematic_Alternate_ReinforcedIronPlate1_C",
 			"name": "Alternate: Bolted Iron Plate",
+			"slug": "alternate-bolted-iron-plate",
 			"tier": 2,
 			"cost": [],
 			"unlock": {
@@ -17245,6 +15686,7 @@
 		"Schematic_Alternate_ReinforcedIronPlate2_C": {
 			"className": "Schematic_Alternate_ReinforcedIronPlate2_C",
 			"name": "Alternate: Stitched Iron Plate",
+			"slug": "alternate-stitched-iron-plate",
 			"tier": 2,
 			"cost": [],
 			"unlock": {
@@ -17263,6 +15705,7 @@
 		"Schematic_Alternate_ReinforcedSteelPlate_C": {
 			"className": "Schematic_Alternate_ReinforcedSteelPlate_C",
 			"name": "Alternate: Encased Industrial Pipe",
+			"slug": "alternate-encased-industrial-pipe",
 			"tier": 4,
 			"cost": [],
 			"unlock": {
@@ -17272,7 +15715,9 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_4-1_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -17281,6 +15726,7 @@
 		"Schematic_Alternate_Rotor_C": {
 			"className": "Schematic_Alternate_Rotor_C",
 			"name": "Alternate: Steel Rotor",
+			"slug": "alternate-steel-rotor",
 			"tier": 4,
 			"cost": [],
 			"unlock": {
@@ -17290,7 +15736,9 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_3-4_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -17299,6 +15747,7 @@
 		"Schematic_Alternate_RubberConcrete_C": {
 			"className": "Schematic_Alternate_RubberConcrete_C",
 			"name": "Alternate: Rubber Concrete",
+			"slug": "alternate-rubber-concrete",
 			"tier": 0,
 			"cost": [],
 			"unlock": {
@@ -17308,7 +15757,9 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_5-1_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -17317,6 +15768,7 @@
 		"Schematic_Alternate_Screw2_C": {
 			"className": "Schematic_Alternate_Screw2_C",
 			"name": "Alternate: Steel Screw",
+			"slug": "alternate-steel-screw",
 			"tier": 4,
 			"cost": [],
 			"unlock": {
@@ -17326,7 +15778,9 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_3-4_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -17335,6 +15789,7 @@
 		"Schematic_Alternate_Screw_C": {
 			"className": "Schematic_Alternate_Screw_C",
 			"name": "Alternate: Casted Screw",
+			"slug": "alternate-casted-screw",
 			"tier": 1,
 			"cost": [],
 			"unlock": {
@@ -17353,6 +15808,7 @@
 		"Schematic_Alternate_Silica_C": {
 			"className": "Schematic_Alternate_Silica_C",
 			"name": "Alternate: Cheap Silica",
+			"slug": "alternate-cheap-silica",
 			"tier": 4,
 			"cost": [],
 			"unlock": {
@@ -17362,7 +15818,9 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Research_Quartz_1_2_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -17371,6 +15829,7 @@
 		"Schematic_Alternate_Stator_C": {
 			"className": "Schematic_Alternate_Stator_C",
 			"name": "Alternate: Quickwire Stator",
+			"slug": "alternate-quickwire-stator",
 			"tier": 4,
 			"cost": [],
 			"unlock": {
@@ -17380,7 +15839,10 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_4-1_C",
+				"Research_Caterium_1_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -17389,6 +15851,7 @@
 		"Schematic_Alternate_SteamedCopperSheet_C": {
 			"className": "Schematic_Alternate_SteamedCopperSheet_C",
 			"name": "Alternate: Steamed Copper Sheet ",
+			"slug": "alternate-steamed-copper-sheet-",
 			"tier": 0,
 			"cost": [],
 			"unlock": {
@@ -17398,7 +15861,9 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_3-1_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -17407,6 +15872,7 @@
 		"Schematic_Alternate_SteelCoatedPlate_C": {
 			"className": "Schematic_Alternate_SteelCoatedPlate_C",
 			"name": "Alternate: Steel Coated Plate ",
+			"slug": "alternate-steel-coated-plate-",
 			"tier": 0,
 			"cost": [],
 			"unlock": {
@@ -17416,7 +15882,9 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_5-1_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -17425,6 +15893,7 @@
 		"Schematic_Alternate_SteelRod_C": {
 			"className": "Schematic_Alternate_SteelRod_C",
 			"name": "Alternate: Steel Rod",
+			"slug": "alternate-steel-rod",
 			"tier": 0,
 			"cost": [],
 			"unlock": {
@@ -17434,7 +15903,9 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_3-4_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -17443,6 +15914,7 @@
 		"Schematic_Alternate_TurboFuel_C": {
 			"className": "Schematic_Alternate_TurboFuel_C",
 			"name": "Alternate: Turbofuel",
+			"slug": "alternate-turbofuel",
 			"tier": 6,
 			"cost": [],
 			"unlock": {
@@ -17454,7 +15926,10 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_5-1_C",
+				"Schematic_Alternate_EnrichedCoal_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -17463,6 +15938,7 @@
 		"Schematic_Alternate_TurboHeavyFuel_C": {
 			"className": "Schematic_Alternate_TurboHeavyFuel_C",
 			"name": "Alternate: Turbo Heavy Fuel",
+			"slug": "alternate-turbo-heavy-fuel",
 			"tier": 0,
 			"cost": [],
 			"unlock": {
@@ -17474,7 +15950,10 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_5-1_C",
+				"Schematic_Alternate_EnrichedCoal_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -17483,6 +15962,7 @@
 		"Schematic_Alternate_TurboMotor1_C": {
 			"className": "Schematic_Alternate_TurboMotor1_C",
 			"name": "Alternate: Turbo Rigour Motor",
+			"slug": "alternate-turbo-rigour-motor",
 			"tier": 7,
 			"cost": [],
 			"unlock": {
@@ -17492,7 +15972,10 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_7-2_C",
+				"Research_Caterium_3_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -17501,6 +15984,7 @@
 		"Schematic_Alternate_UraniumCell1_C": {
 			"className": "Schematic_Alternate_UraniumCell1_C",
 			"name": "Alternate: Infused Uranium Cell",
+			"slug": "alternate-infused-uranium-cell",
 			"tier": 7,
 			"cost": [],
 			"unlock": {
@@ -17510,7 +15994,12 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_7-4_C",
+				"Research_Caterium_1_C",
+				"Research_Quartz_0_C",
+				"Research_Sulfur_0_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -17519,6 +16008,7 @@
 		"Schematic_Alternate_WetConcrete_C": {
 			"className": "Schematic_Alternate_WetConcrete_C",
 			"name": "Alternate: Wet Concrete",
+			"slug": "alternate-wet-concrete",
 			"tier": 0,
 			"cost": [],
 			"unlock": {
@@ -17528,7 +16018,9 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_3-1_C"
+			],
 			"type": "EST_Alternate",
 			"time": 0,
 			"alternate": false,
@@ -17537,6 +16029,7 @@
 		"Schematic_Alternate_Wire1_C": {
 			"className": "Schematic_Alternate_Wire1_C",
 			"name": "Alternate: Iron Wire",
+			"slug": "alternate-iron-wire",
 			"tier": 1,
 			"cost": [],
 			"unlock": {
@@ -17555,6 +16048,7 @@
 		"Schematic_Alternate_Wire2_C": {
 			"className": "Schematic_Alternate_Wire2_C",
 			"name": "Alternate: Caterium Wire",
+			"slug": "alternate-caterium-wire",
 			"tier": 3,
 			"cost": [],
 			"unlock": {
@@ -17564,66 +16058,10 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Research_Caterium_0_C"
+			],
 			"type": "EST_Alternate",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"Schematic_SaveCompatibility_C": {
-			"className": "Schematic_SaveCompatibility_C",
-			"name": "Save Compatibility",
-			"tier": 0,
-			"cost": [],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [
-					"Recipe_Fence_01_C",
-					"Recipe_Stair_1b_C",
-					"Recipe_Wall_Window_8x4_03_C",
-					"Recipe_Wall_Window_8x4_03_Steel_C",
-					"Recipe_Wall_Conveyor_8x4_04_C",
-					"Recipe_Wall_Conveyor_8x4_04_Steel_C"
-				],
-				"scannerResources": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_Custom",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"Schematic_StartingRecipes_C": {
-			"className": "Schematic_StartingRecipes_C",
-			"name": "Starting Blueprints",
-			"tier": 0,
-			"cost": [],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [
-					"Recipe_IngotIron_C",
-					"Recipe_IronPlate_C",
-					"Recipe_IronRod_C",
-					"Recipe_TradingPost_C",
-					"Recipe_OreIron_C",
-					"Recipe_OreCopper_C",
-					"Recipe_OreBauxite_C",
-					"Recipe_OreCaterium_C",
-					"Recipe_OreUranium_C",
-					"Recipe_CrudeOil_C",
-					"Recipe_Sulfur_C",
-					"Recipe_Limestone_C",
-					"Recipe_Coal_C",
-					"Recipe_RawQuartz_C",
-					"Recipe_XenoZapper_C",
-					"Recipe_WorkBench_C"
-				],
-				"scannerResources": [
-					"Desc_OreIron_C"
-				]
-			},
-			"requiredSchematics": [],
-			"type": "EST_Custom",
 			"time": 0,
 			"alternate": false,
 			"mam": false
@@ -17631,6 +16069,7 @@
 		"Schematic_Tutorial1_5_C": {
 			"className": "Schematic_Tutorial1_5_C",
 			"name": "HUB Upgrade 2",
+			"slug": "hub-upgrade-2",
 			"tier": 0,
 			"cost": [
 				{
@@ -17655,7 +16094,9 @@
 					"Desc_OreCopper_C"
 				]
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_Tutorial1_C"
+			],
 			"type": "EST_Tutorial",
 			"time": 0,
 			"alternate": false,
@@ -17664,6 +16105,7 @@
 		"Schematic_Tutorial1_C": {
 			"className": "Schematic_Tutorial1_C",
 			"name": "HUB Upgrade 1",
+			"slug": "hub-upgrade-1",
 			"tier": 0,
 			"cost": [
 				{
@@ -17688,6 +16130,7 @@
 		"Schematic_Tutorial2_C": {
 			"className": "Schematic_Tutorial2_C",
 			"name": "HUB Upgrade 3",
+			"slug": "hub-upgrade-3",
 			"tier": 0,
 			"cost": [
 				{
@@ -17716,7 +16159,9 @@
 					"Desc_Stone_C"
 				]
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_Tutorial1_5_C"
+			],
 			"type": "EST_Tutorial",
 			"time": 0,
 			"alternate": false,
@@ -17725,6 +16170,7 @@
 		"Schematic_Tutorial3_C": {
 			"className": "Schematic_Tutorial3_C",
 			"name": "HUB Upgrade 4",
+			"slug": "hub-upgrade-4",
 			"tier": 0,
 			"cost": [
 				{
@@ -17748,7 +16194,9 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_Tutorial2_C"
+			],
 			"type": "EST_Tutorial",
 			"time": 0,
 			"alternate": false,
@@ -17757,6 +16205,7 @@
 		"Schematic_Tutorial4_C": {
 			"className": "Schematic_Tutorial4_C",
 			"name": "HUB Upgrade 5",
+			"slug": "hub-upgrade-5",
 			"tier": 0,
 			"cost": [
 				{
@@ -17780,7 +16229,9 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_Tutorial3_C"
+			],
 			"type": "EST_Tutorial",
 			"time": 0,
 			"alternate": false,
@@ -17789,6 +16240,7 @@
 		"Schematic_Tutorial5_C": {
 			"className": "Schematic_Tutorial5_C",
 			"name": "HUB Upgrade 6",
+			"slug": "hub-upgrade-6",
 			"tier": 0,
 			"cost": [
 				{
@@ -17818,7 +16270,9 @@
 				],
 				"scannerResources": []
 			},
-			"requiredSchematics": [],
+			"requiredSchematics": [
+				"Schematic_Tutorial4_C"
+			],
 			"type": "EST_Tutorial",
 			"time": 0,
 			"alternate": false,

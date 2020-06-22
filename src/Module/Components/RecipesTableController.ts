@@ -7,9 +7,10 @@ import {Formula} from '@src/Formula';
 
 export class RecipesTableController
 {
+
 	public recipeResourcesPerMinute = Formula.calculateProductAmountsPerMinute;
 	public recipeTime = Formula.calculateBuildingRecipeProductionTime;
-	
+
 	public static $inject = ['ComponentOptionsService'];
 
 	public constructor(public options: ComponentOptionsService)
