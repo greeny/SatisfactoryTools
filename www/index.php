@@ -13,7 +13,6 @@
 	<link rel="shortcut icon" href="/assets/images/icons/favicon.ico">
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="msapplication-config" content="/assets/images/icons/browserconfig.xml">
-	<meta name="theme-color" content="#ffffff">
 	<!-- Primary Meta Tags -->
 	<meta name="theme-color" content="#df691a">
 	<meta name="title" content="Satisfactory Tools" />
