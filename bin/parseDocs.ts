@@ -112,6 +112,11 @@ for (const definitions of docs) {
 				imageMapping[item.className] = item.image;
 			}
 			break;
+		case 'Class\'/Script/FactoryGame.FGBuildableRadarTower\'':
+			for (const building of parseBuildings(definitions.Classes, true)) {
+				json.buildings[building.className] = building;
+			}
+			break;
 		case 'Class\'/Script/FactoryGame.FGBuildableResourceExtractor\'':
 			for (const building of parseBuildings(definitions.Classes, true)) {
 				json.buildings[building.className] = building;
@@ -149,17 +154,6 @@ for (const definitions of docs) {
 			break;
 	}
 }
-
-// add missing radar tower
-json.buildings['Desc_RadarTower_C'] = {
-	className: 'Desc_RadarTower_C',
-	categories: [],
-	buildMenuPriority: 0,
-	description: 'Reveals an area around itself on the map. The area grows over time to a max. Placing the tower higher up increases the max area revealed.',
-	slug: 'radarTower',
-	metadata: {},
-	name: 'Radar Tower',
-};
 
 const vehicleMapping: {
 	key: string,

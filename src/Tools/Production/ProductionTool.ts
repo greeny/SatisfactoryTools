@@ -44,12 +44,14 @@ export class ProductionTool
 	public resetProductionRequest(): void
 	{
 		this.productionRequest = {
+			version: 1,
 			name: null,
 			icon: null,
 			allowedAlternateRecipes: [],
 			blockedRecipes: [],
 			blockedResources: [],
 			production: [],
+			input: [],
 			resourceMax: angular.copy(Data.resourceAmounts),
 			resourceWeight: angular.copy(Data.resourceWeights),
 		};
@@ -90,7 +92,7 @@ export class ProductionTool
 						this.resultStatus = ResultStatus.NO_RESULT;
 						return;
 					}
-					this.result = new ProductionToolResult(recipes);
+					this.result = new ProductionToolResult(recipes, this.productionRequest);
 					this.resultStatus = ResultStatus.RESULT;
 				};
 

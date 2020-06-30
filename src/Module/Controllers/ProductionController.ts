@@ -20,6 +20,7 @@ export class ProductionController
 	public cloningInProgress: boolean;
 	public readonly rawResources: IResourceSchema[] = data.getResources();
 	public readonly craftableItems: IItemSchema[] = model.getAutomatableItems();
+	public readonly inputableItems: IItemSchema[] = model.getInputableItems();
 	public readonly alternateRecipes: IRecipeSchema[] = data.getAlternateRecipes();
 	public readonly basicRecipes: IRecipeSchema[] = data.getBaseItemRecipes();
 

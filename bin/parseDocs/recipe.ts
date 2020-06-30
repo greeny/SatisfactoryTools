@@ -62,11 +62,17 @@ export default function parseRecipes(recipes: {
 			}
 		}
 
+		let alternate = recipe.mDisplayName.indexOf('Alternate: ') !== -1;
+
+		if (recipe.ClassName === 'Recipe_Alternate_Turbofuel_C') {
+			alternate = true;
+		}
+
 		result.push({
 			slug: Strings.webalize(recipe.mDisplayName),
 			name: recipe.mDisplayName,
 			className: recipe.ClassName,
-			alternate: recipe.mDisplayName.indexOf('Alternate: ') !== -1,
+			alternate: alternate,
 			time: parseFloat(recipe.mManufactoringDuration),
 			manualTimeMultiplier: parseFloat(recipe.mManualManufacturingMultiplier),
 			ingredients: Arrays.ensureArray(Strings.unserializeDocs(recipe.mIngredients)).map(parseItemAmount),

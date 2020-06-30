@@ -153,7 +153,6 @@ export class SchematicController
 			});
 
 			network.on('doubleClick', (params) => {
-				console.log(params);
 				if (params.nodes.length === 1) {
 					let node: any;
 					for (node of nodes) {

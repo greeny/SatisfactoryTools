@@ -89,6 +89,24 @@ $border: 1px solid rgba(0, 0, 0, 0.125);
 		}
 	}
 
+	.input-table {
+		width: 100%;
+
+		tr {
+			td:nth-child(1) {
+				width: 25px;
+			}
+
+			td:nth-child(2) {
+				width: 40%;
+			}
+
+			td:nth-child(3) {
+				width: 30%;
+			}
+		}
+	}
+
 	& > .card-header {
 		padding: 0;
 		min-height: $header-height;

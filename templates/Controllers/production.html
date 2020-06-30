@@ -100,6 +100,10 @@
 				</div>
 
 				<div class="col-md-10" ng-if="ctrl.tab.tab === 'production'">
+					<p>
+						Select items that you want to produce. You can choose between item per minute (will produce given amount from as low amount of raw resources as possible) or maximize (will produce as much as possible, given the raw resource limits).
+					</p>
+
 					<table class="production-input-table">
 						<tbody ui-sortable="{axis: 'y',  'ui-floating': true, handle: '> .sortable-handler'}" ng-model="ctrl.tab.tool.productionRequest.production">
 							<tr ng-repeat="product in ctrl.tab.tool.productionRequest.production track by $index">
@@ -154,9 +158,6 @@
 							</tr>
 						</tbody>
 					</table>
-
-					<div ng-repeat="product in ctrl.tab.tool.productionRequest.production">
-					</div>
 				</div>
 
 				<div class="col-md-10" ng-show="ctrl.tab.tab === 'items'">
@@ -201,6 +202,70 @@
 												</td>
 												<td>
 													<input type="number" ng-disabled="!ctrl.tab.isResourceEnabled(resource.item)" class="form-control" ng-model="ctrl.tab.tool.productionRequest.resourceMax[resource.item]" step="any">
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-6">
+							<div class="card">
+								<h3 class="card-header card-header-with-buttons">
+									<span class="card-header-text">
+										Input
+									</span>
+								</h3>
+								<div class="card-body">
+									<p>
+										Select items that you already have at your disposal and therefore don't need to be produced by this factory.
+									</p>
+									<table class="input-table">
+										<tbody ui-sortable="{axis: 'y',  'ui-floating': true, handle: '> .sortable-handler'}" ng-model="ctrl.tab.tool.productionRequest.input">
+											<tr ng-repeat="product in ctrl.tab.tool.productionRequest.input track by $index">
+												<td class="sortable-handler">
+													<span class="fas fa-arrows-alt-v cursor-drag"></span>
+												</td>
+												<td>
+													<ui-select ng-model="product.item" class="production-item-picker">
+														<ui-select-match placeholder="Search or select item">
+															<span>
+																<item-icon dynamic="true" item="$select.selected.className" class="mr-2" size="24" hide-tooltip="true"></item-icon>
+																{{$select.selected.name}}
+															</span>
+														</ui-select-match>
+														<ui-select-choices repeat="item.className as item in (ctrl.inputableItems|filter:{name:$select.search}) track by item.className">
+															<item-icon item="item" hide-tooltip="true"></item-icon>
+															<span class="pl-2" ng-bind="item.name"></span>
+														</ui-select-choices>
+													</ui-select>
+												</td>
+												<td>
+													<input class="form-control" ng-show="product.item" type="number" ng-model="product.amount" step="any">
+												</td>
+												<td>
+													<span class="btn btn-success" ng-click="ctrl.tab.cloneInput(product)" tooltip title="Clone input">
+														<span class="far fa-fw fa-clone"></span>
+													</span>
+													<span class="btn btn-danger" ng-click="ctrl.tab.removeInput(product)" tooltip title="Remove input">
+														<span class="fas fa-fw fa-times"></span>
+													</span>
+												</td>
+											</tr>
+											<tr>
+												<td></td>
+												<td>
+													<span class="btn btn-outline-success btn-block" ng-click="ctrl.tab.addEmptyInput()">
+														<span class="fas fa-plus"></span>
+														Add input
+													</span>
+												</td>
+												<td></td>
+												<td>
+													<span class="btn btn-outline-danger" ng-click="ctrl.tab.clearInputs()" tooltip title="Clear inputs">
+														<span class="fas fa-fw fa-trash-alt"></span>
+													</span>
 												</td>
 											</tr>
 										</tbody>

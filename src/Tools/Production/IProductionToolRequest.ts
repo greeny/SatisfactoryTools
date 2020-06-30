@@ -1,6 +1,8 @@
 export interface IProductionToolRequest
 {
 
+	version: number; // version of schema
+
 	name: string|null;
 	icon: string|null;
 
@@ -12,6 +14,7 @@ export interface IProductionToolRequest
 	allowedAlternateRecipes: string[]; // whether alt is available or not (doesn't guarantee usage)
 
 	production: IProductionToolRequestItem[];
+	input: IProductionToolRequestInput[];
 
 }
 
@@ -22,5 +25,13 @@ export interface IProductionToolRequestItem
 	type: string; // Constants.PRODUCTION_TYPE
 	amount: number; // amount when producing items/min
 	ratio: number; // ratio when producing max
+
+}
+
+export interface IProductionToolRequestInput
+{
+
+	item: string|null; // classname of the item
+	amount: number; // amount of items/min
 
 }

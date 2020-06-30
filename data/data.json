@@ -2075,7 +2075,7 @@
 			"slug": "turbofuel",
 			"name": "Turbofuel",
 			"className": "Recipe_Alternate_Turbofuel_C",
-			"alternate": false,
+			"alternate": true,
 			"time": 16,
 			"manualTimeMultiplier": 1,
 			"ingredients": [
@@ -17526,15 +17526,18 @@
 			"metadata": {}
 		},
 		"Desc_RadarTower_C": {
-			"className": "Desc_RadarTower_C",
+			"slug": "radar-tower",
+			"name": "Radar Tower",
+			"description": "Reveals an area around itself on the map. The area grows over time to a max.\nPlacing the tower higher up increases the max area revealed.",
 			"categories": [
 				"SC_Towers_C"
 			],
 			"buildMenuPriority": 60,
-			"description": "Reveals an area around itself on the map. The area grows over time to a max. Placing the tower higher up increases the max area revealed.",
-			"slug": "radarTower",
-			"metadata": {},
-			"name": "Radar Tower"
+			"className": "Desc_RadarTower_C",
+			"metadata": {
+				"powerConsumption": 30,
+				"powerConsumptionExponent": 1.6
+			}
 		},
 		"Desc_RailroadTrack_C": {
 			"slug": "railway",
