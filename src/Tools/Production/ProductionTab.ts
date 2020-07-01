@@ -1,11 +1,12 @@
 import {ProductionTool} from '@src/Tools/Production/ProductionTool';
 import angular from 'angular';
-import {IProductionToolRequest, IProductionToolRequestItem} from '@src/Tools/Production/IProductionToolRequest';
+import {IProductionToolRequest, IProductionToolRequestInput, IProductionToolRequestItem} from '@src/Tools/Production/IProductionToolRequest';
 import {Constants} from '@src/Constants';
 import data, {Data} from '@src/Data/Data';
 import {IProductionControllerScope} from '@src/Module/Controllers/ProductionController';
 import axios from 'axios';
 import {Strings} from '@src/Utils/Strings';
+import {ProductionRequestSchemaConverter} from '@src/Tools/Production/ProductionRequestSchemaConverter';
 
 export class ProductionTab
 {
@@ -32,6 +33,7 @@ export class ProductionTab
 		this.tool = new ProductionTool;
 
 		if (productionToolRequest) {
+			productionToolRequest = ProductionRequestSchemaConverter.convert(productionToolRequest);
 			this.tool.productionRequest = productionToolRequest;
 		} else {
 			this.addEmptyProduct();
@@ -113,6 +115,41 @@ export class ProductionTab
 		const index = this.tool.productionRequest.production.indexOf(item);
 		if (index in this.tool.productionRequest.production) {
 			this.tool.productionRequest.production.splice(index, 1);
+		}
+	}
+
+	public addEmptyInput(): void
+	{
+		this.addInput({
+			item: null,
+			amount: 10,
+		});
+	}
+
+	public addInput(item: IProductionToolRequestInput): void
+	{
+		this.tool.productionRequest.input.push(item);
+	}
+
+	public cloneInput(item: IProductionToolRequestInput): void
+	{
+		this.tool.productionRequest.input.push({
+			item: item.item,
+			amount: item.amount,
+		});
+	}
+
+	public clearInput(): void
+	{
+		this.tool.productionRequest.input = [];
+		this.addEmptyInput();
+	}
+
+	public removeInput(item: IProductionToolRequestInput): void
+	{
+		const index = this.tool.productionRequest.input.indexOf(item);
+		if (index in this.tool.productionRequest.input) {
+			this.tool.productionRequest.input.splice(index, 1);
 		}
 	}
 
@@ -215,4 +252,5 @@ export class ProductionTab
 		});
 		return result;
 	}
+
 }

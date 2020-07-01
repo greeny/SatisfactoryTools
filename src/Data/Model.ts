@@ -61,6 +61,13 @@ export class Model
 		});
 	}
 
+	public getInputableItems(): IItemSchema[]
+	{
+		return this.getAutomatableItems().filter((item) => {
+			return !(item.className in this.data.resources);
+		});
+	}
+
 	public isRawResource(item: Item): boolean
 	{
 		return item.prototype.className in this.data.resources;
