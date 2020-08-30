@@ -1,6 +1,10 @@
-<ng-container *ngIf="hideTooltip;else showTooltip">
-	<img [src]="slug | async" [style]="{width: size + 'px'}" [alt]="item.name"/>
+<ng-container *ngIf="entry$ | async as asyncEntry">
+	<ng-container *ngTemplateOutlet="hideTooltip ? hideTooltip : showTooltip; context: { $implicit: asyncEntry }">
+	</ng-container>
 </ng-container>
-<ng-template #showTooltip>
-	<img [src]="slug | async" [tooltip]="item?.name || item" [style]="{width: size + 'px'}" [alt]="item.name"/>
+<ng-template #hideTooltip let-entry>
+	<img [src]="'/assets/images/items/' + entry.slug + '_' + imageSize + '.png'" [style]="{width: size + 'px'}" [alt]="entry.name"/>
+</ng-template>
+<ng-template #showTooltip let-entry>
+	<img [src]="'/assets/images/items/' + entry.slug + '_' + imageSize + '.png'" [tooltip]="entry.name" [style]="{width: size + 'px'}" [alt]="entry.name"/>
 </ng-template>

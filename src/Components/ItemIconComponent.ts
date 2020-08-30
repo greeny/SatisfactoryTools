@@ -1,4 +1,4 @@
-import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
+import {Component, Input, OnChanges, SimpleChanges} from '@angular/core';
 import {IBuildingSchema} from '@src/Schema/IBuildingSchema';
 import {IItemSchema} from '@src/Schema/IItemSchema';
 import {Store} from '@ngrx/store';
@@ -17,7 +17,9 @@ export class ItemIconComponent implements OnChanges
 	@Input() item: string|AcceptableSchemasType;
 	@Input('hide-tooltip') hideTooltip = false;
 	@Input() size = 64;
-	slug: Observable<string>;
+	url$: Observable<string>;
+	entry$: Observable<AcceptableSchemasType>;
+	imageSize: number = 64;
 	private defaultSize: number = 64;
 
 	public constructor(private store$: Store<ApplicationState>)
@@ -31,9 +33,9 @@ export class ItemIconComponent implements OnChanges
 
 	private reload(): void
 	{
-		const size = this.size <= this.defaultSize ? 64 : 256;
+		this.imageSize = this.size <= this.defaultSize ? 64 : 256;
 		if (typeof this.item === 'string') {
-			this.slug = concat(
+			this.entry$ = concat(
 				this.store$.select(selectAllItems),
 				this.store$.select(selectAllBuildings),
 			).pipe(
@@ -43,11 +45,11 @@ export class ItemIconComponent implements OnChanges
 					});
 				}),
 				map(entry => {
-					return `/assets/images/items/${entry[0].slug}_${size}.png`;
+					return entry[0];
 				})
 			);
-			return;
+		} else {
+			this.entry$ = of(this.item);
 		}
-		this.slug = of(`/assets/images/items/${this.item.slug}_${size}.png`);
 	}
 }
