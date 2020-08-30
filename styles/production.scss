@@ -157,6 +157,7 @@ $border: 1px solid rgba(0, 0, 0, 0.125);
 			align-items: center;
 
 			.dropdown-menu {
+				top: 45px !important;
 				.dropdown-menu-content {
 					display: flex;
 					position: relative;

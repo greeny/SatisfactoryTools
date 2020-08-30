@@ -1,0 +1,416 @@
+<div *ngIf="calculatorState$ | async as asyncCalculatorState">
+	<h2>Production</h2>
+	<ul class="nav nav-tabs production-nav-tabs">
+		<li class="nav-item" *ngFor="let localTab of asyncCalculatorState.productionTabs; let i = index">
+		<span class="nav-link cursor-pointer" [class]="{active: localTab === asyncCalculatorState.currentTab}" (click)="selectTab(i)" [tooltip]="localTab.name">
+			<item-icon hide-tooltip="true" [item]="localTab.icon" size="32" *ngIf="localTab.icon; else noIconSet"></item-icon>
+		</span>
+		</li>
+		<li class="nav-item d-flex new-tab">
+			<a class="nav-link align-self-center" (click)="addEmptyTab()" tooltip="Add new production line">
+				<span [class]="{'fas': true, 'fa-plus': !addingInProgress, 'fa-spin': addingInProgress, 'fa-sync-alt': addingInProgress}"></span>
+			</a>
+		</li>
+	</ul>
+	<div *ngIf="asyncCalculatorState.currentTab">
+		<div class="card production-input">
+			<div class="card-header d-flex">
+				<div class="production-image d-flex" dropdown>
+					<span class="image-picker dropdown-toggle" data-toggle="dropdown" tooltip="Change tab icon" dropdownToggle>
+						<item-icon *ngIf="asyncCalculatorState.currentTab.icon; else noIconSet" [item]="asyncCalculatorState.currentTab.icon" size="32" hide-tooltip="true"></item-icon>
+					</span>
+					<div class="dropdown-menu" *dropdownMenu>
+						<div class="dropdown-menu-content" [perfectScrollbar]="[]">
+							<item-icon hide-tooltip="true" class="dropdown-item cursor-pointer" [item]="icon" [class]="{'active': icon.className === asyncCalculatorState.currentTab.icon}" size="32" *ngFor="let icon of craftableItems$ | async" (click)="changeCurrentTabIcon(icon)"></item-icon>
+						</div>
+					</div>
+				</div>
+				<span class="production-line-name flex-grow-1">
+					<span class="production-line-name-title mr-2" ng-hide="asyncCalculatorState.currentTab.state.renaming">
+						<span>{{asyncCalculatorState.currentTab.name}}</span>
+					</span>
+					<form class="mr-2 flex-grow-1" ng-submit="asyncCalculatorState.currentTab.state.renaming = false" *ngIf="asyncCalculatorState.currentTab.state.renaming">
+						<input class="form-control" ng-model="asyncCalculatorState.currentTab.tool.productionRequest.name">
+						<button type="submit" class="btn btn-outline-success" *ngIf="asyncCalculatorState.currentTab.state.renaming">
+							<span class="fas fa-check"></span>
+						</button>
+					</form>
+					<span class="btn btn-outline-light" *ngIf="!asyncCalculatorState.currentTab.state.renaming" tooltip="Rename tab" (click)="asyncCalculatorState.currentTab.state.renaming = true">
+						<span class="fas fa-pencil-alt"></span>
+					</span>
+				</span>
+
+				<div class="btn-group">
+					<span class="btn btn-info" tooltip="Share tab">
+						<span class="fas fa-share-alt"></span>
+					</span>
+					<a class="btn btn-success" (click)="cloneTab()" tooltip="Clone tab">
+						<span [class]="{'far': !cloningInProgress, 'fas': cloningInProgress, 'fa-fw': true, 'fa-clone': !cloningInProgress, 'fa-spin': cloningInProgress, 'fa-sync-alt': cloningInProgress}"></span>
+					</a>
+					<a class="btn btn-warning" tooltip="Reset tab to default">
+						<span class="fas fa-fw fa-eraser"></span>
+					</a>
+					<a class="btn btn-danger" (click)="removeTab()" tooltip="Remove tab">
+						<span class="fas fa-fw fa-trash-alt"></span>
+					</a>
+					<a class="btn btn-secondary" (click)="toggleExpandedState()" [tooltip]="asyncCalculatorState.currentTab.state.expanded ? 'Collapse' : 'Expand'">
+						<span *ngIf="asyncCalculatorState.currentTab.state.expanded" class="fas fa-fw fa-chevron-up"></span>
+						<span *ngIf="!asyncCalculatorState.currentTab.state.expanded" class="fas fa-fw fa-chevron-down"></span>
+					</a>
+				</div>
+			</div>
+			<div class="card-body" *ngIf="asyncCalculatorState.currentTab.state.expanded">
+				<div class="row">
+					<div class="col-md-2 border-right border-light">
+						<ul class="nav nav-tabs flex-column">
+							<li class="nav-item">
+								<a class="nav-link" [class.active]="asyncCalculatorState.currentTab.tab === 'production'" (click)="changeMode('production')">
+									<span class="fas fa-fw fa-chart-line mr-1"></span>
+									Production
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" [class.active]="asyncCalculatorState.currentTab.tab === 'items'" (click)="changeMode('items')">
+									<span class="fas fa-fw fa-box-open mr-1"></span>
+									Items, Input
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" [class.active]="asyncCalculatorState.currentTab.tab === 'recipes'" (click)="changeMode('recipes')">
+									<span class="fas fa-fw fa-scroll mr-1"></span>
+									Recipes
+								</a>
+							</li>
+							<!--<li class="nav-item">
+								<a href="javascript: void(0);" class="nav-link" ng-class="{active: asyncCalculatorState.currentTab.tab === 'power'}" (click)="asyncCalculatorState.currentTab.tab = 'power'">
+									<span class="fas fa-fw fa-bolt mr-1"></span>
+									Power
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="javascript: void(0);" class="nav-link" ng-class="{active: asyncCalculatorState.currentTab.tab === 'nodes'}" (click)="asyncCalculatorState.currentTab.tab = 'nodes'">
+									<span class="fas fa-fw fa-wrench mr-1"></span>
+									Nodes, miners, belts
+								</a>
+							</li>-->
+						</ul>
+					</div>
+
+					<div class="col-md-10" *ngIf="asyncCalculatorState.currentTab.tab === 'production'">
+						<p>
+							Select items that you want to produce. You can choose between item per minute (will produce
+							given amount from as low amount of raw resources as possible) or maximize (will produce as
+							much
+							as possible, given the raw resource limits).
+						</p>
+
+						<table class="production-input-table">
+							<tbody ui-sortable="{axis: 'y',  'ui-floating': true, handle: '> .sortable-handler'}" ng-model="asyncCalculatorState.currentTab.tool.productionRequest.production">
+								<tr *ngFor="let product of asyncCalculatorState.currentTab.production">
+									<td class="sortable-handler">
+										<span class="fas fa-arrows-alt-v cursor-drag"></span>
+									</td>
+									<td>
+										<!--									<ui-select ng-model="product.item" class="production-item-picker">-->
+										<!--										<ui-select-match placeholder="Search or select item">-->
+										<!--											<span>-->
+										<!--												<item-icon  item="$select.selected.className" class="mr-2" size="24" hide-tooltip="true"></item-icon>-->
+										<!--												{{$select.selected.name}}-->
+										<!--											</span>-->
+										<!--										</ui-select-match>-->
+										<!--										<ui-select-choices repeat="item.className as item in (craftableItems$|filter:{name:$select.search}) track by item.className">-->
+										<!--											<item-icon item="item" hide-tooltip="true"></item-icon>-->
+										<!--											<span class="pl-2" ng-bind="item.name"></span>-->
+										<!--										</ui-select-choices>-->
+										<!--									</ui-select>-->
+									</td>
+									<td>
+										<!--									<select *ngIf="product.item" class="form-control" ng-model="product.type" ng-options="value as key for (key, value) in options"></select>-->
+									</td>
+									<td>
+										<input class="form-control" *ngIf="product.item && product.type === 'perMinute'" type="number" ng-model="product.amount" step="any">
+										<input class="w-100" *ngIf="product.item && product.type === 'max'" type="range" ng-model="product.ratio" min="0" max="100" step="2">
+									</td>
+									<td>
+									<span class="btn btn-success" (click)="asyncCalculatorState.currentTab.cloneProduct(product)" tooltip="Clone item">
+										<span class="far fa-fw fa-clone"></span>
+									</span>
+										<span class="btn btn-danger" (click)="asyncCalculatorState.currentTab.removeProduct(product)" tooltip="Remove item">
+										<span class="fas fa-fw fa-times"></span>
+									</span>
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>
+									<span class="btn btn-outline-success btn-block" (click)="addEmptyProduct()">
+										<span class="fas fa-plus"></span>
+										Add product
+									</span>
+									</td>
+									<td></td>
+									<td></td>
+									<td>
+									<span class="btn btn-outline-danger" (click)="asyncCalculatorState.currentTab.clearProducts()" tooltip="Clear production line">
+										<span class="fas fa-fw fa-trash-alt"></span>
+									</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<div class="col-md-10" *ngIf="asyncCalculatorState.currentTab.tab === 'items'">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="card">
+									<h3 class="card-header card-header-with-buttons">
+									<span class="card-header-text">
+										Raw resources
+									</span>
+
+										<span class="btn-group">
+										<span class="btn btn-secondary px-3" (click)="setDefaultRawResources()">
+											Set from map limits
+										</span>
+										<span class="btn btn-secondary px-3" (click)="zeroRawResources()">
+											Set to 0
+										</span>
+									</span>
+									</h3>
+									<div class="card-body">
+										<p>
+											Select which raw resources you want to use and their limits. By default it's
+											populated with map limits, but you can easily change that.
+										</p>
+
+										<table class="item-list">
+											<thead>
+												<tr>
+													<th>
+														Resource
+													</th>
+													<th>
+														Limit
+													</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr *ngFor="let resource of resources$ | async">
+													<td (click)="toggleResource(resource.item)">
+														<span class="fas fa-check-square" *ngIf="asyncCalculatorState.currentTab.blockedResources.indexOf(resource.item) === -1"></span>
+														<span class="fas fa-square" *ngIf="asyncCalculatorState.currentTab.blockedResources.indexOf(resource.item) > -1"></span>
+														<span class="ml-2">
+														<item-icon [item]="resource.item" size="32"></item-icon>
+															{{ asyncCalculatorState.items[resource.item].name }}
+													</span>
+													</td>
+													<td>
+														<input type="number" (keyup)="changeResource(resource.item, $event.target.value)" (change)="changeResource(resource.item, $event.target.value)" [disabled]="asyncCalculatorState.currentTab.blockedResources.indexOf(resource.item) > -1" class="form-control" [value]="asyncCalculatorState.currentTab.resourceMax[resource.item]" step="any">
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-md-6">
+								<div class="card">
+									<h3 class="card-header card-header-with-buttons">
+									<span class="card-header-text">
+										Input
+									</span>
+									</h3>
+									<div class="card-body">
+										<p>
+											Select items that you already have at your disposal and therefore don't need
+											to
+											be produced by this factory.
+										</p>
+										<table class="input-table">
+											<tbody ui-sortable="{axis: 'y',  'ui-floating': true, handle: '> .sortable-handler'}" ng-model="asyncCalculatorState.currentTab.tool.productionRequest.input">
+												<tr *ngFor="let product of asyncCalculatorState.currentTab.input">
+													<td class="sortable-handler">
+														<span class="fas fa-arrows-alt-v cursor-drag"></span>
+													</td>
+													<td>
+														<!--													<ui-select ng-model="product.item" class="production-item-picker">-->
+														<!--														<ui-select-match placeholder="Search or select item">-->
+														<!--															<span>-->
+														<!--																<item-icon  item="$select.selected.className" class="mr-2" size="24" hide-tooltip="true"></item-icon>-->
+														<!--																{{$select.selected.name}}-->
+														<!--															</span>-->
+														<!--														</ui-select-match>-->
+														<!--														<ui-select-choices repeat="item.className as item in (inputableItems|filter:{name:$select.search}) track by item.className">-->
+														<!--															<item-icon item="item" hide-tooltip="true"></item-icon>-->
+														<!--															<span class="pl-2" ng-bind="item.name"></span>-->
+														<!--														</ui-select-choices>-->
+														<!--													</ui-select>-->
+													</td>
+													<td>
+														<input class="form-control" *ngIf="product.item" type="number" ng-model="product.amount" step="any">
+													</td>
+													<td>
+													<span class="btn btn-success" (click)="asyncCalculatorState.currentTab.cloneInput(product)" tooltip="Clone input">
+														<span class="far fa-fw fa-clone"></span>
+													</span>
+														<span class="btn btn-danger" (click)="asyncCalculatorState.currentTab.removeInput(product)" tooltip="Remove input">
+														<span class="fas fa-fw fa-times"></span>
+													</span>
+													</td>
+												</tr>
+												<tr>
+													<td></td>
+													<td>
+													<span class="btn btn-outline-success btn-block" (click)="asyncCalculatorState.currentTab.addEmptyInput()">
+														<span class="fas fa-plus"></span>
+														Add input
+													</span>
+													</td>
+													<td></td>
+													<td>
+													<span class="btn btn-outline-danger" (click)="asyncCalculatorState.currentTab.clearInput()" tooltip="Clear inputs">
+														<span class="fas fa-fw fa-trash-alt"></span>
+													</span>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-10" *ngIf="asyncCalculatorState.currentTab.tab === 'recipes'">
+						<p>
+							Select which recipes you want to allow to be used. The tool will automatically pick best
+							possible combination of recipes from the selected ones.
+						</p>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="recipe-list-card card">
+									<div class="card-header d-flex">
+									<span class="recipe-list-card-title text-nowrap">
+										Alternate recipes
+									</span>
+
+										<input type="text" ng-model="asyncCalculatorState.currentTab.state.alternateRecipesQuery" class="form-control" placeholder="Search for a recipe">
+
+										<span class="btn-group">
+										<span class="btn btn-secondary px-3" (click)="asyncCalculatorState.currentTab.setAllAlternateRecipes(true)">
+											All
+										</span>
+										<span class="btn btn-secondary px-3" (click)="asyncCalculatorState.currentTab.setAllAlternateRecipes(false)">
+											None
+										</span>
+										<span class="btn btn-secondary" (click)="asyncCalculatorState.currentTab.state.alternateRecipesExpanded = !asyncCalculatorState.currentTab.state.alternateRecipesExpanded">
+											<span *ngIf="asyncCalculatorState.currentTab.state.alternateRecipesExpanded" class="fas fa-fw fa-chevron-up"></span>
+											<span *ngIf="!asyncCalculatorState.currentTab.state.alternateRecipesExpanded" class="fas fa-fw fa-chevron-down"></span>
+										</span>
+									</span>
+									</div>
+
+									<div class="card-body" *ngIf="asyncCalculatorState.currentTab.state.alternateRecipesExpanded">
+										<table class="alternate-recipe-list">
+											<tr *ngFor="let recipe of []" (click)="asyncCalculatorState.currentTab.toggleAlternateRecipe(recipe.className)">
+												<td>
+													<span class="fas fa-check-square" *ngIf="asyncCalculatorState.currentTab.isAlternateRecipeEnabled(recipe.className)"></span>
+													<span class="fas fa-square" *ngIf="!asyncCalculatorState.currentTab.isAlternateRecipeEnabled(recipe.className)"></span>
+												</td>
+												<td class="d-flex justify-content-between">
+													<span>{{asyncCalculatorState.currentTab.convertAlternateRecipeName(recipe.name)}}</span>
+													<span>
+													<span ng-repeat="ingredient in recipe.ingredients" class="recipe-item">
+<!--														{{ingredient.amount}}&times;-->
+														<item-icon item="ingredient.item" size="20" tooltip="1"></item-icon>
+													</span>
+												</span>
+												</td>
+												<td>
+													<span class="fas fa-fw fa-chevron-right"></span>
+													<span ng-repeat="product in recipe.products" class="recipe-item">
+<!--													{{product.amount}}&times;-->
+													<item-icon item="product.item" size="20" tooltip="1"></item-icon>
+												</span>
+												</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="recipe-list-card card">
+									<h3 class="card-header d-flex">
+									<span class="recipe-list-card-title text-nowrap">
+										Base recipes
+									</span>
+
+										<input type="text" ng-model="asyncCalculatorState.currentTab.state.basicRecipesQuery" class="form-control" placeholder="Search for a recipe">
+
+										<span class="btn-group">
+										<span class="btn btn-secondary px-3" (click)="asyncCalculatorState.currentTab.setAllBasicRecipes(true)">
+											All
+										</span>
+										<span class="btn btn-secondary px-3" (click)="asyncCalculatorState.currentTab.setAllBasicRecipes(false)">
+											None
+										</span>
+										<span class="btn btn-secondary" (click)="asyncCalculatorState.currentTab.state.basicRecipesExpanded = !asyncCalculatorState.currentTab.state.basicRecipesExpanded">
+											<span *ngIf="asyncCalculatorState.currentTab.state.basicRecipesExpanded" class="fas fa-fw fa-chevron-up"></span>
+											<span *ngIf="!asyncCalculatorState.currentTab.state.basicRecipesExpanded" class="fas fa-fw fa-chevron-down"></span>
+										</span>
+									</span>
+									</h3>
+									<div class="card-body" *ngIf="asyncCalculatorState.currentTab.state.basicRecipesExpanded">
+										<table class="alternate-recipe-list">
+											<tr *ngFor="let recipe in []" (click)="asyncCalculatorState.currentTab.toggleBasicRecipe(recipe.className)">
+												<td>
+													<span class="fas fa-check-square" *ngIf="asyncCalculatorState.currentTab.isBasicRecipeEnabled(recipe.className)"></span>
+													<span class="fas fa-square" *ngIf="!asyncCalculatorState.currentTab.isBasicRecipeEnabled(recipe.className)"></span>
+												</td>
+												<td class="d-flex justify-content-between">
+													<span>{{recipe.name}}</span>
+													<span>
+													<span ng-repeat="ingredient in recipe.ingredients" class="recipe-item">
+<!--														{{ingredient.amount}}&times;-->
+														<item-icon item="ingredient.item" size="20"></item-icon>
+													</span>
+												</span>
+												</td>
+												<td>
+													<span class="fas fa-fw fa-chevron-right"></span>
+													<span ng-repeat="product in recipe.products" class="recipe-item">
+<!--													{{product.amount}}&times;-->
+													<item-icon item="product.item" size="20"></item-icon>
+												</span>
+												</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--	<div *ngIf="asyncCalculatorState.currentTab.tool.resultStatus === 'noResult'" class="visualization-result">-->
+		<!--		Unfortunately we couldn't calculate any result.<br>-->
+		<!--		<span>This can be due to many things: missing resource required for the production line, not enough resources for the requested amount, disabled recipes required for the product, etc.</span>-->
+		<!--	</div>-->
+		<!--	<div *ngIf="asyncCalculatorState.currentTab.tool.resultStatus === 'calculating'" class="visualization-result">-->
+		<!--		<span class="fas fa-spin fa-sync-alt"></span>-->
+		<!--		Calculating ...-->
+		<!--	</div>-->
+		<!--	<div *ngIf="asyncCalculatorState.currentTab.tool.resultStatus === 'noInput'" class="visualization-result">-->
+		<!--		Select an item to calculate.-->
+		<!--	</div>-->
+		<!--	<visualization *ngIf="asyncCalculatorState.currentTab.tool.resultStatus === 'result'" result="asyncCalculatorState.currentTab.tool.result" class="visualization" ng-class="{visualization: 1, loading: asyncCalculatorState.currentTab.state.resultLoading}"></visualization>-->
+	</div>
+<pre>{{asyncCalculatorState.currentTab | json}}</pre>
+</div>
+<ng-template #noIconSet>
+	<span class="fas fa-fw fa-question"></span>
+</ng-template>

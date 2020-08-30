@@ -17,6 +17,35 @@ export class Constants
 		PER_MINUTE: 'perMinute',
 		MAXIMIZE: 'max',
 	};
+
+	public static RESOURCE_AMOUNTS = {
+		Desc_OreIron_C: 70380,
+		Desc_OreCopper_C: 28860,
+		Desc_Stone_C: 52860,
+		Desc_Coal_C: 30900,
+		Desc_OreGold_C: 11040,
+		Desc_LiquidOil_C: 7500,
+		Desc_RawQuartz_C: 10500,
+		Desc_Sulfur_C: 6840,
+		Desc_OreBauxite_C: 7800,
+		Desc_OreUranium_C: 1800,
+		Desc_Water_C: Number.MAX_SAFE_INTEGER,
+	};
+
+	public static RESOURCE_WEIGHTS = {
+		Desc_OreIron_C: 3.257,
+		Desc_OreCopper_C: 7.944,
+		Desc_Stone_C: 4.337,
+		Desc_Coal_C: 7.419,
+		Desc_OreGold_C: 20.766,
+		Desc_LiquidOil_C: 30.568,
+		Desc_RawQuartz_C: 20.324,
+		Desc_Sulfur_C: 33.518,
+		Desc_OreBauxite_C: 29.392,
+		Desc_OreUranium_C: 127.367,
+		Desc_Water_C: 0,
+	};
+
 	public static WORKBENCH_CLASSNAME = 'Desc_WorkBench_C';
 	public static WORKSHOP_CLASSNAME = 'Desc_Workshop_C';
 	public static WATER_EXTRACTOR_CLASSNAME = 'Desc_WaterPump_C';

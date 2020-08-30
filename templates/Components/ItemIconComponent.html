@@ -1,0 +1,6 @@
+<ng-container *ngIf="hideTooltip;else showTooltip">
+	<img [src]="slug | async" [style]="{width: size + 'px'}" [alt]="item.name"/>
+</ng-container>
+<ng-template #showTooltip>
+	<img [src]="slug | async" [tooltip]="item?.name || item" [style]="{width: size + 'px'}" [alt]="item.name"/>
+</ng-template>

@@ -1,0 +1,289 @@
+
+{
+  "header": {
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20200828.030705.7584.0.001.json",
+    "dumpEventTime": "2020-08-28T03:07:05Z",
+    "dumpEventTimeStamp": "1598576825460",
+    "processId": 7584,
+    "cwd": "C:\\WinNMP\\WWW\\SatisfactoryTools",
+    "commandLine": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Program Files\\JetBrains\\PhpStorm 2019.2\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\js-language-service.js",
+      "-id=1598574116361",
+      "-debug-name=typescript"
+    ],
+    "nodejsVersion": "v12.4.0",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "win32",
+    "componentVersions": {
+      "node": "12.4.0",
+      "v8": "7.4.288.27-node.18",
+      "uv": "1.29.1",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "72",
+      "nghttp2": "1.38.0",
+      "napi": "4",
+      "llhttp": "1.1.3",
+      "http_parser": "2.8.0",
+      "openssl": "1.1.1b",
+      "cldr": "35.1",
+      "icu": "64.2",
+      "tz": "2019a",
+      "unicode": "12.1"
+    },
+    "release": {
+      "name": "node",
+      "headersUrl": "https://nodejs.org/download/release/v12.4.0/node-v12.4.0-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v12.4.0/node-v12.4.0.tar.gz",
+      "libUrl": "https://nodejs.org/download/release/v12.4.0/win-x64/node.lib"
+    },
+    "osName": "Windows_NT",
+    "osRelease": "10.0.18362",
+    "osVersion": "Windows 10 Pro",
+    "osMachine": "x86_64",
+    "host": "DESKTOP-CETI8D0"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x00007ff653bd64a9",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff653bd9d94",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff653bd8db8",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff653cc256b",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff653ffa56e",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff653fce5ea",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff654064a3c",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff65406c7bf",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff654062e23",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff654061524",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6540a2153",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6543c8cc6",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff654864196",
+      "symbol": ""
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 142065664,
+    "totalCommittedMemory": 142065664,
+    "usedMemory": 136919416,
+    "availableMemory": 2061260240,
+    "memoryLimit": 2197815296,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 524288,
+        "committedMemory": 524288,
+        "capacity": 523976,
+        "used": 31712,
+        "available": 492264
+      },
+      "new_space": {
+        "memorySize": 1048576,
+        "committedMemory": 1048576,
+        "capacity": 1047952,
+        "used": 1047952,
+        "available": 0
+      },
+      "old_space": {
+        "memorySize": 112844800,
+        "committedMemory": 112844800,
+        "capacity": 112758408,
+        "used": 109360200,
+        "available": 3398208
+      },
+      "code_space": {
+        "memorySize": 1736704,
+        "committedMemory": 1736704,
+        "capacity": 1211360,
+        "used": 1036192,
+        "available": 175168
+      },
+      "map_space": {
+        "memorySize": 1052672,
+        "committedMemory": 1052672,
+        "capacity": 1051016,
+        "used": 654000,
+        "available": 397016
+      },
+      "large_object_space": {
+        "memorySize": 24809472,
+        "committedMemory": 24809472,
+        "capacity": 24785904,
+        "used": 24785904,
+        "available": 0
+      },
+      "code_large_object_space": {
+        "memorySize": 49152,
+        "committedMemory": 49152,
+        "capacity": 3456,
+        "used": 3456,
+        "available": 0
+      },
+      "new_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 1047952,
+        "used": 0,
+        "available": 1047952
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 5.562,
+    "kernelCpuSeconds": 0.953,
+    "cpuConsumptionPercent": 0.240495,
+    "maxRss": 211804160,
+    "pageFaults": {
+      "IORequired": 223383,
+      "IONotRequired": 0
+    },
+    "fsActivity": {
+      "reads": 1938,
+      "writes": 163
+    }
+  },
+  "libuv": [
+  ],
+  "environmentVariables": {
+    "=::": "::\\",
+    "ADSK_3DSMAX_x64_2020": "C:\\Program Files\\Autodesk\\3ds Max 2020\\",
+    "ALLUSERSPROFILE": "C:\\ProgramData",
+    "APPDATA": "C:\\Users\\Lucek\\AppData\\Roaming",
+    "CommonProgramFiles": "C:\\Program Files\\Common Files",
+    "CommonProgramFiles(x86)": "C:\\Program Files (x86)\\Common Files",
+    "CommonProgramW6432": "C:\\Program Files\\Common Files",
+    "COMPUTERNAME": "DESKTOP-CETI8D0",
+    "ComSpec": "C:\\Windows\\system32\\cmd.exe",
+    "DriverData": "C:\\Windows\\System32\\Drivers\\DriverData",
+    "ERLANG_HOME": "C:\\Program Files\\erl-23.0",
+    "ES_HOME": "C:\\Program Files\\Elastic\\Elasticsearch\\7.3.2\\",
+    "ES_PATH_CONF": "C:\\ProgramData\\Elastic\\Elasticsearch\\config",
+    "HOMEDRIVE": "C:",
+    "HOMEPATH": "\\Users\\Lucek",
+    "IDEA_INITIAL_DIRECTORY": "C:\\Program Files\\JetBrains\\PhpStorm 2019.2\\bin",
+    "LOCALAPPDATA": "C:\\Users\\Lucek\\AppData\\Local",
+    "LOGONSERVER": "\\\\DESKTOP-CETI8D0",
+    "NUMBER_OF_PROCESSORS": "12",
+    "NVM_HOME": "C:\\Users\\Lucek\\AppData\\Roaming\\nvm",
+    "NVM_SYMLINK": "C:\\Program Files\\nodejs",
+    "OneDrive": "C:\\Users\\Lucek\\OneDrive",
+    "OneDriveConsumer": "C:\\Users\\Lucek\\OneDrive",
+    "OS": "Windows_NT",
+    "Path": "C:\\Program Files\\ImageMagick-7.0.10-Q16;C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Razer\\ChromaBroadcast\\bin;C:\\Program Files\\Razer\\ChromaBroadcast\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\WinNMP\\bin;C:\\Program Files\\Common Files\\Autodesk Shared\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Users\\Lucek\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Lucek\\.dotnet\\tools;C:\\Program Files\\Symfony;C:\\WinNMP\\bin\\PHP\\64bit-php-7.4;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Users\\Lucek\\AppData\\Roaming\\nvm;C:\\Program Files\\nodejs;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files (x86)\\PDFtk\\bin\\;;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Ruby26-x64\\bin;C:\\Python38\\;C:\\Python27;C:\\Program Files\\JetBrains\\PhpStorm 2019.2\\bin;C:\\WinNMP\\bin;C:\\Users\\Lucek\\AppData\\Roaming\\npm;C:\\Users\\Lucek\\AppData\\Local\\Polycom\\RealPresence Desktop\\;C:\\Users\\Lucek\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Lucek\\AppData\\Local\\Yarn\\bin;C:\\Users\\Lucek\\AppData\\Roaming\\nvm;C:\\Program Files\\nodejs;C:\\Python27\\Scripts;C:\\Python38\\Scripts;C:\\Program Files (x86)\\GnuWin32\\bin",
+    "PATHEXT": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.RB;.RBW",
+    "PhpStorm": "C:\\Program Files\\JetBrains\\PhpStorm 2019.2\\bin;",
+    "PROCESSOR_ARCHITECTURE": "AMD64",
+    "PROCESSOR_IDENTIFIER": "Intel64 Family 6 Model 158 Stepping 10, GenuineIntel",
+    "PROCESSOR_LEVEL": "6",
+    "PROCESSOR_REVISION": "9e0a",
+    "PROG27B48B2C050": "1",
+    "ProgramData": "C:\\ProgramData",
+    "ProgramFiles": "C:\\Program Files",
+    "ProgramFiles(x86)": "C:\\Program Files (x86)",
+    "ProgramW6432": "C:\\Program Files",
+    "PSModulePath": "C:\\Program Files\\WindowsPowerShell\\Modules;C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules",
+    "PUBLIC": "C:\\Users\\Public",
+    "RUBYOPT": "-Eutf-8",
+    "SESSIONNAME": "Console",
+    "SystemDrive": "C:",
+    "SystemRoot": "C:\\Windows",
+    "TEMP": "C:\\Users\\Lucek\\AppData\\Local\\Temp",
+    "TMP": "C:\\Users\\Lucek\\AppData\\Local\\Temp",
+    "USERDOMAIN": "DESKTOP-CETI8D0",
+    "USERDOMAIN_ROAMINGPROFILE": "DESKTOP-CETI8D0",
+    "USERNAME": "Lucek",
+    "USERPROFILE": "C:\\Users\\Lucek",
+    "VBOX_MSI_INSTALL_PATH": "R:\\vbox\\",
+    "windir": "C:\\Windows",
+    "WWISEROOT": "C:\\Program Files (x86)\\Audiokinetic\\Wwise 2019.1.4.7065",
+    "WWISESDK": "C:\\Program Files (x86)\\Audiokinetic\\Wwise 2019.1.4.7065\\SDK"
+  },
+  "sharedObjects": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "C:\\Windows\\SYSTEM32\\ntdll.dll",
+    "C:\\Windows\\System32\\KERNEL32.DLL",
+    "C:\\Windows\\System32\\KERNELBASE.dll",
+    "C:\\Windows\\System32\\WS2_32.dll",
+    "C:\\Windows\\System32\\RPCRT4.dll",
+    "C:\\Windows\\System32\\ADVAPI32.dll",
+    "C:\\Windows\\System32\\msvcrt.dll",
+    "C:\\Windows\\SYSTEM32\\dbghelp.dll",
+    "C:\\Windows\\System32\\sechost.dll",
+    "C:\\Windows\\System32\\ucrtbase.dll",
+    "C:\\Windows\\System32\\USER32.dll",
+    "C:\\Windows\\System32\\win32u.dll",
+    "C:\\Windows\\System32\\GDI32.dll",
+    "C:\\Windows\\System32\\gdi32full.dll",
+    "C:\\Windows\\System32\\msvcp_win.dll",
+    "C:\\Windows\\System32\\PSAPI.DLL",
+    "C:\\Windows\\System32\\CRYPT32.dll",
+    "C:\\Windows\\System32\\MSASN1.dll",
+    "C:\\Windows\\SYSTEM32\\IPHLPAPI.DLL",
+    "C:\\Windows\\System32\\bcrypt.dll",
+    "C:\\Windows\\SYSTEM32\\USERENV.dll",
+    "C:\\Windows\\System32\\profapi.dll",
+    "C:\\Windows\\SYSTEM32\\WINMM.dll",
+    "C:\\Windows\\SYSTEM32\\winmmbase.dll",
+    "C:\\Windows\\System32\\cfgmgr32.dll",
+    "C:\\Windows\\System32\\bcryptPrimitives.dll",
+    "C:\\Windows\\System32\\IMM32.DLL",
+    "C:\\Windows\\System32\\powrprof.dll",
+    "C:\\Windows\\System32\\UMPDC.dll",
+    "C:\\Windows\\system32\\uxtheme.dll",
+    "C:\\Windows\\System32\\combase.dll",
+    "C:\\Windows\\system32\\mswsock.dll",
+    "C:\\Windows\\System32\\kernel.appcore.dll",
+    "C:\\Windows\\system32\\napinsp.dll",
+    "C:\\Windows\\system32\\pnrpnsp.dll",
+    "C:\\Windows\\SYSTEM32\\DNSAPI.dll",
+    "C:\\Windows\\System32\\NSI.dll",
+    "C:\\Windows\\System32\\winrnr.dll",
+    "C:\\Windows\\system32\\NLAapi.dll",
+    "C:\\Windows\\system32\\wshbth.dll"
+  ]
+}

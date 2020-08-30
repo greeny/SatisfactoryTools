@@ -1,4 +1,4 @@
-import rawData from '@data/data.json';
+// import rawData from '@data/data.json';
 import {IJsonSchema} from '@src/Schema/IJsonSchema';
 import {Item} from '@src/Data/Item';
 import {Recipe} from '@src/Data/Recipe';
@@ -93,4 +93,4 @@ export class Model
 
 }
 
-export default new Model(rawData as any);
+export default new Model({} as any);

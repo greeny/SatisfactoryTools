@@ -58,9 +58,9 @@ export class Strings
 			toast.innerHTML = '<div class="toast-header"><span class="far fa-copy mr-2"></span><strong class="mr-auto">Copied</strong><button type="button" class="close" data-dismiss="toast"><span class="fas fa-times"></span></button></div>' +
 				'<div class="toast-body">' + displayNotification + '</div>';
 			document.getElementById('toasts')?.appendChild(toast);
-			$(toast).toast({
-				delay: 3000,
-			}).toast('show');
+			// $(toast).toast({
+			// 	delay: 3000,
+			// }).toast('show');
 		}
 
 		return result;

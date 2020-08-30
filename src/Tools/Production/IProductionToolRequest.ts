@@ -1,3 +1,5 @@
+export type IProductionToolRequestTabs = 'production'|'items'|'recipes';
+
 export interface IProductionToolRequest
 {
 
@@ -6,8 +8,8 @@ export interface IProductionToolRequest
 	name: string|null;
 	icon: string|null;
 
-	resourceMax: {[key: string]: number}; // raw resource limit
-	resourceWeight: {[key: string]: number}; // weighted values
+	resourceMax: { [key: string]: number }; // raw resource limit
+	resourceWeight: { [key: string]: number }; // weighted values
 
 	blockedResources: string[]; // whether the raw resource is available for usage or not
 	blockedRecipes: string[]; // whether normal recipe can be used
@@ -15,7 +17,10 @@ export interface IProductionToolRequest
 
 	production: IProductionToolRequestItem[];
 	input: IProductionToolRequestInput[];
-
+	tab: IProductionToolRequestTabs;
+	state: {
+		expanded: boolean;
+	};
 }
 
 export interface IProductionToolRequestItem

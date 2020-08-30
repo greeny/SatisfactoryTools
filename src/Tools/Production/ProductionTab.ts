@@ -1,12 +1,11 @@
 import {ProductionTool} from '@src/Tools/Production/ProductionTool';
-import angular from 'angular';
 import {IProductionToolRequest, IProductionToolRequestInput, IProductionToolRequestItem} from '@src/Tools/Production/IProductionToolRequest';
 import {Constants} from '@src/Constants';
 import data, {Data} from '@src/Data/Data';
-import {IProductionControllerScope} from '@src/Module/Controllers/ProductionController';
-import axios from 'axios';
 import {Strings} from '@src/Utils/Strings';
 import {ProductionRequestSchemaConverter} from '@src/Tools/Production/ProductionRequestSchemaConverter';
+import {IBuildingSchema} from '@src/Schema/IBuildingSchema';
+import {IItemSchema} from '@src/Schema/IItemSchema';
 
 export class ProductionTab
 {
@@ -28,7 +27,7 @@ export class ProductionTab
 
 	private readonly unregisterCallback: () => void;
 
-	public constructor(private readonly scope: IProductionControllerScope, productionToolRequest?: IProductionToolRequest)
+	public constructor(public buildings: IBuildingSchema[], public items: IItemSchema[], productionToolRequest?: IProductionToolRequest)
 	{
 		this.tool = new ProductionTool;
 
@@ -39,13 +38,13 @@ export class ProductionTab
 			this.addEmptyProduct();
 		}
 
-		this.unregisterCallback = scope.$watch(() => {
-			return this.tool.productionRequest;
-		}, () => {
-			this.scope.saveState();
-			this.shareLink = '';
-			this.tool.calculate(this.scope.$timeout);
-		}, true);
+		// this.unregisterCallback = scope.$watch(() => {
+		// 	return this.tool.productionRequest;
+		// }, () => {
+		// 	this.scope.saveState();
+		// 	this.shareLink = '';
+		// 	this.tool.calculate(this.scope.$timeout);
+		// }, true);
 	}
 
 	public copyShareLink(): void
@@ -54,24 +53,24 @@ export class ProductionTab
 			Strings.copyToClipboard(this.shareLink, 'Link for sharing has been copied to clipboard.');
 			return;
 		}
-		const shareData = angular.copy(this.tool.productionRequest);
+		const shareData = {...this.tool.productionRequest};
 		shareData.name = this.tool.name;
 		shareData.icon = this.tool.icon;
-		axios({
-			method: 'POST',
-			url: 'https://api.satisfactorytools.com/v1/share',
-			data: shareData,
-		}).then((response) => {
-			this.scope.$timeout(0).then(() => {
-				this.shareLink = response.data.link;
-				Strings.copyToClipboard(response.data.link, 'Link for sharing has been copied to clipboard.');
-			});
-		}).catch(() => {
-			this.scope.$timeout(0).then(() => {
-				this.shareLink = '';
-				alert('Couldn\'t get the share link.');
-			});
-		});
+		// axios({
+		// 	method: 'POST',
+		// 	url: 'https://api.satisfactorytools.com/v1/share',
+		// 	data: shareData,
+		// }).then((response) => {
+		// 	this.scope.$timeout(0).then(() => {
+		// 		this.shareLink = response.data.link;
+		// 		Strings.copyToClipboard(response.data.link, 'Link for sharing has been copied to clipboard.');
+		// 	});
+		// }).catch(() => {
+		// 	this.scope.$timeout(0).then(() => {
+		// 		this.shareLink = '';
+		// 		alert('Couldn\'t get the share link.');
+		// 	});
+		// });
 	}
 
 	public unregister(): void
@@ -227,7 +226,7 @@ export class ProductionTab
 
 	public setDefaultRawResources(): void
 	{
-		this.tool.productionRequest.resourceMax = angular.copy(Data.resourceAmounts);
+		this.tool.productionRequest.resourceMax = {...Data.resourceAmounts};
 	}
 
 	public zeroRawResources(): void
@@ -244,7 +243,7 @@ export class ProductionTab
 		}).map((product) => {
 			return product.item + '';
 		});
-		let result = [...(Object.values(data.getAllItems())), ...(Object.values(data.getAllBuildings()))].map((entry) => {
+		let result = [...this.buildings, ...this.items].map((entry) => {
 			return entry.className;
 		});
 		result = [...productionArray, ...result].filter((value, index, self) => {

@@ -4,8 +4,8 @@ import {RecipeResult} from '@src/Tools/Production/RecipeResult';
 import {ProductionToolResult} from '@src/Tools/Production/ProductionToolResult';
 import {IProductionToolRequest} from '@src/Tools/Production/IProductionToolRequest';
 import data, {Data} from '@src/Data/Data';
-import angular, {ITimeoutService} from 'angular';
 import {ResultStatus} from '@src/Tools/Production/ResultStatus';
+import {Constants} from '@src/Constants';
 
 export class ProductionTool
 {
@@ -52,12 +52,16 @@ export class ProductionTool
 			blockedResources: [],
 			production: [],
 			input: [],
-			resourceMax: angular.copy(Data.resourceAmounts),
-			resourceWeight: angular.copy(Data.resourceWeights),
+			tab: 'production',
+			state: {
+				expanded: true
+			},
+			resourceMax: {...Constants.RESOURCE_AMOUNTS},
+			resourceWeight: {...Constants.RESOURCE_WEIGHTS},
 		};
 	}
 
-	public calculate($timeout?: ITimeoutService): void
+	public calculate(): void
 	{
 		let request = false;
 
@@ -96,20 +100,11 @@ export class ProductionTool
 					this.resultStatus = ResultStatus.RESULT;
 				};
 
-				if ($timeout) {
-					$timeout(0).then(res);
-				} else {
-					res();
-				}
+				res();
 			});
 
 		};
-
-		if ($timeout) {
-			$timeout(0).then(calc);
-		} else {
-			calc();
-		}
+		calc();
 	}
 
 }

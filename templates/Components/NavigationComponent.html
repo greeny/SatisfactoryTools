@@ -1,0 +1,77 @@
+<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-primary">
+	<div class="container-fluid px-xl-5 px-lg-4 px-md-3 px-sm-2 px-1">
+		<a class="navbar-brand" routerLink="/">
+			<img src="/assets/images/logo/satisfactorySmall.png" height="40" class="d-sm-inline-block d-none">
+			<img src="/assets/images/logo/tools.png" height="40">
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item" routerLinkActive="active">
+					<a class="nav-link" routerLink="/">
+						<span class="fas fa-fw fa-home"></span>
+						Home
+					</a>
+				</li>
+				<li class="nav-item dropdown" routerLinkActive="active" dropdown aria-controls="dropdown-basic">
+					<a class="nav-link dropdown-toggle" data-toggle="dropdown" dropdownToggle aria-controls="browser_toggle">
+						<i class="fas fa-fw fa-th-large"></i>
+						Codex
+					</a>
+					<div class="dropdown-menu" id="browser_toggle" role="menu" aria-labelledby="browser_toggle" *dropdownMenu>
+						<a class="dropdown-item" [routerLink]="['codex', 'items']" routerLinkActive="active">
+							<i class="fas fa-fw fa-box-open"></i>
+							Items
+						</a>
+						<a class="dropdown-item" [routerLink]="['codex', 'buildings']" routerLinkActive="active">
+							<i class="fas fa-fw fa-industry"></i>
+							<span>Buildings</span>
+						</a>
+						<a class="dropdown-item" [routerLink]="['codex', 'schematics']" routerLinkActive="active">
+							<i class="fas fa-fw fa-flask"></i>
+							<span>Schematics</span>
+						</a>
+					</div>
+				</li>
+				<li class="nav-item" routerLinkActive="active">
+					<a class="nav-link" routerLink="production">
+						<span class="fas fa-fw fa-chart-line"></span>
+						Calculator
+					</a>
+				</li>
+			</ul>
+			<ul class="navbar-nav">
+				<li class="nav-item dropdown" dropdown>
+					<a class="nav-link dropdown-toggle" data-toggle="dropdown" dropdownToggle>
+						<span class="fas fa-users"></span>
+						Community
+					</a>
+					<div class="dropdown-menu dropdown-menu-right" *dropdownMenu>
+						<h6 class="dropdown-header">Contribute</h6>
+						<a class="dropdown-item" href="https://discord.gg/pcGyj8p" target="_blank">
+							<span class="fab fa-fw fa-discord"></span>
+							Discord server
+						</a>
+						<a class="dropdown-item" href="https://github.com/greeny/SatisfactoryTools" target="_blank">
+							<span class="fab fa-fw fa-github"></span>
+							Github repository
+						</a>
+						<div class="dropdown-divider"></div>
+						<h6 class="dropdown-header">Support me</h6>
+						<a class="dropdown-item" href="https://www.paypal.me/greenydev" target="_blank">
+							<span class="fab fa-fw fa-paypal"></span>
+							Donate through Paypal
+						</a>
+						<a class="dropdown-item" href="https://patreon.com/greeny_dev" target="_blank">
+							<span class="fab fa-fw fa-patreon"></span>
+							Pledge on Patreon
+						</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>

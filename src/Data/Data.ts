@@ -1,4 +1,4 @@
-import rawData from '@data/data.json';
+// import rawData from '@data/data.json';
 import {IJsonSchema} from '@src/Schema/IJsonSchema';
 import {IItemSchema} from '@src/Schema/IItemSchema';
 import {IRecipeSchema} from '@src/Schema/IRecipeSchema';
@@ -41,7 +41,8 @@ export class Data
 
 	public getRawData(): IJsonSchema
 	{
-		return rawData as any;
+		return {} as any;
+		// return rawData as any;
 	}
 
 	public getAllItems(): {[key: string]: IItemSchema}
