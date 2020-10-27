@@ -337,6 +337,37 @@
 				"Desc_OilRefinery_C"
 			]
 		},
+		"Recipe_Alternate_CoatedIronCanister_C": {
+			"slug": "alternate-coated-iron-canister",
+			"name": "Alternate: Coated Iron Canister",
+			"className": "Recipe_Alternate_CoatedIronCanister_C",
+			"alternate": true,
+			"time": 4,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_IronPlate_C",
+					"amount": 2
+				},
+				{
+					"item": "Desc_CopperSheet_C",
+					"amount": 1
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_FluidCanister_C",
+					"amount": 4
+				}
+			],
+			"producedIn": [
+				"Desc_AssemblerMk1_C"
+			]
+		},
 		"Recipe_Alternate_CoatedIronPlate_C": {
 			"slug": "alternate-coated-iron-plate",
 			"name": "Alternate: Coated Iron Plate",
@@ -1941,6 +1972,33 @@
 			],
 			"producedIn": [
 				"Desc_OilRefinery_C"
+			]
+		},
+		"Recipe_Alternate_SteelCanister_C": {
+			"slug": "alternate-steel-canister",
+			"name": "Alternate: Steel Canister",
+			"className": "Recipe_Alternate_SteelCanister_C",
+			"alternate": true,
+			"time": 3,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_SteelIngot_C",
+					"amount": 3
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_FluidCanister_C",
+					"amount": 2
+				}
+			],
+			"producedIn": [
+				"Desc_ConstructorMk1_C"
 			]
 		},
 		"Recipe_Alternate_SteelCoatedPlate_C": {
@@ -3897,7 +3955,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_OilRefinery_C"
+				"Desc_Packager_C"
 			]
 		},
 		"Recipe_Gasmask_C": {
@@ -4641,10 +4699,10 @@
 			],
 			"producedIn": []
 		},
-		"Recipe_JumpPadTilted_C": {
-			"slug": "tilted-jump-pad",
-			"name": "Tilted Jump Pad",
-			"className": "Recipe_JumpPadTilted_C",
+		"Recipe_JumpPadAdjustable_C": {
+			"slug": "jump-pad",
+			"name": "Jump Pad",
+			"className": "Recipe_JumpPadAdjustable_C",
 			"alternate": false,
 			"time": 1,
 			"manualTimeMultiplier": 1,
@@ -4668,31 +4726,23 @@
 			"inWorkshop": false,
 			"products": [
 				{
-					"item": "Desc_JumpPadTilted_C",
+					"item": "Desc_JumpPadAdjustable_C",
 					"amount": 1
 				}
 			],
 			"producedIn": []
 		},
-		"Recipe_JumpPad_C": {
-			"slug": "jump-pad",
-			"name": "Jump Pad",
-			"className": "Recipe_JumpPad_C",
+		"Recipe_Ladder_C": {
+			"slug": "ladder",
+			"name": "Ladder",
+			"className": "Recipe_Ladder_C",
 			"alternate": false,
 			"time": 1,
 			"manualTimeMultiplier": 1,
 			"ingredients": [
 				{
-					"item": "Desc_Rotor_C",
+					"item": "Desc_IronRod_C",
 					"amount": 2
-				},
-				{
-					"item": "Desc_IronPlate_C",
-					"amount": 15
-				},
-				{
-					"item": "Desc_Cable_C",
-					"amount": 10
 				}
 			],
 			"forBuilding": true,
@@ -4701,7 +4751,7 @@
 			"inWorkshop": false,
 			"products": [
 				{
-					"item": "Desc_JumpPad_C",
+					"item": "Desc_Ladder_C",
 					"amount": 1
 				}
 			],
@@ -5448,7 +5498,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_OilRefinery_C"
+				"Desc_Packager_C"
 			]
 		},
 		"Recipe_PackagedCrudeOil_C": {
@@ -5479,7 +5529,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_OilRefinery_C"
+				"Desc_Packager_C"
 			]
 		},
 		"Recipe_PackagedOilResidue_C": {
@@ -5510,7 +5560,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_OilRefinery_C"
+				"Desc_Packager_C"
 			]
 		},
 		"Recipe_PackagedTurboFuel_C": {
@@ -5541,7 +5591,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_OilRefinery_C"
+				"Desc_Packager_C"
 			]
 		},
 		"Recipe_PackagedWater_C": {
@@ -5572,8 +5622,41 @@
 				}
 			],
 			"producedIn": [
-				"Desc_OilRefinery_C"
+				"Desc_Packager_C"
 			]
+		},
+		"Recipe_Packager_C": {
+			"slug": "packager",
+			"name": "Packager",
+			"className": "Recipe_Packager_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_SteelPlate_C",
+					"amount": 20
+				},
+				{
+					"item": "Desc_Rubber_C",
+					"amount": 10
+				},
+				{
+					"item": "Desc_Plastic_C",
+					"amount": 10
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_Packager_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
 		},
 		"Recipe_Parachute_C": {
 			"slug": "parachute",
@@ -5979,9 +6062,71 @@
 			],
 			"producedIn": []
 		},
+		"Recipe_PipelineMK2_C": {
+			"slug": "pipeline-mk-2",
+			"name": "Pipeline Mk.2",
+			"className": "Recipe_PipelineMK2_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Plastic_C",
+					"amount": 1
+				},
+				{
+					"item": "Desc_AluminumPlate_C",
+					"amount": 1
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_PipelineMK2_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
+		"Recipe_PipelinePumpMK2_C": {
+			"slug": "pipeline-pump-mk-2",
+			"name": "Pipeline Pump Mk.2",
+			"className": "Recipe_PipelinePumpMK2_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Motor_C",
+					"amount": 2
+				},
+				{
+					"item": "Desc_AluminumPlate_C",
+					"amount": 4
+				},
+				{
+					"item": "Desc_Plastic_C",
+					"amount": 8
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_PipelinePumpMk2_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
 		"Recipe_PipelinePump_C": {
-			"slug": "pipeline-pump",
-			"name": "Pipeline Pump",
+			"slug": "pipeline-pump-mk-1",
+			"name": "Pipeline Pump Mk.1",
 			"className": "Recipe_PipelinePump_C",
 			"alternate": false,
 			"time": 1,
@@ -6009,8 +6154,8 @@
 			"producedIn": []
 		},
 		"Recipe_Pipeline_C": {
-			"slug": "pipeline",
-			"name": "Pipeline",
+			"slug": "pipeline-mk-1",
+			"name": "Pipeline Mk.1",
 			"className": "Recipe_Pipeline_C",
 			"alternate": false,
 			"time": 1,
@@ -8524,7 +8669,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_OilRefinery_C"
+				"Desc_Packager_C"
 			]
 		},
 		"Recipe_UnpackageFuel_C": {
@@ -8555,7 +8700,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_OilRefinery_C"
+				"Desc_Packager_C"
 			]
 		},
 		"Recipe_UnpackageOilResidue_C": {
@@ -8586,7 +8731,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_OilRefinery_C"
+				"Desc_Packager_C"
 			]
 		},
 		"Recipe_UnpackageOil_C": {
@@ -8617,12 +8762,12 @@
 				}
 			],
 			"producedIn": [
-				"Desc_OilRefinery_C"
+				"Desc_Packager_C"
 			]
 		},
 		"Recipe_UnpackageTurboFuel_C": {
-			"slug": "unpackage-turbo-fuel",
-			"name": "Unpackage Turbo Fuel",
+			"slug": "unpackage-turbofuel",
+			"name": "Unpackage Turbofuel",
 			"className": "Recipe_UnpackageTurboFuel_C",
 			"alternate": false,
 			"time": 6,
@@ -8648,7 +8793,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_OilRefinery_C"
+				"Desc_Packager_C"
 			]
 		},
 		"Recipe_UnpackageWater_C": {
@@ -8679,7 +8824,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_OilRefinery_C"
+				"Desc_Packager_C"
 			]
 		},
 		"Recipe_UraniumCell_C": {
@@ -8747,6 +8892,35 @@
 			"producedIn": [
 				"Desc_OilRefinery_C"
 			]
+		},
+		"Recipe_Valve_C": {
+			"slug": "valve",
+			"name": "Valve",
+			"className": "Recipe_Valve_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Rubber_C",
+					"amount": 4
+				},
+				{
+					"item": "Desc_SteelPlate_C",
+					"amount": 4
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_Valve_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
 		},
 		"Recipe_Walkway_Cross_C": {
 			"slug": "walkway-crossing",
@@ -13753,8 +13927,7 @@
 			"unlock": {
 				"inventorySlots": 0,
 				"recipes": [
-					"Recipe_JumpPad_C",
-					"Recipe_JumpPadTilted_C",
+					"Recipe_JumpPadAdjustable_C",
 					"Recipe_UJellyLandingPad_C"
 				],
 				"scannerResources": []
@@ -14214,14 +14387,15 @@
 			"unlock": {
 				"inventorySlots": 0,
 				"recipes": [
-					"Recipe_IndustrialTank_C",
+					"Recipe_Packager_C",
 					"Recipe_FluidCanister_C",
 					"Recipe_PackagedWater_C",
 					"Recipe_PackagedCrudeOil_C",
 					"Recipe_Fuel_C",
 					"Recipe_PackagedOilResidue_C",
 					"Recipe_PackagedBiofuel_C",
-					"Recipe_LiquidBiofuel_C"
+					"Recipe_LiquidBiofuel_C",
+					"Recipe_IndustrialTank_C"
 				],
 				"scannerResources": []
 			},
@@ -14259,7 +14433,8 @@
 				"recipes": [
 					"Recipe_GeneratorFuel_C",
 					"Recipe_ConveyorBeltMk4_C",
-					"Recipe_ConveyorLiftMk4_C"
+					"Recipe_ConveyorLiftMk4_C",
+					"Recipe_Valve_C"
 				],
 				"scannerResources": [
 					"Desc_OreGold_C"
@@ -14406,6 +14581,8 @@
 				"recipes": [
 					"Recipe_ConveyorBeltMk5_C",
 					"Recipe_ConveyorLiftMk5_C",
+					"Recipe_PipelineMK2_C",
+					"Recipe_PipelinePumpMK2_C",
 					"Recipe_AluminumSheet_C",
 					"Recipe_IngotAluminum_C",
 					"Recipe_AluminumScrap_C",
@@ -14746,6 +14923,27 @@
 			},
 			"requiredSchematics": [
 				"Schematic_5-1_C"
+			],
+			"type": "EST_Alternate",
+			"time": 0,
+			"alternate": false,
+			"mam": false
+		},
+		"Schematic_Alternate_CoatedIronCanister_C": {
+			"className": "Schematic_Alternate_CoatedIronCanister_C",
+			"name": "Alternate: Coated Iron Canister",
+			"slug": "alternate-coated-iron-canister",
+			"tier": 0,
+			"cost": [],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_Alternate_CoatedIronCanister_C"
+				],
+				"scannerResources": []
+			},
+			"requiredSchematics": [
+				"Schematic_5-4_C"
 			],
 			"type": "EST_Alternate",
 			"time": 0,
@@ -15869,6 +16067,27 @@
 			"alternate": false,
 			"mam": false
 		},
+		"Schematic_Alternate_SteelCanister_C": {
+			"className": "Schematic_Alternate_SteelCanister_C",
+			"name": "Alternate: Steel Canister",
+			"slug": "alternate-steel-canister",
+			"tier": 0,
+			"cost": [],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_Alternate_SteelCanister_C"
+				],
+				"scannerResources": []
+			},
+			"requiredSchematics": [
+				"Schematic_5-4_C"
+			],
+			"type": "EST_Alternate",
+			"time": 0,
+			"alternate": false,
+			"mam": false
+		},
 		"Schematic_Alternate_SteelCoatedPlate_C": {
 			"className": "Schematic_Alternate_SteelCoatedPlate_C",
 			"name": "Alternate: Steel Coated Plate ",
@@ -16287,10 +16506,10 @@
 				"Desc_GenericBiomass_C",
 				"Desc_Leaves_C",
 				"Desc_Wood_C",
-				"Desc_Fabric_C",
-				"Desc_Mycelia_C",
 				"Desc_LiquidBiofuel_C",
 				"Desc_PackagedBiofuel_C",
+				"Desc_Fabric_C",
+				"Desc_Mycelia_C",
 				"Desc_HogParts_C",
 				"Desc_SpitterParts_C",
 				"Desc_FlowerPetals_C"
@@ -17026,38 +17245,10 @@
 				"storageCapacity": 2400
 			}
 		},
-		"Desc_JumpPadTilted_C": {
-			"slug": "tilted-jump-pad",
-			"name": "Tilted Jump Pad",
-			"description": "Propels you forwards through the air.\nMake sure you land softly.",
-			"categories": [
-				"SC_JumpPads_C"
-			],
-			"buildMenuPriority": 65,
-			"className": "Desc_JumpPadTilted_C",
-			"metadata": {
-				"powerConsumption": 2,
-				"powerConsumptionExponent": 1.6
-			}
-		},
-		"Desc_JumpPad_C": {
-			"slug": "jump-pad",
-			"name": "Jump Pad",
-			"description": "Propels you upwards through the air.\nMake sure you land softly.",
-			"categories": [
-				"SC_JumpPads_C"
-			],
-			"buildMenuPriority": 64,
-			"className": "Desc_JumpPad_C",
-			"metadata": {
-				"powerConsumption": 2,
-				"powerConsumptionExponent": 1.6
-			}
-		},
 		"Desc_LandingPad_C": {
 			"slug": "u-jelly-landing-pad",
 			"name": "U-Jelly Landing Pad",
-			"description": "Generates a speed dampening jelly.\nGuarantees a soft landing.",
+			"description": "Generates a speed dampening jelly.\nGuarantees a safe landing.",
 			"categories": [
 				"SC_JumpPads_C"
 			],
@@ -17166,7 +17357,7 @@
 			"categories": [
 				"SC_OilProduction_C"
 			],
-			"buildMenuPriority": 16,
+			"buildMenuPriority": 2,
 			"className": "Desc_OilPump_C",
 			"metadata": {
 				"powerConsumption": 40,
@@ -17180,10 +17371,25 @@
 			"categories": [
 				"SC_OilProduction_C"
 			],
-			"buildMenuPriority": 17,
+			"buildMenuPriority": 4,
 			"className": "Desc_OilRefinery_C",
 			"metadata": {
 				"powerConsumption": 30,
+				"powerConsumptionExponent": 1.6,
+				"manufacturingSpeed": 1
+			}
+		},
+		"Desc_Packager_C": {
+			"slug": "packager",
+			"name": "Packager",
+			"description": "Used for the packaging and unpacking of fluids.\nHead Lift: 10 meters.\n(Allows fluids to be transported 10 meters upwards.)\n\nContains both a Conveyor Belt and Pipe input and output, to allow for the automation of various recipes.",
+			"categories": [
+				"SC_OilProduction_C"
+			],
+			"buildMenuPriority": 3,
+			"className": "Desc_Packager_C",
+			"metadata": {
+				"powerConsumption": 10,
 				"powerConsumptionExponent": 1.6,
 				"manufacturingSpeed": 1
 			}
@@ -17293,10 +17499,38 @@
 				"powerConsumptionExponent": 1.6
 			}
 		},
+		"Desc_PipelineMK2_C": {
+			"slug": "pipeline-mk-2",
+			"name": "Pipeline Mk.2",
+			"description": "Outside indicators show volume, flow rate and direction.\nTransports up to 600m³ of fluid per minute.\nUsed to transport fluids.",
+			"categories": [
+				"SC_Pipes_C"
+			],
+			"buildMenuPriority": 1,
+			"className": "Desc_PipelineMK2_C",
+			"metadata": {
+				"flowLimit": 10
+			}
+		},
+		"Desc_PipelinePumpMk2_C": {
+			"slug": "pipeline-pump-mk-2",
+			"name": "Pipeline Pump Mk.2",
+			"description": "Can be attached to a Pipeline to apply Head Lift.\nMaximum Head Lift: 50 meters\n(Allows fluids to be transported 50 meters upwards.)\n\nNOTE: Has an in- and output direction.\nNOTE: Head Lift does not stack, so space between Pumps is recommended.",
+			"categories": [
+				"SC_Pipes_C"
+			],
+			"buildMenuPriority": 4,
+			"className": "Desc_PipelinePumpMk2_C",
+			"metadata": {
+				"powerConsumption": 12,
+				"powerConsumptionExponent": 1.6,
+				"maxPressure": 50
+			}
+		},
 		"Desc_PipelinePump_C": {
-			"slug": "pipeline-pump",
-			"name": "Pipeline Pump",
-			"description": "Can be attached to a Pipeline to apply Head Lift.\nMaximum Head Lift: 20 meters\n(Allows fluids to be transported 20 meters upwards.)\nOutputs fluids at 300m³ per minute.\n\nNOTE: Has an in- and output direction.\nNOTE: Head Lift does not stack, so space between Pumps is recommended.",
+			"slug": "pipeline-pump-mk-1",
+			"name": "Pipeline Pump Mk.1",
+			"description": "Can be attached to a Pipeline to apply Head Lift.\nMaximum Head Lift: 20 meters\n(Allows fluids to be transported 20 meters upwards.)\n\nNOTE: Has an in- and output direction.\nNOTE: Head Lift does not stack, so space between Pumps is recommended.",
 			"categories": [
 				"SC_Pipes_C"
 			],
@@ -17305,7 +17539,6 @@
 			"metadata": {
 				"powerConsumption": 4,
 				"powerConsumptionExponent": 1.6,
-				"flowLimit": 5,
 				"maxPressure": 20
 			}
 		},
@@ -17341,13 +17574,13 @@
 			"metadata": {}
 		},
 		"Desc_Pipeline_C": {
-			"slug": "pipeline",
-			"name": "Pipeline",
+			"slug": "pipeline-mk-1",
+			"name": "Pipeline Mk.1",
 			"description": "Outside indicators show volume, flow rate and direction.\nTransports up to 300m³ of fluid per minute.\nUsed to transport fluids.",
 			"categories": [
 				"SC_Pipes_C"
 			],
-			"buildMenuPriority": 1,
+			"buildMenuPriority": 0,
 			"className": "Desc_Pipeline_C",
 			"metadata": {
 				"flowLimit": 5
@@ -18007,6 +18240,21 @@
 			"className": "Desc_Truck_C",
 			"metadata": {}
 		},
+		"Desc_Valve_C": {
+			"slug": "valve",
+			"name": "Valve",
+			"description": "Used to limit Pipeline flow rates.\nCan be attached to a Pipeline.\n\nNOTE: Has an in- and output direction.",
+			"categories": [
+				"SC_Pipes_C"
+			],
+			"buildMenuPriority": 5,
+			"className": "Desc_Valve_C",
+			"metadata": {
+				"powerConsumption": 0,
+				"powerConsumptionExponent": 1.6,
+				"maxPressure": 0
+			}
+		},
 		"Desc_WalkwayCross_C": {
 			"slug": "walkway-crossing",
 			"name": "Walkway Crossing",
@@ -18300,7 +18548,7 @@
 			"categories": [
 				"SC_OilProduction_C"
 			],
-			"buildMenuPriority": 16,
+			"buildMenuPriority": 1,
 			"className": "Desc_WaterPump_C",
 			"metadata": {
 				"powerConsumption": 20,

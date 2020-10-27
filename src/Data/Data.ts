@@ -17,7 +17,7 @@ export class Data
 		Desc_Stone_C: 52860,
 		Desc_Coal_C: 30900,
 		Desc_OreGold_C: 11040,
-		Desc_LiquidOil_C: 7500,
+		Desc_LiquidOil_C: 9900,
 		Desc_RawQuartz_C: 10500,
 		Desc_Sulfur_C: 6840,
 		Desc_OreBauxite_C: 7800,
@@ -26,16 +26,16 @@ export class Data
 	};
 
 	public static resourceWeights = {
-		Desc_OreIron_C: 3.257,
-		Desc_OreCopper_C: 7.944,
-		Desc_Stone_C: 4.337,
-		Desc_Coal_C: 7.419,
-		Desc_OreGold_C: 20.766,
-		Desc_LiquidOil_C: 30.568,
-		Desc_RawQuartz_C: 20.324,
-		Desc_Sulfur_C: 33.518,
-		Desc_OreBauxite_C: 29.392,
-		Desc_OreUranium_C: 127.367,
+		Desc_OreIron_C: 3.28,
+		Desc_OreCopper_C: 8,
+		Desc_Stone_C: 4.368,
+		Desc_Coal_C: 7.472,
+		Desc_OreGold_C: 20.913,
+		Desc_LiquidOil_C: 23.321,
+		Desc_RawQuartz_C: 21.989,
+		Desc_Sulfur_C: 33.754,
+		Desc_OreBauxite_C: 29.6,
+		Desc_OreUranium_C: 128.267,
 		Desc_Water_C: 0,
 	};
 
@@ -134,6 +134,20 @@ export class Data
 			}
 		}
 		return recipes;
+	}
+
+	public getSinkableItems(): IItemSchema[]
+	{
+		const data = this.getRawData();
+		const items: IItemSchema[] = [];
+		for (const key in data.items) {
+			const item = data.items[key];
+			if (item.sinkPoints > 0) {
+				items.push(item);
+			}
+		}
+
+		return items;
 	}
 
 	public getAlternateRecipes(): IRecipeSchema[]

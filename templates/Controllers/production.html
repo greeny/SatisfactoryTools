@@ -85,6 +85,12 @@
 							</a>
 						</li>
 						<!--<li class="nav-item">
+							<a href="javascript: void(0);" class="nav-link" ng-class="{active: ctrl.tab.tab === 'sink'}" ng-click="ctrl.tab.tab = 'sink'">
+								<span class="fas fa-fw fa-ticket-alt mr-1"></span>
+								Resource sink
+							</a>
+						</li>
+						<li class="nav-item">
 							<a href="javascript: void(0);" class="nav-link" ng-class="{active: ctrl.tab.tab === 'power'}" ng-click="ctrl.tab.tab = 'power'">
 								<span class="fas fa-fw fa-bolt mr-1"></span>
 								Power
@@ -388,6 +394,70 @@
 						</div>
 					</div>
 				</div>
+
+				<!--<div class="col-md-10" ng-show="ctrl.tab.tab === 'sink'">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="recipe-list-card card">
+								<div class="card-header d-flex">
+									<span class="recipe-list-card-title text-nowrap">
+										Sinkable resources
+									</span>
+
+									<input type="text" ng-model="ctrl.tab.state.sinkableResourcesQuery" class="form-control" placeholder="Search for a resource">
+
+									<span class="btn-group">
+										<span class="btn btn-secondary px-3" ng-click="ctrl.tab.setAllSinkableResources(true)">
+											All
+										</span>
+										<span class="btn btn-secondary px-3" ng-click="ctrl.tab.setAllSinkableResources(false)">
+											None
+										</span>
+										<span class="btn btn-secondary" ng-click="ctrl.tab.state.sinkableResourcesExpanded = !ctrl.tab.state.sinkableResourcesExpanded">
+											<span ng-if="ctrl.tab.state.sinkableResourcesExpanded" class="fas fa-fw fa-chevron-up"></span>
+											<span ng-if="!ctrl.tab.state.sinkableResourcesExpanded" class="fas fa-fw fa-chevron-down"></span>
+										</span>
+									</span>
+								</div>
+
+								<div class="card-body" ng-show="ctrl.tab.state.sinkableResourcesExpanded">
+									<table class="alternate-recipe-list">
+										<tr class="table-row-header">
+											<td></td>
+											<td class="d-flex justify-content-between">
+												<span class="cursor-pointer" ng-click="ctrl.tab.setSinkableResourcesSort('name')">
+													<b>Name</b>
+													<span ng-if="ctrl.tab.state.sinkableResourcesSortBy === 'name'" ng-class="{fas: true, 'fa-caret-down': ctrl.tab.state.sinkableResourcesSortReverse === false, 'fa-caret-up': ctrl.tab.state.sinkableResourcesSortReverse === true}"></span>
+												</span>
+												<span class="cursor-pointer" ng-click="ctrl.tab.setSinkableResourcesSort('points')">
+													<span ng-if="ctrl.tab.state.sinkableResourcesSortBy === 'points'" ng-class="{fas: true, 'fa-caret-down': ctrl.tab.state.sinkableResourcesSortReverse === true, 'fa-caret-up': ctrl.tab.state.sinkableResourcesSortReverse === false}"></span>
+													<b>Points</b>
+												</span>
+											</td>
+										</tr>
+										<tr ng-repeat="item in ctrl.sinkableItems | filter: {name: ctrl.tab.state.sinkableResourcesQuery} | orderBy: ctrl.tab.sinkableResourcesOrderCallback: ctrl.tab.state.sinkableResourcesSortReverse" ng-click="ctrl.tab.toggleSinkableResource(item.className)">
+											<td>
+												<span class="fas fa-check-square" ng-show="ctrl.tab.isSinkableResourceEnabled(item.className)"></span>
+												<span class="fas fa-square" ng-show="!ctrl.tab.isSinkableResourceEnabled(item.className)"></span>
+											</td>
+											<td class="d-flex justify-content-between">
+												<span>
+													<item-icon item="item" size="20" tooltip="1"></item-icon>
+													<span class="ml-1">{{item.name}}</span>
+												</span>
+												<span>{{item.sinkPoints}} points</span>
+											</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-6">
+
+						</div>
+					</div>
+				</div>-->
 			</div>
 		</div>
 	</div>

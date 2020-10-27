@@ -7,6 +7,7 @@ import {IProductionControllerScope} from '@src/Module/Controllers/ProductionCont
 import axios from 'axios';
 import {Strings} from '@src/Utils/Strings';
 import {ProductionRequestSchemaConverter} from '@src/Tools/Production/ProductionRequestSchemaConverter';
+import {IItemSchema} from '@src/Schema/IItemSchema';
 
 export class ProductionTab
 {
@@ -16,8 +17,12 @@ export class ProductionTab
 	public state = {
 		expanded: true,
 		renaming: false,
+		sinkableResourcesExpanded: true,
 		alternateRecipesExpanded: true,
 		basicRecipesExpanded: true,
+		sinkableResourcesSortBy: 'name',
+		sinkableResourcesSortReverse: false,
+		sinkableResourcesQuery: '',
 		alternateRecipesQuery: '',
 		basicRecipesQuery: '',
 		resultLoading: false,
@@ -46,6 +51,10 @@ export class ProductionTab
 			this.shareLink = '';
 			this.tool.calculate(this.scope.$timeout);
 		}, true);
+	}
+
+	public sinkableResourcesOrderCallback = (item: IItemSchema) => {
+		return this.state.sinkableResourcesSortBy === 'name' ? item.name : item.sinkPoints;
 	}
 
 	public copyShareLink(): void
@@ -153,6 +162,31 @@ export class ProductionTab
 		}
 	}
 
+	public setSinkableResourcesSort(sort: string)
+	{
+		if (this.state.sinkableResourcesSortBy === sort) {
+			this.state.sinkableResourcesSortReverse = !this.state.sinkableResourcesSortReverse;
+		} else {
+			this.state.sinkableResourcesSortBy = sort;
+			this.state.sinkableResourcesSortReverse = false;
+		}
+	}
+
+	public toggleSinkableResource(className: string): void
+	{
+		const index = this.tool.productionRequest.sinkableResources.indexOf(className);
+		if (index === -1) {
+			this.tool.productionRequest.sinkableResources.push(className);
+		} else {
+			this.tool.productionRequest.sinkableResources.splice(index, 1);
+		}
+	}
+
+	public isSinkableResourceEnabled(className: string): boolean
+	{
+		return this.tool.productionRequest.sinkableResources.indexOf(className) !== -1;
+	}
+
 	public toggleAlternateRecipe(className: string): void
 	{
 		const index = this.tool.productionRequest.allowedAlternateRecipes.indexOf(className);
@@ -201,6 +235,17 @@ export class ProductionTab
 	public convertAlternateRecipeName(name: string): string
 	{
 		return name.replace('Alternate: ', '');
+	}
+
+	public setAllSinkableResources(value: boolean): void
+	{
+		if (value) {
+			this.tool.productionRequest.sinkableResources = data.getSinkableItems().map((item) => {
+				return item.className;
+			});
+		} else {
+			this.tool.productionRequest.sinkableResources = [];
+		}
 	}
 
 	public setAllBasicRecipes(value: boolean): void
