@@ -21,6 +21,7 @@ export class ProductionController
 	public readonly rawResources: IResourceSchema[] = data.getResources();
 	public readonly craftableItems: IItemSchema[] = model.getAutomatableItems();
 	public readonly inputableItems: IItemSchema[] = model.getInputableItems();
+	public readonly sinkableItems: IItemSchema[] = data.getSinkableItems();
 	public readonly alternateRecipes: IRecipeSchema[] = data.getAlternateRecipes();
 	public readonly basicRecipes: IRecipeSchema[] = data.getBaseItemRecipes();
 

@@ -26,6 +26,7 @@ export class ProductionToolResult
 		id: 'root',
 		layoutOptions: {
 			'elk.algorithm': 'org.eclipse.elk.conn.gmf.layouter.Draw2D',
+			'org.eclipse.elk.layered.nodePlacement.favorStraightEdges': true as unknown as string, // fuck off typescript
 			'org.eclipse.elk.spacing.nodeNode': 40 + '',
 		},
 		children: [],

@@ -250,7 +250,7 @@ $border: 1px solid rgba(0, 0, 0, 0.125);
 	.alternate-recipe-list {
 		width: 100%;
 
-		tr:hover {
+		tr:not(.table-row-header):hover {
 			cursor: pointer;
 			background-color: $gray-700;
 		}
@@ -346,7 +346,7 @@ $border: 1px solid rgba(0, 0, 0, 0.125);
 	width: 100%;
 
 	tbody {
-		tr:hover {
+		tr:not(.table-row-header):hover {
 			background-color: $gray-700;
 		}
 	}
