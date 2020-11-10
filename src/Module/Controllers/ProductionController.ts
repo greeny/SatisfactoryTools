@@ -75,7 +75,7 @@ export class ProductionController
 			this.tab = tab;
 			this.addingInProgress = false;
 		});
-
+		this.saveState();
 	}
 
 	public cloneTab(tab: ProductionTab): void
@@ -89,6 +89,7 @@ export class ProductionController
 			this.tab = clone;
 			this.cloningInProgress = false;
 		});
+		this.saveState();
 	}
 
 	public removeTab(tab: ProductionTab): void
@@ -105,7 +106,11 @@ export class ProductionController
 
 			tab.unregister();
 			this.tabs.splice(index, 1);
+			if (this.tabs.length === 0) {
+				this.addEmptyTab();
+			}
 		}
+		this.saveState();
 	}
 
 	public clearAllTabs(): void
