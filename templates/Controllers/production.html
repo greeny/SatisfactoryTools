@@ -1,6 +1,10 @@
 <h2>Production</h2>
 
-<ul class="nav nav-tabs production-nav-tabs">
+<p>
+	Each tab is a separate production line. You can have multiple tabs and they will be automatically saved in your browser. You can also share them using the share button or reorganize by dragging them.
+</p>
+
+<ul class="nav nav-tabs production-nav-tabs" ui-sortable="{axis: 'x',  'ui-floating': true}" ng-model="ctrl.tabs">
 	<li class="nav-item" ng-repeat="tab in ctrl.tabs">
 		<span class="nav-link cursor-pointer"  ng-class="{active: tab === ctrl.tab}" ng-click="ctrl.tab = tab" tooltip title="{{tab.tool.name}}">
 			<item-icon hide-tooltip="true" dynamic="true" item="tab.tool.icon" size="32" ng-if="tab.tool.icon"></item-icon>

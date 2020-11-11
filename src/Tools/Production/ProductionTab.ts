@@ -8,6 +8,7 @@ import axios from 'axios';
 import {Strings} from '@src/Utils/Strings';
 import {ProductionRequestSchemaConverter} from '@src/Tools/Production/ProductionRequestSchemaConverter';
 import {IItemSchema} from '@src/Schema/IItemSchema';
+import {Callbacks} from '@src/Utils/Callbacks';
 
 export class ProductionTab
 {
@@ -32,6 +33,7 @@ export class ProductionTab
 	public shareLink: string = '';
 
 	private readonly unregisterCallback: () => void;
+	private firstRun: boolean = true;
 
 	public constructor(private readonly scope: IProductionControllerScope, productionToolRequest?: IProductionToolRequest)
 	{
@@ -44,13 +46,26 @@ export class ProductionTab
 			this.addEmptyProduct();
 		}
 
+		const ignoredKeys = ['name', 'icon'];
+
 		this.unregisterCallback = scope.$watch(() => {
 			return this.tool.productionRequest;
-		}, () => {
-			this.scope.saveState();
-			this.shareLink = '';
-			this.tool.calculate(this.scope.$timeout);
-		}, true);
+		}, Callbacks.debounce((newValue, oldValue) => {
+			const changes: string[] = [];
+			for (const key in newValue) {
+				if (newValue.hasOwnProperty(key)) {
+					if (ignoredKeys.indexOf(key) === -1 && !angular.equals(newValue[key], oldValue[key])) {
+						changes.push(key);
+					}
+				}
+			}
+			if (changes.length || this.firstRun) {
+				this.firstRun = false;
+				this.scope.saveState();
+				this.shareLink = '';
+				this.tool.calculate(this.scope.$timeout);
+			}
+		}, 300), true);
 	}
 
 	public sinkableResourcesOrderCallback = (item: IItemSchema) => {
