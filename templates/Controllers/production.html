@@ -477,5 +477,60 @@
 	<div ng-show="ctrl.tab.tool.resultStatus === 'noInput'" class="visualization-result">
 		Select an item to calculate.
 	</div>
-	<visualization ng-show="ctrl.tab.tool.resultStatus === 'result'" result="ctrl.tab.tool.result" class="visualization" ng-class="{visualization: 1, loading: ctrl.tab.state.resultLoading}"></visualization>
+	<div ng-show="ctrl.tab.tool.resultStatus === 'result'">
+		<ul class="nav nav-pills nav-justified result-nav">
+			<li class="nav-item">
+				<a class="nav-link" ng-class="{active: ctrl.tab.resultTab === 'visualization'}" ng-click="ctrl.tab.resultTab = 'visualization'">
+					<span class="fas fa-project-diagram"></span> Visualization
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" ng-class="{active: ctrl.tab.resultTab === 'power'}" ng-click="ctrl.tab.resultTab = 'power'">
+					<span class="fas fa-bolt"></span> Power
+				</a>
+			</li>
+		</ul>
+		<div ng-show="ctrl.tab.resultTab === 'visualization'">
+			<visualization result="ctrl.tab.tool.result" class="visualization" ng-class="{visualization: 1, loading: ctrl.tab.state.resultLoading}"></visualization>
+		</div>
+
+		<div ng-show="ctrl.tab.resultTab === 'power'" class="visualization-result">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Machine</th>
+						<th>Average usage</th>
+						<th>Max usage</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="(machine, powerDetail) in ctrl.tab.tool.result.powerDetails">
+						<td>
+							<item-icon item="machine" size="24" tooltip="1"></item-icon>
+							{{powerDetail.amount|number}}x {{powerDetail.name}}
+						</td>
+						<td>
+							{{powerDetail.average|number}} MW
+						</td>
+						<td>
+							{{powerDetail.max|number}} MW
+						</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td>
+							<b>Total</b>
+						</td>
+						<td>
+							<b>{{ctrl.tab.tool.result.powerUsage.average|number}} MW</b>
+						</td>
+						<td>
+							<b>{{ctrl.tab.tool.result.powerUsage.max|number}} MW</b>
+						</td>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
+	</div>
 </div>
