@@ -1,6 +1,6 @@
 <table class="table two-columns" ng-if="ctrl.building">
 	<tbody>
-		<tr>
+		<tr ng-if="ctrl.canBeOverclocked">
 			<td>Overclock</td>
 			<td>
 				{{ctrl.options.overclock}}%
@@ -12,7 +12,7 @@
 			<td>{{ctrl.powerProduction|number}} MW</td>
 		</tr>
 		<tr>
-			<td>Require water</td>
+			<td>Requires water</td>
 			<td>
 				{{ctrl.generator.waterToPowerRatio > 0 ? 'Yes' : 'No'}}
 			</td>

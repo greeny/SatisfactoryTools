@@ -50,6 +50,7 @@ export class ProductionTool
 			allowedAlternateRecipes: [],
 			blockedRecipes: [],
 			blockedResources: [],
+			sinkableResources: [],
 			production: [],
 			input: [],
 			resourceMax: angular.copy(Data.resourceAmounts),

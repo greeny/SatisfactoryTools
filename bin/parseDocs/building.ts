@@ -19,9 +19,15 @@ export default function parseBuildings(buildings: {
 	mStorageCapacity?: string,
 }[], fixClassName: boolean = false): IBuildingSchema[]
 {
+	const ignored = [
+		'Build_JumpPadTilted_C',
+		'Build_JumpPad_C',
+		'Build_Stair_1b_C',
+	];
+
 	const result: IBuildingSchema[] = [];
 	for (const building of buildings) {
-		if (building.ClassName === 'Build_Stair_1b_C') {
+		if (ignored.indexOf(building.ClassName) !== -1) {
 			continue;
 		}
 

@@ -13,6 +13,8 @@ export interface IProductionToolRequest
 	blockedRecipes: string[]; // whether normal recipe can be used
 	allowedAlternateRecipes: string[]; // whether alt is available or not (doesn't guarantee usage)
 
+	sinkableResources: string[]; // whether or not you can sink a given resource
+
 	production: IProductionToolRequestItem[];
 	input: IProductionToolRequestInput[];
 

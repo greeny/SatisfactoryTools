@@ -14,7 +14,7 @@ export default function parseRecipes(recipes: {
 	mProducedIn: string;
 }[]): IRecipeSchema[]
 {
-	const ignored = [
+	const ignoredProducts = [
 		'Desc_Truck_C',
 		'Desc_FreightWagon_C',
 		'Desc_Locomotive_C',
@@ -23,10 +23,19 @@ export default function parseRecipes(recipes: {
 		'Desc_CyberWagon_C',
 	];
 
+	const ignoredRecipes = [
+		'Recipe_JumpPadTilted_C',
+		'Recipe_JumpPad_C',
+	]
+
 	const result: IRecipeSchema[] = [];
 
 	recipeLoop:
 	for (const recipe of recipes) {
+		if (ignoredRecipes.indexOf(recipe.ClassName) !== -1) {
+			continue;
+		}
+
 		const producedIn = Arrays.ensureArray(Strings.unserializeDocs(recipe.mProducedIn)).map(parseBlueprintClass).map((className: string) => {
 			return className.replace('Build_', 'Desc_');
 		});
@@ -34,7 +43,7 @@ export default function parseRecipes(recipes: {
 		const products = Arrays.ensureArray(Strings.unserializeDocs(recipe.mProduct)).map(parseItemAmount);
 
 		for (const product of products) {
-			if (ignored.indexOf(product.item) !== -1) {
+			if (ignoredProducts.indexOf(product.item) !== -1) {
 				continue recipeLoop;
 			}
 		}
