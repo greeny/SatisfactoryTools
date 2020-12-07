@@ -1,6 +1,5 @@
 import {Injectable}       from '@angular/core';
 import {DataService}      from '@modules/Codex/Service';
-import {IBuildingSchema}  from '@src/Schema/IBuildingSchema';
 import {ISchematicSchema} from '@src/Schema/ISchematicSchema';
 import {Observable, of}   from 'rxjs';
 

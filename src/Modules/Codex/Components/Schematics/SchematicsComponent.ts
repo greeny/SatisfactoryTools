@@ -1,10 +1,9 @@
 import {Component, OnDestroy, OnInit}              from '@angular/core';
-import {FormControl, FormGroup}                        from '@angular/forms';
-import {BuildingsDataProvider, SchematicsDataProvider} from '@modules/Codex/Service/DataProvider';
-import {IBuildingSchema}                               from '@src/Schema/IBuildingSchema';
+import {FormControl, FormGroup}                    from '@angular/forms';
+import {SchematicsDataProvider}                    from '@modules/Codex/Service/DataProvider';
 import {ISchematicSchema}                          from '@src/Schema/ISchematicSchema';
+import {TrackBy}                                   from '@utils/ TrackBy';
 import {Sort}                                      from '@utils/Sort';
-import {TrackBy}                                   from '@utils/TrakcBy';
 import {BehaviorSubject, Observable, Subscription} from 'rxjs';
 import {distinctUntilChanged, map, withLatestFrom} from 'rxjs/operators';
 

@@ -4,7 +4,7 @@ import sharp from 'sharp';
 import {IJsonSchema} from '@src/Schema/IJsonSchema';
 
 const baseOriginalPath = path.join(__dirname, '..', 'data', 'icons', 'out256');
-const baseTargetPath = path.join(__dirname, '..', 'www', 'assets', 'images', 'items');
+const baseTargetPath = path.join(__dirname, '..', 'src', 'assets', 'images', 'items');
 const mappingPath = path.join(__dirname, '..', 'data', 'imageMapping.json');
 const dataPath = path.join(__dirname, '..', 'data', 'data.json');
 

@@ -1,9 +1,9 @@
 import {Component, Input, OnChanges, SimpleChanges} from '@angular/core';
 import {Data}                                       from '@src/Data/Data';
-import {IBuildingSchema}                        from '@src/Schema/IBuildingSchema';
-import {IItemSchema}                            from '@src/Schema/IItemSchema';
-import {BehaviorSubject, Observable, of}        from 'rxjs';
-import {concatMap, filter, map, withLatestFrom} from 'rxjs/operators';
+import {IBuildingSchema}                            from '@src/Schema/IBuildingSchema';
+import {IItemSchema}                                from '@src/Schema/IItemSchema';
+import {BehaviorSubject, Observable, of}            from 'rxjs';
+import {concatMap, filter, map, withLatestFrom}     from 'rxjs/operators';
 
 interface ISelectableIcon {
 	address: string;
