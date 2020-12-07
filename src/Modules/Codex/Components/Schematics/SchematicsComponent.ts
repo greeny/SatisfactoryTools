@@ -2,7 +2,7 @@ import {Component, OnDestroy, OnInit}              from '@angular/core';
 import {FormControl, FormGroup}                    from '@angular/forms';
 import {SchematicsDataProvider}                    from '@modules/Codex/Service/DataProvider';
 import {ISchematicSchema}                          from '@src/Schema/ISchematicSchema';
-import {TrackBy}                                   from '@utils/ TrackBy';
+import {TrackBy}                                   from '@utils/TrackBy';
 import {Sort}                                      from '@utils/Sort';
 import {BehaviorSubject, Observable, Subscription} from 'rxjs';
 import {distinctUntilChanged, map, withLatestFrom} from 'rxjs/operators';

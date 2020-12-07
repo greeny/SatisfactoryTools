@@ -3,7 +3,7 @@ import {FormControl, FormGroup}                    from '@angular/forms';
 import {ItemsDataProvider}                         from '@modules/Codex/Service/DataProvider';
 import {IItemSchema}                               from '@src/Schema/IItemSchema';
 import {Sort}                                      from '@utils/Sort';
-import {TrackBy}                                   from '@utils/TrakcBy';
+import {TrackBy}                                   from '@utils/TrackBy';
 import {BehaviorSubject, Observable, Subscription} from 'rxjs';
 import {distinctUntilChanged, map, withLatestFrom} from 'rxjs/operators';
 
