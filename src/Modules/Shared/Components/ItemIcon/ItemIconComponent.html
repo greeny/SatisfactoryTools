@@ -1,0 +1,3 @@
+<ng-container *ngIf="icon$ | async as asyncIcon">
+    <img [src]="asyncIcon.address" [style.width]="asyncIcon.size + 'px'"/>
+</ng-container>

@@ -1,0 +1,77 @@
+<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-primary">
+    <div class="container-fluid px-xl-5 px-lg-4 px-md-3 px-sm-2 px-1">
+        <a class="navbar-brand" routerLink="/">
+            <img src="/assets/images/logo/satisfactorySmall.png" height="40" class="d-sm-inline-block d-none">
+            <img src="/assets/images/logo/tools.png" height="40">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <ng-container *ngFor="let link of leftNavigation">
+                    <ng-container *ngTemplateOutlet="linkEntry; context: {link: link}"></ng-container>
+                </ng-container>
+            </ul>
+            <ul class="navbar-nav">
+                <ng-container *ngFor="let link of rightNavigation">
+                    <ng-container *ngTemplateOutlet="linkEntry; context: {link: link}"></ng-container>
+                </ng-container>
+            </ul>
+        </div>
+    </div>
+</nav>
+<ng-template #divider>
+    <div class="dropdown-divider"></div>
+</ng-template>
+
+<ng-template #header let-header="header">
+    <h6 class="dropdown-header">{{ header.header }}</h6>
+</ng-template>
+
+<ng-template #linkEntry let-link="link" let-path="path" let-parent="parent">
+    <ng-container *ngIf="isDivider(link)">
+        <ng-container *ngTemplateOutlet="divider; context: {link: link}"></ng-container>
+    </ng-container>
+    <ng-container *ngIf="isHeader(link)">
+        <ng-container *ngTemplateOutlet="header; context: {header: link}"></ng-container>
+    </ng-container>
+    <ng-container *ngIf="isLink(link) || isLinkContainer(link)">
+        <ng-container *ngTemplateOutlet="linked; context: {link: link, path: path, parent: parent}"></ng-container>
+    </ng-container>
+</ng-template>
+
+<ng-template #linked let-link="link" let-path="path" let-parent="parent">
+    <ng-container *ngTemplateOutlet="isLinkContainer(link) ? hasSubLinks : noSubLinks; context: {link: link, path: path, parent: parent}"></ng-container>
+</ng-template>
+
+<ng-template #hasSubLinks let-link="link" let-path="path" let-parent="parent">
+    <li class="dropdown" [ngClass]="{'nav-item': !parent, 'dropdown-item': !!parent}" dropdown [class.active]="isActive(combinePath(link.path, path), link.exact)">
+        <a class="nav-link dropdown-toggle" dropdownToggle>
+            <ng-container *ngTemplateOutlet="linkLabel; context: {link: link}"></ng-container>
+        </a>
+        <ul class="dropdown-menu" [class.dropdown-menu-left]="link.slot === 'left' || parent?.slot === 'left'" [class.dropdown-menu-right]="link.slot === 'right' || parent?.slot === 'right'" *dropdownMenu>
+            <ng-container *ngFor="let internalLink of link.children">
+                <ng-container *ngTemplateOutlet="linkEntry; context: {link: internalLink, path: combinePath(link.path, path), parent: link}"></ng-container>
+            </ng-container>
+        </ul>
+    </li>
+</ng-template>
+
+<ng-template #noSubLinks let-link="link" let-path="path" let-parent="parent">
+    <li [class.active]="isActive(combinePath(link.path, path), link.exact)" [ngClass]="{'nav-item': !parent, 'dropdown-item': !!parent}" routerLinkActive="active">
+        <a *ngIf="!link.url" [routerLinkActiveOptions]="{exact: link.exact}" [routerLink]="combinePath(link.path, path)" class="nav-link" routerLinkActive="active">
+            <ng-container *ngTemplateOutlet="linkLabel; context: {link: link}"></ng-container>
+        </a>
+
+        <a *ngIf="link.url" [href]="link.url" class="nav-link">
+            <ng-container *ngTemplateOutlet="linkLabel; context: {link: link}"></ng-container>
+        </a>
+    </li>
+</ng-template>
+
+<ng-template #linkLabel let-link="link">
+    <i *ngIf="link.icon" [ngClass]="link.icon"></i>
+    {{ link.label }}
+</ng-template>

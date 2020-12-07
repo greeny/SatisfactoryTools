@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-sm-6"></div>
+    <div class="col-sm-6">
+        <form [formGroup]="form">
+            <div class="input-group filter">
+                <input type="text" placeholder="Search for an item" formControlName="filter" class="form-control" />
+                <div class="input-group-append">
+                    <a class="clear-filter" [class.has-content]="form.get('filter').value.length > 0" (click)="clearQuery()">
+                        <i class="fa fa-times"></i>
+                    </a>
+                    <a class="btn btn-secondary disabled" (click)="advancedFiltersCollapsed = !advancedFiltersCollapsed" [attr.aria-expanded]="false === advancedFiltersCollapsed" aria-controls="advancedFilters">
+                        advanced filters
+                        <i class="fas" [class.fa-chevron-down]="advancedFiltersCollapsed" [class.fa-chevron-up]="false === advancedFiltersCollapsed"></i>
+                    </a>
+                </div>
+            </div>
+            <div id="advancedFilters" [collapse]="advancedFiltersCollapsed" [isAnimated]="true">
+            </div>
+        </form>
+    </div>
+</div>
+<br />
+<div class="recipe-list">
+    <div class="card text-center item-card" *ngFor="let item of items$ | async; trackBy: trackByClassName">
+        <a class="recipe-name stretched-link" [routerLink]="[item.slug]">
+            <sf-item-icon [item]="item" class="recipe-image"></sf-item-icon>
+            {{ item.name }}
+        </a>
+    </div>
+</div>

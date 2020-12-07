@@ -1,7 +1,15 @@
-@import '~ui-bootstrap4/dist/ui-bootstrap-csp.css';
-@import "~perfect-scrollbar/css/perfect-scrollbar.css";
 @import 'recipe-list.scss';
 @import 'production.scss';
+@import "~bootstrap-scss/bootstrap";
+//@import '~perfect-scrollbar/css/perfect-scrollbar.css';
+//@import "~ladda/dist/ladda-themeless.min.css";
+
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/brands';
+@import '~@fortawesome/fontawesome-free/scss/v4-shims';
 
 // hey bootswatch, we don't need microtext, thx!
 .navbar, .dropdown-menu, .dropdown-header, .table, label, .radio label, .checkbox label, .help-block {
@@ -30,10 +38,6 @@
 	.toast {
 		z-index: 10000;
 	}
-}
-
-.disabled {
-	cursor: not-allowed;
 }
 
 .navbar-brand {
@@ -97,4 +101,14 @@ table.two-columns {
 	td {
 		width: 50%;
 	}
+}
+
+
+.dropdown-menu{
+	&.dropdown-menu-right{
+		min-width: 250px;
+	}
+}
+.disabled, [disabled="disabled"], [aria-disabled] {
+	cursor: not-allowed!important;
 }
