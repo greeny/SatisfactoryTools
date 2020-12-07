@@ -6,9 +6,9 @@
 	"private": true,
 	"scripts": {
 		"generateImages": "ts-node -r tsconfig-paths/register bin/generateImages.ts",
-		"ng": "ng",
-		"start": "ng serve",
-		"build": "ng build --prod"
+		"ng": "node_modules/@angular/cli/bin/ng",
+		"start": "node_modules/@angular/cli/bin/ng serve",
+		"build": "node_modules/@angular/cli/bin/ng build --prod --aot"
 	},
 	"devDependencies": {
 		"@angular-devkit/build-angular": "^0.1000",
