@@ -1,5 +1,5 @@
 <ol class="breadcrumb">
-    <li *ngFor="let breadcrumb of breadcrumbs | async" class="breadcrumb-item">
+    <li *ngFor="let breadcrumb of breadcrumbs$ | async" class="breadcrumb-item">
         <ng-container *ngTemplateOutlet="null !== breadcrumb.path && !isActive(breadcrumb.path, true) ? linked : simple, context: {breadcrumb: breadcrumb}"></ng-container>
     </li>
 </ol>

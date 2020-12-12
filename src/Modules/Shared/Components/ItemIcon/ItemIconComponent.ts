@@ -2,13 +2,14 @@ import {Component, Input, OnChanges, SimpleChanges} from '@angular/core';
 import {Data}                                       from '@src/Data/Data';
 import {IBuildingSchema}                            from '@src/Schema/IBuildingSchema';
 import {IItemSchema}                                from '@src/Schema/IItemSchema';
-import {BehaviorSubject, Observable, of}            from 'rxjs';
-import {concatMap, filter, map, withLatestFrom}     from 'rxjs/operators';
+import {BehaviorSubject, Observable, of}                    from 'rxjs';
+import {combineAll, concatMap, filter, map, withLatestFrom} from 'rxjs/operators';
 
 interface ISelectableIcon {
 	address: string;
 	name: string;
 	size: number;
+	tooltip?: string;
 }
 
 type AcceptableType = IItemSchema | IBuildingSchema;
@@ -20,24 +21,24 @@ type AcceptableType = IItemSchema | IBuildingSchema;
 export class ItemIconComponent implements OnChanges{
 	@Input() item: AcceptableType = null;
 	@Input() size: number = 64;
+	@Input() showTooltip: boolean = true;
+	private readonly stack$: Observable<AcceptableType[]>;
 	icon$: Observable<ISelectableIcon>;
 
 	private itemChange$ = new BehaviorSubject<AcceptableType>(this.item);
 
 	constructor() {
 		const data = new Data();
+		this.stack$ = of(
+			[]
+				.concat(Object.values(data.getAllBuildings()))
+				.concat(Object.values(data.getAllItems()))
+				.concat(data.getResources())
+		)
 		this.icon$ = this.itemChange$.pipe(
-			withLatestFrom(
-				of(Object.values(data.getAllBuildings())),
-				of(Object.values(data.getAllItems())),
-				of(data.getResources()),
-			),
-			map(([name, buildings, items, resources]) => {
-				return []
-					.concat(buildings.map(b => [name, b]))
-					.concat(items.map(b => [name, b]))
-					.concat(resources.map(b => [name, b]))
-					;
+			withLatestFrom(this.stack$),
+			map(([name, elements]) => {
+				return elements.map((element) => [name, element]);
 			}),
 			concatMap(x => x),
 			filter((element: [AcceptableType, AcceptableType]) => element[1].className === element[0].className),
@@ -45,7 +46,8 @@ export class ItemIconComponent implements OnChanges{
 				return {
 					address: `/assets/images/items/${e[1].slug}_${this.getSize()}.png`,
 					name:    e[1].name,
-					size:    this.size
+					size:    this.size,
+					tooltip: e[1].name
 				};
 			})
 		);

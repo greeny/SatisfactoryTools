@@ -1,18 +1,36 @@
-import {NgModule}                                                         from '@angular/core';
-import {RouterModule}                                                     from '@angular/router';
-import {BuildingsComponent, ItemsComponent, SchematicsComponent}          from '@modules/Codex/Components';
-import {navigation}                                                       from '@modules/Codex/navigation';
-import {routes}                                                           from '@modules/Codex/routes';
-import {DataService}                                                      from '@modules/Codex/Service';
-import {BuildingsDataProvider, ItemsDataProvider, SchematicsDataProvider} from '@modules/Codex/Service/DataProvider';
-import {NavigationModule}                                                 from '@modules/Navigation';
-import {SharedModule}                                                     from '@modules/Shared';
+import {NgModule}                                                                    from '@angular/core';
+import {RouterModule}                                                                from '@angular/router';
+import {
+	BuildingRendererComponent,
+	BuildingsComponent, ItemAmountComponent,
+	ItemsComponent,
+	ItemsShowComponent,
+	RecipesTableComponent,
+	SchematicsComponent
+} from '@modules/Codex/Components';
+import {navigation}                                                                  from '@modules/Codex/navigation';
+import {ItemBreadcrumbsResolver}                                                     from '@modules/Codex/Resolver/ItemBreadcrumbsResolver';
+import {ItemResolver}                                                                from '@modules/Codex/Resolver/ItemResolver';
+import {routes}                                                                      from '@modules/Codex/routes';
+import {DataService}                                                                 from '@modules/Codex/Service';
+import {
+	BuildingsDataProvider,
+	ItemsDataProvider,
+	RecipesDataProvider,
+	SchematicsDataProvider
+} from '@modules/Codex/Service/DataProvider';
+import {NavigationModule}                                                            from '@modules/Navigation';
+import {SharedModule}                                                                from '@modules/Shared';
 
 @NgModule({
 	declarations: [
 		BuildingsComponent,
 		ItemsComponent,
-		SchematicsComponent
+		ItemsShowComponent,
+		ItemAmountComponent,
+		SchematicsComponent,
+		RecipesTableComponent,
+		BuildingRendererComponent
 	],
 	imports:      [
 		SharedModule,
@@ -23,7 +41,10 @@ import {SharedModule}                                                     from '
 		DataService,
 		ItemsDataProvider,
 		BuildingsDataProvider,
-		SchematicsDataProvider
+		SchematicsDataProvider,
+		RecipesDataProvider,
+		ItemResolver,
+		ItemBreadcrumbsResolver
 	]
 })
 export class CodexModule {

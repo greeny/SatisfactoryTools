@@ -1,3 +1,9 @@
 <ng-container *ngIf="icon$ | async as asyncIcon">
-    <img [src]="asyncIcon.address" [style.width]="asyncIcon.size + 'px'"/>
+    <ng-container *ngTemplateOutlet="showTooltip ? withTooltip:withoutTooltip; context: {icon: asyncIcon}"></ng-container>
 </ng-container>
+<ng-template #withTooltip let-icon="icon">
+    <img [src]="icon.address" [style.width]="icon.size + 'px'" [tooltip]="icon.tooltip"/>
+</ng-template>
+<ng-template #withoutTooltip let-icon="icon">
+    <img [src]="icon.address" [style.width]="icon.size + 'px'"/>
+</ng-template>

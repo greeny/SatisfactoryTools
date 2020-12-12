@@ -1,0 +1,43 @@
+<div class="table-responsive">
+    <table class="table recipe-table table-hover">
+        <thead>
+            <tr>
+                <th>Recipe name</th>
+                <th>Ingredients</th>
+                <th>Products</th>
+                <th>Machine</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let recipe of recipes">
+                <td [innerHTML]="recipe.name"></td>
+                <td>
+                    <ng-container *ngTemplateOutlet="resources; context: {resources: recipe.ingredients, recipe: recipe}"></ng-container>
+                </td>
+                <td>
+                    <ng-container *ngTemplateOutlet="resources; context: {resources: recipe.products, recipe: recipe}"></ng-container>
+                </td>
+                <td>
+                    <ng-container *ngFor="let building of recipe.producedIn">
+                        <sf-renderer-building [item]="building" [showName]="false"></sf-renderer-building>
+                    </ng-container>
+                    <sf-renderer-building [item]="workshopClassName" [showName]="false" *ngIf="recipe.inHand"></sf-renderer-building>
+                    <sf-renderer-building [item]="workbenchClassName" [showName]="false" *ngIf="recipe.inWorkshop"></sf-renderer-building>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<ng-template #resources let-resources="resources" let-recipe="recipe">
+    <ng-container *ngFor="let resource of resources; trackBy: trackByCost">
+        <div class="d-inline-block p-2">
+            <sf-item-amount [item]="resource.item" [amount]="resource.amount"></sf-item-amount>
+            <ng-container *ngIf="recipe.inMachine">
+                <br />
+                <span *ngIf="resolveManufacturer(recipe) | async as asyncManufacturer">
+                        {{ calculateProductAmountsPerMinute(asyncManufacturer, recipe, resource.amount, 100) | number }} / min
+                    </span>
+            </ng-container>
+        </div>
+    </ng-container>
+</ng-template>

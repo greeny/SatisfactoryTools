@@ -9,10 +9,10 @@ import {Observable}         from 'rxjs';
 	templateUrl: './BreadcrumbsComponent.html'
 })
 export class BreadcrumbsComponent {
-	breadcrumbs: Observable<Breadcrumb[]>;
+	breadcrumbs$: Observable<Breadcrumb[]>;
 
 	constructor(private breadcrumbsService: BreadcrumbsService, private router: Router) {
-		this.breadcrumbs = this.breadcrumbsService.getCrumbs();
+		this.breadcrumbs$ = this.breadcrumbsService.getCrumbs();
 	}
 
 	isActive(path: string, exact: boolean): boolean {

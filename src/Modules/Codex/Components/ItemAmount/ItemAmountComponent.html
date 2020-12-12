@@ -1,0 +1,6 @@
+<span class="item-amount" *ngIf="item$ | async as asyncItem">
+    {{amount}}x
+    <a [routerLink]="['/', 'codex', 'items', asyncItem.slug]">
+        <sf-item-icon [item]="asyncItem" size="32" [showTooltip]="showTooltip"></sf-item-icon>
+    </a>
+</span>
