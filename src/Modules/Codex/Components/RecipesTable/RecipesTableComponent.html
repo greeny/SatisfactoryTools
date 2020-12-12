@@ -23,6 +23,13 @@
                     </ng-container>
                     <sf-renderer-building [item]="workshopClassName" [showName]="false" *ngIf="recipe.inHand"></sf-renderer-building>
                     <sf-renderer-building [item]="workbenchClassName" [showName]="false" *ngIf="recipe.inWorkshop"></sf-renderer-building>
+                    <ng-container *ngIf="recipe.producedIn.length > 0">
+                        <br/>
+                        <span *ngIf="resolveManufacturer(recipe) | async as asyncManufacturer">
+                            {{recipe.time}}s
+                            ({{ (60 / calculateBuildingRecipeProductionTime(asyncManufacturer, recipe, 100)) | number }} cycles / min)
+                        </span>
+                    </ng-container>
                 </td>
             </tr>
         </tbody>

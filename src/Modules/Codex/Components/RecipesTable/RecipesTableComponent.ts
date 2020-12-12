@@ -1,9 +1,8 @@
 import {Component, Input}                         from '@angular/core';
 import {BuildingsDataProvider, ItemsDataProvider} from '@modules/Codex/Service/DataProvider';
 import {Constants}                                from '@src/Constants';
-import {Formula}                                  from '@src/Formula';
-import {IManufacturerSchema}                      from '@src/Schema/IBuildingSchema';
-import {IItemSchema}                              from '@src/Schema/IItemSchema';
+import {Formula}                              from '@src/Formula';
+import {IBuildingSchema} from '@src/Schema/IBuildingSchema';
 import {IRecipeSchema}                            from '@src/Schema/IRecipeSchema';
 import {TrackBy}                                  from '@utils/TrackBy';
 import {Observable}                               from 'rxjs';
@@ -25,18 +24,23 @@ export class RecipesTableComponent
 
     public trackByCost = TrackBy.byItemAmountSchema;
 
-    public resolveManufacturer(recipe: IRecipeSchema): Observable<IManufacturerSchema>
+    public resolveManufacturer(recipe: IRecipeSchema): Observable<IBuildingSchema>
     {
         return this.buildingDataProvider.getAll().pipe(
             concatMap(x => x),
-            filter((building: IManufacturerSchema) => recipe.producedIn[0] === building.className)
+            filter((building: IBuildingSchema) => recipe.producedIn[0] === building.className)
         );
     }
 
-    public calculateProductAmountsPerMinute(building: IManufacturerSchema, recipe: IRecipeSchema, recipeProductAmount: number, overclock: number): number
+    public calculateProductAmountsPerMinute(building: IBuildingSchema, recipe: IRecipeSchema, recipeProductAmount: number, overclock: number): number
     {
         const recipeTime = Formula.calculateBuildingRecipeProductionTime(recipe, building, overclock);
 
         return (60 / (recipe.time * (recipeTime / recipe.time))) * recipeProductAmount;
+    }
+
+    public calculateBuildingRecipeProductionTime(building: IBuildingSchema, recipe: IRecipeSchema, overclock: number): number
+    {
+        return Formula.calculateBuildingRecipeProductionTime(recipe, building, overclock);
     }
 }
