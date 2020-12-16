@@ -1,0 +1,71 @@
+<div *ngIf="building$ | async as entity" class="row">
+    <div class="col-sm-6">
+        <div class="card mb-3">
+            <h2 [innerHTML]="entity.name" class="card-header"></h2>
+            <div class="card-body">
+                <div class="float-left mr-3">
+                    <sf-item-icon [item]="entity" size="128"></sf-item-icon>
+                </div>
+                <p [innerHTML]="entity.description" style="white-space:pre-line"></p>
+                <div class="clearfix"></div>
+                <ng-container *ngIf="recipe$ | async as asyncRecipe">
+                    <hr />
+                    <h3>Cost</h3>
+                    <ng-container *ngFor="let ingredient of asyncRecipe.ingredients">
+                        <div class="d-inline-block p-2 ng-scope">
+                            {{ ingredient.amount }}x
+                            <sf-renderer-item [item]="ingredient.item" [showName]="false"></sf-renderer-item>
+                        </div>
+                    </ng-container>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card mb-3">
+            <h2 [innerHTML]="entity.name + ' Details'" class="card-header"></h2>
+            <div class="card-body">
+
+                <table class="table">
+                    <tbody>
+                        <ng-container *ngIf="isGeneratorBuilding(entity)">
+                            <ng-container *ngIf="getGenerator(entity) as generator">
+                                <tr>
+                                    <td>Overclock</td>
+                                    <td>
+                                        {{ overclock$ | async }}%
+                                        <input type="range" min="0" max="250" class="w-100" step="1" [(ngModel)]="overclock" (ngModelChange)="overclock$.next($event)"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Power production</td>
+                                    <td>{{ powerProduction(generator) | async | number }} MW</td>
+                                </tr>
+                                <tr>
+                                    <td>Requires water</td>
+                                    <td>{{ generator.waterToPowerRatio > 0 ? 'Yes' : 'No'}}</td>
+                                </tr>
+                            </ng-container>
+                        </ng-container>
+                        <ng-container *ngIf="isManualManufacturer(entity)">MANUAL MANUFACTURER,</ng-container>
+                        <ng-container *ngIf="isManufacturerBuilding(entity) && false === isManualManufacturer(entity)">MANUFACTURER,</ng-container>
+                        <ng-container *ngIf="isExtractorBuilding(entity)">EXTRACTOR,</ng-container>
+                        <ng-container *ngIf="isConveyorBuilding(entity)">
+                            <tr>
+                                <td>Belt speed</td>
+                                <td>{{ entity.metadata.beltSpeed }} / min</td>
+                            </tr>
+                            <tr>
+                                <td>Maximum length</td>
+                                <td>{{ entity.metadata.maxLength / 100 }} m</td>
+                            </tr>
+                        </ng-container>
+                        <ng-container *ngIf="isPowerConsumingBuilding(entity)">CONSUMING POWER,</ng-container>
+                        <ng-container>OTHER STUFF</ng-container>
+                    </tbody>
+                </table>
+                <pre>{{entity|json}}</pre>
+            </div>
+        </div>
+    </div>
+</div>

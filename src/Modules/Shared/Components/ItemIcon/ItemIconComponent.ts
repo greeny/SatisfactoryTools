@@ -1,40 +1,42 @@
 import {Component, Input, OnChanges, SimpleChanges} from '@angular/core';
-import {Data}                                       from '@src/Data/Data';
-import {IBuildingSchema}                            from '@src/Schema/IBuildingSchema';
-import {IItemSchema}                                from '@src/Schema/IItemSchema';
-import {BehaviorSubject, Observable, of}                    from 'rxjs';
-import {combineAll, concatMap, filter, map, withLatestFrom} from 'rxjs/operators';
+import {Data} from '@src/Data/Data';
+import {IBuildingSchema} from '@src/Schema/IBuildingSchema';
+import {IItemSchema} from '@src/Schema/IItemSchema';
+import {BehaviorSubject, Observable, of} from 'rxjs';
+import {concatMap, filter, map, withLatestFrom} from 'rxjs/operators';
 
-interface ISelectableIcon {
+interface ISelectableIcon
+{
 	address: string;
 	name: string;
 	size: number;
 	tooltip?: string;
 }
 
-type AcceptableType = IItemSchema | IBuildingSchema;
+type AcceptableType = IItemSchema|IBuildingSchema;
 
 @Component({
 	selector:    'sf-item-icon',
 	templateUrl: './ItemIconComponent.html'
 })
-export class ItemIconComponent implements OnChanges{
+export class ItemIconComponent implements OnChanges
+{
 	@Input() item: AcceptableType = null;
 	@Input() size: number = 64;
 	@Input() showTooltip: boolean = true;
-	private readonly stack$: Observable<AcceptableType[]>;
 	icon$: Observable<ISelectableIcon>;
-
+	private readonly stack$: Observable<AcceptableType[]>;
 	private itemChange$ = new BehaviorSubject<AcceptableType>(this.item);
 
-	constructor() {
+	constructor()
+	{
 		const data = new Data();
 		this.stack$ = of(
 			[]
 				.concat(Object.values(data.getAllBuildings()))
 				.concat(Object.values(data.getAllItems()))
 				.concat(data.getResources())
-		)
+		);
 		this.icon$ = this.itemChange$.pipe(
 			withLatestFrom(this.stack$),
 			map(([name, elements]) => {
@@ -53,15 +55,8 @@ export class ItemIconComponent implements OnChanges{
 		);
 	}
 
-	private getSize(): number {
-		if (this.size <= 64) {
-			return 64;
-		}
-
-		return 256;
-	}
-
-	ngOnChanges(changes: SimpleChanges): void {
+	ngOnChanges(changes: SimpleChanges): void
+	{
 		if (!changes.item) {
 			return;
 		}
@@ -71,5 +66,14 @@ export class ItemIconComponent implements OnChanges{
 		}
 
 		this.itemChange$.next(changes.item.currentValue);
+	}
+
+	private getSize(): number
+	{
+		if (this.size <= 64) {
+			return 64;
+		}
+
+		return 256;
 	}
 }

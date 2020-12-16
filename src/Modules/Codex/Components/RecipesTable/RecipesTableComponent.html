@@ -21,10 +21,10 @@
                     <ng-container *ngFor="let building of recipe.producedIn">
                         <sf-renderer-building [item]="building" [showName]="false"></sf-renderer-building>
                     </ng-container>
-                    <sf-renderer-building [item]="workshopClassName" [showName]="false" *ngIf="recipe.inHand"></sf-renderer-building>
-                    <sf-renderer-building [item]="workbenchClassName" [showName]="false" *ngIf="recipe.inWorkshop"></sf-renderer-building>
+                    <sf-renderer-building *ngIf="recipe.inHand" [item]="workshopClassName" [showName]="false"></sf-renderer-building>
+                    <sf-renderer-building *ngIf="recipe.inWorkshop" [item]="workbenchClassName" [showName]="false"></sf-renderer-building>
                     <ng-container *ngIf="recipe.producedIn.length > 0">
-                        <br/>
+                        <br />
                         <span *ngIf="resolveManufacturer(recipe) | async as asyncManufacturer">
                             {{recipe.time}}s
                             ({{ (60 / calculateBuildingRecipeProductionTime(asyncManufacturer, recipe, 100)) | number }} cycles / min)
@@ -35,10 +35,10 @@
         </tbody>
     </table>
 </div>
-<ng-template #resources let-resources="resources" let-recipe="recipe">
+<ng-template #resources let-recipe="recipe" let-resources="resources">
     <ng-container *ngFor="let resource of resources; trackBy: trackByCost">
         <div class="d-inline-block p-2">
-            <sf-item-amount [item]="resource.item" [amount]="resource.amount"></sf-item-amount>
+            <sf-item-amount [amount]="resource.amount" [item]="resource.item"></sf-item-amount>
             <ng-container *ngIf="recipe.inMachine">
                 <br />
                 <span *ngIf="resolveManufacturer(recipe) | async as asyncManufacturer">

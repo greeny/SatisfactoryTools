@@ -3,26 +3,26 @@
     <div class="col-sm-6">
         <form [formGroup]="form">
             <div class="input-group filter">
-                <input type="text" placeholder="Search for an item" formControlName="filter" class="form-control" />
+                <input class="form-control" formControlName="filter" placeholder="Search for an item" type="text" />
                 <div class="input-group-append">
-                    <a class="clear-filter" [class.has-content]="form.get('filter').value.length > 0" (click)="clearQuery()">
+                    <a (click)="clearQuery()" [class.has-content]="form.get('filter').value.length > 0" class="clear-filter">
                         <i class="fa fa-times"></i>
                     </a>
-                    <a class="btn btn-secondary disabled" (click)="advancedFiltersCollapsed = !advancedFiltersCollapsed" [attr.aria-expanded]="false === advancedFiltersCollapsed" aria-controls="advancedFilters">
+                    <a (click)="advancedFiltersCollapsed = !advancedFiltersCollapsed" [attr.aria-expanded]="false === advancedFiltersCollapsed" aria-controls="advancedFilters" class="btn btn-secondary disabled">
                         advanced filters
-                        <i class="fas" [class.fa-chevron-down]="advancedFiltersCollapsed" [class.fa-chevron-up]="false === advancedFiltersCollapsed"></i>
+                        <i [class.fa-chevron-down]="advancedFiltersCollapsed" [class.fa-chevron-up]="false === advancedFiltersCollapsed" class="fas"></i>
                     </a>
                 </div>
             </div>
-            <div id="advancedFilters" [collapse]="advancedFiltersCollapsed" [isAnimated]="true">
+            <div [collapse]="advancedFiltersCollapsed" [isAnimated]="true" id="advancedFilters">
             </div>
         </form>
     </div>
 </div>
 <br />
 <div class="recipe-list">
-    <div class="card text-center item-card" *ngFor="let item of items$ | async; trackBy: trackByClassName">
-        <a class="recipe-name stretched-link" [routerLink]="[item.slug]">
+    <div *ngFor="let item of items$ | async; trackBy: trackByClassName" class="card text-center item-card">
+        <a [routerLink]="[item.slug]" class="recipe-name stretched-link">
             <sf-item-icon [item]="item" class="recipe-image"></sf-item-icon>
             {{ item.name }}
         </a>

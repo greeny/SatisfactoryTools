@@ -73,7 +73,7 @@
                                     </ng-container>
                                 </td>
                                 <td>
-                                    <sf-item-amount *ngFor="let ingredient of buildingRecipe.ingredients; trackBy: trackByCost" [item]="ingredient.item" [amount]="ingredient.amount"></sf-item-amount>
+                                    <sf-item-amount *ngFor="let ingredient of buildingRecipe.ingredients; trackBy: trackByCost" [amount]="ingredient.amount" [item]="ingredient.item"></sf-item-amount>
                                 </td>
                             </tr>
                         </tbody>
@@ -100,7 +100,7 @@
                                     <a [routerLink]="['/', 'codex', 'schematics', schematic.slug]">{{ schematic.name }}</a>
                                 </td>
                                 <td>
-                                    <sf-item-amount *ngFor="let ingredient of schematic.cost; trackBy: trackByCost" [item]="ingredient.item" [amount]="ingredient.amount"></sf-item-amount>
+                                    <sf-item-amount *ngFor="let ingredient of schematic.cost; trackBy: trackByCost" [amount]="ingredient.amount" [item]="ingredient.item"></sf-item-amount>
                                 </td>
                             </tr>
                         </tbody>

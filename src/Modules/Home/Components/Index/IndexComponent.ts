@@ -4,5 +4,6 @@ import {Component} from '@angular/core';
 	selector:    'home-index',
 	templateUrl: './IndexComponent.html'
 })
-export class IndexComponent {
+export class IndexComponent
+{
 }

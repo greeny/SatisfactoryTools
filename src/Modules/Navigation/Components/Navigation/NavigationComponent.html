@@ -1,10 +1,10 @@
 <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-primary">
     <div class="container-fluid px-xl-5 px-lg-4 px-md-3 px-sm-2 px-1">
         <a class="navbar-brand" routerLink="/">
-            <img src="/assets/images/logo/satisfactorySmall.png" height="40" class="d-sm-inline-block d-none">
-            <img src="/assets/images/logo/tools.png" height="40">
+            <img class="d-sm-inline-block d-none" height="40" src="/assets/images/logo/satisfactorySmall.png">
+            <img height="40" src="/assets/images/logo/tools.png">
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -30,7 +30,7 @@
     <h6 class="dropdown-header">{{ header.header }}</h6>
 </ng-template>
 
-<ng-template #linkEntry let-link="link" let-path="path" let-parent="parent">
+<ng-template #linkEntry let-link="link" let-parent="parent" let-path="path">
     <ng-container *ngIf="isDivider(link)">
         <ng-container *ngTemplateOutlet="divider; context: {link: link}"></ng-container>
     </ng-container>
@@ -42,16 +42,16 @@
     </ng-container>
 </ng-template>
 
-<ng-template #linked let-link="link" let-path="path" let-parent="parent">
+<ng-template #linked let-link="link" let-parent="parent" let-path="path">
     <ng-container *ngTemplateOutlet="isLinkContainer(link) ? hasSubLinks : noSubLinks; context: {link: link, path: path, parent: parent}"></ng-container>
 </ng-template>
 
-<ng-template #hasSubLinks let-link="link" let-path="path" let-parent="parent">
-    <li class="dropdown" [ngClass]="{'nav-item': !parent, 'dropdown-item': !!parent}" dropdown [class.active]="isActive(combinePath(link.path, path), link.exact)">
+<ng-template #hasSubLinks let-link="link" let-parent="parent" let-path="path">
+    <li [class.active]="isActive(combinePath(link.path, path), link.exact)" [ngClass]="{'nav-item': !parent, 'dropdown-item': !!parent}" class="dropdown" dropdown>
         <a class="nav-link dropdown-toggle" dropdownToggle>
             <ng-container *ngTemplateOutlet="linkLabel; context: {link: link}"></ng-container>
         </a>
-        <ul class="dropdown-menu" [class.dropdown-menu-left]="link.slot === 'left' || parent?.slot === 'left'" [class.dropdown-menu-right]="link.slot === 'right' || parent?.slot === 'right'" *dropdownMenu>
+        <ul *dropdownMenu [class.dropdown-menu-left]="link.slot === 'left' || parent?.slot === 'left'" [class.dropdown-menu-right]="link.slot === 'right' || parent?.slot === 'right'" class="dropdown-menu">
             <ng-container *ngFor="let internalLink of link.children">
                 <ng-container *ngTemplateOutlet="linkEntry; context: {link: internalLink, path: combinePath(link.path, path), parent: link}"></ng-container>
             </ng-container>
@@ -59,7 +59,7 @@
     </li>
 </ng-template>
 
-<ng-template #noSubLinks let-link="link" let-path="path" let-parent="parent">
+<ng-template #noSubLinks let-link="link" let-parent="parent" let-path="path">
     <li [class.active]="isActive(combinePath(link.path, path), link.exact)" [ngClass]="{'nav-item': !parent, 'dropdown-item': !!parent}" routerLinkActive="active">
         <a *ngIf="!link.url" [routerLinkActiveOptions]="{exact: link.exact}" [routerLink]="combinePath(link.path, path)" class="nav-link" routerLinkActive="active">
             <ng-container *ngTemplateOutlet="linkLabel; context: {link: link}"></ng-container>

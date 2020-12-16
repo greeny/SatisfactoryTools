@@ -1,25 +1,27 @@
-import {Component, OnDestroy, OnInit}              from '@angular/core';
-import {FormControl, FormGroup}                    from '@angular/forms';
-import {ItemsDataProvider}                         from '@modules/Codex/Service/DataProvider';
-import {IItemSchema}                               from '@src/Schema/IItemSchema';
-import {Sort}                                      from '@utils/Sort';
-import {TrackBy}                                   from '@utils/TrackBy';
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {FormControl, FormGroup} from '@angular/forms';
+import {ItemsDataProvider} from '@modules/Codex/Service/DataProvider';
+import {IItemSchema} from '@src/Schema/IItemSchema';
+import {Sort} from '@utils/Sort';
+import {TrackBy} from '@utils/TrackBy';
 import {BehaviorSubject, Observable, Subscription} from 'rxjs';
 import {distinctUntilChanged, map, withLatestFrom} from 'rxjs/operators';
 
-interface IFilter {
+interface IFilter
+{
 	filter: string;
-	radioactive: boolean | null;
-	withEnergy: boolean | null;
-	stackSize: number | null;
-	physicalState: 'solid' | 'liquid' | null
+	radioactive: boolean|null;
+	withEnergy: boolean|null;
+	stackSize: number|null;
+	physicalState: 'solid'|'liquid'|null
 }
 
 @Component({
 	selector:    'sf-codex-items',
 	templateUrl: './ItemsComponent.html'
 })
-export class ItemsComponent implements OnInit, OnDestroy {
+export class ItemsComponent implements OnInit, OnDestroy
+{
 	public items$: Observable<IItemSchema[]>;
 	public advancedFiltersCollapsed: boolean = true;
 	public stackSizes = [
@@ -49,18 +51,21 @@ export class ItemsComponent implements OnInit, OnDestroy {
 		stackSize:     new FormControl(),
 		physicalState: new FormControl()
 	});
-
+	public trackByClassName = TrackBy.byClassName;
 	private subscription: Subscription;
 	private search$ = new BehaviorSubject<IFilter>(this.filterInitialState);
 
-	constructor(private itemsProvider: ItemsDataProvider) {
+	constructor(private itemsProvider: ItemsDataProvider)
+	{
 	}
 
-	clearQuery() {
+	clearQuery()
+	{
 		this.form.get('filter').setValue('');
 	}
 
-	ngOnInit(): void {
+	ngOnInit(): void
+	{
 		this.subscription = this.form.valueChanges.subscribe(r => this.search$.next(r));
 		this.items$ = this.search$.pipe(
 			withLatestFrom(this.itemsProvider.getAll()),
@@ -100,9 +105,8 @@ export class ItemsComponent implements OnInit, OnDestroy {
 		this.form.setValue(this.filterInitialState);
 	}
 
-	public trackByClassName = TrackBy.byClassName;
-
-	ngOnDestroy(): void {
+	ngOnDestroy(): void
+	{
 		if (this.subscription) {
 			this.subscription.unsubscribe();
 		}

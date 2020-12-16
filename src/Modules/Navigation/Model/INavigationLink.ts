@@ -1,7 +1,8 @@
-export interface IBaseNavigationLink {
-    label: string;
-    icon?: string;
-    children?: NavigationChildren[];
+export interface IBaseNavigationLink
+{
+	label: string;
+	icon?: string;
+	children?: NavigationChildren[];
 }
 
 export type LeftSlot = 'left';
@@ -10,22 +11,27 @@ type DefaultNavigationType = INavigationInternalLink | INavigationExternalLink |
 export type NavigationRoot = DefaultNavigationType & { priority: number, slot: LeftSlot | RightSlot }
 export type NavigationChildren = DefaultNavigationType | INavigationDivider | INavigationHeader;
 
-export interface INavigationContainer extends IBaseNavigationLink {
+export interface INavigationContainer extends IBaseNavigationLink
+{
 }
 
-export interface INavigationInternalLink extends IBaseNavigationLink {
-    path: string;
-    exact: boolean;
+export interface INavigationInternalLink extends IBaseNavigationLink
+{
+	path: string;
+	exact: boolean;
 }
 
-export interface INavigationExternalLink extends IBaseNavigationLink {
-    url: string;
+export interface INavigationExternalLink extends IBaseNavigationLink
+{
+	url: string;
 }
 
-export interface INavigationDivider {
-    divider: boolean;
+export interface INavigationDivider
+{
+	divider: boolean;
 }
 
-export interface INavigationHeader {
-    header: string;
+export interface INavigationHeader
+{
+	header: string;
 }

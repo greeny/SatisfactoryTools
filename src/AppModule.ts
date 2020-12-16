@@ -1,14 +1,14 @@
-import {NgModule}                             from '@angular/core';
-import {RouterModule}                         from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule} from '@angular/router';
 import {BreadcrumbsConfig, BreadcrumbsModule} from '@exalif/ngx-breadcrumbs';
-import {Breadcrumb}                           from '@exalif/ngx-breadcrumbs/lib/models/breadcrumb';
-import {CodexModule}                          from '@modules/Codex';
-import {CommunityModule}                      from '@modules/Community';
-import {HomeModule}                           from '@modules/Home';
-import {NavigationModule}                     from '@modules/Navigation';
-import {RootModule}                           from '@modules/RootModule';
-import {SharedModule}                         from '@modules/Shared';
-import {BreadcrumbsComponent, RootComponent}  from './Components';
+import {Breadcrumb} from '@exalif/ngx-breadcrumbs/lib/models/breadcrumb';
+import {CodexModule} from '@modules/Codex';
+import {CommunityModule} from '@modules/Community';
+import {HomeModule} from '@modules/Home';
+import {NavigationModule} from '@modules/Navigation';
+import {RootModule} from '@modules/RootModule';
+import {SharedModule} from '@modules/Shared';
+import {BreadcrumbsComponent, RootComponent} from './Components';
 
 @NgModule({
     declarations: [

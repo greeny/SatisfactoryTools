@@ -1,13 +1,14 @@
-import {Component, OnDestroy, OnInit}              from '@angular/core';
-import {FormControl, FormGroup}                    from '@angular/forms';
-import {SchematicsDataProvider}                    from '@modules/Codex/Service/DataProvider';
-import {ISchematicSchema}                          from '@src/Schema/ISchematicSchema';
-import {TrackBy}                                   from '@utils/TrackBy';
-import {Sort}                                      from '@utils/Sort';
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {FormControl, FormGroup} from '@angular/forms';
+import {SchematicsDataProvider} from '@modules/Codex/Service/DataProvider';
+import {ISchematicSchema} from '@src/Schema/ISchematicSchema';
+import {Sort} from '@utils/Sort';
+import {TrackBy} from '@utils/TrackBy';
 import {BehaviorSubject, Observable, Subscription} from 'rxjs';
 import {distinctUntilChanged, map, withLatestFrom} from 'rxjs/operators';
 
-interface IFilter {
+interface IFilter
+{
 	filter: string;
 }
 
@@ -15,7 +16,8 @@ interface IFilter {
 	selector:    'sf-codex-schematics',
 	templateUrl: './SchematicsComponent.html'
 })
-export class SchematicsComponent implements OnInit, OnDestroy {
+export class SchematicsComponent implements OnInit, OnDestroy
+{
 	public items$: Observable<ISchematicSchema[]>;
 	public advancedFiltersCollapsed: boolean = true;
 	public trackByClassName = TrackBy.byClassName;
@@ -29,10 +31,12 @@ export class SchematicsComponent implements OnInit, OnDestroy {
 	private subscription: Subscription;
 	private search$ = new BehaviorSubject<IFilter>(this.filterInitialState);
 
-	constructor(private itemsProvider: SchematicsDataProvider) {
+	constructor(private itemsProvider: SchematicsDataProvider)
+	{
 	}
 
-	ngOnInit(): void {
+	ngOnInit(): void
+	{
 		this.subscription = this.form.valueChanges.subscribe(r => this.search$.next(r));
 		this.items$ = this.search$.pipe(
 			withLatestFrom(this.itemsProvider.getAll()),
@@ -48,11 +52,13 @@ export class SchematicsComponent implements OnInit, OnDestroy {
 		this.form.setValue(this.filterInitialState);
 	}
 
-	clearQuery() {
+	clearQuery()
+	{
 		this.form.get('filter').setValue('');
 	}
 
-	ngOnDestroy(): void {
+	ngOnDestroy(): void
+	{
 		if (this.subscription) {
 			this.subscription.unsubscribe();
 		}

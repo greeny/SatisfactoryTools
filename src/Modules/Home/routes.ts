@@ -1,11 +1,11 @@
-import {Route}          from '@angular/router';
+import {Route} from '@angular/router';
 import {IndexComponent} from '@modules/Home/Components';
 
 export const routes: Route[] = [
 	{
-		path: '',
+		path:      '',
 		component: IndexComponent,
-		data: {
+		data:      {
 			breadcrumbs: 'Satisfactory Tools'
 		}
 	}

@@ -1,11 +1,12 @@
-import {NgModule}        from '@angular/core';
+import {NgModule} from '@angular/core';
 import {CommunityModule} from '@modules/Community';
 
 @NgModule({
-	imports: [
-		CommunityModule,
-	]
+    imports: [
+        CommunityModule
+    ]
 })
-export class RootModule {
+export class RootModule
+{
 
 }

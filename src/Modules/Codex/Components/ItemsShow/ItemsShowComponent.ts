@@ -1,13 +1,13 @@
-import {Component}                                   from '@angular/core';
-import {ActivatedRoute}                              from '@angular/router';
+import {Component} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
 import {RecipesDataProvider, SchematicsDataProvider} from '@modules/Codex/Service/DataProvider';
-import {IItemAmountSchema}                           from '@src/Schema/IItemAmountSchema';
-import {IItemSchema}                                 from '@src/Schema/IItemSchema';
-import {IRecipeSchema}                               from '@src/Schema/IRecipeSchema';
-import {ISchematicSchema}                            from '@src/Schema/ISchematicSchema';
-import {TrackBy}                                     from '@utils/TrackBy';
-import {Observable}                                  from 'rxjs';
-import {map, withLatestFrom}                         from 'rxjs/operators';
+import {IItemAmountSchema} from '@src/Schema/IItemAmountSchema';
+import {IItemSchema} from '@src/Schema/IItemSchema';
+import {IRecipeSchema} from '@src/Schema/IRecipeSchema';
+import {ISchematicSchema} from '@src/Schema/ISchematicSchema';
+import {TrackBy} from '@utils/TrackBy';
+import {Observable} from 'rxjs';
+import {map, withLatestFrom} from 'rxjs/operators';
 
 @Component({
     selector:    'sf-codex-item-show',
@@ -20,6 +20,7 @@ export class ItemsShowComponent
     public readonly schematics$: Observable<ISchematicSchema[]>;
     public readonly asProductRecipes$: Observable<IRecipeSchema[]>;
     public readonly buildingRecipes$: Observable<IRecipeSchema[]>;
+    public trackByCost = TrackBy.byItemAmountSchema;
     private readonly allNonBuildingRecipes$: Observable<IRecipeSchema[]>;
     private readonly allBuildingRecipes$: Observable<IRecipeSchema[]>;
     private readonly allSchematics$: Observable<ISchematicSchema[]>;
@@ -33,7 +34,7 @@ export class ItemsShowComponent
         this.allSchematics$ = this.schematicProvider.getAll();
         this.item$ = this.activatedRoute.data.pipe(
             map(data => {
-                return data.item;
+                return data.entity;
             })
         );
         this.allBuildingRecipes$ = this.recipesProvider.getAll().pipe(
@@ -78,12 +79,10 @@ export class ItemsShowComponent
         );
     }
 
-    public trackByCost = TrackBy.byItemAmountSchema;
-
     private recipesFilterByItem(recipes: IRecipeSchema[], item: IItemSchema, collectionType: 'ingredients' | 'products'): IRecipeSchema[]
     {
         return recipes.filter((recipe) => {
-            return this.filterAmountSchemasByItem(recipe[collectionType], item).length > 0
+            return this.filterAmountSchemasByItem(recipe[collectionType], item).length > 0;
         });
     }
 

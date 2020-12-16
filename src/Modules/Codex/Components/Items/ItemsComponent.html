@@ -3,29 +3,29 @@
     <div class="col-sm-6">
         <form [formGroup]="form">
             <div class="input-group filter">
-                <input type="text" placeholder="Search for an item" formControlName="filter" class="form-control" />
+                <input class="form-control" formControlName="filter" placeholder="Search for an item" type="text" />
                 <div class="input-group-append">
-                    <a class="clear-filter" [class.has-content]="form.get('filter').value.length > 0" (click)="clearQuery()">
+                    <a (click)="clearQuery()" [class.has-content]="form.get('filter').value.length > 0" class="clear-filter">
                         <i class="fa fa-times"></i>
                     </a>
-                    <a class="btn btn-secondary" (click)="advancedFiltersCollapsed = !advancedFiltersCollapsed" [attr.aria-expanded]="false === advancedFiltersCollapsed" aria-controls="advancedFilters">
+                    <a (click)="advancedFiltersCollapsed = !advancedFiltersCollapsed" [attr.aria-expanded]="false === advancedFiltersCollapsed" aria-controls="advancedFilters" class="btn btn-secondary">
                         advanced filters
-                        <i class="fas" [class.fa-chevron-down]="advancedFiltersCollapsed" [class.fa-chevron-up]="false === advancedFiltersCollapsed"></i>
+                        <i [class.fa-chevron-down]="advancedFiltersCollapsed" [class.fa-chevron-up]="false === advancedFiltersCollapsed" class="fas"></i>
                     </a>
                 </div>
             </div>
-            <div id="advancedFilters" [collapse]="advancedFiltersCollapsed" [isAnimated]="true">
-                <div fxLayout="row" fxFlexAlign="start center" fxLayoutGap="10px" fxLayoutAlign="start center">
-                    <div fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center start">
+            <div [collapse]="advancedFiltersCollapsed" [isAnimated]="true" id="advancedFilters">
+                <div fxFlexAlign="start center" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+                    <div fxLayout="column" fxLayoutAlign="center start" fxLayoutGap="10px">
                         <div class="form-check">
                             <label class="form-check-label">
-                                <input type="checkbox" class="form-check-input" formControlName="radioactive"/>
+                                <input class="form-check-input" formControlName="radioactive" type="checkbox" />
                                 <span>Show only radioactive</span>
                             </label>
                         </div>
                         <div class="form-check">
                             <label class="form-check-label">
-                                <input type="checkbox" class="form-check-input" formControlName="withEnergy"/>
+                                <input class="form-check-input" formControlName="withEnergy" type="checkbox" />
                                 <span>With energy value only</span>
                             </label>
                         </div>
@@ -33,14 +33,14 @@
                     <div class="form-group" style="margin-right:10px">
                         <label>Stack size
                             <select class="form-control" formControlName="stackSize">
-                                <option [ngValue]="option.value" *ngFor="let option of stackSizes">{{ option.label }}</option>
+                                <option *ngFor="let option of stackSizes" [ngValue]="option.value">{{ option.label }}</option>
                             </select>
                         </label>
                     </div>
                     <div class="form-group" style="margin-right:10px">
                         <label>Physical state
                             <select class="form-control" formControlName="physicalState">
-                                <option [ngValue]="option.value" *ngFor="let option of physicalStates">{{ option.label }}</option>
+                                <option *ngFor="let option of physicalStates" [ngValue]="option.value">{{ option.label }}</option>
                             </select>
                         </label>
                     </div>
@@ -51,8 +51,8 @@
 </div>
 <br />
 <div class="recipe-list">
-    <div class="card text-center item-card" *ngFor="let item of items$ | async; trackBy: trackByClassName">
-        <a class="recipe-name stretched-link" [routerLink]="[item.slug]">
+    <div *ngFor="let item of items$ | async; trackBy: trackByClassName" class="card text-center item-card">
+        <a [routerLink]="[item.slug]" class="recipe-name stretched-link">
             <sf-item-icon [item]="item" class="recipe-image"></sf-item-icon>
             {{ item.name }}
         </a>

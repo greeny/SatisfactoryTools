@@ -1,14 +1,14 @@
-import {CommonModule}                     from '@angular/common';
-import {HttpClientModule}                 from '@angular/common/http';
-import {NgModule}                         from '@angular/core';
-import {FlexLayoutModule}                 from '@angular/flex-layout';
+import {CommonModule} from '@angular/common';
+import {HttpClientModule} from '@angular/common/http';
+import {NgModule} from '@angular/core';
+import {FlexLayoutModule} from '@angular/flex-layout';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {BrowserModule}                    from '@angular/platform-browser';
-import {BrowserAnimationsModule}          from '@angular/platform-browser/animations';
-import {ItemIconComponent}                from '@modules/Shared/Components';
-import {CollapseModule}                   from 'ngx-bootstrap/collapse';
-import {BsDropdownModule}                 from 'ngx-bootstrap/dropdown';
-import {TooltipModule}                    from 'ngx-bootstrap/tooltip';
+import {BrowserModule} from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {ItemIconComponent} from '@modules/Shared/Components';
+import {CollapseModule} from 'ngx-bootstrap/collapse';
+import {BsDropdownModule} from 'ngx-bootstrap/dropdown';
+import {TooltipModule} from 'ngx-bootstrap/tooltip';
 
 @NgModule({
 	declarations: [
@@ -44,6 +44,7 @@ import {TooltipModule}                    from 'ngx-bootstrap/tooltip';
 		ItemIconComponent
 	]
 })
-export class SharedModule {
+export class SharedModule
+{
 
 }

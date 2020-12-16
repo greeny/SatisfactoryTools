@@ -1,12 +1,14 @@
-import {NgModule}         from '@angular/core';
-import {navigation}       from '@modules/Community/navigation';
+import {NgModule} from '@angular/core';
+import {navigation} from '@modules/Community/navigation';
 import {NavigationModule} from '@modules/Navigation';
-import {SharedModule}     from '@modules/Shared';
+import {SharedModule} from '@modules/Shared';
 
 @NgModule({
 	imports: [
 		SharedModule,
-		NavigationModule.forChild(navigation),
+		NavigationModule.forChild(navigation)
 	]
 })
-export class CommunityModule{}
+export class CommunityModule
+{
+}

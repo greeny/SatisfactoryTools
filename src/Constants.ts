@@ -1,3 +1,8 @@
+import {IBuildingSchema} from '@src/Schema/IBuildingSchema';
+import {IItemSchema} from '@src/Schema/IItemSchema';
+import {IRecipeSchema} from '@src/Schema/IRecipeSchema';
+import {ISchematicSchema} from '@src/Schema/ISchematicSchema';
+
 export class Constants
 {
 	public static STACK_SIZE: { [key: string]: number } = {
@@ -47,3 +52,5 @@ export type PHYSICAL_STATE_LIQUID = 'liquid';
 export type STACK_SIZES = STACK_SIZE_ONE|STACK_SIZE_SMALL|STACK_SIZE_MEDIUM|STACK_SIZE_BIG|STACK_SIZE_LARGE;
 export type PHYSICAL_STATES = PHYSICAL_STATE_SOLID|PHYSICAL_STATE_LIQUID;
 export type RESOURCE_PURITY = RESOURCE_PURITY_IMPURE|RESOURCE_PURITY_NORMAL|RESOURCE_PURITY_PURE;
+
+export type CODEX_TYPES = IItemSchema|IBuildingSchema|ISchematicSchema|IRecipeSchema;
