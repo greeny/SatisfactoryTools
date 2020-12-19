@@ -32,6 +32,9 @@ export class ProductionToolResult
 		children: [],
 		edges: [],
 	};
+
+	public nodeLocationCache: {[id: string]: {x: number, y: number}}|null = null;
+
 	public rawResources: {[key: string]: {amount: number, data: {amount: number, id: number}[]}} = {};
 
 	public powerUsage: {average: number, max: number} = {
