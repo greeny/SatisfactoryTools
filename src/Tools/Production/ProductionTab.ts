@@ -30,6 +30,7 @@ export class ProductionTab
 	};
 
 	public tab: string = 'production';
+	public resultTab: string = 'visualization';
 	public shareLink: string = '';
 
 	private readonly unregisterCallback: () => void;

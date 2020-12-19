@@ -32,7 +32,17 @@ export class ProductionToolResult
 		children: [],
 		edges: [],
 	};
+
+	public nodeLocationCache: {[id: string]: {x: number, y: number}}|null = null;
+
 	public rawResources: {[key: string]: {amount: number, data: {amount: number, id: number}[]}} = {};
+
+	public powerUsage: {average: number, max: number} = {
+		average: 0,
+		max: 0,
+	};
+
+	public powerDetails: {[key: string]: {name: string, amount: number, average: number, max: number}} = {};
 
 	private nodeWidth = 300;
 	private nodeHeight = 100;
@@ -41,7 +51,26 @@ export class ProductionToolResult
 	{
 		let id = 1;
 		let nodeId = 1;
+
 		for (const recipe of recipes) {
+			for (const machine of recipe.machines) {
+				const powerUsage = recipe.recipe.machine.metadata.powerConsumption; // TODO handle overclocking
+				const avgPowerUsage = machine.amount * powerUsage;
+				const maxPowerUsage = Math.ceil(machine.amount) * powerUsage;
+
+				const className = recipe.recipe.machine.className;
+				if (!(className in this.powerDetails)) {
+					this.powerDetails[className] = {name: recipe.recipe.machine.name, amount: 0, average: 0, max: 0};
+				}
+
+				this.powerDetails[className].amount += machine.amount;
+				this.powerDetails[className].average += avgPowerUsage;
+				this.powerDetails[className].max += maxPowerUsage;
+
+				this.powerUsage.average += avgPowerUsage;
+				this.powerUsage.max += maxPowerUsage;
+			}
+
 			this.nodes.add({
 				id: id,
 				label: '',

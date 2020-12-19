@@ -410,7 +410,9 @@ export class AppModule
 	private static generateNumberFormattingFunction()
 	{
 		return (value: number) => {
-			if (value === ~~value) {
+			if (typeof value === 'undefined') {
+				return 'NaN';
+			} else if (value === ~~value) {
 				return value;
 			} else {
 				return value.toFixed(5).replace(/\.?0+$/, '');
