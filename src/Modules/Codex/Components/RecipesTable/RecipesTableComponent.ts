@@ -5,7 +5,7 @@ import {Formula} from '@src/Formula';
 import {IBuildingSchema} from '@src/Schema/IBuildingSchema';
 import {IRecipeSchema} from '@src/Schema/IRecipeSchema';
 import {TrackBy} from '@utils/TrackBy';
-import {Observable} from 'rxjs';
+import {identity, Observable} from 'rxjs';
 import {concatMap, filter} from 'rxjs/operators';
 
 @Component({
@@ -15,6 +15,7 @@ import {concatMap, filter} from 'rxjs/operators';
 export class RecipesTableComponent
 {
     @Input() recipes: IRecipeSchema[];
+    @Input() overclock: number = 100;
     public readonly workshopClassName = Constants.WORKSHOP_CLASSNAME;
     public readonly workbenchClassName = Constants.WORKBENCH_CLASSNAME;
     public trackByCost = TrackBy.byItemAmountSchema;
@@ -26,7 +27,7 @@ export class RecipesTableComponent
     public resolveManufacturer(recipe: IRecipeSchema): Observable<IBuildingSchema>
     {
         return this.buildingDataProvider.getAll().pipe(
-            concatMap(x => x),
+            concatMap(identity),
             filter((building: IBuildingSchema) => recipe.producedIn[0] === building.className)
         );
     }

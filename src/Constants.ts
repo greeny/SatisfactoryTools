@@ -29,7 +29,7 @@ export class Constants
 	public static WATER_CLASSNAME = 'Desc_Water_C';
 	public static NUCLEAR_WASTE_CLASSNAME = 'Desc_NuclearWaste_C';
 	public static NUCLEAR_FUEL_ROD_CLASSNAME = 'Desc_NuclearFuelRod_C';
-	public static GEOTHERMAL_GENERATOR_CLASSNAME = 'Build_GeneratorGeoThermal_C';
+	public static GEOTHERMAL_GENERATOR_CLASSNAME = 'Desc_GeneratorGeoThermal_C';
 
 	public static RESOURCE_MULTIPLIER_IMPURE = 0.5;
 	public static RESOURCE_MULTIPLIER_NORMAL = 1;

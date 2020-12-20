@@ -1,7 +1,7 @@
 import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from '@angular/router';
 import {CODEX_TYPES} from '@src/Constants';
 import {IDataProvider} from '@src/Types/IDataProvider';
-import {Observable} from 'rxjs';
+import {identity, Observable} from 'rxjs';
 import {concatMap, filter} from 'rxjs/operators';
 
 export abstract class AbstractResolver<T extends CODEX_TYPES> implements Resolve<T>
@@ -13,7 +13,7 @@ export abstract class AbstractResolver<T extends CODEX_TYPES> implements Resolve
 	resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<T>
 	{
 		return this.provider.getAll().pipe(
-			concatMap(x => x),
+			concatMap(identity),
 			filter((entry) => {
 				return route.paramMap.get('id') === entry.slug;
 			})

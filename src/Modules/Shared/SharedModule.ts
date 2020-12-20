@@ -6,13 +6,17 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {BrowserModule} from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ItemIconComponent} from '@modules/Shared/Components';
+import {IsOverclockablePipe} from '@modules/Shared/Pipe/IsOverclockablePipe';
+import {UcFirstPipe} from '@modules/Shared/Pipe/UcFirstPipe';
 import {CollapseModule} from 'ngx-bootstrap/collapse';
 import {BsDropdownModule} from 'ngx-bootstrap/dropdown';
 import {TooltipModule} from 'ngx-bootstrap/tooltip';
 
 @NgModule({
 	declarations: [
-		ItemIconComponent
+		ItemIconComponent,
+		IsOverclockablePipe,
+		UcFirstPipe
 	],
 	imports:      [
 		BrowserModule,
@@ -28,7 +32,7 @@ import {TooltipModule} from 'ngx-bootstrap/tooltip';
 		ReactiveFormsModule
 		// LaddaModule
 	],
-	exports:      [
+	exports: [
 		BrowserModule,
 		BrowserAnimationsModule,
 		HttpClientModule,
@@ -41,7 +45,9 @@ import {TooltipModule} from 'ngx-bootstrap/tooltip';
 		FormsModule,
 		ReactiveFormsModule,
 		// LaddaModule
-		ItemIconComponent
+		ItemIconComponent,
+		IsOverclockablePipe,
+		UcFirstPipe
 	]
 })
 export class SharedModule

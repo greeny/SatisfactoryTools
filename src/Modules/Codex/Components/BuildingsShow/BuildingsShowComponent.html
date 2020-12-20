@@ -1,71 +1,230 @@
-<div *ngIf="building$ | async as entity" class="row">
-    <div class="col-sm-6">
-        <div class="card mb-3">
-            <h2 [innerHTML]="entity.name" class="card-header"></h2>
-            <div class="card-body">
-                <div class="float-left mr-3">
-                    <sf-item-icon [item]="entity" size="128"></sf-item-icon>
-                </div>
-                <p [innerHTML]="entity.description" style="white-space:pre-line"></p>
-                <div class="clearfix"></div>
-                <ng-container *ngIf="recipe$ | async as asyncRecipe">
-                    <hr />
-                    <h3>Cost</h3>
-                    <ng-container *ngFor="let ingredient of asyncRecipe.ingredients">
-                        <div class="d-inline-block p-2 ng-scope">
-                            {{ ingredient.amount }}x
-                            <sf-renderer-item [item]="ingredient.item" [showName]="false"></sf-renderer-item>
-                        </div>
+<ng-container *ngIf="building$ | async as entity">
+    <ng-container *ngTemplateOutlet="defaultView; context: {entity: entity}"></ng-container>
+</ng-container>
+
+<ng-template #defaultView let-entity="entity">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card mb-3">
+                <h2 [innerHTML]="entity.name" class="card-header"></h2>
+                <div class="card-body">
+                    <div class="float-left mr-3">
+                        <sf-item-icon [item]="entity" size="128"></sf-item-icon>
+                    </div>
+                    <p [innerHTML]="entity.description" style="white-space:pre-line"></p>
+                    <ng-container *ngIf="isBuilding(entity)">
+                        <ng-container *ngTemplateOutlet="buildingCost; context: {entity: entity}"></ng-container>
                     </ng-container>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card mb-3">
+                <h2 [innerHTML]="entity.name + ' details'" class="card-header"></h2>
+                <div class="card-body">
+                    <ng-container *ngTemplateOutlet="buildingDetailsTable; context: {entity: entity}"></ng-container>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <!-- In case of future unification into single component for displaying all the stuff -->
+        <ng-container *ngIf="isBuilding(entity)">
+            <ng-container *ngIf="isManufacturerBuilding(entity)">
+                <ng-container *ngTemplateOutlet="manufacturerExtended; context: {entity: entity}"></ng-container>
+            </ng-container>
+            <ng-container *ngIf="isGeneratorBuilding(entity)">
+                <ng-container *ngTemplateOutlet="generatorExtended; context: {entity: entity, generator: getGenerator(entity)}"></ng-container>
+            </ng-container>
+            <ng-container *ngIf="isExtractorBuilding(entity)">
+                <ng-container *ngTemplateOutlet="extractorExtended; context: {entity: entity, extractor: getExtractor(entity)}"></ng-container>
+            </ng-container>
+        </ng-container>
+    </div>
+</ng-template>
+
+<ng-template #buildingDetailsTable let-entity="entity">
+    <table class="table">
+        <tbody>
+            <!-- In case of future unification into single component for displaying all the stuff -->
+            <ng-container *ngIf="isBuilding(entity)">
+                <ng-container *ngIf="entity | IsOverclockable">
+                    <tr>
+                        <td>Overclock</td>
+                        <td>
+                            <ng-container *ngTemplateOutlet="displayNumber; context: {value: overclock$ | async}"></ng-container> %
+                            <input type="range" min="0" max="250" class="w-100" step="1" [(ngModel)]="overclock" (ngModelChange)="overclock$.next($event)" />
+                        </td>
+                    </tr>
+                </ng-container>
+                <ng-container *ngIf="isPowerConsumingBuilding(entity)">
+                    <tr>
+                        <td>Power consumption</td>
+                        <td>
+                            <ng-container *ngTemplateOutlet="displayNumber; context: {value: powerConsumption(entity) | async}"></ng-container> MW
+                        </td>
+                    </tr>
+                </ng-container>
+                <ng-container *ngIf="isGeneratorBuilding(entity)">
+                    <ng-container *ngTemplateOutlet="generatorDetails; context: {entity: entity, generator: getGenerator(entity)}"></ng-container>
+                </ng-container>
+                <ng-container *ngIf="isManualManufacturer(entity)">
+                    <ng-container *ngTemplateOutlet="manualManufacturerDetails; context: {entity: entity}"></ng-container>
+                </ng-container>
+                <ng-container *ngIf="isAutomatedManufacturer(entity)">
+                    <ng-container *ngTemplateOutlet="manufacturerDetails; context: {entity: entity}"></ng-container>
+                </ng-container>
+                <ng-container *ngIf="isExtractorBuilding(entity)">
+                    <ng-container *ngTemplateOutlet="extractorDetails; context: {entity: entity, extractor: getExtractor(entity)}"></ng-container>
+                </ng-container>
+                <ng-container *ngIf="isConveyorBuilding(entity)">
+                    <ng-container *ngTemplateOutlet="conveyorDetails; context: {entity: entity}"></ng-container>
+                </ng-container>
+            </ng-container>
+        </tbody>
+    </table>
+</ng-template>
+
+<ng-template #buildingCost let-entity="entity">
+    <div class="clearfix"></div>
+    <ng-container *ngIf="recipe$ | async as asyncRecipe">
+        <hr />
+        <h3>Cost</h3>
+        <ng-container *ngFor="let ingredient of asyncRecipe.ingredients">
+            <div class="d-inline-block p-2 ng-scope">
+                <ng-container *ngTemplateOutlet="displayNumber; context: {value: ingredient.amount}"></ng-container> x
+                <sf-renderer-item [item]="ingredient.item" [showName]="false"></sf-renderer-item>
+            </div>
+        </ng-container>
+    </ng-container>
+</ng-template>
+<ng-template #extractorDetails let-entity="entity" let-extractor="extractor">
+    <tr>
+        <td>Liquid resource allowed</td>
+        <td>
+            <ng-container *ngTemplateOutlet="humanReadableBoolean; context: {value:  extractor.allowLiquids}"></ng-container>
+        </td>
+    </tr>
+    <tr>
+        <td>Solid resource allowed</td>
+        <td>
+            <ng-container *ngTemplateOutlet="humanReadableBoolean; context: {value: extractor.allowSolids}"></ng-container>
+        </td>
+    </tr>
+    <tr>
+        <td>Purity</td>
+        <td>
+            <div class="btn-group w-100 align-items-center justify-content-center">
+                <ng-container *ngFor="let purity of purities">
+                    <ng-container *ngTemplateOutlet="extractorPuritySwitch; context: {purity: purity}"></ng-container>
                 </ng-container>
             </div>
-        </div>
-    </div>
-    <div class="col-sm-6">
+        </td>
+    </tr>
+    <tr>
+        <td>Extraction rate</td>
+        <td>
+            <ng-container *ngTemplateOutlet="displayNumber; context: {value: getExtractionRate(extractor) | async}"></ng-container> / min
+        </td>
+    </tr>
+</ng-template>
+<ng-template #generatorDetails let-entity="entity" let-generator="generator">
+    <tr>
+        <td>Power production</td>
+        <td>
+            <ng-container *ngTemplateOutlet="displayNumber; context: {value: powerProduction(generator) | async}"></ng-container> MW
+        </td>
+    </tr>
+    <tr>
+        <td>Requires water</td>
+        <td>
+            <ng-container *ngTemplateOutlet="humanReadableBoolean; context: {value: generator.waterToPowerRatio > 0}"></ng-container>
+        </td>
+    </tr>
+</ng-template>
+<ng-template #manualManufacturerDetails let-entity="entity">
+    <!-- no content here -->
+</ng-template>
+<ng-template #manufacturerDetails let-entity="entity">
+    <tr>
+        <td>Manufacturing speed multiplier</td>
+        <td>x{{ entity.metadata.manufacturingSpeed }}</td>
+    </tr>
+</ng-template>
+<ng-template #conveyorDetails let-entity="entity">
+    <tr>
+        <td>Belt speed</td>
+        <td>{{ entity.metadata.beltSpeed }} / min</td>
+    </tr>
+    <tr>
+        <td>Maximum length</td>
+        <td>
+            <ng-container *ngTemplateOutlet="humanReadableBoolean; context: {value: entity.metadata.maxLength / 100}"></ng-container> m
+        </td>
+    </tr>
+</ng-template>
+<ng-template #humanReadableBoolean let-value="value">
+    {{ value ? 'Yes' : 'No' }}
+</ng-template>
+<ng-template #displayNumber let-value="value">
+    {{ value | number: '1.0-3' }}
+</ng-template>
+<ng-template #extractorPuritySwitch let-purity="purity">
+    <span class="btn" (click)="this.purity$.next(purity)" [class.btn-primary]="purity === (this.purity$ | async)">{{ purity | ucfirst }}</span>
+</ng-template>
+<ng-template #generatorExtended let-entity="entity" let-generator="generator">
+    <div class="col-sm-12">
         <div class="card mb-3">
-            <h2 [innerHTML]="entity.name + ' Details'" class="card-header"></h2>
+            <h2 class="card-header">Fuel</h2>
             <div class="card-body">
-
-                <table class="table">
-                    <tbody>
-                        <ng-container *ngIf="isGeneratorBuilding(entity)">
-                            <ng-container *ngIf="getGenerator(entity) as generator">
-                                <tr>
-                                    <td>Overclock</td>
-                                    <td>
-                                        {{ overclock$ | async }}%
-                                        <input type="range" min="0" max="250" class="w-100" step="1" [(ngModel)]="overclock" (ngModelChange)="overclock$.next($event)"/>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Power production</td>
-                                    <td>{{ powerProduction(generator) | async | number }} MW</td>
-                                </tr>
-                                <tr>
-                                    <td>Requires water</td>
-                                    <td>{{ generator.waterToPowerRatio > 0 ? 'Yes' : 'No'}}</td>
-                                </tr>
-                            </ng-container>
-                        </ng-container>
-                        <ng-container *ngIf="isManualManufacturer(entity)">MANUAL MANUFACTURER,</ng-container>
-                        <ng-container *ngIf="isManufacturerBuilding(entity) && false === isManualManufacturer(entity)">MANUFACTURER,</ng-container>
-                        <ng-container *ngIf="isExtractorBuilding(entity)">EXTRACTOR,</ng-container>
-                        <ng-container *ngIf="isConveyorBuilding(entity)">
-                            <tr>
-                                <td>Belt speed</td>
-                                <td>{{ entity.metadata.beltSpeed }} / min</td>
+                <div class="table-responsive">
+                    <table class="table recipe-table table-hover">
+                        <tbody>
+                            <tr *ngFor="let resource of generator.fuel">
+                                <td>
+                                    <sf-renderer-item [item]="resource" [showName]="false"></sf-renderer-item>
+                                    {{ fuelConsumption(generator, resource) | async | number }} / min
+                                    <ng-container *ngIf="generator.waterToPowerRatio > 0">
+                                        <span class="fas fa-fw fa-plus"></span>
+                                        <sf-renderer-item [item]="getWater().className" [showName]="false"></sf-renderer-item>
+                                        {{ waterConsumption(generator) | async | number }} / min
+                                    </ng-container>
+                                </td>
                             </tr>
-                            <tr>
-                                <td>Maximum length</td>
-                                <td>{{ entity.metadata.maxLength / 100 }} m</td>
-                            </tr>
-                        </ng-container>
-                        <ng-container *ngIf="isPowerConsumingBuilding(entity)">CONSUMING POWER,</ng-container>
-                        <ng-container>OTHER STUFF</ng-container>
-                    </tbody>
-                </table>
-                <pre>{{entity|json}}</pre>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</ng-template>
+<ng-template #manufacturerExtended let-entity="entity">
+    <div class="col-sm-12">
+        <div class="card mb-3">
+            <h2 class="card-header">Recipes</h2>
+            <div class="card-body">
+                <sf-recipes-table [recipes]="recipes$ | async" [overclock]="overclock$ | async"></sf-recipes-table>
+            </div>
+        </div>
+    </div>
+</ng-template>
+<ng-template #extractorExtended let-entity="entity" let-extractor="extractor">
+    <div class="col-sm-12">
+        <div class="card mb-3">
+            <h2 class="card-header">Extractable resources</h2>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table recipe-table table-hover">
+                        <tbody>
+                            <tr *ngFor="let resource of extractor.allowedResources">
+                                <td>
+                                    <sf-renderer-item [item]="resource"></sf-renderer-item>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>

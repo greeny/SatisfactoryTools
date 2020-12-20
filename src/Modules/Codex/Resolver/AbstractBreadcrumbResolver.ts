@@ -4,7 +4,7 @@ import {BreadcrumbsResolver} from '@exalif/ngx-breadcrumbs';
 import {Breadcrumb} from '@exalif/ngx-breadcrumbs/lib/models/breadcrumb';
 import {CODEX_TYPES} from '@src/Constants';
 import {IDataProvider} from '@src/Types/IDataProvider';
-import {Observable} from 'rxjs';
+import {identity, Observable} from 'rxjs';
 import {concatMap, filter, map} from 'rxjs/operators';
 
 export abstract class AbstractBreadcrumbResolver<T extends CODEX_TYPES> extends BreadcrumbsResolver
@@ -17,7 +17,7 @@ export abstract class AbstractBreadcrumbResolver<T extends CODEX_TYPES> extends 
 	resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Breadcrumb[]>
 	{
 		return this.provider.getAll().pipe(
-			concatMap(x => x),
+			concatMap(identity),
 			filter((entry) => {
 				return route.paramMap.get('id') === entry.slug;
 			}),
