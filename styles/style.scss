@@ -8,6 +8,10 @@
 	font-size: 1rem;
 }
 
+html {
+	overflow-y: scroll;
+}
+
 :focus, .btn-default-focus {
 	outline: none;
 }
