@@ -1,4 +1,4 @@
-import {Network} from 'vis-network';
+import {DataSet, Network} from 'vis-network';
 import {IController, IScope, ITimeoutService} from 'angular';
 import {ProductionToolResult} from '@src/Tools/Production/ProductionToolResult';
 import ELK from 'elkjs/lib/elk.bundled';
@@ -71,20 +71,32 @@ export class VisualizationComponentController implements IController
 
 	private drawVisualization(result: ProductionToolResult|undefined): void
 	{
-		const network = new Network(this.$element[0], result ? {
-			nodes: result.nodes,
-			edges: result.edges,
-		} : {
-			nodes: [],
-			edges: [],
+		const nodes = result ? result.nodes : new DataSet<{
+			id: number,
+			label: string,
+			title?: string,
+			color?: {border: string, background: string, highlight: {border: string, background: string}},
+			font?: {color: string},
+			x?: number,
+			y?: number,
+		}>();
+		const edges = result ? result.edges : new DataSet<{
+			from: number,
+			to: number,
+			label?: string,
+			title?: string,
+			id?: number,
+		}>();
+
+		const network = new Network(this.$element[0], {
+			nodes: nodes,
+			edges: edges,
 		}, {
 			edges: {
 				labelHighlightBold: false,
-				color: '#697d91',
 				font: {
 					size: 14,
 					multi: 'html',
-					color: '#eeeeee',
 					strokeColor: 'rgba(0, 0, 0, 0.2)',
 				},
 				arrows: 'to',
@@ -95,15 +107,6 @@ export class VisualizationComponentController implements IController
 				font: {
 					size: 14,
 					multi: 'html',
-					color: '#eeeeee',
-				},
-				color: {
-					background: '#df691a',
-					border: 'rgba(0,0,0,0)',
-					highlight: {
-						background: '#e77a31',
-						border: '#eeeeee',
-					},
 				},
 				margin: {
 					top: 10,
@@ -132,6 +135,19 @@ export class VisualizationComponentController implements IController
 			result.nodeLocationCache = network.getPositions();
 			network.on('dragEnd', () => {
 				result.nodeLocationCache = network.getPositions();
+			});
+
+			network.on('doubleClick', (params) => {
+				if (params.nodes.length === 1) {
+					const nodeId = params.nodes[0];
+					const position = network.getPositions(nodeId)[nodeId];
+					result.toggleNode(nodeId);
+					nodes.update({
+						id: nodeId,
+						x: position.x,
+						y: position.y,
+					});
+				}
 			});
 		}
 	}
