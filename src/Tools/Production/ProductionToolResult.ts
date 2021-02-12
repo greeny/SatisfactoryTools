@@ -11,9 +11,11 @@ export class ProductionToolResult
 		id: number,
 		label: string,
 		title?: string,
-		color?: string,
+		color?: {border: string, background: string, highlight: {border: string, background: string}},
+		font?: {color: string},
 		x?: number,
 		y?: number,
+		type?: string,
 	}>();
 	public readonly edges = new DataSet<{
 		from: number,
@@ -21,6 +23,8 @@ export class ProductionToolResult
 		label?: string,
 		title?: string,
 		id?: number,
+		color?: {color: string, highlight: string},
+		font?: {color: string},
 	}>();
 	public readonly elkGraph: IElkGraph = {
 		id: 'root',
@@ -34,6 +38,7 @@ export class ProductionToolResult
 	};
 
 	public nodeLocationCache: {[id: string]: {x: number, y: number}}|null = null;
+	public hiddenNodes: number[] = [];
 
 	public rawResources: {[key: string]: {amount: number, data: {amount: number, id: number}[]}} = {};
 
@@ -43,6 +48,11 @@ export class ProductionToolResult
 	};
 
 	public powerDetails: {[key: string]: {name: string, amount: number, average: number, max: number}} = {};
+
+	public static readonly TYPE_RAW = 'raw';
+	public static readonly TYPE_NORMAL = 'normal';
+	public static readonly TYPE_PRODUCT = 'product';
+	public static readonly HIDDEN_OPACITY = '0.2';
 
 	private nodeWidth = 300;
 	private nodeHeight = 100;
@@ -75,6 +85,9 @@ export class ProductionToolResult
 				id: id,
 				label: '',
 				title: '',
+				color: this.getNodeColor(ProductionToolResult.TYPE_NORMAL, false),
+				font: this.getFontColor(false),
+				type: ProductionToolResult.TYPE_NORMAL,
 			});
 			this.elkGraph.children.push({
 				id: id.toString(),
@@ -98,7 +111,9 @@ export class ProductionToolResult
 					id: id,
 					label: ProductionToolResult.getRecipeDisplayedName(model.getItem(input.item).prototype.name) + '\n' + input.amount.toFixed(2) + ' / min',
 					title: '',
-					color: '#4e5d6c',
+					color: this.getNodeColor(ProductionToolResult.TYPE_RAW, false),
+					font: this.getFontColor(false),
+					type: ProductionToolResult.TYPE_RAW,
 				});
 				this.elkGraph.children.push({
 					id: id.toString(),
@@ -115,7 +130,7 @@ export class ProductionToolResult
 			}
 		}
 
-		const edges: {[key: string]: {from: number, to: number, label: string, arrows?: string}} = {};
+		const edges: {[key: string]: {from: number, to: number, label: string, arrows?: string, color?: {color: string, highlight: string}, font?: {color: string}}} = {};
 		for (const recipe of recipes) {
 			ingredientLoop:
 			for (const ingredient of recipe.recipe.ingredients) {
@@ -131,6 +146,8 @@ export class ProductionToolResult
 							from: input.nodeId,
 							to: recipe.nodeId,
 							label: ingredient.item.prototype.name + '\n' + diff.toFixed(2) + '/min',
+							color: this.getEdgeColor(false),
+							font: this.getFontColor(false),
 						};
 						this.elkGraph.edges.push({
 							id: nodeId.toString(),
@@ -158,6 +175,8 @@ export class ProductionToolResult
 									from: re.nodeId,
 									to: recipe.nodeId,
 									label: ingredient.item.prototype.name + '\n' + diff.toFixed(2) + '/min',
+									color: this.getEdgeColor(false),
+									font: this.getFontColor(false),
 								};
 							} else {
 								edges[reverseKey].arrows = 'from,to';
@@ -208,7 +227,9 @@ export class ProductionToolResult
 					id: id,
 					label: ProductionToolResult.getRecipeDisplayedName(item.prototype.name) + '\n' + resource.amount.toFixed(2) + ' / min',
 					title: '',
-					color: '#4e5d6c',
+					color: this.getNodeColor(ProductionToolResult.TYPE_RAW, false),
+					font: this.getFontColor(false),
+					type: ProductionToolResult.TYPE_RAW,
 				});
 				this.elkGraph.children.push({
 					id: id.toString(),
@@ -221,6 +242,8 @@ export class ProductionToolResult
 						from: id,
 						to: data.id,
 						label: item.prototype.name + '\n' + data.amount.toFixed(2) + ' / min',
+						color: this.getEdgeColor(false),
+						font: this.getFontColor(false),
 					});
 					this.elkGraph.edges.push({
 						id: nodeId.toString(),
@@ -259,7 +282,9 @@ export class ProductionToolResult
 			this.nodes.add({
 				id: id,
 				label: ProductionToolResult.getRecipeDisplayedName(itemName) + '\n' + amount.toFixed(2) + ' / min',
-				color: '#5cb85c',
+				color: this.getNodeColor(ProductionToolResult.TYPE_PRODUCT, false),
+				font: this.getFontColor(false),
+				type: ProductionToolResult.TYPE_PRODUCT,
 			});
 			this.elkGraph.children.push({
 				id: id.toString(),
@@ -272,6 +297,8 @@ export class ProductionToolResult
 					from: parseInt(producedNodeId, 10),
 					to: id,
 					label: itemName + '\n' + producedItem[producedNodeId].toFixed(2) + ' / min',
+					color: this.getEdgeColor(false),
+					font: this.getFontColor(false),
 				});
 				this.elkGraph.edges.push({
 					id: nodeId.toString(),
@@ -281,6 +308,89 @@ export class ProductionToolResult
 				nodeId++;
 			}
 			id++;
+		}
+	}
+
+	public getNodeColor(type: string, hidden: boolean): {border: string, background: string, highlight: {border: string, background: string}}
+	{
+		const opacity = hidden ? ProductionToolResult.HIDDEN_OPACITY : '1';
+		switch (type) {
+			case ProductionToolResult.TYPE_PRODUCT:
+				return {
+					border: 'rgba(0, 0, 0, 0)',
+					background: 'rgba(80, 160, 80, ' + opacity + ')',
+					highlight: {
+						border: 'rgba(238, 238, 238, ' + opacity + ')',
+						background: 'rgba(111, 182, 111, ' + opacity + ')',
+					},
+				};
+			case ProductionToolResult.TYPE_RAW:
+				return {
+					border: 'rgba(0, 0, 0, 0)',
+					background: 'rgba(78, 93, 108, ' + opacity + ')',
+					highlight: {
+						border: 'rgba(238, 238, 238, ' + opacity + ')',
+						background: 'rgba(105, 125, 145, ' + opacity + ')',
+					},
+				};
+			default:
+				return {
+					border: 'rgba(0, 0, 0, 0)',
+					background: 'rgba(223, 105, 26, ' + opacity + ')',
+					highlight: {
+						border: 'rgba(238, 238, 238, ' + opacity + ')',
+						background: 'rgba(231, 122, 49, ' + opacity + ')',
+					},
+				};
+		}
+	}
+
+	public getEdgeColor(hidden: boolean): {color: string, highlight: string}
+	{
+		const opacity = hidden ? ProductionToolResult.HIDDEN_OPACITY : '1';
+		return {
+			color: 'rgba(105, 125, 145, ' + opacity + ')',
+			highlight: 'rgba(134, 151, 167, ' + opacity + ')',
+		};
+	}
+
+	public getFontColor(hidden: boolean): {color: string}
+	{
+		const opacity = hidden ? ProductionToolResult.HIDDEN_OPACITY : '1';
+		return {
+			color: 'rgba(238, 238, 238, ' + opacity + ')',
+		};
+	}
+
+	public toggleNode(id: number): void
+	{
+		const index = this.hiddenNodes.indexOf(id);
+		let hidden = true;
+		if (index !== -1) {
+			this.hiddenNodes.splice(index, 1);
+			hidden = false;
+		} else {
+			this.hiddenNodes.push(id);
+		}
+		const node = this.nodes.get(id);
+		if (node) {
+			const type = node.type ? node.type : ProductionToolResult.TYPE_NORMAL;
+			node.color = this.getNodeColor(type, hidden);
+			node.font = this.getFontColor(hidden);
+			this.nodes.updateOnly(node);
+
+			this.edges.forEach((edge) => {
+				if (edge.from === id || edge.to === id) {
+					if (this.hiddenNodes.indexOf(edge.from) === -1 && this.hiddenNodes.indexOf(edge.to) === -1) {
+						hidden = false;
+					} else {
+						hidden = true;
+					}
+					edge.color = this.getEdgeColor(hidden);
+					edge.font = this.getFontColor(hidden);
+					this.edges.updateOnly(edge as any);
+				}
+			});
 		}
 	}
 

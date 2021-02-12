@@ -491,6 +491,9 @@
 			</li>
 		</ul>
 		<div ng-show="ctrl.tab.resultTab === 'visualization'">
+			<div class="border-left border-right border-secondary p-2">
+				You can move the nodes around by using drag'n'drop. Doubleclick a node to hide/show it (useful if you want e.g. to mark it as finished).
+			</div>
 			<visualization result="ctrl.tab.tool.result" class="visualization" ng-class="{visualization: 1, loading: ctrl.tab.state.resultLoading}"></visualization>
 		</div>
 
