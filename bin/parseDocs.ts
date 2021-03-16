@@ -18,6 +18,7 @@ import {Strings} from '@src/Utils/Strings';
 
 const docs = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'Docs.json')).toString());
 const oldData: IJsonSchema = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'data.json')).toString()) as IJsonSchema;
+//const sizes: {Name: string, Dimensions: number[]}[] = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'debug.json')).toString()) as {Name: string, Dimensions: number[]}[];
 
 const json: IJsonSchema = {
 	recipes: {},
@@ -197,6 +198,19 @@ for (const item of vehicleMapping) {
 	json.buildings[item.key].description = item.description;
 	json.buildings[item.key].slug = Strings.webalize(item.name);
 }
+
+// add building sizes
+/*for (const item of sizes) {
+	for (const key in json.buildings) {
+		if (item.Name.replace('Build_', 'Desc_') === json.buildings[key].className) {
+			json.buildings[key].size = {
+				width: item.Dimensions[0] * 0.02,
+				length: item.Dimensions[1] * 0.02,
+				height: item.Dimensions[2] * 0.02,
+			};
+		}
+	}
+}*/
 
 // add extra info to buildings
 for (const info of extraInfo) {

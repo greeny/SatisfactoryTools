@@ -23,10 +23,30 @@ export default function parseRecipes(recipes: {
 		'Desc_CyberWagon_C',
 	];
 
+	const ignored = [
+		'Desc_CandyCane_C',
+		'Desc_Gift_C',
+		'Desc_Snow_C',
+		'Desc_SnowballProjectile_C',
+		'Desc_XmasBall1_C',
+		'Desc_XmasBall2_C',
+		'Desc_XmasBall3_C',
+		'Desc_XmasBall4_C',
+		'Desc_XmasBallCluster_C',
+		'Desc_XmasBow_C',
+		'Desc_XmasBranch_C',
+		'Desc_XmasStar_C',
+		'Desc_XmasWreath_C',
+		'Desc_CandyCaneDecor_C',
+		'Desc_Snowman_C',
+		'Desc_WreathDecor_C',
+		'Desc_XmassTree_C',
+	];
+
 	const ignoredRecipes = [
 		'Recipe_JumpPadTilted_C',
 		'Recipe_JumpPad_C',
-	]
+	];
 
 	const result: IRecipeSchema[] = [];
 
@@ -41,9 +61,16 @@ export default function parseRecipes(recipes: {
 		});
 
 		const products = Arrays.ensureArray(Strings.unserializeDocs(recipe.mProduct)).map(parseItemAmount);
+		const ingredients = Arrays.ensureArray(Strings.unserializeDocs(recipe.mIngredients)).map(parseItemAmount);
+
+		for (const ingredient of ingredients) {
+			if (ignored.indexOf(ingredient.item) !== -1) {
+				continue recipeLoop;
+			}
+		}
 
 		for (const product of products) {
-			if (ignoredProducts.indexOf(product.item) !== -1) {
+			if (ignoredProducts.indexOf(product.item) !== -1 || ignored.indexOf(product.item) !== -1) {
 				continue recipeLoop;
 			}
 		}
@@ -84,7 +111,7 @@ export default function parseRecipes(recipes: {
 			alternate: alternate,
 			time: parseFloat(recipe.mManufactoringDuration),
 			manualTimeMultiplier: parseFloat(recipe.mManualManufacturingMultiplier),
-			ingredients: Arrays.ensureArray(Strings.unserializeDocs(recipe.mIngredients)).map(parseItemAmount),
+			ingredients: ingredients,
 			forBuilding: forBuilding,
 			inMachine: inMachine,
 			inHand: inHand,

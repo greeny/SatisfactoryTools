@@ -1,0 +1,418 @@
+[
+	{
+		"Name": "Build_AssemblerMk1_C",
+		"Dimensions": [
+			500,
+			750,
+			400
+		]
+	},
+	{
+		"Name": "Build_AutomatedWorkBench_C",
+		"Dimensions": [
+			300,
+			120,
+			200
+		]
+	},
+	{
+		"Name": "Build_ConveyorAttachmentMerger_C",
+		"Dimensions": [
+			200,
+			200,
+			130
+		]
+	},
+	{
+		"Name": "Build_ConveyorAttachmentSplitter_C",
+		"Dimensions": [
+			200,
+			200,
+			130
+		]
+	},
+	{
+		"Name": "Build_ConveyorAttachmentSplitterProgrammable_C",
+		"Dimensions": [
+			200,
+			200,
+			130
+		]
+	},
+	{
+		"Name": "Build_ConveyorAttachmentSplitterSmart_C",
+		"Dimensions": [
+			200,
+			200,
+			130
+		]
+	},
+	{
+		"Name": "Build_ConstructorMk1_C",
+		"Dimensions": [
+			400,
+			500,
+			400
+		]
+	},
+	{
+		"Name": "Build_Converter_C",
+		"Dimensions": [
+			450,
+			550,
+			400
+		]
+	},
+	{
+		"Name": "Build_FoundryMk1_C",
+		"Dimensions": [
+			500,
+			450,
+			450
+		]
+	},
+	{
+		"Name": "Build_GeneratorBiomass_C",
+		"Dimensions": [
+			400,
+			400,
+			350
+		]
+	},
+	{
+		"Name": "Build_GeneratorCoal_C",
+		"Dimensions": [
+			500,
+			1300,
+			1800
+		]
+	},
+	{
+		"Name": "Build_GeneratorFuel_C",
+		"Dimensions": [
+			1000,
+			1000,
+			1350
+		]
+	},
+	{
+		"Name": "Build_GeneratorGeoThermal_C",
+		"Dimensions": [
+			1000,
+			950,
+			1600
+		]
+	},
+	{
+		"Name": "Build_GeneratorNuclear_C",
+		"Dimensions": [
+			1870.447,
+			2150,
+			2400
+		]
+	},
+	{
+		"Name": "Build_TreeGiftProducer_C",
+		"Dimensions": [
+			400,
+			400,
+			850
+		]
+	},
+	{
+		"Name": "Build_IndustrialTank_C",
+		"Dimensions": [
+			700,
+			700,
+			600
+		]
+	},
+	{
+		"Name": "Build_JumpPad_C",
+		"Dimensions": [
+			300,
+			300,
+			300
+		]
+	},
+	{
+		"Name": "Build_JumpPadAdjustable_C",
+		"Dimensions": [
+			250,
+			250,
+			150
+		]
+	},
+	{
+		"Name": "Build_LandingPad_C",
+		"Dimensions": [
+			500,
+			550,
+			250
+		]
+	},
+	{
+		"Name": "Build_LookoutTower_C",
+		"Dimensions": [
+			400,
+			400,
+			1150
+		]
+	},
+	{
+		"Name": "Build_Mam_C",
+		"Dimensions": [
+			425,
+			250,
+			300
+		]
+	},
+	{
+		"Name": "Build_ManufacturerMk1_C",
+		"Dimensions": [
+			900,
+			950,
+			400
+		]
+	},
+	{
+		"Name": "Build_MinerMk1_C",
+		"Dimensions": [
+			300,
+			700,
+			900
+		]
+	},
+	{
+		"Name": "Build_MinerMk2_C",
+		"Dimensions": [
+			300,
+			700,
+			900
+		]
+	},
+	{
+		"Name": "Build_OilPump_C",
+		"Dimensions": [
+			400,
+			650,
+			900
+		]
+	},
+	{
+		"Name": "Build_OilRefinery_C",
+		"Dimensions": [
+			500,
+			1000,
+			1035
+		]
+	},
+	{
+		"Name": "Build_Packager_C",
+		"Dimensions": [
+			400,
+			400,
+			600
+		]
+	},
+	{
+		"Name": "Build_PipelineJunction_Cross_C",
+		"Dimensions": [
+			120,
+			75,
+			75
+		]
+	},
+	{
+		"Name": "Build_PipelinePump_C",
+		"Dimensions": [
+			190,
+			60,
+			60
+		]
+	},
+	{
+		"Name": "Build_PipelinePumpMK2_C",
+		"Dimensions": [
+			250,
+			60,
+			60
+		]
+	},
+	{
+		"Name": "Build_Valve_C",
+		"Dimensions": [
+			100,
+			60,
+			60
+		]
+	},
+	{
+		"Name": "Build_PowerPoleMk1_C",
+		"Dimensions": [
+			50,
+			50,
+			330
+		]
+	},
+	{
+		"Name": "Build_PowerPoleMk2_C",
+		"Dimensions": [
+			50,
+			50,
+			380
+		]
+	},
+	{
+		"Name": "Build_PowerPoleMk3_C",
+		"Dimensions": [
+			50,
+			50,
+			440
+		]
+	},
+	{
+		"Name": "Build_RadarTower_C",
+		"Dimensions": [
+			500,
+			500,
+			5900
+		]
+	},
+	{
+		"Name": "Build_ResourceSink_C",
+		"Dimensions": [
+			800,
+			650,
+			1200
+		]
+	},
+	{
+		"Name": "Build_ResourceSinkShop_C",
+		"Dimensions": [
+			200,
+			300,
+			250
+		]
+	},
+	{
+		"Name": "Build_SmelterMk1_C",
+		"Dimensions": [
+			300,
+			500,
+			450
+		]
+	},
+	{
+		"Name": "Build_SpaceElevator_C",
+		"Dimensions": [
+			2700,
+			2700,
+			6000
+		]
+	},
+	{
+		"Name": "Build_StorageContainerMk1_C",
+		"Dimensions": [
+			250,
+			500,
+			200
+		]
+	},
+	{
+		"Name": "Build_StorageContainerMk2_C",
+		"Dimensions": [
+			250,
+			500,
+			400
+		]
+	},
+	{
+		"Name": "Build_StoragePlayer_C",
+		"Dimensions": [
+			50,
+			100,
+			50
+		]
+	},
+	{
+		"Name": "Build_PipeStorageTank_C",
+		"Dimensions": [
+			300,
+			300,
+			400
+		]
+	},
+	{
+		"Name": "Build_TradingPost_C",
+		"Dimensions": [
+			700,
+			1300,
+			1400
+		]
+	},
+	{
+		"Name": "Build_TrainDockingStation_C",
+		"Dimensions": [
+			800,
+			1600,
+			1000
+		]
+	},
+	{
+		"Name": "Build_TrainDockingStationLiquid_C",
+		"Dimensions": [
+			800,
+			1600,
+			1000
+		]
+	},
+	{
+		"Name": "Build_TrainPlatformEmpty_C",
+		"Dimensions": [
+			800,
+			1600,
+			50
+		]
+	},
+	{
+		"Name": "Build_TrainStation_C",
+		"Dimensions": [
+			800,
+			1600,
+			1000
+		]
+	},
+	{
+		"Name": "Build_TruckStation_C",
+		"Dimensions": [
+			800,
+			1100,
+			600
+		]
+	},
+	{
+		"Name": "Build_WaterPump_C",
+		"Dimensions": [
+			990,
+			970,
+			1300
+		]
+	},
+	{
+		"Name": "Build_WorkBench_C",
+		"Dimensions": [
+			150,
+			280,
+			150
+		]
+	},
+	{
+		"Name": "Build_Workshop_C",
+		"Dimensions": [
+			300,
+			500,
+			250
+		]
+	}
+]

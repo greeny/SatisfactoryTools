@@ -1,4 +1,5 @@
 import {IBuildingMetadataSchema, IManufacturerMetadataSchema} from '@src/Schema/IBuildingMetadataSchema';
+import {ISizeSchema} from '@src/Schema/ISizeSchema';
 
 export interface IBuildingSchema
 {
@@ -10,6 +11,7 @@ export interface IBuildingSchema
 	categories: string[];
 	buildMenuPriority: number;
 	metadata: IBuildingMetadataSchema;
+	size: ISizeSchema;
 
 }
 
