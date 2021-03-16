@@ -4,6 +4,7 @@ import {Item} from '@src/Data/Item';
 import {Recipe} from '@src/Data/Recipe';
 import {IMinerSchema} from '@src/Schema/IMinerSchema';
 import {IItemSchema} from '@src/Schema/IItemSchema';
+import {Constants} from '@src/Constants';
 
 export class Model
 {
@@ -36,7 +37,7 @@ export class Model
 		throw new Error('Unknown item ' + className);
 	}
 
-	public getAutomatableItems(): IItemSchema[]
+	public getAutomatableItems(includeWaste: boolean = false): IItemSchema[]
 	{
 		const items: Item[] = [];
 		itemLoop:
@@ -45,7 +46,7 @@ export class Model
 				for (const l in this.recipes) {
 					if (this.recipes.hasOwnProperty(l) && this.recipes[l].prototype.inMachine) {
 						for (const product of this.recipes[l].products) {
-							if (product.item === this.items[k]) {
+							if (product.item === this.items[k] || (includeWaste && k === Constants.NUCLEAR_WASTE_CLASSNAME)) {
 								items.push(this.items[k]);
 								continue itemLoop;
 							}
@@ -63,8 +64,8 @@ export class Model
 
 	public getInputableItems(): IItemSchema[]
 	{
-		return this.getAutomatableItems().filter((item) => {
-			return !(item.className in this.data.resources);
+		return this.getAutomatableItems(true).filter((item) => {
+			return !(item.className in this.data.resources) || item.className === Constants.NUCLEAR_WASTE_CLASSNAME;
 		});
 	}
 

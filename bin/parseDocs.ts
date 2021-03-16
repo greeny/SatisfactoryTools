@@ -76,6 +76,7 @@ for (const definitions of docs) {
 		case 'Class\'/Script/FactoryGame.FGBuildableConveyorBelt\'':
 		case 'Class\'/Script/FactoryGame.FGBuildableWire\'':
 		case 'Class\'/Script/FactoryGame.FGBuildablePowerPole\'':
+		case 'Class\'/Script/FactoryGame.FGBuildableDroneStation\'':
 		case 'Class\'/Script/FactoryGame.FGBuildableTradingPost\'':
 		case 'Class\'/Script/FactoryGame.FGBuildableSpaceElevator\'':
 		case 'Class\'/Script/FactoryGame.FGBuildableManufacturer\'':
@@ -89,6 +90,10 @@ for (const definitions of docs) {
 		case 'Class\'/Script/FactoryGame.FGBuildablePipelineJunction\'':
 		case 'Class\'/Script/FactoryGame.FGBuildablePipelinePump\'':
 		case 'Class\'/Script/FactoryGame.FGBuildablePipeReservoir\'':
+		case 'Class\'/Script/FactoryGame.FGBuildableWaterPump\'':
+		case 'Class\'/Script/FactoryGame.FGBuildableFrackingExtractor\'':
+		case 'Class\'/Script/FactoryGame.FGBuildableFrackingActivator\'':
+		case 'Class\'/Script/FactoryGame.FGBuildableManufacturerVariablePower\'':
 		case 'Class\'/Script/FactoryGame.FGBuildableTrainPlatformCargo\'':
 		case 'Class\'/Script/FactoryGame.FGBuildableRailroadStation\'':
 		case 'Class\'/Script/FactoryGame.FGBuildableRailroadTrack\'':
@@ -102,10 +107,15 @@ for (const definitions of docs) {
 		case 'Class\'/Script/FactoryGame.FGBuildableDockingStation\'':
 		case 'Class\'/Script/FactoryGame.FGPipeHyperStart\'':
 		case 'Class\'/Script/FactoryGame.FGBuildablePipeHyper\'':
+		case 'Class\'/Script/FactoryGame.FGBuildablePowerStorage\'':
 		case 'Class\'/Script/FactoryGame.FGBuildableTrainPlatformEmpty\'':
+		case 'Class\'/Script/FactoryGame.FGBuildableCircuitSwitch\'':
 		case 'Class\'/Script/FactoryGame.FGBuildableSplitterSmart\'':
 		case 'Class\'/Script/FactoryGame.FGBuildableWalkway\'':
 		case 'Class\'/Script/FactoryGame.FGVehicleDescriptor\'':
+		case 'Class\'/Script/FactoryGame.FGBuildableLightSource\'':
+		case 'Class\'/Script/FactoryGame.FGBuildableFloodlight\'':
+		case 'Class\'/Script/FactoryGame.FGBuildableLightsControlPanel\'':
 			for (const building of parseBuildings(definitions.Classes, true)) {
 				json.buildings[building.className] = building;
 			}
@@ -190,6 +200,11 @@ const vehicleMapping: {
 		key: 'Desc_CyberWagon_C',
 		name: 'Cyber Wagon',
 		description: 'Absolutely indestructible.\nNeeds no further introduction.',
+	},
+	{
+		key: 'Desc_DroneTransport_C',
+		name: 'Drone',
+		description: '',
 	},
 ];
 

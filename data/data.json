@@ -62,6 +62,76 @@
 				"Desc_AssemblerMk1_C"
 			]
 		},
+		"Recipe_Alternate_AlcladCasing_C": {
+			"slug": "alternate-alclad-casing",
+			"name": "Alternate: Alclad Casing",
+			"className": "Recipe_Alternate_AlcladCasing_C",
+			"alternate": true,
+			"time": 8,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_AluminumIngot_C",
+					"amount": 15
+				},
+				{
+					"item": "Desc_CopperIngot_C",
+					"amount": 10
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_AluminumCasing_C",
+					"amount": 15
+				}
+			],
+			"producedIn": [
+				"Desc_AssemblerMk1_C"
+			]
+		},
+		"Recipe_Alternate_AutomatedMiner_C": {
+			"slug": "alternate-automated-miner",
+			"name": "Alternate: Automated Miner",
+			"className": "Recipe_Alternate_AutomatedMiner_C",
+			"alternate": true,
+			"time": 60,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Motor_C",
+					"amount": 1
+				},
+				{
+					"item": "Desc_SteelPipe_C",
+					"amount": 4
+				},
+				{
+					"item": "Desc_IronRod_C",
+					"amount": 4
+				},
+				{
+					"item": "Desc_IronPlate_C",
+					"amount": 2
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "BP_ItemDescriptorPortableMiner_C",
+					"amount": 1
+				}
+			],
+			"producedIn": [
+				"Desc_ManufacturerMk1_C"
+			]
+		},
 		"Recipe_Alternate_Beacon_1_C": {
 			"slug": "alternate-crystal-beacon",
 			"name": "Alternate: Crystal Beacon",
@@ -250,6 +320,45 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
+			]
+		},
+		"Recipe_Alternate_ClassicBattery_C": {
+			"slug": "alternate-classic-battery",
+			"name": "Alternate: Classic Battery",
+			"className": "Recipe_Alternate_ClassicBattery_C",
+			"alternate": true,
+			"time": 8,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Sulfur_C",
+					"amount": 6
+				},
+				{
+					"item": "Desc_AluminumPlate_C",
+					"amount": 7
+				},
+				{
+					"item": "Desc_Plastic_C",
+					"amount": 8
+				},
+				{
+					"item": "Desc_Wire_C",
+					"amount": 12
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_Battery_C",
+					"amount": 4
+				}
+			],
+			"producedIn": [
+				"Desc_ManufacturerMk1_C"
 			]
 		},
 		"Recipe_Alternate_Coal_1_C": {
@@ -527,6 +636,41 @@
 				"Desc_AssemblerMk1_C"
 			]
 		},
+		"Recipe_Alternate_CoolingDevice_C": {
+			"slug": "alternate-cooling-device",
+			"name": "Alternate: Cooling Device",
+			"className": "Recipe_Alternate_CoolingDevice_C",
+			"alternate": true,
+			"time": 32,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_AluminumPlateReinforced_C",
+					"amount": 2
+				},
+				{
+					"item": "Desc_Motor_C",
+					"amount": 1
+				},
+				{
+					"item": "Desc_NitrogenGas_C",
+					"amount": 24
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_CoolingSystem_C",
+					"amount": 2
+				}
+			],
+			"producedIn": [
+				"Desc_Blender_C"
+			]
+		},
 		"Recipe_Alternate_CopperAlloyIngot_C": {
 			"slug": "alternate-copper-alloy-ingot",
 			"name": "Alternate: Copper Alloy Ingot",
@@ -624,6 +768,37 @@
 				"Desc_ManufacturerMk1_C"
 			]
 		},
+		"Recipe_Alternate_DilutedFuel_C": {
+			"slug": "alternate-diluted-fuel",
+			"name": "Alternate: Diluted Fuel",
+			"className": "Recipe_Alternate_DilutedFuel_C",
+			"alternate": true,
+			"time": 6,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_HeavyOilResidue_C",
+					"amount": 5
+				},
+				{
+					"item": "Desc_Water_C",
+					"amount": 10
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_LiquidFuel_C",
+					"amount": 10
+				}
+			],
+			"producedIn": [
+				"Desc_Blender_C"
+			]
+		},
 		"Recipe_Alternate_DilutedPackagedFuel_C": {
 			"slug": "alternate-diluted-packaged-fuel",
 			"name": "Alternate: Diluted Packaged Fuel",
@@ -655,6 +830,37 @@
 				"Desc_OilRefinery_C"
 			]
 		},
+		"Recipe_Alternate_ElectricMotor_C": {
+			"slug": "alternate-electric-motor",
+			"name": "Alternate: Electric Motor",
+			"className": "Recipe_Alternate_ElectricMotor_C",
+			"alternate": true,
+			"time": 16,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_ElectromagneticControlRod_C",
+					"amount": 1
+				},
+				{
+					"item": "Desc_Rotor_C",
+					"amount": 2
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_Motor_C",
+					"amount": 2
+				}
+			],
+			"producedIn": [
+				"Desc_AssemblerMk1_C"
+			]
+		},
 		"Recipe_Alternate_ElectroAluminumScrap_C": {
 			"slug": "alternate-electrode---aluminum-scrap",
 			"name": "Alternate: Electrode - Aluminum Scrap",
@@ -668,7 +874,7 @@
 					"amount": 3
 				},
 				{
-					"item": "Desc_Coal_C",
+					"item": "Desc_PetroleumCoke_C",
 					"amount": 1
 				}
 			],
@@ -679,11 +885,11 @@
 			"products": [
 				{
 					"item": "Desc_AluminumScrap_C",
-					"amount": 5
+					"amount": 8
 				},
 				{
 					"item": "Desc_Water_C",
-					"amount": 1
+					"amount": 2
 				}
 			],
 			"producedIn": [
@@ -726,16 +932,16 @@
 			"name": "Alternate: Electromagnetic Connection Rod",
 			"className": "Recipe_Alternate_ElectromagneticControlRod_1_C",
 			"alternate": true,
-			"time": 60,
+			"time": 15,
 			"manualTimeMultiplier": 1,
 			"ingredients": [
 				{
 					"item": "Desc_Stator_C",
-					"amount": 10
+					"amount": 2
 				},
 				{
 					"item": "Desc_HighSpeedConnector_C",
-					"amount": 5
+					"amount": 1
 				}
 			],
 			"forBuilding": false,
@@ -745,7 +951,7 @@
 			"products": [
 				{
 					"item": "Desc_ElectromagneticControlRod_C",
-					"amount": 10
+					"amount": 2
 				}
 			],
 			"producedIn": [
@@ -812,6 +1018,49 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
+			]
+		},
+		"Recipe_Alternate_FertileUranium_C": {
+			"slug": "alternate-fertile-uranium",
+			"name": "Alternate: Fertile Uranium",
+			"className": "Recipe_Alternate_FertileUranium_C",
+			"alternate": true,
+			"time": 12,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_OreUranium_C",
+					"amount": 5
+				},
+				{
+					"item": "Desc_NuclearWaste_C",
+					"amount": 10
+				},
+				{
+					"item": "Desc_NitricAcid_C",
+					"amount": 15
+				},
+				{
+					"item": "Desc_SulfuricAcid_C",
+					"amount": 15
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_NonFissibleUranium_C",
+					"amount": 20
+				},
+				{
+					"item": "Desc_Water_C",
+					"amount": 18
+				}
+			],
+			"producedIn": [
+				"Desc_Blender_C"
 			]
 		},
 		"Recipe_Alternate_FlexibleFramework_C": {
@@ -911,21 +1160,60 @@
 				"Desc_AssemblerMk1_C"
 			]
 		},
+		"Recipe_Alternate_HeatFusedFrame_C": {
+			"slug": "alternate-heat-fused-frame",
+			"name": "Alternate: Heat-Fused Frame",
+			"className": "Recipe_Alternate_HeatFusedFrame_C",
+			"alternate": true,
+			"time": 20,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_ModularFrameHeavy_C",
+					"amount": 1
+				},
+				{
+					"item": "Desc_AluminumIngot_C",
+					"amount": 50
+				},
+				{
+					"item": "Desc_NitricAcid_C",
+					"amount": 8
+				},
+				{
+					"item": "Desc_LiquidFuel_C",
+					"amount": 10
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_ModularFrameFused_C",
+					"amount": 1
+				}
+			],
+			"producedIn": [
+				"Desc_Blender_C"
+			]
+		},
 		"Recipe_Alternate_HeatSink_1_C": {
 			"slug": "alternate-heat-exchanger",
 			"name": "Alternate: Heat Exchanger",
 			"className": "Recipe_Alternate_HeatSink_1_C",
 			"alternate": true,
-			"time": 32,
+			"time": 12,
 			"manualTimeMultiplier": 1,
 			"ingredients": [
 				{
-					"item": "Desc_AluminumPlate_C",
-					"amount": 20
+					"item": "Desc_AluminumCasing_C",
+					"amount": 3
 				},
 				{
-					"item": "Desc_CopperSheet_C",
-					"amount": 30
+					"item": "Desc_Rubber_C",
+					"amount": 4
 				}
 			],
 			"forBuilding": false,
@@ -935,7 +1223,7 @@
 			"products": [
 				{
 					"item": "Desc_AluminumPlateReinforced_C",
-					"amount": 7
+					"amount": 2
 				}
 			],
 			"producedIn": [
@@ -1013,8 +1301,8 @@
 			]
 		},
 		"Recipe_Alternate_HighSpeedConnector_C": {
-			"slug": "alternate-silicone-high-speed-connector",
-			"name": "Alternate: Silicone High-Speed Connector",
+			"slug": "alternate-silicone-speed-connector",
+			"name": "Alternate: Silicone-Speed Connector",
 			"className": "Recipe_Alternate_HighSpeedConnector_C",
 			"alternate": true,
 			"time": 40,
@@ -1175,6 +1463,84 @@
 				"Desc_FoundryMk1_C"
 			]
 		},
+		"Recipe_Alternate_InstantPlutoniumCell_C": {
+			"slug": "alternate-instant-plutonium-cell",
+			"name": "Alternate: Instant Plutonium Cell",
+			"className": "Recipe_Alternate_InstantPlutoniumCell_C",
+			"alternate": true,
+			"time": 60,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_NonFissibleUranium_C",
+					"amount": 75
+				},
+				{
+					"item": "Desc_AluminumCasing_C",
+					"amount": 25
+				},
+				{
+					"item": "Desc_NitrogenGas_C",
+					"amount": 25
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_PlutoniumCell_C",
+					"amount": 25
+				}
+			],
+			"producedIn": [
+				"Desc_HadronCollider_C"
+			]
+		},
+		"Recipe_Alternate_InstantScrap_C": {
+			"slug": "alternate-instant-scrap",
+			"name": "Alternate: Instant Scrap",
+			"className": "Recipe_Alternate_InstantScrap_C",
+			"alternate": true,
+			"time": 6,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_OreBauxite_C",
+					"amount": 15
+				},
+				{
+					"item": "Desc_Coal_C",
+					"amount": 10
+				},
+				{
+					"item": "Desc_SulfuricAcid_C",
+					"amount": 5
+				},
+				{
+					"item": "Desc_Water_C",
+					"amount": 11
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_AluminumScrap_C",
+					"amount": 30
+				},
+				{
+					"item": "Desc_Water_C",
+					"amount": 4
+				}
+			],
+			"producedIn": [
+				"Desc_Blender_C"
+			]
+		},
 		"Recipe_Alternate_ModularFrameHeavy_C": {
 			"slug": "alternate-heavy-encased-frame",
 			"name": "Alternate: Heavy Encased Frame",
@@ -1325,7 +1691,7 @@
 			"ingredients": [
 				{
 					"item": "Desc_UraniumCell_C",
-					"amount": 50
+					"amount": 100
 				},
 				{
 					"item": "Desc_ElectromagneticControlRod_C",
@@ -1352,6 +1718,37 @@
 			],
 			"producedIn": [
 				"Desc_ManufacturerMk1_C"
+			]
+		},
+		"Recipe_Alternate_OCSupercomputer_C": {
+			"slug": "alternate-oc-supercomputer",
+			"name": "Alternate: OC Supercomputer",
+			"className": "Recipe_Alternate_OCSupercomputer_C",
+			"alternate": true,
+			"time": 20,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_ModularFrameLightweight_C",
+					"amount": 3
+				},
+				{
+					"item": "Desc_CoolingSystem_C",
+					"amount": 3
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_ComputerSuper_C",
+					"amount": 9
+				}
+			],
+			"producedIn": [
+				"Desc_AssemblerMk1_C"
 			]
 		},
 		"Recipe_Alternate_PlasticSmartPlating_C": {
@@ -1418,6 +1815,37 @@
 			],
 			"producedIn": [
 				"Desc_OilRefinery_C"
+			]
+		},
+		"Recipe_Alternate_PlutoniumFuelUnit_C": {
+			"slug": "alternate-plutonium-fuel-unit",
+			"name": "Alternate: Plutonium Fuel Unit",
+			"className": "Recipe_Alternate_PlutoniumFuelUnit_C",
+			"alternate": true,
+			"time": 60,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_PlutoniumCell_C",
+					"amount": 10
+				},
+				{
+					"item": "Desc_PressureConversionCube_C",
+					"amount": 1
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_PlutoniumFuelRod_C",
+					"amount": 1
+				}
+			],
+			"producedIn": [
+				"Desc_AssemblerMk1_C"
 			]
 		},
 		"Recipe_Alternate_PolyesterFabric_C": {
@@ -1637,24 +2065,28 @@
 				"Desc_AssemblerMk1_C"
 			]
 		},
-		"Recipe_Alternate_RadioControlUnit_1_C": {
+		"Recipe_Alternate_RadioControlSystem_C": {
 			"slug": "alternate-radio-control-system",
-			"name": "Alternate: Radio Control System",
-			"className": "Recipe_Alternate_RadioControlUnit_1_C",
+			"name": "Alternate: Radio control System",
+			"className": "Recipe_Alternate_RadioControlSystem_C",
 			"alternate": true,
-			"time": 48,
+			"time": 40,
 			"manualTimeMultiplier": 1,
 			"ingredients": [
 				{
-					"item": "Desc_AluminumPlateReinforced_C",
-					"amount": 10
-				},
-				{
-					"item": "Desc_ComputerSuper_C",
+					"item": "Desc_CrystalOscillator_C",
 					"amount": 1
 				},
 				{
-					"item": "Desc_QuartzCrystal_C",
+					"item": "Desc_CircuitBoard_C",
+					"amount": 10
+				},
+				{
+					"item": "Desc_AluminumCasing_C",
+					"amount": 45
+				},
+				{
+					"item": "Desc_Rubber_C",
 					"amount": 30
 				}
 			],
@@ -1666,6 +2098,41 @@
 				{
 					"item": "Desc_ModularFrameLightweight_C",
 					"amount": 3
+				}
+			],
+			"producedIn": [
+				"Desc_ManufacturerMk1_C"
+			]
+		},
+		"Recipe_Alternate_RadioControlUnit_1_C": {
+			"slug": "alternate-radio-connection-unit",
+			"name": "Alternate: Radio Connection Unit",
+			"className": "Recipe_Alternate_RadioControlUnit_1_C",
+			"alternate": true,
+			"time": 16,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_AluminumPlateReinforced_C",
+					"amount": 4
+				},
+				{
+					"item": "Desc_HighSpeedConnector_C",
+					"amount": 2
+				},
+				{
+					"item": "Desc_QuartzCrystal_C",
+					"amount": 12
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_ModularFrameLightweight_C",
+					"amount": 1
 				}
 			],
 			"producedIn": [
@@ -1912,6 +2379,37 @@
 				"Desc_AssemblerMk1_C"
 			]
 		},
+		"Recipe_Alternate_SloppyAlumina_C": {
+			"slug": "alternate-sloppy-alumina",
+			"name": "Alternate: Sloppy Alumina",
+			"className": "Recipe_Alternate_SloppyAlumina_C",
+			"alternate": true,
+			"time": 6,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_OreBauxite_C",
+					"amount": 15
+				},
+				{
+					"item": "Desc_Water_C",
+					"amount": 15
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_AluminaSolution_C",
+					"amount": 18
+				}
+			],
+			"producedIn": [
+				"Desc_OilRefinery_C"
+			]
+		},
 		"Recipe_Alternate_Stator_C": {
 			"slug": "alternate-quickwire-stator",
 			"name": "Alternate: Quickwire Stator",
@@ -2059,6 +2557,84 @@
 				"Desc_ConstructorMk1_C"
 			]
 		},
+		"Recipe_Alternate_SuperStateComputer_C": {
+			"slug": "alternate-super-state-computer",
+			"name": "Alternate: Super-State Computer",
+			"className": "Recipe_Alternate_SuperStateComputer_C",
+			"alternate": true,
+			"time": 50,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Computer_C",
+					"amount": 3
+				},
+				{
+					"item": "Desc_ElectromagneticControlRod_C",
+					"amount": 2
+				},
+				{
+					"item": "Desc_Battery_C",
+					"amount": 20
+				},
+				{
+					"item": "Desc_Wire_C",
+					"amount": 45
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_ComputerSuper_C",
+					"amount": 2
+				}
+			],
+			"producedIn": [
+				"Desc_ManufacturerMk1_C"
+			]
+		},
+		"Recipe_Alternate_TurboBlendFuel_C": {
+			"slug": "alternate-turbo-blend-fuel",
+			"name": "Alternate: Turbo Blend Fuel",
+			"className": "Recipe_Alternate_TurboBlendFuel_C",
+			"alternate": true,
+			"time": 8,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_LiquidFuel_C",
+					"amount": 2
+				},
+				{
+					"item": "Desc_HeavyOilResidue_C",
+					"amount": 4
+				},
+				{
+					"item": "Desc_Sulfur_C",
+					"amount": 3
+				},
+				{
+					"item": "Desc_PetroleumCoke_C",
+					"amount": 3
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_LiquidTurboFuel_C",
+					"amount": 6
+				}
+			],
+			"producedIn": [
+				"Desc_Blender_C"
+			]
+		},
 		"Recipe_Alternate_TurboHeavyFuel_C": {
 			"slug": "alternate-turbo-heavy-fuel",
 			"name": "Alternate: Turbo Heavy Fuel",
@@ -2107,12 +2683,12 @@
 					"amount": 5
 				},
 				{
-					"item": "Desc_CircuitBoardHighSpeed_C",
-					"amount": 9
+					"item": "Desc_ElectromagneticControlRod_C",
+					"amount": 7
 				},
 				{
-					"item": "Desc_Stator_C",
-					"amount": 7
+					"item": "Desc_Rotor_C",
+					"amount": 9
 				}
 			],
 			"forBuilding": false,
@@ -2123,6 +2699,45 @@
 				{
 					"item": "Desc_MotorLightweight_C",
 					"amount": 3
+				}
+			],
+			"producedIn": [
+				"Desc_ManufacturerMk1_C"
+			]
+		},
+		"Recipe_Alternate_TurboPressureMotor_C": {
+			"slug": "alternate-turbo-pressure-motor",
+			"name": "Alternate: Turbo Pressure Motor",
+			"className": "Recipe_Alternate_TurboPressureMotor_C",
+			"alternate": true,
+			"time": 16,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Motor_C",
+					"amount": 2
+				},
+				{
+					"item": "Desc_PressureConversionCube_C",
+					"amount": 1
+				},
+				{
+					"item": "Desc_PackagedNitrogenGas_C",
+					"amount": 15
+				},
+				{
+					"item": "Desc_Stator_C",
+					"amount": 6
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_MotorLightweight_C",
+					"amount": 1
 				}
 			],
 			"producedIn": [
@@ -2165,24 +2780,24 @@
 			"name": "Alternate: Infused Uranium Cell",
 			"className": "Recipe_Alternate_UraniumCell_1_C",
 			"alternate": true,
-			"time": 120,
+			"time": 8,
 			"manualTimeMultiplier": 1,
 			"ingredients": [
 				{
 					"item": "Desc_UraniumPellet_C",
-					"amount": 40
-				},
-				{
-					"item": "Desc_Sulfur_C",
-					"amount": 45
+					"amount": 2
 				},
 				{
 					"item": "Desc_Silica_C",
-					"amount": 45
+					"amount": 3
+				},
+				{
+					"item": "Desc_Sulfur_C",
+					"amount": 4
 				},
 				{
 					"item": "Desc_HighSpeedWire_C",
-					"amount": 75
+					"amount": 5
 				}
 			],
 			"forBuilding": false,
@@ -2192,7 +2807,7 @@
 			"products": [
 				{
 					"item": "Desc_UraniumCell_C",
-					"amount": 35
+					"amount": 3
 				}
 			],
 			"producedIn": [
@@ -2294,11 +2909,11 @@
 			"ingredients": [
 				{
 					"item": "Desc_OreBauxite_C",
-					"amount": 7
+					"amount": 12
 				},
 				{
 					"item": "Desc_Water_C",
-					"amount": 10
+					"amount": 18
 				}
 			],
 			"forBuilding": false,
@@ -2308,15 +2923,42 @@
 			"products": [
 				{
 					"item": "Desc_AluminaSolution_C",
-					"amount": 8
+					"amount": 12
 				},
 				{
 					"item": "Desc_Silica_C",
-					"amount": 2
+					"amount": 5
 				}
 			],
 			"producedIn": [
 				"Desc_OilRefinery_C"
+			]
+		},
+		"Recipe_AluminumCasing_C": {
+			"slug": "aluminum-casing",
+			"name": "Aluminum Casing",
+			"className": "Recipe_AluminumCasing_C",
+			"alternate": false,
+			"time": 2,
+			"manualTimeMultiplier": 2,
+			"ingredients": [
+				{
+					"item": "Desc_AluminumIngot_C",
+					"amount": 3
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_AluminumCasing_C",
+					"amount": 2
+				}
+			],
+			"producedIn": [
+				"Desc_ConstructorMk1_C"
 			]
 		},
 		"Recipe_AluminumScrap_C": {
@@ -2332,8 +2974,8 @@
 					"amount": 4
 				},
 				{
-					"item": "Desc_PetroleumCoke_C",
-					"amount": 1
+					"item": "Desc_Coal_C",
+					"amount": 2
 				}
 			],
 			"forBuilding": false,
@@ -2347,7 +2989,7 @@
 				},
 				{
 					"item": "Desc_Water_C",
-					"amount": 1
+					"amount": 2
 				}
 			],
 			"producedIn": [
@@ -2359,16 +3001,16 @@
 			"name": "Alclad Aluminum Sheet",
 			"className": "Recipe_AluminumSheet_C",
 			"alternate": false,
-			"time": 8,
+			"time": 6,
 			"manualTimeMultiplier": 2,
 			"ingredients": [
 				{
 					"item": "Desc_AluminumIngot_C",
-					"amount": 8
+					"amount": 3
 				},
 				{
 					"item": "Desc_CopperIngot_C",
-					"amount": 3
+					"amount": 1
 				}
 			],
 			"forBuilding": false,
@@ -2378,7 +3020,7 @@
 			"products": [
 				{
 					"item": "Desc_AluminumPlate_C",
-					"amount": 4
+					"amount": 3
 				}
 			],
 			"producedIn": [
@@ -2423,38 +3065,38 @@
 			"name": "Battery",
 			"className": "Recipe_Battery_C",
 			"alternate": false,
-			"time": 32,
+			"time": 3,
 			"manualTimeMultiplier": 1,
 			"ingredients": [
 				{
-					"item": "Desc_AluminumPlate_C",
-					"amount": 8
+					"item": "Desc_SulfuricAcid_C",
+					"amount": 2.5
 				},
 				{
-					"item": "Desc_Wire_C",
-					"amount": 16
+					"item": "Desc_AluminaSolution_C",
+					"amount": 2
 				},
 				{
-					"item": "Desc_Sulfur_C",
-					"amount": 20
-				},
-				{
-					"item": "Desc_Plastic_C",
-					"amount": 8
+					"item": "Desc_AluminumCasing_C",
+					"amount": 1
 				}
 			],
 			"forBuilding": false,
 			"inMachine": true,
-			"inHand": true,
+			"inHand": false,
 			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_Battery_C",
-					"amount": 3
+					"amount": 1
+				},
+				{
+					"item": "Desc_Water_C",
+					"amount": 1.5
 				}
 			],
 			"producedIn": [
-				"Desc_ManufacturerMk1_C"
+				"Desc_Blender_C"
 			]
 		},
 		"Recipe_Beacon_C": {
@@ -2691,6 +3333,43 @@
 			],
 			"producedIn": []
 		},
+		"Recipe_Blender_C": {
+			"slug": "blender",
+			"name": "Blender",
+			"className": "Recipe_Blender_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Motor_C",
+					"amount": 20
+				},
+				{
+					"item": "Desc_ModularFrameHeavy_C",
+					"amount": 10
+				},
+				{
+					"item": "Desc_AluminumCasing_C",
+					"amount": 50
+				},
+				{
+					"item": "Desc_ModularFrameLightweight_C",
+					"amount": 5
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_Blender_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
 		"Recipe_Cable_C": {
 			"slug": "cable",
 			"name": "Cable",
@@ -2756,6 +3435,39 @@
 			"producedIn": [
 				"Desc_ManufacturerMk1_C"
 			]
+		},
+		"Recipe_CeilingLight_C": {
+			"slug": "ceiling-light",
+			"name": "Ceiling Light",
+			"className": "Recipe_CeilingLight_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_QuartzCrystal_C",
+					"amount": 20
+				},
+				{
+					"item": "Desc_Wire_C",
+					"amount": 16
+				},
+				{
+					"item": "Desc_SteelPlate_C",
+					"amount": 6
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_CeilingLight_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
 		},
 		"Recipe_Chainsaw_C": {
 			"slug": "chainsaw",
@@ -3492,6 +4204,72 @@
 			],
 			"producedIn": []
 		},
+		"Recipe_CoolingSystem_C": {
+			"slug": "cooling-system",
+			"name": "Cooling System",
+			"className": "Recipe_CoolingSystem_C",
+			"alternate": false,
+			"time": 10,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_AluminumPlateReinforced_C",
+					"amount": 2
+				},
+				{
+					"item": "Desc_Rubber_C",
+					"amount": 2
+				},
+				{
+					"item": "Desc_Water_C",
+					"amount": 5
+				},
+				{
+					"item": "Desc_NitrogenGas_C",
+					"amount": 25
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_CoolingSystem_C",
+					"amount": 1
+				}
+			],
+			"producedIn": [
+				"Desc_Blender_C"
+			]
+		},
+		"Recipe_CopperDust_C": {
+			"slug": "copper-powder",
+			"name": "Copper Powder",
+			"className": "Recipe_CopperDust_C",
+			"alternate": false,
+			"time": 6,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_CopperIngot_C",
+					"amount": 30
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_CopperDust_C",
+					"amount": 5
+				}
+			],
+			"producedIn": [
+				"Desc_ConstructorMk1_C"
+			]
+		},
 		"Recipe_CopperSheet_C": {
 			"slug": "copper-sheet",
 			"name": "Copper Sheet",
@@ -3553,6 +4331,88 @@
 			"producedIn": [
 				"Desc_ManufacturerMk1_C"
 			]
+		},
+		"Recipe_DroneStation_C": {
+			"slug": "drone-port",
+			"name": "Drone Port",
+			"className": "Recipe_DroneStation_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_ModularFrameHeavy_C",
+					"amount": 20
+				},
+				{
+					"item": "Desc_HighSpeedConnector_C",
+					"amount": 20
+				},
+				{
+					"item": "Desc_AluminumPlate_C",
+					"amount": 50
+				},
+				{
+					"item": "Desc_AluminumCasing_C",
+					"amount": 50
+				},
+				{
+					"item": "Desc_ModularFrameLightweight_C",
+					"amount": 10
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_DroneStation_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
+		"Recipe_DroneTransport_C": {
+			"slug": "drone",
+			"name": "Drone",
+			"className": "Recipe_DroneTransport_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Motor_C",
+					"amount": 4
+				},
+				{
+					"item": "Desc_AluminumPlate_C",
+					"amount": 10
+				},
+				{
+					"item": "Desc_ModularFrameLightweight_C",
+					"amount": 1
+				},
+				{
+					"item": "Desc_CircuitBoardHighSpeed_C",
+					"amount": 2
+				},
+				{
+					"item": "BP_ItemDescriptorPortableMiner_C",
+					"amount": 1
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_DroneTransport_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
 		},
 		"Recipe_ElectromagneticControlRod_C": {
 			"slug": "electromagnetic-control-rod",
@@ -3681,8 +4541,8 @@
 			"producedIn": []
 		},
 		"Recipe_Fence_01_C": {
-			"slug": "fence-1",
-			"name": "Fence 1",
+			"slug": "fence",
+			"name": "Fence",
 			"className": "Recipe_Fence_01_C",
 			"alternate": false,
 			"time": 1,
@@ -3757,8 +4617,8 @@
 					"amount": 8
 				},
 				{
-					"item": "Desc_Rubber_C",
-					"amount": 2
+					"item": "Desc_AluminumCasing_C",
+					"amount": 1
 				}
 			],
 			"forBuilding": false,
@@ -3774,6 +4634,72 @@
 			"producedIn": [
 				"Desc_ManufacturerMk1_C"
 			]
+		},
+		"Recipe_FloodlightPole_C": {
+			"slug": "flood-light-tower",
+			"name": "Flood Light Tower",
+			"className": "Recipe_FloodlightPole_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_QuartzCrystal_C",
+					"amount": 10
+				},
+				{
+					"item": "Desc_CopperSheet_C",
+					"amount": 4
+				},
+				{
+					"item": "Desc_SteelPlateReinforced_C",
+					"amount": 8
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_FloodlightPole_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
+		"Recipe_FloodlightWall_C": {
+			"slug": "wall-mounted-flood-light",
+			"name": "Wall Mounted Flood Light",
+			"className": "Recipe_FloodlightWall_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_QuartzCrystal_C",
+					"amount": 10
+				},
+				{
+					"item": "Desc_CopperSheet_C",
+					"amount": 4
+				},
+				{
+					"item": "Desc_SteelPlateReinforced_C",
+					"amount": 2
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_FloodlightWall_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
 		},
 		"Recipe_FluidCanister_C": {
 			"slug": "empty-canister",
@@ -3927,6 +4853,72 @@
 			],
 			"producedIn": []
 		},
+		"Recipe_FrackingExtractor_C": {
+			"slug": "resource-well-extractor",
+			"name": "Resource Well Extractor",
+			"className": "Recipe_FrackingExtractor_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_SteelPlate_C",
+					"amount": 10
+				},
+				{
+					"item": "Desc_Plastic_C",
+					"amount": 10
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_FrackingExtractor_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
+		"Recipe_FrackingSmasher_C": {
+			"slug": "resource-well-pressurizer",
+			"name": "Resource Well Pressurizer",
+			"className": "Recipe_FrackingSmasher_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Wire_C",
+					"amount": 200
+				},
+				{
+					"item": "Desc_Rubber_C",
+					"amount": 50
+				},
+				{
+					"item": "Desc_SteelPlateReinforced_C",
+					"amount": 50
+				},
+				{
+					"item": "Desc_Motor_C",
+					"amount": 50
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_FrackingSmasher_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
 		"Recipe_Fuel_C": {
 			"slug": "packaged-fuel",
 			"name": "Packaged Fuel",
@@ -3956,6 +4948,68 @@
 			],
 			"producedIn": [
 				"Desc_Packager_C"
+			]
+		},
+		"Recipe_FusedModularFrame_C": {
+			"slug": "fused-modular-frame",
+			"name": "Fused Modular Frame",
+			"className": "Recipe_FusedModularFrame_C",
+			"alternate": false,
+			"time": 40,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_ModularFrameHeavy_C",
+					"amount": 1
+				},
+				{
+					"item": "Desc_AluminumCasing_C",
+					"amount": 50
+				},
+				{
+					"item": "Desc_NitrogenGas_C",
+					"amount": 25
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_ModularFrameFused_C",
+					"amount": 1
+				}
+			],
+			"producedIn": [
+				"Desc_Blender_C"
+			]
+		},
+		"Recipe_GasTank_C": {
+			"slug": "empty-fluid-tank",
+			"name": "Empty Fluid Tank",
+			"className": "Recipe_GasTank_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_AluminumIngot_C",
+					"amount": 1
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_GasTank_C",
+					"amount": 1
+				}
+			],
+			"producedIn": [
+				"Desc_ConstructorMk1_C"
 			]
 		},
 		"Recipe_Gasmask_C": {
@@ -4149,11 +5203,11 @@
 			"ingredients": [
 				{
 					"item": "Desc_Cement_C",
-					"amount": 150
+					"amount": 250
 				},
 				{
 					"item": "Desc_ModularFrameHeavy_C",
-					"amount": 10
+					"amount": 25
 				},
 				{
 					"item": "Desc_ComputerSuper_C",
@@ -4161,11 +5215,11 @@
 				},
 				{
 					"item": "Desc_Cable_C",
-					"amount": 50
+					"amount": 100
 				},
 				{
-					"item": "Desc_HighSpeedConnector_C",
-					"amount": 15
+					"item": "Desc_AluminumPlate_C",
+					"amount": 100
 				}
 			],
 			"forBuilding": true,
@@ -4210,6 +5264,51 @@
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
 			]
+		},
+		"Recipe_HadronCollider_C": {
+			"slug": "particle-accelerator",
+			"name": "Particle Accelerator",
+			"className": "Recipe_HadronCollider_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_ModularFrameLightweight_C",
+					"amount": 25
+				},
+				{
+					"item": "Desc_ElectromagneticControlRod_C",
+					"amount": 100
+				},
+				{
+					"item": "Desc_ComputerSuper_C",
+					"amount": 10
+				},
+				{
+					"item": "Desc_CoolingSystem_C",
+					"amount": 50
+				},
+				{
+					"item": "Desc_ModularFrameFused_C",
+					"amount": 20
+				},
+				{
+					"item": "Desc_MotorLightweight_C",
+					"amount": 10
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_HadronCollider_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
 		},
 		"Recipe_HazmatSuit_C": {
 			"slug": "hazmat-suit",
@@ -4261,8 +5360,8 @@
 					"amount": 8
 				},
 				{
-					"item": "Desc_Rubber_C",
-					"amount": 14
+					"item": "Desc_CopperSheet_C",
+					"amount": 9
 				}
 			],
 			"forBuilding": false,
@@ -4313,6 +5412,43 @@
 			"producedIn": [
 				"Desc_ManufacturerMk1_C"
 			]
+		},
+		"Recipe_Hoverpack_C": {
+			"slug": "hover-pack",
+			"name": "Hover Pack",
+			"className": "Recipe_Hoverpack_C",
+			"alternate": false,
+			"time": 120,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Motor_C",
+					"amount": 8
+				},
+				{
+					"item": "Desc_AluminumPlate_C",
+					"amount": 40
+				},
+				{
+					"item": "Desc_ModularFrameLightweight_C",
+					"amount": 8
+				},
+				{
+					"item": "Desc_CoolingSystem_C",
+					"amount": 4
+				}
+			],
+			"forBuilding": false,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": true,
+			"products": [
+				{
+					"item": "BP_EquipmentDescriptorHoverPack_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
 		},
 		"Recipe_HyperPoleStackable_C": {
 			"slug": "stackable-hyper-tube-support",
@@ -4439,16 +5575,16 @@
 			"name": "Aluminum Ingot",
 			"className": "Recipe_IngotAluminum_C",
 			"alternate": false,
-			"time": 3,
+			"time": 4,
 			"manualTimeMultiplier": 3,
 			"ingredients": [
 				{
 					"item": "Desc_AluminumScrap_C",
-					"amount": 12
+					"amount": 6
 				},
 				{
 					"item": "Desc_Silica_C",
-					"amount": 7
+					"amount": 5
 				}
 			],
 			"forBuilding": false,
@@ -4752,6 +5888,39 @@
 			"products": [
 				{
 					"item": "Desc_Ladder_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
+		"Recipe_LightsControlPanel_C": {
+			"slug": "lights-control-panel",
+			"name": "Lights Control Panel",
+			"className": "Recipe_LightsControlPanel_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Cable_C",
+					"amount": 10
+				},
+				{
+					"item": "Desc_IronPlateReinforced_C",
+					"amount": 5
+				},
+				{
+					"item": "Desc_QuartzCrystal_C",
+					"amount": 20
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_LightsControlPanel_C",
 					"amount": 1
 				}
 			],
@@ -5067,20 +6236,20 @@
 					"amount": 3
 				},
 				{
-					"item": "Desc_ModularFrameHeavy_C",
-					"amount": 4
+					"item": "Desc_SteelPipe_C",
+					"amount": 50
 				},
 				{
-					"item": "Desc_SteelPipe_C",
-					"amount": 20
+					"item": "Desc_ComputerSuper_C",
+					"amount": 5
+				},
+				{
+					"item": "Desc_ModularFrameFused_C",
+					"amount": 10
 				},
 				{
 					"item": "Desc_MotorLightweight_C",
-					"amount": 5
-				},
-				{
-					"item": "Desc_Computer_C",
-					"amount": 5
+					"amount": 3
 				}
 			],
 			"forBuilding": true,
@@ -5174,7 +6343,7 @@
 			"manualTimeMultiplier": 2,
 			"ingredients": [
 				{
-					"item": "Desc_AluminumPlateReinforced_C",
+					"item": "Desc_CoolingSystem_C",
 					"amount": 4
 				},
 				{
@@ -5233,6 +6402,41 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
+			]
+		},
+		"Recipe_NitricAcid_C": {
+			"slug": "nitric-acid",
+			"name": "Nitric Acid",
+			"className": "Recipe_NitricAcid_C",
+			"alternate": false,
+			"time": 6,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_NitrogenGas_C",
+					"amount": 24
+				},
+				{
+					"item": "Desc_Water_C",
+					"amount": 6
+				},
+				{
+					"item": "Desc_IronPlate_C",
+					"amount": 1
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_NitricAcid_C",
+					"amount": 6
+				}
+			],
+			"producedIn": [
+				"Desc_Blender_C"
 			]
 		},
 		"Recipe_NobeliskDetonator_C": {
@@ -5299,9 +6503,52 @@
 				"Desc_AssemblerMk1_C"
 			]
 		},
+		"Recipe_NonFissileUranium_C": {
+			"slug": "non-fissile-uranium",
+			"name": "Non-fissile Uranium",
+			"className": "Recipe_NonFissileUranium_C",
+			"alternate": false,
+			"time": 12,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_NuclearWaste_C",
+					"amount": 15
+				},
+				{
+					"item": "Desc_NitricAcid_C",
+					"amount": 3
+				},
+				{
+					"item": "Desc_SulfuricAcid_C",
+					"amount": 6
+				},
+				{
+					"item": "Desc_Silica_C",
+					"amount": 5
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_NonFissibleUranium_C",
+					"amount": 10
+				},
+				{
+					"item": "Desc_Water_C",
+					"amount": 3
+				}
+			],
+			"producedIn": [
+				"Desc_Blender_C"
+			]
+		},
 		"Recipe_NuclearFuelRod_C": {
-			"slug": "nuclear-fuel-rod",
-			"name": "Nuclear Fuel Rod",
+			"slug": "uranium-fuel-rod",
+			"name": "Uranium Fuel Rod",
 			"className": "Recipe_NuclearFuelRod_C",
 			"alternate": false,
 			"time": 150,
@@ -5309,7 +6556,7 @@
 			"ingredients": [
 				{
 					"item": "Desc_UraniumCell_C",
-					"amount": 25
+					"amount": 50
 				},
 				{
 					"item": "Desc_SteelPlateReinforced_C",
@@ -5470,6 +6717,37 @@
 			],
 			"producedIn": []
 		},
+		"Recipe_PackagedAlumina_C": {
+			"slug": "packaged-alumina-solution",
+			"name": "Packaged Alumina Solution",
+			"className": "Recipe_PackagedAlumina_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_AluminaSolution_C",
+					"amount": 2
+				},
+				{
+					"item": "Desc_FluidCanister_C",
+					"amount": 2
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_PackagedAlumina_C",
+					"amount": 2
+				}
+			],
+			"producedIn": [
+				"Desc_Packager_C"
+			]
+		},
 		"Recipe_PackagedBiofuel_C": {
 			"slug": "packaged-liquid-biofuel",
 			"name": "Packaged Liquid Biofuel",
@@ -5532,6 +6810,68 @@
 				"Desc_Packager_C"
 			]
 		},
+		"Recipe_PackagedNitricAcid_C": {
+			"slug": "packaged-nitric-acid",
+			"name": "Packaged Nitric Acid",
+			"className": "Recipe_PackagedNitricAcid_C",
+			"alternate": false,
+			"time": 2,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_NitricAcid_C",
+					"amount": 1
+				},
+				{
+					"item": "Desc_FluidCanister_C",
+					"amount": 1
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_PackagedNitricAcid_C",
+					"amount": 1
+				}
+			],
+			"producedIn": [
+				"Desc_Packager_C"
+			]
+		},
+		"Recipe_PackagedNitrogen_C": {
+			"slug": "packaged-nitrogen-gas",
+			"name": "Packaged Nitrogen Gas",
+			"className": "Recipe_PackagedNitrogen_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_NitrogenGas_C",
+					"amount": 4
+				},
+				{
+					"item": "Desc_GasTank_C",
+					"amount": 1
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_PackagedNitrogenGas_C",
+					"amount": 1
+				}
+			],
+			"producedIn": [
+				"Desc_Packager_C"
+			]
+		},
 		"Recipe_PackagedOilResidue_C": {
 			"slug": "packaged-heavy-oil-residue",
 			"name": "Packaged Heavy Oil Residue",
@@ -5556,6 +6896,37 @@
 			"products": [
 				{
 					"item": "Desc_PackagedOilResidue_C",
+					"amount": 2
+				}
+			],
+			"producedIn": [
+				"Desc_Packager_C"
+			]
+		},
+		"Recipe_PackagedSulfuricAcid_C": {
+			"slug": "packaged-sulfuric-acid",
+			"name": "Packaged Sulfuric Acid",
+			"className": "Recipe_PackagedSulfuricAcid_C",
+			"alternate": false,
+			"time": 3,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_SulfuricAcid_C",
+					"amount": 2
+				},
+				{
+					"item": "Desc_FluidCanister_C",
+					"amount": 2
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_PackagedSulfuricAcid_C",
 					"amount": 2
 				}
 			],
@@ -6209,6 +7580,107 @@
 				"Desc_OilRefinery_C"
 			]
 		},
+		"Recipe_PlutoniumCell_C": {
+			"slug": "encased-plutonium-cell",
+			"name": "Encased Plutonium Cell",
+			"className": "Recipe_PlutoniumCell_C",
+			"alternate": false,
+			"time": 6,
+			"manualTimeMultiplier": 0.5,
+			"ingredients": [
+				{
+					"item": "Desc_PlutoniumPellet_C",
+					"amount": 1
+				},
+				{
+					"item": "Desc_Cement_C",
+					"amount": 2
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_PlutoniumCell_C",
+					"amount": 1
+				}
+			],
+			"producedIn": [
+				"Desc_AssemblerMk1_C"
+			]
+		},
+		"Recipe_PlutoniumFuelRod_C": {
+			"slug": "plutonium-fuel-rod",
+			"name": "Plutonium Fuel Rod",
+			"className": "Recipe_PlutoniumFuelRod_C",
+			"alternate": false,
+			"time": 120,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_PlutoniumCell_C",
+					"amount": 15
+				},
+				{
+					"item": "Desc_SteelPlate_C",
+					"amount": 8
+				},
+				{
+					"item": "Desc_ElectromagneticControlRod_C",
+					"amount": 3
+				},
+				{
+					"item": "Desc_AluminumPlateReinforced_C",
+					"amount": 5
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_PlutoniumFuelRod_C",
+					"amount": 1
+				}
+			],
+			"producedIn": [
+				"Desc_ManufacturerMk1_C"
+			]
+		},
+		"Recipe_Plutonium_C": {
+			"slug": "plutonium-pellets",
+			"name": "Plutonium Pellets",
+			"className": "Recipe_Plutonium_C",
+			"alternate": false,
+			"time": 60,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_NonFissibleUranium_C",
+					"amount": 100
+				},
+				{
+					"item": "Desc_NuclearWaste_C",
+					"amount": 50
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_PlutoniumPellet_C",
+					"amount": 30
+				}
+			],
+			"producedIn": [
+				"Desc_HadronCollider_C"
+			]
+		},
 		"Recipe_PortableMiner_C": {
 			"slug": "portable-miner",
 			"name": "Portable Miner",
@@ -6617,17 +8089,114 @@
 			],
 			"producedIn": []
 		},
+		"Recipe_PowerStorageMk1_C": {
+			"slug": "power-storage",
+			"name": "Power Storage",
+			"className": "Recipe_PowerStorageMk1_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Wire_C",
+					"amount": 100
+				},
+				{
+					"item": "Desc_ModularFrame_C",
+					"amount": 10
+				},
+				{
+					"item": "Desc_Stator_C",
+					"amount": 5
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_PowerStorageMk1_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
+		"Recipe_PowerSwitch_C": {
+			"slug": "power-switch",
+			"name": "Power Switch",
+			"className": "Recipe_PowerSwitch_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_HighSpeedWire_C",
+					"amount": 20
+				},
+				{
+					"item": "Desc_SteelPlate_C",
+					"amount": 4
+				},
+				{
+					"item": "Desc_CircuitBoardHighSpeed_C",
+					"amount": 1
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_PowerSwitch_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
+		"Recipe_PressureConversionCube_C": {
+			"slug": "pressure-conversion-cube",
+			"name": "Pressure Conversion Cube",
+			"className": "Recipe_PressureConversionCube_C",
+			"alternate": false,
+			"time": 60,
+			"manualTimeMultiplier": 2,
+			"ingredients": [
+				{
+					"item": "Desc_ModularFrameFused_C",
+					"amount": 1
+				},
+				{
+					"item": "Desc_ModularFrameLightweight_C",
+					"amount": 2
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_PressureConversionCube_C",
+					"amount": 1
+				}
+			],
+			"producedIn": [
+				"Desc_AssemblerMk1_C"
+			]
+		},
 		"Recipe_PureAluminumIngot_C": {
 			"slug": "alternate-pure-aluminum-ingot",
 			"name": "Alternate: Pure Aluminum Ingot",
 			"className": "Recipe_PureAluminumIngot_C",
 			"alternate": true,
-			"time": 5,
+			"time": 20,
 			"manualTimeMultiplier": 1,
 			"ingredients": [
 				{
 					"item": "Desc_AluminumScrap_C",
-					"amount": 12
+					"amount": 18
 				}
 			],
 			"forBuilding": false,
@@ -6637,7 +8206,7 @@
 			"products": [
 				{
 					"item": "Desc_AluminumIngot_C",
-					"amount": 3
+					"amount": 9
 				}
 			],
 			"producedIn": [
@@ -6890,16 +8459,12 @@
 			"name": "Radio Control Unit",
 			"className": "Recipe_RadioControlUnit_C",
 			"alternate": false,
-			"time": 24,
-			"manualTimeMultiplier": 1.5,
+			"time": 48,
+			"manualTimeMultiplier": 1,
 			"ingredients": [
 				{
-					"item": "Desc_AluminumPlateReinforced_C",
-					"amount": 4
-				},
-				{
-					"item": "Desc_Rubber_C",
-					"amount": 16
+					"item": "Desc_AluminumCasing_C",
+					"amount": 24
 				},
 				{
 					"item": "Desc_CrystalOscillator_C",
@@ -6917,7 +8482,7 @@
 			"products": [
 				{
 					"item": "Desc_ModularFrameLightweight_C",
-					"amount": 1
+					"amount": 2
 				}
 			],
 			"producedIn": [
@@ -8011,6 +9576,142 @@
 				"Desc_ManufacturerMk1_C"
 			]
 		},
+		"Recipe_SpaceElevatorPart_6_C": {
+			"slug": "magnetic-field-generator",
+			"name": "Magnetic Field Generator",
+			"className": "Recipe_SpaceElevatorPart_6_C",
+			"alternate": false,
+			"time": 120,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_SpaceElevatorPart_2_C",
+					"amount": 5
+				},
+				{
+					"item": "Desc_ElectromagneticControlRod_C",
+					"amount": 2
+				},
+				{
+					"item": "Desc_Battery_C",
+					"amount": 10
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_SpaceElevatorPart_6_C",
+					"amount": 2
+				}
+			],
+			"producedIn": [
+				"Desc_ManufacturerMk1_C"
+			]
+		},
+		"Recipe_SpaceElevatorPart_7_C": {
+			"slug": "assembly-director-system",
+			"name": "Assembly Director System",
+			"className": "Recipe_SpaceElevatorPart_7_C",
+			"alternate": false,
+			"time": 80,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_SpaceElevatorPart_5_C",
+					"amount": 2
+				},
+				{
+					"item": "Desc_ComputerSuper_C",
+					"amount": 1
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_SpaceElevatorPart_7_C",
+					"amount": 1
+				}
+			],
+			"producedIn": [
+				"Desc_AssemblerMk1_C"
+			]
+		},
+		"Recipe_SpaceElevatorPart_8_C": {
+			"slug": "thermal-propulsion-rocket",
+			"name": "Thermal Propulsion Rocket",
+			"className": "Recipe_SpaceElevatorPart_8_C",
+			"alternate": false,
+			"time": 120,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_SpaceElevatorPart_4_C",
+					"amount": 5
+				},
+				{
+					"item": "Desc_MotorLightweight_C",
+					"amount": 2
+				},
+				{
+					"item": "Desc_CoolingSystem_C",
+					"amount": 6
+				},
+				{
+					"item": "Desc_ModularFrameFused_C",
+					"amount": 2
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_SpaceElevatorPart_8_C",
+					"amount": 2
+				}
+			],
+			"producedIn": [
+				"Desc_ManufacturerMk1_C"
+			]
+		},
+		"Recipe_SpaceElevatorPart_9_C": {
+			"slug": "nuclear-pasta",
+			"name": "Nuclear Pasta",
+			"className": "Recipe_SpaceElevatorPart_9_C",
+			"alternate": false,
+			"time": 120,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_CopperDust_C",
+					"amount": 200
+				},
+				{
+					"item": "Desc_PressureConversionCube_C",
+					"amount": 1
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_SpaceElevatorPart_9_C",
+					"amount": 1
+				}
+			],
+			"producedIn": [
+				"Desc_HadronCollider_C"
+			]
+		},
 		"Recipe_SpaceElevator_C": {
 			"slug": "space-elevator",
 			"name": "Space Elevator",
@@ -8371,6 +10072,39 @@
 			],
 			"producedIn": []
 		},
+		"Recipe_StreetLight_C": {
+			"slug": "street-light",
+			"name": "Street Light",
+			"className": "Recipe_StreetLight_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_QuartzCrystal_C",
+					"amount": 2
+				},
+				{
+					"item": "Desc_Wire_C",
+					"amount": 4
+				},
+				{
+					"item": "Desc_IronRod_C",
+					"amount": 4
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_StreetLight_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
 		"Recipe_SulfuricAcid_C": {
 			"slug": "sulfuric-acid",
 			"name": "Sulfuric Acid",
@@ -8395,7 +10129,7 @@
 			"products": [
 				{
 					"item": "Desc_SulfuricAcid_C",
-					"amount": 10
+					"amount": 5
 				}
 			],
 			"producedIn": [
@@ -8641,6 +10375,37 @@
 			],
 			"producedIn": []
 		},
+		"Recipe_UnpackageAlumina_C": {
+			"slug": "unpackage-alumina-solution",
+			"name": "Unpackage Alumina Solution",
+			"className": "Recipe_UnpackageAlumina_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_PackagedAlumina_C",
+					"amount": 2
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_AluminaSolution_C",
+					"amount": 2
+				},
+				{
+					"item": "Desc_FluidCanister_C",
+					"amount": 2
+				}
+			],
+			"producedIn": [
+				"Desc_Packager_C"
+			]
+		},
 		"Recipe_UnpackageBioFuel_C": {
 			"slug": "unpackage-liquid-biofuel",
 			"name": "Unpackage Liquid Biofuel",
@@ -8703,6 +10468,68 @@
 				"Desc_Packager_C"
 			]
 		},
+		"Recipe_UnpackageNitricAcid_C": {
+			"slug": "unpackage-nitric-acid",
+			"name": "Unpackage Nitric Acid",
+			"className": "Recipe_UnpackageNitricAcid_C",
+			"alternate": false,
+			"time": 3,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_PackagedNitricAcid_C",
+					"amount": 1
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_NitricAcid_C",
+					"amount": 1
+				},
+				{
+					"item": "Desc_GasTank_C",
+					"amount": 1
+				}
+			],
+			"producedIn": [
+				"Desc_Packager_C"
+			]
+		},
+		"Recipe_UnpackageNitrogen_C": {
+			"slug": "unpackage-nitrogen-gas",
+			"name": "Unpackage Nitrogen Gas",
+			"className": "Recipe_UnpackageNitrogen_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_PackagedNitrogenGas_C",
+					"amount": 1
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_NitrogenGas_C",
+					"amount": 4
+				},
+				{
+					"item": "Desc_GasTank_C",
+					"amount": 1
+				}
+			],
+			"producedIn": [
+				"Desc_Packager_C"
+			]
+		},
 		"Recipe_UnpackageOilResidue_C": {
 			"slug": "unpackage-heavy-oil-residue",
 			"name": "Unpackage Heavy Oil Residue",
@@ -8759,6 +10586,37 @@
 				{
 					"item": "Desc_FluidCanister_C",
 					"amount": 2
+				}
+			],
+			"producedIn": [
+				"Desc_Packager_C"
+			]
+		},
+		"Recipe_UnpackageSulfuricAcid_C": {
+			"slug": "unpackage-sulfuric-acid",
+			"name": "Unpackage Sulfuric Acid",
+			"className": "Recipe_UnpackageSulfuricAcid_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_PackagedSulfuricAcid_C",
+					"amount": 1
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_SulfuricAcid_C",
+					"amount": 1
+				},
+				{
+					"item": "Desc_FluidCanister_C",
+					"amount": 1
 				}
 			],
 			"producedIn": [
@@ -8832,43 +10690,16 @@
 			"name": "Encased Uranium Cell",
 			"className": "Recipe_UraniumCell_C",
 			"alternate": false,
-			"time": 60,
+			"time": 12,
 			"manualTimeMultiplier": 0.5,
 			"ingredients": [
 				{
-					"item": "Desc_UraniumPellet_C",
-					"amount": 40
+					"item": "Desc_OreUranium_C",
+					"amount": 10
 				},
 				{
 					"item": "Desc_Cement_C",
-					"amount": 9
-				}
-			],
-			"forBuilding": false,
-			"inMachine": true,
-			"inHand": true,
-			"inWorkshop": false,
-			"products": [
-				{
-					"item": "Desc_UraniumCell_C",
-					"amount": 10
-				}
-			],
-			"producedIn": [
-				"Desc_AssemblerMk1_C"
-			]
-		},
-		"Recipe_UraniumPellet_C": {
-			"slug": "uranium-pellet",
-			"name": "Uranium Pellet",
-			"className": "Recipe_UraniumPellet_C",
-			"alternate": false,
-			"time": 6,
-			"manualTimeMultiplier": 1,
-			"ingredients": [
-				{
-					"item": "Desc_OreUranium_C",
-					"amount": 5
+					"amount": 3
 				},
 				{
 					"item": "Desc_SulfuricAcid_C",
@@ -8881,7 +10712,7 @@
 			"inWorkshop": false,
 			"products": [
 				{
-					"item": "Desc_UraniumPellet_C",
+					"item": "Desc_UraniumCell_C",
 					"amount": 5
 				},
 				{
@@ -8890,7 +10721,7 @@
 				}
 			],
 			"producedIn": [
-				"Desc_OilRefinery_C"
+				"Desc_Blender_C"
 			]
 		},
 		"Recipe_Valve_C": {
@@ -9896,9 +11727,63 @@
 				}
 			],
 			"producedIn": []
+		},
+		"Recipe_ZipLine_C": {
+			"slug": "zipline",
+			"name": "Zipline",
+			"className": "Recipe_ZipLine_C",
+			"alternate": false,
+			"time": 40,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "BP_EquipmentDescriptorShockShank_C",
+					"amount": 1
+				},
+				{
+					"item": "Desc_HighSpeedWire_C",
+					"amount": 30
+				},
+				{
+					"item": "Desc_IronRod_C",
+					"amount": 3
+				},
+				{
+					"item": "Desc_Cable_C",
+					"amount": 10
+				}
+			],
+			"forBuilding": false,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": true,
+			"products": [
+				{
+					"item": "BP_EqDescZipLine_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
 		}
 	},
 	"items": {
+		"BP_EqDescZipLine_C": {
+			"slug": "zipline",
+			"className": "BP_EqDescZipLine_C",
+			"name": "Zipline",
+			"sinkPoints": 5284,
+			"description": "Slot: Hand\n\nProvides faster traversal in factories by allowing Pioneers to zip along Power lines.\nActivate the Zipline and aim at a nearby Power Line to connect to it.",
+			"stackSize": 1,
+			"energyValue": 0,
+			"radioactiveDecay": 0,
+			"liquid": false,
+			"fluidColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			}
+		},
 		"BP_EquipmentDescriptorBeacon_C": {
 			"slug": "beacon",
 			"className": "BP_EquipmentDescriptorBeacon_C",
@@ -9954,8 +11839,25 @@
 			"slug": "hazmat-suit",
 			"className": "BP_EquipmentDescriptorHazmatSuit_C",
 			"name": "Hazmat Suit",
-			"sinkPoints": 104400,
+			"sinkPoints": 54100,
 			"description": "Slot: Body\n\nShields you from the adverse effects of radiation. \nConsumes Iodine Infused Filters from your inventory when you are in radioactive areas.",
+			"stackSize": 1,
+			"energyValue": 0,
+			"radioactiveDecay": 0,
+			"liquid": false,
+			"fluidColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			}
+		},
+		"BP_EquipmentDescriptorHoverPack_C": {
+			"slug": "hover-pack",
+			"className": "BP_EquipmentDescriptorHoverPack_C",
+			"name": "Hover Pack",
+			"sinkPoints": 592312,
+			"description": "Slot: Body\nPower consumption: 100 MW\nAllows for vertical movement and hovering in mid air to improve building efficiency and factory traversal. Wirelessly connects to nearby power connections, such as Power Poles and Buildings, for power consumption.",
 			"stackSize": 1,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
@@ -10090,7 +11992,7 @@
 			"slug": "portable-miner",
 			"className": "BP_ItemDescriptorPortableMiner_C",
 			"name": "Portable Miner",
-			"sinkPoints": 60,
+			"sinkPoints": 56,
 			"description": "Slot: Hands\n\nCan be set up on a resource node to automatically extract the resource. Very limited storage space.",
 			"stackSize": 1,
 			"energyValue": 0,
@@ -10107,8 +12009,8 @@
 			"slug": "alumina-solution",
 			"className": "Desc_AluminaSolution_C",
 			"name": "Alumina Solution",
-			"sinkPoints": 10,
-			"description": "Dissolved Alumina, extracted from Bauxite. Can be further refined into pure Aluminum.",
+			"sinkPoints": 20,
+			"description": "Dissolved Alumina, extracted from Bauxite. Can be further refined into Aluminum Scrap for Aluminum Ingot production.",
 			"stackSize": 50000,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
@@ -10120,12 +12022,29 @@
 				"a": 255
 			}
 		},
+		"Desc_AluminumCasing_C": {
+			"slug": "aluminum-casing",
+			"className": "Desc_AluminumCasing_C",
+			"name": "Aluminum Casing",
+			"sinkPoints": 393,
+			"description": "A versatile container casted from Aluminum Ingots.",
+			"stackSize": 200,
+			"energyValue": 0,
+			"radioactiveDecay": 0,
+			"liquid": false,
+			"fluidColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			}
+		},
 		"Desc_AluminumIngot_C": {
 			"slug": "aluminum-ingot",
 			"className": "Desc_AluminumIngot_C",
 			"name": "Aluminum Ingot",
-			"sinkPoints": 190,
-			"description": "Aluminum Ingots are made from Aluminum Scrap. It is mostly used to produce specialized aluminum-based parts.",
+			"sinkPoints": 131,
+			"description": "Aluminum Ingots are made from Aluminum Scrap, which is refined from Alumina Solution.\nUsed to produce specialized aluminum-based parts.",
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
@@ -10141,7 +12060,7 @@
 			"slug": "heat-sink",
 			"className": "Desc_AluminumPlateReinforced_C",
 			"name": "Heat Sink",
-			"sinkPoints": 6992,
+			"sinkPoints": 2344,
 			"description": "Used to dissipate heat faster.",
 			"stackSize": 100,
 			"energyValue": 0,
@@ -10158,9 +12077,9 @@
 			"slug": "alclad-aluminum-sheet",
 			"className": "Desc_AluminumPlate_C",
 			"name": "Alclad Aluminum Sheet",
-			"sinkPoints": 769,
-			"description": "Thin lightweight & highly durable sheet that is mainly used for products that need to be light or have high heat conduction.",
-			"stackSize": 100,
+			"sinkPoints": 266,
+			"description": "Thin, lightweight, and highly durable sheets that are mainly used for products that require high heat conduction or a high specific strength.",
+			"stackSize": 200,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
 			"liquid": false,
@@ -10175,7 +12094,7 @@
 			"slug": "aluminum-scrap",
 			"className": "Desc_AluminumScrap_C",
 			"name": "Aluminum Scrap",
-			"sinkPoints": 20,
+			"sinkPoints": 27,
 			"description": "Aluminum Scrap is pure aluminum refined from Alumina. Can be smelted down to Aluminum Ingots for industrial usage.",
 			"stackSize": 500,
 			"energyValue": 0,
@@ -10192,9 +12111,9 @@
 			"slug": "battery",
 			"className": "Desc_Battery_C",
 			"name": "Battery",
-			"sinkPoints": 4712,
-			"description": "Batteries store an electrical charge. They are primarily used as a power source.",
-			"stackSize": 100,
+			"sinkPoints": 513,
+			"description": "Primarily used as fuel for Drones and Vehicles.",
+			"stackSize": 200,
 			"energyValue": 6000,
 			"radioactiveDecay": 0,
 			"liquid": false,
@@ -10245,7 +12164,7 @@
 			"name": "Cable",
 			"sinkPoints": 24,
 			"description": "Used for crafting.\nPrimarily used to build power lines.",
-			"stackSize": 100,
+			"stackSize": 200,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
 			"liquid": false,
@@ -10279,7 +12198,7 @@
 			"name": "Concrete",
 			"sinkPoints": 12,
 			"description": "Used for building.\nGood for stable foundations.",
-			"stackSize": 100,
+			"stackSize": 500,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
 			"liquid": false,
@@ -10426,6 +12345,40 @@
 				"a": 0
 			}
 		},
+		"Desc_CoolingSystem_C": {
+			"slug": "cooling-system",
+			"className": "Desc_CoolingSystem_C",
+			"name": "Cooling System",
+			"sinkPoints": 8811,
+			"description": "Used to keep temperatures of advanced parts and buildings from exceeding to inefficient levels.",
+			"stackSize": 100,
+			"energyValue": 0,
+			"radioactiveDecay": 0,
+			"liquid": false,
+			"fluidColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			}
+		},
+		"Desc_CopperDust_C": {
+			"slug": "copper-powder",
+			"className": "Desc_CopperDust_C",
+			"name": "Copper Powder",
+			"sinkPoints": 72,
+			"description": "Ground down Copper Ingots.\nThe high natural density of Copper, combined with the granularity of the powder, make this part fit for producing Nuclear Pasta in the Particle Accelerator.",
+			"stackSize": 500,
+			"energyValue": 0,
+			"radioactiveDecay": 0,
+			"liquid": false,
+			"fluidColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			}
+		},
 		"Desc_CopperIngot_C": {
 			"slug": "copper-ingot",
 			"className": "Desc_CopperIngot_C",
@@ -10449,7 +12402,7 @@
 			"name": "Copper Sheet",
 			"sinkPoints": 24,
 			"description": "Used for crafting.\nPrimarily used for pipelines due to its high corrosion resistance.",
-			"stackSize": 100,
+			"stackSize": 200,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
 			"liquid": false,
@@ -10602,7 +12555,7 @@
 			"name": "Flower Petals",
 			"sinkPoints": 10,
 			"description": "Used for crafting.\nColorful native flower petals.",
-			"stackSize": 200,
+			"stackSize": 500,
 			"energyValue": 100,
 			"radioactiveDecay": 0,
 			"liquid": false,
@@ -10618,7 +12571,7 @@
 			"className": "Desc_FluidCanister_C",
 			"name": "Empty Canister",
 			"sinkPoints": 60,
-			"description": "Used to package fluids for transportation. Can be recycled.",
+			"description": "Used to package fluids for transportation.",
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
@@ -10637,7 +12590,24 @@
 			"sinkPoints": 270,
 			"description": "Fuel, packaged for alternative transport. Can be used as fuel for Vehicles or the Jetpack.",
 			"stackSize": 100,
-			"energyValue": 600,
+			"energyValue": 750,
+			"radioactiveDecay": 0,
+			"liquid": false,
+			"fluidColor": {
+				"r": 235,
+				"g": 125,
+				"b": 21,
+				"a": 255
+			}
+		},
+		"Desc_GasTank_C": {
+			"slug": "empty-fluid-tank",
+			"className": "Desc_GasTank_C",
+			"name": "Empty Fluid Tank",
+			"sinkPoints": 225,
+			"description": "Used to package gases and volatile liquids for transportation.",
+			"stackSize": 100,
+			"energyValue": 0,
 			"radioactiveDecay": 0,
 			"liquid": false,
 			"fluidColor": {
@@ -10736,7 +12706,7 @@
 			"slug": "iodine-infused-filter",
 			"className": "Desc_HazmatFilter_C",
 			"name": "Iodine Infused Filter",
-			"sinkPoints": 2172,
+			"sinkPoints": 2718,
 			"description": "Used in hazmat suits to filter out radioactive particles in the air.",
 			"stackSize": 50,
 			"energyValue": 0,
@@ -10857,7 +12827,7 @@
 			"name": "Iron Plate",
 			"sinkPoints": 6,
 			"description": "Used for crafting.\nOne of the most basic parts.",
-			"stackSize": 100,
+			"stackSize": 200,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
 			"liquid": false,
@@ -10874,7 +12844,7 @@
 			"name": "Iron Rod",
 			"sinkPoints": 4,
 			"description": "Used for crafting.\nOne of the most basic parts.",
-			"stackSize": 100,
+			"stackSize": 200,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
 			"liquid": false,
@@ -10923,7 +12893,7 @@
 			"slug": "liquid-biofuel",
 			"className": "Desc_LiquidBiofuel_C",
 			"name": "Liquid Biofuel",
-			"sinkPoints": 125,
+			"sinkPoints": 77,
 			"description": "Liquid Biofuel can be used to generate power or packaged to be used as fuel for Vehicles.",
 			"stackSize": 50000,
 			"energyValue": 0.75,
@@ -10943,7 +12913,7 @@
 			"sinkPoints": 75,
 			"description": "Fuel can be used to generate power or packaged to be used as fuel for Vehicles or the Jetpack.",
 			"stackSize": 50000,
-			"energyValue": 0.6,
+			"energyValue": 0.75,
 			"radioactiveDecay": 0,
 			"liquid": true,
 			"fluidColor": {
@@ -11004,6 +12974,23 @@
 				"a": 0
 			}
 		},
+		"Desc_ModularFrameFused_C": {
+			"slug": "fused-modular-frame",
+			"className": "Desc_ModularFrameFused_C",
+			"name": "Fused Modular Frame",
+			"sinkPoints": 62840,
+			"description": "A corrosion resistant, nitride hardened, highly robust, yet lightweight modular frame.",
+			"stackSize": 50,
+			"energyValue": 0,
+			"radioactiveDecay": 0,
+			"liquid": false,
+			"fluidColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			}
+		},
 		"Desc_ModularFrameHeavy_C": {
 			"slug": "heavy-modular-frame",
 			"className": "Desc_ModularFrameHeavy_C",
@@ -11025,7 +13012,7 @@
 			"slug": "radio-control-unit",
 			"className": "Desc_ModularFrameLightweight_C",
 			"name": "Radio Control Unit",
-			"sinkPoints": 98520,
+			"sinkPoints": 29764,
 			"description": "Enhances and directs radio signals.",
 			"stackSize": 50,
 			"energyValue": 0,
@@ -11059,7 +13046,7 @@
 			"slug": "turbo-motor",
 			"className": "Desc_MotorLightweight_C",
 			"name": "Turbo Motor",
-			"sinkPoints": 465056,
+			"sinkPoints": 204584,
 			"description": "The Turbo Motor is a more complex, and more powerful, version of the regular Motor.",
 			"stackSize": 50,
 			"energyValue": 0,
@@ -11106,6 +13093,40 @@
 				"a": 0
 			}
 		},
+		"Desc_NitricAcid_C": {
+			"slug": "nitric-acid",
+			"className": "Desc_NitricAcid_C",
+			"name": "Nitric Acid",
+			"sinkPoints": 92,
+			"description": "Produced by reaction of Nitrogen Gas with Water. Its high corrosiveness and oxidizing properties make it an excellent choice for refinement and fuel production processes.",
+			"stackSize": 50000,
+			"energyValue": 0,
+			"radioactiveDecay": 0,
+			"liquid": true,
+			"fluidColor": {
+				"r": 217,
+				"g": 217,
+				"b": 162,
+				"a": 255
+			}
+		},
+		"Desc_NitrogenGas_C": {
+			"slug": "nitrogen-gas",
+			"className": "Desc_NitrogenGas_C",
+			"name": "Nitrogen Gas",
+			"sinkPoints": 10,
+			"description": "Nitrogen can be used in a variety of ways, such as metallurgy, cooling, and the production of Nitric Acid. On MASSAGE-2(A-B)b it can be extracted from underground gas wells.",
+			"stackSize": 50000,
+			"energyValue": 0,
+			"radioactiveDecay": 0,
+			"liquid": true,
+			"fluidColor": {
+				"r": 89,
+				"g": 89,
+				"b": 89,
+				"a": 255
+			}
+		},
 		"Desc_NobeliskExplosive_C": {
 			"slug": "nobelisk",
 			"className": "Desc_NobeliskExplosive_C",
@@ -11123,15 +13144,32 @@
 				"a": 0
 			}
 		},
+		"Desc_NonFissibleUranium_C": {
+			"slug": "non-fissile-uranium",
+			"className": "Desc_NonFissibleUranium_C",
+			"name": "Non-fissile Uranium",
+			"sinkPoints": 0,
+			"description": "The isotope Uranium-238 is non-fissile, meaning it cannot be used for nuclear fission. It can, however, be conversed into fissile Plutonium in the Particle Accelerator.\n\nCaution: Mildly Radioactive.",
+			"stackSize": 500,
+			"energyValue": 0,
+			"radioactiveDecay": 0.75,
+			"liquid": false,
+			"fluidColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			}
+		},
 		"Desc_NuclearFuelRod_C": {
-			"slug": "nuclear-fuel-rod",
+			"slug": "uranium-fuel-rod",
 			"className": "Desc_NuclearFuelRod_C",
-			"name": "Nuclear Fuel Rod",
-			"sinkPoints": 75292,
-			"description": "Nuclear Fuel Rods are used as fuel in nuclear reactors.\nVERY RADIOACTIVE",
+			"name": "Uranium Fuel Rod",
+			"sinkPoints": 48592,
+			"description": "Used as fuel for the Nuclear Power Plant.\n\nCaution: Produces Nuclear Uranium Waste when consumed.\nCaution: Moderately Radioactive.",
 			"stackSize": 50,
 			"energyValue": 750000,
-			"radioactiveDecay": 60,
+			"radioactiveDecay": 50,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -11141,14 +13179,14 @@
 			}
 		},
 		"Desc_NuclearWaste_C": {
-			"slug": "nuclear-waste",
+			"slug": "uranium-waste",
 			"className": "Desc_NuclearWaste_C",
-			"name": "Nuclear Waste",
+			"name": "Uranium Waste",
 			"sinkPoints": 0,
-			"description": "Nuclear Waste is the byproduct of nuclear power plants. You gotta find a way to handle all of this.\nEXTREMELY RADIOACTIVE",
+			"description": "The by-product of consuming Uranium Fuel Rods in the Nuclear Power Plant.\nNon-fissible Uranium can be extracted. Handle with caution.\n\nCaution: HIGHLY Radioactive.",
 			"stackSize": 500,
 			"energyValue": 0,
-			"radioactiveDecay": 20,
+			"radioactiveDecay": 5,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -11247,7 +13285,7 @@
 			"className": "Desc_OreUranium_C",
 			"name": "Uranium",
 			"sinkPoints": 35,
-			"description": "Uranium is radioactive. Mainly used in Nuclear Power Plants.",
+			"description": "Uranium is a radioactive element. \nUsed to produce Encased Uranium Cells for Nuclear Fuel Rods.\n\nCaution: Moderately Radioactive.",
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 15,
@@ -11259,21 +13297,72 @@
 				"a": 0
 			}
 		},
+		"Desc_PackagedAlumina_C": {
+			"slug": "packaged-alumina-solution",
+			"className": "Desc_PackagedAlumina_C",
+			"name": "Packaged Alumina Solution",
+			"sinkPoints": 160,
+			"description": "Alumina Solution, packaged for alternative transport.",
+			"stackSize": 100,
+			"energyValue": 0,
+			"radioactiveDecay": 0,
+			"liquid": false,
+			"fluidColor": {
+				"r": 58,
+				"g": 83,
+				"b": 42,
+				"a": 255
+			}
+		},
 		"Desc_PackagedBiofuel_C": {
 			"slug": "packaged-liquid-biofuel",
 			"className": "Desc_PackagedBiofuel_C",
 			"name": "Packaged Liquid Biofuel",
-			"sinkPoints": 370,
+			"sinkPoints": 1,
 			"description": "Liquid Biofuel, packaged for alternative transport. Can be used as fuel for Vehicles.",
 			"stackSize": 100,
 			"energyValue": 750,
 			"radioactiveDecay": 0,
 			"liquid": false,
 			"fluidColor": {
-				"r": 0,
-				"g": 0,
-				"b": 0,
-				"a": 0
+				"r": 58,
+				"g": 83,
+				"b": 42,
+				"a": 255
+			}
+		},
+		"Desc_PackagedNitricAcid_C": {
+			"slug": "packaged-nitric-acid",
+			"className": "Desc_PackagedNitricAcid_C",
+			"name": "Packaged Nitric Acid",
+			"sinkPoints": 412,
+			"description": "Nitric Acid, packaged for alternative transport.",
+			"stackSize": 100,
+			"energyValue": 0,
+			"radioactiveDecay": 0,
+			"liquid": false,
+			"fluidColor": {
+				"r": 58,
+				"g": 83,
+				"b": 42,
+				"a": 255
+			}
+		},
+		"Desc_PackagedNitrogenGas_C": {
+			"slug": "packaged-nitrogen-gas",
+			"className": "Desc_PackagedNitrogenGas_C",
+			"name": "Packaged Nitrogen Gas",
+			"sinkPoints": 308,
+			"description": "Nitrogen Gas, packaged for alternative transport.",
+			"stackSize": 100,
+			"energyValue": 0,
+			"radioactiveDecay": 0,
+			"liquid": false,
+			"fluidColor": {
+				"r": 58,
+				"g": 83,
+				"b": 42,
+				"a": 255
 			}
 		},
 		"Desc_PackagedOilResidue_C": {
@@ -11287,10 +13376,10 @@
 			"radioactiveDecay": 0,
 			"liquid": false,
 			"fluidColor": {
-				"r": 0,
-				"g": 0,
-				"b": 0,
-				"a": 0
+				"r": 109,
+				"g": 45,
+				"b": 120,
+				"a": 255
 			}
 		},
 		"Desc_PackagedOil_C": {
@@ -11310,6 +13399,23 @@
 				"a": 0
 			}
 		},
+		"Desc_PackagedSulfuricAcid_C": {
+			"slug": "packaged-sulfuric-acid",
+			"className": "Desc_PackagedSulfuricAcid_C",
+			"name": "Packaged Sulfuric Acid",
+			"sinkPoints": 152,
+			"description": "Sulfuric Acid, packaged for alternative transport.",
+			"stackSize": 100,
+			"energyValue": 0,
+			"radioactiveDecay": 0,
+			"liquid": false,
+			"fluidColor": {
+				"r": 58,
+				"g": 83,
+				"b": 42,
+				"a": 255
+			}
+		},
 		"Desc_PackagedWater_C": {
 			"slug": "packaged-water",
 			"className": "Desc_PackagedWater_C",
@@ -11321,10 +13427,10 @@
 			"radioactiveDecay": 0,
 			"liquid": false,
 			"fluidColor": {
-				"r": 0,
-				"g": 0,
-				"b": 0,
-				"a": 0
+				"r": 122,
+				"g": 176,
+				"b": 212,
+				"a": 255
 			}
 		},
 		"Desc_Parachute_C": {
@@ -11367,9 +13473,60 @@
 			"name": "Plastic",
 			"sinkPoints": 75,
 			"description": "A versatile and easy to manufacture material that can be used for a lot of things.",
-			"stackSize": 100,
+			"stackSize": 200,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
+			"liquid": false,
+			"fluidColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			}
+		},
+		"Desc_PlutoniumCell_C": {
+			"slug": "encased-plutonium-cell",
+			"className": "Desc_PlutoniumCell_C",
+			"name": "Encased Plutonium Cell",
+			"sinkPoints": 0,
+			"description": "Plutonium Cells are concrete encased Plutonium Pellets.\nUsed to produce Plutonium Fuel Rods for Nuclear Power production.\n\nCaution: Moderately Radioactive.",
+			"stackSize": 200,
+			"energyValue": 0,
+			"radioactiveDecay": 60,
+			"liquid": false,
+			"fluidColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			}
+		},
+		"Desc_PlutoniumFuelRod_C": {
+			"slug": "plutonium-fuel-rod",
+			"className": "Desc_PlutoniumFuelRod_C",
+			"name": "Plutonium Fuel Rod",
+			"sinkPoints": 129620,
+			"description": "Used as fuel for the Nuclear Power Plant.\n\nCaution: Produces Nuclear Plutonium Waste when consumed.\nCaution: HIGHLY Radioactive.",
+			"stackSize": 50,
+			"energyValue": 375000,
+			"radioactiveDecay": 120,
+			"liquid": false,
+			"fluidColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			}
+		},
+		"Desc_PlutoniumPellet_C": {
+			"slug": "plutonium-pellets",
+			"className": "Desc_PlutoniumPellet_C",
+			"name": "Plutonium Pellets",
+			"sinkPoints": 0,
+			"description": "Produced in the Particle Accelerator through conversion of Non-fissile Uranium.\nUsed to produce Encased Plutonium Cells for Plutonium Fuel Rods.\n\nPower Usage: 250-750 MW (500 MW average).\nCaution: Moderately Radioactive.",
+			"stackSize": 100,
+			"energyValue": 0,
+			"radioactiveDecay": 20,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -11385,6 +13542,23 @@
 			"sinkPoints": 12,
 			"description": "Used for crafting.\nA by-product of oil refinement into fuel. Commonly used to manufacture plastics.",
 			"stackSize": 200,
+			"energyValue": 0,
+			"radioactiveDecay": 0,
+			"liquid": false,
+			"fluidColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			}
+		},
+		"Desc_PressureConversionCube_C": {
+			"slug": "pressure-conversion-cube",
+			"className": "Desc_PressureConversionCube_C",
+			"name": "Pressure Conversion Cube",
+			"sinkPoints": 244736,
+			"description": "Converts outgoing force into internal pressure. Required to contain unstable, high-energy matter.",
+			"stackSize": 50,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
 			"liquid": false,
@@ -11469,7 +13643,7 @@
 			"name": "Rubber",
 			"sinkPoints": 60,
 			"description": "Rubber is a material that is very flexible and has a lot of friction.",
-			"stackSize": 100,
+			"stackSize": 200,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
 			"liquid": false,
@@ -11519,7 +13693,7 @@
 			"className": "Desc_SpaceElevatorPart_1_C",
 			"name": "Smart Plating",
 			"sinkPoints": 520,
-			"description": "Project Part #1. Send up the Space Elevator to complete phases of Project Assembly.",
+			"description": "Project Part #1. Ship with the Space Elevator to complete phases of Project Assembly.",
 			"stackSize": 50,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
@@ -11536,7 +13710,7 @@
 			"className": "Desc_SpaceElevatorPart_2_C",
 			"name": "Versatile Framework",
 			"sinkPoints": 1176,
-			"description": "Project Part #2. Send up the Space Elevator to complete phases of Project Assembly.",
+			"description": "Project Part #2. Ship with the Space Elevator to complete phases of Project Assembly.",
 			"stackSize": 50,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
@@ -11553,7 +13727,7 @@
 			"className": "Desc_SpaceElevatorPart_3_C",
 			"name": "Automated Wiring",
 			"sinkPoints": 1440,
-			"description": "Project Part #3. Send up the Space Elevator to complete phases of Project Assembly.",
+			"description": "Project Part #3. Ship with the Space Elevator to complete phases of Project Assembly.",
 			"stackSize": 50,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
@@ -11570,7 +13744,7 @@
 			"className": "Desc_SpaceElevatorPart_4_C",
 			"name": "Modular Engine",
 			"sinkPoints": 9960,
-			"description": "Project Part #4. Send up the Space Elevator to complete phases of Project Assembly.",
+			"description": "Project Part #4. Ship with the Space Elevator to complete phases of Project Assembly.",
 			"stackSize": 50,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
@@ -11587,7 +13761,75 @@
 			"className": "Desc_SpaceElevatorPart_5_C",
 			"name": "Adaptive Control Unit",
 			"sinkPoints": 86120,
-			"description": "Project Part #5. Send up the Space Elevator to complete phases of Project Assembly.",
+			"description": "Project Part #5. Ship with the Space Elevator to complete phases of Project Assembly.",
+			"stackSize": 50,
+			"energyValue": 0,
+			"radioactiveDecay": 0,
+			"liquid": false,
+			"fluidColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			}
+		},
+		"Desc_SpaceElevatorPart_6_C": {
+			"slug": "magnetic-field-generator",
+			"className": "Desc_SpaceElevatorPart_6_C",
+			"name": "Magnetic Field Generator",
+			"sinkPoints": 16130,
+			"description": "Project Part #7. Ship with the Space Elevator to complete phases of Project Assembly.\n\nThese modular generators use superconducting magnets and vast amounts of electricity to produce an easily expandible and powerful magnet field.",
+			"stackSize": 50,
+			"energyValue": 0,
+			"radioactiveDecay": 0,
+			"liquid": false,
+			"fluidColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			}
+		},
+		"Desc_SpaceElevatorPart_7_C": {
+			"slug": "assembly-director-system",
+			"className": "Desc_SpaceElevatorPart_7_C",
+			"name": "Assembly Director System",
+			"sinkPoints": 543632,
+			"description": "Project Part #6. Ship with the Space Elevator to complete phases of Project Assembly.\n\nThis extremely fast and precise computing system is specifically designed to direct the Project Assembly: Assembly Phase.",
+			"stackSize": 50,
+			"energyValue": 0,
+			"radioactiveDecay": 0,
+			"liquid": false,
+			"fluidColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			}
+		},
+		"Desc_SpaceElevatorPart_8_C": {
+			"slug": "thermal-propulsion-rocket",
+			"className": "Desc_SpaceElevatorPart_8_C",
+			"name": "Thermal Propulsion Rocket",
+			"sinkPoints": 637514,
+			"description": "Project Part #8. Ship with the Space Elevator to complete phases of Project Assembly.\n\nUses extreme heat to produce the high pressure plasma required to get Project Assembly into motion.",
+			"stackSize": 50,
+			"energyValue": 0,
+			"radioactiveDecay": 0,
+			"liquid": false,
+			"fluidColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			}
+		},
+		"Desc_SpaceElevatorPart_9_C": {
+			"slug": "nuclear-pasta",
+			"className": "Desc_SpaceElevatorPart_9_C",
+			"name": "Nuclear Pasta",
+			"sinkPoints": 518272,
+			"description": "Project Part #9. Ship with the Space Elevator to complete phases of Project Assembly.\nPower Usage: 500-1500 MW (1000 MW average).\n\nNuclear Pasta is extremely dense degenerate matter, formed when extreme pressure forces protons and electrons together into neutrons. It is theorized to exist naturally within the crust of neutron stars.",
 			"stackSize": 50,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
@@ -11638,7 +13880,7 @@
 			"className": "Desc_Stator_C",
 			"name": "Stator",
 			"sinkPoints": 240,
-			"description": "Used for crafting.\\r\nThe static parts of a motor.",
+			"description": "Used for crafting.\nThe static parts of a motor.",
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
@@ -11673,7 +13915,7 @@
 			"name": "Steel Pipe",
 			"sinkPoints": 24,
 			"description": "Steel Pipes are used most often when constructing a little more advanced buildings.",
-			"stackSize": 100,
+			"stackSize": 200,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
 			"liquid": false,
@@ -11707,7 +13949,7 @@
 			"name": "Steel Beam",
 			"sinkPoints": 64,
 			"description": "Steel Beams are used most often when constructing a little more advanced buildings.",
-			"stackSize": 100,
+			"stackSize": 200,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
 			"liquid": false,
@@ -11756,8 +13998,8 @@
 			"slug": "sulfuric-acid",
 			"className": "Desc_SulfuricAcid_C",
 			"name": "Sulfuric Acid",
-			"sinkPoints": 1,
-			"description": "A liquid mostly used to extract elements from ore.",
+			"sinkPoints": 16,
+			"description": "A mineral acid produced by combining Sulfur and Water in a complex reaction. Primarily used in refinement processes and Battery production.",
 			"stackSize": 50000,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
@@ -11780,21 +14022,21 @@
 			"radioactiveDecay": 0,
 			"liquid": false,
 			"fluidColor": {
-				"r": 0,
-				"g": 0,
-				"b": 0,
-				"a": 0
+				"r": 212,
+				"g": 41,
+				"b": 46,
+				"a": 255
 			}
 		},
 		"Desc_UraniumCell_C": {
 			"slug": "encased-uranium-cell",
 			"className": "Desc_UraniumCell_C",
 			"name": "Encased Uranium Cell",
-			"sinkPoints": 918,
-			"description": "Uranium Cells are concrete encased uranium pellets. Primarily used to make Nuclear Fuel Rods\nModerately radioactive.",
+			"sinkPoints": 192,
+			"description": "Uranium Cells are produced by encasing refined Uranium. \nUsed to produce Uranium Fuel Rods for Nuclear Power production.\n\nCaution: Mildly Radioactive.",
 			"stackSize": 200,
 			"energyValue": 0,
-			"radioactiveDecay": 7.5,
+			"radioactiveDecay": 0.5,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -11807,8 +14049,8 @@
 			"slug": "uranium-pellet",
 			"className": "Desc_UraniumPellet_C",
 			"name": "Uranium Pellet",
-			"sinkPoints": 112,
-			"description": "Produced in the Refinery, Uranium Pellets are purified and cast from Uranium Ore. \nPrimarily used to make Uranium Cells.\nModerately radioactive.",
+			"sinkPoints": 87,
+			"description": "Produced in the Refinery, Uranium Pellets are purified and cast from Uranium Ore. \nPrimarily used to make Uranium Cells.\n\nCaution: Moderately radioactive.",
 			"stackSize": 200,
 			"energyValue": 0,
 			"radioactiveDecay": 7.5,
@@ -11860,7 +14102,7 @@
 			"name": "Wood",
 			"sinkPoints": 30,
 			"description": "Primarily used as fuel.\nBiomass Burners and vehicles can use it for power.",
-			"stackSize": 100,
+			"stackSize": 200,
 			"energyValue": 100,
 			"radioactiveDecay": 0,
 			"liquid": false,
@@ -12155,7 +14397,7 @@
 				}
 			],
 			"unlock": {
-				"inventorySlots": 5,
+				"inventorySlots": 6,
 				"recipes": [],
 				"scannerResources": []
 			},
@@ -12213,6 +14455,34 @@
 			"alternate": false,
 			"mam": false
 		},
+		"Research_Caterium_2_1_C": {
+			"className": "Research_Caterium_2_1_C",
+			"name": "Zipline",
+			"slug": "zipline",
+			"tier": 3,
+			"cost": [
+				{
+					"item": "Desc_HighSpeedWire_C",
+					"amount": 100
+				},
+				{
+					"item": "Desc_Cable_C",
+					"amount": 50
+				}
+			],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_ZipLine_C"
+				],
+				"scannerResources": []
+			},
+			"requiredSchematics": [],
+			"type": "EST_MAM",
+			"time": 300,
+			"alternate": false,
+			"mam": false
+		},
 		"Research_Caterium_2_C": {
 			"className": "Research_Caterium_2_C",
 			"name": "Quickwire",
@@ -12240,12 +14510,12 @@
 		"Research_Caterium_3_1_C": {
 			"className": "Research_Caterium_3_1_C",
 			"name": "Inflated Pocket Dimension",
-			"slug": "inflated-pocket-dimension-highspeedwire",
+			"slug": "inflated-pocket-dimension-goldingot",
 			"tier": 3,
 			"cost": [
 				{
-					"item": "Desc_HighSpeedWire_C",
-					"amount": 50
+					"item": "Desc_GoldIngot_C",
+					"amount": 10
 				},
 				{
 					"item": "Desc_Wire_C",
@@ -12257,7 +14527,7 @@
 				}
 			],
 			"unlock": {
-				"inventorySlots": 5,
+				"inventorySlots": 6,
 				"recipes": [],
 				"scannerResources": []
 			},
@@ -12308,6 +14578,34 @@
 				"inventorySlots": 0,
 				"recipes": [
 					"Recipe_ConveyorAttachmentSplitterSmart_C"
+				],
+				"scannerResources": []
+			},
+			"requiredSchematics": [],
+			"type": "EST_MAM",
+			"time": 300,
+			"alternate": false,
+			"mam": false
+		},
+		"Research_Caterium_4_1_2_C": {
+			"className": "Research_Caterium_4_1_2_C",
+			"name": "Power Switch",
+			"slug": "power-switch",
+			"tier": 3,
+			"cost": [
+				{
+					"item": "Desc_SteelPlate_C",
+					"amount": 100
+				},
+				{
+					"item": "Desc_CircuitBoardHighSpeed_C",
+					"amount": 50
+				}
+			],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_PowerSwitch_C"
 				],
 				"scannerResources": []
 			},
@@ -12399,7 +14697,7 @@
 		},
 		"Research_Caterium_5_C": {
 			"className": "Research_Caterium_5_C",
-			"name": "High Speed Connector",
+			"name": "High-Speed Connector",
 			"slug": "high-speed-connector",
 			"tier": 3,
 			"cost": [
@@ -12501,7 +14799,7 @@
 				}
 			],
 			"unlock": {
-				"inventorySlots": 5,
+				"inventorySlots": 0,
 				"recipes": [],
 				"scannerResources": []
 			},
@@ -13713,7 +16011,7 @@
 				}
 			],
 			"unlock": {
-				"inventorySlots": 5,
+				"inventorySlots": 6,
 				"recipes": [],
 				"scannerResources": []
 			},
@@ -14206,7 +16504,7 @@
 				}
 			],
 			"unlock": {
-				"inventorySlots": 5,
+				"inventorySlots": 3,
 				"recipes": [
 					"Recipe_Mam_C",
 					"Recipe_ObjectScanner_C",
@@ -14281,7 +16579,7 @@
 				}
 			],
 			"unlock": {
-				"inventorySlots": 5,
+				"inventorySlots": 3,
 				"recipes": [
 					"Recipe_Chainsaw_C",
 					"Recipe_Biofuel_C"
@@ -14466,7 +16764,7 @@
 				}
 			],
 			"unlock": {
-				"inventorySlots": 0,
+				"inventorySlots": 3,
 				"recipes": [
 					"Recipe_Tractor_C",
 					"Recipe_TruckStation_C"
@@ -14556,7 +16854,7 @@
 			},
 			"requiredSchematics": [],
 			"type": "EST_Milestone",
-			"time": 0,
+			"time": 600,
 			"alternate": false,
 			"mam": false
 		},
@@ -14584,7 +16882,7 @@
 				}
 			],
 			"unlock": {
-				"inventorySlots": 5,
+				"inventorySlots": 3,
 				"recipes": [
 					"Recipe_XenoBasher_C"
 				],
@@ -14627,7 +16925,7 @@
 			},
 			"requiredSchematics": [],
 			"type": "EST_Milestone",
-			"time": 0,
+			"time": 600,
 			"alternate": false,
 			"mam": false
 		},
@@ -14738,6 +17036,7 @@
 			"unlock": {
 				"inventorySlots": 0,
 				"recipes": [
+					"Recipe_PowerStorageMk1_C",
 					"Recipe_StorageContainerMk2_C",
 					"Recipe_ConveyorBeltMk3_C",
 					"Recipe_ConveyorLiftMk3_C",
@@ -14859,7 +17158,7 @@
 				}
 			],
 			"unlock": {
-				"inventorySlots": 5,
+				"inventorySlots": 3,
 				"recipes": [
 					"Recipe_JetPack_C"
 				],
@@ -14933,7 +17232,7 @@
 				}
 			],
 			"unlock": {
-				"inventorySlots": 0,
+				"inventorySlots": 3,
 				"recipes": [
 					"Recipe_Gasmask_C",
 					"Recipe_FilterGasMask_C"
@@ -14990,27 +17289,33 @@
 			"tier": 7,
 			"cost": [
 				{
-					"item": "Desc_Motor_C",
-					"amount": 200
-				},
-				{
 					"item": "Desc_Computer_C",
-					"amount": 100
+					"amount": 50
 				},
 				{
 					"item": "Desc_ModularFrameHeavy_C",
 					"amount": 100
+				},
+				{
+					"item": "Desc_Motor_C",
+					"amount": 200
+				},
+				{
+					"item": "Desc_Rubber_C",
+					"amount": 500
 				}
 			],
 			"unlock": {
 				"inventorySlots": 0,
 				"recipes": [
-					"Recipe_ConveyorBeltMk5_C",
-					"Recipe_ConveyorLiftMk5_C",
-					"Recipe_AluminumSheet_C",
-					"Recipe_IngotAluminum_C",
+					"Recipe_AluminaSolution_C",
+					"Recipe_PackagedAlumina_C",
 					"Recipe_AluminumScrap_C",
-					"Recipe_AluminaSolution_C"
+					"Recipe_IngotAluminum_C",
+					"Recipe_AluminumSheet_C",
+					"Recipe_AluminumCasing_C",
+					"Recipe_RadioControlUnit_C",
+					"Recipe_Blender_C"
 				],
 				"scannerResources": [
 					"Desc_OreBauxite_C",
@@ -15019,46 +17324,40 @@
 			},
 			"requiredSchematics": [],
 			"type": "EST_Milestone",
-			"time": 900,
+			"time": 600,
 			"alternate": false,
 			"mam": false
 		},
 		"Schematic_7-2_C": {
 			"className": "Schematic_7-2_C",
-			"name": "Advanced Aluminum Production",
-			"slug": "advanced-aluminum-production",
+			"name": "Logistics Mk.5",
+			"slug": "logistics-mk-5",
 			"tier": 7,
 			"cost": [
 				{
 					"item": "Desc_AluminumPlate_C",
+					"amount": 100
+				},
+				{
+					"item": "Desc_SteelPlateReinforced_C",
 					"amount": 200
 				},
 				{
-					"item": "Desc_Motor_C",
+					"item": "Desc_IronPlateReinforced_C",
 					"amount": 300
-				},
-				{
-					"item": "Desc_ModularFrameHeavy_C",
-					"amount": 150
-				},
-				{
-					"item": "Desc_Computer_C",
-					"amount": 150
 				}
 			],
 			"unlock": {
 				"inventorySlots": 0,
 				"recipes": [
-					"Recipe_MinerMk3_C",
-					"Recipe_HeatSink_C",
-					"Recipe_MotorTurbo_C",
-					"Recipe_Battery_C"
+					"Recipe_ConveyorBeltMk5_C",
+					"Recipe_ConveyorLiftMk5_C"
 				],
 				"scannerResources": []
 			},
 			"requiredSchematics": [],
 			"type": "EST_Milestone",
-			"time": 900,
+			"time": 60,
 			"alternate": false,
 			"mam": false
 		},
@@ -15069,20 +17368,20 @@
 			"tier": 7,
 			"cost": [
 				{
-					"item": "Desc_AluminumPlate_C",
-					"amount": 100
+					"item": "Desc_AluminumCasing_C",
+					"amount": 50
 				},
 				{
 					"item": "Desc_HighSpeedWire_C",
-					"amount": 100
+					"amount": 500
 				},
 				{
-					"item": "Desc_Rubber_C",
-					"amount": 500
+					"item": "Desc_Filter_C",
+					"amount": 50
 				}
 			],
 			"unlock": {
-				"inventorySlots": 0,
+				"inventorySlots": 3,
 				"recipes": [
 					"Recipe_HazmatSuit_C",
 					"Recipe_FilterHazmat_C"
@@ -15097,16 +17396,54 @@
 		},
 		"Schematic_7-4_C": {
 			"className": "Schematic_7-4_C",
-			"name": "Nuclear Power",
-			"slug": "nuclear-power",
+			"name": "Aeronautical Engineering",
+			"slug": "aeronautical-engineering",
 			"tier": 7,
 			"cost": [
 				{
-					"item": "Desc_CircuitBoardHighSpeed_C",
+					"item": "Desc_ModularFrameLightweight_C",
 					"amount": 50
 				},
 				{
-					"item": "Desc_HighSpeedConnector_C",
+					"item": "Desc_AluminumPlate_C",
+					"amount": 100
+				},
+				{
+					"item": "Desc_AluminumCasing_C",
+					"amount": 200
+				},
+				{
+					"item": "Desc_Motor_C",
+					"amount": 300
+				}
+			],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_SulfuricAcid_C",
+					"Recipe_PackagedSulfuricAcid_C",
+					"Recipe_Battery_C",
+					"Recipe_ComputerSuper_C",
+					"Recipe_DroneTransport_C",
+					"Recipe_DroneStation_C",
+					"Recipe_SpaceElevatorPart_7_C"
+				],
+				"scannerResources": []
+			},
+			"requiredSchematics": [],
+			"type": "EST_Milestone",
+			"time": 900,
+			"alternate": false,
+			"mam": false
+		},
+		"Schematic_8-1_C": {
+			"className": "Schematic_8-1_C",
+			"name": "Nuclear Power",
+			"slug": "nuclear-power",
+			"tier": 8,
+			"cost": [
+				{
+					"item": "Desc_ComputerSuper_C",
 					"amount": 50
 				},
 				{
@@ -15114,24 +17451,177 @@
 					"amount": 200
 				},
 				{
-					"item": "Desc_Computer_C",
-					"amount": 200
+					"item": "Desc_Cable_C",
+					"amount": 1000
+				},
+				{
+					"item": "Desc_Cement_C",
+					"amount": 2000
 				}
 			],
 			"unlock": {
 				"inventorySlots": 0,
 				"recipes": [
-					"Recipe_GeneratorNuclear_C",
-					"Recipe_NuclearFuelRod_C",
-					"Recipe_ElectromagneticControlRod_C",
 					"Recipe_UraniumCell_C",
-					"Recipe_UraniumPellet_C",
-					"Recipe_SulfuricAcid_C"
+					"Recipe_ElectromagneticControlRod_C",
+					"Recipe_NuclearFuelRod_C",
+					"Recipe_GeneratorNuclear_C",
+					"Recipe_SpaceElevatorPart_6_C"
 				],
-				"scannerResources": [
-					"Desc_OreUranium_C",
-					"Desc_Sulfur_C"
-				]
+				"scannerResources": []
+			},
+			"requiredSchematics": [],
+			"type": "EST_Milestone",
+			"time": 900,
+			"alternate": false,
+			"mam": false
+		},
+		"Schematic_8-2_C": {
+			"className": "Schematic_8-2_C",
+			"name": "Advanced Aluminum Production",
+			"slug": "advanced-aluminum-production",
+			"tier": 8,
+			"cost": [
+				{
+					"item": "Desc_ModularFrameLightweight_C",
+					"amount": 50
+				},
+				{
+					"item": "Desc_AluminumCasing_C",
+					"amount": 100
+				},
+				{
+					"item": "Desc_AluminumPlate_C",
+					"amount": 200
+				},
+				{
+					"item": "Desc_Wire_C",
+					"amount": 3000
+				}
+			],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_FrackingSmasher_C",
+					"Recipe_FrackingExtractor_C",
+					"Recipe_GasTank_C",
+					"Recipe_PackagedNitrogen_C",
+					"Recipe_HeatSink_C",
+					"Recipe_CoolingSystem_C",
+					"Recipe_FusedModularFrame_C"
+				],
+				"scannerResources": []
+			},
+			"requiredSchematics": [],
+			"type": "EST_Milestone",
+			"time": 900,
+			"alternate": false,
+			"mam": false
+		},
+		"Schematic_8-3_C": {
+			"className": "Schematic_8-3_C",
+			"name": "Hoverpack",
+			"slug": "hoverpack",
+			"tier": 8,
+			"cost": [
+				{
+					"item": "Desc_CoolingSystem_C",
+					"amount": 100
+				},
+				{
+					"item": "Desc_ModularFrameLightweight_C",
+					"amount": 100
+				},
+				{
+					"item": "Desc_AluminumPlate_C",
+					"amount": 500
+				}
+			],
+			"unlock": {
+				"inventorySlots": 3,
+				"recipes": [
+					"Recipe_Hoverpack_C"
+				],
+				"scannerResources": []
+			},
+			"requiredSchematics": [],
+			"type": "EST_Milestone",
+			"time": 300,
+			"alternate": false,
+			"mam": false
+		},
+		"Schematic_8-4_C": {
+			"className": "Schematic_8-4_C",
+			"name": "Leading-edge Production",
+			"slug": "leading-edge-production",
+			"tier": 8,
+			"cost": [
+				{
+					"item": "Desc_ModularFrameFused_C",
+					"amount": 50
+				},
+				{
+					"item": "Desc_ComputerSuper_C",
+					"amount": 100
+				},
+				{
+					"item": "Desc_SteelPipe_C",
+					"amount": 1000
+				}
+			],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_MotorTurbo_C",
+					"Recipe_MinerMk3_C",
+					"Recipe_SpaceElevatorPart_8_C"
+				],
+				"scannerResources": []
+			},
+			"requiredSchematics": [],
+			"type": "EST_Milestone",
+			"time": 300,
+			"alternate": false,
+			"mam": false
+		},
+		"Schematic_8-5_C": {
+			"className": "Schematic_8-5_C",
+			"name": "Particle Enrichment",
+			"slug": "particle-enrichment",
+			"tier": 8,
+			"cost": [
+				{
+					"item": "Desc_ElectromagneticControlRod_C",
+					"amount": 400
+				},
+				{
+					"item": "Desc_CoolingSystem_C",
+					"amount": 400
+				},
+				{
+					"item": "Desc_ModularFrameFused_C",
+					"amount": 200
+				},
+				{
+					"item": "Desc_MotorLightweight_C",
+					"amount": 100
+				}
+			],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_NitricAcid_C",
+					"Recipe_PackagedNitricAcid_C",
+					"Recipe_NonFissileUranium_C",
+					"Recipe_Plutonium_C",
+					"Recipe_PlutoniumCell_C",
+					"Recipe_PlutoniumFuelRod_C",
+					"Recipe_HadronCollider_C",
+					"Recipe_CopperDust_C",
+					"Recipe_PressureConversionCube_C",
+					"Recipe_SpaceElevatorPart_9_C"
+				],
+				"scannerResources": []
 			},
 			"requiredSchematics": [],
 			"type": "EST_Milestone",
@@ -15154,6 +17644,48 @@
 			},
 			"requiredSchematics": [
 				"Schematic_5-1_C"
+			],
+			"type": "EST_Alternate",
+			"time": 0,
+			"alternate": false,
+			"mam": false
+		},
+		"Schematic_Alternate_AlcladCasing_C": {
+			"className": "Schematic_Alternate_AlcladCasing_C",
+			"name": "Alternate: Alclad Casing",
+			"slug": "alternate-alclad-casing",
+			"tier": 0,
+			"cost": [],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_Alternate_AlcladCasing_C"
+				],
+				"scannerResources": []
+			},
+			"requiredSchematics": [
+				"Schematic_7-1_C"
+			],
+			"type": "EST_Alternate",
+			"time": 0,
+			"alternate": false,
+			"mam": false
+		},
+		"Schematic_Alternate_AutomatedMiner_C": {
+			"className": "Schematic_Alternate_AutomatedMiner_C",
+			"name": "Alternate: Automated Miner",
+			"slug": "alternate-automated-miner",
+			"tier": 0,
+			"cost": [],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_Alternate_AutomatedMiner_C"
+				],
+				"scannerResources": []
+			},
+			"requiredSchematics": [
+				"Schematic_5-2_C"
 			],
 			"type": "EST_Alternate",
 			"time": 0,
@@ -15205,8 +17737,8 @@
 		},
 		"Schematic_Alternate_Cable1_C": {
 			"className": "Schematic_Alternate_Cable1_C",
-			"name": "Alternate: Rubber Cable",
-			"slug": "alternate-rubber-cable",
+			"name": "Alternate: Insulated Cable",
+			"slug": "alternate-insulated-cable",
 			"tier": 5,
 			"cost": [],
 			"unlock": {
@@ -15284,6 +17816,27 @@
 			"requiredSchematics": [
 				"Schematic_5-1_C",
 				"Research_Caterium_1_C"
+			],
+			"type": "EST_Alternate",
+			"time": 0,
+			"alternate": false,
+			"mam": false
+		},
+		"Schematic_Alternate_ClassicBattery_C": {
+			"className": "Schematic_Alternate_ClassicBattery_C",
+			"name": "Alternate: Classic Battery",
+			"slug": "alternate-classic-battery",
+			"tier": 0,
+			"cost": [],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_Alternate_ClassicBattery_C"
+				],
+				"scannerResources": []
+			},
+			"requiredSchematics": [
+				"Schematic_7-4_C"
 			],
 			"type": "EST_Alternate",
 			"time": 0,
@@ -15481,6 +18034,27 @@
 			"alternate": false,
 			"mam": false
 		},
+		"Schematic_Alternate_CoolingDevice_C": {
+			"className": "Schematic_Alternate_CoolingDevice_C",
+			"name": "Alternate: Cooling Device",
+			"slug": "alternate-cooling-device",
+			"tier": 0,
+			"cost": [],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_Alternate_CoolingDevice_C"
+				],
+				"scannerResources": []
+			},
+			"requiredSchematics": [
+				"Schematic_8-2_C"
+			],
+			"type": "EST_Alternate",
+			"time": 0,
+			"alternate": false,
+			"mam": false
+		},
 		"Schematic_Alternate_CopperAlloyIngot_C": {
 			"className": "Schematic_Alternate_CopperAlloyIngot_C",
 			"name": "Alternate: Copper Alloy Ingot",
@@ -15544,6 +18118,27 @@
 			"alternate": false,
 			"mam": false
 		},
+		"Schematic_Alternate_DilutedFuel_C": {
+			"className": "Schematic_Alternate_DilutedFuel_C",
+			"name": "Alternate: Diluted Fuel",
+			"slug": "alternate-diluted-fuel",
+			"tier": 0,
+			"cost": [],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_Alternate_DilutedFuel_C"
+				],
+				"scannerResources": []
+			},
+			"requiredSchematics": [
+				"Schematic_7-1_C"
+			],
+			"type": "EST_Alternate",
+			"time": 0,
+			"alternate": false,
+			"mam": false
+		},
 		"Schematic_Alternate_DilutedPackagedFuel_C": {
 			"className": "Schematic_Alternate_DilutedPackagedFuel_C",
 			"name": "Alternate: Diluted Packaged Fuel ",
@@ -15559,6 +18154,27 @@
 			},
 			"requiredSchematics": [
 				"Schematic_5-1_C"
+			],
+			"type": "EST_Alternate",
+			"time": 0,
+			"alternate": false,
+			"mam": false
+		},
+		"Schematic_Alternate_ElectricMotor_C": {
+			"className": "Schematic_Alternate_ElectricMotor_C",
+			"name": "Alternate: Electric Motor",
+			"slug": "alternate-electric-motor",
+			"tier": 0,
+			"cost": [],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_Alternate_ElectricMotor_C"
+				],
+				"scannerResources": []
+			},
+			"requiredSchematics": [
+				"Schematic_7-4_C"
 			],
 			"type": "EST_Alternate",
 			"time": 0,
@@ -15621,7 +18237,7 @@
 				"scannerResources": []
 			},
 			"requiredSchematics": [
-				"Schematic_7-4_C",
+				"Schematic_8-1_C",
 				"Research_Caterium_4_1_C"
 			],
 			"type": "EST_Alternate",
@@ -15647,6 +18263,27 @@
 			"requiredSchematics": [
 				"Schematic_3-1_C",
 				"Research_Sulfur_0_C"
+			],
+			"type": "EST_Alternate",
+			"time": 0,
+			"alternate": false,
+			"mam": false
+		},
+		"Schematic_Alternate_FertileUranium_C": {
+			"className": "Schematic_Alternate_FertileUranium_C",
+			"name": "Alternate: Fertile Uranium",
+			"slug": "alternate-fertile-uranium",
+			"tier": 0,
+			"cost": [],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_Alternate_FertileUranium_C"
+				],
+				"scannerResources": []
+			},
+			"requiredSchematics": [
+				"Schematic_8-5_C"
 			],
 			"type": "EST_Alternate",
 			"time": 0,
@@ -15716,6 +18353,27 @@
 			"alternate": false,
 			"mam": false
 		},
+		"Schematic_Alternate_HeatFusedFrame_C": {
+			"className": "Schematic_Alternate_HeatFusedFrame_C",
+			"name": "Alternate: Heat-Fused Frame",
+			"slug": "alternate-heat-fused-frame",
+			"tier": 0,
+			"cost": [],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_Alternate_HeatFusedFrame_C"
+				],
+				"scannerResources": []
+			},
+			"requiredSchematics": [
+				"Schematic_8-5_C"
+			],
+			"type": "EST_Alternate",
+			"time": 0,
+			"alternate": false,
+			"mam": false
+		},
 		"Schematic_Alternate_HeatSink1_C": {
 			"className": "Schematic_Alternate_HeatSink1_C",
 			"name": "Alternate: Heat Exchanger",
@@ -15730,7 +18388,7 @@
 				"scannerResources": []
 			},
 			"requiredSchematics": [
-				"Schematic_7-2_C"
+				"Schematic_8-2_C"
 			],
 			"type": "EST_Alternate",
 			"time": 0,
@@ -15760,8 +18418,8 @@
 		},
 		"Schematic_Alternate_HeavyModularFrame_C": {
 			"className": "Schematic_Alternate_HeavyModularFrame_C",
-			"name": "Alternate: Heavy Modular Frame",
-			"slug": "alternate-heavy-modular-frame",
+			"name": "Alternate: Heavy Encased Frame",
+			"slug": "alternate-heavy-encased-frame",
 			"tier": 4,
 			"cost": [],
 			"unlock": {
@@ -15907,6 +18565,49 @@
 			"alternate": false,
 			"mam": false
 		},
+		"Schematic_Alternate_InstantPlutoniumCell_C": {
+			"className": "Schematic_Alternate_InstantPlutoniumCell_C",
+			"name": "Alternate: Instant Plutonium Cell",
+			"slug": "alternate-instant-plutonium-cell",
+			"tier": 0,
+			"cost": [],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_Alternate_InstantPlutoniumCell_C"
+				],
+				"scannerResources": []
+			},
+			"requiredSchematics": [
+				"Schematic_8-5_C"
+			],
+			"type": "EST_Alternate",
+			"time": 0,
+			"alternate": false,
+			"mam": false
+		},
+		"Schematic_Alternate_InstantScrap_C": {
+			"className": "Schematic_Alternate_InstantScrap_C",
+			"name": "Alternate: Instant Scrap",
+			"slug": "alternate-instant-scrap",
+			"tier": 0,
+			"cost": [],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_Alternate_InstantScrap_C"
+				],
+				"scannerResources": []
+			},
+			"requiredSchematics": [
+				"Schematic_7-1_C",
+				"Schematic_7-4_C"
+			],
+			"type": "EST_Alternate",
+			"time": 0,
+			"alternate": false,
+			"mam": false
+		},
 		"Schematic_Alternate_InventorySlots1_C": {
 			"className": "Schematic_Alternate_InventorySlots1_C",
 			"name": "Inflated Pocket Dimension",
@@ -15914,7 +18615,7 @@
 			"tier": 2,
 			"cost": [],
 			"unlock": {
-				"inventorySlots": 5,
+				"inventorySlots": 6,
 				"recipes": [],
 				"scannerResources": []
 			},
@@ -15931,7 +18632,7 @@
 			"tier": 5,
 			"cost": [],
 			"unlock": {
-				"inventorySlots": 5,
+				"inventorySlots": 6,
 				"recipes": [],
 				"scannerResources": []
 			},
@@ -16022,8 +18723,30 @@
 				"scannerResources": []
 			},
 			"requiredSchematics": [
-				"Schematic_7-4_C",
+				"Schematic_8-1_C",
 				"Research_Quartz_1_1_C"
+			],
+			"type": "EST_Alternate",
+			"time": 0,
+			"alternate": false,
+			"mam": false
+		},
+		"Schematic_Alternate_OCSupercomputer_C": {
+			"className": "Schematic_Alternate_OCSupercomputer_C",
+			"name": "Alternate: OC Supercomputer",
+			"slug": "alternate-oc-supercomputer",
+			"tier": 0,
+			"cost": [],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_Alternate_OCSupercomputer_C"
+				],
+				"scannerResources": []
+			},
+			"requiredSchematics": [
+				"Schematic_7-4_C",
+				"Schematic_8-2_C"
 			],
 			"type": "EST_Alternate",
 			"time": 0,
@@ -16066,6 +18789,27 @@
 			},
 			"requiredSchematics": [
 				"Schematic_5-1_C"
+			],
+			"type": "EST_Alternate",
+			"time": 0,
+			"alternate": false,
+			"mam": false
+		},
+		"Schematic_Alternate_PlutoniumFuelUnit_C": {
+			"className": "Schematic_Alternate_PlutoniumFuelUnit_C",
+			"name": "Alternate: Plutonium Fuel Unit",
+			"slug": "alternate-plutonium-fuel-unit",
+			"tier": 0,
+			"cost": [],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_Alternate_PlutoniumFuelUnit_C"
+				],
+				"scannerResources": []
+			},
+			"requiredSchematics": [
+				"Schematic_8-5_C"
 			],
 			"type": "EST_Alternate",
 			"time": 0,
@@ -16243,10 +18987,31 @@
 			"alternate": false,
 			"mam": false
 		},
-		"Schematic_Alternate_RadioControlUnit1_C": {
-			"className": "Schematic_Alternate_RadioControlUnit1_C",
+		"Schematic_Alternate_RadioControlSystem_C": {
+			"className": "Schematic_Alternate_RadioControlSystem_C",
 			"name": "Alternate: Radio Control System",
 			"slug": "alternate-radio-control-system",
+			"tier": 0,
+			"cost": [],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_Alternate_RadioControlSystem_C"
+				],
+				"scannerResources": []
+			},
+			"requiredSchematics": [
+				"Schematic_7-1_C"
+			],
+			"type": "EST_Alternate",
+			"time": 0,
+			"alternate": false,
+			"mam": false
+		},
+		"Schematic_Alternate_RadioControlUnit1_C": {
+			"className": "Schematic_Alternate_RadioControlUnit1_C",
+			"name": "Alternate: Radio Connetion Unit",
+			"slug": "alternate-radio-connetion-unit",
 			"tier": 7,
 			"cost": [],
 			"unlock": {
@@ -16257,8 +19022,8 @@
 				"scannerResources": []
 			},
 			"requiredSchematics": [
-				"Research_Quartz_3_3_C",
-				"Research_Caterium_5_C"
+				"Schematic_8-2_C",
+				"Research_Caterium_4_1_C"
 			],
 			"type": "EST_Alternate",
 			"time": 0,
@@ -16448,6 +19213,27 @@
 			"alternate": false,
 			"mam": false
 		},
+		"Schematic_Alternate_SloppyAlumina_C": {
+			"className": "Schematic_Alternate_SloppyAlumina_C",
+			"name": "Alternate: Sloppy Alumina",
+			"slug": "alternate-sloppy-alumina",
+			"tier": 0,
+			"cost": [],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_Alternate_SloppyAlumina_C"
+				],
+				"scannerResources": []
+			},
+			"requiredSchematics": [
+				"Schematic_7-1_C"
+			],
+			"type": "EST_Alternate",
+			"time": 0,
+			"alternate": false,
+			"mam": false
+		},
 		"Schematic_Alternate_Stator_C": {
 			"className": "Schematic_Alternate_Stator_C",
 			"name": "Alternate: Quickwire Stator",
@@ -16554,6 +19340,52 @@
 			"alternate": false,
 			"mam": false
 		},
+		"Schematic_Alternate_SuperStateComputer_C": {
+			"className": "Schematic_Alternate_SuperStateComputer_C",
+			"name": "Alternate: Super-State Computer",
+			"slug": "alternate-super-state-computer",
+			"tier": 0,
+			"cost": [],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_Alternate_SuperStateComputer_C"
+				],
+				"scannerResources": []
+			},
+			"requiredSchematics": [
+				"Schematic_8-1_C",
+				"Schematic_7-4_C"
+			],
+			"type": "EST_Alternate",
+			"time": 0,
+			"alternate": false,
+			"mam": false
+		},
+		"Schematic_Alternate_TurboBlendFuel_C": {
+			"className": "Schematic_Alternate_TurboBlendFuel_C",
+			"name": "Alternate: Turbo Blend Fuel",
+			"slug": "alternate-turbo-blend-fuel",
+			"tier": 0,
+			"cost": [],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_Alternate_TurboBlendFuel_C",
+					"Recipe_PackagedTurboFuel_C",
+					"Recipe_UnpackageTurboFuel_C"
+				],
+				"scannerResources": []
+			},
+			"requiredSchematics": [
+				"Schematic_7-1_C",
+				"Research_Sulfur_0_C"
+			],
+			"type": "EST_Alternate",
+			"time": 0,
+			"alternate": false,
+			"mam": false
+		},
 		"Schematic_Alternate_TurboFuel_C": {
 			"className": "Schematic_Alternate_TurboFuel_C",
 			"name": "Alternate: Turbofuel",
@@ -16616,8 +19448,29 @@
 				"scannerResources": []
 			},
 			"requiredSchematics": [
-				"Schematic_7-2_C",
-				"Research_Caterium_3_C"
+				"Schematic_8-4_C",
+				"Schematic_8-1_C"
+			],
+			"type": "EST_Alternate",
+			"time": 0,
+			"alternate": false,
+			"mam": false
+		},
+		"Schematic_Alternate_TurboPressureMotor_C": {
+			"className": "Schematic_Alternate_TurboPressureMotor_C",
+			"name": "Alternate: Turbo Pressure Motor",
+			"slug": "alternate-turbo-pressure-motor",
+			"tier": 0,
+			"cost": [],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_Alternate_TurboPressureMotor_C"
+				],
+				"scannerResources": []
+			},
+			"requiredSchematics": [
+				"Schematic_8-5_C"
 			],
 			"type": "EST_Alternate",
 			"time": 0,
@@ -16638,7 +19491,7 @@
 				"scannerResources": []
 			},
 			"requiredSchematics": [
-				"Schematic_7-4_C",
+				"Schematic_8-1_C",
 				"Research_Caterium_1_C",
 				"Research_Quartz_0_C",
 				"Research_Sulfur_0_C"
@@ -16865,7 +19718,7 @@
 				}
 			],
 			"unlock": {
-				"inventorySlots": 0,
+				"inventorySlots": 3,
 				"recipes": [
 					"Recipe_MinerMk1_C",
 					"Recipe_StorageContainerMk1_C"
@@ -16932,8 +19785,12 @@
 				"Desc_Wood_C",
 				"Desc_LiquidBiofuel_C",
 				"Desc_PackagedBiofuel_C",
+				"Desc_PackagedAlumina_C",
 				"Desc_Fabric_C",
 				"Desc_Mycelia_C",
+				"Desc_PackagedSulfuricAcid_C",
+				"Desc_PackagedNitrogenGas_C",
+				"Desc_PackagedNitricAcid_C",
 				"Desc_HogParts_C",
 				"Desc_SpitterParts_C",
 				"Desc_FlowerPetals_C"
@@ -16967,14 +19824,15 @@
 		"Build_GeneratorGeoThermal_C": {
 			"className": "Build_GeneratorGeoThermal_C",
 			"fuel": [],
-			"powerProduction": 200,
+			"powerProduction": 0,
 			"powerProductionExponent": 1.3,
 			"waterToPowerRatio": 0
 		},
 		"Build_GeneratorNuclear_C": {
 			"className": "Build_GeneratorNuclear_C",
 			"fuel": [
-				"Desc_NuclearFuelRod_C"
+				"Desc_NuclearFuelRod_C",
+				"Desc_PlutoniumFuelRod_C"
 			],
 			"powerProduction": 2500,
 			"powerProductionExponent": 1.321928,
@@ -16994,6 +19852,16 @@
 		},
 		"Desc_LiquidOil_C": {
 			"item": "Desc_LiquidOil_C",
+			"pingColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 1
+			},
+			"speed": 1
+		},
+		"Desc_NitrogenGas_C": {
+			"item": "Desc_NitrogenGas_C",
 			"pingColor": {
 				"r": 0,
 				"g": 0,
@@ -17157,16 +20025,6 @@
 			"extractCycleTime": 1,
 			"allowLiquids": true,
 			"allowSolids": false
-		},
-		"Build_WaterPump_C": {
-			"className": "Build_WaterPump_C",
-			"allowedResources": [
-				"Desc_Water_C"
-			],
-			"itemsPerCycle": 2000,
-			"extractCycleTime": 1,
-			"allowLiquids": true,
-			"allowSolids": false
 		}
 	},
 	"buildings": {
@@ -17177,12 +20035,50 @@
 			"categories": [
 				"SC_Manufacturers_C"
 			],
-			"buildMenuPriority": 12,
+			"buildMenuPriority": 2,
 			"className": "Desc_AssemblerMk1_C",
 			"metadata": {
 				"powerConsumption": 15,
 				"powerConsumptionExponent": 1.6,
 				"manufacturingSpeed": 1
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
+			}
+		},
+		"Desc_Blender_C": {
+			"slug": "blender",
+			"name": "Blender",
+			"description": "The Blender is capable of blending fluids and combining them with solid parts in various processes.\nHead Lift: 10 meters.\n(Allows fluids to be transported 10 meters upwards).\n\nContains both Conveyor Belt and Pipe inputs and outputs.",
+			"categories": [
+				"SC_Manufacturers_C"
+			],
+			"buildMenuPriority": 13,
+			"className": "Desc_Blender_C",
+			"metadata": {
+				"powerConsumption": 75,
+				"powerConsumptionExponent": 1.6,
+				"manufacturingSpeed": 1
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
+			}
+		},
+		"Desc_CeilingLight_C": {
+			"slug": "ceiling-light",
+			"name": "Ceiling Light",
+			"description": "Can be placed on ceilings to light up indoor factory spaces.\n\nLight colour and intensity can be modified.\nAllows up to two Power Line connections.",
+			"categories": [
+				"SC_Lights_C"
+			],
+			"buildMenuPriority": 2,
+			"className": "Desc_CeilingLight_C",
+			"metadata": {
+				"powerConsumption": 2
 			},
 			"size": {
 				"width": 0,
@@ -17197,7 +20093,7 @@
 			"categories": [
 				"SC_Manufacturers_C"
 			],
-			"buildMenuPriority": 10,
+			"buildMenuPriority": 1,
 			"className": "Desc_ConstructorMk1_C",
 			"metadata": {
 				"powerConsumption": 4,
@@ -17251,7 +20147,7 @@
 		"Desc_ConveyorAttachmentSplitterSmart_C": {
 			"slug": "smart-splitter",
 			"name": "Smart Splitter",
-			"description": "Splits conveyor belts in three. \nYou can set a rule for which part should go to the left and which part should go to the right.",
+			"description": "Splits conveyor belts in three.\nYou can set a rule for each output to decide exactly what part should go there.",
 			"categories": [
 				"SC_ConveyorAttachments_C"
 			],
@@ -17499,7 +20395,7 @@
 		"Desc_ConveyorPoleStackable_C": {
 			"slug": "stackable-conveyor-pole",
 			"name": "Stackable Conveyor Pole",
-			"description": "Conveyor pole with fixed size that is stackable",
+			"description": "Support for converyor belts. Can be stacked on other stackable supports.",
 			"categories": [],
 			"buildMenuPriority": 0,
 			"className": "Desc_ConveyorPoleStackable_C",
@@ -17554,6 +20450,39 @@
 				"height": 0
 			}
 		},
+		"Desc_DroneStation_C": {
+			"slug": "drone-port",
+			"name": "Drone Port",
+			"description": "Drones Port. Used to set up Drone routes. Also acts as loading/unloading and docking station.",
+			"categories": [
+				"SC_Vehicles_C"
+			],
+			"buildMenuPriority": 5,
+			"className": "Desc_DroneStation_C",
+			"metadata": {
+				"powerConsumption": 100,
+				"powerConsumptionExponent": 1.6
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
+			}
+		},
+		"Desc_DroneTransport_C": {
+			"slug": "drone",
+			"name": "Drone",
+			"description": "",
+			"categories": [],
+			"buildMenuPriority": 0,
+			"className": "Desc_DroneTransport_C",
+			"metadata": {},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
+			}
+		},
 		"Desc_Explorer_C": {
 			"slug": "explorer",
 			"name": "Explorer",
@@ -17575,13 +20504,49 @@
 			"categories": [
 				"SC_Attach_C"
 			],
-			"buildMenuPriority": 93,
+			"buildMenuPriority": 5,
 			"className": "Desc_Fence_01_C",
 			"metadata": {},
 			"size": {
 				"width": 8,
 				"length": 0,
 				"height": 2.5
+			}
+		},
+		"Desc_FloodlightPole_C": {
+			"slug": "flood-light-tower",
+			"name": "Flood Light Tower",
+			"description": "A tall light tower, specifically designed for illuminating large or outdoor spaces.\n\nLight colour and intensity can be modified.\nAllows up to two Power Line connections.",
+			"categories": [
+				"SC_Lights_C"
+			],
+			"buildMenuPriority": 3,
+			"className": "Desc_FloodlightPole_C",
+			"metadata": {
+				"powerConsumption": 6
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
+			}
+		},
+		"Desc_FloodlightWall_C": {
+			"slug": "wall-mounted-flood-light",
+			"name": "Wall Mounted Flood Light",
+			"description": "Can be attached to Walls and Foundations to illuminate large spaces.\n\nLight colour and intensity can be modified.\nAllows up to two Power Line connections.",
+			"categories": [
+				"SC_Lights_C"
+			],
+			"buildMenuPriority": 4,
+			"className": "Desc_FloodlightWall_C",
+			"metadata": {
+				"powerConsumption": 6
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_FoundationGlass_01_C": {
@@ -17684,6 +20649,44 @@
 				"height": 0
 			}
 		},
+		"Desc_FrackingExtractor_C": {
+			"slug": "resource-well-extractor",
+			"name": "Resource Well Extractor",
+			"description": "Normal extraction rate: 60m³ fluid per minute.\nHead Lift: 10 meters.\n(Allows fluids to be transported 10 meters upwards.)\n\nCan be placed on the activated sub-nodes of a Resource Well to collect the pressurized resources. Does not require Power.",
+			"categories": [
+				"SC_OilProduction_C"
+			],
+			"buildMenuPriority": 4,
+			"className": "Desc_FrackingExtractor_C",
+			"metadata": {
+				"powerConsumption": 0,
+				"powerConsumptionExponent": 1.6
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
+			}
+		},
+		"Desc_FrackingSmasher_C": {
+			"slug": "resource-well-pressurizer",
+			"name": "Resource Well Pressurizer",
+			"description": "Can be placed on a Resource Well to activate it by pressurizing the underground resource.\nOnce actived, Resource Well Extractors can be placed on the surrounding sub-nodes to extract the resource.\nRequires Power. Overclocking increases the output potential of the entire Resource Well.",
+			"categories": [
+				"SC_OilProduction_C"
+			],
+			"buildMenuPriority": 3,
+			"className": "Desc_FrackingSmasher_C",
+			"metadata": {
+				"powerConsumption": 150,
+				"powerConsumptionExponent": 1.6
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
+			}
+		},
 		"Desc_FreightWagon_C": {
 			"slug": "freight-car",
 			"name": "Freight Car",
@@ -17705,7 +20708,7 @@
 			"categories": [
 				"SC_Generators_C"
 			],
-			"buildMenuPriority": 20,
+			"buildMenuPriority": 1,
 			"className": "Desc_GeneratorBiomass_C",
 			"metadata": {
 				"powerConsumption": 0,
@@ -17720,11 +20723,11 @@
 		"Desc_GeneratorCoal_C": {
 			"slug": "coal-generator",
 			"name": "Coal Generator",
-			"description": "Burns Coal to boil Water, the produced steam rotates turbines to generate electricty for the power grid.\nHas a Conveyor Belt and Pipe input, so both the Coal and Water supply can be automated.\n\nResource consumption will automatically be lowered to meet power demands.",
+			"description": "Burns Coal to boil Water, the produced steam rotates turbines to generate electricty for the power grid.\nHas a Conveyor Belt and Pipe input, so both the Coal and Water supply can be automated.\n\nCaution: Always generates at the set clockspeed. Shuts down if fuel requirements are not met.",
 			"categories": [
 				"SC_Generators_C"
 			],
-			"buildMenuPriority": 21,
+			"buildMenuPriority": 3,
 			"className": "Desc_GeneratorCoal_C",
 			"metadata": {
 				"powerConsumption": 0,
@@ -17739,11 +20742,11 @@
 		"Desc_GeneratorFuel_C": {
 			"slug": "fuel-generator",
 			"name": "Fuel Generator",
-			"description": "Consumes Fuel to generate electricity for the power grid.\nHas a Pipe input so the Fuel supply can be automated.\n\nResource consumption will automatically be lowered to meet power demands.",
+			"description": "Consumes Fuel to generate electricity for the power grid.\nHas a Pipe input so the Fuel supply can be automated.\n\nCaution: Always generates at the set clockspeed. Shuts down if fuel requirements are not met.",
 			"categories": [
 				"SC_Generators_C"
 			],
-			"buildMenuPriority": 22,
+			"buildMenuPriority": 6,
 			"className": "Desc_GeneratorFuel_C",
 			"metadata": {
 				"powerConsumption": 0,
@@ -17758,11 +20761,11 @@
 		"Desc_GeneratorGeoThermal_C": {
 			"slug": "geothermal-generator",
 			"name": "Geothermal Generator",
-			"description": "Can only be built on geyser nodes.\nGenerates electricity for your power grid.\nDoes not require any resources to be input.",
+			"description": "Has to be built on a Geyser. Generates power.\n\nCaution: Power production is unstable.\n\n\nPower Production:\nImpure 50-150 MW (100 MW average)\nNormal 100-300 MW (200 MW average)\nPure 200-600 MW (400 MW average)",
 			"categories": [
 				"SC_Generators_C"
 			],
-			"buildMenuPriority": 24,
+			"buildMenuPriority": 7,
 			"className": "Desc_GeneratorGeoThermal_C",
 			"metadata": {
 				"powerConsumption": 0,
@@ -17777,15 +20780,35 @@
 		"Desc_GeneratorNuclear_C": {
 			"slug": "nuclear-power-plant",
 			"name": "Nuclear Power Plant",
-			"description": "Consumes Nuclear Fuel Rods and Water to produce electricty for the power grid.\n\nProduces Nuclear Waste, which is extracted from the conveyor belt output.\n\nResource consumption will automatically be lowered to meet power demands.",
+			"description": "Consumes Nuclear Fuel Rods and Water to produce electricty for the power grid.\n\nProduces Nuclear Waste, which is extracted from the conveyor belt output.\n\nCaution: Always generates at the set clockspeed. Shuts down if fuel requirements are not met.",
 			"categories": [
 				"SC_Generators_C"
 			],
-			"buildMenuPriority": 23,
+			"buildMenuPriority": 8,
 			"className": "Desc_GeneratorNuclear_C",
 			"metadata": {
 				"powerConsumption": 0,
 				"powerConsumptionExponent": 1.6
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
+			}
+		},
+		"Desc_HadronCollider_C": {
+			"slug": "particle-accelerator",
+			"name": "Particle Accelerator",
+			"description": "The FICSIT Particle Accelerator uses electromagnetic fields to propel particles to very high speeds and energies. The specific design allows for a variety of processes, such as matter generation and conversion.\n\nWarning: Power usage is extremely high, unstable, and varies per recipe.",
+			"categories": [
+				"SC_Manufacturers_C"
+			],
+			"buildMenuPriority": 21,
+			"className": "Desc_HadronCollider_C",
+			"metadata": {
+				"powerConsumption": 0,
+				"powerConsumptionExponent": 1.6,
+				"manufacturingSpeed": 1
 			},
 			"size": {
 				"width": 0,
@@ -17842,7 +20865,7 @@
 		"Desc_IndustrialTank_C": {
 			"slug": "industrial-fluid-buffer",
 			"name": "Industrial Fluid Buffer",
-			"description": "Can contain up to 2400m³ of fluid.\nHas an in and output for pipes.",
+			"description": "Can contain up to 2400m³ of fluid.\nHas an input and output for pipes.",
 			"categories": [
 				"SC_Storage_C"
 			],
@@ -17878,6 +20901,22 @@
 				"height": 0
 			}
 		},
+		"Desc_LightsControlPanel_C": {
+			"slug": "lights-control-panel",
+			"name": "Lights Control Panel",
+			"description": "Useful for sectioning and modifying many lights at once.\n\nControls all Lights connected to the Power Grid attached to the 'Light Power Connector'.\n(Other Control Panels and Power Switches interrupt the connection.)",
+			"categories": [
+				"SC_Lights_C"
+			],
+			"buildMenuPriority": 10,
+			"className": "Desc_LightsControlPanel_C",
+			"metadata": {},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
+			}
+		},
 		"Desc_Locomotive_C": {
 			"slug": "electric-locomotive",
 			"name": "Electric Locomotive",
@@ -17885,7 +20924,9 @@
 			"categories": [],
 			"buildMenuPriority": 0,
 			"className": "Desc_Locomotive_C",
-			"metadata": {},
+			"metadata": {
+				"powerConsumption": null
+			},
 			"size": {
 				"width": 0,
 				"length": 0,
@@ -17934,7 +20975,7 @@
 			"categories": [
 				"SC_Manufacturers_C"
 			],
-			"buildMenuPriority": 14,
+			"buildMenuPriority": 3,
 			"className": "Desc_ManufacturerMk1_C",
 			"metadata": {
 				"powerConsumption": 55,
@@ -18028,9 +21069,9 @@
 			"name": "Refinery",
 			"description": "Refines fluid and/or solid parts into other parts.\nHead Lift: 10 meters.\n(Allows fluids to be transported 10 meters upwards.)\n\nContains both a Conveyor Belt and Pipe input and output, to allow for the automation of various recipes.",
 			"categories": [
-				"SC_OilProduction_C"
+				"SC_Manufacturers_C"
 			],
-			"buildMenuPriority": 4,
+			"buildMenuPriority": 12,
 			"className": "Desc_OilRefinery_C",
 			"metadata": {
 				"powerConsumption": 30,
@@ -18048,9 +21089,9 @@
 			"name": "Packager",
 			"description": "Used for the packaging and unpacking of fluids.\nHead Lift: 10 meters.\n(Allows fluids to be transported 10 meters upwards.)\n\nContains both a Conveyor Belt and Pipe input and output, to allow for the automation of various recipes.",
 			"categories": [
-				"SC_OilProduction_C"
+				"SC_Manufacturers_C"
 			],
-			"buildMenuPriority": 3,
+			"buildMenuPriority": 11,
 			"className": "Desc_Packager_C",
 			"metadata": {
 				"powerConsumption": 10,
@@ -18342,7 +21383,7 @@
 			"categories": [
 				"SC_PowerPoles_C"
 			],
-			"buildMenuPriority": 29,
+			"buildMenuPriority": 0,
 			"className": "Desc_PowerLine_C",
 			"metadata": {
 				"lengthPerCost": 2500,
@@ -18362,7 +21403,7 @@
 			"categories": [
 				"SC_PowerPoles_C"
 			],
-			"buildMenuPriority": 25,
+			"buildMenuPriority": 1,
 			"className": "Desc_PowerPoleMk1_C",
 			"metadata": {},
 			"size": {
@@ -18378,7 +21419,7 @@
 			"categories": [
 				"SC_PowerPoles_C"
 			],
-			"buildMenuPriority": 26,
+			"buildMenuPriority": 2,
 			"className": "Desc_PowerPoleMk2_C",
 			"metadata": {},
 			"size": {
@@ -18394,7 +21435,7 @@
 			"categories": [
 				"SC_PowerPoles_C"
 			],
-			"buildMenuPriority": 27,
+			"buildMenuPriority": 3,
 			"className": "Desc_PowerPoleMk3_C",
 			"metadata": {},
 			"size": {
@@ -18484,6 +21525,41 @@
 			"categories": [],
 			"buildMenuPriority": 0,
 			"className": "Desc_PowerPoleWall_Mk3_C",
+			"metadata": {},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
+			}
+		},
+		"Desc_PowerStorageMk1_C": {
+			"slug": "power-storage",
+			"name": "Power Storage",
+			"description": "Storage Capacity: 100 MWh (100 MW for 1 hour)\nInput Capacity: 100 MW\nOutput Capacity: Unlimited\n\nCan be connected to a Power Grid to store excess power production. The stored power can be used later in cases of high consumption.",
+			"categories": [
+				"SC_Generators_C"
+			],
+			"buildMenuPriority": 10,
+			"className": "Desc_PowerStorageMk1_C",
+			"metadata": {
+				"powerConsumption": 0,
+				"powerConsumptionExponent": 1.6
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
+			}
+		},
+		"Desc_PowerSwitch_C": {
+			"slug": "power-switch",
+			"name": "Power Switch",
+			"description": "Can be switched ON/OFF to enable/disable the connection between two Power Grids.\n\nNote the location of the A and B connection.",
+			"categories": [
+				"SC_PowerPoles_C"
+			],
+			"buildMenuPriority": 4,
+			"className": "Desc_PowerSwitch_C",
 			"metadata": {},
 			"size": {
 				"width": 0,
@@ -19042,7 +22118,7 @@
 			"categories": [
 				"SC_Attach_C"
 			],
-			"buildMenuPriority": 96,
+			"buildMenuPriority": 6,
 			"className": "Desc_Stairs_Left_01_C",
 			"metadata": {},
 			"size": {
@@ -19058,7 +22134,7 @@
 			"categories": [
 				"SC_Attach_C"
 			],
-			"buildMenuPriority": 96,
+			"buildMenuPriority": 7,
 			"className": "Desc_Stairs_Right_01_C",
 			"metadata": {},
 			"size": {
@@ -19120,6 +22196,24 @@
 				"powerConsumption": 0,
 				"powerConsumptionExponent": 1.6,
 				"inventorySize": 25
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
+			}
+		},
+		"Desc_StreetLight_C": {
+			"slug": "street-light",
+			"name": "Street Light",
+			"description": "A small Street Light, perfect for lighting up factory pathways and roads.\n\nLight colour and intensity can be modified.\nAllows up to two Power Line connections.",
+			"categories": [
+				"SC_Lights_C"
+			],
+			"buildMenuPriority": 1,
+			"className": "Desc_StreetLight_C",
+			"metadata": {
+				"powerConsumption": 1
 			},
 			"size": {
 				"width": 0,
@@ -19243,7 +22337,7 @@
 			"categories": [
 				"SC_Vehicles_C"
 			],
-			"buildMenuPriority": 44,
+			"buildMenuPriority": 0,
 			"className": "Desc_TruckStation_C",
 			"metadata": {
 				"powerConsumption": 20,
