@@ -17,12 +17,20 @@ export default function parseBuildings(buildings: {
 	mFlowLimit?: string,
 	mDesignPressure?: string,
 	mStorageCapacity?: string,
+	mSize?: number,
+	mHeight?: number,
+	mWidth?: number,
 }[], fixClassName: boolean = false): IBuildingSchema[]
 {
 	const ignored = [
 		'Build_JumpPadTilted_C',
 		'Build_JumpPad_C',
 		'Build_Stair_1b_C',
+		'Build_Snowman_C',
+		'Build_WreathDecor_C',
+		'Build_XmassLightsLine_C',
+		'Build_XmassTree_C',
+		'Build_CandyCaneDecor_C',
 	];
 
 	const result: IBuildingSchema[] = [];
@@ -89,6 +97,21 @@ export default function parseBuildings(buildings: {
 			slug += '-steel';
 		}
 
+		const size = {
+			width: 0,
+			length: 0,
+			height: 0,
+		};
+		if (building.mSize) {
+			size.width = size.length = building.mSize / 100;
+		}
+		if (building.mHeight) {
+			size.height = building.mHeight / 100;
+		}
+		if (building.mWidth) {
+			size.width = building.mWidth / 100;
+		}
+
 		result.push({
 			slug: slug,
 			name: building.mDisplayName,
@@ -97,6 +120,7 @@ export default function parseBuildings(buildings: {
 			buildMenuPriority: 0,
 			className: fixClassName ? building.ClassName.replace('Build_', 'Desc_') : building.ClassName,
 			metadata: metadata,
+			size: size,
 		});
 	}
 	return result;

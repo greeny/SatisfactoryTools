@@ -1,8 +1,8 @@
 {
 	"recipes": {
 		"Recipe_AILimiter_C": {
-			"slug": "a-i-limiter",
-			"name": "A.I. Limiter",
+			"slug": "ai-limiter",
+			"name": "AI Limiter",
 			"className": "Recipe_AILimiter_C",
 			"alternate": false,
 			"time": 12,
@@ -1607,8 +1607,8 @@
 			]
 		},
 		"Recipe_Alternate_Quickwire_C": {
-			"slug": "alternate-fused-quckwire",
-			"name": "Alternate: Fused Quckwire",
+			"slug": "alternate-fused-quickwire",
+			"name": "Alternate: Fused Quickwire",
 			"className": "Recipe_Alternate_Quickwire_C",
 			"alternate": true,
 			"time": 8,
@@ -1855,8 +1855,8 @@
 			]
 		},
 		"Recipe_Alternate_Screw_C": {
-			"slug": "alternate-casted-screw",
-			"name": "Alternate: Casted Screw",
+			"slug": "alternate-cast-screw",
+			"name": "Alternate: Cast Screw",
 			"className": "Recipe_Alternate_Screw_C",
 			"alternate": true,
 			"time": 24,
@@ -3960,7 +3960,7 @@
 		},
 		"Recipe_Gasmask_C": {
 			"slug": "gas-mask",
-			"name": "Gas mask",
+			"name": "Gas Mask",
 			"className": "Recipe_Gasmask_C",
 			"alternate": false,
 			"time": 80,
@@ -4849,8 +4849,8 @@
 			"producedIn": []
 		},
 		"Recipe_Mam_C": {
-			"slug": "m-a-m-",
-			"name": "M.A.M.",
+			"slug": "mam",
+			"name": "MAM",
 			"className": "Recipe_Mam_C",
 			"alternate": false,
 			"time": 1,
@@ -6071,11 +6071,11 @@
 			"manualTimeMultiplier": 1,
 			"ingredients": [
 				{
-					"item": "Desc_Plastic_C",
-					"amount": 1
+					"item": "Desc_CopperSheet_C",
+					"amount": 2
 				},
 				{
-					"item": "Desc_AluminumPlate_C",
+					"item": "Desc_Plastic_C",
 					"amount": 1
 				}
 			],
@@ -6104,7 +6104,7 @@
 					"amount": 2
 				},
 				{
-					"item": "Desc_AluminumPlate_C",
+					"item": "Desc_SteelPlateReinforced_C",
 					"amount": 4
 				},
 				{
@@ -6646,7 +6646,7 @@
 		},
 		"Recipe_QuarterPipeCorner_01_C": {
 			"slug": "inner-corner-quarter-pipe",
-			"name": "Inner-Corner Quarter Pipe",
+			"name": "Inner Corner Quarter Pipe",
 			"className": "Recipe_QuarterPipeCorner_01_C",
 			"alternate": false,
 			"time": 1,
@@ -6671,7 +6671,7 @@
 		},
 		"Recipe_QuarterPipeCorner_02_C": {
 			"slug": "inverted-inner-corner-quarter-pipe",
-			"name": "Inverted Inner-Corner Quarter Pipe",
+			"name": "Inverted Inner Corner Quarter Pipe",
 			"className": "Recipe_QuarterPipeCorner_02_C",
 			"alternate": false,
 			"time": 1,
@@ -6696,7 +6696,7 @@
 		},
 		"Recipe_QuarterPipeCorner_03_C": {
 			"slug": "outer-corner-quarter-pipe",
-			"name": "Outer-Corner Quarter Pipe",
+			"name": "Outer Corner Quarter Pipe",
 			"className": "Recipe_QuarterPipeCorner_03_C",
 			"alternate": false,
 			"time": 1,
@@ -6721,7 +6721,7 @@
 		},
 		"Recipe_QuarterPipeCorner_04_C": {
 			"slug": "inverted-outer-corner-quarter-pipe",
-			"name": "Inverted Outer-Corner Quarter Pipe",
+			"name": "Inverted Outer Corner Quarter Pipe",
 			"className": "Recipe_QuarterPipeCorner_04_C",
 			"alternate": false,
 			"time": 1,
@@ -7030,7 +7030,7 @@
 		},
 		"Recipe_RampInverted_8x1_Corner_01_C": {
 			"slug": "up-corner-8m-x-1m-inverted",
-			"name": "Up Corner   8m x 1m Inverted",
+			"name": "Up Corner 8m x 1m Inverted",
 			"className": "Recipe_RampInverted_8x1_Corner_01_C",
 			"alternate": false,
 			"time": 1,
@@ -7105,7 +7105,7 @@
 		},
 		"Recipe_RampInverted_8x2_Corner_01_C": {
 			"slug": "up-corner-8m-x-2m-inverted",
-			"name": "Up Corner   8m x 2m Inverted",
+			"name": "Up Corner 8m x 2m Inverted",
 			"className": "Recipe_RampInverted_8x2_Corner_01_C",
 			"alternate": false,
 			"time": 1,
@@ -7155,7 +7155,7 @@
 		},
 		"Recipe_RampInverted_8x4_Corner_01_C": {
 			"slug": "up-corner-8m-x-4m-inverted",
-			"name": "Up Corner   8m x 4m Inverted",
+			"name": "Up Corner 8m x 4m Inverted",
 			"className": "Recipe_RampInverted_8x4_Corner_01_C",
 			"alternate": false,
 			"time": 1,
@@ -9936,7 +9936,7 @@
 		"BP_EquipmentDescriptorGasmask_C": {
 			"slug": "gas-mask",
 			"className": "BP_EquipmentDescriptorGasmask_C",
-			"name": "Gas mask",
+			"name": "Gas Mask",
 			"sinkPoints": 55000,
 			"description": "Slot: Body\n\nAllows you to breathe normally in poison gas. Consumes Gas Filters from your inventory when you are in poison gas.",
 			"stackSize": 1,
@@ -9989,7 +9989,7 @@
 			"className": "BP_EquipmentDescriptorJumpingStilts_C",
 			"name": "Blade Runners",
 			"sinkPoints": 4988,
-			"description": "Slot: Body\n\nA exoskeleton for your lower legs that assist your movement, allowing you to sprint faster and jump higher.\nAlso dampens the impact of landing.",
+			"description": "Slot: Body\n\nAn exoskeleton for your lower legs that assists movement, allowing you to sprint faster and jump higher.\nAlso dampens the impact of landing.",
 			"stackSize": 1,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
@@ -10227,7 +10227,7 @@
 			"className": "Desc_Biofuel_C",
 			"name": "Solid Biofuel",
 			"sinkPoints": 48,
-			"description": "Fuel.\nThe most energy efficient form of solid biomass.",
+			"description": "The most energy-efficient form of solid biomass. Can be used as fuel for the Chainsaw.",
 			"stackSize": 200,
 			"energyValue": 450,
 			"radioactiveDecay": 0,
@@ -10308,11 +10308,11 @@
 			}
 		},
 		"Desc_CircuitBoardHighSpeed_C": {
-			"slug": "a-i-limiter",
+			"slug": "ai-limiter",
 			"className": "Desc_CircuitBoardHighSpeed_C",
-			"name": "A.I. Limiter",
+			"name": "AI Limiter",
 			"sinkPoints": 920,
-			"description": "A.I. Limiter are super advanced electronics that are used to control A.I.s and keep them from evolving in malicious ways.",
+			"description": "AI Limiters are super advanced electronics that are used to control AIs and keep them from evolving in malicious ways.",
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
@@ -10635,7 +10635,7 @@
 			"className": "Desc_Fuel_C",
 			"name": "Packaged Fuel",
 			"sinkPoints": 270,
-			"description": "Fuel.\nPackaged Fuel, either converted into electricity or as fuel for vehicles.",
+			"description": "Fuel, packaged for alternative transport. Can be used as fuel for Vehicles or the Jetpack.",
 			"stackSize": 100,
 			"energyValue": 600,
 			"radioactiveDecay": 0,
@@ -10652,7 +10652,7 @@
 			"className": "Desc_GenericBiomass_C",
 			"name": "Biomass",
 			"sinkPoints": 12,
-			"description": "Primarily used as fuel.\nBiomass burners and vehicles can use it for power.\nBiomass is much more energy efficient than raw biological matter.",
+			"description": "Primarily used as fuel.\nBiomass burners and vehicles can use it for power.\nBiomass is much more energy-efficient than raw biological matter.",
 			"stackSize": 200,
 			"energyValue": 180,
 			"radioactiveDecay": 0,
@@ -10924,7 +10924,7 @@
 			"className": "Desc_LiquidBiofuel_C",
 			"name": "Liquid Biofuel",
 			"sinkPoints": 125,
-			"description": "Fuel.\nThe most energy efficient form of biomass.",
+			"description": "Liquid Biofuel can be used to generate power or packaged to be used as fuel for Vehicles.",
 			"stackSize": 50000,
 			"energyValue": 0.75,
 			"radioactiveDecay": 0,
@@ -10941,7 +10941,7 @@
 			"className": "Desc_LiquidFuel_C",
 			"name": "Fuel",
 			"sinkPoints": 75,
-			"description": "Fuel is either converted into electricity or as fuel for vehicles.",
+			"description": "Fuel can be used to generate power or packaged to be used as fuel for Vehicles or the Jetpack.",
 			"stackSize": 50000,
 			"energyValue": 0.6,
 			"radioactiveDecay": 0,
@@ -10975,7 +10975,7 @@
 			"className": "Desc_LiquidTurboFuel_C",
 			"name": "Turbofuel",
 			"sinkPoints": 225,
-			"description": "A more efficient alternative to Fuel. Used in Fuel Generators.",
+			"description": "A more efficient alternative to Fuel. Can be used to generate power or packaged to be used as fuel for Vehicles.",
 			"stackSize": 50000,
 			"energyValue": 2,
 			"radioactiveDecay": 0,
@@ -11026,7 +11026,7 @@
 			"className": "Desc_ModularFrameLightweight_C",
 			"name": "Radio Control Unit",
 			"sinkPoints": 98520,
-			"description": "Enhances and directs radio signals",
+			"description": "Enhances and directs radio signals.",
 			"stackSize": 50,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
@@ -11179,7 +11179,7 @@
 			"className": "Desc_OreBauxite_C",
 			"name": "Bauxite",
 			"sinkPoints": 8,
-			"description": "Bauxite is turned into Aluminum Ingots via an advanced smelting process.",
+			"description": "Bauxite is used to produce Alumina, which can be further refined into the Aluminum Scrap required to produce Aluminum Ingots.",
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
@@ -11264,7 +11264,7 @@
 			"className": "Desc_PackagedBiofuel_C",
 			"name": "Packaged Liquid Biofuel",
 			"sinkPoints": 370,
-			"description": "Fuel.\nPackaged Liquid Biofuel, either converted into electricity or as fuel for vehicles.",
+			"description": "Liquid Biofuel, packaged for alternative transport. Can be used as fuel for Vehicles.",
 			"stackSize": 100,
 			"energyValue": 750,
 			"radioactiveDecay": 0,
@@ -11281,7 +11281,7 @@
 			"className": "Desc_PackagedOilResidue_C",
 			"name": "Packaged Heavy Oil Residue",
 			"sinkPoints": 180,
-			"description": "Heavy Oil Residue, packaged for alternative transport.",
+			"description": "Heavy Oil Residue, packaged for alternative transport. Can be used as fuel for Vehicles.",
 			"stackSize": 100,
 			"energyValue": 400,
 			"radioactiveDecay": 0,
@@ -11298,7 +11298,7 @@
 			"className": "Desc_PackagedOil_C",
 			"name": "Packaged Oil",
 			"sinkPoints": 180,
-			"description": "Crude Oil, packaged for transportation or to be used as vehicle fuel.",
+			"description": "Crude Oil, packaged for alternative transport. Can be used as fuel for Vehicles.",
 			"stackSize": 100,
 			"energyValue": 320,
 			"radioactiveDecay": 0,
@@ -11638,7 +11638,7 @@
 			"className": "Desc_Stator_C",
 			"name": "Stator",
 			"sinkPoints": 240,
-			"description": "The static parts of a motor",
+			"description": "Used for crafting.\\r\nThe static parts of a motor.",
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
@@ -11740,7 +11740,7 @@
 			"className": "Desc_Sulfur_C",
 			"name": "Sulfur",
 			"sinkPoints": 11,
-			"description": "Sulfur is primarily used for Gunpowder.",
+			"description": "Sulfur is primarily used for Black Powder.",
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
@@ -11774,7 +11774,7 @@
 			"className": "Desc_TurboFuel_C",
 			"name": "Packaged Turbofuel",
 			"sinkPoints": 570,
-			"description": "Packaged Turbofuel, a more efficient alternative to Fuel. Used in vehicles.",
+			"description": "Turbofuel, packaged for alternative transport. Can be used as fuel for Vehicles.",
 			"stackSize": 100,
 			"energyValue": 2000,
 			"radioactiveDecay": 0,
@@ -12347,8 +12347,8 @@
 		},
 		"Research_Caterium_4_2_C": {
 			"className": "Research_Caterium_4_2_C",
-			"name": "Power Poles MK2",
-			"slug": "power-poles-mk2",
+			"name": "Power Poles Mk.2",
+			"slug": "power-poles-mk-2",
 			"tier": 3,
 			"cost": [
 				{
@@ -12459,8 +12459,8 @@
 		},
 		"Research_Caterium_6_2_C": {
 			"className": "Research_Caterium_6_2_C",
-			"name": "Power Poles MK3",
-			"slug": "power-poles-mk3",
+			"name": "Power Poles Mk.3",
+			"slug": "power-poles-mk-3",
 			"tier": 3,
 			"cost": [
 				{
@@ -13723,6 +13723,395 @@
 			"alternate": false,
 			"mam": false
 		},
+		"Research_XMas_1-1_C": {
+			"className": "Research_XMas_1-1_C",
+			"name": "Candy Cane Basher",
+			"slug": "candy-cane-basher",
+			"tier": 3,
+			"cost": [
+				{
+					"item": "Desc_XmasBranch_C",
+					"amount": 50
+				}
+			],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_CandyCaneBasher_C",
+					"Recipe_CandyCane_C"
+				],
+				"scannerResources": []
+			},
+			"requiredSchematics": [],
+			"type": "EST_MAM",
+			"time": 3,
+			"alternate": false,
+			"mam": false
+		},
+		"Research_XMas_1-2_C": {
+			"className": "Research_XMas_1-2_C",
+			"name": "Candy Cane Decor",
+			"slug": "candy-cane-decor",
+			"tier": 3,
+			"cost": [
+				{
+					"item": "Desc_CandyCane_C",
+					"amount": 10
+				}
+			],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_CandyCaneDecor_C",
+					"Recipe_XmasBow_C"
+				],
+				"scannerResources": []
+			},
+			"requiredSchematics": [],
+			"type": "EST_MAM",
+			"time": 3,
+			"alternate": false,
+			"mam": false
+		},
+		"Research_XMas_1_C": {
+			"className": "Research_XMas_1_C",
+			"name": "FICSMAS Tree Base",
+			"slug": "ficsmas-tree-base",
+			"tier": 3,
+			"cost": [
+				{
+					"item": "Desc_Gift_C",
+					"amount": 100
+				}
+			],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_XMassTree_C",
+					"Recipe_XmasBranch_C"
+				],
+				"scannerResources": []
+			},
+			"requiredSchematics": [],
+			"type": "EST_MAM",
+			"time": 3,
+			"alternate": false,
+			"mam": false
+		},
+		"Research_XMas_2-1_C": {
+			"className": "Research_XMas_2-1_C",
+			"name": "A friend",
+			"slug": "a-friend",
+			"tier": 3,
+			"cost": [
+				{
+					"item": "Desc_CandyCane_C",
+					"amount": 50
+				},
+				{
+					"item": "Desc_XmasBow_C",
+					"amount": 50
+				}
+			],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_Snowman_C",
+					"Recipe_Snow_C"
+				],
+				"scannerResources": []
+			},
+			"requiredSchematics": [],
+			"type": "EST_MAM",
+			"time": 3,
+			"alternate": false,
+			"mam": false
+		},
+		"Research_XMas_2-2_C": {
+			"className": "Research_XMas_2-2_C",
+			"name": "FICSMAS Gift Tree",
+			"slug": "ficsmas-gift-tree",
+			"tier": 3,
+			"cost": [
+				{
+					"item": "Desc_XmasBall1_C",
+					"amount": 50
+				},
+				{
+					"item": "Desc_XmasBall2_C",
+					"amount": 50
+				},
+				{
+					"item": "Desc_XmasBranch_C",
+					"amount": 50
+				}
+			],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_TreeGiftProducer_C",
+					"Recipe_XmasBall3_C",
+					"Recipe_XmasBall4_C"
+				],
+				"scannerResources": []
+			},
+			"requiredSchematics": [],
+			"type": "EST_MAM",
+			"time": 3,
+			"alternate": false,
+			"mam": false
+		},
+		"Research_XMas_2_C": {
+			"className": "Research_XMas_2_C",
+			"name": "Giant FICSMAS Tree: Upgrade 1",
+			"slug": "giant-ficsmas-tree-upgrade-1",
+			"tier": 3,
+			"cost": [
+				{
+					"item": "Desc_XmasBall1_C",
+					"amount": 1
+				},
+				{
+					"item": "Desc_CandyCane_C",
+					"amount": 20
+				},
+				{
+					"item": "Desc_XmasBow_C",
+					"amount": 30
+				}
+			],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_XmasBall1_C",
+					"Recipe_XmasBall2_C"
+				],
+				"scannerResources": []
+			},
+			"requiredSchematics": [],
+			"type": "EST_MAM",
+			"time": 3,
+			"alternate": false,
+			"mam": false
+		},
+		"Research_XMas_3-1_C": {
+			"className": "Research_XMas_3-1_C",
+			"name": "FICSMAS Lights",
+			"slug": "ficsmas-lights",
+			"tier": 3,
+			"cost": [
+				{
+					"item": "Desc_XmasBall1_C",
+					"amount": 100
+				},
+				{
+					"item": "Desc_XmasBall2_C",
+					"amount": 100
+				},
+				{
+					"item": "Desc_XmasBall3_C",
+					"amount": 50
+				},
+				{
+					"item": "Desc_XmasBall4_C",
+					"amount": 50
+				}
+			],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_xmassLights_C",
+					"Recipe_XmasBallCluster_C"
+				],
+				"scannerResources": []
+			},
+			"requiredSchematics": [],
+			"type": "EST_MAM",
+			"time": 3,
+			"alternate": false,
+			"mam": false
+		},
+		"Research_XMas_3-2_C": {
+			"className": "Research_XMas_3-2_C",
+			"name": "It's snowing!",
+			"slug": "it's-snowing!",
+			"tier": 3,
+			"cost": [
+				{
+					"item": "Desc_XmasBallCluster_C",
+					"amount": 10
+				},
+				{
+					"item": "Desc_Snow_C",
+					"amount": 100
+				},
+				{
+					"item": "Desc_XmasBranch_C",
+					"amount": 500
+				}
+			],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_SnowDispenser_C",
+					"Recipe_XmasWreath_C"
+				],
+				"scannerResources": []
+			},
+			"requiredSchematics": [],
+			"type": "EST_MAM",
+			"time": 3,
+			"alternate": false,
+			"mam": false
+		},
+		"Research_XMas_3_C": {
+			"className": "Research_XMas_3_C",
+			"name": "Giant FICSMAS Tree: Upgrade 2",
+			"slug": "giant-ficsmas-tree-upgrade-2",
+			"tier": 3,
+			"cost": [
+				{
+					"item": "Desc_XmasBallCluster_C",
+					"amount": 1
+				},
+				{
+					"item": "Desc_XmasBall3_C",
+					"amount": 200
+				},
+				{
+					"item": "Desc_XmasBall4_C",
+					"amount": 200
+				}
+			],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [],
+				"scannerResources": []
+			},
+			"requiredSchematics": [],
+			"type": "EST_MAM",
+			"time": 3,
+			"alternate": false,
+			"mam": false
+		},
+		"Research_XMas_4-1_C": {
+			"className": "Research_XMas_4-1_C",
+			"name": "FICSMAS Wreath",
+			"slug": "ficsmas-wreath",
+			"tier": 3,
+			"cost": [
+				{
+					"item": "Desc_XmasWreath_C",
+					"amount": 100
+				},
+				{
+					"item": "Desc_XmasBallCluster_C",
+					"amount": 200
+				},
+				{
+					"item": "Desc_XmasBow_C",
+					"amount": 500
+				}
+			],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_WreathDecor_C",
+					"Recipe_XmasStar_C"
+				],
+				"scannerResources": []
+			},
+			"requiredSchematics": [],
+			"type": "EST_MAM",
+			"time": 3,
+			"alternate": false,
+			"mam": false
+		},
+		"Research_XMas_4-2_C": {
+			"className": "Research_XMas_4-2_C",
+			"name": "Snowfight!",
+			"slug": "snowfight!",
+			"tier": 3,
+			"cost": [
+				{
+					"item": "Desc_Snow_C",
+					"amount": 500
+				},
+				{
+					"item": "Desc_CandyCane_C",
+					"amount": 500
+				},
+				{
+					"item": "Desc_XmasBow_C",
+					"amount": 500
+				}
+			],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_SnowballWeapon_C",
+					"Recipe_Snowball_C"
+				],
+				"scannerResources": []
+			},
+			"requiredSchematics": [],
+			"type": "EST_MAM",
+			"time": 3,
+			"alternate": false,
+			"mam": false
+		},
+		"Research_XMas_4_C": {
+			"className": "Research_XMas_4_C",
+			"name": "Giant FICSMAS Tree: Upgrade 3",
+			"slug": "giant-ficsmas-tree-upgrade-3",
+			"tier": 3,
+			"cost": [
+				{
+					"item": "Desc_XmasStar_C",
+					"amount": 1
+				},
+				{
+					"item": "Desc_XmasWreath_C",
+					"amount": 200
+				},
+				{
+					"item": "Desc_XmasBallCluster_C",
+					"amount": 400
+				}
+			],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [],
+				"scannerResources": []
+			},
+			"requiredSchematics": [],
+			"type": "EST_MAM",
+			"time": 3,
+			"alternate": false,
+			"mam": false
+		},
+		"Research_XMas_5_C": {
+			"className": "Research_XMas_5_C",
+			"name": "Giant FICSMAS Tree: Upgrade 4",
+			"slug": "giant-ficsmas-tree-upgrade-4",
+			"tier": 3,
+			"cost": [
+				{
+					"item": "Desc_XmasStar_C",
+					"amount": 500
+				}
+			],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [],
+				"scannerResources": []
+			},
+			"requiredSchematics": [],
+			"type": "EST_MAM",
+			"time": 3,
+			"alternate": false,
+			"mam": false
+		},
 		"Schematic_1-1_C": {
 			"className": "Schematic_1-1_C",
 			"name": "Base Building",
@@ -14270,6 +14659,7 @@
 				"recipes": [
 					"Recipe_OilPump_C",
 					"Recipe_OilRefinery_C",
+					"Recipe_Valve_C",
 					"Recipe_Plastic_C",
 					"Recipe_Rubber_C",
 					"Recipe_LiquidFuel_C",
@@ -14433,8 +14823,7 @@
 				"recipes": [
 					"Recipe_GeneratorFuel_C",
 					"Recipe_ConveyorBeltMk4_C",
-					"Recipe_ConveyorLiftMk4_C",
-					"Recipe_Valve_C"
+					"Recipe_ConveyorLiftMk4_C"
 				],
 				"scannerResources": [
 					"Desc_OreGold_C"
@@ -14526,8 +14915,8 @@
 		},
 		"Schematic_6-4_C": {
 			"className": "Schematic_6-4_C",
-			"name": "GasMask",
-			"slug": "gasmask",
+			"name": "Gas Mask",
+			"slug": "gas-mask",
 			"tier": 5,
 			"cost": [
 				{
@@ -14557,6 +14946,43 @@
 			"alternate": false,
 			"mam": false
 		},
+		"Schematic_6-5_C": {
+			"className": "Schematic_6-5_C",
+			"name": "Pipeline Engineering Mk.2",
+			"slug": "pipeline-engineering-mk-2",
+			"tier": 6,
+			"cost": [
+				{
+					"item": "Desc_CopperSheet_C",
+					"amount": 1000
+				},
+				{
+					"item": "Desc_Plastic_C",
+					"amount": 400
+				},
+				{
+					"item": "Desc_Rubber_C",
+					"amount": 400
+				},
+				{
+					"item": "Desc_ModularFrameHeavy_C",
+					"amount": 50
+				}
+			],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_PipelineMK2_C",
+					"Recipe_PipelinePumpMK2_C"
+				],
+				"scannerResources": []
+			},
+			"requiredSchematics": [],
+			"type": "EST_Milestone",
+			"time": 600,
+			"alternate": false,
+			"mam": false
+		},
 		"Schematic_7-1_C": {
 			"className": "Schematic_7-1_C",
 			"name": "Bauxite Refinement",
@@ -14581,8 +15007,6 @@
 				"recipes": [
 					"Recipe_ConveyorBeltMk5_C",
 					"Recipe_ConveyorLiftMk5_C",
-					"Recipe_PipelineMK2_C",
-					"Recipe_PipelinePumpMK2_C",
 					"Recipe_AluminumSheet_C",
 					"Recipe_IngotAluminum_C",
 					"Recipe_AluminumScrap_C",
@@ -14738,8 +15162,8 @@
 		},
 		"Schematic_Alternate_Beacon1_C": {
 			"className": "Schematic_Alternate_Beacon1_C",
-			"name": "Alternate: Signal Beacon",
-			"slug": "alternate-signal-beacon",
+			"name": "Alternate: Crystal Beacon",
+			"slug": "alternate-crystal-beacon",
 			"tier": 4,
 			"cost": [],
 			"unlock": {
@@ -15016,8 +15440,8 @@
 		},
 		"Schematic_Alternate_Computer2_C": {
 			"className": "Schematic_Alternate_Computer2_C",
-			"name": "Alternate: CrystalComputer",
-			"slug": "alternate-crystalcomputer",
+			"name": "Alternate: Crystal Computer",
+			"slug": "alternate-crystal-computer",
 			"tier": 5,
 			"cost": [],
 			"unlock": {
@@ -15273,8 +15697,8 @@
 		},
 		"Schematic_Alternate_Gunpowder1_C": {
 			"className": "Schematic_Alternate_Gunpowder1_C",
-			"name": "Alternate: Gun Powder",
-			"slug": "alternate-gun-powder",
+			"name": "Alternate: Fine Black Powder",
+			"slug": "alternate-fine-black-powder",
 			"tier": 4,
 			"cost": [],
 			"unlock": {
@@ -15485,8 +15909,8 @@
 		},
 		"Schematic_Alternate_InventorySlots1_C": {
 			"className": "Schematic_Alternate_InventorySlots1_C",
-			"name": "Expanded Pocket Dimension",
-			"slug": "expanded-pocket-dimension",
+			"name": "Inflated Pocket Dimension",
+			"slug": "inflated-pocket-dimension",
 			"tier": 2,
 			"cost": [],
 			"unlock": {
@@ -15986,8 +16410,8 @@
 		},
 		"Schematic_Alternate_Screw_C": {
 			"className": "Schematic_Alternate_Screw_C",
-			"name": "Alternate: Casted Screw",
-			"slug": "alternate-casted-screw",
+			"name": "Alternate: Cast Screw",
+			"slug": "alternate-cast-screw",
 			"tier": 1,
 			"cost": [],
 			"unlock": {
@@ -16759,6 +17183,11 @@
 				"powerConsumption": 15,
 				"powerConsumptionExponent": 1.6,
 				"manufacturingSpeed": 1
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_ConstructorMk1_C": {
@@ -16774,6 +17203,11 @@
 				"powerConsumption": 4,
 				"powerConsumptionExponent": 1.6,
 				"manufacturingSpeed": 1
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_ConveyorAttachmentMerger_C": {
@@ -16788,6 +17222,11 @@
 			"metadata": {
 				"powerConsumption": 0,
 				"powerConsumptionExponent": 1.6
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_ConveyorAttachmentSplitterProgrammable_C": {
@@ -16802,6 +17241,11 @@
 			"metadata": {
 				"powerConsumption": 0,
 				"powerConsumptionExponent": 1.6
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_ConveyorAttachmentSplitterSmart_C": {
@@ -16816,6 +17260,11 @@
 			"metadata": {
 				"powerConsumption": 0,
 				"powerConsumptionExponent": 1.6
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_ConveyorAttachmentSplitter_C": {
@@ -16830,6 +17279,11 @@
 			"metadata": {
 				"powerConsumption": 0,
 				"powerConsumptionExponent": 1.6
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_ConveyorBeltMk1_C": {
@@ -16846,6 +17300,11 @@
 				"firstPieceCostMultiplier": 1,
 				"lengthPerCost": 200,
 				"maxLength": 4900
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_ConveyorBeltMk2_C": {
@@ -16862,6 +17321,11 @@
 				"firstPieceCostMultiplier": 1,
 				"lengthPerCost": 200,
 				"maxLength": 4900
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_ConveyorBeltMk3_C": {
@@ -16878,6 +17342,11 @@
 				"firstPieceCostMultiplier": 1,
 				"lengthPerCost": 200,
 				"maxLength": 4900
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_ConveyorBeltMk4_C": {
@@ -16894,6 +17363,11 @@
 				"firstPieceCostMultiplier": 1,
 				"lengthPerCost": 200,
 				"maxLength": 4900
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_ConveyorBeltMk5_C": {
@@ -16910,6 +17384,11 @@
 				"firstPieceCostMultiplier": 1,
 				"lengthPerCost": 200,
 				"maxLength": 4900
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_ConveyorLiftMk1_C": {
@@ -16926,6 +17405,11 @@
 				"firstPieceCostMultiplier": 1,
 				"lengthPerCost": 200,
 				"maxLength": 4900
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_ConveyorLiftMk2_C": {
@@ -16942,6 +17426,11 @@
 				"firstPieceCostMultiplier": 1,
 				"lengthPerCost": 200,
 				"maxLength": 4900
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_ConveyorLiftMk3_C": {
@@ -16958,6 +17447,11 @@
 				"firstPieceCostMultiplier": 1,
 				"lengthPerCost": 200,
 				"maxLength": 4900
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_ConveyorLiftMk4_C": {
@@ -16974,6 +17468,11 @@
 				"firstPieceCostMultiplier": 1,
 				"lengthPerCost": 200,
 				"maxLength": 4900
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_ConveyorLiftMk5_C": {
@@ -16990,6 +17489,11 @@
 				"firstPieceCostMultiplier": 1,
 				"lengthPerCost": 200,
 				"maxLength": 4900
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_ConveyorPoleStackable_C": {
@@ -16999,7 +17503,12 @@
 			"categories": [],
 			"buildMenuPriority": 0,
 			"className": "Desc_ConveyorPoleStackable_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 1
+			}
 		},
 		"Desc_ConveyorPoleWall_C": {
 			"slug": "conveyor-wall-mount",
@@ -17010,7 +17519,12 @@
 			],
 			"buildMenuPriority": 31,
 			"className": "Desc_ConveyorPoleWall_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
+			}
 		},
 		"Desc_ConveyorPole_C": {
 			"slug": "conveyor-pole",
@@ -17019,7 +17533,12 @@
 			"categories": [],
 			"buildMenuPriority": 0,
 			"className": "Desc_ConveyorPole_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 1
+			}
 		},
 		"Desc_CyberWagon_C": {
 			"slug": "cyber-wagon",
@@ -17028,7 +17547,12 @@
 			"categories": [],
 			"buildMenuPriority": 0,
 			"className": "Desc_CyberWagon_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
+			}
 		},
 		"Desc_Explorer_C": {
 			"slug": "explorer",
@@ -17037,7 +17561,12 @@
 			"categories": [],
 			"buildMenuPriority": 0,
 			"className": "Desc_Explorer_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
+			}
 		},
 		"Desc_Fence_01_C": {
 			"slug": "fence",
@@ -17048,7 +17577,12 @@
 			],
 			"buildMenuPriority": 93,
 			"className": "Desc_Fence_01_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 0,
+				"height": 2.5
+			}
 		},
 		"Desc_FoundationGlass_01_C": {
 			"slug": "glass-foundation-8m-x-1m",
@@ -17059,7 +17593,12 @@
 			],
 			"buildMenuPriority": 4,
 			"className": "Desc_FoundationGlass_01_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 1
+			}
 		},
 		"Desc_Foundation_8x1_01_C": {
 			"slug": "foundation-8m-x-1m",
@@ -17070,7 +17609,12 @@
 			],
 			"buildMenuPriority": 1,
 			"className": "Desc_Foundation_8x1_01_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 1
+			}
 		},
 		"Desc_Foundation_8x2_01_C": {
 			"slug": "foundation-8m-x-2m",
@@ -17081,7 +17625,12 @@
 			],
 			"buildMenuPriority": 2,
 			"className": "Desc_Foundation_8x2_01_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 2
+			}
 		},
 		"Desc_Foundation_8x4_01_C": {
 			"slug": "foundation-8m-x-4m",
@@ -17092,7 +17641,12 @@
 			],
 			"buildMenuPriority": 3,
 			"className": "Desc_Foundation_8x4_01_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 4
+			}
 		},
 		"Desc_Foundation_Frame_01_C": {
 			"slug": "frame-foundation-8m-x-4m",
@@ -17103,7 +17657,12 @@
 			],
 			"buildMenuPriority": 5,
 			"className": "Desc_Foundation_Frame_01_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 4
+			}
 		},
 		"Desc_FoundryMk1_C": {
 			"slug": "foundry",
@@ -17118,6 +17677,11 @@
 				"powerConsumption": 16,
 				"powerConsumptionExponent": 1.6,
 				"manufacturingSpeed": 1
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_FreightWagon_C": {
@@ -17127,7 +17691,12 @@
 			"categories": [],
 			"buildMenuPriority": 0,
 			"className": "Desc_FreightWagon_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
+			}
 		},
 		"Desc_GeneratorBiomass_C": {
 			"slug": "biomass-burner",
@@ -17141,6 +17710,11 @@
 			"metadata": {
 				"powerConsumption": 0,
 				"powerConsumptionExponent": 1.6
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_GeneratorCoal_C": {
@@ -17155,6 +17729,11 @@
 			"metadata": {
 				"powerConsumption": 0,
 				"powerConsumptionExponent": 1.6
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_GeneratorFuel_C": {
@@ -17169,6 +17748,11 @@
 			"metadata": {
 				"powerConsumption": 0,
 				"powerConsumptionExponent": 1.6
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_GeneratorGeoThermal_C": {
@@ -17183,6 +17767,11 @@
 			"metadata": {
 				"powerConsumption": 0,
 				"powerConsumptionExponent": 1.6
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_GeneratorNuclear_C": {
@@ -17197,6 +17786,11 @@
 			"metadata": {
 				"powerConsumption": 0,
 				"powerConsumptionExponent": 1.6
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_HyperPoleStackable_C": {
@@ -17206,7 +17800,12 @@
 			"categories": [],
 			"buildMenuPriority": 0,
 			"className": "Desc_HyperPoleStackable_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
+			}
 		},
 		"Desc_HyperTubeWallHole_C": {
 			"slug": "hyper-tube-wall-hole",
@@ -17217,7 +17816,12 @@
 			],
 			"buildMenuPriority": 6,
 			"className": "Desc_HyperTubeWallHole_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
+			}
 		},
 		"Desc_HyperTubeWallSupport_C": {
 			"slug": "hyper-tube-wall-support",
@@ -17228,7 +17832,12 @@
 			],
 			"buildMenuPriority": 5,
 			"className": "Desc_HyperTubeWallSupport_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
+			}
 		},
 		"Desc_IndustrialTank_C": {
 			"slug": "industrial-fluid-buffer",
@@ -17243,6 +17852,11 @@
 				"powerConsumption": 0,
 				"powerConsumptionExponent": 1.6,
 				"storageCapacity": 2400
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_LandingPad_C": {
@@ -17257,6 +17871,11 @@
 			"metadata": {
 				"powerConsumption": 5,
 				"powerConsumptionExponent": 1.6
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_Locomotive_C": {
@@ -17266,12 +17885,17 @@
 			"categories": [],
 			"buildMenuPriority": 0,
 			"className": "Desc_Locomotive_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
+			}
 		},
 		"Desc_LookoutTower_C": {
 			"slug": "lookout-tower",
 			"name": "Lookout Tower",
-			"description": "Provides a good OVERVIEW useful for building.",
+			"description": "Provides a good overview which makes factory construction easier.",
 			"categories": [
 				"SC_Towers_C"
 			],
@@ -17280,18 +17904,28 @@
 			"metadata": {
 				"powerConsumption": 0,
 				"powerConsumptionExponent": 1.6
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_Mam_C": {
-			"slug": "m-a-m-",
-			"name": "M.A.M.",
-			"description": "The Molecular Analysis Machine is used to analyse new and exotic materials found on alien planets.\nR&D will assist Pioneers through the M.A.M. to turn any valuable data into usable research options and new technologies.",
+			"slug": "mam",
+			"name": "MAM",
+			"description": "The Molecular Analysis Machine is used to analyse new and exotic materials found on alien planets.\nR&D will assist Pioneers through the MAM to turn any valuable data into usable research options and new technologies.",
 			"categories": [
 				"SC_Special_C"
 			],
 			"buildMenuPriority": 3,
 			"className": "Desc_Mam_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
+			}
 		},
 		"Desc_ManufacturerMk1_C": {
 			"slug": "manufacturer",
@@ -17306,6 +17940,11 @@
 				"powerConsumption": 55,
 				"powerConsumptionExponent": 1.6,
 				"manufacturingSpeed": 1
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_MinerMk1_C": {
@@ -17320,6 +17959,11 @@
 			"metadata": {
 				"powerConsumption": 5,
 				"powerConsumptionExponent": 1.6
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_MinerMk2_C": {
@@ -17334,6 +17978,11 @@
 			"metadata": {
 				"powerConsumption": 12,
 				"powerConsumptionExponent": 1.6
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_MinerMk3_C": {
@@ -17348,6 +17997,11 @@
 			"metadata": {
 				"powerConsumption": 30,
 				"powerConsumptionExponent": 1.6
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_OilPump_C": {
@@ -17362,6 +18016,11 @@
 			"metadata": {
 				"powerConsumption": 40,
 				"powerConsumptionExponent": 1.6
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_OilRefinery_C": {
@@ -17377,6 +18036,11 @@
 				"powerConsumption": 30,
 				"powerConsumptionExponent": 1.6,
 				"manufacturingSpeed": 1
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_Packager_C": {
@@ -17392,6 +18056,11 @@
 				"powerConsumption": 10,
 				"powerConsumptionExponent": 1.6,
 				"manufacturingSpeed": 1
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_PillarBase_C": {
@@ -17403,7 +18072,12 @@
 			],
 			"buildMenuPriority": 6,
 			"className": "Desc_PillarBase_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 4
+			}
 		},
 		"Desc_PillarMiddle_C": {
 			"slug": "pillar-middle",
@@ -17414,7 +18088,12 @@
 			],
 			"buildMenuPriority": 7,
 			"className": "Desc_PillarMiddle_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 4
+			}
 		},
 		"Desc_PillarTop_C": {
 			"slug": "pillar-top",
@@ -17425,7 +18104,12 @@
 			],
 			"buildMenuPriority": 8,
 			"className": "Desc_PillarTop_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 4
+			}
 		},
 		"Desc_PipeHyperStart_C": {
 			"slug": "hyper-tube-entrance",
@@ -17439,6 +18123,11 @@
 			"metadata": {
 				"powerConsumption": 10,
 				"powerConsumptionExponent": 1.6
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_PipeHyperSupport_C": {
@@ -17448,7 +18137,12 @@
 			"categories": [],
 			"buildMenuPriority": 0,
 			"className": "Desc_PipeHyperSupport_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
+			}
 		},
 		"Desc_PipeHyper_C": {
 			"slug": "hyper-tube",
@@ -17459,7 +18153,12 @@
 			],
 			"buildMenuPriority": 1,
 			"className": "Desc_PipeHyper_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
+			}
 		},
 		"Desc_PipeStorageTank_C": {
 			"slug": "fluid-buffer",
@@ -17474,6 +18173,11 @@
 				"powerConsumption": 0,
 				"powerConsumptionExponent": 1.6,
 				"storageCapacity": 400
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_PipeSupportStackable_C": {
@@ -17483,7 +18187,12 @@
 			"categories": [],
 			"buildMenuPriority": 0,
 			"className": "Desc_PipeSupportStackable_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
+			}
 		},
 		"Desc_PipelineJunction_Cross_C": {
 			"slug": "pipeline-junction-cross",
@@ -17497,6 +18206,11 @@
 			"metadata": {
 				"powerConsumption": 0,
 				"powerConsumptionExponent": 1.6
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_PipelineMK2_C": {
@@ -17510,6 +18224,11 @@
 			"className": "Desc_PipelineMK2_C",
 			"metadata": {
 				"flowLimit": 10
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_PipelinePumpMk2_C": {
@@ -17522,9 +18241,14 @@
 			"buildMenuPriority": 4,
 			"className": "Desc_PipelinePumpMk2_C",
 			"metadata": {
-				"powerConsumption": 12,
+				"powerConsumption": 8,
 				"powerConsumptionExponent": 1.6,
 				"maxPressure": 50
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_PipelinePump_C": {
@@ -17540,6 +18264,11 @@
 				"powerConsumption": 4,
 				"powerConsumptionExponent": 1.6,
 				"maxPressure": 20
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_PipelineSupportWallHole_C": {
@@ -17551,7 +18280,12 @@
 			],
 			"buildMenuPriority": 3,
 			"className": "Desc_PipelineSupportWallHole_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
+			}
 		},
 		"Desc_PipelineSupportWall_C": {
 			"slug": "pipeline-wall-support",
@@ -17562,7 +18296,12 @@
 			],
 			"buildMenuPriority": 2,
 			"className": "Desc_PipelineSupportWall_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
+			}
 		},
 		"Desc_PipelineSupport_C": {
 			"slug": "pipeline-support",
@@ -17571,7 +18310,12 @@
 			"categories": [],
 			"buildMenuPriority": 0,
 			"className": "Desc_PipelineSupport_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
+			}
 		},
 		"Desc_Pipeline_C": {
 			"slug": "pipeline-mk-1",
@@ -17584,6 +18328,11 @@
 			"className": "Desc_Pipeline_C",
 			"metadata": {
 				"flowLimit": 5
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_PowerLine_C": {
@@ -17599,6 +18348,11 @@
 				"lengthPerCost": 2500,
 				"firstPieceCostMultiplier": 1,
 				"maxLength": 10000
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_PowerPoleMk1_C": {
@@ -17610,7 +18364,12 @@
 			],
 			"buildMenuPriority": 25,
 			"className": "Desc_PowerPoleMk1_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
+			}
 		},
 		"Desc_PowerPoleMk2_C": {
 			"slug": "power-pole-mk-2",
@@ -17621,7 +18380,12 @@
 			],
 			"buildMenuPriority": 26,
 			"className": "Desc_PowerPoleMk2_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
+			}
 		},
 		"Desc_PowerPoleMk3_C": {
 			"slug": "power-pole-mk-3",
@@ -17632,7 +18396,12 @@
 			],
 			"buildMenuPriority": 27,
 			"className": "Desc_PowerPoleMk3_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
+			}
 		},
 		"Desc_PowerPoleWallDouble_C": {
 			"slug": "double-wall-outlet-mk-1",
@@ -17643,7 +18412,12 @@
 			],
 			"buildMenuPriority": 4,
 			"className": "Desc_PowerPoleWallDouble_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
+			}
 		},
 		"Desc_PowerPoleWallDouble_Mk2_C": {
 			"slug": "double-wall-outlet-mk-2",
@@ -17652,7 +18426,12 @@
 			"categories": [],
 			"buildMenuPriority": 0,
 			"className": "Desc_PowerPoleWallDouble_Mk2_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
+			}
 		},
 		"Desc_PowerPoleWallDouble_Mk3_C": {
 			"slug": "double-wall-outlet-mk-3",
@@ -17661,7 +18440,12 @@
 			"categories": [],
 			"buildMenuPriority": 0,
 			"className": "Desc_PowerPoleWallDouble_Mk3_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
+			}
 		},
 		"Desc_PowerPoleWall_C": {
 			"slug": "wall-outlet-mk-1",
@@ -17672,7 +18456,12 @@
 			],
 			"buildMenuPriority": 1,
 			"className": "Desc_PowerPoleWall_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
+			}
 		},
 		"Desc_PowerPoleWall_Mk2_C": {
 			"slug": "wall-outlet-mk-2",
@@ -17681,7 +18470,12 @@
 			"categories": [],
 			"buildMenuPriority": 0,
 			"className": "Desc_PowerPoleWall_Mk2_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
+			}
 		},
 		"Desc_PowerPoleWall_Mk3_C": {
 			"slug": "wall-outlet-mk-3",
@@ -17690,51 +18484,76 @@
 			"categories": [],
 			"buildMenuPriority": 0,
 			"className": "Desc_PowerPoleWall_Mk3_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
+			}
 		},
 		"Desc_QuarterPipeCorner_01_C": {
 			"slug": "inner-corner-quarter-pipe",
-			"name": "Inner-Corner Quarter Pipe",
+			"name": "Inner Corner Quarter Pipe",
 			"description": "Provides an optional factory look that is smoother and offers possibilities for recreational activities. \nStill utilizes the standard foundation building grid for improved building placement.",
 			"categories": [
 				"SC_QuatPipes_C"
 			],
 			"buildMenuPriority": 72,
 			"className": "Desc_QuarterPipeCorner_01_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 4
+			}
 		},
 		"Desc_QuarterPipeCorner_02_C": {
 			"slug": "inverted-inner-corner-quarter-pipe",
-			"name": "Inverted Inner-Corner Quarter Pipe",
+			"name": "Inverted Inner Corner Quarter Pipe",
 			"description": "Provides an optional factory look that is smoother and offers possibilities for recreational activities. \nStill utilizes the standard foundation building grid for improved building placement.",
 			"categories": [
 				"SC_QuatPipes_C"
 			],
 			"buildMenuPriority": 72,
 			"className": "Desc_QuarterPipeCorner_02_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 4
+			}
 		},
 		"Desc_QuarterPipeCorner_03_C": {
 			"slug": "outer-corner-quarter-pipe",
-			"name": "Outer-Corner Quarter Pipe",
+			"name": "Outer Corner Quarter Pipe",
 			"description": "Provides an optional factory look that is smoother and offers possibilities for recreational activities. \nStill utilizes the standard foundation building grid for improved building placement.",
 			"categories": [
 				"SC_QuatPipes_C"
 			],
 			"buildMenuPriority": 72,
 			"className": "Desc_QuarterPipeCorner_03_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 4
+			}
 		},
 		"Desc_QuarterPipeCorner_04_C": {
 			"slug": "inverted-outer-corner-quarter-pipe",
-			"name": "Inverted Outer-Corner Quarter Pipe",
+			"name": "Inverted Outer Corner Quarter Pipe",
 			"description": "Provides an optional factory look that is smoother and offers possibilities for recreational activities. \nStill utilizes the standard foundation building grid for improved building placement.",
 			"categories": [
 				"SC_QuatPipes_C"
 			],
 			"buildMenuPriority": 72,
 			"className": "Desc_QuarterPipeCorner_04_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 4
+			}
 		},
 		"Desc_QuarterPipe_02_C": {
 			"slug": "inverted-quarter-pipe",
@@ -17745,7 +18564,12 @@
 			],
 			"buildMenuPriority": 72,
 			"className": "Desc_QuarterPipe_02_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 4
+			}
 		},
 		"Desc_QuarterPipe_C": {
 			"slug": "quarter-pipe",
@@ -17756,12 +18580,17 @@
 			],
 			"buildMenuPriority": 72,
 			"className": "Desc_QuarterPipe_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 4
+			}
 		},
 		"Desc_RadarTower_C": {
 			"slug": "radar-tower",
 			"name": "Radar Tower",
-			"description": "Reveals an area around itself on the map. The area grows over time to a max.\nPlacing the tower higher up increases the max area revealed.",
+			"description": "Reveals an area around itself on the map. The area is gradually revealed over time up to a maximum.\nPlacing the tower higher up increases the maximum area revealed.",
 			"categories": [
 				"SC_Towers_C"
 			],
@@ -17770,6 +18599,11 @@
 			"metadata": {
 				"powerConsumption": 30,
 				"powerConsumptionExponent": 1.6
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_RailroadTrack_C": {
@@ -17781,7 +18615,12 @@
 			],
 			"buildMenuPriority": 53,
 			"className": "Desc_RailroadTrack_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
+			}
 		},
 		"Desc_RampDouble_8x1_C": {
 			"slug": "double-ramp-8m-x-2m",
@@ -17792,7 +18631,12 @@
 			],
 			"buildMenuPriority": 94,
 			"className": "Desc_RampDouble_8x1_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 1
+			}
 		},
 		"Desc_RampDouble_C": {
 			"slug": "double-ramp-8m-x-4m",
@@ -17803,7 +18647,12 @@
 			],
 			"buildMenuPriority": 94,
 			"className": "Desc_RampDouble_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 2
+			}
 		},
 		"Desc_RampInverted_8x1_C": {
 			"slug": "inverted-ramp-8m-x-1m",
@@ -17814,18 +18663,28 @@
 			],
 			"buildMenuPriority": 1,
 			"className": "Desc_RampInverted_8x1_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 1
+			}
 		},
 		"Desc_RampInverted_8x1_Corner_01_C": {
 			"slug": "up-corner-8m-x-1m-inverted",
-			"name": "Up Corner   8m x 1m Inverted",
+			"name": "Up Corner 8m x 1m Inverted",
 			"description": "Inverted Ramps mostly provide aesthetic options.\nStill utilizes the standard foundation building grid for improved building placement.",
 			"categories": [
 				"SC_Inverted_C"
 			],
 			"buildMenuPriority": 4,
 			"className": "Desc_RampInverted_8x1_Corner_01_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 1
+			}
 		},
 		"Desc_RampInverted_8x1_Corner_02_C": {
 			"slug": "down-corner-8m-x-1m-inverted",
@@ -17836,7 +18695,12 @@
 			],
 			"buildMenuPriority": 7,
 			"className": "Desc_RampInverted_8x1_Corner_02_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 1
+			}
 		},
 		"Desc_RampInverted_8x2_01_C": {
 			"slug": "inverted-ramp-8m-x-2m",
@@ -17847,18 +18711,28 @@
 			],
 			"buildMenuPriority": 2,
 			"className": "Desc_RampInverted_8x2_01_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 2
+			}
 		},
 		"Desc_RampInverted_8x2_Corner_01_C": {
 			"slug": "up-corner-8m-x-2m-inverted",
-			"name": "Up Corner   8m x 2m Inverted",
+			"name": "Up Corner 8m x 2m Inverted",
 			"description": "Inverted Ramps mostly provide aesthetic options.\nStill utilizes the standard foundation building grid for improved building placement.",
 			"categories": [
 				"SC_Inverted_C"
 			],
 			"buildMenuPriority": 5,
 			"className": "Desc_RampInverted_8x2_Corner_01_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 2
+			}
 		},
 		"Desc_RampInverted_8x2_Corner_02_C": {
 			"slug": "down-corner-8m-x-2m-inverted",
@@ -17869,18 +18743,28 @@
 			],
 			"buildMenuPriority": 8,
 			"className": "Desc_RampInverted_8x2_Corner_02_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 2
+			}
 		},
 		"Desc_RampInverted_8x4_Corner_01_C": {
 			"slug": "up-corner-8m-x-4m-inverted",
-			"name": "Up Corner   8m x 4m Inverted",
+			"name": "Up Corner 8m x 4m Inverted",
 			"description": "Inverted Ramps mostly provide aesthetic options.\nStill utilizes the standard foundation building grid for improved building placement.",
 			"categories": [
 				"SC_Inverted_C"
 			],
 			"buildMenuPriority": 6,
 			"className": "Desc_RampInverted_8x4_Corner_01_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 4
+			}
 		},
 		"Desc_RampInverted_8x4_Corner_02_C": {
 			"slug": "down-corner-8m-x-4m-inverted",
@@ -17891,7 +18775,12 @@
 			],
 			"buildMenuPriority": 9,
 			"className": "Desc_RampInverted_8x4_Corner_02_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 4
+			}
 		},
 		"Desc_Ramp_8x1_01_C": {
 			"slug": "ramp-8m-x-1m",
@@ -17902,7 +18791,12 @@
 			],
 			"buildMenuPriority": 94,
 			"className": "Desc_Ramp_8x1_01_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 1
+			}
 		},
 		"Desc_Ramp_8x2_01_C": {
 			"slug": "ramp-8m-x-2m",
@@ -17913,7 +18807,12 @@
 			],
 			"buildMenuPriority": 94,
 			"className": "Desc_Ramp_8x2_01_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 2
+			}
 		},
 		"Desc_Ramp_8x4_01_C": {
 			"slug": "ramp-8m-x-4m",
@@ -17924,7 +18823,12 @@
 			],
 			"buildMenuPriority": 94,
 			"className": "Desc_Ramp_8x4_01_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 4
+			}
 		},
 		"Desc_Ramp_8x4_Inverted_01_C": {
 			"slug": "inverted-ramp-8m-x-4m",
@@ -17935,7 +18839,12 @@
 			],
 			"buildMenuPriority": 3,
 			"className": "Desc_Ramp_8x4_Inverted_01_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 4
+			}
 		},
 		"Desc_Ramp_8x8x8_C": {
 			"slug": "double-ramp-8m-x-8m",
@@ -17946,73 +18855,108 @@
 			],
 			"buildMenuPriority": 94,
 			"className": "Desc_Ramp_8x8x8_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 4
+			}
 		},
 		"Desc_Ramp_Diagonal_8x1_01_C": {
 			"slug": "down-corner-ramp-8m-x-1m",
 			"name": "Down Corner Ramp 8m x 1m",
-			"description": "Ramps make it easier to get up onto Foundations for Pioneers and their Vehicles.\nHeight: 1",
+			"description": "Ramps make it easier to get up onto Foundations for Pioneers and their Vehicles.\nHeight: 1 m",
 			"categories": [
 				"SC_Ramps_C"
 			],
 			"buildMenuPriority": 94,
 			"className": "Desc_Ramp_Diagonal_8x1_01_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 1
+			}
 		},
 		"Desc_Ramp_Diagonal_8x1_02_C": {
 			"slug": "up-corner-ramp-8m-x-1m",
 			"name": "Up Corner Ramp 8m x 1m",
-			"description": "Ramps make it easier to get up onto Foundations for Pioneers and their Vehicles.\nHeight: 1",
+			"description": "Ramps make it easier to get up onto Foundations for Pioneers and their Vehicles.\nHeight: 1 m",
 			"categories": [
 				"SC_Ramps_C"
 			],
 			"buildMenuPriority": 94,
 			"className": "Desc_Ramp_Diagonal_8x1_02_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 1
+			}
 		},
 		"Desc_Ramp_Diagonal_8x2_01_C": {
 			"slug": "down-corner-ramp-8m-x-2m",
 			"name": "Down Corner Ramp 8m x 2m",
-			"description": "Ramps make it easier to get up onto Foundations for Pioneers and their Vehicles.\nHeight: 2",
+			"description": "Ramps make it easier to get up onto Foundations for Pioneers and their Vehicles.\nHeight: 2 m",
 			"categories": [
 				"SC_Ramps_C"
 			],
 			"buildMenuPriority": 94,
 			"className": "Desc_Ramp_Diagonal_8x2_01_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 2
+			}
 		},
 		"Desc_Ramp_Diagonal_8x2_02_C": {
 			"slug": "up-corner-ramp-8m-x-2m",
 			"name": "Up Corner Ramp 8m x 2m",
-			"description": "Ramps make it easier to get up onto Foundations for Pioneers and their Vehicles.\nHeight: 2",
+			"description": "Ramps make it easier to get up onto Foundations for Pioneers and their Vehicles.\nHeight: 2 m",
 			"categories": [
 				"SC_Ramps_C"
 			],
 			"buildMenuPriority": 94,
 			"className": "Desc_Ramp_Diagonal_8x2_02_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 2
+			}
 		},
 		"Desc_Ramp_Diagonal_8x4_01_C": {
 			"slug": "down-corner-ramp-8m-x-4m",
 			"name": "Down Corner Ramp 8m x 4m",
-			"description": "Ramps make it easier to get up onto Foundations for Pioneers and their Vehicles.\nHeight: 4",
+			"description": "Ramps make it easier to get up onto Foundations for Pioneers and their Vehicles.\nHeight: 4 m",
 			"categories": [
 				"SC_Ramps_C"
 			],
 			"buildMenuPriority": 94,
 			"className": "Desc_Ramp_Diagonal_8x4_01_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 4
+			}
 		},
 		"Desc_Ramp_Diagonal_8x4_02_C": {
 			"slug": "up-corner-ramp-8m-x-4m",
 			"name": "Up Corner Ramp 8m x 4m",
-			"description": "Ramps make it easier to get up onto Foundations for Pioneers and their Vehicles.\nHeight: 4",
+			"description": "Ramps make it easier to get up onto Foundations for Pioneers and their Vehicles.\nHeight: 4 m",
 			"categories": [
 				"SC_Ramps_C"
 			],
 			"buildMenuPriority": 94,
 			"className": "Desc_Ramp_Diagonal_8x4_02_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 4
+			}
 		},
 		"Desc_ResourceSinkShop_C": {
 			"slug": "awesome-shop",
@@ -18026,6 +18970,11 @@
 			"metadata": {
 				"powerConsumption": 0,
 				"powerConsumptionExponent": 1.6
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_ResourceSink_C": {
@@ -18040,6 +18989,11 @@
 			"metadata": {
 				"powerConsumption": 30,
 				"powerConsumptionExponent": 1.6
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_SmelterMk1_C": {
@@ -18055,6 +19009,11 @@
 				"powerConsumption": 4,
 				"powerConsumptionExponent": 1.6,
 				"manufacturingSpeed": 1
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_SpaceElevator_C": {
@@ -18069,6 +19028,11 @@
 			"metadata": {
 				"powerConsumption": 0,
 				"powerConsumptionExponent": 1.6
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_Stairs_Left_01_C": {
@@ -18080,7 +19044,12 @@
 			],
 			"buildMenuPriority": 96,
 			"className": "Desc_Stairs_Left_01_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 2
+			}
 		},
 		"Desc_Stairs_Right_01_C": {
 			"slug": "stairs-right",
@@ -18091,7 +19060,12 @@
 			],
 			"buildMenuPriority": 96,
 			"className": "Desc_Stairs_Right_01_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 2
+			}
 		},
 		"Desc_StorageContainerMk1_C": {
 			"slug": "storage-container",
@@ -18106,6 +19080,11 @@
 				"powerConsumption": 0,
 				"powerConsumptionExponent": 1.6,
 				"inventorySize": 24
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_StorageContainerMk2_C": {
@@ -18121,6 +19100,11 @@
 				"powerConsumption": 0,
 				"powerConsumptionExponent": 1.6,
 				"inventorySize": 48
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_StoragePlayer_C": {
@@ -18136,6 +19120,11 @@
 				"powerConsumption": 0,
 				"powerConsumptionExponent": 1.6,
 				"inventorySize": 25
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_Tractor_C": {
@@ -18145,7 +19134,12 @@
 			"categories": [],
 			"buildMenuPriority": 0,
 			"className": "Desc_Tractor_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
+			}
 		},
 		"Desc_TradingPost_C": {
 			"slug": "the-hub",
@@ -18159,12 +19153,17 @@
 			"metadata": {
 				"powerConsumption": 0,
 				"powerConsumptionExponent": 1.6
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_TrainDockingStationLiquid_C": {
 			"slug": "fluid-freight-platform",
 			"name": "Fluid Freight Platform",
-			"description": "Freight Cars that stop at the Freight Platform will be loaded or unloaded by the Freight Platform.\nLoading and unloading options can be set inside the building.\nSnaps to other Platforms, Stations, and Rails.\nNeeds to be connected to a powered Railway to function.",
+			"description": "Freight Cars that stop at the Freight Platform will be loaded or unloaded by the Freight Platform.\nLoading and unloading options can be set inside the building.\nSnaps to other Platforms and Stations.\nNeeds to be connected to a powered Railway to function.",
 			"categories": [
 				"SC_Trains_C"
 			],
@@ -18173,12 +19172,17 @@
 			"metadata": {
 				"powerConsumption": 50,
 				"powerConsumptionExponent": 1.6
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_TrainDockingStation_C": {
 			"slug": "freight-platform",
 			"name": "Freight Platform",
-			"description": "Freight Cars that stop at the Freight Platform will be loaded or unloaded by the Freight Platform.\nLoading and unloading options can be set inside the building.\nSnaps to other Platforms, Stations, and Rails.\nNeeds to be connected to a powered Railway to function.",
+			"description": "Freight Cars that stop at the Freight Platform will be loaded or unloaded by the Freight Platform.\nLoading and unloading options can be set inside the building.\nSnaps to other Platforms and Stations.\nNeeds to be connected to a powered Railway to function.",
 			"categories": [
 				"SC_Trains_C"
 			],
@@ -18187,6 +19191,11 @@
 			"metadata": {
 				"powerConsumption": 50,
 				"powerConsumptionExponent": 1.6
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_TrainPlatformEmpty_C": {
@@ -18201,6 +19210,11 @@
 			"metadata": {
 				"powerConsumption": 0,
 				"powerConsumptionExponent": 1.6
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_TrainStation_C": {
@@ -18215,6 +19229,11 @@
 			"metadata": {
 				"powerConsumption": 50,
 				"powerConsumptionExponent": 1.6
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_TruckStation_C": {
@@ -18229,6 +19248,11 @@
 			"metadata": {
 				"powerConsumption": 20,
 				"powerConsumptionExponent": 1.6
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_Truck_C": {
@@ -18238,7 +19262,12 @@
 			"categories": [],
 			"buildMenuPriority": 0,
 			"className": "Desc_Truck_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
+			}
 		},
 		"Desc_Valve_C": {
 			"slug": "valve",
@@ -18253,6 +19282,11 @@
 				"powerConsumption": 0,
 				"powerConsumptionExponent": 1.6,
 				"maxPressure": 0
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_WalkwayCross_C": {
@@ -18264,7 +19298,12 @@
 			],
 			"buildMenuPriority": 102,
 			"className": "Desc_WalkwayCross_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 4,
+				"length": 4,
+				"height": 0
+			}
 		},
 		"Desc_WalkwayRamp_C": {
 			"slug": "walkway-ramp",
@@ -18275,7 +19314,12 @@
 			],
 			"buildMenuPriority": 102,
 			"className": "Desc_WalkwayRamp_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 4,
+				"length": 4,
+				"height": 0
+			}
 		},
 		"Desc_WalkwayStraight_C": {
 			"slug": "walkway-straight",
@@ -18286,7 +19330,12 @@
 			],
 			"buildMenuPriority": 99,
 			"className": "Desc_WalkwayStraight_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 4,
+				"length": 4,
+				"height": 0
+			}
 		},
 		"Desc_WalkwayT_C": {
 			"slug": "walkway-t-crossing",
@@ -18297,7 +19346,12 @@
 			],
 			"buildMenuPriority": 101,
 			"className": "Desc_WalkwayT_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 4,
+				"length": 4,
+				"height": 0
+			}
 		},
 		"Desc_WalkwayTurn_C": {
 			"slug": "walkway-turn",
@@ -18308,7 +19362,12 @@
 			],
 			"buildMenuPriority": 100,
 			"className": "Desc_WalkwayTurn_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 4,
+				"length": 4,
+				"height": 0
+			}
 		},
 		"Desc_Wall_8x4_01_C": {
 			"slug": "wall-8m-x-4m",
@@ -18319,7 +19378,12 @@
 			],
 			"buildMenuPriority": 85,
 			"className": "Desc_Wall_8x4_01_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 0,
+				"height": 4
+			}
 		},
 		"Desc_Wall_8x4_02_C": {
 			"slug": "wall-8m-x-4m-steel",
@@ -18330,95 +19394,140 @@
 			],
 			"buildMenuPriority": 85,
 			"className": "Desc_Wall_8x4_02_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 0,
+				"height": 4
+			}
 		},
 		"Desc_Wall_Conveyor_8x4_01_C": {
 			"slug": "wall-conveyor-x3",
 			"name": "Wall Conveyor x3",
-			"description": "Walls connect to other Walls and Floors. Use these to make buildings with several floors.\nHas 3 conveyor belt connections.\nHeight: 4",
+			"description": "Walls connect to other Walls and Floors. Use these to make buildings with several floors.\nHas 3 conveyor belt connections.\nHeight: 4 m",
 			"categories": [
 				"SC_ConveyorConnections_C"
 			],
 			"buildMenuPriority": 85,
 			"className": "Desc_Wall_Conveyor_8x4_01_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 0,
+				"height": 4
+			}
 		},
 		"Desc_Wall_Conveyor_8x4_01_Steel_C": {
 			"slug": "wall-conveyor-x3-steel",
 			"name": "Wall Conveyor x3",
-			"description": "Walls connect to other Walls and Floors. Use these to make buildings with several floors.\nHas 3 conveyor belt connections.\nHeight: 4",
+			"description": "Walls connect to other Walls and Floors. Use these to make buildings with several floors.\nHas 3 conveyor belt connections.\nHeight: 4 m",
 			"categories": [
 				"SC_ConveyorConnections_C"
 			],
 			"buildMenuPriority": 85,
 			"className": "Desc_Wall_Conveyor_8x4_01_Steel_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 0,
+				"height": 4
+			}
 		},
 		"Desc_Wall_Conveyor_8x4_02_C": {
 			"slug": "wall-conveyor-x2",
 			"name": "Wall Conveyor x2",
-			"description": "Walls connect to other Walls and Floors. Use these to make buildings with several floors.\nHas 2 conveyor belt connections.\nHeight: 4",
+			"description": "Walls connect to other Walls and Floors. Use these to make buildings with several floors.\nHas 2 conveyor belt connections.\nHeight: 4 m",
 			"categories": [
 				"SC_ConveyorConnections_C"
 			],
 			"buildMenuPriority": 85,
 			"className": "Desc_Wall_Conveyor_8x4_02_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 0,
+				"height": 4
+			}
 		},
 		"Desc_Wall_Conveyor_8x4_02_Steel_C": {
 			"slug": "wall-conveyor-x2-steel",
 			"name": "Wall Conveyor x2",
-			"description": "Walls connect to other Walls and Floors. Use these to make buildings with several floors.\nHas 2 conveyor belt connections.\nHeight: 4",
+			"description": "Walls connect to other Walls and Floors. Use these to make buildings with several floors.\nHas 2 conveyor belt connections.\nHeight: 4 m",
 			"categories": [
 				"SC_ConveyorConnections_C"
 			],
 			"buildMenuPriority": 85,
 			"className": "Desc_Wall_Conveyor_8x4_02_Steel_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 0,
+				"height": 4
+			}
 		},
 		"Desc_Wall_Conveyor_8x4_03_C": {
 			"slug": "wall-conveyor-x1",
 			"name": "Wall Conveyor x1",
-			"description": "Walls connect to other Walls and Floors. Use these to make buildings with several floors.\nHas 1 conveyor belt connection.\nHeight: 4",
+			"description": "Walls connect to other Walls and Floors. Use these to make buildings with several floors.\nHas 1 conveyor belt connection.\nHeight: 4 m",
 			"categories": [
 				"SC_ConveyorConnections_C"
 			],
 			"buildMenuPriority": 85,
 			"className": "Desc_Wall_Conveyor_8x4_03_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 0,
+				"height": 4
+			}
 		},
 		"Desc_Wall_Conveyor_8x4_03_Steel_C": {
 			"slug": "wall-conveyor-x1-steel",
 			"name": "Wall Conveyor x1",
-			"description": "Walls connect to other Walls and Floors. Use these to make buildings with several floors.\nHas 1 conveyor belt connection.\nHeight: 4",
+			"description": "Walls connect to other Walls and Floors. Use these to make buildings with several floors.\nHas 1 conveyor belt connection.\nHeight: 4 m",
 			"categories": [
 				"SC_ConveyorConnections_C"
 			],
 			"buildMenuPriority": 85,
 			"className": "Desc_Wall_Conveyor_8x4_03_Steel_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 0,
+				"height": 4
+			}
 		},
 		"Desc_Wall_Conveyor_8x4_04_C": {
 			"slug": "wall-conveyor-perpendicular",
 			"name": "Wall Conveyor Perpendicular",
-			"description": "Walls connect to other Walls and Floors. Use these to make buildings with several floors.\nHas 1 conveyor belt connection perpendicular to the wall.\nHeight: 4",
+			"description": "Walls connect to other Walls and Floors. Use these to make buildings with several floors.\nHas 1 conveyor belt connection perpendicular to the wall.\nHeight: 4 m",
 			"categories": [
 				"SC_ConveyorConnections_C"
 			],
 			"buildMenuPriority": 85,
 			"className": "Desc_Wall_Conveyor_8x4_04_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 0,
+				"height": 4
+			}
 		},
 		"Desc_Wall_Conveyor_8x4_04_Steel_C": {
 			"slug": "wall-conveyor-perpendicular-steel",
 			"name": "Wall Conveyor Perpendicular",
-			"description": "Walls connect to other Walls and Floors. Use these to make buildings with several floors.\nHas 1 conveyor belt connection perpendicular to the wall.\nHeight: 4",
+			"description": "Walls connect to other Walls and Floors. Use these to make buildings with several floors.\nHas 1 conveyor belt connection perpendicular to the wall.\nHeight: 4 m",
 			"categories": [
 				"SC_ConveyorConnections_C"
 			],
 			"buildMenuPriority": 85,
 			"className": "Desc_Wall_Conveyor_8x4_04_Steel_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 0,
+				"height": 4
+			}
 		},
 		"Desc_Wall_Door_8x4_01_C": {
 			"slug": "center-door-wall",
@@ -18429,7 +19538,12 @@
 			],
 			"buildMenuPriority": 2,
 			"className": "Desc_Wall_Door_8x4_01_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 0,
+				"height": 4
+			}
 		},
 		"Desc_Wall_Door_8x4_01_Steel_C": {
 			"slug": "center-door-wall-steel",
@@ -18440,7 +19554,12 @@
 			],
 			"buildMenuPriority": 5,
 			"className": "Desc_Wall_Door_8x4_01_Steel_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 0,
+				"height": 4
+			}
 		},
 		"Desc_Wall_Door_8x4_02_C": {
 			"slug": "left-door-wall",
@@ -18451,7 +19570,12 @@
 			],
 			"buildMenuPriority": 1,
 			"className": "Desc_Wall_Door_8x4_02_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 0,
+				"height": 4
+			}
 		},
 		"Desc_Wall_Door_8x4_02_Steel_C": {
 			"slug": "left-door-wall-steel",
@@ -18462,7 +19586,12 @@
 			],
 			"buildMenuPriority": 4,
 			"className": "Desc_Wall_Door_8x4_02_Steel_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 0,
+				"height": 4
+			}
 		},
 		"Desc_Wall_Door_8x4_03_C": {
 			"slug": "right-door-wall",
@@ -18473,7 +19602,12 @@
 			],
 			"buildMenuPriority": 3,
 			"className": "Desc_Wall_Door_8x4_03_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 0,
+				"height": 4
+			}
 		},
 		"Desc_Wall_Door_8x4_03_Steel_C": {
 			"slug": "right-door-wall-steel",
@@ -18484,7 +19618,12 @@
 			],
 			"buildMenuPriority": 6,
 			"className": "Desc_Wall_Door_8x4_03_Steel_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 0,
+				"height": 4
+			}
 		},
 		"Desc_Wall_Gate_8x4_01_C": {
 			"slug": "gate-wall",
@@ -18495,18 +19634,28 @@
 			],
 			"buildMenuPriority": 85,
 			"className": "Desc_Wall_Gate_8x4_01_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 0,
+				"height": 4
+			}
 		},
 		"Desc_Wall_Window_8x4_01_C": {
 			"slug": "single-window",
 			"name": "Single Window",
-			"description": "Snaps to foundations and other walls.\nThe window allows Pioneers to see through the wall.",
+			"description": "Snaps to foundations and other walls.\nThe windows allow Pioneers to see through the wall.",
 			"categories": [
 				"SC_Windows_C"
 			],
 			"buildMenuPriority": 85,
 			"className": "Desc_Wall_Window_8x4_01_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 0,
+				"height": 4
+			}
 		},
 		"Desc_Wall_Window_8x4_02_C": {
 			"slug": "frame-window",
@@ -18517,7 +19666,12 @@
 			],
 			"buildMenuPriority": 85,
 			"className": "Desc_Wall_Window_8x4_02_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 0,
+				"height": 4
+			}
 		},
 		"Desc_Wall_Window_8x4_03_C": {
 			"slug": "panel-window",
@@ -18528,7 +19682,12 @@
 			],
 			"buildMenuPriority": 85,
 			"className": "Desc_Wall_Window_8x4_03_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 0,
+				"height": 4
+			}
 		},
 		"Desc_Wall_Window_8x4_04_C": {
 			"slug": "reinforced-window",
@@ -18539,7 +19698,12 @@
 			],
 			"buildMenuPriority": 85,
 			"className": "Desc_Wall_Window_8x4_04_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 0,
+				"height": 4
+			}
 		},
 		"Desc_WaterPump_C": {
 			"slug": "water-extractor",
@@ -18553,6 +19717,11 @@
 			"metadata": {
 				"powerConsumption": 20,
 				"powerConsumptionExponent": 1.6
+			},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
 			}
 		},
 		"Desc_WorkBench_C": {
@@ -18564,7 +19733,12 @@
 			],
 			"buildMenuPriority": 1,
 			"className": "Desc_WorkBench_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
+			}
 		},
 		"Desc_Workshop_C": {
 			"slug": "equipment-workshop",
@@ -18575,7 +19749,12 @@
 			],
 			"buildMenuPriority": 2,
 			"className": "Desc_Workshop_C",
-			"metadata": {}
+			"metadata": {},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
+			}
 		}
 	}
 }
