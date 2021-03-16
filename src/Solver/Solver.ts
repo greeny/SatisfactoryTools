@@ -9,7 +9,7 @@ export class Solver
 	{
 		axios({
 			method: 'post',
-			url: 'https://api.satisfactorytools.local/v1/solver?experimental=true',
+			url: 'https://api.satisfactorytools.com/v1/solver?experimental=true',
 			data: productionRequest,
 		}).then((response) => {
 			if ('result' in response.data) {
