@@ -10,6 +10,8 @@ export class OtherBuildingsDetailsComponentController
 	{
 		if (this.building.metadata.powerConsumption && this.building.metadata.powerConsumptionExponent) {
 			return this.building.metadata.powerConsumption * Math.pow(this.overclock / 100, this.building.metadata.powerConsumptionExponent);
+		} else if (this.building.metadata.powerConsumption) {
+			return this.building.metadata.powerConsumption;
 		}
 	}
 
