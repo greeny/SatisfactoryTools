@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title ng-bind="$root.aprilMode ? 'Snuttisfactory Tools' : 'Satisfactory Tools'">Satisfactory Tools</title>
+	<title>[U5] Satisfactory Tools (BETA)</title>
 
 	<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
@@ -99,7 +99,7 @@
 		}
 	</style>
 	<link rel="stylesheet" href="/assets/css/fontawesome.min.css">
-	<base href="/" ng-class="{'april-mode': $root.aprilMode}">
+	<base href="/">
 </head>
 <body>
 

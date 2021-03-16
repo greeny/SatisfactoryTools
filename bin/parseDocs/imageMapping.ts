@@ -11,7 +11,7 @@ export default function parseImageMapping(value: {
 		if (item.mPersistentBigIcon && item.mPersistentBigIcon !== 'None') {
 			result.push({
 				className: item.ClassName,
-				image: item.mPersistentBigIcon.replace('Texture2D\'', '').replace('\'', '').replace(/\..*/, '.png'),
+				image: item.mPersistentBigIcon.replace('Texture2D /', '').replace(/\..*/, '.png'),
 			});
 		}
 	}

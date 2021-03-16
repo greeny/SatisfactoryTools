@@ -5,6 +5,7 @@ import {Item} from '@src/Data/Item';
 import {Recipe} from '@src/Data/Recipe';
 import {IMinerSchema} from '@src/Schema/IMinerSchema';
 import {IItemSchema} from '@src/Schema/IItemSchema';
+import {Constants} from '@src/Constants';
 import {April} from '@src/Utils/April';
 
 export class Model
@@ -17,14 +18,22 @@ export class Model
 	{
 		for (const k in data.items) {
 			if (data.items.hasOwnProperty(k)) {
-				this.items[k] = new Item(this, data.items[k]);
+				try {
+					this.items[k] = new Item(this, data.items[k]);
+				} catch (e) {
+					console.log(e);
+				}
 			}
 		}
 		for (const k in data.recipes) {
 			if (data.recipes.hasOwnProperty(k)) {
 				const recipe = data.recipes[k];
 				if (recipe.inHand || recipe.inMachine || recipe.inWorkshop) {
-					this.recipes[k] = new Recipe(this, recipe);
+					try {
+						this.recipes[k] = new Recipe(this, recipe);
+					} catch (e) {
+						console.log(e);
+					}
 				}
 			}
 		}
@@ -38,7 +47,7 @@ export class Model
 		throw new Error('Unknown item ' + className);
 	}
 
-	public getAutomatableItems(): IItemSchema[]
+	public getAutomatableItems(includeWaste: boolean = false): IItemSchema[]
 	{
 		const items: Item[] = [];
 		itemLoop:
@@ -47,7 +56,7 @@ export class Model
 				for (const l in this.recipes) {
 					if (this.recipes.hasOwnProperty(l) && this.recipes[l].prototype.inMachine) {
 						for (const product of this.recipes[l].products) {
-							if (product.item === this.items[k]) {
+							if (product.item === this.items[k] || (includeWaste && k === Constants.NUCLEAR_WASTE_CLASSNAME)) {
 								items.push(this.items[k]);
 								continue itemLoop;
 							}
@@ -65,8 +74,8 @@ export class Model
 
 	public getInputableItems(): IItemSchema[]
 	{
-		return this.getAutomatableItems().filter((item) => {
-			return !(item.className in this.data.resources);
+		return this.getAutomatableItems(true).filter((item) => {
+			return !(item.className in this.data.resources) || item.className === Constants.NUCLEAR_WASTE_CLASSNAME;
 		});
 	}
 

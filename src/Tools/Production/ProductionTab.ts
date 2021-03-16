@@ -1,19 +1,24 @@
-import {ProductionTool} from '@src/Tools/Production/ProductionTool';
-import angular from 'angular';
-import {IProductionToolRequest, IProductionToolRequestInput, IProductionToolRequestItem} from '@src/Tools/Production/IProductionToolRequest';
+import angular, {ITimeoutService} from 'angular';
 import {Constants} from '@src/Constants';
+import rawData from '@data/data.json';
 import data, {Data} from '@src/Data/Data';
 import {IProductionControllerScope} from '@src/Module/Controllers/ProductionController';
 import axios from 'axios';
 import {Strings} from '@src/Utils/Strings';
-import {ProductionRequestSchemaConverter} from '@src/Tools/Production/ProductionRequestSchemaConverter';
 import {IItemSchema} from '@src/Schema/IItemSchema';
 import {Callbacks} from '@src/Utils/Callbacks';
+import {IProductionData, IProductionDataApiRequest, IProductionDataRequestInput, IProductionDataRequestItem} from '@src/Tools/Production/IProductionData';
+import {ResultStatus} from '@src/Tools/Production/ResultStatus';
+import {Solver} from '@src/Solver/Solver';
+import {RecipeResult} from '@src/Tools/Production/RecipeResult';
+import model from '@src/Data/Model';
+import {ProductionToolResult} from '@src/Tools/Production/ProductionToolResult';
+import {ProductionResultFactory} from '@src/Tools/Production/ProductionResultFactory';
+import {ProductionResult} from '@src/Tools/Production/ProductionResult';
+import {IJsonSchema} from '@src/Schema/IJsonSchema';
 
 export class ProductionTab
 {
-
-	public tool: ProductionTool;
 
 	public state = {
 		expanded: true,
@@ -32,41 +37,144 @@ export class ProductionTab
 	public tab: string = 'production';
 	public resultTab: string = 'visualization';
 	public shareLink: string = '';
+	public resultStatus: ResultStatus = ResultStatus.NO_INPUT;
+	public result: ProductionToolResult|undefined;
+	public resultNew: ProductionResult|undefined;
+	public data: IProductionData;
 
 	private readonly unregisterCallback: () => void;
 	private firstRun: boolean = true;
 
-	public constructor(private readonly scope: IProductionControllerScope, productionToolRequest?: IProductionToolRequest)
+	public constructor(private readonly scope: IProductionControllerScope, productionData?: IProductionData)
 	{
-		this.tool = new ProductionTool;
-
-		if (productionToolRequest) {
-			productionToolRequest = ProductionRequestSchemaConverter.convert(productionToolRequest);
-			this.tool.productionRequest = productionToolRequest;
+		if (productionData) {
+			this.data = productionData;
 		} else {
+			this.resetData();
 			this.addEmptyProduct();
 		}
 
-		const ignoredKeys = ['name', 'icon'];
-
 		this.unregisterCallback = scope.$watch(() => {
-			return this.tool.productionRequest;
+			return this.data.request;
 		}, Callbacks.debounce((newValue, oldValue) => {
-			const changes: string[] = [];
-			for (const key in newValue) {
-				if (newValue.hasOwnProperty(key)) {
-					if (ignoredKeys.indexOf(key) === -1 && !angular.equals(newValue[key], oldValue[key])) {
-						changes.push(key);
-					}
-				}
-			}
-			if (changes.length || this.firstRun) {
-				this.firstRun = false;
-				this.scope.saveState();
-				this.shareLink = '';
-				this.tool.calculate(this.scope.$timeout);
-			}
+			this.firstRun = false;
+			this.scope.saveState();
+			this.shareLink = '';
+			this.calculate(this.scope.$timeout);
 		}, 300), true);
+	}
+
+	public calculate($timeout?: ITimeoutService): void
+	{
+		let request = false;
+
+		for (const product of this.data.request.production) {
+			if (product.item && product.amount > 0) {
+				request = true;
+				break;
+			}
+		}
+
+		if (!request) {
+			this.resultStatus = ResultStatus.NO_INPUT;
+			return;
+		}
+
+		this.resultStatus = ResultStatus.CALCULATING;
+
+		const calc = () => {
+			const apiRequest: IProductionDataApiRequest = this.data.request as IProductionDataApiRequest;
+			apiRequest.gameVersion = '0.5.0';
+			Solver.solveProduction(apiRequest, (result) => {
+				const res = () => {
+					let length = 0;
+
+					const recipes: RecipeResult[] = [];
+
+					for (const k in result) {
+						if (!result.hasOwnProperty(k)) {
+							continue;
+						}
+
+						length++;
+
+						if (!(k in model.recipes) || result[k] < 1e-8) {
+							continue;
+						}
+						recipes.push(new RecipeResult(model.recipes[k], result[k] / 60));
+					}
+
+					if (!length) {
+						this.result = undefined;
+						this.resultNew = undefined;
+						this.resultStatus = ResultStatus.NO_RESULT;
+						return;
+					}
+
+					const factory = new ProductionResultFactory;
+					this.resultNew = factory.create(result, rawData as any as IJsonSchema);
+					this.result = new ProductionToolResult(recipes, this.data.request);
+					this.resultStatus = ResultStatus.RESULT;
+				};
+
+				if ($timeout) {
+					$timeout(0).then(res);
+				} else {
+					res();
+				}
+			});
+
+		};
+
+		if ($timeout) {
+			$timeout(0).then(calc);
+		} else {
+			calc();
+		}
+	}
+
+	public resetData(): void
+	{
+		this.data = {
+			metadata: {
+				name: null,
+				icon: null,
+				schemaVersion: 1,
+				gameVersion: '0',
+			},
+			request: {
+				allowedAlternateRecipes: [],
+				blockedRecipes: [],
+				blockedResources: [],
+				sinkableResources: [],
+				production: [],
+				input: [],
+				resourceMax: angular.copy(Data.resourceAmounts),
+				resourceWeight: angular.copy(Data.resourceWeights),
+			},
+		};
+	}
+
+	get icon(): string|null
+	{
+		if (this.data.metadata.icon) {
+			return this.data.metadata.icon;
+		}
+		const items = this.data.request.production.filter((item) => {
+			return !!item.item;
+		});
+		return items.length ? items[0].item : null;
+	}
+
+	get name(): string
+	{
+		if (this.data.metadata.name) {
+			return this.data.metadata.name;
+		}
+		const items = this.data.request.production.filter((item) => {
+			return !!item.item;
+		});
+		return items.length ? (data.getItemByClassName(items[0].item || '')?.name + ' Factory') : 'Unnamed Factory';
 	}
 
 	public sinkableResourcesOrderCallback = (item: IItemSchema) => {
@@ -79,12 +187,12 @@ export class ProductionTab
 			Strings.copyToClipboard(this.shareLink, 'Link for sharing has been copied to clipboard.');
 			return;
 		}
-		const shareData = angular.copy(this.tool.productionRequest);
-		shareData.name = this.tool.name;
-		shareData.icon = this.tool.icon;
+		const shareData = angular.copy(this.data);
+		/*shareData.name = this.tool.name;
+		shareData.icon = this.tool.icon;*/
 		axios({
 			method: 'POST',
-			url: 'https://api.satisfactorytools.com/v1/share',
+			url: 'https://api.satisfactorytools.com/v1/share?experimental=true',
 			data: shareData,
 		}).then((response) => {
 			this.scope.$timeout(0).then(() => {
@@ -114,14 +222,14 @@ export class ProductionTab
 		});
 	}
 
-	public addProduct(item: IProductionToolRequestItem): void
+	public addProduct(item: IProductionDataRequestItem): void
 	{
-		this.tool.productionRequest.production.push(item);
+		this.data.request.production.push(item);
 	}
 
-	public cloneProduct(item: IProductionToolRequestItem): void
+	public cloneProduct(item: IProductionDataRequestItem): void
 	{
-		this.tool.productionRequest.production.push({
+		this.data.request.production.push({
 			item: item.item,
 			type: item.type,
 			amount: item.amount,
@@ -131,15 +239,15 @@ export class ProductionTab
 
 	public clearProducts(): void
 	{
-		this.tool.productionRequest.production = [];
+		this.data.request.production = [];
 		this.addEmptyProduct();
 	}
 
-	public removeProduct(item: IProductionToolRequestItem): void
+	public removeProduct(item: IProductionDataRequestItem): void
 	{
-		const index = this.tool.productionRequest.production.indexOf(item);
-		if (index in this.tool.productionRequest.production) {
-			this.tool.productionRequest.production.splice(index, 1);
+		const index = this.data.request.production.indexOf(item);
+		if (index in this.data.request.production) {
+			this.data.request.production.splice(index, 1);
 		}
 	}
 
@@ -151,14 +259,14 @@ export class ProductionTab
 		});
 	}
 
-	public addInput(item: IProductionToolRequestInput): void
+	public addInput(item: IProductionDataRequestInput): void
 	{
-		this.tool.productionRequest.input.push(item);
+		this.data.request.input.push(item);
 	}
 
-	public cloneInput(item: IProductionToolRequestInput): void
+	public cloneInput(item: IProductionDataRequestInput): void
 	{
-		this.tool.productionRequest.input.push({
+		this.data.request.input.push({
 			item: item.item,
 			amount: item.amount,
 		});
@@ -166,15 +274,15 @@ export class ProductionTab
 
 	public clearInput(): void
 	{
-		this.tool.productionRequest.input = [];
+		this.data.request.input = [];
 		this.addEmptyInput();
 	}
 
-	public removeInput(item: IProductionToolRequestInput): void
+	public removeInput(item: IProductionDataRequestInput): void
 	{
-		const index = this.tool.productionRequest.input.indexOf(item);
-		if (index in this.tool.productionRequest.input) {
-			this.tool.productionRequest.input.splice(index, 1);
+		const index = this.data.request.input.indexOf(item);
+		if (index in this.data.request.input) {
+			this.data.request.input.splice(index, 1);
 		}
 	}
 
@@ -190,62 +298,62 @@ export class ProductionTab
 
 	public toggleSinkableResource(className: string): void
 	{
-		const index = this.tool.productionRequest.sinkableResources.indexOf(className);
+		const index = this.data.request.sinkableResources.indexOf(className);
 		if (index === -1) {
-			this.tool.productionRequest.sinkableResources.push(className);
+			this.data.request.sinkableResources.push(className);
 		} else {
-			this.tool.productionRequest.sinkableResources.splice(index, 1);
+			this.data.request.sinkableResources.splice(index, 1);
 		}
 	}
 
 	public isSinkableResourceEnabled(className: string): boolean
 	{
-		return this.tool.productionRequest.sinkableResources.indexOf(className) !== -1;
+		return this.data.request.sinkableResources.indexOf(className) !== -1;
 	}
 
 	public toggleAlternateRecipe(className: string): void
 	{
-		const index = this.tool.productionRequest.allowedAlternateRecipes.indexOf(className);
+		const index = this.data.request.allowedAlternateRecipes.indexOf(className);
 		if (index === -1) {
-			this.tool.productionRequest.allowedAlternateRecipes.push(className);
+			this.data.request.allowedAlternateRecipes.push(className);
 		} else {
-			this.tool.productionRequest.allowedAlternateRecipes.splice(index, 1);
+			this.data.request.allowedAlternateRecipes.splice(index, 1);
 		}
 	}
 
 	public isAlternateRecipeEnabled(className: string): boolean
 	{
-		return this.tool.productionRequest.allowedAlternateRecipes.indexOf(className) !== -1;
+		return this.data.request.allowedAlternateRecipes.indexOf(className) !== -1;
 	}
 
 	public toggleBasicRecipe(className: string): void
 	{
-		const index = this.tool.productionRequest.blockedRecipes.indexOf(className);
+		const index = this.data.request.blockedRecipes.indexOf(className);
 		if (index === -1) {
-			this.tool.productionRequest.blockedRecipes.push(className);
+			this.data.request.blockedRecipes.push(className);
 		} else {
-			this.tool.productionRequest.blockedRecipes.splice(index, 1);
+			this.data.request.blockedRecipes.splice(index, 1);
 		}
 	}
 
 	public isResourceEnabled(className: string): boolean
 	{
-		return this.tool.productionRequest.blockedResources.indexOf(className) === -1;
+		return this.data.request.blockedResources.indexOf(className) === -1;
 	}
 
 	public toggleResource(className: string): void
 	{
-		const index = this.tool.productionRequest.blockedResources.indexOf(className);
+		const index = this.data.request.blockedResources.indexOf(className);
 		if (index === -1) {
-			this.tool.productionRequest.blockedResources.push(className);
+			this.data.request.blockedResources.push(className);
 		} else {
-			this.tool.productionRequest.blockedResources.splice(index, 1);
+			this.data.request.blockedResources.splice(index, 1);
 		}
 	}
 
 	public isBasicRecipeEnabled(className: string): boolean
 	{
-		return this.tool.productionRequest.blockedRecipes.indexOf(className) === -1;
+		return this.data.request.blockedRecipes.indexOf(className) === -1;
 	}
 
 	public convertAlternateRecipeName(name: string): string
@@ -256,20 +364,20 @@ export class ProductionTab
 	public setAllSinkableResources(value: boolean): void
 	{
 		if (value) {
-			this.tool.productionRequest.sinkableResources = data.getSinkableItems().map((item) => {
+			this.data.request.sinkableResources = data.getSinkableItems().map((item) => {
 				return item.className;
 			});
 		} else {
-			this.tool.productionRequest.sinkableResources = [];
+			this.data.request.sinkableResources = [];
 		}
 	}
 
 	public setAllBasicRecipes(value: boolean): void
 	{
 		if (value) {
-			this.tool.productionRequest.blockedRecipes = [];
+			this.data.request.blockedRecipes = [];
 		} else {
-			this.tool.productionRequest.blockedRecipes = data.getBaseItemRecipes().map((recipe) => {
+			this.data.request.blockedRecipes = data.getBaseItemRecipes().map((recipe) => {
 				return recipe.className;
 			});
 		}
@@ -278,29 +386,29 @@ export class ProductionTab
 	public setAllAlternateRecipes(value: boolean): void
 	{
 		if (value) {
-			this.tool.productionRequest.allowedAlternateRecipes = data.getAlternateRecipes().map((recipe) => {
+			this.data.request.allowedAlternateRecipes = data.getAlternateRecipes().map((recipe) => {
 				return recipe.className;
 			});
 		} else {
-			this.tool.productionRequest.allowedAlternateRecipes = [];
+			this.data.request.allowedAlternateRecipes = [];
 		}
 	}
 
 	public setDefaultRawResources(): void
 	{
-		this.tool.productionRequest.resourceMax = angular.copy(Data.resourceAmounts);
+		this.data.request.resourceMax = angular.copy(Data.resourceAmounts);
 	}
 
 	public zeroRawResources(): void
 	{
-		for (const key in this.tool.productionRequest.resourceMax) {
-			this.tool.productionRequest.resourceMax[key] = 0;
+		for (const key in this.data.request.resourceMax) {
+			this.data.request.resourceMax[key] = 0;
 		}
 	}
 
 	public getIconSet(): string[]
 	{
-		const productionArray = this.tool.productionRequest.production.filter((product) => {
+		const productionArray = this.data.request.production.filter((product) => {
 			return !!product.item;
 		}).map((product) => {
 			return product.item + '';

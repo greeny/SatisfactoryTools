@@ -9,7 +9,7 @@ const mappingPath = path.join(__dirname, '..', 'data', 'imageMapping.json');
 const dataPath = path.join(__dirname, '..', 'data', 'data.json');
 
 function processImage(file: string, slug: string) {
-	file = path.join(path.join(__dirname, '..'), file);
+	file = path.join(baseOriginalPath, file);
 	if (!fs.existsSync(file)) {
 		file = file.replace('_512', '_256');
 	}

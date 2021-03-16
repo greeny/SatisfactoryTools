@@ -46,6 +46,7 @@ export default function parseRecipes(recipes: {
 	const ignoredRecipes = [
 		'Recipe_JumpPadTilted_C',
 		'Recipe_JumpPad_C',
+		'Recipe_PillarTop_C',
 	];
 
 	const result: IRecipeSchema[] = [];

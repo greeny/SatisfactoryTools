@@ -8,8 +8,8 @@ import data from '@src/Data/Data';
 import {IRecipeSchema} from '@src/Schema/IRecipeSchema';
 import {IResourceSchema} from '@src/Schema/IResourceSchema';
 import {DataStorageService} from '@src/Module/Services/DataStorageService';
-import {IProductionToolRequest} from '@src/Tools/Production/IProductionToolRequest';
 import axios from 'axios';
+import {IProductionData} from '@src/Tools/Production/IProductionData';
 
 export class ProductionController
 {
@@ -54,8 +54,8 @@ export class ProductionController
 			}).then((response) => {
 				$timeout(0).then(() => {
 					this.$location.search('');
-					const tabData: IProductionToolRequest = response.data.data;
-					tabData.name = 'Shared: ' + tabData.name;
+					const tabData: IProductionData = response.data.data;
+					tabData.metadata.name = 'Shared: ' + tabData.metadata.name;
 					const tab = new ProductionTab(this.scope, tabData);
 					this.tabs.push(tab);
 					this.tab = tab;
@@ -83,8 +83,8 @@ export class ProductionController
 		this.cloningInProgress = true;
 		this.$timeout(0).then(() => {
 			const clone = new ProductionTab(this.scope);
-			clone.tool.productionRequest = angular.copy(tab.tool.productionRequest);
-			clone.tool.productionRequest.name = 'Clone: ' + clone.tool.name;
+			clone.data.request = angular.copy(tab.data.request);
+			clone.data.metadata.name = 'Clone: ' + clone.data.metadata.name;
 			this.tabs.push(clone);
 			this.tab = clone;
 			this.cloningInProgress = false;
@@ -129,16 +129,16 @@ export class ProductionController
 
 	private saveState(): void
 	{
-		const save: IProductionToolRequest[] = [];
+		const save: IProductionData[] = [];
 		for (const tab of this.tabs) {
-			save.push(tab.tool.productionRequest);
+			save.push(tab.data);
 		}
-		this.dataStorageService.saveData('production', save);
+		this.dataStorageService.saveData('tmpProduction', save);
 	}
 
 	private loadState(): void
 	{
-		const loaded = this.dataStorageService.loadData('production', null);
+		const loaded = this.dataStorageService.loadData('tmpProduction', null);
 		if (loaded === null) {
 			this.addEmptyTab();
 		} else {

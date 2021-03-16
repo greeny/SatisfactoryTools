@@ -6,9 +6,9 @@
 
 <ul class="nav nav-tabs production-nav-tabs" ui-sortable="{axis: 'x',  'ui-floating': true}" ng-model="ctrl.tabs">
 	<li class="nav-item" ng-repeat="tab in ctrl.tabs">
-		<span class="nav-link cursor-pointer"  ng-class="{active: tab === ctrl.tab}" ng-click="ctrl.tab = tab" tooltip title="{{tab.tool.name}}">
-			<item-icon hide-tooltip="true" dynamic="true" item="tab.tool.icon" size="32" ng-if="tab.tool.icon"></item-icon>
-			<span class="fas fa-fw fa-question" ng-if="!tab.tool.icon"></span>
+		<span class="nav-link cursor-pointer"  ng-class="{active: tab === ctrl.tab}" ng-click="ctrl.tab = tab" tooltip title="{{tab.name}}">
+			<item-icon hide-tooltip="true" dynamic="true" item="tab.icon" size="32" ng-if="tab.icon"></item-icon>
+			<span class="fas fa-fw fa-question" ng-if="!tab.icon"></span>
 		</span>
 	</li>
 	<li class="nav-item d-flex new-tab">
@@ -23,21 +23,21 @@
 		<div class="card-header d-flex">
 			<div class="production-image d-flex">
 				<span class="image-picker dropdown-toggle" data-toggle="dropdown" tooltip title="Change tab icon">
-					<item-icon dynamic="true" ng-if="ctrl.tab.tool.icon" item="ctrl.tab.tool.icon" size="32" hide-tooltip="true"></item-icon>
-					<span ng-if="!ctrl.tab.tool.icon" class="fas fa-fw fa-question"></span>
+					<item-icon dynamic="true" ng-if="ctrl.tab.icon" item="ctrl.tab.icon" size="32" hide-tooltip="true"></item-icon>
+					<span ng-if="!ctrl.tab.icon" class="fas fa-fw fa-question"></span>
 				</span>
 				<div class="dropdown-menu">
 					<div class="dropdown-menu-content" perfect-scrollbar>
-						<item-icon hide-tooltip="true" class="dropdown-item cursor-pointer" item="icon" ng-class="{'active': icon === ctrl.tab.tool.icon}" size="32" ng-repeat="icon in ctrl.tab.getIconSet()" ng-click="ctrl.tab.tool.productionRequest.icon = icon"></item-icon>
+						<item-icon hide-tooltip="true" class="dropdown-item cursor-pointer" item="icon" ng-class="{'active': icon === ctrl.tab.icon}" size="32" ng-repeat="icon in ctrl.tab.getIconSet()" ng-click="ctrl.tab.data.request.icon = icon"></item-icon>
 					</div>
 				</div>
 			</div>
 			<span class="production-line-name flex-grow-1">
 				<span class="production-line-name-title mr-2" ng-hide="ctrl.tab.state.renaming">
-					<span>{{ctrl.tab.tool.name}}</span>
+					<span>{{ctrl.tab.name}}</span>
 				</span>
 				<form class="mr-2 flex-grow-1" ng-submit="ctrl.tab.state.renaming = false" ng-show="ctrl.tab.state.renaming">
-					<input class="form-control" ng-model="ctrl.tab.tool.productionRequest.name">
+					<input class="form-control" ng-model="ctrl.tab.data.request.name">
 					<button type="submit" class="btn btn-outline-success" ng-show="ctrl.tab.state.renaming">
 						<span class="fas fa-check"></span>
 					</button>
@@ -54,7 +54,7 @@
 				<a class="btn btn-success" ng-click="ctrl.cloneTab(ctrl.tab)" tooltip title="Clone tab">
 					<span ng-class="{'far': !ctrl.cloningInProgress, 'fas': ctrl.cloningInProgress, 'fa-fw': true, 'fa-clone': !ctrl.cloningInProgress, 'fa-spin': ctrl.cloningInProgress, 'fa-sync-alt': ctrl.cloningInProgress}"></span>
 				</a>
-				<a class="btn btn-warning" ng-click="ctrl.tab.tool.resetProductionRequest()" tooltip title="Reset tab to default">
+				<a class="btn btn-warning" ng-click="ctrl.tab.resetData()" tooltip title="Reset tab to default">
 					<span class="fas fa-fw fa-eraser"></span>
 				</a>
 				<a class="btn btn-danger" ng-click="ctrl.removeTab(ctrl.tab)" tooltip title="Remove tab">
@@ -87,11 +87,10 @@
 								<span class="fas fa-fw fa-scroll mr-1"></span>
 								Recipes
 							</a>
-						</li>
-						<!--<li class="nav-item">
+						<!--</li><li class="nav-item">
 							<a href="javascript: void(0);" class="nav-link" ng-class="{active: ctrl.tab.tab === 'sink'}" ng-click="ctrl.tab.tab = 'sink'">
 								<span class="fas fa-fw fa-ticket-alt mr-1"></span>
-								Resource sink
+								Sink points
 							</a>
 						</li>
 						<li class="nav-item">
@@ -115,8 +114,8 @@
 					</p>
 
 					<table class="production-input-table">
-						<tbody ui-sortable="{axis: 'y',  'ui-floating': true, handle: '> .sortable-handler'}" ng-model="ctrl.tab.tool.productionRequest.production">
-							<tr ng-repeat="product in ctrl.tab.tool.productionRequest.production track by $index">
+						<tbody ui-sortable="{axis: 'y',  'ui-floating': true, handle: '> .sortable-handler'}" ng-model="ctrl.tab.data.request.production">
+							<tr ng-repeat="product in ctrl.tab.data.request.production track by $index">
 								<td class="sortable-handler">
 									<span class="fas fa-arrows-alt-v cursor-drag"></span>
 								</td>
@@ -139,7 +138,7 @@
 								</td>
 								<td>
 									<input class="form-control" ng-show="product.item && product.type === 'perMinute'" type="number" ng-model="product.amount" step="any">
-									<input class="w-100" ng-show="product.item && product.type === 'max'" type="range" ng-model="product.ratio" min="0" max="100" step="2">
+									<!--<input class="w-100" ng-show="product.item && product.type === 'max'" type="range" ng-model="product.ratio" min="0" max="100" step="2">-->
 								</td>
 								<td>
 									<span class="btn btn-success" ng-click="ctrl.tab.cloneProduct(product)" tooltip title="Clone item">
@@ -215,7 +214,7 @@
 													</span>
 												</td>
 												<td>
-													<input type="number" ng-disabled="!ctrl.tab.isResourceEnabled(resource.item)" class="form-control" ng-model="ctrl.tab.tool.productionRequest.resourceMax[resource.item]" step="any">
+													<input type="number" ng-disabled="!ctrl.tab.isResourceEnabled(resource.item)" class="form-control" ng-model="ctrl.tab.data.request.resourceMax[resource.item]" step="any">
 												</td>
 											</tr>
 										</tbody>
@@ -236,8 +235,8 @@
 										Select items that you already have at your disposal and therefore don't need to be produced by this factory.
 									</p>
 									<table class="input-table">
-										<tbody ui-sortable="{axis: 'y',  'ui-floating': true, handle: '> .sortable-handler'}" ng-model="ctrl.tab.tool.productionRequest.input">
-											<tr ng-repeat="product in ctrl.tab.tool.productionRequest.input track by $index">
+										<tbody ui-sortable="{axis: 'y',  'ui-floating': true, handle: '> .sortable-handler'}" ng-model="ctrl.tab.data.request.input">
+											<tr ng-repeat="product in ctrl.tab.data.request.input track by $index">
 												<td class="sortable-handler">
 													<span class="fas fa-arrows-alt-v cursor-drag"></span>
 												</td>
@@ -399,7 +398,7 @@
 					</div>
 				</div>
 
-				<!--<div class="col-md-10" ng-show="ctrl.tab.tab === 'sink'">
+				<div class="col-md-10" ng-show="ctrl.tab.tab === 'sink'">
 					<div class="row">
 						<div class="col-md-6">
 							<div class="recipe-list-card card">
@@ -461,23 +460,23 @@
 
 						</div>
 					</div>
-				</div>-->
+				</div>
 			</div>
 		</div>
 	</div>
 
-	<div ng-show="ctrl.tab.tool.resultStatus === 'noResult'" class="visualization-result">
+	<div ng-show="ctrl.tab.resultStatus === 'noResult'" class="visualization-result">
 		Unfortunately we couldn't calculate any result.<br>
 		<span>This can be due to many things: missing resource required for the production line, not enough resources for the requested amount, disabled recipes required for the product, etc.</span>
 	</div>
-	<div ng-show="ctrl.tab.tool.resultStatus === 'calculating'" class="visualization-result">
+	<div ng-show="ctrl.tab.resultStatus === 'calculating'" class="visualization-result">
 		<span class="fas fa-spin fa-sync-alt"></span>
 		Calculating ...
 	</div>
-	<div ng-show="ctrl.tab.tool.resultStatus === 'noInput'" class="visualization-result">
+	<div ng-show="ctrl.tab.resultStatus === 'noInput'" class="visualization-result">
 		Select an item to calculate.
 	</div>
-	<div ng-show="ctrl.tab.tool.resultStatus === 'result'">
+	<div ng-show="ctrl.tab.resultStatus === 'result'">
 		<ul class="nav nav-pills nav-justified result-nav">
 			<li class="nav-item">
 				<a class="nav-link" ng-class="{active: ctrl.tab.resultTab === 'visualization'}" ng-click="ctrl.tab.resultTab = 'visualization'">
@@ -494,7 +493,7 @@
 			<div class="border-left border-right border-secondary p-2">
 				You can move the nodes around by using drag'n'drop. Doubleclick a node to hide/show it (useful if you want e.g. to mark it as finished).
 			</div>
-			<visualization result="ctrl.tab.tool.result" class="visualization" ng-class="{visualization: 1, loading: ctrl.tab.state.resultLoading}"></visualization>
+			<visualization result="ctrl.tab.resultNew" class="visualization" ng-class="{visualization: 1, loading: ctrl.tab.state.resultLoading}"></visualization>
 		</div>
 
 		<div ng-show="ctrl.tab.resultTab === 'power'" class="visualization-result">
@@ -507,7 +506,7 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr ng-repeat="(machine, powerDetail) in ctrl.tab.tool.result.powerDetails">
+					<tr ng-repeat="(machine, powerDetail) in ctrl.tab.result.powerDetails">
 						<td>
 							<item-icon item="machine" size="24" tooltip="1"></item-icon>
 							{{powerDetail.amount|number}}x {{powerDetail.name}}
@@ -526,10 +525,10 @@
 							<b>Total</b>
 						</td>
 						<td>
-							<b>{{ctrl.tab.tool.result.powerUsage.average|number}} MW</b>
+							<b>{{ctrl.tab.result.powerUsage.average|number}} MW</b>
 						</td>
 						<td>
-							<b>{{ctrl.tab.tool.result.powerUsage.max|number}} MW</b>
+							<b>{{ctrl.tab.result.powerUsage.max|number}} MW</b>
 						</td>
 					</tr>
 				</tfoot>

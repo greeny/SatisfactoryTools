@@ -1,11 +1,21 @@
 @import '~ui-bootstrap4/dist/ui-bootstrap-csp.css';
-@import "~perfect-scrollbar/css/perfect-scrollbar.css";
+@import '~perfect-scrollbar/css/perfect-scrollbar.css';
+@import '~vis-network/dist/vis-network.min.css';
 @import 'recipe-list.scss';
 @import 'production.scss';
 
 // hey bootswatch, we don't need microtext, thx!
 .navbar, .dropdown-menu, .dropdown-header, .table, label, .radio label, .checkbox label, .help-block {
 	font-size: 1rem;
+}
+
+div.vis-tooltip {
+	font-family: $font-family-sans-serif;
+	background-color: $gray-700;
+	color: #eeeeee;
+	* {
+		font-size: 0.8rem;
+	}
 }
 
 html {

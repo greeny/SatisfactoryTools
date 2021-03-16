@@ -19,6 +19,14 @@ export class Strings
 		EST_HardDrive: 'HDD Research',
 	};
 
+	public static formatNumber(num: number|string, decimals: number = 3)
+	{
+		if (typeof num === 'string') {
+			num = parseFloat(num);
+		}
+		return num.toFixed(decimals).replace(/\.?0+$/, '');
+	}
+
 	public static webalize(name: string): string
 	{
 		return name.replace(/[\s|.]+/gi, '-').replace(/[™:]/gi, '').toLowerCase();

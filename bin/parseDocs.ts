@@ -40,6 +40,9 @@ for (const definitions of docs) {
 		case 'Class\'/Script/FactoryGame.FGEquipmentDescriptor\'':
 		case 'Class\'/Script/FactoryGame.FGConsumableDescriptor\'':
 		case 'Class\'/Script/FactoryGame.FGItemDescriptorNuclearFuel\'':
+		case 'Class\'/Script/FactoryGame.FGItemDescAmmoTypeProjectile\'':
+		case 'Class\'/Script/FactoryGame.FGItemDescAmmoTypeColorCartridge\'':
+		case 'Class\'/Script/FactoryGame.FGItemDescAmmoTypeInstantHit\'':
 			for (const item of parseItemDescriptors(definitions.Classes)) {
 				json.items[item.className] = item;
 			}
@@ -76,6 +79,7 @@ for (const definitions of docs) {
 		case 'Class\'/Script/FactoryGame.FGBuildableConveyorBelt\'':
 		case 'Class\'/Script/FactoryGame.FGBuildableWire\'':
 		case 'Class\'/Script/FactoryGame.FGBuildablePowerPole\'':
+		case 'Class\'/Script/FactoryGame.FGBuildableDroneStation\'':
 		case 'Class\'/Script/FactoryGame.FGBuildableTradingPost\'':
 		case 'Class\'/Script/FactoryGame.FGBuildableSpaceElevator\'':
 		case 'Class\'/Script/FactoryGame.FGBuildableManufacturer\'':
@@ -89,6 +93,10 @@ for (const definitions of docs) {
 		case 'Class\'/Script/FactoryGame.FGBuildablePipelineJunction\'':
 		case 'Class\'/Script/FactoryGame.FGBuildablePipelinePump\'':
 		case 'Class\'/Script/FactoryGame.FGBuildablePipeReservoir\'':
+		case 'Class\'/Script/FactoryGame.FGBuildableWaterPump\'':
+		case 'Class\'/Script/FactoryGame.FGBuildableFrackingExtractor\'':
+		case 'Class\'/Script/FactoryGame.FGBuildableFrackingActivator\'':
+		case 'Class\'/Script/FactoryGame.FGBuildableManufacturerVariablePower\'':
 		case 'Class\'/Script/FactoryGame.FGBuildableTrainPlatformCargo\'':
 		case 'Class\'/Script/FactoryGame.FGBuildableRailroadStation\'':
 		case 'Class\'/Script/FactoryGame.FGBuildableRailroadTrack\'':
@@ -102,10 +110,26 @@ for (const definitions of docs) {
 		case 'Class\'/Script/FactoryGame.FGBuildableDockingStation\'':
 		case 'Class\'/Script/FactoryGame.FGPipeHyperStart\'':
 		case 'Class\'/Script/FactoryGame.FGBuildablePipeHyper\'':
+		case 'Class\'/Script/FactoryGame.FGBuildablePowerStorage\'':
 		case 'Class\'/Script/FactoryGame.FGBuildableTrainPlatformEmpty\'':
+		case 'Class\'/Script/FactoryGame.FGBuildableCircuitSwitch\'':
 		case 'Class\'/Script/FactoryGame.FGBuildableSplitterSmart\'':
 		case 'Class\'/Script/FactoryGame.FGBuildableWalkway\'':
 		case 'Class\'/Script/FactoryGame.FGVehicleDescriptor\'':
+		case 'Class\'/Script/FactoryGame.FGBuildableLightSource\'':
+		case 'Class\'/Script/FactoryGame.FGBuildableFloodlight\'':
+		case 'Class\'/Script/FactoryGame.FGBuildableLightsControlPanel\'':
+		case 'Class\'/Script/FactoryGame.FGBuildableDoor\'':
+		case 'Class\'/Script/FactoryGame.FGBuildableCornerWall\'':
+		case 'Class\'/Script/FactoryGame.FGBuildableMAM\'':
+		case 'Class\'/Script/FactoryGame.FGBuildablePillar\'':
+		case 'Class\'/Script/FactoryGame.FGBuildableRamp\'':
+		case 'Class\'/Script/FactoryGame.FGBuildableJumppad\'':
+		case 'Class\'/Script/FactoryGame.FGBuildableRailroadSignal\'':
+		case 'Class\'/Script/FactoryGame.FGBuildableBeam\'':
+		case 'Class\'/Script/FactoryGame.FGBuildableFactoryBuilding\'':
+		case 'Class\'/Script/FactoryGame.FGBuildableWidgetSign\'':
+		case 'Class\'/Script/FactoryGame.FGBuildableLadder\'':
 			for (const building of parseBuildings(definitions.Classes, true)) {
 				json.buildings[building.className] = building;
 			}
@@ -153,6 +177,9 @@ for (const definitions of docs) {
 				json.schematics[schematic.className] = schematic;
 			}
 			break;
+		default:
+			// console.log(definitions.NativeClass);
+			break;
 	}
 }
 
@@ -191,6 +218,11 @@ const vehicleMapping: {
 		name: 'Cyber Wagon',
 		description: 'Absolutely indestructible.\nNeeds no further introduction.',
 	},
+	{
+		key: 'Desc_DroneTransport_C',
+		name: 'Drone',
+		description: '',
+	},
 ];
 
 for (const item of vehicleMapping) {
@@ -214,12 +246,11 @@ for (const item of vehicleMapping) {
 
 // add extra info to buildings
 for (const info of extraInfo) {
-	for (const key in json.buildings) {
-		if (info.className === json.buildings[key].className) {
-			json.buildings[key].buildMenuPriority = info.priority;
-			json.buildings[key].categories = info.categories;
-			break;
-		}
+	if (info.className in json.buildings) {
+		json.buildings[info.className].buildMenuPriority = info.priority;
+		json.buildings[info.className].categories = info.categories;
+	} else {
+		console.log(info.className);
 	}
 }
 
@@ -287,17 +318,21 @@ for (const key in json) {
 
 const slugs: string[] = [];
 for (const key in json.items) {
-	const slug = json.items[key].slug;
-	if (slugs.indexOf(slug) !== -1) {
-		console.error('Duplicate slug: ' + slug);
+	let slug = json.items[key].slug;
+	let i = 1;
+	while (slugs.indexOf(slug) !== -1) {
+		slug = json.items[key].slug + '-' + i++;
 	}
+	json.items[key].slug = slug;
 	slugs.push(slug);
 }
 for (const key in json.buildings) {
-	const slug = json.buildings[key].slug;
-	if (slugs.indexOf(slug) !== -1) {
-		console.error('Duplicate slug: ' + slug);
+	let slug = json.buildings[key].slug;
+	let i = 1;
+	while (slugs.indexOf(slug) !== -1) {
+		slug = json.buildings[key].slug + '-' + i++;
 	}
+	json.buildings[key].slug = slug;
 	slugs.push(slug);
 }
 
