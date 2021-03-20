@@ -16,3 +16,4 @@ yarn-error.log
 
 # Generated sources
 www/assets/app.js
+dist

@@ -1,0 +1,8 @@
+<span *ngIf="item$ | async as asyncItem" class="item-amount">
+    <ng-container *ngIf="showAmount && 'pre' === amountMode">{{amount}} x </ng-container>
+    <a [routerLink]="['/', 'codex', 'items', asyncItem.slug]">
+        <sf-item-icon [item]="asyncItem" [showTooltip]="showTooltip" [size]="imageSize"></sf-item-icon>
+        <span *ngIf="inlineName" [innerText]="asyncItem.name"></span>
+    </a>
+    <ng-container *ngIf="showAmount && 'post' === amountMode">{{amount}} x </ng-container>
+</span>

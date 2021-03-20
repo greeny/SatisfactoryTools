@@ -1,23 +1,41 @@
 {
 	"compilerOptions": {
-		"baseUrl": ".",
-		"sourceMap": false,
+		"baseUrl": "./",
+		"outDir": "./dist/out-tsc",
+		"sourceMap": true,
+		"declaration": false,
+		"downlevelIteration": true,
+		"experimentalDecorators": true,
+		"module": "esnext",
 		"moduleResolution": "node",
-		"alwaysStrict": true,
-		"strictNullChecks": true,
-		"noImplicitAny": true,
+		"importHelpers": true,
+		"target": "es2015",
 		"resolveJsonModule": true,
-		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
 		"lib": [
-			"esnext",
+			"es2018",
 			"dom"
 		],
-		"target": "es5",
 		"paths": {
-			"@src/*": ["./src/*"],
-			"@data/*": ["./data/*"],
-			"@bin/*": ["./bin/*"],
-			"@templates/*": ["./templates/*"]
+			"@data/*": [
+				"./data/*"
+			],
+			"@modules/*": [
+				"./src/Modules/*"
+			],
+			"@tools/*": [
+				"./src/Tools/*"
+			],
+			"@utils/*": [
+				"./src/Utils/*"
+			],
+			"@src/*": [
+				"./src/*"
+			]
 		}
+	},
+	"angularCompilerOptions": {
+		"fullTemplateTypeCheck": true,
+		"strictInjectionParameters": true
 	}
 }

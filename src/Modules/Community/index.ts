@@ -1,0 +1,1 @@
+export {CommunityModule} from './CommunityModule';

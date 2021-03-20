@@ -1,0 +1,112 @@
+<div *ngIf="item$ | async as item" class="row">
+    <div class="col-sm-6">
+        <div class="card mb-3">
+            <h2 [innerHTML]="item.name" class="card-header"></h2>
+            <div class="card-body">
+                <span class="float-left mr-3">
+                    <sf-item-icon [item]="item" size="128"></sf-item-icon>
+                </span>
+                <p [innerHTML]="item.description" class="ng-binding" style="white-space:pre-line"></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card mb-3">
+            <h2 [innerHTML]="item.name + ' Details'" class="card-header"></h2>
+            <div class="card-body">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>Sink points</td>
+                            <td [innerText]="item.sinkPoints | number"></td>
+                        </tr>
+                        <tr>
+                            <td>Form</td>
+                            <td [innerText]="item.liquid ? 'Fluid' : 'Solid'"></td>
+                        </tr>
+                        <tr *ngIf="!item.liquid">
+                            <td>Stack size</td>
+                            <td [innerText]="item.stackSize"></td>
+                        </tr>
+                        <tr>
+                            <td>Radioactive</td>
+                            <td [innerText]="item.radioactiveDecay > 0 ? 'Yes' : 'No'"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <h2 class="card-header">Recipes</h2>
+            <sf-recipes-table [recipes]="asProductRecipes$ | async" class="card-body"></sf-recipes-table>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <h2 class="card-header">Usages as ingredient</h2>
+            <sf-recipes-table [recipes]="asIngredientRecipes$ | async" class="card-body"></sf-recipes-table>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <h2 class="card-header">Usages for building</h2>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table recipe-table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Building</th>
+                                <th>Ingredients</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let buildingRecipe of buildingRecipes$ | async">
+                                <td>
+                                    <ng-container *ngFor="let building of buildingRecipe.products">
+                                        <sf-renderer-building [item]="building.item"></sf-renderer-building>
+                                    </ng-container>
+                                </td>
+                                <td>
+                                    <sf-item-amount *ngFor="let ingredient of buildingRecipe.ingredients; trackBy: trackByCost" [amount]="ingredient.amount" [item]="ingredient.item"></sf-item-amount>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <h2 class="card-header">Usages for schematics</h2>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table recipe-table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Schematic</th>
+                                <th>Ingredients</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let schematic of schematics$ | async">
+                                <td>
+                                    <a [routerLink]="['/', 'codex', 'schematics', schematic.slug]">{{ schematic.name }}</a>
+                                </td>
+                                <td>
+                                    <sf-item-amount *ngFor="let ingredient of schematic.cost; trackBy: trackByCost" [amount]="ingredient.amount" [item]="ingredient.item"></sf-item-amount>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

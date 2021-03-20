@@ -44,6 +44,11 @@ export class Data
 		return rawData as any;
 	}
 
+	public getAllRecipes(): {[key: string]: IRecipeSchema}
+	{
+		return this.getRawData().recipes;
+	}
+
 	public getAllItems(): {[key: string]: IItemSchema}
 	{
 		return this.getRawData().items;

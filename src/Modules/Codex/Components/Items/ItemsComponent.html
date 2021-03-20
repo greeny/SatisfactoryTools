@@ -1,0 +1,60 @@
+<div class="row">
+    <div class="col-sm-6"></div>
+    <div class="col-sm-6">
+        <form [formGroup]="form">
+            <div class="input-group filter">
+                <input class="form-control" formControlName="filter" placeholder="Search for an item" type="text" />
+                <div class="input-group-append">
+                    <a (click)="clearQuery()" [class.has-content]="form.get('filter').value.length > 0" class="clear-filter">
+                        <i class="fa fa-times"></i>
+                    </a>
+                    <a (click)="advancedFiltersCollapsed = !advancedFiltersCollapsed" [attr.aria-expanded]="false === advancedFiltersCollapsed" aria-controls="advancedFilters" class="btn btn-secondary">
+                        advanced filters
+                        <i [class.fa-chevron-down]="advancedFiltersCollapsed" [class.fa-chevron-up]="false === advancedFiltersCollapsed" class="fas"></i>
+                    </a>
+                </div>
+            </div>
+            <div [collapse]="advancedFiltersCollapsed" [isAnimated]="true" id="advancedFilters">
+                <div fxFlexAlign="start center" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+                    <div fxLayout="column" fxLayoutAlign="center start" fxLayoutGap="10px">
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" formControlName="radioactive" type="checkbox" />
+                                <span>Show only radioactive</span>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" formControlName="withEnergy" type="checkbox" />
+                                <span>With energy value only</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-right:10px">
+                        <label>Stack size
+                            <select class="form-control" formControlName="stackSize">
+                                <option *ngFor="let option of stackSizes" [ngValue]="option.value">{{ option.label }}</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="form-group" style="margin-right:10px">
+                        <label>Physical state
+                            <select class="form-control" formControlName="physicalState">
+                                <option *ngFor="let option of physicalStates" [ngValue]="option.value">{{ option.label }}</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<br />
+<div class="recipe-list">
+    <div *ngFor="let item of items$ | async; trackBy: trackByClassName" class="card text-center item-card">
+        <a [routerLink]="[item.slug]" class="recipe-name stretched-link">
+            <sf-item-icon [item]="item" class="recipe-image"></sf-item-icon>
+            {{ item.name }}
+        </a>
+    </div>
+</div>

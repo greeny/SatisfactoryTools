@@ -1,0 +1,6 @@
+<ng-container *ngIf="item$ | async as asyncItem">
+    <a [routerLink]="['/', 'codex', 'buildings', asyncItem.slug]">
+        <sf-item-icon [item]="asyncItem" [showTooltip]="showTooltip" [size]="32"></sf-item-icon>
+        <ng-container *ngIf="showName"> {{ asyncItem.name }}</ng-container>
+    </a>
+</ng-container>

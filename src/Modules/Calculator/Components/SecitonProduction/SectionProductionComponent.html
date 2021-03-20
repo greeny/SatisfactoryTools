@@ -1,0 +1,7 @@
+<p>
+	Select items that you want to produce. You can choose between item per minute (will produce given amount from as low
+	amount of raw resources as possible) or maximize (will produce as much as possible, given the raw resource limits).
+</p>
+<form [formGroup]="form">
+	<formly-form [model]="productionTab" [fields]="fields" [options]="options" [form]="form"></formly-form>
+</form>

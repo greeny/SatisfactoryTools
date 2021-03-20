@@ -1,0 +1,27 @@
+<div class="row">
+	<div class="col-6">
+		<div class="card">
+			<h3 class="card-header card-header-with-buttons">
+				<span class="card-header-text">Raw resources</span>
+				<span class="btn-group">
+				<span class="btn btn-secondary px-3" (click)="setDefaults()">Set from map limits</span>
+				<span class="btn btn-secondary px-3" (click)="setZero()">Set to 0</span></span>
+			</h3>
+			<div class="card-body">
+				<form [formGroup]="form">
+					<formly-form [model]="productionTab" [fields]="fields" [options]="options" [form]="form"></formly-form>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="col-6">
+		<div class="card">
+			<h3 class="card-header">
+				<span class="card-header-text">Input</span>
+			</h3>
+			<div class="card-body">
+				<p>Select items that you already have at your disposal and therefore don't need to be produced by this factory.</p>
+			</div>
+		</div>
+	</div>
+</div>

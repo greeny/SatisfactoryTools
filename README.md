@@ -4,12 +4,12 @@ Satisfactory Tools for planning and building the perfect base.
 ## Requirements
 - node.js
 - yarn
-- PHP 7.1+
 
 ## Installation
 - `git clone git@github.com:greeny/SatisfactoryTools.git`
 - `yarn install`
-- Set up a virtual host pointing to `/www` directory (using e.g. Apache or ngnix)
+- `yarn build`
+- Set up a virtual host pointing to `/dist/browser` directory using one of [Nginx or Apache2](doc/virtual_hosts.md) 
 
 ## Contributing
 Any pull requests are welcome, though some rules must be followed:
@@ -18,7 +18,8 @@ Any pull requests are welcome, though some rules must be followed:
 - all PRs must target `dev` branch
 
 ## Development
-Run `yarn start` to start the automated build process. It will watch over the code and rebuild it on change.
+- Run `yarn start` to start the automated build process. It will watch over the code and rebuild it on change. 
+- Visit http://localhost:4200 in order to browse your app.
 
 ## Updating data
 Get the latest Docs.json from your game installation and place it into `data` folder.
