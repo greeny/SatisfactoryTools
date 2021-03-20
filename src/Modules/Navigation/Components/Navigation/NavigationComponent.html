@@ -37,13 +37,20 @@
     <ng-container *ngIf="isHeader(link)">
         <ng-container *ngTemplateOutlet="header; context: {header: link}"></ng-container>
     </ng-container>
-    <ng-container *ngIf="isLink(link) || isLinkContainer(link)">
+	<ng-container *ngIf="isUrl(link)">
+		<ng-container *ngTemplateOutlet="urled; context: {link: link, path: path, parent: parent}"></ng-container>
+	</ng-container>
+    <ng-container *ngIf="(isLink(link) || isLinkContainer(link)) && !isUrl(link)">
         <ng-container *ngTemplateOutlet="linked; context: {link: link, path: path, parent: parent}"></ng-container>
     </ng-container>
 </ng-template>
 
 <ng-template #linked let-link="link" let-parent="parent" let-path="path">
     <ng-container *ngTemplateOutlet="isLinkContainer(link) ? hasSubLinks : noSubLinks; context: {link: link, path: path, parent: parent}"></ng-container>
+</ng-template>
+
+<ng-template #urled let-link="link" let-parent="parent" let-path="path">
+	<ng-container *ngTemplateOutlet="noSubLinks; context: {link: link, path: path, parent: parent}"></ng-container>
 </ng-template>
 
 <ng-template #hasSubLinks let-link="link" let-parent="parent" let-path="path">
@@ -60,12 +67,12 @@
 </ng-template>
 
 <ng-template #noSubLinks let-link="link" let-parent="parent" let-path="path">
-    <li [class.active]="isActive(combinePath(link.path, path), link.exact)" [ngClass]="{'nav-item': !parent, 'dropdown-item': !!parent}" routerLinkActive="active">
+    <li [class.active]="isActive(combinePath(link.path, path), link.exact) && !link.url" [ngClass]="{'nav-item': !parent, 'dropdown-item': !!parent}" routerLinkActive="active">
         <a *ngIf="!link.url" [routerLinkActiveOptions]="{exact: link.exact}" [routerLink]="combinePath(link.path, path)" class="nav-link" routerLinkActive="active">
             <ng-container *ngTemplateOutlet="linkLabel; context: {link: link}"></ng-container>
         </a>
 
-        <a *ngIf="link.url" [href]="link.url" class="nav-link">
+        <a *ngIf="link.url" [href]="link.url" class="nav-link" target="_blank">
             <ng-container *ngTemplateOutlet="linkLabel; context: {link: link}"></ng-container>
         </a>
     </li>

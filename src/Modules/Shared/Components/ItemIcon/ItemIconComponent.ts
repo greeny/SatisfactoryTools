@@ -24,6 +24,7 @@ export class ItemIconComponent implements OnChanges
 	@Input() item: AcceptableType = null;
 	@Input() size: number = 64;
 	@Input() showTooltip: boolean = true;
+	@Input() showName: boolean = false;
 	icon$: Observable<ISelectableIcon>;
 	private readonly stack$: Observable<AcceptableType[]>;
 	private itemChange$ = new BehaviorSubject<AcceptableType>(this.item);

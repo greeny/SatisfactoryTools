@@ -11,6 +11,10 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 @import '~@fortawesome/fontawesome-free/scss/brands';
 @import '~@fortawesome/fontawesome-free/scss/v4-shims';
 
+@import '~primeng/resources/primeng.min.css';
+@import '~primeicons/primeicons.css';
+@import '~primeng/resources/themes/bootstrap4-light-blue/theme.css';
+
 // hey bootswatch, we don't need microtext, thx!
 .navbar, .dropdown-menu, .dropdown-header, .table, label, .radio label, .checkbox label, .help-block {
 	font-size: 1rem;
@@ -104,11 +108,41 @@ table.two-columns {
 }
 
 
-.dropdown-menu{
-	&.dropdown-menu-right{
+.dropdown-menu {
+	&.dropdown-menu-right {
 		min-width: 250px;
 	}
 }
+
 .disabled, [disabled="disabled"], [aria-disabled] {
-	cursor: not-allowed!important;
+	cursor: not-allowed !important;
+}
+
+.flex-fill-fx {
+	flex: 1
+}
+
+.ngx-slider-floor, .ngx-slider-ceil, .ngx-slider-model-value {
+	color: #fff !important;;
+}
+
+.p-dropdown.p-component {
+	width: 100%;
+	border-radius: 0;
+	background: #dee2e6;
+	border: 1px solid transparent;
+	margin-top: 1px;
+
+	&:focus, &:active, &.p-dropdown-open {
+		background: #fff;
+	}
+
+	.p-inputtext {
+		padding: 0.3rem 0.75rem;
+	}
+}
+.nav.nav-tabs{
+	.nav-link{
+		color: #fff;
+	}
 }

@@ -5,16 +5,31 @@ import {IDataProvider} from '@src/Types/IDataProvider';
 import {Observable, of} from 'rxjs';
 
 @Injectable()
-export class ItemsDataProvider implements IDataProvider<IItemSchema>
-{
-	constructor(private dataService: DataService)
-	{
+export class ItemsDataProvider implements IDataProvider<IItemSchema> {
+	private cache: IItemSchema[];
+	private cacheKV: { [key: string]: IItemSchema };
+
+	constructor(private dataService: DataService) {
 	}
 
-	public getAll(): Observable<IItemSchema[]>
-	{
+	public getAll(): Observable<IItemSchema[]> {
 		return of(
-			Object.values(this.dataService.getData().getAllItems())
+			this.getAllArray()
 		);
+	}
+
+	public getAllArray(): IItemSchema[] {
+		if (!this.cacheKV) {
+			this.cacheKV = this.dataService.getData().getAllItems();
+		}
+		if (!this.cache) {
+			this.cache = Object.values(this.cacheKV)
+		}
+
+		return this.cache;
+	}
+
+	public getByClassName(className: string): IItemSchema | null {
+		return this.cacheKV.hasOwnProperty(className) ? this.cacheKV[className] : null;
 	}
 }

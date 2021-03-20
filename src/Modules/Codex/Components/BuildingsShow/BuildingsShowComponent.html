@@ -54,6 +54,7 @@
                         <td>
                             <ng-container *ngTemplateOutlet="displayNumber; context: {value: overclock$ | async}"></ng-container> %
                             <input type="range" min="0" max="250" class="w-100" step="1" [(ngModel)]="overclock" (ngModelChange)="overclock$.next($event)" />
+							<input type="number" min="0" max="250" class="w-100" step="1" [(ngModel)]="overclock" (ngModelChange)="overclock$.next($event)" />
                         </td>
                     </tr>
                 </ng-container>
@@ -167,7 +168,7 @@
     {{ value ? 'Yes' : 'No' }}
 </ng-template>
 <ng-template #displayNumber let-value="value">
-    {{ value | number: '1.0-3' }}
+    {{ value | number: '1.3-3' }}
 </ng-template>
 <ng-template #extractorPuritySwitch let-purity="purity">
     <span class="btn" (click)="this.purity$.next(purity)" [class.btn-primary]="purity === (this.purity$ | async)">{{ purity | ucfirst }}</span>
@@ -187,7 +188,7 @@
                                     <ng-container *ngIf="generator.waterToPowerRatio > 0">
                                         <span class="fas fa-fw fa-plus"></span>
                                         <sf-renderer-item [item]="getWater().className" [showName]="false"></sf-renderer-item>
-                                        {{ waterConsumption(generator) | async | number }} / min
+                                        {{ waterConsumption(generator) | async | number: '1.2-2' }} / min
                                     </ng-container>
                                 </td>
                             </tr>

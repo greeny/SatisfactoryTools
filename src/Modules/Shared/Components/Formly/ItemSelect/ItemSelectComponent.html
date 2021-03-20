@@ -1,0 +1,31 @@
+<p-dropdown
+	[options]="to.options"
+	[formControl]="formControl"
+	[formlyAttributes]="field"
+	[virtualScroll]="!!to.virtualScroll"
+	[itemSize]="to.itemSize || 15"
+	[filter]="true"
+	[optionLabel]="'name'"
+	[optionValue]="'className'"
+>
+	<ng-template pTemplate="selectedItem">
+		<div fxLayout="row" fxLayoutGap="5px">
+			<ng-container *ngIf="null === formControl.value">
+				Search or select item
+			</ng-container>
+			<ng-container *ngIf="null !== formControl.value && getItem(formControl.value) as item">
+				<ng-container *ngTemplateOutlet="entry; context: {item: item}"></ng-container>
+			</ng-container>
+		</div>
+	</ng-template>
+	<ng-template let-item pTemplate="item">
+		<div fxLayout="row" fxLayoutGap="5px">
+			<ng-container *ngTemplateOutlet="entry; context: {item: item}"></ng-container>
+		</div>
+	</ng-template>
+</p-dropdown>
+
+<ng-template #entry let-item="item">
+	<img [src]="'/assets/images/items/'+ item.slug +'_64.png'" style="width: 24px"/>
+	<div>{{item.name}}</div>
+</ng-template>

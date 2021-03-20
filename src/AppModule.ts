@@ -9,6 +9,7 @@ import {NavigationModule} from '@modules/Navigation';
 import {RootModule} from '@modules/RootModule';
 import {SharedModule} from '@modules/Shared';
 import {BreadcrumbsComponent, RootComponent} from './Components';
+import {CalculatorModule} from "@modules/Calculator";
 
 @NgModule({
     declarations: [
@@ -23,6 +24,7 @@ import {BreadcrumbsComponent, RootComponent} from './Components';
         CodexModule,
         RootModule,
         HomeModule,
+		CalculatorModule,
         CommunityModule
     ],
     providers:    [],

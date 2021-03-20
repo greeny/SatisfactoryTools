@@ -51,7 +51,7 @@ export class NavigationComponent implements OnInit
 
 	public isLink(entry: NavigationChildren): entry is NavigationChildren
 	{
-		return ((entry as INavigationInternalLink).path !== undefined || (entry as INavigationExternalLink).url !== undefined) && (entry as IBaseNavigationLink).label !== undefined;
+		return (entry as INavigationInternalLink).path !== undefined  && (entry as IBaseNavigationLink).label !== undefined;
 	}
 
 	public isLinkContainer(entry: NavigationChildren): entry is INavigationContainer
@@ -70,4 +70,9 @@ export class NavigationComponent implements OnInit
 	}
 
 	private navigationSortFn = (a: NavigationRoot, b: NavigationRoot) => a.priority > b.priority ? -1 : 1;
+
+	isUrl(entry: NavigationChildren): entry is INavigationExternalLink
+	{
+		return (entry as INavigationExternalLink).url !== undefined && (entry as IBaseNavigationLink).label !== undefined;
+	}
 }

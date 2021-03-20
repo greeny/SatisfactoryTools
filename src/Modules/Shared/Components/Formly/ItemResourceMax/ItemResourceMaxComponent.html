@@ -1,0 +1,11 @@
+<div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="5px">
+	<input type="checkbox"/>
+	<sf-item-icon [item]="getItem(key)" [size]="32" [showName]="true" fxFlex="30"></sf-item-icon>
+	<div fxFlex></div>
+	<input
+		type="number"
+		[formControl]="formControl"
+		[formlyAttributes]="field"
+		fxFlex="30"
+	/>
+</div>

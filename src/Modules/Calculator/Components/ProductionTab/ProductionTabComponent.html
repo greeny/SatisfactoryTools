@@ -1,0 +1,78 @@
+<div class="card production-input">
+	<div class="card-header d-flex">
+		<div class="production-image d-flex">
+			<span class="image-picker">
+				<span class="fas fa-fw fa-question"></span>
+			</span>
+		</div>
+		<div class="production-line-name flex-grow-1"></div>
+		<div class="btn-group">
+			<a class="btn btn-info">
+				<span class="fas fa-share-alt"></span>
+			</a>
+			<a class="btn btn-success" (click)="onTabClone.emit()">
+				<span class="far fa-fw fa-clone"></span>
+			</a>
+			<a class="btn btn-warning">
+				<span class="fas fa-fw fa-eraser"></span>
+			</a>
+			<a class="btn btn-danger" (click)="onTabRemove.emit()">
+				<span class="fas fa-fw fa-trash-alt"></span>
+			</a>
+			<a class="btn btn-secondary" (click)="toggle()">
+				<span *ngIf="productionTab.expanded" class="fas fa-fw fa-chevron-up" style=""></span>
+				<span *ngIf="!productionTab.expanded" class="fas fa-fw fa-chevron-down" style=""></span>
+			</a>
+		</div>
+	</div>
+	<div class="card-body" *ngIf="productionTab.expanded">
+		<div class="row">
+			<div class="col-md-2 border-right border-light">
+				<ul class="nav nav-tabs flex-column">
+					<li class="nav-item">
+						<a href="javascript: void(0);" class="nav-link active"
+						   [class.active]="'production'===productionTab.activeTab"
+						   (click)="productionTab.activeTab = 'production'"
+						>
+							<span class="fas fa-fw fa-chart-line mr-1"></span>
+							Production
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="javascript: void(0);" class="nav-link"
+						   [class.active]="'items'===productionTab.activeTab"
+						   (click)="productionTab.activeTab = 'items'"
+						>
+							<span class="fas fa-fw fa-box-open mr-1"></span>
+							Items, Input
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="javascript: void(0);" class="nav-link"
+						   [class.active]="'recipes'===productionTab.activeTab"
+						   (click)="productionTab.activeTab = 'recipes'"
+						>
+							<span class="fas fa-fw fa-scroll mr-1"></span>
+							Recipes
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-md-10">
+				<ng-container [ngSwitch]="productionTab.activeTab">
+					<production-section-production
+						*ngSwitchCase="'production'"
+						[productionTab]="productionTab"
+						(onTabChanged)="onProductionTabChanged($event)"
+					></production-section-production>
+					<production-section-inputs
+						*ngSwitchCase="'items'"
+						[productionTab]="productionTab"
+						(onTabChanged)="onProductionTabChanged($event)"
+					></production-section-inputs>
+					<ng-container *ngSwitchCase="'recipes'">Recipes</ng-container>
+				</ng-container>
+			</div>
+		</div>
+	</div>
+</div>

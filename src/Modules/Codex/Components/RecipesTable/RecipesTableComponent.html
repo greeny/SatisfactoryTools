@@ -27,7 +27,7 @@
                         <br />
                         <span *ngIf="resolveManufacturer(recipe) | async as asyncManufacturer">
                             {{recipe.time}}s
-                            ({{ (60 / calculateBuildingRecipeProductionTime(asyncManufacturer, recipe, overclock)) | number }} cycles / min)
+                            ({{ (60 / calculateBuildingRecipeProductionTime(asyncManufacturer, recipe, overclock)) | number: '1.3-3' }} cycles / min)
                         </span>
                     </ng-container>
                 </td>
@@ -42,7 +42,7 @@
             <ng-container *ngIf="recipe.inMachine">
                 <br />
                 <span *ngIf="resolveManufacturer(recipe) | async as asyncManufacturer">
-                    {{ calculateProductAmountsPerMinute(asyncManufacturer, recipe, resource.amount, overclock) | number }} / min
+                    {{ calculateProductAmountsPerMinute(asyncManufacturer, recipe, resource.amount, overclock) | number: '1.3-3' }} / min
                 </span>
             </ng-container>
         </div>

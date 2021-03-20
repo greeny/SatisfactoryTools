@@ -1,0 +1,23 @@
+<div class="col-10">
+	<div *ngFor="let field of field.fieldGroup; let i = index;" fxLayout="row">
+		<formly-field [field]="field" fxFlex></formly-field>
+		<div fxFlexAlign="end center">
+		<span class="btn btn-success" (click)="clone(i)" *ngIf="!!to.clone">
+			<span class="far fa-fw fa-clone"></span>
+		</span>
+			<span class="btn btn-danger" (click)="remove(i)">
+			<span class="fas fa-fw fa-times"></span>
+		</span>
+		</div>
+	</div>
+	<div fxLayout="row">
+		<button class="btn btn-outline-success" type="button" (click)="add()" [disabled]="form.invalid">
+			<span class="fas fa-plus"></span>
+			Add product
+		</button>
+		<div fxFlex></div>
+		<button class="btn btn-outline-danger" (click)="clear()" [disabled]="0 === model.length">
+			<span class="fas fa-fw fa-trash-alt"></span>
+		</button>
+	</div>
+</div>
