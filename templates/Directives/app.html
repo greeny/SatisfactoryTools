@@ -44,11 +44,12 @@
 				</li>
 			</ul>
 			<ul class="navbar-nav">
-				<li class="april-mode-toggle nav-item" ng-if="$root.aprilMode">
-					<a class="nav-link" href="javascript: void(0);" ng-click="$root.disableApril();">
-						<b>
-							<span class="fas fa-sync-alt"></span> Disable April mode
-						</b>
+				<li class="nav-item" ng-if="$root.aprilModePossible">
+					<a class="nav-link" ng-if="$root.aprilMode" ng-click="disable()">
+						Disable April mode
+					</a>
+					<a class="nav-link" ng-if="!$root.aprilMode" ng-click="enable()">
+						Enable April mode
 					</a>
 				</li>
 				<li class="nav-item dropdown">

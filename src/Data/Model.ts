@@ -1,9 +1,11 @@
 import rawData from '@data/data.json';
+import rawAprilData from '@data/aprilData.json';
 import {IJsonSchema} from '@src/Schema/IJsonSchema';
 import {Item} from '@src/Data/Item';
 import {Recipe} from '@src/Data/Recipe';
 import {IMinerSchema} from '@src/Schema/IMinerSchema';
 import {IItemSchema} from '@src/Schema/IItemSchema';
+import {April} from '@src/Utils/April';
 
 export class Model
 {
@@ -93,4 +95,4 @@ export class Model
 
 }
 
-export default new Model(rawData as any);
+export default new Model(April.isApril() ? rawAprilData as any : rawData as any);
