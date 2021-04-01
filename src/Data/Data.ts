@@ -1,4 +1,5 @@
 import rawData from '@data/data.json';
+import rawAprilData from '@data/aprilData.json';
 import {IJsonSchema} from '@src/Schema/IJsonSchema';
 import {IItemSchema} from '@src/Schema/IItemSchema';
 import {IRecipeSchema} from '@src/Schema/IRecipeSchema';
@@ -7,6 +8,7 @@ import {ISchematicSchema} from '@src/Schema/ISchematicSchema';
 import {IResourceSchema} from '@src/Schema/IResourceSchema';
 import {BuildingTypes} from '@src/Types/BuildingTypes';
 import {Constants} from '@src/Constants';
+import {April} from '@src/Utils/April';
 
 export class Data
 {
@@ -43,7 +45,7 @@ export class Data
 
 	public getRawData(): IJsonSchema
 	{
-		return rawData as any;
+		return April.isApril() ? rawAprilData as any : rawData as any;
 	}
 
 	public getAllItems(): {[key: string]: IItemSchema}

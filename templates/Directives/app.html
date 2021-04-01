@@ -44,8 +44,16 @@
 				</li>
 			</ul>
 			<ul class="navbar-nav">
+				<li class="nav-item" ng-if="$root.aprilModePossible">
+					<a class="nav-link" ng-if="$root.aprilMode" ng-click="disable()">
+						Disable April mode
+					</a>
+					<a class="nav-link" ng-if="!$root.aprilMode" ng-click="enable()">
+						Enable April mode
+					</a>
+				</li>
 				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle"  data-toggle="dropdown">
+					<a class="nav-link dropdown-toggle" data-toggle="dropdown">
 						<b>Version: Update 4</b>
 					</a>
 					<div class="dropdown-menu dropdown-menu-right">
