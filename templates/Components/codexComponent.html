@@ -1,7 +1,7 @@
 <div class="recipe-list">
 	<div class="card text-center item-card" ng-repeat="item in ctrl.filterService.filterEntities() | orderBy:'name'">
 		<a ng-if="!item.requiredSchematics" class="recipe-name stretched-link" ui-sref="{{ctrl.entityPreviewState}}({item: item.slug})">
-			<img class="recipe-image" ng-src="/assets/images/items/{{item.slug}}_64.png">
+			<img class="recipe-image" ng-src="/assets/images/items/{{$root.aprilMode ? 'snutt' : item.slug}}_64.png">
 			{{item.name}}
 		</a>
 		<a ng-if="item.requiredSchematics" class="recipe-name stretched-link pt-2" ui-sref="{{ctrl.entityPreviewState}}({item: item.slug})">

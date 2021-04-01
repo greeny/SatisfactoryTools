@@ -35,6 +35,7 @@ import {ComponentOptionsService} from '@src/Module/Services/ComponentOptionsServ
 import {SchematicFiltersService} from '@src/Module/Services/SchematicFiltersService';
 import {SchematicFilterComponent} from '@src/Module/Components/SchematicFilterComponent';
 import {SchematicController} from '@src/Module/Controllers/SchematicController';
+import {April} from '@src/Utils/April';
 
 export class AppModule
 {
@@ -326,7 +327,8 @@ export class AppModule
 			},
 		]);
 		this.app.run(['$transitions', '$rootScope', ($transitions: any, $rootScope: any) => {
-			$rootScope.aprilMode = false;
+			$rootScope.aprilMode = April.isApril();
+			$rootScope.aprilModePossible = April.isAprilPossible();
 
 			$transitions.onFinish({}, () => {
 				const elements = document.getElementsByClassName('tooltip');

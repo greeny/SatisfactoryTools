@@ -44,15 +44,23 @@
 				</li>
 			</ul>
 			<ul class="navbar-nav">
+				<li class="nav-item" ng-if="$root.aprilModePossible">
+					<a class="nav-link" ng-if="$root.aprilMode" ng-click="disable()">
+						Disable April mode
+					</a>
+					<a class="nav-link" ng-if="!$root.aprilMode" ng-click="enable()">
+						Enable April mode
+					</a>
+				</li>
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle"  data-toggle="dropdown">
-						<b>Version: Update 3</b>
+						<b>Version: Update 4</b>
 					</a>
 					<div class="dropdown-menu dropdown-menu-right">
-						<a class="dropdown-item" href="https://u4.satisfactorytools.com/" target="_blank">
+						<a class="dropdown-item active" href="https://u4.satisfactorytools.com/" target="_blank">
 							Update 4 (Experimental)
 						</a>
-						<a class="dropdown-item active" href="https://www.satisfactorytools.com/" target="_blank">
+						<a class="dropdown-item" href="https://www.satisfactorytools.com/" target="_blank">
 							Update 3 (Stable)
 						</a>
 					</div>
