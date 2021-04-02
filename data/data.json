@@ -72,7 +72,7 @@
 			"ingredients": [
 				{
 					"item": "Desc_AluminumIngot_C",
-					"amount": 15
+					"amount": 20
 				},
 				{
 					"item": "Desc_CopperIngot_C",
@@ -646,7 +646,7 @@
 			"ingredients": [
 				{
 					"item": "Desc_AluminumPlateReinforced_C",
-					"amount": 2
+					"amount": 5
 				},
 				{
 					"item": "Desc_Motor_C",
@@ -866,16 +866,16 @@
 			"name": "Alternate: Electrode - Aluminum Scrap",
 			"className": "Recipe_Alternate_ElectroAluminumScrap_C",
 			"alternate": true,
-			"time": 2,
+			"time": 4,
 			"manualTimeMultiplier": 1,
 			"ingredients": [
 				{
 					"item": "Desc_AluminaSolution_C",
-					"amount": 3
+					"amount": 12
 				},
 				{
 					"item": "Desc_PetroleumCoke_C",
-					"amount": 1
+					"amount": 4
 				}
 			],
 			"forBuilding": false,
@@ -885,11 +885,11 @@
 			"products": [
 				{
 					"item": "Desc_AluminumScrap_C",
-					"amount": 8
+					"amount": 20
 				},
 				{
 					"item": "Desc_Water_C",
-					"amount": 2
+					"amount": 7
 				}
 			],
 			"producedIn": [
@@ -1038,11 +1038,11 @@
 				},
 				{
 					"item": "Desc_NitricAcid_C",
-					"amount": 15
+					"amount": 8
 				},
 				{
 					"item": "Desc_SulfuricAcid_C",
-					"amount": 15
+					"amount": 8
 				}
 			],
 			"forBuilding": false,
@@ -1056,7 +1056,7 @@
 				},
 				{
 					"item": "Desc_Water_C",
-					"amount": 18
+					"amount": 8
 				}
 			],
 			"producedIn": [
@@ -1204,7 +1204,7 @@
 			"name": "Alternate: Heat Exchanger",
 			"className": "Recipe_Alternate_HeatSink_1_C",
 			"alternate": true,
-			"time": 12,
+			"time": 6,
 			"manualTimeMultiplier": 1,
 			"ingredients": [
 				{
@@ -1213,7 +1213,7 @@
 				},
 				{
 					"item": "Desc_Rubber_C",
-					"amount": 4
+					"amount": 3
 				}
 			],
 			"forBuilding": false,
@@ -1223,7 +1223,7 @@
 			"products": [
 				{
 					"item": "Desc_AluminumPlateReinforced_C",
-					"amount": 2
+					"amount": 1
 				}
 			],
 			"producedIn": [
@@ -1468,20 +1468,20 @@
 			"name": "Alternate: Instant Plutonium Cell",
 			"className": "Recipe_Alternate_InstantPlutoniumCell_C",
 			"alternate": true,
-			"time": 60,
+			"time": 120,
 			"manualTimeMultiplier": 1,
 			"ingredients": [
 				{
 					"item": "Desc_NonFissibleUranium_C",
-					"amount": 75
+					"amount": 150
 				},
 				{
 					"item": "Desc_AluminumCasing_C",
-					"amount": 25
+					"amount": 50
 				},
 				{
 					"item": "Desc_NitrogenGas_C",
-					"amount": 25
+					"amount": 20
 				}
 			],
 			"forBuilding": false,
@@ -1491,7 +1491,7 @@
 			"products": [
 				{
 					"item": "Desc_PlutoniumCell_C",
-					"amount": 25
+					"amount": 20
 				}
 			],
 			"producedIn": [
@@ -1520,7 +1520,7 @@
 				},
 				{
 					"item": "Desc_Water_C",
-					"amount": 11
+					"amount": 6
 				}
 			],
 			"forBuilding": false,
@@ -1534,7 +1534,7 @@
 				},
 				{
 					"item": "Desc_Water_C",
-					"amount": 4
+					"amount": 5
 				}
 			],
 			"producedIn": [
@@ -1822,12 +1822,12 @@
 			"name": "Alternate: Plutonium Fuel Unit",
 			"className": "Recipe_Alternate_PlutoniumFuelUnit_C",
 			"alternate": true,
-			"time": 60,
+			"time": 120,
 			"manualTimeMultiplier": 1,
 			"ingredients": [
 				{
 					"item": "Desc_PlutoniumCell_C",
-					"amount": 10
+					"amount": 20
 				},
 				{
 					"item": "Desc_PressureConversionCube_C",
@@ -2083,7 +2083,7 @@
 				},
 				{
 					"item": "Desc_AluminumCasing_C",
-					"amount": 45
+					"amount": 60
 				},
 				{
 					"item": "Desc_Rubber_C",
@@ -2384,16 +2384,16 @@
 			"name": "Alternate: Sloppy Alumina",
 			"className": "Recipe_Alternate_SloppyAlumina_C",
 			"alternate": true,
-			"time": 6,
+			"time": 3,
 			"manualTimeMultiplier": 1,
 			"ingredients": [
 				{
 					"item": "Desc_OreBauxite_C",
-					"amount": 15
+					"amount": 10
 				},
 				{
 					"item": "Desc_Water_C",
-					"amount": 15
+					"amount": 10
 				}
 			],
 			"forBuilding": false,
@@ -2403,7 +2403,7 @@
 			"products": [
 				{
 					"item": "Desc_AluminaSolution_C",
-					"amount": 18
+					"amount": 12
 				}
 			],
 			"producedIn": [
@@ -2667,8 +2667,8 @@
 			]
 		},
 		"Recipe_Alternate_TurboMotor_1_C": {
-			"slug": "alternate-turbo-rigour-motor",
-			"name": "Alternate: Turbo Rigour Motor",
+			"slug": "alternate-turbo-electric-motor",
+			"name": "Alternate: Turbo Electric Motor",
 			"className": "Recipe_Alternate_TurboMotor_1_C",
 			"alternate": true,
 			"time": 64,
@@ -2680,15 +2680,15 @@
 				},
 				{
 					"item": "Desc_ModularFrameLightweight_C",
-					"amount": 5
+					"amount": 9
 				},
 				{
 					"item": "Desc_ElectromagneticControlRod_C",
-					"amount": 7
+					"amount": 5
 				},
 				{
 					"item": "Desc_Rotor_C",
-					"amount": 9
+					"amount": 7
 				}
 			],
 			"forBuilding": false,
@@ -2710,12 +2710,12 @@
 			"name": "Alternate: Turbo Pressure Motor",
 			"className": "Recipe_Alternate_TurboPressureMotor_C",
 			"alternate": true,
-			"time": 16,
+			"time": 32,
 			"manualTimeMultiplier": 1,
 			"ingredients": [
 				{
 					"item": "Desc_Motor_C",
-					"amount": 2
+					"amount": 4
 				},
 				{
 					"item": "Desc_PressureConversionCube_C",
@@ -2723,11 +2723,11 @@
 				},
 				{
 					"item": "Desc_PackagedNitrogenGas_C",
-					"amount": 15
+					"amount": 24
 				},
 				{
 					"item": "Desc_Stator_C",
-					"amount": 6
+					"amount": 8
 				}
 			],
 			"forBuilding": false,
@@ -2737,7 +2737,7 @@
 			"products": [
 				{
 					"item": "Desc_MotorLightweight_C",
-					"amount": 1
+					"amount": 2
 				}
 			],
 			"producedIn": [
@@ -2780,12 +2780,12 @@
 			"name": "Alternate: Infused Uranium Cell",
 			"className": "Recipe_Alternate_UraniumCell_1_C",
 			"alternate": true,
-			"time": 8,
+			"time": 12,
 			"manualTimeMultiplier": 1,
 			"ingredients": [
 				{
-					"item": "Desc_UraniumPellet_C",
-					"amount": 2
+					"item": "Desc_OreUranium_C",
+					"amount": 5
 				},
 				{
 					"item": "Desc_Silica_C",
@@ -2793,11 +2793,11 @@
 				},
 				{
 					"item": "Desc_Sulfur_C",
-					"amount": 4
+					"amount": 5
 				},
 				{
 					"item": "Desc_HighSpeedWire_C",
-					"amount": 5
+					"amount": 15
 				}
 			],
 			"forBuilding": false,
@@ -2807,7 +2807,7 @@
 			"products": [
 				{
 					"item": "Desc_UraniumCell_C",
-					"amount": 3
+					"amount": 4
 				}
 			],
 			"producedIn": [
@@ -5352,16 +5352,16 @@
 			"name": "Heat Sink",
 			"className": "Recipe_HeatSink_C",
 			"alternate": false,
-			"time": 12,
+			"time": 8,
 			"manualTimeMultiplier": 1.5,
 			"ingredients": [
 				{
 					"item": "Desc_AluminumPlate_C",
-					"amount": 8
+					"amount": 5
 				},
 				{
 					"item": "Desc_CopperSheet_C",
-					"amount": 9
+					"amount": 3
 				}
 			],
 			"forBuilding": false,
@@ -5371,7 +5371,7 @@
 			"products": [
 				{
 					"item": "Desc_AluminumPlateReinforced_C",
-					"amount": 2
+					"amount": 1
 				}
 			],
 			"producedIn": [
@@ -6516,16 +6516,16 @@
 					"amount": 15
 				},
 				{
-					"item": "Desc_NitricAcid_C",
-					"amount": 3
+					"item": "Desc_Silica_C",
+					"amount": 5
 				},
 				{
-					"item": "Desc_SulfuricAcid_C",
+					"item": "Desc_NitricAcid_C",
 					"amount": 6
 				},
 				{
-					"item": "Desc_Silica_C",
-					"amount": 5
+					"item": "Desc_SulfuricAcid_C",
+					"amount": 3
 				}
 			],
 			"forBuilding": false,
@@ -7585,16 +7585,16 @@
 			"name": "Encased Plutonium Cell",
 			"className": "Recipe_PlutoniumCell_C",
 			"alternate": false,
-			"time": 6,
+			"time": 12,
 			"manualTimeMultiplier": 0.5,
 			"ingredients": [
 				{
 					"item": "Desc_PlutoniumPellet_C",
-					"amount": 1
+					"amount": 2
 				},
 				{
 					"item": "Desc_Cement_C",
-					"amount": 2
+					"amount": 4
 				}
 			],
 			"forBuilding": false,
@@ -7616,24 +7616,24 @@
 			"name": "Plutonium Fuel Rod",
 			"className": "Recipe_PlutoniumFuelRod_C",
 			"alternate": false,
-			"time": 120,
+			"time": 240,
 			"manualTimeMultiplier": 1,
 			"ingredients": [
 				{
 					"item": "Desc_PlutoniumCell_C",
-					"amount": 15
+					"amount": 30
 				},
 				{
 					"item": "Desc_SteelPlate_C",
-					"amount": 8
+					"amount": 18
 				},
 				{
 					"item": "Desc_ElectromagneticControlRod_C",
-					"amount": 3
+					"amount": 6
 				},
 				{
 					"item": "Desc_AluminumPlateReinforced_C",
-					"amount": 5
+					"amount": 10
 				}
 			],
 			"forBuilding": false,
@@ -8191,12 +8191,12 @@
 			"name": "Alternate: Pure Aluminum Ingot",
 			"className": "Recipe_PureAluminumIngot_C",
 			"alternate": true,
-			"time": 20,
+			"time": 2,
 			"manualTimeMultiplier": 1,
 			"ingredients": [
 				{
 					"item": "Desc_AluminumScrap_C",
-					"amount": 18
+					"amount": 2
 				}
 			],
 			"forBuilding": false,
@@ -8206,7 +8206,7 @@
 			"products": [
 				{
 					"item": "Desc_AluminumIngot_C",
-					"amount": 9
+					"amount": 1
 				}
 			],
 			"producedIn": [
@@ -8464,7 +8464,7 @@
 			"ingredients": [
 				{
 					"item": "Desc_AluminumCasing_C",
-					"amount": 24
+					"amount": 32
 				},
 				{
 					"item": "Desc_CrystalOscillator_C",
@@ -13508,7 +13508,7 @@
 			"sinkPoints": 129620,
 			"description": "Used as fuel for the Nuclear Power Plant.\n\nCaution: Produces Nuclear Plutonium Waste when consumed.\nCaution: HIGHLY Radioactive.",
 			"stackSize": 50,
-			"energyValue": 375000,
+			"energyValue": 1500000,
 			"radioactiveDecay": 120,
 			"liquid": false,
 			"fluidColor": {
@@ -14037,23 +14037,6 @@
 			"stackSize": 200,
 			"energyValue": 0,
 			"radioactiveDecay": 0.5,
-			"liquid": false,
-			"fluidColor": {
-				"r": 0,
-				"g": 0,
-				"b": 0,
-				"a": 0
-			}
-		},
-		"Desc_UraniumPellet_C": {
-			"slug": "uranium-pellet",
-			"className": "Desc_UraniumPellet_C",
-			"name": "Uranium Pellet",
-			"sinkPoints": 87,
-			"description": "Produced in the Refinery, Uranium Pellets are purified and cast from Uranium Ore. \nPrimarily used to make Uranium Cells.\n\nCaution: Moderately radioactive.",
-			"stackSize": 200,
-			"energyValue": 0,
-			"radioactiveDecay": 7.5,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
