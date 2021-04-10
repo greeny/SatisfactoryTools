@@ -1034,15 +1034,15 @@
 				},
 				{
 					"item": "Desc_NuclearWaste_C",
-					"amount": 10
+					"amount": 5
 				},
 				{
 					"item": "Desc_NitricAcid_C",
-					"amount": 8
+					"amount": 3
 				},
 				{
 					"item": "Desc_SulfuricAcid_C",
-					"amount": 8
+					"amount": 5
 				}
 			],
 			"forBuilding": false,
@@ -1477,10 +1477,6 @@
 				},
 				{
 					"item": "Desc_AluminumCasing_C",
-					"amount": 50
-				},
-				{
-					"item": "Desc_NitrogenGas_C",
 					"amount": 20
 				}
 			],
@@ -1682,8 +1678,8 @@
 			]
 		},
 		"Recipe_Alternate_NuclearFuelRod_1_C": {
-			"slug": "alternate-nuclear-fuel-unit",
-			"name": "Alternate: Nuclear Fuel Unit",
+			"slug": "alternate-uranium-fuel-unit",
+			"name": "Alternate: Uranium Fuel Unit",
 			"className": "Recipe_Alternate_NuclearFuelRod_1_C",
 			"alternate": true,
 			"time": 300,
@@ -5426,16 +5422,16 @@
 					"amount": 8
 				},
 				{
-					"item": "Desc_AluminumPlate_C",
-					"amount": 40
+					"item": "Desc_ModularFrameHeavy_C",
+					"amount": 4
 				},
 				{
-					"item": "Desc_ModularFrameLightweight_C",
+					"item": "Desc_Computer_C",
 					"amount": 8
 				},
 				{
-					"item": "Desc_CoolingSystem_C",
-					"amount": 4
+					"item": "Desc_AluminumPlate_C",
+					"amount": 40
 				}
 			],
 			"forBuilding": false,
@@ -5811,16 +5807,16 @@
 					"amount": 50
 				},
 				{
-					"item": "Desc_CircuitBoard_C",
-					"amount": 15
-				},
-				{
 					"item": "Desc_Rubber_C",
 					"amount": 50
 				},
 				{
-					"item": "Desc_Cable_C",
-					"amount": 25
+					"item": "Desc_CircuitBoard_C",
+					"amount": 15
+				},
+				{
+					"item": "Desc_Motor_C",
+					"amount": 5
 				}
 			],
 			"forBuilding": false,
@@ -6414,11 +6410,11 @@
 			"ingredients": [
 				{
 					"item": "Desc_NitrogenGas_C",
-					"amount": 24
+					"amount": 12
 				},
 				{
 					"item": "Desc_Water_C",
-					"amount": 6
+					"amount": 3
 				},
 				{
 					"item": "Desc_IronPlate_C",
@@ -6432,7 +6428,7 @@
 			"products": [
 				{
 					"item": "Desc_NitricAcid_C",
-					"amount": 6
+					"amount": 3
 				}
 			],
 			"producedIn": [
@@ -6508,7 +6504,7 @@
 			"name": "Non-fissile Uranium",
 			"className": "Recipe_NonFissileUranium_C",
 			"alternate": false,
-			"time": 12,
+			"time": 24,
 			"manualTimeMultiplier": 1,
 			"ingredients": [
 				{
@@ -6517,7 +6513,7 @@
 				},
 				{
 					"item": "Desc_Silica_C",
-					"amount": 5
+					"amount": 10
 				},
 				{
 					"item": "Desc_NitricAcid_C",
@@ -6525,7 +6521,7 @@
 				},
 				{
 					"item": "Desc_SulfuricAcid_C",
-					"amount": 3
+					"amount": 6
 				}
 			],
 			"forBuilding": false,
@@ -6535,11 +6531,11 @@
 			"products": [
 				{
 					"item": "Desc_NonFissibleUranium_C",
-					"amount": 10
+					"amount": 20
 				},
 				{
 					"item": "Desc_Water_C",
-					"amount": 3
+					"amount": 6
 				}
 			],
 			"producedIn": [
@@ -7664,7 +7660,7 @@
 				},
 				{
 					"item": "Desc_NuclearWaste_C",
-					"amount": 50
+					"amount": 25
 				}
 			],
 			"forBuilding": false,
@@ -11856,7 +11852,7 @@
 			"slug": "hover-pack",
 			"className": "BP_EquipmentDescriptorHoverPack_C",
 			"name": "Hover Pack",
-			"sinkPoints": 592312,
+			"sinkPoints": 413920,
 			"description": "Slot: Body\nPower consumption: 100 MW\nAllows for vertical movement and hovering in mid air to improve building efficiency and factory traversal. Wirelessly connects to nearby power connections, such as Power Poles and Buildings, for power consumption.",
 			"stackSize": 1,
 			"energyValue": 0,
@@ -11873,7 +11869,7 @@
 			"slug": "jetpack",
 			"className": "BP_EquipmentDescriptorJetPack_C",
 			"name": "Jetpack",
-			"sinkPoints": 35580,
+			"sinkPoints": 49580,
 			"description": "Slot: Body\n\nAllows you to move more freely in the air. Consumes Fuel when used and refills with Fuel from your inventory when you're on the ground.",
 			"stackSize": 1,
 			"energyValue": 0,
@@ -12060,7 +12056,7 @@
 			"slug": "heat-sink",
 			"className": "Desc_AluminumPlateReinforced_C",
 			"name": "Heat Sink",
-			"sinkPoints": 2344,
+			"sinkPoints": 2804,
 			"description": "Used to dissipate heat faster.",
 			"stackSize": 100,
 			"energyValue": 0,
@@ -12111,7 +12107,7 @@
 			"slug": "battery",
 			"className": "Desc_Battery_C",
 			"name": "Battery",
-			"sinkPoints": 513,
+			"sinkPoints": 465,
 			"description": "Primarily used as fuel for Drones and Vehicles.",
 			"stackSize": 200,
 			"energyValue": 6000,
@@ -12349,7 +12345,7 @@
 			"slug": "cooling-system",
 			"className": "Desc_CoolingSystem_C",
 			"name": "Cooling System",
-			"sinkPoints": 8811,
+			"sinkPoints": 12006,
 			"description": "Used to keep temperatures of advanced parts and buildings from exceeding to inefficient levels.",
 			"stackSize": 100,
 			"energyValue": 0,
@@ -12503,7 +12499,7 @@
 			"className": "Desc_ElectromagneticControlRod_C",
 			"name": "Electromagnetic Control Rod",
 			"sinkPoints": 2560,
-			"description": "Control Rods regulate power expenditure via electromagnetism.",
+			"description": "Control Rods regulate power output via electromagnetism.",
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
@@ -12893,7 +12889,7 @@
 			"slug": "liquid-biofuel",
 			"className": "Desc_LiquidBiofuel_C",
 			"name": "Liquid Biofuel",
-			"sinkPoints": 77,
+			"sinkPoints": 261,
 			"description": "Liquid Biofuel can be used to generate power or packaged to be used as fuel for Vehicles.",
 			"stackSize": 50000,
 			"energyValue": 0.75,
@@ -13012,7 +13008,7 @@
 			"slug": "radio-control-unit",
 			"className": "Desc_ModularFrameLightweight_C",
 			"name": "Radio Control Unit",
-			"sinkPoints": 29764,
+			"sinkPoints": 32908,
 			"description": "Enhances and directs radio signals.",
 			"stackSize": 50,
 			"energyValue": 0,
@@ -13046,7 +13042,7 @@
 			"slug": "turbo-motor",
 			"className": "Desc_MotorLightweight_C",
 			"name": "Turbo Motor",
-			"sinkPoints": 204584,
+			"sinkPoints": 242720,
 			"description": "The Turbo Motor is a more complex, and more powerful, version of the regular Motor.",
 			"stackSize": 50,
 			"energyValue": 0,
@@ -13097,7 +13093,7 @@
 			"slug": "nitric-acid",
 			"className": "Desc_NitricAcid_C",
 			"name": "Nitric Acid",
-			"sinkPoints": 92,
+			"sinkPoints": 94,
 			"description": "Produced by reaction of Nitrogen Gas with Water. Its high corrosiveness and oxidizing properties make it an excellent choice for refinement and fuel production processes.",
 			"stackSize": 50000,
 			"energyValue": 0,
@@ -13165,8 +13161,8 @@
 			"slug": "uranium-fuel-rod",
 			"className": "Desc_NuclearFuelRod_C",
 			"name": "Uranium Fuel Rod",
-			"sinkPoints": 48592,
-			"description": "Used as fuel for the Nuclear Power Plant.\n\nCaution: Produces Nuclear Uranium Waste when consumed.\nCaution: Moderately Radioactive.",
+			"sinkPoints": 44092,
+			"description": "Used as fuel for the Nuclear Power Plant.\n\nCaution: Produces radioactive Uranium Waste when consumed.\nCaution: Moderately Radioactive.",
 			"stackSize": 50,
 			"energyValue": 750000,
 			"radioactiveDecay": 50,
@@ -13186,7 +13182,7 @@
 			"description": "The by-product of consuming Uranium Fuel Rods in the Nuclear Power Plant.\nNon-fissible Uranium can be extracted. Handle with caution.\n\nCaution: HIGHLY Radioactive.",
 			"stackSize": 500,
 			"energyValue": 0,
-			"radioactiveDecay": 5,
+			"radioactiveDecay": 10,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -13318,7 +13314,7 @@
 			"slug": "packaged-liquid-biofuel",
 			"className": "Desc_PackagedBiofuel_C",
 			"name": "Packaged Liquid Biofuel",
-			"sinkPoints": 1,
+			"sinkPoints": 370,
 			"description": "Liquid Biofuel, packaged for alternative transport. Can be used as fuel for Vehicles.",
 			"stackSize": 100,
 			"energyValue": 750,
@@ -13352,7 +13348,7 @@
 			"slug": "packaged-nitrogen-gas",
 			"className": "Desc_PackagedNitrogenGas_C",
 			"name": "Packaged Nitrogen Gas",
-			"sinkPoints": 308,
+			"sinkPoints": 312,
 			"description": "Nitrogen Gas, packaged for alternative transport.",
 			"stackSize": 100,
 			"energyValue": 0,
@@ -13492,7 +13488,7 @@
 			"description": "Plutonium Cells are concrete encased Plutonium Pellets.\nUsed to produce Plutonium Fuel Rods for Nuclear Power production.\n\nCaution: Moderately Radioactive.",
 			"stackSize": 200,
 			"energyValue": 0,
-			"radioactiveDecay": 60,
+			"radioactiveDecay": 120,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -13505,11 +13501,11 @@
 			"slug": "plutonium-fuel-rod",
 			"className": "Desc_PlutoniumFuelRod_C",
 			"name": "Plutonium Fuel Rod",
-			"sinkPoints": 129620,
-			"description": "Used as fuel for the Nuclear Power Plant.\n\nCaution: Produces Nuclear Plutonium Waste when consumed.\nCaution: HIGHLY Radioactive.",
+			"sinkPoints": 153184,
+			"description": "Used as fuel for the Nuclear Power Plant.\n\nCaution: Produces radioactive Plutonium Waste when consumed.\nCaution: HIGHLY Radioactive.",
 			"stackSize": 50,
 			"energyValue": 1500000,
-			"radioactiveDecay": 120,
+			"radioactiveDecay": 250,
 			"liquid": false,
 			"fluidColor": {
 				"r": 0,
@@ -13556,7 +13552,7 @@
 			"slug": "pressure-conversion-cube",
 			"className": "Desc_PressureConversionCube_C",
 			"name": "Pressure Conversion Cube",
-			"sinkPoints": 244736,
+			"sinkPoints": 257312,
 			"description": "Converts outgoing force into internal pressure. Required to contain unstable, high-energy matter.",
 			"stackSize": 50,
 			"energyValue": 0,
@@ -13777,7 +13773,7 @@
 			"slug": "magnetic-field-generator",
 			"className": "Desc_SpaceElevatorPart_6_C",
 			"name": "Magnetic Field Generator",
-			"sinkPoints": 16130,
+			"sinkPoints": 15650,
 			"description": "Project Part #7. Ship with the Space Elevator to complete phases of Project Assembly.\n\nThese modular generators use superconducting magnets and vast amounts of electricity to produce an easily expandible and powerful magnet field.",
 			"stackSize": 50,
 			"energyValue": 0,
@@ -13811,7 +13807,7 @@
 			"slug": "thermal-propulsion-rocket",
 			"className": "Desc_SpaceElevatorPart_8_C",
 			"name": "Thermal Propulsion Rocket",
-			"sinkPoints": 637514,
+			"sinkPoints": 732956,
 			"description": "Project Part #8. Ship with the Space Elevator to complete phases of Project Assembly.\n\nUses extreme heat to produce the high pressure plasma required to get Project Assembly into motion.",
 			"stackSize": 50,
 			"energyValue": 0,
@@ -13828,7 +13824,7 @@
 			"slug": "nuclear-pasta",
 			"className": "Desc_SpaceElevatorPart_9_C",
 			"name": "Nuclear Pasta",
-			"sinkPoints": 518272,
+			"sinkPoints": 543424,
 			"description": "Project Part #9. Ship with the Space Elevator to complete phases of Project Assembly.\nPower Usage: 500-1500 MW (1000 MW average).\n\nNuclear Pasta is extremely dense degenerate matter, formed when extreme pressure forces protons and electrons together into neutrons. It is theorized to exist naturally within the crust of neutron stars.",
 			"stackSize": 50,
 			"energyValue": 0,
@@ -14032,7 +14028,7 @@
 			"slug": "encased-uranium-cell",
 			"className": "Desc_UraniumCell_C",
 			"name": "Encased Uranium Cell",
-			"sinkPoints": 192,
+			"sinkPoints": 147,
 			"description": "Uranium Cells are produced from Uranium Ore. \nUsed to produce Uranium Fuel Rods for Nuclear Power production.\n\nCaution: Mildly Radioactive.",
 			"stackSize": 200,
 			"energyValue": 0,
@@ -17124,20 +17120,20 @@
 			"tier": 6,
 			"cost": [
 				{
-					"item": "Desc_Computer_C",
-					"amount": 25
-				},
-				{
 					"item": "Desc_Motor_C",
-					"amount": 100
+					"amount": 50
 				},
 				{
 					"item": "Desc_Plastic_C",
-					"amount": 200
+					"amount": 100
 				},
 				{
 					"item": "Desc_Rubber_C",
-					"amount": 200
+					"amount": 100
+				},
+				{
+					"item": "Desc_Fuel_C",
+					"amount": 50
 				}
 			],
 			"unlock": {
@@ -17505,19 +17501,23 @@
 			"className": "Schematic_8-3_C",
 			"name": "Hover Pack",
 			"slug": "hover-pack",
-			"tier": 8,
+			"tier": 7,
 			"cost": [
 				{
-					"item": "Desc_CoolingSystem_C",
+					"item": "Desc_Motor_C",
+					"amount": 200
+				},
+				{
+					"item": "Desc_ModularFrameHeavy_C",
 					"amount": 100
 				},
 				{
-					"item": "Desc_ModularFrameLightweight_C",
+					"item": "Desc_Computer_C",
 					"amount": 100
 				},
 				{
 					"item": "Desc_AluminumPlate_C",
-					"amount": 500
+					"amount": 200
 				}
 			],
 			"unlock": {
@@ -18694,8 +18694,8 @@
 		},
 		"Schematic_Alternate_NuclearFuelRod1_C": {
 			"className": "Schematic_Alternate_NuclearFuelRod1_C",
-			"name": "Alternate: Nuclear Fuel Unit",
-			"slug": "alternate-nuclear-fuel-unit",
+			"name": "Alternate: Uranium Fuel Unit",
+			"slug": "alternate-uranium-fuel-unit",
 			"tier": 7,
 			"cost": [],
 			"unlock": {
@@ -21502,7 +21502,7 @@
 		"Desc_PowerStorageMk1_C": {
 			"slug": "power-storage",
 			"name": "Power Storage",
-			"description": "Storage Capacity: 100 MWh (100 MW for 1 hour)\nInput Capacity: 100 MW\nOutput Capacity: Unlimited\n\nCan be connected to a Power Grid to store excess power production. The stored power can be used later in cases of high consumption.",
+			"description": "Storage Capacity: 100 MWh (100 MW for 1 hour)\nMax Charge Rate: 100 MW\nMax Discharge Rate: Unlimited \n\nCan be connected to a Power Grid to store excess power production. The stored power can be used later in cases of high consumption.",
 			"categories": [
 				"SC_Generators_C"
 			],
