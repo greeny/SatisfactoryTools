@@ -109,7 +109,7 @@ export class ProductionToolResult
 			if (input.item) {
 				this.nodes.add({
 					id: id,
-					label: ProductionToolResult.getRecipeDisplayedName(model.getItem(input.item).prototype.name) + '\n' + input.amount.toFixed(2) + ' / min',
+					label: ProductionToolResult.formatLabel(ProductionToolResult.getRecipeDisplayedName(model.getItem(input.item).prototype.name), input.amount),
 					title: '',
 					color: this.getNodeColor(ProductionToolResult.TYPE_RAW, false),
 					font: this.getFontColor(false),
@@ -145,7 +145,7 @@ export class ProductionToolResult
 						edges[key] = {
 							from: input.nodeId,
 							to: recipe.nodeId,
-							label: ingredient.item.prototype.name + '\n' + diff.toFixed(2) + '/min',
+							label: ProductionToolResult.formatLabel(ingredient.item.prototype.name, diff),
 							color: this.getEdgeColor(false),
 							font: this.getFontColor(false),
 						};
@@ -174,13 +174,13 @@ export class ProductionToolResult
 								edges[key] = {
 									from: re.nodeId,
 									to: recipe.nodeId,
-									label: ingredient.item.prototype.name + '\n' + diff.toFixed(2) + '/min',
+									label: ProductionToolResult.formatLabel(ingredient.item.prototype.name, diff),
 									color: this.getEdgeColor(false),
 									font: this.getFontColor(false),
 								};
 							} else {
 								edges[reverseKey].arrows = 'from,to';
-								edges[reverseKey].label = edges[reverseKey].label.replace('\n', ': ') + '\n' + ingredient.item.prototype.name + ': ' + diff.toFixed(2) + '/min';
+								edges[reverseKey].label = ProductionToolResult.formatLabel(edges[reverseKey].label.replace('\n', ': ') + '\n' + ingredient.item.prototype.name, diff, ': ');
 							}
 							this.elkGraph.edges.push({
 								id: nodeId.toString(),
@@ -225,7 +225,7 @@ export class ProductionToolResult
 				// TODO add miners
 				this.nodes.add({
 					id: id,
-					label: ProductionToolResult.getRecipeDisplayedName(item.prototype.name) + '\n' + resource.amount.toFixed(2) + ' / min',
+					label: ProductionToolResult.formatLabel(ProductionToolResult.getRecipeDisplayedName(item.prototype.name), resource.amount),
 					title: '',
 					color: this.getNodeColor(ProductionToolResult.TYPE_RAW, false),
 					font: this.getFontColor(false),
@@ -241,7 +241,7 @@ export class ProductionToolResult
 					this.edges.add({
 						from: id,
 						to: data.id,
-						label: item.prototype.name + '\n' + data.amount.toFixed(2) + ' / min',
+						label: ProductionToolResult.formatLabel(item.prototype.name, data.amount),
 						color: this.getEdgeColor(false),
 						font: this.getFontColor(false),
 					});
@@ -281,7 +281,7 @@ export class ProductionToolResult
 
 			this.nodes.add({
 				id: id,
-				label: ProductionToolResult.getRecipeDisplayedName(itemName) + '\n' + amount.toFixed(2) + ' / min',
+				label: ProductionToolResult.formatLabel(ProductionToolResult.getRecipeDisplayedName(itemName), amount),
 				color: this.getNodeColor(ProductionToolResult.TYPE_PRODUCT, false),
 				font: this.getFontColor(false),
 				type: ProductionToolResult.TYPE_PRODUCT,
@@ -296,7 +296,7 @@ export class ProductionToolResult
 				this.edges.add({
 					from: parseInt(producedNodeId, 10),
 					to: id,
-					label: itemName + '\n' + producedItem[producedNodeId].toFixed(2) + ' / min',
+					label: ProductionToolResult.formatLabel(itemName, producedItem[producedNodeId]),
 					color: this.getEdgeColor(false),
 					font: this.getFontColor(false),
 				});
@@ -422,4 +422,15 @@ export class ProductionToolResult
 		return '<b>' + parts.join(' ') + '</b>';
 	}
 
+	private static formatLabel(text: string, quantity: number, postfix?: string | null | undefined): string
+	{
+		const separator: string = (typeof postfix === 'string') ? postfix : '\n';
+
+		return text + separator + ProductionToolResult.formatQuantity(quantity) + ' / min';
+	}
+
+	private static formatQuantity(quantity: number): string
+	{
+		return new Intl.NumberFormat(undefined, { minimumFractionDigits: 2 }).format(quantity);
+	}
 }
