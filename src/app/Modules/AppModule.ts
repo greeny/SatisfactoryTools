@@ -1,12 +1,11 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-
-import {AppRoutingModule} from './app-routing.module';
-import {AppComponent} from './app.component';
 import {StoreModule} from '@ngrx/store';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
-import {environment} from '../environments/environment';
 import {EffectsModule} from '@ngrx/effects';
+import {environment} from '@env/environment';
+import {AppComponent} from '@src/Components/App/AppComponent';
+import {AppRoutingModule} from '@src/Modules/AppRoutingModule';
 
 @NgModule({
     declarations: [
@@ -22,5 +21,6 @@ import {EffectsModule} from '@ngrx/effects';
     providers: [],
     bootstrap: [AppComponent]
 })
-export class AppModule {
+export class AppModule
+{
 }
