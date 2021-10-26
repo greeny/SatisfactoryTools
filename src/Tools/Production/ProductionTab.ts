@@ -192,7 +192,7 @@ export class ProductionTab
 		shareData.icon = this.tool.icon;*/
 		axios({
 			method: 'POST',
-			url: 'https://api.satisfactorytools.com/v1/share?experimental=true',
+			url: 'https://api.satisfactorytools.com/v1/share',
 			data: shareData,
 		}).then((response) => {
 			this.scope.$timeout(0).then(() => {
