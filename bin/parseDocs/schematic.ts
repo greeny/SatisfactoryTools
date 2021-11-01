@@ -10,23 +10,43 @@ export default function parseSchematics(schematics: {
 	mTechTier: string,
 	mDisplayName: string,
 	mCost: string,
+	mSchematicIcon: string,
 	mUnlocks: {
 		mRecipes?: string;
 		mResourcesToAddToScanner?: string;
 		mNumInventorySlotsToUnlock?: string;
+		mItemsToGive?: string;
 	}[],
 	mSchematicDependencies: {
 		Class?: string;
 		mSchematics?: string;
 		mRequireAllSchematicsToBePurchased?: string;
 	}[],
-	mTimeToComplete: string
+	mTimeToComplete: string,
 }[]): ISchematicSchema[]
 {
 	const result: ISchematicSchema[] = [];
 	for (const schematic of schematics) {
-		// ignore resource sink purchases and custom schematics
-		if (schematic.mType === 'EST_ResourceSink' || schematic.mType === 'EST_Custom') {
+		// ignore custom schematics
+		if (schematic.mType === 'EST_Custom') {
+			continue;
+		}
+
+		// ignore ficsmas
+		if ([
+			'Research_XMas_1_C',
+			'Research_XMas_1-1_C',
+			'Research_XMas_1-2_C',
+			'Research_XMas_2_C',
+			'Research_XMas_2-1_C',
+			'Research_XMas_2-2_C',
+			'Research_XMas_3_C',
+			'Research_XMas_3-1_C',
+			'Research_XMas_4_C',
+			'Research_XMas_4-1_C',
+			'Research_XMas_4-2_C',
+			'Research_XMas_5_C',
+		].indexOf(schematic.ClassName) !== -1) {
 			continue;
 		}
 
@@ -35,6 +55,7 @@ export default function parseSchematics(schematics: {
 			inventorySlots: 0,
 			recipes: [],
 			scannerResources: [],
+			giveItems: [],
 		};
 
 		for (const unlock of schematic.mUnlocks) {
@@ -46,6 +67,9 @@ export default function parseSchematics(schematics: {
 			}
 			if (unlock.mResourcesToAddToScanner) {
 				unlockData.scannerResources.push(...Arrays.ensureArray(Strings.unserializeDocs(unlock.mResourcesToAddToScanner)).map(parseBlueprintClass));
+			}
+			if (unlock.mItemsToGive) {
+				unlockData.giveItems.push(...Arrays.ensureArray(Strings.unserializeDocs(unlock.mItemsToGive)).map(parseItemAmount));
 			}
 		}
 
@@ -60,6 +84,10 @@ export default function parseSchematics(schematics: {
 		// add suffix to slug to prevent duplicates
 		if ((schematic.mDisplayName === 'Inflated Pocket Dimension' || schematic.mDisplayName === 'Medicinal Inhaler') && cost.length) {
 			slug += '-' + Strings.webalize(cost[0].item.replace('Desc_', '').replace('_C', ''));
+		}
+
+		if (unlockData.giveItems.length) {
+			slug = 'get-' + slug;
 		}
 
 		result.push({

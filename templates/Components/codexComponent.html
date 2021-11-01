@@ -5,6 +5,7 @@
 			{{item.name}}
 		</a>
 		<a ng-if="item.requiredSchematics" class="recipe-name stretched-link pt-2" ui-sref="{{ctrl.entityPreviewState}}({item: item.slug})">
+			<img class="recipe-image" ng-src="/assets/images/items/{{$root.aprilMode ? 'snutt' : item.slug}}_64.png">
 			{{item.name}}
 			<small class="text-muted d-block">
 				{{ctrl.getSchematicType(item.type)}}

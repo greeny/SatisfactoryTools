@@ -23,5 +23,6 @@ export interface ISchematicUnlockSchema
 	recipes: string[];
 	scannerResources: string[];
 	inventorySlots: number;
+	giveItems: IItemAmountSchema[];
 
 }

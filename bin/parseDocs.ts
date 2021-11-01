@@ -32,7 +32,7 @@ const json: IJsonSchema = {
 
 let biomass: IItemSchema[] = [];
 let extraInfo: any[] = [];
-let imageMapping: {[key: string]: string} = {};
+let imageMapping: { [key: string]: string } = {};
 
 for (const definitions of docs) {
 	switch (definitions.NativeClass) {
@@ -176,6 +176,9 @@ for (const definitions of docs) {
 			for (const schematic of parseSchematics(definitions.Classes)) {
 				json.schematics[schematic.className] = schematic;
 			}
+			for (const schematic of parseImageMapping(definitions.Classes)) {
+				imageMapping[schematic.className] = schematic.image;
+			}
 			break;
 		default:
 			// console.log(definitions.NativeClass);
@@ -250,9 +253,29 @@ for (const info of extraInfo) {
 		json.buildings[info.className].buildMenuPriority = info.priority;
 		json.buildings[info.className].categories = info.categories;
 	} else {
-		console.log(info.className);
+		// console.log(info.className);
 	}
 }
+
+// add coupon item
+json.items['Desc_ResourceSinkCoupon_C'] = {
+	className: 'Desc_ResourceSinkCoupon_C',
+	description: 'A special FICSIT bonus program Coupon, obtained through the AWESOME Sink. Can be redeemed in the AWESOME Shop for bonus milestones and rewards',
+	energyValue: 0,
+	fluidColor: {
+		r: 0,
+		g: 0,
+		b: 0,
+		a: 0,
+	},
+	liquid: false,
+	name: 'FICSIT Coupon',
+	radioactiveDecay: 0,
+	sinkPoints: 1,
+	slug: 'ficsit-coupon',
+	stackSize: 500,
+};
+imageMapping['Desc_ResourceSinkCoupon_C'] = '/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/UI/IconDesc_Ficsit_Coupon_256.png';
 
 // add biomass stuff to biomass burner
 for (const key in json.generators) {
@@ -333,6 +356,15 @@ for (const key in json.buildings) {
 		slug = json.buildings[key].slug + '-' + i++;
 	}
 	json.buildings[key].slug = slug;
+	slugs.push(slug);
+}
+for (const key in json.schematics) {
+	let slug = json.schematics[key].slug;
+	let i = 1;
+	while (slugs.indexOf(slug) !== -1) {
+		slug = json.schematics[key].slug + '-' + i++;
+	}
+	json.schematics[key].slug = slug;
 	slugs.push(slug);
 }
 

@@ -188,8 +188,8 @@ export class ProductionTab
 			return;
 		}
 		const shareData = angular.copy(this.data);
-		/*shareData.name = this.tool.name;
-		shareData.icon = this.tool.icon;*/
+		shareData.metadata.name = this.name;
+		shareData.metadata.icon = this.icon;
 		axios({
 			method: 'POST',
 			url: 'https://api.satisfactorytools.com/v1/share',

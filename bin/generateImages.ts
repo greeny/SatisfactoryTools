@@ -39,4 +39,9 @@ if (!fs.existsSync(mappingPath)) {
 			processImage(mapping[buildingClass], data.buildings[buildingClass].slug);
 		}
 	}
+	for (const schematicClass in data.schematics) {
+		if (schematicClass in mapping) {
+			processImage(mapping[schematicClass], data.schematics[schematicClass].slug);
+		}
+	}
 }
