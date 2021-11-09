@@ -25,12 +25,12 @@ module.exports = {
 		rules: [
 			{
 				test: /\.tsx?$/,
-				loader: 'ts-loader',
+				use: [{ loader: 'ts-loader' }],
 				exclude: '/node_modules/',
 			},
 			{
 				test: /\.html$/,
-				loader: "angular-templatecache-loader?module=app",
+				use: [{ loader: "angular-templatecache-loader?module=app" }],
 			},
 			{
 				test: /\.css$/i,
