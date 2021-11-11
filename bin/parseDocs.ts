@@ -16,8 +16,20 @@ import {DiffFormatter} from '@src/Utils/DiffGenerator/DiffFormatter';
 import parseImageMapping from '@bin/parseDocs/imageMapping';
 import {Strings} from '@src/Utils/Strings';
 
-const docs = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'Docs.json')).toString());
-const oldData: IJsonSchema = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'data.json')).toString()) as IJsonSchema;
+const safeParseJson = <T>(file: string, encoding: BufferEncoding = 'utf8'): T => {
+	// The encoding of the retrieved string is handled by readFile[Sync], but JSON.parse
+	// does not like the BOM, so strip it from the JSON string if present.
+	let json = fs.readFileSync(file, { encoding });
+	const BOM = "\u{FEFF}";
+	if (json.startsWith(BOM)) {
+		json = json.substr(BOM.length);
+	}
+	return JSON.parse(json);
+};
+
+const docs = safeParseJson<any>(path.join(__dirname, '..', 'data', 'Docs.json'), 'utf16le');
+const oldData = safeParseJson<IJsonSchema>(path.join(__dirname, '..', 'data', 'data.json'));
+
 //const sizes: {Name: string, Dimensions: number[]}[] = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'debug.json')).toString()) as {Name: string, Dimensions: number[]}[];
 
 const json: IJsonSchema = {

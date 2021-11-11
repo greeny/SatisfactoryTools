@@ -1,8 +1,9 @@
 import * as fs from 'fs';
 import * as path from 'path';
+import { GameFinderOptions } from './findGame';
 import { GameFinder } from './gameFinder';
 
-const installPath = GameFinder.findGame();
+const installPath = GameFinder.findGame(GameFinderOptions.parseCommandLineArguments());
 
 if (!installPath) {
 	throw new Error('Could not find a local installation of Satisfactory Experimental!');

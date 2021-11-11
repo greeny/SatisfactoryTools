@@ -8,11 +8,12 @@
 		"build": "webpack --mode production",
 		"start": "webpack --mode development --progress --color --watch",
 		"importDocs": "ts-node -r tsconfig-paths/register bin/importDocs.ts && yarn parseDocs",
-		"importIcons": "ts-node -r tsconfig-paths/register bin/importIcons.ts && yarn generateImages",
+		"importPak": "ts-node -r tsconfig-paths/register bin/importPak.ts && yarn generateImages",
 		"parseDocs": "ts-node -r tsconfig-paths/register bin/parseDocs.ts",
 		"parsePak": "ts-node -r tsconfig-paths/register bin/parsePak.ts",
+		"findGame": "ts-node -r tsconfig-paths/register bin/findGame.ts",
 		"generateImages": "ts-node -r tsconfig-paths/register bin/generateImages.ts",
-		"importGameAssets": "yarn importDocs && yarn importIcons"
+		"importGameAssets": "yarn importDocs && yarn importPak"
 	},
 	"devDependencies": {
 		"@node-steam/vdf": "^2.2.0",
@@ -27,6 +28,7 @@
 		"@types/sharp": "^0.24.0",
 		"angular-templatecache-loader": "^0.2.0",
 		"css-loader": "^3.4.2",
+		"minimist": "^1.2.5",
 		"node-sass": "^6.0.1",
 		"registry-js": "^1.15.1",
 		"sass-loader": "^10.0.0",

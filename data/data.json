@@ -11871,7 +11871,7 @@
 		},
 		"Recipe_Roof_Orange_01_C": {
 			"slug": "ficsit-roof-flat",
-			"name": "Ficsit Roof Flat",
+			"name": "FICSIT Roof Flat",
 			"className": "Recipe_Roof_Orange_01_C",
 			"alternate": false,
 			"time": 1,
@@ -11896,7 +11896,7 @@
 		},
 		"Recipe_Roof_Orange_02_C": {
 			"slug": "ficsit-roof-1m",
-			"name": "Ficsit Roof 1m",
+			"name": "FICSIT Roof 1m",
 			"className": "Recipe_Roof_Orange_02_C",
 			"alternate": false,
 			"time": 1,
@@ -11921,7 +11921,7 @@
 		},
 		"Recipe_Roof_Orange_03_C": {
 			"slug": "ficsit-roof-2m",
-			"name": "Ficsit Roof 2m",
+			"name": "FICSIT Roof 2m",
 			"className": "Recipe_Roof_Orange_03_C",
 			"alternate": false,
 			"time": 1,
@@ -11946,7 +11946,7 @@
 		},
 		"Recipe_Roof_Orange_04_C": {
 			"slug": "ficsit-roof-4m",
-			"name": "Ficsit Roof 4m",
+			"name": "FICSIT Roof 4m",
 			"className": "Recipe_Roof_Orange_04_C",
 			"alternate": false,
 			"time": 1,
@@ -12750,35 +12750,6 @@
 			"producedIn": [
 				"Desc_ConstructorMk1_C"
 			]
-		},
-		"Recipe_Stair_1b_C": {
-			"slug": "stairs",
-			"name": "Stairs",
-			"className": "Recipe_Stair_1b_C",
-			"alternate": false,
-			"time": 1,
-			"manualTimeMultiplier": 1,
-			"ingredients": [
-				{
-					"item": "Desc_Cement_C",
-					"amount": 4
-				},
-				{
-					"item": "Desc_IronPlate_C",
-					"amount": 2
-				}
-			],
-			"forBuilding": true,
-			"inMachine": false,
-			"inHand": false,
-			"inWorkshop": false,
-			"products": [
-				{
-					"item": "Desc_Stair_1b_C",
-					"amount": 1
-				}
-			],
-			"producedIn": []
 		},
 		"Recipe_Stairs_Left_01_C": {
 			"slug": "stairs-left",
@@ -18279,7 +18250,7 @@
 			"className": "Desc_QuartzCrystal_C",
 			"name": "Quartz Crystal",
 			"sinkPoints": 50,
-			"description": "Used for radar and quantum technology.",
+			"description": "Derived from Raw Quartz. Used in the production of advanced radar technology and high-quality display screens.",
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
@@ -18296,7 +18267,7 @@
 			"className": "Desc_RawQuartz_C",
 			"name": "Raw Quartz",
 			"sinkPoints": 15,
-			"description": "Raw Quartz is processed into Quartz Crystals which are used for radar and quantum technology.",
+			"description": "Raw Quartz can be processed into Quartz Crystals and Silica, which both offer a variety of applications.",
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
@@ -18398,8 +18369,8 @@
 			"className": "Desc_Silica_C",
 			"name": "Silica",
 			"sinkPoints": 20,
-			"description": "Derived from quartz, commonly used in structural materials and microelectronics.",
-			"stackSize": 100,
+			"description": "Derived from Raw Quartz. Commonly used to create glass structures, advanced refinement processes, and alternative production of electronics.",
+			"stackSize": 200,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
 			"liquid": false,
@@ -21613,8 +21584,8 @@
 		},
 		"ResourceSink_Customizer_Concrete_FoundationMaterial_C": {
 			"className": "ResourceSink_Customizer_Concrete_FoundationMaterial_C",
-			"name": "Concrete Foundations Material",
-			"slug": "concrete-foundations-material",
+			"name": "Concrete Foundation Material",
+			"slug": "concrete-foundation-material",
 			"tier": 1,
 			"cost": [
 				{
@@ -28042,7 +28013,7 @@
 		"Desc_Beam_C": {
 			"slug": "metal-beam",
 			"name": "Metal Beam",
-			"description": "Snaps to other Beams and various other structural buildings.\nBeams sport multiple build modes for different use cases.",
+			"description": "Snaps to other Beams and various other structural buildings.\nBeams support multiple build modes for different use cases.",
 			"categories": [
 				"SC_Beams_C"
 			],
@@ -28092,7 +28063,7 @@
 		"Desc_Beam_Painted_C": {
 			"slug": "painted-beam",
 			"name": "Painted Beam",
-			"description": "Snaps to other Beams and various other structural buildings.\nBeams sport multiple build modes for different use cases.",
+			"description": "Snaps to other Beams and various other structural buildings.\nBeams support multiple build modes for different use cases.",
 			"categories": [
 				"SC_Beams_C"
 			],
@@ -28685,7 +28656,7 @@
 		"Desc_Fence_01_C": {
 			"slug": "industrial-railing",
 			"name": "Industrial Railing",
-			"description": "Railings can be build on Foundations to create a safer working environment.",
+			"description": "Railings can be built on Foundations to create a safer working environment.",
 			"categories": [
 				"SC_Attach_C"
 			],
@@ -30605,7 +30576,7 @@
 		"Desc_Railing_01_C": {
 			"slug": "modern-railing",
 			"name": "Modern Railing",
-			"description": "Railings can be build on Foundations to create a safer working environment.\n\nThis particular Railing is 4 meters long and angles automatically when build on Ramps.",
+			"description": "Railings can be built on Foundations to create a safer working environment.\n\nThis particular Railing is 4 meters long and angles automatically when build on Ramps.",
 			"categories": [
 				"SC_Attach_C"
 			],
@@ -30733,7 +30704,7 @@
 		"Desc_RampDouble_Concrete_8x4_C": {
 			"slug": "double-ramp-8m",
 			"name": "Double Ramp 8m",
-			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 8m",
+			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
 			"categories": [
 				"SC_Ramps_C"
 			],
@@ -30781,7 +30752,7 @@
 		"Desc_RampDouble_Metal_8x4_C": {
 			"slug": "double-ramp-8m-1",
 			"name": "Double Ramp 8m",
-			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 8m",
+			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
 			"categories": [
 				"SC_Ramps_C"
 			],
@@ -30829,7 +30800,7 @@
 		"Desc_RampDouble_Polished_8x4_C": {
 			"slug": "double-ramp-8m-2",
 			"name": "Double Ramp 8m",
-			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 8m",
+			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
 			"categories": [
 				"SC_Ramps_C"
 			],
@@ -31714,7 +31685,7 @@
 		},
 		"Desc_Roof_Orange_01_C": {
 			"slug": "ficsit-roof-flat",
-			"name": "Ficsit Roof Flat",
+			"name": "FICSIT Roof Flat",
 			"description": "Snaps to Foundations, Walls, and other Roofs.\n\nSize: 8m x flat",
 			"categories": [
 				"SC_Roofs_C"
@@ -31730,7 +31701,7 @@
 		},
 		"Desc_Roof_Orange_02_C": {
 			"slug": "ficsit-roof-1m",
-			"name": "Ficsit Roof 1m",
+			"name": "FICSIT Roof 1m",
 			"description": "Snaps to Foundations, Walls, and other Roofs.\n\nSize: 8m x 1m",
 			"categories": [
 				"SC_Roofs_C"
@@ -31746,7 +31717,7 @@
 		},
 		"Desc_Roof_Orange_03_C": {
 			"slug": "ficsit-roof-2m",
-			"name": "Ficsit Roof 2m",
+			"name": "FICSIT Roof 2m",
 			"description": "Snaps to Foundations, Walls, and other Roofs.\n\nSize: 8m x 2m",
 			"categories": [
 				"SC_Roofs_C"
@@ -31762,7 +31733,7 @@
 		},
 		"Desc_Roof_Orange_04_C": {
 			"slug": "ficsit-roof-4m",
-			"name": "Ficsit Roof 4m",
+			"name": "FICSIT Roof 4m",
 			"description": "Snaps to Foundations, Walls, and other Roofs.\n\nSize: 8m x 4m",
 			"categories": [
 				"SC_Roofs_C"
@@ -32853,7 +32824,7 @@
 		"Desc_Wall_Concrete_8x4_ConveyorHole_01_C": {
 			"slug": "conveyor-wall-x1",
 			"name": "Conveyor Wall x1",
-			"description": "Has 1 Conveyor Belt connections.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
+			"description": "Has 1 Conveyor Belt connection.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
 			"categories": [
 				"SC_ConveyorConnections_C"
 			],
@@ -33253,7 +33224,7 @@
 		"Desc_Wall_Conveyor_8x4_03_C": {
 			"slug": "conveyor-wall-x1-1",
 			"name": "Conveyor Wall x1",
-			"description": "Has 1 Conveyor Belt connections.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
+			"description": "Has 1 Conveyor Belt connection.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
 			"categories": [
 				"SC_ConveyorConnections_C"
 			],
