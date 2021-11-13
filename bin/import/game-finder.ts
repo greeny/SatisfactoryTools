@@ -1,43 +1,26 @@
 import * as vdf from '@node-steam/vdf';
-import * as fs from 'fs';
+import fs from 'fs';;
 import * as Path from 'path';
 import { enumerateValues, HKEY, RegistryValueType } from 'registry-js';
-
-export type Channel = 'experimental' | 'earlyaccess';
-export const isChannel = (obj: any): obj is Channel => {
-	return obj === 'experimental' || obj === 'earlyaccess';
-};
-
-export interface IGameFinderOptions {
-	/** Satisfactory update channel */
-	channel: Channel;
-
-	/** true to only look for the game in Steam paths */
-	onlySteam: boolean;
-
-	/** true to only look for the game in Epic Games paths */
-	onlyEpic: boolean;
-
-	/** if defined, do not use the Windows registry to find the Steam library paths, just use this value */
-	steamLibraryPath?: string;
-
-	/** if defined, do not use the Windows registry to find the Epic Games 'Manifests' directory, just use this value */
-	epicManifestsPath?: string;
-}
+import { Channel, GameFinderOptions } from './game-finder-options';
 
 export class GameFinder {
-	public static findGame(options: IGameFinderOptions): string {
-		if (!options.onlyEpic) {
-			try {
-				return GameFinder.getSteamGamePath(options.channel, options.steamLibraryPath);
-			} catch (error) {
-				if (options.onlySteam) throw error;
+	public static findGame(options: GameFinderOptions): string {
+		try {
+			if (!options.onlyEpic) {
+				try {
+					return GameFinder.getSteamGamePath(options.channel);
+				} catch (err) {
+					if (options.onlySteam) throw err;
+				}
 			}
+			if (!options.onlySteam)
+				return GameFinder.getEpicGamesPath(options.channel);
 		}
-		if (!options.onlySteam)
-			return GameFinder.getEpicGamesPath(options.channel, options.epicManifestsPath);
-
-		throw new Error('Invalid options. Must specify either useSteam=true, useEpic=true, or both.')
+		catch (err) {
+			throw new Error(`Could not find ${options.channel} installation: ${err.message ?? 'unknown error'}. Options=${JSON.stringify(options)}`);
+		}
+		throw new Error('An unknown error ocurred.')
 	}
 
 	private static getRegistryString = (path: string, valueName: string): string | undefined => {
@@ -68,7 +51,7 @@ export class GameFinder {
 		return Path.join(appDataPath, 'Manifests');
 	}
 
-	private static getEpicGamesPath(channel: Channel, manifestsFolder?: string): string {
+	private static getEpicGamesPath(channel: Channel): string {
 		// This is the Epic Games catalog item id for the Experimental fork of Satisfactory.
 		// We could use DisplayName, but that would be less accurate.
 		const catalogIds: Record<Channel, string> = {
@@ -79,7 +62,7 @@ export class GameFinder {
 		const catalogId = catalogIds[channel];
 
 		// in the Manifests folder, there will be one .item file per installed game.
-		manifestsFolder = manifestsFolder || this.findWindowsEpicManifests();
+		const manifestsFolder = this.findWindowsEpicManifests();
 
 		if (!fs.existsSync(manifestsFolder)) {
 			throw new Error(`Epic Games manifests directory '${manifestsFolder}' does not exist`);
@@ -97,11 +80,11 @@ export class GameFinder {
 		throw new Error('Could not find installed game in any Epic Games library');
 	}
 
-	private static getSteamGamePath(channel: Channel, librariesVdf?: string): string {
+	private static getSteamGamePath(channel: Channel): string {
 		// look in the Windows registry to find Steam's installation path
 		const steamAppId = '526870';
 
-		librariesVdf = librariesVdf || this.findWindowsSteamLibrariesVdf();
+		const librariesVdf = this.findWindowsSteamLibrariesVdf();
 
 		if (!fs.existsSync(librariesVdf)) throw new Error(`${librariesVdf} does not exist.`);
 

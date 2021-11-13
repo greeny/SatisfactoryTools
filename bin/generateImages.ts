@@ -1,4 +1,4 @@
-import * as fs from 'fs';
+import fs from 'fs';;
 import * as path from 'path';
 import sharp from 'sharp';
 import {IJsonSchema} from '@src/Schema/IJsonSchema';

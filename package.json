@@ -7,13 +7,11 @@
 	"scripts": {
 		"build": "webpack --mode production",
 		"start": "webpack --mode development --progress --color --watch",
-		"importDocs": "ts-node -r tsconfig-paths/register bin/importDocs.ts && yarn parseDocs",
-		"importPak": "ts-node -r tsconfig-paths/register bin/importPak.ts && yarn generateImages",
 		"parseDocs": "ts-node -r tsconfig-paths/register bin/parseDocs.ts",
 		"parsePak": "ts-node -r tsconfig-paths/register bin/parsePak.ts",
 		"findGame": "ts-node -r tsconfig-paths/register bin/findGame.ts",
 		"generateImages": "ts-node -r tsconfig-paths/register bin/generateImages.ts",
-		"importGameAssets": "yarn importDocs && yarn importPak"
+		"importGameAssets": "ts-node -r tsconfig-paths/register bin/importGameAssets.ts"
 	},
 	"devDependencies": {
 		"@node-steam/vdf": "^2.2.0",
