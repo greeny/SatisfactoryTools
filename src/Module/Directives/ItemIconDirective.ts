@@ -34,6 +34,10 @@ export class ItemIconDirective implements IDirective
 					}
 				}
 			}
+
+			if (!scope.itemEntity) {
+				console.log('Item not found', scope.item);
+			}
 			if (!scope.size) {
 				scope.size = 32;
 			}

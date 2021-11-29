@@ -10,7 +10,9 @@ module.exports = {
 		filename: './www/assets/app.js'
 	},
 	plugins: [
-		new webpack.IgnorePlugin(/(fs|child_process)/),
+		new webpack.IgnorePlugin({
+			resourceRegExp: /(fs|child_process)/
+		}),
 		new TSLintPlugin({
 			files: ['./src/**/*.ts'],
 		}),
@@ -25,12 +27,20 @@ module.exports = {
 		rules: [
 			{
 				test: /\.tsx?$/,
-				loader: 'ts-loader',
+				use: [
+					{
+						loader: 'ts-loader',
+					},
+				],
 				exclude: '/node_modules/',
 			},
 			{
 				test: /\.html$/,
-				loader: "angular-templatecache-loader?module=app",
+				use: [
+					{
+						loader: 'angular-templatecache-loader?module=app',
+					},
+				],
 			},
 			{
 				test: /\.css$/i,

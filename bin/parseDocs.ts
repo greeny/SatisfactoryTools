@@ -130,6 +130,7 @@ for (const definitions of docs) {
 		case 'Class\'/Script/FactoryGame.FGBuildableFactoryBuilding\'':
 		case 'Class\'/Script/FactoryGame.FGBuildableWidgetSign\'':
 		case 'Class\'/Script/FactoryGame.FGBuildableLadder\'':
+		case 'Class\'/Script/FactoryGame.FGBuildablePassthrough\'':
 			for (const building of parseBuildings(definitions.Classes, true)) {
 				json.buildings[building.className] = building;
 			}
@@ -253,7 +254,7 @@ for (const info of extraInfo) {
 		json.buildings[info.className].buildMenuPriority = info.priority;
 		json.buildings[info.className].categories = info.categories;
 	} else {
-		// console.log(info.className);
+		console.log(info.className);
 	}
 }
 

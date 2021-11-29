@@ -217,6 +217,7 @@ export class Data
 				}
 			}
 		}
+		console.log(recipes);
 		return recipes;
 	}
 

@@ -47,6 +47,7 @@ export default function parseRecipes(recipes: {
 		'Recipe_JumpPadTilted_C',
 		'Recipe_JumpPad_C',
 		'Recipe_PillarTop_C',
+		'Recipe_Stair_1b_C',
 	];
 
 	const result: IRecipeSchema[] = [];
@@ -54,6 +55,10 @@ export default function parseRecipes(recipes: {
 	recipeLoop:
 	for (const recipe of recipes) {
 		if (ignoredRecipes.indexOf(recipe.ClassName) !== -1) {
+			continue;
+		}
+
+		if (!recipe.mProducedIn) {
 			continue;
 		}
 

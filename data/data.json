@@ -12751,35 +12751,6 @@
 				"Desc_ConstructorMk1_C"
 			]
 		},
-		"Recipe_Stair_1b_C": {
-			"slug": "stairs",
-			"name": "Stairs",
-			"className": "Recipe_Stair_1b_C",
-			"alternate": false,
-			"time": 1,
-			"manualTimeMultiplier": 1,
-			"ingredients": [
-				{
-					"item": "Desc_Cement_C",
-					"amount": 4
-				},
-				{
-					"item": "Desc_IronPlate_C",
-					"amount": 2
-				}
-			],
-			"forBuilding": true,
-			"inMachine": false,
-			"inHand": false,
-			"inWorkshop": false,
-			"products": [
-				{
-					"item": "Desc_Stair_1b_C",
-					"amount": 1
-				}
-			],
-			"producedIn": []
-		},
 		"Recipe_Stairs_Left_01_C": {
 			"slug": "stairs-left",
 			"name": "Stairs Left",
@@ -13245,37 +13216,6 @@
 				}
 			],
 			"producedIn": []
-		},
-		"Recipe_SteelWall_8x4_C": {
-			"slug": "tilted-wall-4m",
-			"name": "Tilted Wall 4m",
-			"className": "Recipe_SteelWall_8x4_C",
-			"alternate": false,
-			"time": 1,
-			"manualTimeMultiplier": 1,
-			"ingredients": [
-				{
-					"item": "Desc_IronPlate_C",
-					"amount": 3
-				},
-				{
-					"item": "Desc_Cement_C",
-					"amount": 3
-				}
-			],
-			"forBuilding": false,
-			"inMachine": true,
-			"inHand": false,
-			"inWorkshop": false,
-			"products": [
-				{
-					"item": "Desc_SteelWall_8x4_C",
-					"amount": 1
-				}
-			],
-			"producedIn": [
-				""
-			]
 		},
 		"Recipe_SteelWall_8x4_Gate_01_C": {
 			"slug": "gate-hole-wall",
@@ -16109,37 +16049,6 @@
 				}
 			],
 			"producedIn": []
-		},
-		"Recipe_Wall_Window_8x4_03_Steel_C": {
-			"slug": "panel-window",
-			"name": "Panel Window",
-			"className": "Recipe_Wall_Window_8x4_03_Steel_C",
-			"alternate": false,
-			"time": 1,
-			"manualTimeMultiplier": 1,
-			"ingredients": [
-				{
-					"item": "Desc_IronPlate_C",
-					"amount": 3
-				},
-				{
-					"item": "Desc_Cement_C",
-					"amount": 3
-				}
-			],
-			"forBuilding": false,
-			"inMachine": true,
-			"inHand": false,
-			"inWorkshop": false,
-			"products": [
-				{
-					"item": "Desc_Wall_Window_8x4_03_Steel_C",
-					"amount": 1
-				}
-			],
-			"producedIn": [
-				""
-			]
 		},
 		"Recipe_Wall_Window_8x4_04_C": {
 			"slug": "reinforced-window",
@@ -21447,7 +21356,7 @@
 		"ResourceSink_ConveyorLiftHole_C": {
 			"className": "ResourceSink_ConveyorLiftHole_C",
 			"name": "Conveyor Lift Floor Hole",
-			"slug": "conveyor-lift-floor-hole",
+			"slug": "conveyor-lift-floor-hole-1",
 			"tier": 1,
 			"cost": [
 				{
@@ -22141,7 +22050,7 @@
 		"ResourceSink_FactoryBarrier_C": {
 			"className": "ResourceSink_FactoryBarrier_C",
 			"name": "Road Barrier",
-			"slug": "road-barrier-1",
+			"slug": "road-barrier",
 			"tier": 1,
 			"cost": [
 				{
@@ -23209,7 +23118,7 @@
 		"ResourceSink_PipelineFloorHole_C": {
 			"className": "ResourceSink_PipelineFloorHole_C",
 			"name": "Pipeline Floor Hole",
-			"slug": "pipeline-floor-hole",
+			"slug": "pipeline-floor-hole-1",
 			"tier": 1,
 			"cost": [
 				{
@@ -28143,20 +28052,6 @@
 				"height": 0
 			}
 		},
-		"Desc_CatwalkCorner_C": {
-			"slug": "catwalk-corner",
-			"name": "Catwalk Corner",
-			"description": "Snaps to foundations and other walkways.\nSpecifically made for humans to walk on.",
-			"categories": [],
-			"buildMenuPriority": 0,
-			"className": "Desc_CatwalkCorner_C",
-			"metadata": {},
-			"size": {
-				"width": 4,
-				"length": 4,
-				"height": 0
-			}
-		},
 		"Desc_CatwalkCross_C": {
 			"slug": "catwalk-crossing",
 			"name": "Catwalk Crossing",
@@ -28237,6 +28132,22 @@
 				"height": 0
 			}
 		},
+		"Desc_CatwalkTurn_C": {
+			"slug": "catwalk-corner",
+			"name": "Catwalk Corner",
+			"description": "Snaps to foundations and other walkways.\nSpecifically made for humans to walk on.",
+			"categories": [
+				"SC_Catwalks_C"
+			],
+			"buildMenuPriority": 100,
+			"className": "Desc_CatwalkTurn_C",
+			"metadata": {},
+			"size": {
+				"width": 4,
+				"length": 4,
+				"height": 0
+			}
+		},
 		"Desc_CeilingLight_C": {
 			"slug": "ceiling-light",
 			"name": "Ceiling Light",
@@ -28256,7 +28167,7 @@
 			}
 		},
 		"Desc_Concrete_Barrier_01_C": {
-			"slug": "road-barrier",
+			"slug": "road-barrier-concrete",
 			"name": "Road Barrier",
 			"description": "A concrete Barrier, used to create a safer working environment.",
 			"categories": [
@@ -28766,6 +28677,38 @@
 				"height": 1
 			}
 		},
+		"Desc_FoundationPassthrough_Lift_C": {
+			"slug": "conveyor-lift-floor-hole",
+			"name": "Conveyor Lift Floor Hole",
+			"description": "Can be attached to Foundations, allowing Conveyor Lifts to pass through them.",
+			"categories": [
+				"SC_ConverPole_C"
+			],
+			"buildMenuPriority": 8,
+			"className": "Desc_FoundationPassthrough_Lift_C",
+			"metadata": {},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
+			}
+		},
+		"Desc_FoundationPassthrough_Pipe_C": {
+			"slug": "pipeline-floor-hole",
+			"name": "Pipeline Floor Hole",
+			"description": "Can be attached to Foundations, allowing Pipelines to pass through them.",
+			"categories": [
+				"SC_PipeSupport_C"
+			],
+			"buildMenuPriority": 8,
+			"className": "Desc_FoundationPassthrough_Pipe_C",
+			"metadata": {},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
+			}
+		},
 		"Desc_Foundation_8x1_01_C": {
 			"slug": "foundation-1m",
 			"name": "Foundation 1m",
@@ -28815,7 +28758,7 @@
 			}
 		},
 		"Desc_Foundation_ConcretePolished_8x1_C": {
-			"slug": "foundation-1m-1",
+			"slug": "foundation-1m-polished",
 			"name": "Foundation 1m",
 			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
 			"categories": [
@@ -28831,7 +28774,7 @@
 			}
 		},
 		"Desc_Foundation_ConcretePolished_8x2_2_C": {
-			"slug": "foundation-2m-1",
+			"slug": "foundation-2m-polished",
 			"name": "Foundation 2m",
 			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
 			"categories": [],
@@ -28845,7 +28788,7 @@
 			}
 		},
 		"Desc_Foundation_ConcretePolished_8x4_C": {
-			"slug": "foundation-4m-1",
+			"slug": "foundation-4m-polished",
 			"name": "Foundation 4m",
 			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
 			"categories": [],
@@ -28859,7 +28802,7 @@
 			}
 		},
 		"Desc_Foundation_Concrete_8x1_C": {
-			"slug": "foundation-1m-2",
+			"slug": "foundation-1m-concrete",
 			"name": "Foundation 1m",
 			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
 			"categories": [
@@ -28875,7 +28818,7 @@
 			}
 		},
 		"Desc_Foundation_Concrete_8x2_C": {
-			"slug": "foundation-2m-2",
+			"slug": "foundation-2m-concrete",
 			"name": "Foundation 2m",
 			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
 			"categories": [
@@ -28891,7 +28834,7 @@
 			}
 		},
 		"Desc_Foundation_Concrete_8x4_C": {
-			"slug": "foundation-4m-2",
+			"slug": "foundation-4m-concrete",
 			"name": "Foundation 4m",
 			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
 			"categories": [
@@ -28923,7 +28866,7 @@
 			}
 		},
 		"Desc_Foundation_Metal_8x1_C": {
-			"slug": "foundation-1m-3",
+			"slug": "foundation-1m-metal",
 			"name": "Foundation 1m",
 			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
 			"categories": [
@@ -28939,7 +28882,7 @@
 			}
 		},
 		"Desc_Foundation_Metal_8x2_C": {
-			"slug": "foundation-2m-3",
+			"slug": "foundation-2m-metal",
 			"name": "Foundation 2m",
 			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
 			"categories": [
@@ -28955,7 +28898,7 @@
 			}
 		},
 		"Desc_Foundation_Metal_8x4_C": {
-			"slug": "foundation-4m-3",
+			"slug": "foundation-4m-metal",
 			"name": "Foundation 4m",
 			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
 			"categories": [
@@ -29240,7 +29183,7 @@
 			}
 		},
 		"Desc_InvertedRamp_Concrete_8x1_C": {
-			"slug": "inv-ramp-1m",
+			"slug": "inv-ramp-1m-concrete",
 			"name": "Inv. Ramp 1m",
 			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
 			"categories": [
@@ -29256,7 +29199,7 @@
 			}
 		},
 		"Desc_InvertedRamp_Concrete_8x2_C": {
-			"slug": "inv-ramp-2m",
+			"slug": "inv-ramp-2m-concrete",
 			"name": "Inv. Ramp 2m",
 			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
 			"categories": [
@@ -29272,7 +29215,7 @@
 			}
 		},
 		"Desc_InvertedRamp_Concrete_8x4_C": {
-			"slug": "inv-ramp-4m",
+			"slug": "inv-ramp-4m-concrete",
 			"name": "Inv. Ramp 4m",
 			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
 			"categories": [
@@ -29288,7 +29231,7 @@
 			}
 		},
 		"Desc_InvertedRamp_DCorner_Concrete_8x1_C": {
-			"slug": "inv-down-corner-1m",
+			"slug": "inv-down-corner-1m-concrete",
 			"name": "Inv. Down Corner 1m",
 			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
 			"categories": [
@@ -29304,7 +29247,7 @@
 			}
 		},
 		"Desc_InvertedRamp_DCorner_Concrete_8x2_C": {
-			"slug": "inv-down-corner-2m",
+			"slug": "inv-down-corner-2m-concrete",
 			"name": "Inv. Down Corner 2m",
 			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
 			"categories": [
@@ -29320,7 +29263,7 @@
 			}
 		},
 		"Desc_InvertedRamp_DCorner_Concrete_8x4_C": {
-			"slug": "inv-down-corner-4m",
+			"slug": "inv-down-corner-4m-concrete",
 			"name": "Inv. Down Corner 4m",
 			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
 			"categories": [
@@ -29336,7 +29279,7 @@
 			}
 		},
 		"Desc_InvertedRamp_DCorner_Metal_8x1_C": {
-			"slug": "inv-down-corner-1m-1",
+			"slug": "inv-down-corner-1m-metal",
 			"name": "Inv. Down Corner 1m",
 			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
 			"categories": [
@@ -29352,7 +29295,7 @@
 			}
 		},
 		"Desc_InvertedRamp_DCorner_Metal_8x2_C": {
-			"slug": "inv-down-corner-2m-1",
+			"slug": "inv-down-corner-2m-metal",
 			"name": "Inv. Down Corner 2m",
 			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
 			"categories": [
@@ -29368,7 +29311,7 @@
 			}
 		},
 		"Desc_InvertedRamp_DCorner_Metal_8x4_C": {
-			"slug": "inv-down-corner-4m-1",
+			"slug": "inv-down-corner-4m-metal",
 			"name": "Inv. Down Corner 4m",
 			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
 			"categories": [
@@ -29384,7 +29327,7 @@
 			}
 		},
 		"Desc_InvertedRamp_DCorner_Polished_8x1_C": {
-			"slug": "inv-down-corner-1m-2",
+			"slug": "inv-down-corner-1m-polished",
 			"name": "Inv. Down Corner 1m",
 			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
 			"categories": [
@@ -29400,7 +29343,7 @@
 			}
 		},
 		"Desc_InvertedRamp_DCorner_Polished_8x2_C": {
-			"slug": "inv-down-corner-2m-2",
+			"slug": "inv-down-corner-2m-polished",
 			"name": "Inv. Down Corner 2m",
 			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
 			"categories": [
@@ -29416,7 +29359,7 @@
 			}
 		},
 		"Desc_InvertedRamp_DCorner_Polished_8x4_C": {
-			"slug": "inv-down-corner-4m-2",
+			"slug": "inv-down-corner-4m-polished",
 			"name": "Inv. Down Corner 4m",
 			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
 			"categories": [
@@ -29432,7 +29375,7 @@
 			}
 		},
 		"Desc_InvertedRamp_Metal_8x1_C": {
-			"slug": "inv-ramp-1m-1",
+			"slug": "inv-ramp-1m-metal",
 			"name": "Inv. Ramp 1m",
 			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
 			"categories": [
@@ -29448,7 +29391,7 @@
 			}
 		},
 		"Desc_InvertedRamp_Metal_8x2_C": {
-			"slug": "inv-ramp-2m-1",
+			"slug": "inv-ramp-2m-metal",
 			"name": "Inv. Ramp 2m",
 			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
 			"categories": [
@@ -29464,7 +29407,7 @@
 			}
 		},
 		"Desc_InvertedRamp_Metal_8x4_C": {
-			"slug": "inv-ramp-4m-1",
+			"slug": "inv-ramp-4m-metal",
 			"name": "Inv. Ramp 4m",
 			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
 			"categories": [
@@ -29480,7 +29423,7 @@
 			}
 		},
 		"Desc_InvertedRamp_Polished_8x1_C": {
-			"slug": "inv-ramp-1m-2",
+			"slug": "inv-ramp-1m-polished",
 			"name": "Inv. Ramp 1m",
 			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
 			"categories": [
@@ -29496,7 +29439,7 @@
 			}
 		},
 		"Desc_InvertedRamp_Polished_8x2_C": {
-			"slug": "inv-ramp-2m-2",
+			"slug": "inv-ramp-2m-polished",
 			"name": "Inv. Ramp 2m",
 			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
 			"categories": [
@@ -29512,7 +29455,7 @@
 			}
 		},
 		"Desc_InvertedRamp_Polished_8x4_C": {
-			"slug": "inv-ramp-4m-2",
+			"slug": "inv-ramp-4m-polished",
 			"name": "Inv. Ramp 4m",
 			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
 			"categories": [
@@ -29528,7 +29471,7 @@
 			}
 		},
 		"Desc_InvertedRamp_UCorner_Concrete_8x1_C": {
-			"slug": "inv-up-corner-1m",
+			"slug": "inv-up-corner-1m-concrete",
 			"name": "Inv. Up Corner 1m",
 			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
 			"categories": [
@@ -29544,7 +29487,7 @@
 			}
 		},
 		"Desc_InvertedRamp_UCorner_Concrete_8x2_C": {
-			"slug": "inv-up-corner-2m",
+			"slug": "inv-up-corner-2m-concrete",
 			"name": "Inv. Up Corner 2m",
 			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
 			"categories": [
@@ -29560,7 +29503,7 @@
 			}
 		},
 		"Desc_InvertedRamp_UCorner_Concrete_8x4_C": {
-			"slug": "inv-up-corner-4m",
+			"slug": "inv-up-corner-4m-concrete",
 			"name": "Inv. Up Corner 4m",
 			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
 			"categories": [
@@ -29576,7 +29519,7 @@
 			}
 		},
 		"Desc_InvertedRamp_UCorner_Metal_8x1_C": {
-			"slug": "inv-up-corner-1m-1",
+			"slug": "inv-up-corner-1m-metal",
 			"name": "Inv. Up Corner 1m",
 			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
 			"categories": [
@@ -29592,7 +29535,7 @@
 			}
 		},
 		"Desc_InvertedRamp_UCorner_Metal_8x2_C": {
-			"slug": "inv-up-corner-2m-1",
+			"slug": "inv-up-corner-2m-metal",
 			"name": "Inv. Up Corner 2m",
 			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
 			"categories": [
@@ -29608,7 +29551,7 @@
 			}
 		},
 		"Desc_InvertedRamp_UCorner_Metal_8x4_C": {
-			"slug": "inv-up-corner-4m-1",
+			"slug": "inv-up-corner-4m-metal",
 			"name": "Inv. Up Corner 4m",
 			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
 			"categories": [
@@ -29624,7 +29567,7 @@
 			}
 		},
 		"Desc_InvertedRamp_UCorner_Polished_8x1_C": {
-			"slug": "inv-up-corner-1m-2",
+			"slug": "inv-up-corner-1m-polished",
 			"name": "Inv. Up Corner 1m",
 			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
 			"categories": [
@@ -29640,7 +29583,7 @@
 			}
 		},
 		"Desc_InvertedRamp_UCorner_Polished_8x2_C": {
-			"slug": "inv-up-corner-2m-2",
+			"slug": "inv-up-corner-2m-polished",
 			"name": "Inv. Up Corner 2m",
 			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
 			"categories": [
@@ -29656,7 +29599,7 @@
 			}
 		},
 		"Desc_InvertedRamp_UCorner_Polished_8x4_C": {
-			"slug": "inv-up-corner-4m-2",
+			"slug": "inv-up-corner-4m-polished",
 			"name": "Inv. Up Corner 4m",
 			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
 			"categories": [
@@ -29977,7 +29920,7 @@
 			}
 		},
 		"Desc_PillarMiddle_Concrete_C": {
-			"slug": "big-concrete-pillar",
+			"slug": "big-concrete-pillar-concrete",
 			"name": "Big Concrete Pillar",
 			"description": "Snaps to other Pillars and can be placed on, for example, Foundations and Walls.\n\nSize: 4m x 4m",
 			"categories": [
@@ -30025,7 +29968,7 @@
 			}
 		},
 		"Desc_Pillar_Small_Concrete_C": {
-			"slug": "small-concrete-pillar",
+			"slug": "small-concrete-pillar-concrete",
 			"name": "Small Concrete Pillar",
 			"description": "Snaps to other Pillars and can be placed on, for example, Foundations and Walls.\n\nSize: 2m x 4m",
 			"categories": [
@@ -30057,7 +30000,7 @@
 			}
 		},
 		"Desc_Pillar_Small_Metal_C": {
-			"slug": "small-metal-pillar",
+			"slug": "small-metal-pillar-metal",
 			"name": "Small Metal Pillar",
 			"description": "Snaps to other Pillars and can be placed on, for example, Foundations and Walls.\n\nSize: 2m x 4m",
 			"categories": [
@@ -30699,7 +30642,7 @@
 			}
 		},
 		"Desc_RampDouble_Concrete_8x1_C": {
-			"slug": "double-ramp-2m-1",
+			"slug": "double-ramp-2m-concrete",
 			"name": "Double Ramp 2m",
 			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
 			"categories": [
@@ -30715,7 +30658,7 @@
 			}
 		},
 		"Desc_RampDouble_Concrete_8x2_C": {
-			"slug": "double-ramp-4m-1",
+			"slug": "double-ramp-4m-concrete",
 			"name": "Double Ramp 4m",
 			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
 			"categories": [
@@ -30731,7 +30674,7 @@
 			}
 		},
 		"Desc_RampDouble_Concrete_8x4_C": {
-			"slug": "double-ramp-8m",
+			"slug": "double-ramp-8m-concrete",
 			"name": "Double Ramp 8m",
 			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 8m",
 			"categories": [
@@ -30747,7 +30690,7 @@
 			}
 		},
 		"Desc_RampDouble_Metal_8x1_C": {
-			"slug": "double-ramp-2m-2",
+			"slug": "double-ramp-2m-metal",
 			"name": "Double Ramp 2m",
 			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
 			"categories": [
@@ -30763,7 +30706,7 @@
 			}
 		},
 		"Desc_RampDouble_Metal_8x2_C": {
-			"slug": "double-ramp-4m-2",
+			"slug": "double-ramp-4m-metal",
 			"name": "Double Ramp 4m",
 			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
 			"categories": [
@@ -30779,7 +30722,7 @@
 			}
 		},
 		"Desc_RampDouble_Metal_8x4_C": {
-			"slug": "double-ramp-8m-1",
+			"slug": "double-ramp-8m-metal",
 			"name": "Double Ramp 8m",
 			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 8m",
 			"categories": [
@@ -30795,7 +30738,7 @@
 			}
 		},
 		"Desc_RampDouble_Polished_8x1_C": {
-			"slug": "double-ramp-2m-3",
+			"slug": "double-ramp-2m-polished",
 			"name": "Double Ramp 2m",
 			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
 			"categories": [
@@ -30811,7 +30754,7 @@
 			}
 		},
 		"Desc_RampDouble_Polished_8x2_C": {
-			"slug": "double-ramp-4m-3",
+			"slug": "double-ramp-4m-polished",
 			"name": "Double Ramp 4m",
 			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
 			"categories": [
@@ -30827,7 +30770,7 @@
 			}
 		},
 		"Desc_RampDouble_Polished_8x4_C": {
-			"slug": "double-ramp-8m-2",
+			"slug": "double-ramp-8m-polished",
 			"name": "Double Ramp 8m",
 			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 8m",
 			"categories": [
@@ -30843,7 +30786,7 @@
 			}
 		},
 		"Desc_RampInverted_8x1_C": {
-			"slug": "inv-ramp-1m-3",
+			"slug": "inv-ramp-1m",
 			"name": "Inv. Ramp 1m",
 			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
 			"categories": [
@@ -30859,7 +30802,7 @@
 			}
 		},
 		"Desc_RampInverted_8x1_Corner_01_C": {
-			"slug": "inv-up-corner-1m-3",
+			"slug": "inv-up-corner-1m",
 			"name": "Inv. Up Corner 1m",
 			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
 			"categories": [
@@ -30875,7 +30818,7 @@
 			}
 		},
 		"Desc_RampInverted_8x1_Corner_02_C": {
-			"slug": "inv-down-corner-1m-3",
+			"slug": "inv-down-corner-1m",
 			"name": "Inv. Down Corner 1m",
 			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
 			"categories": [
@@ -30891,7 +30834,7 @@
 			}
 		},
 		"Desc_RampInverted_8x2_01_C": {
-			"slug": "inv-ramp-2m-3",
+			"slug": "inv-ramp-2m",
 			"name": "Inv. Ramp 2m",
 			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
 			"categories": [
@@ -30907,7 +30850,7 @@
 			}
 		},
 		"Desc_RampInverted_8x2_Corner_01_C": {
-			"slug": "inv-up-corner-2m-3",
+			"slug": "inv-up-corner-2m",
 			"name": "Inv. Up Corner 2m",
 			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
 			"categories": [
@@ -30923,7 +30866,7 @@
 			}
 		},
 		"Desc_RampInverted_8x2_Corner_02_C": {
-			"slug": "inv-down-corner-2m-3",
+			"slug": "inv-down-corner-2m",
 			"name": "Inv. Down Corner 2m",
 			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
 			"categories": [
@@ -30939,7 +30882,7 @@
 			}
 		},
 		"Desc_RampInverted_8x4_Corner_01_C": {
-			"slug": "inv-up-corner-4m-3",
+			"slug": "inv-up-corner-4m",
 			"name": "Inv. Up Corner 4m",
 			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
 			"categories": [
@@ -30955,7 +30898,7 @@
 			}
 		},
 		"Desc_RampInverted_8x4_Corner_02_C": {
-			"slug": "inv-down-corner-4m-3",
+			"slug": "inv-down-corner-4m",
 			"name": "Inv. Down Corner 4m",
 			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
 			"categories": [
@@ -31019,7 +30962,7 @@
 			}
 		},
 		"Desc_Ramp_8x4_Inverted_01_C": {
-			"slug": "inv-ramp-4m-3",
+			"slug": "inv-ramp-4m",
 			"name": "Inv. Ramp 4m",
 			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
 			"categories": [
@@ -31035,7 +30978,7 @@
 			}
 		},
 		"Desc_Ramp_8x8x8_C": {
-			"slug": "double-ramp-8m-3",
+			"slug": "double-ramp-8m",
 			"name": "Double Ramp 8m",
 			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 8m",
 			"categories": [
@@ -31051,7 +30994,7 @@
 			}
 		},
 		"Desc_Ramp_Concrete_8x1_C": {
-			"slug": "ramp-1m-1",
+			"slug": "ramp-1m-concrete",
 			"name": "Ramp 1m",
 			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
 			"categories": [
@@ -31067,7 +31010,7 @@
 			}
 		},
 		"Desc_Ramp_Concrete_8x2_C": {
-			"slug": "ramp-2m-1",
+			"slug": "ramp-2m-concrete",
 			"name": "Ramp 2m",
 			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
 			"categories": [
@@ -31083,7 +31026,7 @@
 			}
 		},
 		"Desc_Ramp_Concrete_8x4_C": {
-			"slug": "ramp-4m-1",
+			"slug": "ramp-4m-concrete",
 			"name": "Ramp 4m",
 			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
 			"categories": [
@@ -31195,7 +31138,7 @@
 			}
 		},
 		"Desc_Ramp_DownCorner_Concrete_8x1_C": {
-			"slug": "down-corner-ramp-1m-1",
+			"slug": "down-corner-ramp-1m-concrete",
 			"name": "Down Corner Ramp 1m",
 			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
 			"categories": [
@@ -31211,7 +31154,7 @@
 			}
 		},
 		"Desc_Ramp_DownCorner_Concrete_8x2_C": {
-			"slug": "down-corner-ramp-2m-1",
+			"slug": "down-corner-ramp-2m-concrete",
 			"name": "Down Corner Ramp 2m",
 			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
 			"categories": [
@@ -31227,7 +31170,7 @@
 			}
 		},
 		"Desc_Ramp_DownCorner_Concrete_8x4_C": {
-			"slug": "down-corner-ramp-4m-1",
+			"slug": "down-corner-ramp-4m-concrete",
 			"name": "Down Corner Ramp 4m",
 			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
 			"categories": [
@@ -31243,7 +31186,7 @@
 			}
 		},
 		"Desc_Ramp_DownCorner_Metal_8x1_C": {
-			"slug": "down-corner-ramp-1m-2",
+			"slug": "down-corner-ramp-1m-metal",
 			"name": "Down Corner Ramp 1m",
 			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
 			"categories": [
@@ -31259,7 +31202,7 @@
 			}
 		},
 		"Desc_Ramp_DownCorner_Metal_8x2_C": {
-			"slug": "down-corner-ramp-2m-2",
+			"slug": "down-corner-ramp-2m-metal",
 			"name": "Down Corner Ramp 2m",
 			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
 			"categories": [
@@ -31275,7 +31218,7 @@
 			}
 		},
 		"Desc_Ramp_DownCorner_Metal_8x4_C": {
-			"slug": "down-corner-ramp-4m-2",
+			"slug": "down-corner-ramp-4m-metal",
 			"name": "Down Corner Ramp 4m",
 			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
 			"categories": [
@@ -31291,7 +31234,7 @@
 			}
 		},
 		"Desc_Ramp_DownCorner_Polished_8x1_C": {
-			"slug": "down-corner-ramp-1m-3",
+			"slug": "down-corner-ramp-1m-polished",
 			"name": "Down Corner Ramp 1m",
 			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
 			"categories": [
@@ -31307,7 +31250,7 @@
 			}
 		},
 		"Desc_Ramp_DownCorner_Polished_8x2_C": {
-			"slug": "down-corner-ramp-2m-3",
+			"slug": "down-corner-ramp-2m-polished",
 			"name": "Down Corner Ramp 2m",
 			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
 			"categories": [
@@ -31323,7 +31266,7 @@
 			}
 		},
 		"Desc_Ramp_DownCorner_Polished_8x4_C": {
-			"slug": "down-corner-ramp-4m-3",
+			"slug": "down-corner-ramp-4m-polished",
 			"name": "Down Corner Ramp 4m",
 			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
 			"categories": [
@@ -31371,7 +31314,7 @@
 			}
 		},
 		"Desc_Ramp_Metal_8x1_C": {
-			"slug": "ramp-1m-2",
+			"slug": "ramp-1m-metal",
 			"name": "Ramp 1m",
 			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
 			"categories": [
@@ -31387,7 +31330,7 @@
 			}
 		},
 		"Desc_Ramp_Metal_8x2_C": {
-			"slug": "ramp-2m-2",
+			"slug": "ramp-2m-metal",
 			"name": "Ramp 2m",
 			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
 			"categories": [
@@ -31403,7 +31346,7 @@
 			}
 		},
 		"Desc_Ramp_Metal_8x4_C": {
-			"slug": "ramp-4m-2",
+			"slug": "ramp-4m-metal",
 			"name": "Ramp 4m",
 			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
 			"categories": [
@@ -31419,7 +31362,7 @@
 			}
 		},
 		"Desc_Ramp_Polished_8x1_C": {
-			"slug": "ramp-1m-3",
+			"slug": "ramp-1m-polished",
 			"name": "Ramp 1m",
 			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
 			"categories": [
@@ -31435,7 +31378,7 @@
 			}
 		},
 		"Desc_Ramp_Polished_8x2_C": {
-			"slug": "ramp-2m-3",
+			"slug": "ramp-2m-polished",
 			"name": "Ramp 2m",
 			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
 			"categories": [
@@ -31451,7 +31394,7 @@
 			}
 		},
 		"Desc_Ramp_Polished_8x4_C": {
-			"slug": "ramp-4m-3",
+			"slug": "ramp-4m-polished",
 			"name": "Ramp 4m",
 			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
 			"categories": [
@@ -31467,7 +31410,7 @@
 			}
 		},
 		"Desc_Ramp_UpCorner_Concrete_8x1_C": {
-			"slug": "up-corner-ramp-1m-1",
+			"slug": "up-corner-ramp-1m-concrete",
 			"name": "Up Corner Ramp 1m",
 			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
 			"categories": [
@@ -31483,7 +31426,7 @@
 			}
 		},
 		"Desc_Ramp_UpCorner_Concrete_8x2_C": {
-			"slug": "up-corner-ramp-2m-1",
+			"slug": "up-corner-ramp-2m-concrete",
 			"name": "Up Corner Ramp 2m",
 			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
 			"categories": [
@@ -31499,7 +31442,7 @@
 			}
 		},
 		"Desc_Ramp_UpCorner_Concrete_8x4_C": {
-			"slug": "up-corner-ramp-4m-1",
+			"slug": "up-corner-ramp-4m-concrete",
 			"name": "Up Corner Ramp 4m",
 			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
 			"categories": [
@@ -31515,7 +31458,7 @@
 			}
 		},
 		"Desc_Ramp_UpCorner_Metal_8x1_C": {
-			"slug": "up-corner-ramp-1m-2",
+			"slug": "up-corner-ramp-1m-metal",
 			"name": "Up Corner Ramp 1m",
 			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
 			"categories": [
@@ -31531,7 +31474,7 @@
 			}
 		},
 		"Desc_Ramp_UpCorner_Metal_8x2_C": {
-			"slug": "up-corner-ramp-2m-2",
+			"slug": "up-corner-ramp-2m-metal",
 			"name": "Up Corner Ramp 2m",
 			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
 			"categories": [
@@ -31547,7 +31490,7 @@
 			}
 		},
 		"Desc_Ramp_UpCorner_Metal_8x4_C": {
-			"slug": "up-corner-ramp-4m-2",
+			"slug": "up-corner-ramp-4m-metal",
 			"name": "Up Corner Ramp 4m",
 			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
 			"categories": [
@@ -31563,7 +31506,7 @@
 			}
 		},
 		"Desc_Ramp_UpCorner_Polished_8x1_C": {
-			"slug": "up-corner-ramp-1m-3",
+			"slug": "up-corner-ramp-1m-polished",
 			"name": "Up Corner Ramp 1m",
 			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
 			"categories": [
@@ -31579,7 +31522,7 @@
 			}
 		},
 		"Desc_Ramp_UpCorner_Polished_8x2_C": {
-			"slug": "up-corner-ramp-2m-3",
+			"slug": "up-corner-ramp-2m-polished",
 			"name": "Up Corner Ramp 2m",
 			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
 			"categories": [
@@ -31595,7 +31538,7 @@
 			}
 		},
 		"Desc_Ramp_UpCorner_Polished_8x4_C": {
-			"slug": "up-corner-ramp-4m-3",
+			"slug": "up-corner-ramp-4m-polished",
 			"name": "Up Corner Ramp 4m",
 			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
 			"categories": [
@@ -32819,7 +32762,7 @@
 			}
 		},
 		"Desc_Wall_Concrete_8x1_C": {
-			"slug": "basic-wall-1m",
+			"slug": "basic-wall-1m-concrete",
 			"name": "Basic Wall 1m",
 			"description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 1m",
 			"categories": [
@@ -32835,7 +32778,7 @@
 			}
 		},
 		"Desc_Wall_Concrete_8x4_C": {
-			"slug": "basic-wall-4m-1",
+			"slug": "basic-wall-4m-concrete",
 			"name": "Basic Wall 4m",
 			"description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 4m",
 			"categories": [
@@ -32851,7 +32794,7 @@
 			}
 		},
 		"Desc_Wall_Concrete_8x4_ConveyorHole_01_C": {
-			"slug": "conveyor-wall-x1",
+			"slug": "conveyor-wall-x1-concrete",
 			"name": "Conveyor Wall x1",
 			"description": "Has 1 Conveyor Belt connections.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
 			"categories": [
@@ -32867,7 +32810,7 @@
 			}
 		},
 		"Desc_Wall_Concrete_8x4_ConveyorHole_02_C": {
-			"slug": "conveyor-wall-x2",
+			"slug": "conveyor-wall-x2-concrete",
 			"name": "Conveyor Wall x2",
 			"description": "Has 2 Conveyor Belt connections.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
 			"categories": [
@@ -32883,7 +32826,7 @@
 			}
 		},
 		"Desc_Wall_Concrete_8x4_ConveyorHole_03_C": {
-			"slug": "conveyor-wall-x3",
+			"slug": "conveyor-wall-x3-concrete",
 			"name": "Conveyor Wall x3",
 			"description": "Has 3 Conveyor Belt connections.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
 			"categories": [
@@ -32899,7 +32842,7 @@
 			}
 		},
 		"Desc_Wall_Concrete_8x4_Corner_01_C": {
-			"slug": "tilted-corner-wall-4m",
+			"slug": "tilted-corner-wall-4m-concrete",
 			"name": "Tilted Corner Wall 4m",
 			"description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 4m",
 			"categories": [
@@ -32915,7 +32858,7 @@
 			}
 		},
 		"Desc_Wall_Concrete_8x4_Window_01_C": {
-			"slug": "single-window",
+			"slug": "single-window-concrete",
 			"name": "Single Window",
 			"description": "Snaps to Foundations and other Walls.\nThe windows allow Pioneers to see through the wall.\n\nSize: 8m x 4m",
 			"categories": [
@@ -32931,7 +32874,7 @@
 			}
 		},
 		"Desc_Wall_Concrete_8x4_Window_02_C": {
-			"slug": "frame-window",
+			"slug": "frame-window-concrete",
 			"name": "Frame Window",
 			"description": "Snaps to Foundations and other Walls.\nThe windows allow Pioneers to see through the wall.\n\nSize: 8m x 4m",
 			"categories": [
@@ -32947,7 +32890,7 @@
 			}
 		},
 		"Desc_Wall_Concrete_8x4_Window_03_C": {
-			"slug": "panel-window",
+			"slug": "panel-window-concrete",
 			"name": "Panel Window",
 			"description": "Snaps to Foundations and other Walls.\nThe windows allow Pioneers to see through the wall.\n\nSize: 8m x 4m",
 			"categories": [
@@ -32963,7 +32906,7 @@
 			}
 		},
 		"Desc_Wall_Concrete_8x4_Window_04_C": {
-			"slug": "reinforced-window",
+			"slug": "reinforced-window-concrete",
 			"name": "Reinforced Window",
 			"description": "Snaps to Foundations and other Walls.\nThe windows allow Pioneers to see through the wall.\n\nSize: 8m x 4m",
 			"categories": [
@@ -32979,7 +32922,7 @@
 			}
 		},
 		"Desc_Wall_Concrete_8x8_Corner_01_C": {
-			"slug": "tilted-corner-wall-8m",
+			"slug": "tilted-corner-wall-8m-concrete",
 			"name": "Tilted Corner Wall 8m",
 			"description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 8m",
 			"categories": [
@@ -32995,7 +32938,7 @@
 			}
 		},
 		"Desc_Wall_Concrete_Angular_8x4_C": {
-			"slug": "tilted-wall-4m",
+			"slug": "tilted-wall-4m-concrete",
 			"name": "Tilted Wall 4m",
 			"description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 4m",
 			"categories": [
@@ -33011,7 +32954,7 @@
 			}
 		},
 		"Desc_Wall_Concrete_Angular_8x8_C": {
-			"slug": "tilted-wall-8m",
+			"slug": "tilted-wall-8m-concrete",
 			"name": "Tilted Wall 8m",
 			"description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 8m",
 			"categories": [
@@ -33027,7 +32970,7 @@
 			}
 		},
 		"Desc_Wall_Concrete_CDoor_8x4_C": {
-			"slug": "center-door-wall",
+			"slug": "center-door-wall-concrete",
 			"name": "Center Door Wall",
 			"description": "The door allows Pioneers to pass through the wall.\nDoor settings can be configured.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
 			"categories": [
@@ -33043,7 +32986,7 @@
 			}
 		},
 		"Desc_Wall_Concrete_FlipTris_8x1_C": {
-			"slug": "inv-ramp-wall-1m",
+			"slug": "inv-ramp-wall-1m-concrete",
 			"name": "Inv. Ramp Wall 1m",
 			"description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 1m",
 			"categories": [],
@@ -33057,7 +33000,7 @@
 			}
 		},
 		"Desc_Wall_Concrete_FlipTris_8x2_C": {
-			"slug": "inv-ramp-wall-2m",
+			"slug": "inv-ramp-wall-2m-concrete",
 			"name": "Inv. Ramp Wall 2m",
 			"description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 2m",
 			"categories": [],
@@ -33071,7 +33014,7 @@
 			}
 		},
 		"Desc_Wall_Concrete_FlipTris_8x4_C": {
-			"slug": "inv-ramp-wall-4m",
+			"slug": "inv-ramp-wall-4m-concrete",
 			"name": "Inv. Ramp Wall 4m",
 			"description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 4m",
 			"categories": [],
@@ -33085,7 +33028,7 @@
 			}
 		},
 		"Desc_Wall_Concrete_FlipTris_8x8_C": {
-			"slug": "inv-ramp-wall-8m",
+			"slug": "inv-ramp-wall-8m-concrete",
 			"name": "Inv. Ramp Wall 8m",
 			"description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 8m",
 			"categories": [],
@@ -33099,7 +33042,7 @@
 			}
 		},
 		"Desc_Wall_Concrete_Gate_8x4_C": {
-			"slug": "gate-hole-wall",
+			"slug": "gate-hole-wall-concrete",
 			"name": "Gate Hole Wall",
 			"description": "The gate allows Pioneers to pass through the wall.\nSnaps to foundations and other walls.\n\nSize: 8m x 4m",
 			"categories": [
@@ -33115,7 +33058,7 @@
 			}
 		},
 		"Desc_Wall_Concrete_SDoor_8x4_C": {
-			"slug": "side-door-wall",
+			"slug": "side-door-wall-concrete",
 			"name": "Side Door Wall",
 			"description": "The door allows Pioneers to pass through the wall.\nDoor settings can be configured.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
 			"categories": [
@@ -33131,7 +33074,7 @@
 			}
 		},
 		"Desc_Wall_Concrete_Tris_8x1_C": {
-			"slug": "ramp-wall-1m",
+			"slug": "ramp-wall-1m-concrete",
 			"name": "Ramp Wall 1m",
 			"description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 1m",
 			"categories": [],
@@ -33145,7 +33088,7 @@
 			}
 		},
 		"Desc_Wall_Concrete_Tris_8x2_C": {
-			"slug": "ramp-wall-2m",
+			"slug": "ramp-wall-2m-concrete",
 			"name": "Ramp Wall 2m",
 			"description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 2m",
 			"categories": [],
@@ -33159,7 +33102,7 @@
 			}
 		},
 		"Desc_Wall_Concrete_Tris_8x4_C": {
-			"slug": "ramp-wall-4m",
+			"slug": "ramp-wall-4m-concrete",
 			"name": "Ramp Wall 4m",
 			"description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 4m",
 			"categories": [],
@@ -33173,7 +33116,7 @@
 			}
 		},
 		"Desc_Wall_Concrete_Tris_8x8_C": {
-			"slug": "ramp-wall-8m",
+			"slug": "ramp-wall-8m-concrete",
 			"name": "Ramp Wall 8m",
 			"description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 8m",
 			"categories": [],
@@ -33187,7 +33130,7 @@
 			}
 		},
 		"Desc_Wall_Conveyor_8x4_01_C": {
-			"slug": "conveyor-wall-x3-1",
+			"slug": "conveyor-wall-x3",
 			"name": "Conveyor Wall x3",
 			"description": "Has 3 Conveyor Belt connections.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
 			"categories": [
@@ -33219,7 +33162,7 @@
 			}
 		},
 		"Desc_Wall_Conveyor_8x4_02_C": {
-			"slug": "conveyor-wall-x2-1",
+			"slug": "conveyor-wall-x2",
 			"name": "Conveyor Wall x2",
 			"description": "Has 2 Conveyor Belt connections.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
 			"categories": [
@@ -33251,7 +33194,7 @@
 			}
 		},
 		"Desc_Wall_Conveyor_8x4_03_C": {
-			"slug": "conveyor-wall-x1-1",
+			"slug": "conveyor-wall-x1",
 			"name": "Conveyor Wall x1",
 			"description": "Has 1 Conveyor Belt connections.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
 			"categories": [
@@ -33315,7 +33258,7 @@
 			}
 		},
 		"Desc_Wall_Door_8x4_01_C": {
-			"slug": "center-door-wall-1",
+			"slug": "center-door-wall",
 			"name": "Center Door Wall",
 			"description": "The door allows Pioneers to pass through the wall.\nDoor settings can be configured.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
 			"categories": [
@@ -33347,7 +33290,7 @@
 			}
 		},
 		"Desc_Wall_Door_8x4_03_C": {
-			"slug": "side-door-wall-1",
+			"slug": "side-door-wall",
 			"name": "Side Door Wall",
 			"description": "The door allows Pioneers to pass through the wall.\nDoor settings can be configured.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
 			"categories": [
@@ -33395,7 +33338,7 @@
 			}
 		},
 		"Desc_Wall_Gate_8x4_01_C": {
-			"slug": "gate-hole-wall-1",
+			"slug": "gate-hole-wall",
 			"name": "Gate Hole Wall",
 			"description": "The gate allows Pioneers to pass through the wall.\nSnaps to foundations and other walls.\n\nSize: 8m x 4m",
 			"categories": [
@@ -33411,7 +33354,7 @@
 			}
 		},
 		"Desc_Wall_Orange_8x1_C": {
-			"slug": "basic-wall-1m-1",
+			"slug": "basic-wall-1m",
 			"name": "Basic Wall 1m",
 			"description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 1m",
 			"categories": [
@@ -33427,7 +33370,7 @@
 			}
 		},
 		"Desc_Wall_Orange_8x4_Corner_01_C": {
-			"slug": "tilted-corner-wall-4m-1",
+			"slug": "tilted-corner-wall-4m",
 			"name": "Tilted Corner Wall 4m",
 			"description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 4m",
 			"categories": [
@@ -33443,7 +33386,7 @@
 			}
 		},
 		"Desc_Wall_Orange_8x8_Corner_01_C": {
-			"slug": "tilted-corner-wall-8m-1",
+			"slug": "tilted-corner-wall-8m",
 			"name": "Tilted Corner Wall 8m",
 			"description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 8m",
 			"categories": [
@@ -33459,7 +33402,7 @@
 			}
 		},
 		"Desc_Wall_Orange_Angular_8x4_C": {
-			"slug": "tilted-wall-4m-1",
+			"slug": "tilted-wall-4m",
 			"name": "Tilted Wall 4m",
 			"description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 4m",
 			"categories": [
@@ -33475,7 +33418,7 @@
 			}
 		},
 		"Desc_Wall_Orange_Angular_8x8_C": {
-			"slug": "tilted-wall-8m-1",
+			"slug": "tilted-wall-8m",
 			"name": "Tilted Wall 8m",
 			"description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 8m",
 			"categories": [
@@ -33491,7 +33434,7 @@
 			}
 		},
 		"Desc_Wall_Orange_FlipTris_8x1_C": {
-			"slug": "inv-ramp-wall-1m-1",
+			"slug": "inv-ramp-wall-1m",
 			"name": "Inv. Ramp Wall 1m",
 			"description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 1m",
 			"categories": [],
@@ -33505,7 +33448,7 @@
 			}
 		},
 		"Desc_Wall_Orange_FlipTris_8x2_C": {
-			"slug": "inv-ramp-wall-2m-1",
+			"slug": "inv-ramp-wall-2m",
 			"name": "Inv. Ramp Wall 2m",
 			"description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 2m",
 			"categories": [],
@@ -33519,7 +33462,7 @@
 			}
 		},
 		"Desc_Wall_Orange_FlipTris_8x4_C": {
-			"slug": "inv-ramp-wall-4m-1",
+			"slug": "inv-ramp-wall-4m",
 			"name": "Inv. Ramp Wall 4m",
 			"description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 4m",
 			"categories": [],
@@ -33533,7 +33476,7 @@
 			}
 		},
 		"Desc_Wall_Orange_FlipTris_8x8_C": {
-			"slug": "inv-ramp-wall-8m-1",
+			"slug": "inv-ramp-wall-8m",
 			"name": "Inv. Ramp Wall 8m",
 			"description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 8m",
 			"categories": [],
@@ -33547,7 +33490,7 @@
 			}
 		},
 		"Desc_Wall_Orange_Tris_8x1_C": {
-			"slug": "ramp-wall-1m-1",
+			"slug": "ramp-wall-1m",
 			"name": "Ramp Wall 1m",
 			"description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 1m",
 			"categories": [],
@@ -33561,7 +33504,7 @@
 			}
 		},
 		"Desc_Wall_Orange_Tris_8x2_C": {
-			"slug": "ramp-wall-2m-1",
+			"slug": "ramp-wall-2m",
 			"name": "Ramp Wall 2m",
 			"description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 2m",
 			"categories": [],
@@ -33575,7 +33518,7 @@
 			}
 		},
 		"Desc_Wall_Orange_Tris_8x4_C": {
-			"slug": "ramp-wall-4m-1",
+			"slug": "ramp-wall-4m",
 			"name": "Ramp Wall 4m",
 			"description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 4m",
 			"categories": [],
@@ -33589,7 +33532,7 @@
 			}
 		},
 		"Desc_Wall_Orange_Tris_8x8_C": {
-			"slug": "ramp-wall-8m-1",
+			"slug": "ramp-wall-8m",
 			"name": "Ramp Wall 8m",
 			"description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 8m",
 			"categories": [],
@@ -33635,7 +33578,7 @@
 			}
 		},
 		"Desc_Wall_Window_8x4_01_C": {
-			"slug": "single-window-1",
+			"slug": "single-window",
 			"name": "Single Window",
 			"description": "Snaps to Foundations and other Walls.\nThe windows allow Pioneers to see through the wall.\n\nSize: 8m x 4m",
 			"categories": [
@@ -33651,7 +33594,7 @@
 			}
 		},
 		"Desc_Wall_Window_8x4_02_C": {
-			"slug": "frame-window-1",
+			"slug": "frame-window",
 			"name": "Frame Window",
 			"description": "Snaps to Foundations and other Walls.\nThe windows allow Pioneers to see through the wall.\n\nSize: 8m x 4m",
 			"categories": [
@@ -33667,7 +33610,7 @@
 			}
 		},
 		"Desc_Wall_Window_8x4_03_C": {
-			"slug": "panel-window-1",
+			"slug": "panel-window",
 			"name": "Panel Window",
 			"description": "Snaps to Foundations and other Walls.\nThe windows allow Pioneers to see through the wall.\n\nSize: 8m x 4m",
 			"categories": [
@@ -33683,7 +33626,7 @@
 			}
 		},
 		"Desc_Wall_Window_8x4_04_C": {
-			"slug": "reinforced-window-1",
+			"slug": "reinforced-window",
 			"name": "Reinforced Window",
 			"description": "Snaps to Foundations and other Walls.\nThe windows allow Pioneers to see through the wall.\n\nSize: 8m x 4m",
 			"categories": [

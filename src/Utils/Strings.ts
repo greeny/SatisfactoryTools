@@ -69,7 +69,8 @@ export class Strings
 			document.getElementById('toasts')?.appendChild(toast);
 			$(toast).toast({
 				delay: 3000,
-			}).toast('show');
+			});
+			$(toast).toast('show');
 		}
 
 		return result;
@@ -233,40 +234,3 @@ interface IToken
 	type: string;
 	matches?: any;
 }
-
-
-/*
-
-
-(
-	ImageSize=(
-		X=256.000000,
-		Y=256.000000
-	),
-	Margin=(),
-	TintColor=(
-		SpecifiedColor=(
-			R=1.000000,
-			G=1.000000,
-			B=1.000000,
-			A=1.000000
-		)
-	),
-	ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Vehicle/Cyberwagon/UI/Cyberwagon_256.Cyberwagon_256"',
-	UVRegion=(
-		Min=(
-			X=0.000000,
-			Y=0.000000
-		),
-		Max=(
-			X=0.000000,
-			Y=0.000000
-		),
-		bIsValid=0
-	),
-	DrawAs=Image
-)
-
-
-
- */

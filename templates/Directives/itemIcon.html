@@ -11,7 +11,7 @@
 	     tooltip
 	     title="{{$root.aprilMode ? 'Snutt' : itemEntity.name? itemEntity.name : null }}"
 	     lazy-load>
-	<span ng-if="!itemEntity" class="fas fa-question" title="Item not found ({{item}})" tooltip></span>
+	<span ng-if="!itemEntity" class="fas fa-question" title="Item not found ({{item.className ? item.className : item}})" tooltip></span>
 </script>
 
 <script type="text/ng-template" id="templateWithoutTooltip">
