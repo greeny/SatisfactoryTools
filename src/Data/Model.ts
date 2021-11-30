@@ -21,7 +21,7 @@ export class Model
 				try {
 					this.items[k] = new Item(this, data.items[k]);
 				} catch (e) {
-					console.log(e);
+					//console.log(e);
 				}
 			}
 		}
@@ -32,7 +32,7 @@ export class Model
 					try {
 						this.recipes[k] = new Recipe(this, recipe);
 					} catch (e) {
-						console.log(e);
+						//console.log(e);
 					}
 				}
 			}

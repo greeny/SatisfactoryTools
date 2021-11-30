@@ -113,7 +113,7 @@ export class ProductionTab
 
 					const factory = new ProductionResultFactory;
 					this.resultNew = factory.create(result, rawData as any as IJsonSchema);
-					this.result = new ProductionToolResult(recipes, this.data.request);
+					//this.result = new ProductionToolResult(recipes, this.data.request);
 					this.resultStatus = ResultStatus.RESULT;
 				};
 

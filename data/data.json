@@ -5069,6 +5069,39 @@
 			],
 			"producedIn": []
 		},
+		"Recipe_FoundationPassthrough_Hypertube_C": {
+			"slug": "hypertube-floor-hole",
+			"name": "Hypertube Floor Hole",
+			"className": "Recipe_FoundationPassthrough_Hypertube_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_IronRod_C",
+					"amount": 2
+				},
+				{
+					"item": "Desc_IronPlate_C",
+					"amount": 2
+				},
+				{
+					"item": "Desc_Cement_C",
+					"amount": 2
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_FoundationPassthrough_Hypertube_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
 		"Recipe_FoundationPassthrough_Lift_C": {
 			"slug": "conveyor-lift-floor-hole",
 			"name": "Conveyor Lift Floor Hole",
@@ -5205,6 +5238,81 @@
 			"products": [
 				{
 					"item": "Desc_Foundation_8x4_01_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
+		"Recipe_Foundation_Asphalt_8x1_C": {
+			"slug": "foundation-1m",
+			"name": "Foundation 1m",
+			"className": "Recipe_Foundation_Asphalt_8x1_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Cement_C",
+					"amount": 5
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_Foundation_Asphalt_8x1_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
+		"Recipe_Foundation_Asphalt_8x2_C": {
+			"slug": "foundation-2m",
+			"name": "Foundation 2m",
+			"className": "Recipe_Foundation_Asphalt_8x2_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Cement_C",
+					"amount": 5
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_Foundation_Asphalt_8x2_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
+		"Recipe_Foundation_Asphalt_8x4_C": {
+			"slug": "foundation-4m",
+			"name": "Foundation 4m",
+			"className": "Recipe_Foundation_Asphalt_8x4_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Cement_C",
+					"amount": 5
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_Foundation_Asphalt_8x4_C",
 					"amount": 1
 				}
 			],
@@ -6116,8 +6224,8 @@
 			"producedIn": []
 		},
 		"Recipe_HyperPoleStackable_C": {
-			"slug": "stackable-hyper-tube-support",
-			"name": "Stackable Hyper Tube Support",
+			"slug": "stackable-hypertube-support",
+			"name": "Stackable Hypertube Support",
 			"className": "Recipe_HyperPoleStackable_C",
 			"alternate": false,
 			"time": 1,
@@ -6149,8 +6257,8 @@
 			"producedIn": []
 		},
 		"Recipe_HyperTubeWallHole_C": {
-			"slug": "hyper-tube-wall-hole",
-			"name": "Hyper Tube Wall Hole",
+			"slug": "hypertube-wall-hole",
+			"name": "Hypertube Wall Hole",
 			"className": "Recipe_HyperTubeWallHole_C",
 			"alternate": false,
 			"time": 1,
@@ -6178,8 +6286,8 @@
 			"producedIn": []
 		},
 		"Recipe_HyperTubeWallSupport_C": {
-			"slug": "hyper-tube-wall-support",
-			"name": "Hyper Tube Wall Support",
+			"slug": "hypertube-wall-support",
+			"name": "Hypertube Wall Support",
 			"className": "Recipe_HyperTubeWallSupport_C",
 			"alternate": false,
 			"time": 1,
@@ -6378,6 +6486,81 @@
 				"Desc_FoundryMk1_C"
 			]
 		},
+		"Recipe_InvertedRamp_Asphalt_8x1_C": {
+			"slug": "inv-ramp-1m",
+			"name": "Inv. Ramp 1m",
+			"className": "Recipe_InvertedRamp_Asphalt_8x1_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Cement_C",
+					"amount": 5
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_InvertedRamp_Asphalt_8x1_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
+		"Recipe_InvertedRamp_Asphalt_8x2_C": {
+			"slug": "inv-ramp-2m",
+			"name": "Inv. Ramp 2m",
+			"className": "Recipe_InvertedRamp_Asphalt_8x2_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Cement_C",
+					"amount": 5
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_InvertedRamp_Asphalt_8x2_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
+		"Recipe_InvertedRamp_Asphalt_8x4_C": {
+			"slug": "inv-ramp-4m",
+			"name": "Inv. Ramp 4m",
+			"className": "Recipe_InvertedRamp_Asphalt_8x4_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Cement_C",
+					"amount": 5
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_InvertedRamp_Asphalt_8x4_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
 		"Recipe_InvertedRamp_Concrete_8x1_C": {
 			"slug": "inv-ramp-1m",
 			"name": "Inv. Ramp 1m",
@@ -6448,6 +6631,81 @@
 			"products": [
 				{
 					"item": "Desc_InvertedRamp_Concrete_8x4_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
+		"Recipe_InvertedRamp_DCorner_Asphalt_8x1_C": {
+			"slug": "inv-down-corner-1m",
+			"name": "Inv. Down Corner 1m",
+			"className": "Recipe_InvertedRamp_DCorner_Asphalt_8x1_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Cement_C",
+					"amount": 5
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_InvertedRamp_DCorner_Asphalt_8x1_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
+		"Recipe_InvertedRamp_DCorner_Asphalt_8x2_C": {
+			"slug": "inv-down-corner-2m",
+			"name": "Inv. Down Corner 2m",
+			"className": "Recipe_InvertedRamp_DCorner_Asphalt_8x2_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Cement_C",
+					"amount": 5
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_InvertedRamp_DCorner_Asphalt_8x2_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
+		"Recipe_InvertedRamp_DCorner_Asphalt_8x4_C": {
+			"slug": "inv-down-corner-4m",
+			"name": "Inv. Down Corner 4m",
+			"className": "Recipe_InvertedRamp_DCorner_Asphalt_8x4_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Cement_C",
+					"amount": 5
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_InvertedRamp_DCorner_Asphalt_8x4_C",
 					"amount": 1
 				}
 			],
@@ -6823,6 +7081,81 @@
 			"products": [
 				{
 					"item": "Desc_InvertedRamp_Polished_8x4_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
+		"Recipe_InvertedRamp_UCorner_Asphalt_8x1_C": {
+			"slug": "inv-up-corner-1m",
+			"name": "Inv. Up Corner 1m",
+			"className": "Recipe_InvertedRamp_UCorner_Asphalt_8x1_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Cement_C",
+					"amount": 5
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_InvertedRamp_UCorner_Asphalt_8x1_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
+		"Recipe_InvertedRamp_UCorner_Asphalt_8x2_C": {
+			"slug": "inv-up-corner-2m",
+			"name": "Inv. Up Corner 2m",
+			"className": "Recipe_InvertedRamp_UCorner_Asphalt_8x2_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Cement_C",
+					"amount": 5
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_InvertedRamp_UCorner_Asphalt_8x2_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
+		"Recipe_InvertedRamp_UCorner_Asphalt_8x4_C": {
+			"slug": "inv-up-corner-4m",
+			"name": "Inv. Up Corner 4m",
+			"className": "Recipe_InvertedRamp_UCorner_Asphalt_8x4_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Cement_C",
+					"amount": 5
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_InvertedRamp_UCorner_Asphalt_8x4_C",
 					"amount": 1
 				}
 			],
@@ -8634,8 +8967,8 @@
 			"producedIn": []
 		},
 		"Recipe_PipeHyperStart_C": {
-			"slug": "hyper-tube-entrance",
-			"name": "Hyper Tube Entrance",
+			"slug": "hypertube-entrance",
+			"name": "Hypertube Entrance",
 			"className": "Recipe_PipeHyperStart_C",
 			"alternate": false,
 			"time": 1,
@@ -8667,8 +9000,8 @@
 			"producedIn": []
 		},
 		"Recipe_PipeHyperSupport_C": {
-			"slug": "hyper-tube-support",
-			"name": "Hyper Tube Support",
+			"slug": "hypertube-support",
+			"name": "Hypertube Support",
 			"className": "Recipe_PipeHyperSupport_C",
 			"alternate": false,
 			"time": 1,
@@ -8696,8 +9029,8 @@
 			"producedIn": []
 		},
 		"Recipe_PipeHyper_C": {
-			"slug": "hyper-tube",
-			"name": "Hyper Tube",
+			"slug": "hypertube",
+			"name": "Hypertube",
 			"className": "Recipe_PipeHyper_C",
 			"alternate": false,
 			"time": 1,
@@ -10131,6 +10464,81 @@
 			],
 			"producedIn": []
 		},
+		"Recipe_RampDouble_Asphalt_8x1_C": {
+			"slug": "double-ramp-2m",
+			"name": "Double Ramp 2m",
+			"className": "Recipe_RampDouble_Asphalt_8x1_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Cement_C",
+					"amount": 5
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_RampDouble_Asphalt_8x1_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
+		"Recipe_RampDouble_Asphalt_8x2_C": {
+			"slug": "double-ramp-4m",
+			"name": "Double Ramp 4m",
+			"className": "Recipe_RampDouble_Asphalt_8x2_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Cement_C",
+					"amount": 5
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_RampDouble_Asphalt_8x2_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
+		"Recipe_RampDouble_Asphalt_8x4_C": {
+			"slug": "double-ramp-8m",
+			"name": "Double Ramp 8m",
+			"className": "Recipe_RampDouble_Asphalt_8x4_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Cement_C",
+					"amount": 5
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_RampDouble_Asphalt_8x4_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
 		"Recipe_RampDouble_C": {
 			"slug": "double-ramp-4m",
 			"name": "Double Ramp 4m",
@@ -10706,6 +11114,81 @@
 			],
 			"producedIn": []
 		},
+		"Recipe_Ramp_Asphalt_8x1_C": {
+			"slug": "ramp-1m",
+			"name": "Ramp 1m",
+			"className": "Recipe_Ramp_Asphalt_8x1_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Cement_C",
+					"amount": 5
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_Ramp_Asphalt_8x1_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
+		"Recipe_Ramp_Asphalt_8x2_C": {
+			"slug": "ramp-2m",
+			"name": "Ramp 2m",
+			"className": "Recipe_Ramp_Asphalt_8x2_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Cement_C",
+					"amount": 5
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_Ramp_Asphalt_8x2_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
+		"Recipe_Ramp_Asphalt_8x4_C": {
+			"slug": "ramp-4m",
+			"name": "Ramp 4m",
+			"className": "Recipe_Ramp_Asphalt_8x4_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Cement_C",
+					"amount": 5
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_Ramp_Asphalt_8x4_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
 		"Recipe_Ramp_Concrete_8x1_C": {
 			"slug": "ramp-1m",
 			"name": "Ramp 1m",
@@ -10926,6 +11409,81 @@
 			"products": [
 				{
 					"item": "Desc_Ramp_Diagonal_8x4_02_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
+		"Recipe_Ramp_DownCorner_Asphalt_8x1_C": {
+			"slug": "down-corner-ramp-1m",
+			"name": "Down Corner Ramp 1m",
+			"className": "Recipe_Ramp_DownCorner_Asphalt_8x1_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Cement_C",
+					"amount": 5
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_Ramp_DownCorner_Asphalt_8x1_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
+		"Recipe_Ramp_DownCorner_Asphalt_8x2_C": {
+			"slug": "down-corner-ramp-2m",
+			"name": "Down Corner Ramp 2m",
+			"className": "Recipe_Ramp_DownCorner_Asphalt_8x2_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Cement_C",
+					"amount": 5
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_Ramp_DownCorner_Asphalt_8x2_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
+		"Recipe_Ramp_DownCorner_Asphalt_8x4_C": {
+			"slug": "down-corner-ramp-4m",
+			"name": "Down Corner Ramp 4m",
+			"className": "Recipe_Ramp_DownCorner_Asphalt_8x4_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Cement_C",
+					"amount": 5
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_Ramp_DownCorner_Asphalt_8x4_C",
 					"amount": 1
 				}
 			],
@@ -11351,6 +11909,81 @@
 			"products": [
 				{
 					"item": "Desc_Ramp_Polished_8x4_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
+		"Recipe_Ramp_UpCorner_Asphalt_8x1_C": {
+			"slug": "up-corner-ramp-1m",
+			"name": "Up Corner Ramp 1m",
+			"className": "Recipe_Ramp_UpCorner_Asphalt_8x1_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Cement_C",
+					"amount": 5
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_Ramp_UpCorner_Asphalt_8x1_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
+		"Recipe_Ramp_UpCorner_Asphalt_8x2_C": {
+			"slug": "up-corner-ramp-2m",
+			"name": "Up Corner Ramp 2m",
+			"className": "Recipe_Ramp_UpCorner_Asphalt_8x2_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Cement_C",
+					"amount": 5
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_Ramp_UpCorner_Asphalt_8x2_C",
+					"amount": 1
+				}
+			],
+			"producedIn": []
+		},
+		"Recipe_Ramp_UpCorner_Asphalt_8x4_C": {
+			"slug": "up-corner-ramp-4m",
+			"name": "Up Corner Ramp 4m",
+			"className": "Recipe_Ramp_UpCorner_Asphalt_8x4_C",
+			"alternate": false,
+			"time": 1,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Cement_C",
+					"amount": 5
+				}
+			],
+			"forBuilding": true,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_Ramp_UpCorner_Asphalt_8x4_C",
 					"amount": 1
 				}
 			],
@@ -11871,7 +12504,7 @@
 		},
 		"Recipe_Roof_Orange_01_C": {
 			"slug": "ficsit-roof-flat",
-			"name": "Ficsit Roof Flat",
+			"name": "FICSIT Roof Flat",
 			"className": "Recipe_Roof_Orange_01_C",
 			"alternate": false,
 			"time": 1,
@@ -11896,7 +12529,7 @@
 		},
 		"Recipe_Roof_Orange_02_C": {
 			"slug": "ficsit-roof-1m",
-			"name": "Ficsit Roof 1m",
+			"name": "FICSIT Roof 1m",
 			"className": "Recipe_Roof_Orange_02_C",
 			"alternate": false,
 			"time": 1,
@@ -11921,7 +12554,7 @@
 		},
 		"Recipe_Roof_Orange_03_C": {
 			"slug": "ficsit-roof-2m",
-			"name": "Ficsit Roof 2m",
+			"name": "FICSIT Roof 2m",
 			"className": "Recipe_Roof_Orange_03_C",
 			"alternate": false,
 			"time": 1,
@@ -11946,7 +12579,7 @@
 		},
 		"Recipe_Roof_Orange_04_C": {
 			"slug": "ficsit-roof-4m",
-			"name": "Ficsit Roof 4m",
+			"name": "FICSIT Roof 4m",
 			"className": "Recipe_Roof_Orange_04_C",
 			"alternate": false,
 			"time": 1,
@@ -18188,7 +18821,7 @@
 			"className": "Desc_QuartzCrystal_C",
 			"name": "Quartz Crystal",
 			"sinkPoints": 50,
-			"description": "Used for radar and quantum technology.",
+			"description": "Derived from Raw Quartz. Used in the production of advanced radar technology and high-quality display screens.",
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
@@ -18205,7 +18838,7 @@
 			"className": "Desc_RawQuartz_C",
 			"name": "Raw Quartz",
 			"sinkPoints": 15,
-			"description": "Raw Quartz is processed into Quartz Crystals which are used for radar and quantum technology.",
+			"description": "Raw Quartz can be processed into Quartz Crystals and Silica, which both offer a variety of applications.",
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
@@ -18307,8 +18940,8 @@
 			"className": "Desc_Silica_C",
 			"name": "Silica",
 			"sinkPoints": 20,
-			"description": "Derived from quartz, commonly used in structural materials and microelectronics.",
-			"stackSize": 100,
+			"description": "Derived from Raw Quartz. Commonly used to create glass structures, advanced refinement processes, and alternative production of electronics.",
+			"stackSize": 200,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
 			"liquid": false,
@@ -18409,7 +19042,7 @@
 			"className": "Desc_SpaceElevatorPart_6_C",
 			"name": "Magnetic Field Generator",
 			"sinkPoints": 15650,
-			"description": "Project Part #7. Ship with the Space Elevator to complete phases of Project Assembly.\n\nThese modular generators use superconducting magnets and vast amounts of electricity to produce an easily expandible and powerful magnet field.",
+			"description": "Project Part #7. Ship with the Space Elevator to complete phases of Project Assembly.\n\nThese modular generators use superconducting magnets and vast amounts of electricity to produce an easily expandible and powerful magnetic field.",
 			"stackSize": 50,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
@@ -21493,6 +22126,33 @@
 			"alternate": false,
 			"mam": false
 		},
+		"ResourceSink_Customizer_Asphalt_FoundationMaterial_C": {
+			"className": "ResourceSink_Customizer_Asphalt_FoundationMaterial_C",
+			"name": "Asphalt Foundation Material",
+			"slug": "asphalt-foundation-material",
+			"tier": 1,
+			"cost": [
+				{
+					"item": "Desc_ResourceSinkCoupon_C",
+					"amount": 4
+				}
+			],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_Material_Foundation_Asphalt_C"
+				],
+				"scannerResources": [],
+				"giveItems": []
+			},
+			"requiredSchematics": [
+				"Schematic_1-1_C"
+			],
+			"type": "EST_ResourceSink",
+			"time": 0,
+			"alternate": false,
+			"mam": false
+		},
 		"ResourceSink_Customizer_ConcreteWallMaterial_C": {
 			"className": "ResourceSink_Customizer_ConcreteWallMaterial_C",
 			"name": "Concrete Wall Material",
@@ -21522,13 +22182,13 @@
 		},
 		"ResourceSink_Customizer_Concrete_FoundationMaterial_C": {
 			"className": "ResourceSink_Customizer_Concrete_FoundationMaterial_C",
-			"name": "Concrete Foundations Material",
-			"slug": "concrete-foundations-material",
+			"name": "Concrete Foundation Material",
+			"slug": "concrete-foundation-material",
 			"tier": 1,
 			"cost": [
 				{
 					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 4
+					"amount": 3
 				}
 			],
 			"unlock": {
@@ -21587,7 +22247,7 @@
 			"cost": [
 				{
 					"item": "Desc_ResourceSinkCoupon_C",
-					"amount": 6
+					"amount": 5
 				}
 			],
 			"unlock": {
@@ -22583,10 +23243,35 @@
 			"alternate": false,
 			"mam": false
 		},
+		"ResourceSink_HyperTubeFloorHole_C": {
+			"className": "ResourceSink_HyperTubeFloorHole_C",
+			"name": "Hypertube Floor Hole",
+			"slug": "hypertube-floor-hole-1",
+			"tier": 1,
+			"cost": [
+				{
+					"item": "Desc_ResourceSinkCoupon_C",
+					"amount": 1
+				}
+			],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_FoundationPassthrough_Hypertube_C"
+				],
+				"scannerResources": [],
+				"giveItems": []
+			},
+			"requiredSchematics": [],
+			"type": "EST_ResourceSink",
+			"time": 0,
+			"alternate": false,
+			"mam": false
+		},
 		"ResourceSink_HyperTubeWallAttachements_C": {
 			"className": "ResourceSink_HyperTubeWallAttachements_C",
-			"name": "Hyper Tube Wall Attachments",
-			"slug": "hyper-tube-wall-attachments",
+			"name": "Hypertube Wall Attachments",
+			"slug": "hypertube-wall-attachments",
 			"tier": 1,
 			"cost": [
 				{
@@ -24673,8 +25358,8 @@
 		},
 		"Schematic_4-4_C": {
 			"className": "Schematic_4-4_C",
-			"name": "Hyper Tubes",
-			"slug": "hyper-tubes",
+			"name": "Hypertubes",
+			"slug": "hypertubes",
 			"tier": 4,
 			"cost": [
 				{
@@ -27951,7 +28636,7 @@
 		"Desc_Beam_C": {
 			"slug": "metal-beam",
 			"name": "Metal Beam",
-			"description": "Snaps to other Beams and various other structural buildings.\nBeams sport multiple build modes for different use cases.",
+			"description": "Snaps to other Beams and various other structural buildings.\nBeams support multiple build modes for different use cases.",
 			"categories": [
 				"SC_Beams_C"
 			],
@@ -28001,7 +28686,7 @@
 		"Desc_Beam_Painted_C": {
 			"slug": "painted-beam",
 			"name": "Painted Beam",
-			"description": "Snaps to other Beams and various other structural buildings.\nBeams sport multiple build modes for different use cases.",
+			"description": "Snaps to other Beams and various other structural buildings.\nBeams support multiple build modes for different use cases.",
 			"categories": [
 				"SC_Beams_C"
 			],
@@ -28596,7 +29281,7 @@
 		"Desc_Fence_01_C": {
 			"slug": "industrial-railing",
 			"name": "Industrial Railing",
-			"description": "Railings can be build on Foundations to create a safer working environment.",
+			"description": "Railings can be built on Foundations to create a safer working environment.",
 			"categories": [
 				"SC_Attach_C"
 			],
@@ -28677,6 +29362,22 @@
 				"height": 1
 			}
 		},
+		"Desc_FoundationPassthrough_Hypertube_C": {
+			"slug": "hypertube-floor-hole",
+			"name": "Hypertube Floor Hole",
+			"description": "Can be attached to Foundations, allowing Hypertubes to pass through them.",
+			"categories": [
+				"SC_HyperTubes_C"
+			],
+			"buildMenuPriority": 8,
+			"className": "Desc_FoundationPassthrough_Hypertube_C",
+			"metadata": {},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
+			}
+		},
 		"Desc_FoundationPassthrough_Lift_C": {
 			"slug": "conveyor-lift-floor-hole",
 			"name": "Conveyor Lift Floor Hole",
@@ -28750,6 +29451,54 @@
 			],
 			"buildMenuPriority": 3,
 			"className": "Desc_Foundation_8x4_01_C",
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 4
+			}
+		},
+		"Desc_Foundation_Asphalt_8x1_C": {
+			"slug": "foundation-1m-asphalt",
+			"name": "Foundation 1m",
+			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
+			"categories": [
+				"SC_Floors_C"
+			],
+			"buildMenuPriority": 1,
+			"className": "Desc_Foundation_Asphalt_8x1_C",
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 1
+			}
+		},
+		"Desc_Foundation_Asphalt_8x2_C": {
+			"slug": "foundation-2m-asphalt",
+			"name": "Foundation 2m",
+			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
+			"categories": [
+				"SC_Floors_C"
+			],
+			"buildMenuPriority": 2,
+			"className": "Desc_Foundation_Asphalt_8x2_C",
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 2
+			}
+		},
+		"Desc_Foundation_Asphalt_8x4_C": {
+			"slug": "foundation-4m-asphalt",
+			"name": "Foundation 4m",
+			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
+			"categories": [
+				"SC_Floors_C"
+			],
+			"buildMenuPriority": 3,
+			"className": "Desc_Foundation_Asphalt_8x4_C",
 			"metadata": {},
 			"size": {
 				"width": 8,
@@ -29117,9 +29866,9 @@
 			}
 		},
 		"Desc_HyperPoleStackable_C": {
-			"slug": "stackable-hyper-tube-support",
-			"name": "Stackable Hyper Tube Support",
-			"description": "Support for Hyper Tubes. Can be stacked on other stackable supports.",
+			"slug": "stackable-hypertube-support",
+			"name": "Stackable Hypertube Support",
+			"description": "Support for Hypertubes. Can be stacked on other stackable supports.",
 			"categories": [],
 			"buildMenuPriority": 0,
 			"className": "Desc_HyperPoleStackable_C",
@@ -29131,9 +29880,9 @@
 			}
 		},
 		"Desc_HyperTubeWallHole_C": {
-			"slug": "hyper-tube-wall-hole",
-			"name": "Hyper Tube Wall Hole",
-			"description": "Can be attached to walls to allow Hyper Tubes to pass through them.",
+			"slug": "hypertube-wall-hole",
+			"name": "Hypertube Wall Hole",
+			"description": "Can be attached to walls to allow Hypertubes to pass through them.",
 			"categories": [
 				"SC_HyperTubes_C"
 			],
@@ -29147,9 +29896,9 @@
 			}
 		},
 		"Desc_HyperTubeWallSupport_C": {
-			"slug": "hyper-tube-wall-support",
-			"name": "Hyper Tube Wall Support",
-			"description": "Can be attached to walls. \nSupports for Hyper Tubes to allow for longer distances.",
+			"slug": "hypertube-wall-support",
+			"name": "Hypertube Wall Support",
+			"description": "Can be attached to walls. \nSupports for Hypertubes to allow for longer distances.",
 			"categories": [
 				"SC_HyperTubes_C"
 			],
@@ -29180,6 +29929,54 @@
 				"width": 0,
 				"length": 0,
 				"height": 0
+			}
+		},
+		"Desc_InvertedRamp_Asphalt_8x1_C": {
+			"slug": "inv-ramp-1m-asphalt",
+			"name": "Inv. Ramp 1m",
+			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
+			"categories": [
+				"SC_Inverted_C"
+			],
+			"buildMenuPriority": 1,
+			"className": "Desc_InvertedRamp_Asphalt_8x1_C",
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 1
+			}
+		},
+		"Desc_InvertedRamp_Asphalt_8x2_C": {
+			"slug": "inv-ramp-2m-asphalt",
+			"name": "Inv. Ramp 2m",
+			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
+			"categories": [
+				"SC_Inverted_C"
+			],
+			"buildMenuPriority": 2,
+			"className": "Desc_InvertedRamp_Asphalt_8x2_C",
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 2
+			}
+		},
+		"Desc_InvertedRamp_Asphalt_8x4_C": {
+			"slug": "inv-ramp-4m-asphalt",
+			"name": "Inv. Ramp 4m",
+			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
+			"categories": [
+				"SC_Inverted_C"
+			],
+			"buildMenuPriority": 3,
+			"className": "Desc_InvertedRamp_Asphalt_8x4_C",
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 4
 			}
 		},
 		"Desc_InvertedRamp_Concrete_8x1_C": {
@@ -29223,6 +30020,54 @@
 			],
 			"buildMenuPriority": 3,
 			"className": "Desc_InvertedRamp_Concrete_8x4_C",
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 4
+			}
+		},
+		"Desc_InvertedRamp_DCorner_Asphalt_8x1_C": {
+			"slug": "inv-down-corner-1m-asphalt",
+			"name": "Inv. Down Corner 1m",
+			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
+			"categories": [
+				"SC_Inverted_C"
+			],
+			"buildMenuPriority": 7,
+			"className": "Desc_InvertedRamp_DCorner_Asphalt_8x1_C",
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 1
+			}
+		},
+		"Desc_InvertedRamp_DCorner_Asphalt_8x2_C": {
+			"slug": "inv-down-corner-2m-asphalt",
+			"name": "Inv. Down Corner 2m",
+			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
+			"categories": [
+				"SC_Inverted_C"
+			],
+			"buildMenuPriority": 8,
+			"className": "Desc_InvertedRamp_DCorner_Asphalt_8x2_C",
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 2
+			}
+		},
+		"Desc_InvertedRamp_DCorner_Asphalt_8x4_C": {
+			"slug": "inv-down-corner-4m-asphalt",
+			"name": "Inv. Down Corner 4m",
+			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
+			"categories": [
+				"SC_Inverted_C"
+			],
+			"buildMenuPriority": 9,
+			"className": "Desc_InvertedRamp_DCorner_Asphalt_8x4_C",
 			"metadata": {},
 			"size": {
 				"width": 8,
@@ -29463,6 +30308,54 @@
 			],
 			"buildMenuPriority": 3,
 			"className": "Desc_InvertedRamp_Polished_8x4_C",
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 4
+			}
+		},
+		"Desc_InvertedRamp_UCorner_Asphalt_8x1_C": {
+			"slug": "inv-up-corner-1m-asphalt",
+			"name": "Inv. Up Corner 1m",
+			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
+			"categories": [
+				"SC_Inverted_C"
+			],
+			"buildMenuPriority": 4,
+			"className": "Desc_InvertedRamp_UCorner_Asphalt_8x1_C",
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 1
+			}
+		},
+		"Desc_InvertedRamp_UCorner_Asphalt_8x2_C": {
+			"slug": "inv-up-corner-2m-asphalt",
+			"name": "Inv. Up Corner 2m",
+			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
+			"categories": [
+				"SC_Inverted_C"
+			],
+			"buildMenuPriority": 5,
+			"className": "Desc_InvertedRamp_UCorner_Asphalt_8x2_C",
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 2
+			}
+		},
+		"Desc_InvertedRamp_UCorner_Asphalt_8x4_C": {
+			"slug": "inv-up-corner-4m-asphalt",
+			"name": "Inv. Up Corner 4m",
+			"description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
+			"categories": [
+				"SC_Inverted_C"
+			],
+			"buildMenuPriority": 6,
+			"className": "Desc_InvertedRamp_UCorner_Asphalt_8x4_C",
 			"metadata": {},
 			"size": {
 				"width": 8,
@@ -30016,9 +30909,9 @@
 			}
 		},
 		"Desc_PipeHyperStart_C": {
-			"slug": "hyper-tube-entrance",
-			"name": "Hyper Tube Entrance",
-			"description": "Used to enter and power a Hyper Tube.",
+			"slug": "hypertube-entrance",
+			"name": "Hypertube Entrance",
+			"description": "Used to enter and power a Hypertube.",
 			"categories": [
 				"SC_HyperTubes_C"
 			],
@@ -30035,9 +30928,9 @@
 			}
 		},
 		"Desc_PipeHyperSupport_C": {
-			"slug": "hyper-tube-support",
-			"name": "Hyper Tube Support",
-			"description": "Supports for Hyper Tubes to allow for longer distances.",
+			"slug": "hypertube-support",
+			"name": "Hypertube Support",
+			"description": "Supports for Hypertubes to allow for longer distances.",
 			"categories": [],
 			"buildMenuPriority": 0,
 			"className": "Desc_PipeHyperSupport_C",
@@ -30049,9 +30942,9 @@
 			}
 		},
 		"Desc_PipeHyper_C": {
-			"slug": "hyper-tube",
-			"name": "Hyper Tube",
-			"description": "Tubes for transporting FICSIT employees.\nA Hyper Tube Entrance needs to be attached to power and enter a Hyper Tube system.",
+			"slug": "hypertube",
+			"name": "Hypertube",
+			"description": "Tubes for transporting FICSIT employees.\nA Hypertube Entrance needs to be attached to power and enter a Hypertube system.",
 			"categories": [
 				"SC_HyperTubes_C"
 			],
@@ -30307,6 +31200,38 @@
 				"height": 0
 			}
 		},
+		"Desc_PowerPoleWallDoubleMk2_C": {
+			"slug": "double-wall-outlet-mk-2",
+			"name": "Double Wall Outlet Mk.2",
+			"description": "Power Pole that attaches to a wall. Has one connector on each side of the wall.\n\nCan handle up to 7 Power Line connections.\n\nConnect Power Poles, Power Generators and factory buildings together with Power Lines to create a power grid. The power grid supplies the connected buildings with power.",
+			"categories": [
+				"SC_WallPoles_C"
+			],
+			"buildMenuPriority": 5,
+			"className": "Desc_PowerPoleWallDoubleMk2_C",
+			"metadata": {},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
+			}
+		},
+		"Desc_PowerPoleWallDoubleMk3_C": {
+			"slug": "double-wall-outlet-mk-3",
+			"name": "Double Wall Outlet Mk.3",
+			"description": "Power Pole that attaches to a wall. Has one connector on each side of the wall.\n\nCan handle up to 10 Power Line connections.\n\nConnect Power Poles, Power Generators and factory buildings together with Power Lines to create a power grid. The power grid supplies the connected buildings with power.",
+			"categories": [
+				"SC_WallPoles_C"
+			],
+			"buildMenuPriority": 6,
+			"className": "Desc_PowerPoleWallDoubleMk3_C",
+			"metadata": {},
+			"size": {
+				"width": 0,
+				"length": 0,
+				"height": 0
+			}
+		},
 		"Desc_PowerPoleWallDouble_C": {
 			"slug": "double-wall-outlet-mk-1",
 			"name": "Double Wall Outlet Mk.1",
@@ -30323,13 +31248,15 @@
 				"height": 0
 			}
 		},
-		"Desc_PowerPoleWallDouble_Mk2_C": {
-			"slug": "double-wall-outlet-mk-2",
-			"name": "Double Wall Outlet Mk.2",
-			"description": "Power Pole that attaches to a wall. Has one connector on each side of the wall.\n\nCan handle up to 7 Power Line connections.\n\nConnect Power Poles, Power Generators and factory buildings together with Power Lines to create a power grid. The power grid supplies the connected buildings with power.",
-			"categories": [],
-			"buildMenuPriority": 0,
-			"className": "Desc_PowerPoleWallDouble_Mk2_C",
+		"Desc_PowerPoleWallMk2_C": {
+			"slug": "wall-outlet-mk-2",
+			"name": "Wall Outlet Mk.2",
+			"description": "Power Pole that attaches to a wall.\n\nCan handle up to 7 Power Line connections.\n\nConnect Power Poles, Power Generators and factory buildings together with Power Lines to create a power grid. The power grid supplies the connected buildings with power.",
+			"categories": [
+				"SC_WallPoles_C"
+			],
+			"buildMenuPriority": 2,
+			"className": "Desc_PowerPoleWallMk2_C",
 			"metadata": {},
 			"size": {
 				"width": 0,
@@ -30337,13 +31264,15 @@
 				"height": 0
 			}
 		},
-		"Desc_PowerPoleWallDouble_Mk3_C": {
-			"slug": "double-wall-outlet-mk-3",
-			"name": "Double Wall Outlet Mk.3",
-			"description": "Power Pole that attaches to a wall. Has one connector on each side of the wall.\n\nCan handle up to 10 Power Line connections.\n\nConnect Power Poles, Power Generators and factory buildings together with Power Lines to create a power grid. The power grid supplies the connected buildings with power.",
-			"categories": [],
-			"buildMenuPriority": 0,
-			"className": "Desc_PowerPoleWallDouble_Mk3_C",
+		"Desc_PowerPoleWallMk3_C": {
+			"slug": "wall-outlet-mk-3",
+			"name": "Wall Outlet Mk.3",
+			"description": "Power Pole that attaches to a wall.\n\nCan handle up to 10 Power Line connections.\n\nConnect Power Poles, Power Generators and factory buildings together with Power Lines to create a power grid. The power grid supplies the connected buildings with power.",
+			"categories": [
+				"SC_WallPoles_C"
+			],
+			"buildMenuPriority": 3,
+			"className": "Desc_PowerPoleWallMk3_C",
 			"metadata": {},
 			"size": {
 				"width": 0,
@@ -30360,34 +31289,6 @@
 			],
 			"buildMenuPriority": 1,
 			"className": "Desc_PowerPoleWall_C",
-			"metadata": {},
-			"size": {
-				"width": 0,
-				"length": 0,
-				"height": 0
-			}
-		},
-		"Desc_PowerPoleWall_Mk2_C": {
-			"slug": "wall-outlet-mk-2",
-			"name": "Wall Outlet Mk.2",
-			"description": "Power Pole that attaches to a wall.\n\nCan handle up to 7 Power Line connections.\n\nConnect Power Poles, Power Generators and factory buildings together with Power Lines to create a power grid. The power grid supplies the connected buildings with power.",
-			"categories": [],
-			"buildMenuPriority": 0,
-			"className": "Desc_PowerPoleWall_Mk2_C",
-			"metadata": {},
-			"size": {
-				"width": 0,
-				"length": 0,
-				"height": 0
-			}
-		},
-		"Desc_PowerPoleWall_Mk3_C": {
-			"slug": "wall-outlet-mk-3",
-			"name": "Wall Outlet Mk.3",
-			"description": "Power Pole that attaches to a wall.\n\nCan handle up to 10 Power Line connections.\n\nConnect Power Poles, Power Generators and factory buildings together with Power Lines to create a power grid. The power grid supplies the connected buildings with power.",
-			"categories": [],
-			"buildMenuPriority": 0,
-			"className": "Desc_PowerPoleWall_Mk3_C",
 			"metadata": {},
 			"size": {
 				"width": 0,
@@ -30548,7 +31449,7 @@
 		"Desc_Railing_01_C": {
 			"slug": "modern-railing",
 			"name": "Modern Railing",
-			"description": "Railings can be build on Foundations to create a safer working environment.\n\nThis particular Railing is 4 meters long and angles automatically when build on Ramps.",
+			"description": "Railings can be built on Foundations to create a safer working environment.\n\nThis particular Railing is 4 meters long and angles automatically when built on Ramps.",
 			"categories": [
 				"SC_Attach_C"
 			],
@@ -30625,6 +31526,54 @@
 				"height": 1
 			}
 		},
+		"Desc_RampDouble_Asphalt_8x1_C": {
+			"slug": "double-ramp-2m-asphalt",
+			"name": "Double Ramp 2m",
+			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
+			"categories": [
+				"SC_Ramps_C"
+			],
+			"buildMenuPriority": 11,
+			"className": "Desc_RampDouble_Asphalt_8x1_C",
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 1
+			}
+		},
+		"Desc_RampDouble_Asphalt_8x2_C": {
+			"slug": "double-ramp-4m-asphalt",
+			"name": "Double Ramp 4m",
+			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
+			"categories": [
+				"SC_Ramps_C"
+			],
+			"buildMenuPriority": 10,
+			"className": "Desc_RampDouble_Asphalt_8x2_C",
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 2
+			}
+		},
+		"Desc_RampDouble_Asphalt_8x4_C": {
+			"slug": "double-ramp-8m-asphalt",
+			"name": "Double Ramp 8m",
+			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
+			"categories": [
+				"SC_Ramps_C"
+			],
+			"buildMenuPriority": 12,
+			"className": "Desc_RampDouble_Asphalt_8x4_C",
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 4
+			}
+		},
 		"Desc_RampDouble_C": {
 			"slug": "double-ramp-4m",
 			"name": "Double Ramp 4m",
@@ -30676,7 +31625,7 @@
 		"Desc_RampDouble_Concrete_8x4_C": {
 			"slug": "double-ramp-8m-concrete",
 			"name": "Double Ramp 8m",
-			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 8m",
+			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
 			"categories": [
 				"SC_Ramps_C"
 			],
@@ -30724,7 +31673,7 @@
 		"Desc_RampDouble_Metal_8x4_C": {
 			"slug": "double-ramp-8m-metal",
 			"name": "Double Ramp 8m",
-			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 8m",
+			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
 			"categories": [
 				"SC_Ramps_C"
 			],
@@ -30772,7 +31721,7 @@
 		"Desc_RampDouble_Polished_8x4_C": {
 			"slug": "double-ramp-8m-polished",
 			"name": "Double Ramp 8m",
-			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 8m",
+			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
 			"categories": [
 				"SC_Ramps_C"
 			],
@@ -30993,6 +31942,54 @@
 				"height": 4
 			}
 		},
+		"Desc_Ramp_Asphalt_8x1_C": {
+			"slug": "ramp-1m-asphalt",
+			"name": "Ramp 1m",
+			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
+			"categories": [
+				"SC_Ramps_C"
+			],
+			"buildMenuPriority": 1,
+			"className": "Desc_Ramp_Asphalt_8x1_C",
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 1
+			}
+		},
+		"Desc_Ramp_Asphalt_8x2_C": {
+			"slug": "ramp-2m-asphalt",
+			"name": "Ramp 2m",
+			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
+			"categories": [
+				"SC_Ramps_C"
+			],
+			"buildMenuPriority": 2,
+			"className": "Desc_Ramp_Asphalt_8x2_C",
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 2
+			}
+		},
+		"Desc_Ramp_Asphalt_8x4_C": {
+			"slug": "ramp-4m-asphalt",
+			"name": "Ramp 4m",
+			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
+			"categories": [
+				"SC_Ramps_C"
+			],
+			"buildMenuPriority": 3,
+			"className": "Desc_Ramp_Asphalt_8x4_C",
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 4
+			}
+		},
 		"Desc_Ramp_Concrete_8x1_C": {
 			"slug": "ramp-1m-concrete",
 			"name": "Ramp 1m",
@@ -31130,6 +32127,54 @@
 			],
 			"buildMenuPriority": 6,
 			"className": "Desc_Ramp_Diagonal_8x4_02_C",
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 4
+			}
+		},
+		"Desc_Ramp_DownCorner_Asphalt_8x1_C": {
+			"slug": "down-corner-ramp-1m-asphalt",
+			"name": "Down Corner Ramp 1m",
+			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
+			"categories": [
+				"SC_Ramps_C"
+			],
+			"buildMenuPriority": 7,
+			"className": "Desc_Ramp_DownCorner_Asphalt_8x1_C",
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 1
+			}
+		},
+		"Desc_Ramp_DownCorner_Asphalt_8x2_C": {
+			"slug": "down-corner-ramp-2m-asphalt",
+			"name": "Down Corner Ramp 2m",
+			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
+			"categories": [
+				"SC_Ramps_C"
+			],
+			"buildMenuPriority": 9,
+			"className": "Desc_Ramp_DownCorner_Asphalt_8x2_C",
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 2
+			}
+		},
+		"Desc_Ramp_DownCorner_Asphalt_8x4_C": {
+			"slug": "down-corner-ramp-4m-asphalt",
+			"name": "Down Corner Ramp 4m",
+			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
+			"categories": [
+				"SC_Ramps_C"
+			],
+			"buildMenuPriority": 8,
+			"className": "Desc_Ramp_DownCorner_Asphalt_8x4_C",
 			"metadata": {},
 			"size": {
 				"width": 8,
@@ -31409,6 +32454,54 @@
 				"height": 4
 			}
 		},
+		"Desc_Ramp_UpCorner_Asphalt_8x1_C": {
+			"slug": "up-corner-ramp-1m-asphalt",
+			"name": "Up Corner Ramp 1m",
+			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
+			"categories": [
+				"SC_Ramps_C"
+			],
+			"buildMenuPriority": 4,
+			"className": "Desc_Ramp_UpCorner_Asphalt_8x1_C",
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 1
+			}
+		},
+		"Desc_Ramp_UpCorner_Asphalt_8x2_C": {
+			"slug": "up-corner-ramp-2m-asphalt",
+			"name": "Up Corner Ramp 2m",
+			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
+			"categories": [
+				"SC_Ramps_C"
+			],
+			"buildMenuPriority": 5,
+			"className": "Desc_Ramp_UpCorner_Asphalt_8x2_C",
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 2
+			}
+		},
+		"Desc_Ramp_UpCorner_Asphalt_8x4_C": {
+			"slug": "up-corner-ramp-4m-asphalt",
+			"name": "Up Corner Ramp 4m",
+			"description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
+			"categories": [
+				"SC_Ramps_C"
+			],
+			"buildMenuPriority": 6,
+			"className": "Desc_Ramp_UpCorner_Asphalt_8x4_C",
+			"metadata": {},
+			"size": {
+				"width": 8,
+				"length": 8,
+				"height": 4
+			}
+		},
 		"Desc_Ramp_UpCorner_Concrete_8x1_C": {
 			"slug": "up-corner-ramp-1m-concrete",
 			"name": "Up Corner Ramp 1m",
@@ -31657,7 +32750,7 @@
 		},
 		"Desc_Roof_Orange_01_C": {
 			"slug": "ficsit-roof-flat",
-			"name": "Ficsit Roof Flat",
+			"name": "FICSIT Roof Flat",
 			"description": "Snaps to Foundations, Walls, and other Roofs.\n\nSize: 8m x flat",
 			"categories": [
 				"SC_Roofs_C"
@@ -31673,7 +32766,7 @@
 		},
 		"Desc_Roof_Orange_02_C": {
 			"slug": "ficsit-roof-1m",
-			"name": "Ficsit Roof 1m",
+			"name": "FICSIT Roof 1m",
 			"description": "Snaps to Foundations, Walls, and other Roofs.\n\nSize: 8m x 1m",
 			"categories": [
 				"SC_Roofs_C"
@@ -31689,7 +32782,7 @@
 		},
 		"Desc_Roof_Orange_03_C": {
 			"slug": "ficsit-roof-2m",
-			"name": "Ficsit Roof 2m",
+			"name": "FICSIT Roof 2m",
 			"description": "Snaps to Foundations, Walls, and other Roofs.\n\nSize: 8m x 2m",
 			"categories": [
 				"SC_Roofs_C"
@@ -31705,7 +32798,7 @@
 		},
 		"Desc_Roof_Orange_04_C": {
 			"slug": "ficsit-roof-4m",
-			"name": "Ficsit Roof 4m",
+			"name": "FICSIT Roof 4m",
 			"description": "Snaps to Foundations, Walls, and other Roofs.\n\nSize: 8m x 4m",
 			"categories": [
 				"SC_Roofs_C"
@@ -32796,7 +33889,7 @@
 		"Desc_Wall_Concrete_8x4_ConveyorHole_01_C": {
 			"slug": "conveyor-wall-x1-concrete",
 			"name": "Conveyor Wall x1",
-			"description": "Has 1 Conveyor Belt connections.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
+			"description": "Has 1 Conveyor Belt connection.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
 			"categories": [
 				"SC_ConveyorConnections_C"
 			],
@@ -33196,7 +34289,7 @@
 		"Desc_Wall_Conveyor_8x4_03_C": {
 			"slug": "conveyor-wall-x1",
 			"name": "Conveyor Wall x1",
-			"description": "Has 1 Conveyor Belt connections.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
+			"description": "Has 1 Conveyor Belt connection.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
 			"categories": [
 				"SC_ConveyorConnections_C"
 			],

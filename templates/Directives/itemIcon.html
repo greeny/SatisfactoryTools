@@ -22,5 +22,5 @@
 	     height="{{size}}"
 	     alt="{{$root.aprilMode ? 'Snutt' : itemEntity.name}}"
 	     lazy-load>
-	<span ng-if="!itemEntity" class="fas fa-question"></span>
+	<span ng-if="!itemEntity" class="fas fa-question" data-not-found="{{item.className ? item.className : item}}"></span>
 </script>

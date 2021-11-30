@@ -36,6 +36,10 @@ export default function parseBuildings(buildings: {
 	const wrongMapping: {[key: string]: string} = {
 		Build_WalkwayTrun_C: 'Desc_WalkwayTurn_C', // nice typo CSS
 		Build_CatwalkCorner_C: 'Desc_CatwalkTurn_C', // to match descriptor name
+		Build_PowerPoleWall_Mk2_C: 'Desc_PowerPoleWallMk2_C',
+		Build_PowerPoleWall_Mk3_C: 'Desc_PowerPoleWallMk3_C',
+		Build_PowerPoleWallDouble_Mk2_C: 'Desc_PowerPoleWallDoubleMk2_C',
+		Build_PowerPoleWallDouble_Mk3_C: 'Desc_PowerPoleWallDoubleMk3_C',
 	};
 
 	const result: IBuildingSchema[] = [];
@@ -106,6 +110,8 @@ export default function parseBuildings(buildings: {
 			slug += '-metal';
 		} else if (building.ClassName.match(/Concrete/)) {
 			slug += '-concrete';
+		} else if (building.ClassName.match(/Asphalt/)) {
+			slug += '-asphalt';
 		}
 
 		const size = {

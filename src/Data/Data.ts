@@ -24,7 +24,7 @@ export class Data
 		Desc_Sulfur_C: 6840,
 		Desc_OreBauxite_C: 9780,
 		Desc_OreUranium_C: 2100,
-		Desc_NitrogenGas_C: 12300,
+		Desc_NitrogenGas_C: 12000,
 		Desc_Water_C: Number.MAX_SAFE_INTEGER,
 	};
 
@@ -217,7 +217,6 @@ export class Data
 				}
 			}
 		}
-		console.log(recipes);
 		return recipes;
 	}
 
