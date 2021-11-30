@@ -2,6 +2,7 @@ import {IDirective, IScope} from 'angular';
 import data from '@src/Data/Data';
 import {IItemSchema} from '@src/Schema/IItemSchema';
 import {IBuildingSchema} from '@src/Schema/IBuildingSchema';
+import {ISchematicSchema} from '@src/Schema/ISchematicSchema';
 
 export class ItemIconDirective implements IDirective
 {
@@ -28,8 +29,12 @@ export class ItemIconDirective implements IDirective
 				scope.itemEntity = data.getItemByClassName(scope.item);
 				if (!scope.itemEntity) {
 					scope.itemEntity = data.getBuildingByClassName(scope.item);
+					if (!scope.itemEntity) {
+						scope.itemEntity = data.getSchematicByClassName(scope.item);
+					}
 				}
 			}
+
 			if (!scope.size) {
 				scope.size = 32;
 			}
@@ -49,8 +54,8 @@ export class ItemIconDirective implements IDirective
 interface IItemIconDirectiveScope extends IScope
 {
 
-	item: IItemSchema|IBuildingSchema|string;
-	itemEntity: IItemSchema|IBuildingSchema|null;
+	item: IItemSchema|IBuildingSchema|ISchematicSchema|string;
+	itemEntity: IItemSchema|IBuildingSchema|ISchematicSchema|null;
 	size: number;
 	imageSize: number;
 	dynamic: any;

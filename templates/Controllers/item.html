@@ -86,7 +86,7 @@
 									<div ng-repeat="product in recipe.products" class="d-inline-block p-2">
 										<a ui-sref="building({item: ctrl.getBuilding(product.item).slug})">
 											<item-icon item="ctrl.getBuilding(product.item)" size="32"></item-icon>
-											{{ ctrl.getBuilding(product.item).name }}
+											{{ctrl.getBuilding(product.item).name}}
 										</a>
 									</div>
 								</td>

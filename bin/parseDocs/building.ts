@@ -33,6 +33,15 @@ export default function parseBuildings(buildings: {
 		'Build_CandyCaneDecor_C',
 	];
 
+	const wrongMapping: {[key: string]: string} = {
+		Build_WalkwayTrun_C: 'Desc_WalkwayTurn_C', // nice typo CSS
+		Build_CatwalkCorner_C: 'Desc_CatwalkTurn_C', // to match descriptor name
+		Build_PowerPoleWall_Mk2_C: 'Desc_PowerPoleWallMk2_C',
+		Build_PowerPoleWall_Mk3_C: 'Desc_PowerPoleWallMk3_C',
+		Build_PowerPoleWallDouble_Mk2_C: 'Desc_PowerPoleWallDoubleMk2_C',
+		Build_PowerPoleWallDouble_Mk3_C: 'Desc_PowerPoleWallDoubleMk3_C',
+	};
+
 	const result: IBuildingSchema[] = [];
 	for (const building of buildings) {
 		if (ignored.indexOf(building.ClassName) !== -1) {
@@ -88,13 +97,21 @@ export default function parseBuildings(buildings: {
 		if (building.ClassName === 'Desc_RailroadTrack_C') {
 			metadata.firstPieceCostMultiplier = 2;
 			metadata.lengthPerCost = 12;
-		} else if (building.ClassName === 'Build_WalkwayTrun_C') { // nice typo CSS
-			building.ClassName = 'Desc_WalkwayTurn_C';
+		} else if (building.ClassName in wrongMapping) { // nice typo CSS
+			building.ClassName = wrongMapping[building.ClassName];
 		}
 
 		let slug = Strings.webalize(building.mDisplayName);
 		if (building.ClassName.match(/Steel/) || building.ClassName === 'Build_Wall_8x4_02_C') {
 			slug += '-steel';
+		} else if (building.ClassName.match(/Polished/)) {
+			slug += '-polished';
+		} else if (building.ClassName.match(/Metal/)) {
+			slug += '-metal';
+		} else if (building.ClassName.match(/Concrete/)) {
+			slug += '-concrete';
+		} else if (building.ClassName.match(/Asphalt/)) {
+			slug += '-asphalt';
 		}
 
 		const size = {

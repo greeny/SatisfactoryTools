@@ -1,15 +1,21 @@
 import {DataSet, Network} from 'vis-network';
 import {IController, IScope, ITimeoutService} from 'angular';
-import {ProductionToolResult} from '@src/Tools/Production/ProductionToolResult';
 import ELK from 'elkjs/lib/elk.bundled';
+import {ProductionResult} from '@src/Tools/Production/ProductionResult';
+import {IVisNode} from '@src/Tools/Production/Result/IVisNode';
+import {IVisEdge} from '@src/Tools/Production/Result/IVisEdge';
+import {IElkGraph} from '@src/Solver/IElkGraph';
 
 export class VisualizationComponentController implements IController
 {
 
-	public result: ProductionToolResult;
+	public result: ProductionResult;
 
 	public static $inject = ['$element', '$scope', '$timeout'];
+
 	private unregisterWatcherCallback: () => void;
+	private network: Network;
+	private fitted: boolean = false;
 
 	public constructor(private readonly $element: any, private readonly $scope: IScope, private readonly $timeout: ITimeoutService) {}
 
@@ -28,22 +34,55 @@ export class VisualizationComponentController implements IController
 		this.unregisterWatcherCallback();
 	}
 
-	public updateData(result: ProductionToolResult|undefined): void
+	public updateData(result: ProductionResult|undefined): void
 	{
 		if (!result) {
 			return;
 		}
 
+		this.fitted = false;
+
+		const nodes = result ? result.graph.visNodes : new DataSet<IVisNode>();
+		const edges = result ? result.graph.visEdges : new DataSet<IVisEdge>();
+
+		this.network = this.drawVisualisation(nodes, edges);
+
 		this.$timeout(0).then(() => {
-			if (!result.nodeLocationCache) {
+			const elkGraph: IElkGraph = {
+				id: 'root',
+				layoutOptions: {
+					'elk.algorithm': 'org.eclipse.elk.layered',
+					'org.eclipse.elk.layered.nodePlacement.favorStraightEdges': true as unknown as string, // fuck off typescript
+					'org.eclipse.elk.spacing.nodeNode': 40 + '',
+				},
+				children: [],
+				edges: [],
+			};
+
+			nodes.forEach((node) => {
+				elkGraph.children.push({
+					id: node.id.toString(),
+					width: 250,
+					height: 100,
+				});
+			});
+			edges.forEach((edge) => {
+				elkGraph.edges.push({
+					id: '',
+					source: edge.from.toString(),
+					target: edge.to.toString(),
+				});
+			});
+
+			this.$timeout(0).then(() => {
 				const elk = new ELK();
-				elk.layout(result.elkGraph).then((data) => {
-					result.nodes.forEach((node) => {
+				elk.layout(elkGraph).then((data) => {
+					nodes.forEach((node) => {
 						const id = node.id;
 						if (data.children) {
 							for (const item of data.children) {
 								if (parseInt(item.id, 10) === id) {
-									result.nodes.update({
+									nodes.update({
 										id: id,
 										x: item.x,
 										y: item.y,
@@ -53,42 +92,19 @@ export class VisualizationComponentController implements IController
 							}
 						}
 					});
-				});
-			} else {
-				for (const id in result.nodeLocationCache) {
-					const position = result.nodeLocationCache[id];
-					result.nodes.update({
-						id: parseInt(id, 10),
-						x: position.x,
-						y: position.y,
-					});
-				}
-			}
 
-			this.drawVisualization(result);
+					if (!this.fitted) {
+						this.fitted = true;
+						this.network.fit();
+					}
+				});
+			});
 		});
 	}
 
-	private drawVisualization(result: ProductionToolResult|undefined): void
+	private drawVisualisation(nodes: DataSet<IVisNode>, edges: DataSet<IVisEdge>): Network
 	{
-		const nodes = result ? result.nodes : new DataSet<{
-			id: number,
-			label: string,
-			title?: string,
-			color?: {border: string, background: string, highlight: {border: string, background: string}},
-			font?: {color: string},
-			x?: number,
-			y?: number,
-		}>();
-		const edges = result ? result.edges : new DataSet<{
-			from: number,
-			to: number,
-			label?: string,
-			title?: string,
-			id?: number,
-		}>();
-
-		const network = new Network(this.$element[0], {
+		return new Network(this.$element[0], {
 			nodes: nodes,
 			edges: edges,
 		}, {
@@ -105,6 +121,7 @@ export class VisualizationComponentController implements IController
 			nodes: {
 				labelHighlightBold: false,
 				font: {
+					// align: 'left',
 					size: 14,
 					multi: 'html',
 				},
@@ -115,6 +132,11 @@ export class VisualizationComponentController implements IController
 					bottom: 10,
 				},
 				shape: 'box',
+				widthConstraint: {
+					minimum: 50,
+					maximum: 250,
+				},
+				// widthConstraint: 225,
 			},
 			physics: {
 				enabled: false,
@@ -123,33 +145,10 @@ export class VisualizationComponentController implements IController
 				improvedLayout: false,
 				hierarchical: false,
 			},
-		});
-
-		network.setOptions({
-			layout: {
-				hierarchical: false,
+			interaction: {
+				tooltipDelay: 0,
 			},
 		});
-
-		if (result) {
-			result.nodeLocationCache = network.getPositions();
-			network.on('dragEnd', () => {
-				result.nodeLocationCache = network.getPositions();
-			});
-
-			network.on('doubleClick', (params) => {
-				if (params.nodes.length === 1) {
-					const nodeId = params.nodes[0];
-					const position = network.getPositions(nodeId)[nodeId];
-					result.toggleNode(nodeId);
-					nodes.update({
-						id: nodeId,
-						x: position.x,
-						y: position.y,
-					});
-				}
-			});
-		}
 	}
 
 }

@@ -9,7 +9,7 @@ const mappingPath = path.join(__dirname, '..', 'data', 'imageMapping.json');
 const dataPath = path.join(__dirname, '..', 'data', 'data.json');
 
 function processImage(file: string, slug: string) {
-	file = path.join(path.join(__dirname, '..'), file);
+	file = path.join(baseOriginalPath, file);
 	if (!fs.existsSync(file)) {
 		file = file.replace('_512', '_256');
 	}
@@ -37,6 +37,11 @@ if (!fs.existsSync(mappingPath)) {
 	for (const buildingClass in data.buildings) {
 		if (buildingClass in mapping) {
 			processImage(mapping[buildingClass], data.buildings[buildingClass].slug);
+		}
+	}
+	for (const schematicClass in data.schematics) {
+		if (schematicClass in mapping) {
+			processImage(mapping[schematicClass], data.schematics[schematicClass].slug);
 		}
 	}
 }

@@ -2,7 +2,7 @@ import {RecipeResult} from '@src/Tools/Production/RecipeResult';
 import {DataSet} from 'vis-network';
 import model from '@src/Data/Model';
 import {IElkGraph} from '@src/Solver/IElkGraph';
-import {IProductionToolRequest} from '@src/Tools/Production/IProductionToolRequest';
+import {IProductionDataRequest} from '@src/Tools/Production/IProductionData';
 
 export class ProductionToolResult
 {
@@ -57,7 +57,7 @@ export class ProductionToolResult
 	private nodeWidth = 300;
 	private nodeHeight = 100;
 
-	public constructor(public readonly recipes: RecipeResult[], productionRequest: IProductionToolRequest)
+	public constructor(public readonly recipes: RecipeResult[], productionRequest: IProductionDataRequest)
 	{
 		let id = 1;
 		let nodeId = 1;

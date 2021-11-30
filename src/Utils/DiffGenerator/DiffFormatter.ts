@@ -11,7 +11,7 @@ export class DiffFormatter
 		let text = '';
 		for (const diff of diffs) {
 			if (diff.changes.length === 1) {
-				text = '- ' + (diff.name === null ? '' : diff.name + ': ') + diff.changes[0];
+				text = '**' + (diff.name === null ? '' : diff.name + '**: ') + diff.changes[0];
 			} else {
 				text = '**' + diff.name + '**:\n\t' + diff.changes.join('\n\t');
 				//console.log(text);

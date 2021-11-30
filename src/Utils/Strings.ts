@@ -13,11 +13,20 @@ export class Strings
 
 	private static schematicTypes: {[key: string]: string} = {
 		EST_Milestone: 'Milestone',
-		EST_MAM: 'M.A.M. Research',
+		EST_MAM: 'MAM Research',
 		EST_Alternate: 'Alternate recipe',
 		EST_Tutorial: 'Tutorial',
 		EST_HardDrive: 'HDD Research',
+		EST_ResourceSink: 'AWESOME Sink',
 	};
+
+	public static formatNumber(num: number|string, decimals: number = 3)
+	{
+		if (typeof num === 'string') {
+			num = parseFloat(num);
+		}
+		return num.toFixed(decimals).replace(/\.?0+$/, '');
+	}
 
 	public static webalize(name: string): string
 	{
@@ -60,7 +69,8 @@ export class Strings
 			document.getElementById('toasts')?.appendChild(toast);
 			$(toast).toast({
 				delay: 3000,
-			}).toast('show');
+			});
+			$(toast).toast('show');
 		}
 
 		return result;
@@ -100,7 +110,11 @@ export class Strings
 		parsers[Strings.EQUAL_SIGN] = /=/;
 		parsers[Strings.SEPARATOR] = /,/;
 
-		return Strings.parseTokens(Strings.tokenize(text, parsers, Strings.UNKNOWN), 0).result;
+		try {
+			return Strings.parseTokens(Strings.tokenize(text, parsers, Strings.UNKNOWN), 0).result;
+		} catch (e) {
+			throw new Error('Invalid string: ' + text + '\n' + e);
+		}
 	}
 
 	private static parseTokens(tokens: IToken[], currentIndex: number): {result: any, currentIndex: number}
@@ -139,11 +153,19 @@ export class Strings
 						}
 
 						const key = tokens[index].token;
-						if (!tokens[index + 2] || tokens[index + 2].type !== Strings.STRING) {
-							throw new Error(tokens[index + 2] ? 'Expected string, got ' + tokens[index + 2].token : 'Unexpected end of input');
+						if (!tokens[index + 2]) {
+							throw new Error('Unexpected end of input.');
 						}
-						result[key] = tokens[index + 2].token;
-						index += 2;
+						if (tokens[index + 2].type === Strings.STRING) {
+							result[key] = tokens[index + 2].token;
+							index += 2;
+						} else if (tokens[index + 2].type === Strings.OPENING_BRACE) {
+							const parsed = this.parseTokens(tokens, index + 2);
+							result[key] = parsed.result;
+							index = parsed.currentIndex - 1;
+						} else {
+							throw new Error('Expected string or (, got ' + tokens[index + 2].token);
+						}
 					} else {
 						if (result === null) {
 							result = tokens[index].token;
