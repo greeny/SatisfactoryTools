@@ -28,6 +28,7 @@
 		"script-loader": "^0.7.2",
 		"sharp": "^0.29.3",
 		"style-loader": "^2.0.0",
+		"terser-webpack-plugin": "^4.2.3",
 		"ts-loader": "^8.3.0",
 		"ts-node": "^10.4.0",
 		"tsconfig-paths": "^3.9.0",

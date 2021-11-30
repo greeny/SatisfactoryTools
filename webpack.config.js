@@ -1,5 +1,6 @@
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const TSLintPlugin = require('tslint-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
@@ -54,5 +55,12 @@ module.exports = {
 	},
 	performance: {
 		hints: false,
+	},
+	optimization: {
+		minimizer: [
+			new TerserPlugin({
+				extractComments: false,
+			}),
+		],
 	},
 };

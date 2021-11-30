@@ -42,7 +42,7 @@ export class SchematicController
 		const elkGraph: IElkGraph = {
 			id: 'root',
 			layoutOptions: {
-				'elk.algorithm': 'org.eclipse.elk.conn.gmf.layouter.Draw2D',
+				'elk.algorithm': 'org.eclipse.elk.layered',
 				'org.eclipse.elk.spacing.nodeNode': 40 + '',
 			},
 			children: [],
