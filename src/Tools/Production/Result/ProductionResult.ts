@@ -247,7 +247,7 @@ export class ProductionResult
 
 		for (const resource in resources) {
 			resources[resource].used = Numbers.round(resources[resource].used);
-			resources[resource].usedPercentage = Numbers.round(resources[resource].used / resources[resource].max);
+			resources[resource].usedPercentage = Numbers.round(resources[resource].used / resources[resource].max * 100);
 		}
 
 		this.details.rawResources = resources;

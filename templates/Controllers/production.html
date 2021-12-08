@@ -686,27 +686,19 @@
 							<table class="table table-sm table-hover">
 								<thead>
 									<tr>
-										<th>Name</th>
+										<th></th>
 										<th>Recipe</th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr ng-repeat="recipe in ctrl.tab.resultNew.details.alternatesNeeded" class="alt-recipe-row">
-										<td class="d-flex justify-content-between">
-											<span>{{ctrl.tab.convertAlternateRecipeName(recipe.name)}}</span>
-											<span>
-												<span ng-repeat="ingredient in recipe.ingredients" class="recipe-item">
-													{{ingredient.amount}}&times;
-													<item-icon item="ingredient.item" size="20" tooltip="1"></item-icon>
-												</span>
+										<td class="text-right table-cell-adjust-size">
+											<span ng-repeat="product in recipe.products" class="recipe-item">
+												<item-icon item="product.item" size="20" tooltip="1"></item-icon>
 											</span>
 										</td>
 										<td class="text-left">
-											<span class="fas fa-fw fa-chevron-right"></span>
-											<span ng-repeat="product in recipe.products" class="recipe-item">
-												{{product.amount}}&times;
-												<item-icon item="product.item" size="20" tooltip="1"></item-icon>
-											</span>
+											{{ctrl.tab.convertAlternateRecipeName(recipe.name)}}
 										</td>
 									</tr>
 								</tbody>
