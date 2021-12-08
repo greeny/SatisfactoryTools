@@ -1,8 +1,6 @@
 import {GraphNode} from '@src/Tools/Production/Result/Nodes/GraphNode';
-import {DataSet} from 'vis-network';
-import {IVisNode} from '@src/Tools/Production/Result/IVisNode';
-import {IVisEdge} from '@src/Tools/Production/Result/IVisEdge';
-import {Strings} from '@src/Utils/Strings';
+import {GraphEdge} from '@src/Tools/Production/Result/Edges/GraphEdge';
+import {ItemAmount} from '@src/Tools/Production/Result/ItemAmount';
 
 export class Graph
 {
@@ -10,9 +8,7 @@ export class Graph
 	public readonly DELTA = 1e-8;
 
 	public nodes: GraphNode[] = [];
-
-	public visNodes = new DataSet<IVisNode>();
-	public readonly visEdges = new DataSet<IVisEdge>();
+	public edges: GraphEdge[] = [];
 
 	private lastId = 1;
 
@@ -22,15 +18,14 @@ export class Graph
 		node.id = this.lastId++;
 	}
 
-	public generate(): void
+	public addEdge(edge: GraphEdge): void
 	{
-		for (const node of this.nodes) {
-			this.visNodes.add(node.getVisNode());
-		}
+		this.edges.push(edge);
+		edge.id = this.lastId++;
+	}
 
-		let lastEdgeId = 1;
-		const edges: {[key: string]: number} = {};
-
+	public generateEdges(): void
+	{
 		for (const nodeOut of this.nodes) {
 			outputLoop:
 			for (const output of nodeOut.getOutputs()) {
@@ -49,31 +44,7 @@ export class Graph
 								output.amount = 0;
 							}
 
-							const key = nodeOut.id + '-' + nodeIn.id;
-							const reverseKey = nodeIn.id + '-' + nodeOut.id;
-							if (!(reverseKey in edges)) {
-								edges[key] = lastEdgeId;
-								this.visEdges.add({
-									id: lastEdgeId++,
-									from: nodeOut.id,
-									to: nodeIn.id,
-									label: output.resource.name + '\n' + Strings.formatNumber(diff) + ' / min',
-									color: {
-										color: 'rgba(105, 125, 145, 1)',
-										highlight: 'rgba(134, 151, 167, 1)',
-									},
-									font: {
-										color: 'rgba(238, 238, 238, 1)',
-									},
-								});
-							} else {
-								const edge = this.visEdges.get(edges[reverseKey]) as IVisEdge;
-								this.visEdges.updateOnly({
-									id: edges[reverseKey],
-									arrows: 'from,to',
-									label: edge.label?.replace('\n', ': ') + '\n' + output.resource.name + ': ' + Strings.formatNumber(diff) + ' / min',
-								});
-							}
+							this.addEdge(new GraphEdge(nodeOut, nodeIn, new ItemAmount(output.resource.className, diff)));
 
 							if (output.amount === 0) {
 								continue outputLoop;
@@ -81,13 +52,6 @@ export class Graph
 						}
 					}
 				}
-			}
-		}
-
-		for (const node of this.nodes) {
-			const update = node.getUpdateData();
-			if (update) {
-				this.visNodes.updateOnly(update);
 			}
 		}
 	}

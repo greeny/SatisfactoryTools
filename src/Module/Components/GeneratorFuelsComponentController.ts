@@ -36,9 +36,9 @@ export class GeneratorFuelsComponentController implements IOnInit
 		});
 	}
 
-	public calculateWasteProduction(): number
+	public calculateWasteProduction(resource: IItemSchema): number
 	{
-		return 5 * (this.options.overclock / 100);
+		return 10 * (this.options.overclock / 100);
 	}
 
 	public getWater(): IItemSchema

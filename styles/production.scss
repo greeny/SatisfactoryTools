@@ -23,11 +23,6 @@ $border: 1px solid rgba(0, 0, 0, 0.125);
 	font-size: 24px;
 	padding: 30px 10px;
 	border: 1px solid #4e5d6c;
-
-	span {
-		font-size: 16px;
-		display: inline-block;
-	}
 }
 
 .production-nav-tabs {
@@ -362,6 +357,64 @@ $border: 1px solid rgba(0, 0, 0, 0.125);
 }
 
 .result-nav {
+	.nav-link {
+		padding-top: 0.75rem;
+		padding-bottom: 0.75rem;
+		font-size: 1.15rem;
+	}
+
 	border-left: 1px solid #4e5d6c;
 	border-right: 1px solid #4e5d6c;
+}
+
+.table-cell-micro {
+	width: 48px;
+}
+
+.table-cell-adjust-size {
+	width: 1px;
+	white-space: nowrap;
+}
+
+.table-row-separator td {
+	border-bottom: 2px solid $table-border-color;
+}
+
+.table-row-separator-double td {
+	border-bottom: 2px solid $table-border-color;
+}
+
+.table-row-separator-above td {
+	border-top: 2px solid $table-border-color;
+}
+
+.alt-recipe-row td {
+	.recipe-item {
+		margin-left: 7px;
+
+		img {
+			margin-left: 3px;
+		}
+	}
+}
+
+.visualization-result-container {
+	position: relative;
+
+	.calculating-alert {
+		display: none;
+		position: absolute;
+		width: 100%;
+		height: calc(100% - 52px);
+		background-color: rgba(0, 0, 0, 0.3);
+		padding-top: 100px;
+		font-size: 36px;
+		text-align: center;
+		margin-top: 52px;
+		z-index: 100;
+	}
+
+	&.calculating .calculating-alert {
+		display: block;
+	}
 }

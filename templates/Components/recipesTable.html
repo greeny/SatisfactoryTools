@@ -22,7 +22,7 @@
 							</a>
 							<br>
 						</span>
-						<span ng-if="recipe.inMachine">{{ ctrl.recipeResourcesPerMinute(ctrl.getMachine(recipe), recipe, ingredient.amount, ctrl.options.overclock)|number }}&nbsp;/&nbsp;min</span>
+						<span ng-if="recipe.inMachine">{{ctrl.recipeResourcesPerMinute(ctrl.getMachine(recipe), recipe, ingredient.amount, ctrl.options.overclock)|number}}&nbsp;/&nbsp;min</span>
 					</div>
 				</td>
 				<td>
@@ -34,7 +34,7 @@
 							</a>
 							<br>
 						</span>
-						<span ng-if="recipe.inMachine">{{ ctrl.recipeResourcesPerMinute(ctrl.getMachine(recipe), recipe, product.amount, ctrl.options.overclock)|number }}&nbsp;/&nbsp;min</span>
+						<span ng-if="recipe.inMachine">{{ctrl.recipeResourcesPerMinute(ctrl.getMachine(recipe), recipe, product.amount, ctrl.options.overclock)|number}}&nbsp;/&nbsp;min</span>
 					</div>
 				</td>
 				<td>
@@ -54,7 +54,12 @@
 						</a>
 					</span>
 					<br>
-					<span ng-if="recipe.inMachine">{{recipe.time}}s ({{ 60 / ctrl.recipeTime(recipe, ctrl.getMachine(recipe), ctrl.options.overclock) |number}} cycles&nbsp;/&nbsp;min)</span>
+					<span ng-if="recipe.inMachine">
+						{{recipe.time / ctrl.options.overclock * 100|number}}s ({{60 / ctrl.recipeTime(recipe, ctrl.getMachine(recipe), ctrl.options.overclock)|number}} cycles&nbsp;/&nbsp;min)
+					</span>
+					<span ng-if="recipe.inMachine && recipe.isVariablePower" class="text-muted"><br>
+						{{ctrl.getRecipeMinPower(recipe)|number}} - {{ctrl.getRecipeMaxPower(recipe)|number}} MW
+					</span>
 				</td>
 			</tr>
 		</tbody>

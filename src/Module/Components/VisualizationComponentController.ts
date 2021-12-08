@@ -1,10 +1,13 @@
 import {DataSet, Network} from 'vis-network';
 import {IController, IScope, ITimeoutService} from 'angular';
 import ELK from 'elkjs/lib/elk.bundled';
-import {ProductionResult} from '@src/Tools/Production/ProductionResult';
+import cytoscape from 'cytoscape';
 import {IVisNode} from '@src/Tools/Production/Result/IVisNode';
 import {IVisEdge} from '@src/Tools/Production/Result/IVisEdge';
 import {IElkGraph} from '@src/Solver/IElkGraph';
+import {Strings} from '@src/Utils/Strings';
+import model from '@src/Data/Model';
+import {ProductionResult} from '@src/Tools/Production/Result/ProductionResult';
 
 export class VisualizationComponentController implements IController
 {
@@ -34,16 +37,110 @@ export class VisualizationComponentController implements IController
 		this.unregisterWatcherCallback();
 	}
 
-	public updateData(result: ProductionResult|undefined): void
+	public useCytoscape(result: ProductionResult): void
 	{
-		if (!result) {
-			return;
+		const options: cytoscape.CytoscapeOptions = {
+			container: this.$element[0],
+		};
+		options.layout = {
+			name: 'elk',
+			fit: true,
+			padding: 200,
+			nodeDimensionIncludeLabels: true,
+			elk: {
+				algorithm: 'layered',
+				edgeRouting: 'POLYLINE',
+				'spacing.nodeNode': 200,
+			},
+		} as any;
+
+		const elements: cytoscape.ElementDefinition[] = [];
+		for (const node of result.graph.nodes) {
+			elements.push({
+				data: {
+					id: node.id.toString(),
+					label: node.getTitle(),
+				},
+				position: {
+					x: 1,
+					y: 1,
+				},
+			});
 		}
 
-		this.fitted = false;
+		for (const edge of result.graph.edges) {
+			elements.push({
+				data: {
+					id: edge.id.toString(),
+					source: edge.from.id.toString(),
+					target: edge.to.id.toString(),
+					label: edge.itemAmount.item,
+				},
+			});
+		}
 
-		const nodes = result ? result.graph.visNodes : new DataSet<IVisNode>();
-		const edges = result ? result.graph.visEdges : new DataSet<IVisEdge>();
+		options.elements = elements;
+		options.style = [
+			{
+				selector: 'node[label]',
+				style: {
+					width: 'label',
+					height: 'label',
+					shape: 'round-rectangle',
+					'font-size': '12px',
+					label: 'data(label)',
+					'text-valign': 'center',
+					'text-halign': 'center',
+				},
+			},
+			{
+				selector: 'edge[label]',
+				style: {
+					label: 'data(label)',
+					width: 3,
+					'curve-style': 'segments',
+				},
+			},
+		];
+
+		const cy = cytoscape(options as any);
+	}
+
+	public useVis(result: ProductionResult): void
+	{
+		const nodes = new DataSet<IVisNode>();
+		const edges = new DataSet<IVisEdge>();
+
+		for (const node of result.graph.nodes) {
+			nodes.add(node.getVisNode());
+		}
+
+		for (const edge of result.graph.edges) {
+			const smooth: any = {
+				enabled: false,
+			};
+
+			if (edge.to.hasOutputTo(edge.from)) {
+				smooth.enabled = true;
+				smooth.type = 'curvedCW'
+				smooth.roundness = 0.2;
+			}
+
+			edges.add({
+				id: edge.id,
+				from: edge.from.id,
+				to: edge.to.id,
+				label: model.getItem(edge.itemAmount.item).prototype.name + '\n' + Strings.formatNumber(edge.itemAmount.amount) + ' / min',
+				color: {
+					color: 'rgba(105, 125, 145, 1)',
+					highlight: 'rgba(134, 151, 167, 1)',
+				},
+				font: {
+					color: 'rgba(238, 238, 238, 1)',
+				},
+				smooth: smooth,
+			} as any);
+		}
 
 		this.network = this.drawVisualisation(nodes, edges);
 
@@ -100,6 +197,24 @@ export class VisualizationComponentController implements IController
 				});
 			});
 		});
+	}
+
+	public updateData(result: ProductionResult|undefined): void
+	{
+		if (!result) {
+			return;
+		}
+
+		this.fitted = false;
+
+		let use;
+		use = 'vis';
+
+		if (use === 'cytoscape') {
+			this.useCytoscape(result);
+		} else {
+			this.useVis(result);
+		}
 	}
 
 	private drawVisualisation(nodes: DataSet<IVisNode>, edges: DataSet<IVisEdge>): Network

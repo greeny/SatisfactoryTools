@@ -1,6 +1,6 @@
 import {Strings} from '@src/Utils/Strings';
 import {IBuildingSchema} from '@src/Schema/IBuildingSchema';
-import {IBuildingMetadataSchema} from '@src/Schema/IBuildingMetadataSchema';
+import {IBuildingMetadataSchema, IManufacturerAnyPowerMetadataSchema} from '@src/Schema/IBuildingMetadataSchema';
 
 export default function parseBuildings(buildings: {
 	ClassName: string,
@@ -20,6 +20,8 @@ export default function parseBuildings(buildings: {
 	mSize?: number,
 	mHeight?: number,
 	mWidth?: number,
+	mEstimatedMininumPowerConsumption?: string,
+	mEstimatedMaximumPowerConsumption?: string,
 }[], fixClassName: boolean = false): IBuildingSchema[]
 {
 	const ignored = [
@@ -48,7 +50,7 @@ export default function parseBuildings(buildings: {
 			continue;
 		}
 
-		const metadata: IBuildingMetadataSchema = {};
+		const metadata: IBuildingMetadataSchema|IManufacturerAnyPowerMetadataSchema = {};
 
 		if (typeof building.mSpeed !== 'undefined') {
 			metadata.beltSpeed = parseFloat(building.mSpeed) / 2;
@@ -72,6 +74,13 @@ export default function parseBuildings(buildings: {
 
 		if (typeof building.mPowerConsumptionExponent !== 'undefined') {
 			metadata.powerConsumptionExponent = parseFloat(building.mPowerConsumptionExponent);
+		}
+
+		if (typeof building.mEstimatedMininumPowerConsumption !== 'undefined' && typeof building.mEstimatedMaximumPowerConsumption !== 'undefined') {
+			metadata.isVariablePower = true;
+			metadata.minPowerConsumption = parseFloat(building.mEstimatedMininumPowerConsumption);
+			metadata.maxPowerConsumption = parseFloat(building.mEstimatedMaximumPowerConsumption);
+			metadata.powerConsumption = (metadata.minPowerConsumption + metadata.maxPowerConsumption) / 2;
 		}
 
 		if (typeof building.mManufacturingSpeed !== 'undefined') {

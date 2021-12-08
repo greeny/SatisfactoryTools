@@ -9,7 +9,10 @@
 		</tr>
 		<tr ng-if="ctrl.isAutonomousManufacturer(ctrl.building)">
 			<td>Power consumption</td>
-			<td>{{ctrl.powerConsumption|number}} MW</td>
+			<td>
+				{{ctrl.powerConsumption|number}} MW<br>
+				<span class="text-muted" ng-if="ctrl.building.metadata.isVariablePower">({{ctrl.minPowerConsumption|number}} - {{ctrl.maxPowerConsumption|number}} MW, depending on recipe)</span>
+			</td>
 		</tr>
 		<tr ng-if="ctrl.isAutonomousManufacturer(ctrl.building)">
 			<td>Manufacturing speed multiplier</td>

@@ -6,7 +6,7 @@ import {IItemAmountSchema} from '@src/Schema/IItemAmountSchema';
 import {IJsonSchema} from '@src/Schema/IJsonSchema';
 import {Strings} from '@src/Utils/Strings';
 
-export class ProductNode extends GraphNode
+export class SinkNode extends GraphNode
 {
 
 	public readonly resource: IItemSchema;
@@ -31,7 +31,7 @@ export class ProductNode extends GraphNode
 
 	public getTitle(): string
 	{
-		return this.formatText(this.resource.name) + '\n' + Strings.formatNumber(this.itemAmount.amount) + ' / min';
+		return 'Sink: ' + this.formatText(this.resource.name) + '\n' + Strings.formatNumber(this.itemAmount.amount) + ' / min\n' + Strings.formatNumber(this.itemAmount.amount * this.resource.sinkPoints) + ' points / min';
 	}
 
 	public getTooltip(): string|null
@@ -46,10 +46,10 @@ export class ProductNode extends GraphNode
 			label: this.getTitle(),
 			color: {
 				border: 'rgba(0, 0, 0, 0)',
-				background: 'rgba(80, 160, 80, 1)',
+				background: 'rgba(217, 83, 79, 1)',
 				highlight: {
 					border: 'rgba(238, 238, 238, 1)',
-					background: 'rgba(111, 182, 111, 1)',
+					background: 'rgba(224, 117, 114, 1)',
 				},
 			},
 			font: {

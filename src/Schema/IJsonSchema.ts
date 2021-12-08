@@ -1,5 +1,5 @@
 import {IItemSchema} from '@src/Schema/IItemSchema';
-import {IRecipeSchema} from '@src/Schema/IRecipeSchema';
+import {IAnyRecipeSchema} from '@src/Schema/IRecipeSchema';
 import {IResourceSchema} from '@src/Schema/IResourceSchema';
 import {IBuildingSchema} from '@src/Schema/IBuildingSchema';
 import {IMinerSchema} from '@src/Schema/IMinerSchema';
@@ -10,7 +10,7 @@ export interface IJsonSchema
 {
 
 	items: {[key: string]: IItemSchema};
-	recipes: {[key: string]: IRecipeSchema};
+	recipes: {[key: string]: IAnyRecipeSchema};
 	schematics: {[key: string]: ISchematicSchema};
 	generators: {[key: string]: IGeneratorSchema};
 	resources: {[key: string]: IResourceSchema};

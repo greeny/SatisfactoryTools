@@ -39,7 +39,7 @@ export class Data
 		Desc_Sulfur_C: 10.289473684210526,
 		Desc_OreBauxite_C: 7.196319018404908,
 		Desc_OreUranium_C: 33.51428571428572,
-		Desc_NitrogenGas_C: 5.721951219512195,
+		Desc_NitrogenGas_C: 5.865,
 		Desc_Water_C: 0,
 	};
 
