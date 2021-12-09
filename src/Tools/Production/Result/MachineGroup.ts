@@ -90,11 +90,11 @@ export class MachineGroup
 		let max = 0;
 		let isVariable = false;
 
-		power += machine.amount * (this.recipeData.machine.metadata.powerConsumption * Math.pow(machine.clockSpeed / 100, 1 / this.recipeData.machine.metadata.powerConsumptionExponent));
+		power += machine.amount * (this.recipeData.machine.metadata.powerConsumption * Math.pow(machine.clockSpeed / 100, this.recipeData.machine.metadata.powerConsumptionExponent));
 
 		if (this.recipeData.recipe.isVariablePower) {
-			max = machine.amount * this.recipeData.recipe.maxPower * Math.pow(machine.clockSpeed / 100, 1 / this.recipeData.machine.metadata.powerConsumptionExponent);
-			const min = machine.amount * this.recipeData.recipe.minPower * Math.pow(machine.clockSpeed / 100, 1 / this.recipeData.machine.metadata.powerConsumptionExponent);
+			max = machine.amount * this.recipeData.recipe.maxPower * Math.pow(machine.clockSpeed / 100, this.recipeData.machine.metadata.powerConsumptionExponent);
+			const min = machine.amount * this.recipeData.recipe.minPower * Math.pow(machine.clockSpeed / 100, this.recipeData.machine.metadata.powerConsumptionExponent);
 			power = (max + min) / 2;
 			isVariable = true;
 		}
