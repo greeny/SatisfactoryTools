@@ -85,7 +85,7 @@ export class ProductionController
 		this.$timeout(0).then(() => {
 			const clone = new ProductionTab(this.scope);
 			clone.data.request = angular.copy(tab.data.request);
-			clone.data.metadata.name = 'Clone: ' + clone.data.metadata.name;
+			clone.data.metadata.name = 'Clone: ' + tab.data.metadata.name;
 			this.tabs.push(clone);
 			this.tab = clone;
 			this.cloningInProgress = false;
