@@ -31,7 +31,7 @@ export class ProductNode extends GraphNode
 
 	public getTitle(): string
 	{
-		return this.formatText(this.resource.name) + '\n' + Strings.formatNumber(this.itemAmount.amount) + ' / min';
+		return this.formatText(this.resource.name) + '\n' + Strings.formatItemAmount(this.itemAmount.amount, this.itemAmount.item);
 	}
 
 	public getTooltip(): string|null

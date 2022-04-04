@@ -16,3 +16,6 @@ yarn-error.log
 
 # Generated sources
 www/assets/app.js
+
+# Local config
+env.json

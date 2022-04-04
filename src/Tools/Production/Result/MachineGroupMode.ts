@@ -1,1 +1,1 @@
-export type MachineGroupMode = 'roundUp' | 'underclockLast' | 'underclockEqually';
+export type MachineGroupMode = 'roundUp' | 'underclockLast' | 'underclockEqually' | 'underclockEquallyEven';

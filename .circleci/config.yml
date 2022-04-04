@@ -22,14 +22,23 @@ jobs:
                     - node_modules
                 key: v1-dependencies-{{ checksum "package.json" }}
 
+            - run: |
+                if [ "${CIRCLE_BRANCH}" == "dev" ]
+                then
+                    cp env.dev.json env.json
+                elif [ "${CIRCLE_BRANCH}" == "master" ]
+                then
+                    cp env.prod.json env.json
+                fi
+
             - run: yarn build
 
             - deploy:
                 command: |
                     if [ "${CIRCLE_BRANCH}" == "dev" ]
                     then
-                        rsync -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" -arvc www/* $DEPLOY_USER@$DEPLOY_SERVER:$DEPLOY_PATH/www
-                    elif [ "${CIRCLE_BRANCH}" == "_dev" ]
+                        rsync -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" -arvc www/* $DEPLOY_USER@$DEPLOY_SERVER:$DEPLOY_PATH_TEST/www
+                    elif [ "${CIRCLE_BRANCH}" == "master" ]
                     then
-                        rsync -e "ssh -o StrictHostKeyChecking=no -o  UserKnownHostsFile=/dev/null" -arvc www/* $DEPLOY_USER@$DEPLOY_SERVER:$DEPLOY_PATH_TEST/www
+                        rsync -e "ssh -o StrictHostKeyChecking=no -o  UserKnownHostsFile=/dev/null" -arvc www/* $DEPLOY_USER@$DEPLOY_SERVER:$DEPLOY_PATH/www
                     fi

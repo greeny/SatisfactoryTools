@@ -38,7 +38,6 @@ export class ItemIconDirective implements IDirective
 			if (!scope.size) {
 				scope.size = 32;
 			}
-
 			scope.imageSize = scope.size > 64 ? 256 : 64;
 		};
 

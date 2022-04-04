@@ -10,6 +10,9 @@ import {InputNode} from '@src/Tools/Production/Result/Nodes/InputNode';
 import {Graph} from '@src/Tools/Production/Result/Graph';
 import {ProductionResult} from '@src/Tools/Production/Result/ProductionResult';
 import {SinkNode} from '@src/Tools/Production/Result/Nodes/SinkNode';
+import {Constants} from '@src/Constants';
+import {GeneratorNode} from '@src/Tools/Production/Result/Nodes/GeneratorNode';
+import {GeneratorData} from '@src/Tools/Production/Result/GeneratorData';
 
 export class ProductionResultFactory
 {
@@ -34,14 +37,14 @@ export class ProductionResultFactory
 			let clockSpeed;
 			const amount = parseFloat(response[recipeData] + '');
 
-			[machineData, machineClass] = recipeData.split('#');
+			[machineData, machineClass] = recipeData.split('#', 2);
 
 			if (machineClass === 'Mine') {
 				graph.addNode(new MinerNode({
 					item: machineData,
 					amount: amount,
 				}, data));
-			} else if (machineClass === 'Sink') {
+			} else if (machineClass === Constants.SINK_POINTS_CLASSNAME) {
 				if (machineData in data.items) {
 					graph.addNode(new SinkNode({
 						item: machineData,
@@ -70,15 +73,28 @@ export class ProductionResultFactory
 					}, data));
 				}
 			} else {
-				[recipeClass, clockSpeed] = machineData.split('@');
+				[recipeClass, clockSpeed] = machineData.split('@', 2);
 
 				if (clockSpeed) {
-					graph.addNode(new RecipeNode(new RecipeData(
-						data.buildings[machineClass] as IManufacturerSchema,
-						data.recipes[recipeClass],
-						amount,
-						parseInt(clockSpeed, 10),
-					), data));
+					if (machineClass in data.generators) {
+						graph.addNode(new GeneratorNode(
+							new GeneratorData(
+								data.generators[machineClass],
+								data.buildings[machineClass],
+								data.items[recipeClass],
+								amount,
+								parseFloat(clockSpeed.replace('_', '.')),
+							),
+							data,
+						));
+					} else {
+						graph.addNode(new RecipeNode(new RecipeData(
+							data.buildings[machineClass] as IManufacturerSchema,
+							data.recipes[recipeClass],
+							amount,
+							parseFloat(clockSpeed.replace('_', '.')),
+						), data));
+					}
 				}
 			}
 		}

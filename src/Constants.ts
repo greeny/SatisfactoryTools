@@ -23,8 +23,13 @@ export class Constants
 	public static WATER_EXTRACTOR_CLASSNAME = 'Desc_WaterPump_C';
 	public static WATER_CLASSNAME = 'Desc_Water_C';
 	public static NUCLEAR_WASTE_CLASSNAME = 'Desc_NuclearWaste_C';
+	public static PLUTONIUM_WASTE_CLASSNAME = 'Desc_PlutoniumWaste_C';
 	public static NUCLEAR_FUEL_ROD_CLASSNAME = 'Desc_NuclearFuelRod_C';
 	public static GEOTHERMAL_GENERATOR_CLASSNAME = 'Build_GeneratorGeoThermal_C';
+	public static COUPON_CLASSNAME = 'Desc_ResourceSinkCoupon_C';
+	public static SINK_POINTS_CLASSNAME = 'special__sinkPoint';
+	public static POWER_CLASSNAME = 'special__power';
+	public static POWER_SHARD_CLASSNAME = 'Desc_CrystalShard_C';
 
 	public static RESOURCE_MULTIPLIER_IMPURE = 0.5;
 	public static RESOURCE_MULTIPLIER_NORMAL = 1;

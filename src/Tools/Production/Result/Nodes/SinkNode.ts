@@ -5,18 +5,21 @@ import {IItemSchema} from '@src/Schema/IItemSchema';
 import {IItemAmountSchema} from '@src/Schema/IItemAmountSchema';
 import {IJsonSchema} from '@src/Schema/IJsonSchema';
 import {Strings} from '@src/Utils/Strings';
+import {Constants} from '@src/Constants';
 
 export class SinkNode extends GraphNode
 {
 
 	public readonly resource: IItemSchema;
 	public readonly inputs: ResourceAmount[];
+	public readonly outputs: ResourceAmount[];
 
 	public constructor(public readonly itemAmount: IItemAmountSchema, data: IJsonSchema)
 	{
 		super();
 		this.resource = data.items[itemAmount.item];
 		this.inputs = [new ResourceAmount(this.resource, itemAmount.amount, 0)];
+		this.outputs = [new ResourceAmount(data.items[Constants.SINK_POINTS_CLASSNAME], this.itemAmount.amount * this.resource.sinkPoints, this.itemAmount.amount * this.resource.sinkPoints)];
 	}
 
 	public getInputs(): ResourceAmount[]
@@ -26,12 +29,12 @@ export class SinkNode extends GraphNode
 
 	public getOutputs(): ResourceAmount[]
 	{
-		return [];
+		return this.outputs;
 	}
 
 	public getTitle(): string
 	{
-		return 'Sink: ' + this.formatText(this.resource.name) + '\n' + Strings.formatNumber(this.itemAmount.amount) + ' / min\n' + Strings.formatNumber(this.itemAmount.amount * this.resource.sinkPoints) + ' points / min';
+		return this.formatText('</b>Sink:<b> ' + this.resource.name) + '\n' + Strings.formatItemAmount(this.itemAmount.amount, this.itemAmount.item) + '\n';
 	}
 
 	public getTooltip(): string|null

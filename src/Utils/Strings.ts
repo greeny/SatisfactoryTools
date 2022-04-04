@@ -1,5 +1,6 @@
 import {Objects} from '@src/Utils/Objects';
 import {Constants} from '@src/Constants';
+import {Numbers} from '@src/Utils/Numbers';
 
 export class Strings
 {
@@ -20,12 +21,38 @@ export class Strings
 		EST_ResourceSink: 'AWESOME Sink',
 	};
 
-	public static formatNumber(num: number|string, decimals: number = 3)
+	public static formatItemAmount(num: number|string, itemClass: string, decimals: number = 3): string
+	{
+		let suffix = ' / min';
+		if (typeof num === 'string') {
+			num = parseFloat(num);
+		}
+
+		if (itemClass === Constants.POWER_CLASSNAME) {
+			if (num > 1e6) {
+				num /= 1e6;
+				suffix = ' TW';
+			} else if (num > 1e3) {
+				num /= 1e3;
+				suffix = ' GW';
+			} else {
+				suffix = ' MW';
+			}
+		}
+
+		return Strings.formatNumber(num, decimals) + suffix;
+	}
+
+	public static formatNumber(num: number|string, decimals: number = 3): string
 	{
 		if (typeof num === 'string') {
 			num = parseFloat(num);
 		}
-		return num.toFixed(decimals).replace(/\.?0+$/, '');
+		const str = Numbers.round(num, decimals).toString();
+		if (str.indexOf('.') !== -1) {
+			return str.replace(/\.0+$/, '');
+		}
+		return str;
 	}
 
 	public static webalize(name: string): string

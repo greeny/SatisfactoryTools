@@ -15,6 +15,7 @@ import {DiffGenerator} from '@src/Utils/DiffGenerator/DiffGenerator';
 import {DiffFormatter} from '@src/Utils/DiffGenerator/DiffFormatter';
 import parseImageMapping from '@bin/parseDocs/imageMapping';
 import {Strings} from '@src/Utils/Strings';
+import {Constants} from '@src/Constants';
 
 const docs = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'Docs.json')).toString());
 const oldData: IJsonSchema = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'data.json')).toString()) as IJsonSchema;
@@ -74,6 +75,9 @@ for (const definitions of docs) {
 			for (const item of parseImageMapping(definitions.Classes)) {
 				imageMapping[item.className] = item.image;
 			}
+			biomass = biomass.filter((item: IItemSchema) => {
+				return item.energyValue && !item.liquid;
+			});
 			break;
 		case 'Class\'/Script/FactoryGame.FGBuildablePole\'':
 		case 'Class\'/Script/FactoryGame.FGBuildableConveyorBelt\'':
@@ -276,6 +280,42 @@ json.items['Desc_ResourceSinkCoupon_C'] = {
 	slug: 'ficsit-coupon',
 	stackSize: 500,
 };
+// add fake sink point item
+json.items[Constants.SINK_POINTS_CLASSNAME] = {
+	className: Constants.SINK_POINTS_CLASSNAME,
+	description: 'A special FICSIT bonus program Coupon, obtained through the AWESOME Sink. Can be redeemed in the AWESOME Shop for bonus milestones and rewards',
+	energyValue: 0,
+	fluidColor: {
+		r: 0,
+		g: 0,
+		b: 0,
+		a: 0,
+	},
+	liquid: false,
+	name: 'Sink point',
+	radioactiveDecay: 0,
+	sinkPoints: 0,
+	slug: 'sink-point',
+	stackSize: 500,
+};
+// add fake power item
+json.items[Constants.POWER_CLASSNAME] = {
+	className: Constants.POWER_CLASSNAME,
+	description: 'Power',
+	energyValue: 0,
+	fluidColor: {
+		r: 0,
+		g: 0,
+		b: 0,
+		a: 0,
+	},
+	liquid: false,
+	name: 'Power',
+	radioactiveDecay: 0,
+	sinkPoints: 0,
+	slug: 'power',
+	stackSize: 1,
+};
 imageMapping['Desc_ResourceSinkCoupon_C'] = '/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/UI/IconDesc_Ficsit_Coupon_256.png';
 
 // add biomass stuff to biomass burner
@@ -286,6 +326,20 @@ for (const key in json.generators) {
 		json.generators[key].fuel.push(...biomass.map((bio) => {
 			return bio.className;
 		}));
+	}
+
+	for (const k in json.generators[key].fuels) {
+		if (json.generators[key].fuels[k].item === 'FGItemDescriptorBiomass') {
+			json.generators[key].fuels.splice(parseInt(k), 1);
+			json.generators[key].fuels.push(...biomass.map((bio) => {
+				return {
+					item: bio.className,
+					supplementalItem: null,
+					byproduct: null,
+					byproductAmount: null,
+				};
+			}));
+		}
 	}
 }
 
@@ -370,6 +424,7 @@ for (const key in json.schematics) {
 }
 
 fs.writeFileSync(path.join(__dirname, '..', 'data', 'data.json'), JSON.stringify(json, null, '\t') + '\n');
+fs.writeFileSync(path.join(__dirname, '..', 'data', 'data.min.json'), JSON.stringify(json) + '\n');
 
 const diffGenerator = new DiffGenerator();
 fs.writeFileSync(path.join(__dirname, '..', 'data', 'diff.txt'), DiffFormatter.diffToMarkdown(diffGenerator.generateDiff(oldData, json)));

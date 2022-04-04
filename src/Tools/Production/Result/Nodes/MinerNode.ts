@@ -31,7 +31,7 @@ export class MinerNode extends GraphNode
 
 	public getTitle(): string
 	{
-		return '<b>' + this.resource.name + '</b>\n' + Strings.formatNumber(this.itemAmount.amount) + ' / min';
+		return '<b>' + this.resource.name + '</b>\n' + Strings.formatItemAmount(this.itemAmount.amount, this.itemAmount.item);
 	}
 
 	public getTooltip(): string|null

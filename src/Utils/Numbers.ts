@@ -8,7 +8,7 @@ export class Numbers
 
 	public static ceil(num: number, decimals: number = 3): number
 	{
-		return Math.ceil((num + Number.EPSILON) * Math.pow(10, decimals)) / Math.pow(10, decimals);
+		return Math.ceil((num - Number.EPSILON) * Math.pow(10, decimals)) / Math.pow(10, decimals);
 	}
 
 	public static floor(num: number, decimals: number = 3): number

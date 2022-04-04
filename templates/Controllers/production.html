@@ -68,18 +68,12 @@
 		</div>
 		<div class="card-body" ng-show="ctrl.tab.state.expanded">
 			<div class="row">
-				<div class="col-md-2 border-right border-light">
+				<div class="col-lg-2 border-right border-light">
 					<ul class="nav nav-tabs flex-column">
 						<li class="nav-item">
 							<a href="javascript: void(0);" class="nav-link" ng-class="{active: ctrl.tab.tab === 'production'}" ng-click="ctrl.tab.tab = 'production'">
-								<span class="fas fa-fw fa-chart-line mr-1"></span>
+								<span class="fas fa-fw fa-sign-out-alt mr-1"></span>
 								Production
-							</a>
-						</li>
-						<li class="nav-item">
-							<a href="javascript: void(0);" class="nav-link" ng-class="{active: ctrl.tab.tab === 'items'}" ng-click="ctrl.tab.tab = 'items'">
-								<span class="fas fa-fw fa-box-open mr-1"></span>
-								Items, Input
 							</a>
 						</li>
 						<li class="nav-item">
@@ -87,10 +81,17 @@
 								<span class="fas fa-fw fa-scroll mr-1"></span>
 								Recipes
 							</a>
-						<!--</li><li class="nav-item">
-							<a href="javascript: void(0);" class="nav-link" ng-class="{active: ctrl.tab.tab === 'sink'}" ng-click="ctrl.tab.tab = 'sink'">
-								<span class="fas fa-fw fa-ticket-alt mr-1"></span>
-								Sink points
+						</li>
+						<li class="nav-item">
+							<a href="javascript: void(0);" class="nav-link" ng-class="{active: ctrl.tab.tab === 'items'}" ng-click="ctrl.tab.tab = 'items'">
+								<span class="fas fa-fw fa-box-open mr-1"></span>
+								Raw resources
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="javascript: void(0);" class="nav-link" ng-class="{active: ctrl.tab.tab === 'input'}" ng-click="ctrl.tab.tab = 'input'">
+								<span class="fas fa-fw fa-sign-in-alt mr-1"></span>
+								Input
 							</a>
 						</li>
 						<li class="nav-item">
@@ -100,6 +101,24 @@
 							</a>
 						</li>
 						<li class="nav-item">
+							<a href="javascript: void(0);" class="nav-link" ng-class="{active: ctrl.tab.tab === 'sink'}" ng-click="ctrl.tab.tab = 'sink'">
+								<span class="fas fa-fw fa-ticket-alt mr-1"></span>
+								Sink, Byproducts
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="javascript: void(0);" class="nav-link" ng-class="{active: ctrl.tab.tab === 'overclocking'}" ng-click="ctrl.tab.tab = 'overclocking'">
+								<span class="fas fa-fw fa-tachometer-alt mr-1"></span>
+								Overclocking
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="javascript: void(0);" class="nav-link" ng-class="{active: ctrl.tab.tab === 'optimisation'}" ng-click="ctrl.tab.tab = 'optimisation'">
+								<span class="fas fa-fw fa-chart-area mr-1"></span>
+								Optimization
+							</a>
+						</li>
+						<!--<li class="nav-item">
 							<a href="javascript: void(0);" class="nav-link" ng-class="{active: ctrl.tab.tab === 'nodes'}" ng-click="ctrl.tab.tab = 'nodes'">
 								<span class="fas fa-fw fa-wrench mr-1"></span>
 								Nodes, miners, belts
@@ -108,10 +127,12 @@
 					</ul>
 				</div>
 
-				<div class="col-md-10" ng-if="ctrl.tab.tab === 'production'">
-					<p>
-						Select items that you want to produce. You can choose between item per minute (will produce given amount from as low amount of raw resources as possible) or maximize (will produce as much as possible, given the raw resource limits).
-					</p>
+				<div class="col-lg-10" ng-if="ctrl.tab.tab === 'production'">
+					<div class="card bg-tertiary mb-3">
+						<div class="card-body">
+							Select items that you want to produce. You can choose between item per minute (will produce given amount) or maximize (will produce as much as possible). The tool will calculate based on settings in "Optimisation" tab.
+						</div>
+					</div>
 
 					<table class="production-input-table">
 						<tbody ui-sortable="{axis: 'y',  'ui-floating': true, handle: '> .sortable-handler'}" ng-model="ctrl.tab.data.request.production">
@@ -134,7 +155,7 @@
 									</ui-select>
 								</td>
 								<td>
-									<select ng-show="product.item" class="form-control" ng-model="product.type" ng-options="value as key for (key, value) in ctrl.options"></select>
+									<select ng-show="product.item" class="form-control" ng-model="product.type" ng-options="value as key for (key, value) in (product.item === 'special__power' ? ctrl.powerOptions : ctrl.options)"></select>
 								</td>
 								<td>
 									<input class="form-control" ng-show="product.item && product.type === 'perMinute'" type="number" ng-model="product.amount" step="any">
@@ -169,130 +190,126 @@
 					</table>
 				</div>
 
-				<div class="col-md-10" ng-show="ctrl.tab.tab === 'items'">
-					<div class="row">
-						<div class="col-md-6">
-							<div class="card">
-								<h3 class="card-header card-header-with-buttons">
-									<span class="card-header-text">
-										Raw resources
-									</span>
-
-									<span class="btn-group">
-										<span class="btn btn-secondary px-3" ng-click="ctrl.tab.setDefaultRawResources()">
-											Set from map limits
-										</span>
-										<span class="btn btn-secondary px-3" ng-click="ctrl.tab.zeroRawResources()">
-											Set to 0
-										</span>
-									</span>
-								</h3>
-								<div class="card-body">
-									<p>
-										Select which raw resources you want to use and their limits. By default it's populated with map limits, but you can easily change that.
-									</p>
-
-									<table class="item-list">
-										<thead>
-											<tr>
-												<th>
-													Resource
-												</th>
-												<th>
-													Limit
-												</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr ng-repeat="resource in ctrl.rawResources">
-												<td ng-click="ctrl.tab.toggleResource(resource.item)">
-													<span class="fas fa-check-square" ng-show="ctrl.tab.isResourceEnabled(resource.item)"></span>
-													<span class="fas fa-square" ng-show="!ctrl.tab.isResourceEnabled(resource.item)"></span>
-													<span class="ml-2">
-														<item-icon item="resource.item" size="32"></item-icon>
-														{{ctrl.getItem(resource.item).name}}
-													</span>
-												</td>
-												<td>
-													<input type="number" ng-disabled="!ctrl.tab.isResourceEnabled(resource.item)" class="form-control" ng-model="ctrl.tab.data.request.resourceMax[resource.item]" step="any">
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-md-6">
-							<div class="card">
-								<h3 class="card-header card-header-with-buttons">
-									<span class="card-header-text">
-										Input
-									</span>
-								</h3>
-								<div class="card-body">
-									<p>
-										Select items that you already have at your disposal and therefore don't need to be produced by this factory.
-									</p>
-									<table class="input-table">
-										<tbody ui-sortable="{axis: 'y',  'ui-floating': true, handle: '> .sortable-handler'}" ng-model="ctrl.tab.data.request.input">
-											<tr ng-repeat="product in ctrl.tab.data.request.input track by $index">
-												<td class="sortable-handler">
-													<span class="fas fa-arrows-alt-v cursor-drag"></span>
-												</td>
-												<td>
-													<ui-select ng-model="product.item" class="production-item-picker">
-														<ui-select-match placeholder="Search or select item">
-															<span>
-																<item-icon dynamic="true" item="$select.selected.className" class="mr-2" size="24" hide-tooltip="true"></item-icon>
-																{{$select.selected.name}}
-															</span>
-														</ui-select-match>
-														<ui-select-choices repeat="item.className as item in (ctrl.inputableItems|filter:{name:$select.search}) track by item.className">
-															<item-icon item="item" hide-tooltip="true"></item-icon>
-															<span class="pl-2" ng-bind="item.name"></span>
-														</ui-select-choices>
-													</ui-select>
-												</td>
-												<td>
-													<input class="form-control" ng-show="product.item" type="number" ng-model="product.amount" step="any">
-												</td>
-												<td>
-													<span class="btn btn-success" ng-click="ctrl.tab.cloneInput(product)" tooltip title="Clone input">
-														<span class="far fa-fw fa-clone"></span>
-													</span>
-													<span class="btn btn-danger" ng-click="ctrl.tab.removeInput(product)" tooltip title="Remove input">
-														<span class="fas fa-fw fa-times"></span>
-													</span>
-												</td>
-											</tr>
-											<tr>
-												<td></td>
-												<td>
-													<span class="btn btn-outline-success btn-block" ng-click="ctrl.tab.addEmptyInput()">
-														<span class="fas fa-plus"></span>
-														Add input
-													</span>
-												</td>
-												<td></td>
-												<td>
-													<span class="btn btn-outline-danger" ng-click="ctrl.tab.clearInputs()" tooltip title="Clear inputs">
-														<span class="fas fa-fw fa-trash-alt"></span>
-													</span>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</div>
+				<div class="col-lg-10" ng-show="ctrl.tab.tab === 'items'">
+					<div class="card bg-tertiary mb-3">
+						<div class="card-body">
+							Select which raw resources you want to use and their extraction limits (how much per minute you can produce at most).
+							You can also change resource weights (which are used when the tool optimises for lowest resource consumption, higher weight = rarer resource).
 						</div>
 					</div>
+
+					<div class="row">
+						<div class="col-md-4">
+							<span class="h4">Resource weight:</span>
+						</div>
+						<div class="col-md-8">
+							<select class="form-control" ng-model="ctrl.tab.data.request.resourceWeightType" ng-options="value as key for (key, value) in ctrl.weightOptions" ng-change="ctrl.tab.recalculateWeights()"></select>
+						</div>
+					</div>
+
+					<hr>
+
+					<table class="item-list">
+						<thead>
+							<tr>
+								<th>
+									Resource
+								</th>
+								<th>
+									Extraction limit
+								</th>
+								<th>
+									Weights
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="resource in ctrl.rawResources">
+								<td ng-click="ctrl.tab.toggleResource(resource.item)">
+									<span class="fas fa-check-square" ng-show="ctrl.tab.isResourceEnabled(resource.item)"></span>
+									<span class="fas fa-square" ng-show="!ctrl.tab.isResourceEnabled(resource.item)"></span>
+									<span class="ml-2">
+										<item-icon item="resource.item" size="32"></item-icon>
+										{{ctrl.getItem(resource.item).name}}
+									</span>
+								</td>
+								<td>
+									<input type="number" ng-disabled="!ctrl.tab.isResourceEnabled(resource.item)" class="form-control" ng-model="ctrl.tab.data.request.resourceMax[resource.item]" step="any">
+								</td>
+								<td>
+									<input type="number" ng-disabled="ctrl.tab.data.request.resourceWeightType !== 'custom'" class="form-control" ng-model="ctrl.tab.data.request.resourceWeight[resource.item]" step="any">
+								</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
 
-				<div class="col-md-10" ng-show="ctrl.tab.tab === 'recipes'">
-					<p>
-						Select which recipes you want to allow to be used. The tool will automatically pick best possible combination of recipes from the selected ones.
-					</p>
+				<div class="col-lg-10" ng-show="ctrl.tab.tab === 'input'">
+					<div class="card bg-tertiary mb-3">
+						<div class="card-body">
+							Select items that you already have at your disposal and therefore don't need to be produced by this production line.
+						</div>
+					</div>
+
+					<table class="input-table">
+						<tbody ui-sortable="{axis: 'y',  'ui-floating': true, handle: '> .sortable-handler'}" ng-model="ctrl.tab.data.request.input">
+							<tr ng-repeat="product in ctrl.tab.data.request.input track by $index">
+								<td class="sortable-handler">
+									<span class="fas fa-arrows-alt-v cursor-drag"></span>
+								</td>
+								<td>
+									<ui-select ng-model="product.item" class="production-item-picker">
+										<ui-select-match placeholder="Search or select item">
+											<span>
+												<item-icon dynamic="true" item="$select.selected.className" class="mr-2" size="24" hide-tooltip="true"></item-icon>
+												{{$select.selected.name}}
+											</span>
+										</ui-select-match>
+										<ui-select-choices repeat="item.className as item in (ctrl.inputableItems|filter:{name:$select.search}) track by item.className">
+											<item-icon item="item" hide-tooltip="true"></item-icon>
+											<span class="pl-2" ng-bind="item.name"></span>
+										</ui-select-choices>
+									</ui-select>
+								</td>
+								<td>
+									<input class="form-control" ng-show="product.item" type="number" ng-model="product.amount" step="any">
+								</td>
+								<td>
+									<span class="btn btn-success" ng-click="ctrl.tab.cloneInput(product)" tooltip title="Clone input">
+										<span class="far fa-fw fa-clone"></span>
+									</span>
+									<span class="btn btn-danger" ng-click="ctrl.tab.removeInput(product)" tooltip title="Remove input">
+										<span class="fas fa-fw fa-times"></span>
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>
+									<span class="btn btn-outline-success btn-block" ng-click="ctrl.tab.addEmptyInput()">
+										<span class="fas fa-plus"></span>
+										Add input
+									</span>
+								</td>
+								<td></td>
+								<td>
+									<span class="btn btn-outline-danger" ng-click="ctrl.tab.clearInputs()" tooltip title="Clear inputs">
+										<span class="fas fa-fw fa-trash-alt"></span>
+									</span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+				</div>
+
+				<div class="col-lg-10" ng-show="ctrl.tab.tab === 'recipes'">
+					<div class="card bg-tertiary mb-3">
+						<div class="card-body">
+							Select which recipes you want to allow to be used. The tool will pick recipes from the selected ones based on settings in "Optimisation" tab.
+						</div>
+					</div>
+
 					<div class="row">
 						<div class="col-md-6">
 							<div class="recipe-list-card card">
@@ -398,16 +415,23 @@
 					</div>
 				</div>
 
-				<div class="col-md-10" ng-show="ctrl.tab.tab === 'sink'">
+				<div class="col-lg-10" ng-show="ctrl.tab.tab === 'sink'">
+					<div class="card bg-tertiary mb-3">
+						<div class="card-body">
+							In left column you can select items that you want to sink. If multiple are selected, the tool will choose the best ones based on settings in "Optimisation" tab.
+							In right column you can block items from being treated as a byproduct. That means that the tool will try to use them in some other production.
+						</div>
+					</div>
+
 					<div class="row">
 						<div class="col-md-6">
 							<div class="recipe-list-card card">
 								<div class="card-header d-flex">
 									<span class="recipe-list-card-title text-nowrap">
-										Sinkable resources
+										Sinkable items
 									</span>
 
-									<input type="text" ng-model="ctrl.tab.state.sinkableResourcesQuery" class="form-control" placeholder="Search for a resource">
+									<input type="text" ng-model="ctrl.tab.state.sinkableResourcesQuery" class="form-control" placeholder="Search for an item">
 
 									<span class="btn-group">
 										<span class="btn btn-secondary px-3" ng-click="ctrl.tab.setAllSinkableResources(true)">
@@ -426,17 +450,17 @@
 								<div class="card-body" ng-show="ctrl.tab.state.sinkableResourcesExpanded">
 									<table class="alternate-recipe-list">
 										<tr class="table-row-header">
-											<td></td>
-											<td class="d-flex justify-content-between">
-												<span class="cursor-pointer" ng-click="ctrl.tab.setSinkableResourcesSort('name')">
+											<th></th>
+											<th class="d-flex justify-content-between">
+												<span class="cursor-pointer h4" ng-click="ctrl.tab.setSinkableResourcesSort('name')">
 													<b>Name</b>
 													<span ng-if="ctrl.tab.state.sinkableResourcesSortBy === 'name'" ng-class="{fas: true, 'fa-caret-down': ctrl.tab.state.sinkableResourcesSortReverse === false, 'fa-caret-up': ctrl.tab.state.sinkableResourcesSortReverse === true}"></span>
 												</span>
-												<span class="cursor-pointer" ng-click="ctrl.tab.setSinkableResourcesSort('points')">
+												<span class="cursor-pointer h4" ng-click="ctrl.tab.setSinkableResourcesSort('points')">
 													<span ng-if="ctrl.tab.state.sinkableResourcesSortBy === 'points'" ng-class="{fas: true, 'fa-caret-down': ctrl.tab.state.sinkableResourcesSortReverse === true, 'fa-caret-up': ctrl.tab.state.sinkableResourcesSortReverse === false}"></span>
 													<b>Points</b>
 												</span>
-											</td>
+											</th>
 										</tr>
 										<tr ng-repeat="item in ctrl.sinkableItems | filter: {name: ctrl.tab.state.sinkableResourcesQuery} | orderBy: ctrl.tab.sinkableResourcesOrderCallback: ctrl.tab.state.sinkableResourcesSortReverse" ng-click="ctrl.tab.toggleSinkableResource(item.className)">
 											<td>
@@ -457,7 +481,209 @@
 						</div>
 
 						<div class="col-md-6">
+							<div class="recipe-list-card card">
+								<div class="card-header d-flex">
+									<span class="recipe-list-card-title text-nowrap">
+										Byproducts
+									</span>
 
+									<input type="text" ng-model="ctrl.tab.state.byproductsQuery" class="form-control" placeholder="Search for an item">
+
+									<span class="btn-group">
+										<span class="btn btn-secondary px-3" ng-click="ctrl.tab.setAllByproducts(true)">
+											All
+										</span>
+										<span class="btn btn-secondary px-3" ng-click="ctrl.tab.setAllByproducts(false)">
+											None
+										</span>
+										<span class="btn btn-secondary" ng-click="ctrl.tab.state.byproductsExpanded = !ctrl.tab.state.byproductsExpanded">
+											<span ng-if="ctrl.tab.state.byproductsExpanded" class="fas fa-fw fa-chevron-up"></span>
+											<span ng-if="!ctrl.tab.state.byproductsExpanded" class="fas fa-fw fa-chevron-down"></span>
+										</span>
+									</span>
+								</div>
+
+								<div class="card-body" ng-show="ctrl.tab.state.byproductsExpanded">
+									<table class="alternate-recipe-list">
+										<tr class="table-row-header">
+											<th></th>
+											<th>
+												<b>Item</b>
+											</th>
+										</tr>
+										<tr ng-repeat="item in ctrl.craftableItems | filter: {name: ctrl.tab.state.byproductsQuery}" ng-click="ctrl.tab.toggleByproduct(item.className)">
+											<td>
+												<span class="fas fa-check-square" ng-show="ctrl.tab.isByproductEnabled(item.className)"></span>
+												<span class="fas fa-square" ng-show="!ctrl.tab.isByproductEnabled(item.className)"></span>
+											</td>
+											<td>
+												<item-icon item="item" size="20" tooltip="1"></item-icon>
+												<span class="ml-1">{{item.name}}</span>
+											</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-10" ng-show="ctrl.tab.tab === 'power'">
+					<div class="card bg-tertiary mb-3">
+						<div class="card-body">
+							Select which fuel sources you have available for generating power.
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-auto">
+							<table class="alternate-recipe-list">
+								<tr ng-repeat="generator in ctrl.generators">
+									<td class="table-cell-adjust-size px-3">
+										<item-icon item="generator.className" size="20" tooltip="1"></item-icon>
+										<b>
+											{{ctrl.getBuilding(generator.className).name}}
+											({{generator.powerProduction|number}} MW)
+										</b><br>
+										<button class="btn btn-dark" ng-click="ctrl.tab.toggleGenerator(generator, true)">All</button>
+										<button class="btn btn-dark" ng-click="ctrl.tab.toggleGenerator(generator, false)">None</button>
+									</td>
+									<td class="mb-3 px-3">
+										<table class="alternate-recipe-list mb-2 mt-2">
+											<tr ng-repeat="fuel in generator.fuels" ng-click="ctrl.tab.toggleFuel(generator, fuel)">
+												<td class="align-top checkbox-column">
+													<span class="fas fa-check-square" ng-show="ctrl.tab.isFuelEnabled(generator, fuel)"></span>
+													<span class="fas fa-square" ng-show="!ctrl.tab.isFuelEnabled(generator, fuel)"></span>
+												</td>
+												<td class="d-flex justify-content-between">
+													<span class="pr-md-4 pr-2">
+														<item-icon item="fuel.item" size="20" tooltip="0"></item-icon>
+														{{ctrl.getItem(fuel.item).name}}
+													</span>
+													<span class="pl-md-4 pl-2">
+														<span class="recipe-item">
+															<span class="pr-1">{{generator.powerProduction / ctrl.getItem(fuel.item).energyValue * 60 / (ctrl.getItem(fuel.item).liquid ? 1000 : 1)|number}} / min</span>
+															<item-icon item="fuel.item" size="20" tooltip="1"></item-icon>
+														</span>
+														<span ng-if="generator.waterToPowerRatio" class="recipe-item ml-2">
+															<span class="pr-1">{{generator.waterToPowerRatio * generator.powerProduction * 60 / (ctrl.getItem(fuel.supplementalItem).liquid ? 1000 : 1)|number}} / min</span>
+															<item-icon item="'Desc_Water_C'" size="20" tooltip="1"></item-icon>
+														</span>
+													</span>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-10" ng-show="ctrl.tab.tab === 'overclocking'">
+					<div class="card bg-tertiary mb-3">
+						<div class="card-body">
+							Set clock speed for recipes here. Each recipe can have different clock speed. Clock speeds have to be between 1% and 250% and will be rounded to 4 decimal places (same behaviour as ingame).
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-4">
+							<span class="h4">Default clock speed:</span>
+						</div>
+						<div class="col-md-8">
+							<div class="input-group mb-2">
+								<input type="number" min="1" max="250" class="form-control" ng-model="ctrl.tab.data.request.defaultClockSpeed">
+								<div class="input-group-append">
+									<span class="input-group-text">%</span>
+									<button class="btn btn-tertiary" ng-class="{active: ctrl.tab.data.request.defaultClockSpeed === 50}" ng-click="ctrl.tab.data.request.defaultClockSpeed = 50">50%</button>
+									<button class="btn btn-tertiary" ng-class="{active: ctrl.tab.data.request.defaultClockSpeed === 100}" ng-click="ctrl.tab.data.request.defaultClockSpeed = 100">100%</button>
+									<button class="btn btn-tertiary" ng-class="{active: ctrl.tab.data.request.defaultClockSpeed === 150}" ng-click="ctrl.tab.data.request.defaultClockSpeed = 150">150%</button>
+									<button class="btn btn-tertiary" ng-class="{active: ctrl.tab.data.request.defaultClockSpeed === 200}" ng-click="ctrl.tab.data.request.defaultClockSpeed = 200">200%</button>
+									<button class="btn btn-tertiary" ng-class="{active: ctrl.tab.data.request.defaultClockSpeed === 250}" ng-click="ctrl.tab.data.request.defaultClockSpeed = 250">250%</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<hr class="border-light">
+
+					<span class="h5">Recipe clock speeds:</span>
+
+					<table class="table table-sm table-borderless">
+						<tbody ui-sortable="{axis: 'y',  'ui-floating': true, handle: '> .sortable-handler'}" ng-model="ctrl.tab.data.request.clockSpeeds">
+							<tr ng-repeat="clock in ctrl.tab.data.request.clockSpeeds track by $index">
+								<td class="sortable-handler table-cell-adjust-size align-middle">
+									<span class="fas fa-arrows-alt-v cursor-drag"></span>
+								</td>
+								<td class="w-40">
+									<ui-select ng-model="clock.recipe" class="production-item-picker">
+										<ui-select-match placeholder="Search or select recipe">
+											<span>
+												<item-icon ng-repeat="product in $select.selected.products" dynamic="true" item="product.item" class="mr-2" size="24" hide-tooltip="true"></item-icon>
+												{{$select.selected.name}}
+											</span>
+										</ui-select-match>
+										<ui-select-choices repeat="recipe.className as recipe in ctrl.recipes track by recipe.className">
+											<item-icon ng-repeat="product in recipe.products" item="product.item" hide-tooltip="true"></item-icon>
+											<span class="pl-2" ng-bind="recipe.name"></span>
+										</ui-select-choices>
+									</ui-select>
+								</td>
+								<td>
+									<div ng-show="clock.recipe" class="input-group">
+										<input class="form-control" type="number" ng-model="clock.clockSpeed" min="1" max="250">
+										<div class="input-group-append">
+											<span class="input-group-text">%</span>
+											<button class="btn btn-tertiary" ng-class="{active: clock.clockSpeed === 50}" ng-click="clock.clockSpeed = 50">50%</button>
+											<button class="btn btn-tertiary" ng-class="{active: clock.clockSpeed === 100}" ng-click="clock.clockSpeed = 100">100%</button>
+											<button class="btn btn-tertiary" ng-class="{active: clock.clockSpeed === 150}" ng-click="clock.clockSpeed = 150">150%</button>
+											<button class="btn btn-tertiary" ng-class="{active: clock.clockSpeed === 200}" ng-click="clock.clockSpeed = 200">200%</button>
+											<button class="btn btn-tertiary" ng-class="{active: clock.clockSpeed === 250}" ng-click="clock.clockSpeed = 250">250%</button>
+										</div>
+									</div>
+								</td>
+								<td class="table-cell-adjust-size">
+									<span class="btn btn-success" ng-click="ctrl.tab.cloneClock(clock)" tooltip title="Clone recipe">
+										<span class="far fa-fw fa-clone"></span>
+									</span>
+									<span class="btn btn-danger" ng-click="ctrl.tab.removeClock(clock)" tooltip title="Remove recipe">
+										<span class="fas fa-fw fa-times"></span>
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>
+									<span class="btn btn-outline-success btn-block" ng-click="ctrl.tab.addEmptyClock()">
+										<span class="fas fa-plus"></span>
+										Add recipe
+									</span>
+								</td>
+								<td></td>
+								<td>
+									<span class="btn btn-outline-danger" ng-click="ctrl.tab.clearClocks()" tooltip title="Clear recipes">
+										<span class="fas fa-fw fa-trash-alt"></span>
+									</span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="col-lg-10" ng-show="ctrl.tab.tab === 'optimisation'">
+					<div class="card bg-tertiary mb-3">
+						<div class="card-body">
+							Change how the calculator should optimise your production lines. Default is raw resources (weighted based on settings in "Raw resources" tab), but you can change that to optimisation towards power or building count.
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-4">
+							<span class="h4">Optimise production towards:</span>
+						</div>
+						<div class="col-md-8">
+							<select class="form-control" ng-model="ctrl.tab.data.request.optimisation" ng-options="value as key for (key, value) in ctrl.optimisationOptions"></select>
 						</div>
 					</div>
 				</div>
@@ -631,6 +857,11 @@
 						</h4>
 
 						<div class="card-body" ng-if="!ctrl.tab.state.overviewCollapsed['buildings']">
+							<div class="p-2 mb-2 text-left" style="font-size: 16px;" ng-if="ctrl.tab.resultNew.details.buildings.resources['Desc_CrystalShard_C'] > 0">
+								<item-icon item="'Desc_CrystalShard_C'" size="24"></item-icon>
+								<b class="mr-2">Power shards needed: {{ctrl.tab.resultNew.details.buildings.resources['Desc_CrystalShard_C']}}</b>
+							</div>
+
 							<table class="table table-sm table-hover">
 								<thead>
 									<tr>
@@ -720,7 +951,9 @@
 			<div class="border-left border-right border-secondary p-2">
 				You can move the nodes around using drag'n'drop.
 			</div>
-			<visualization result="ctrl.tab.resultNew" ng-class="{visualization: 1, loading: ctrl.tab.state.resultLoading}"></visualization>
+			<div class="visualization-resizable">
+				<visualization result="ctrl.tab.resultNew" ng-class="{visualization: 1, loading: ctrl.tab.state.resultLoading}"></visualization>
+			</div>
 		</div>
 
 		<div ng-show="ctrl.tab.resultTab === 'items'" class="visualization-result">
@@ -778,6 +1011,9 @@
 										<td class="table-cell-micro text-right" ng-if="producerData.type === 'input'">
 											<span class="fas fa-sign-in-alt" tooltip title="Input"></span>
 										</td>
+										<td class="table-cell-micro text-right" ng-if="producerData.type === 'sink'">
+											<span class="fas fa-ticket-alt" tooltip title="Sink"></span>
+										</td>
 										<td class="table-cell-adjust-size text-right">
 											{{producerData.itemAmount|number}} / min
 										</td>
@@ -798,11 +1034,18 @@
 										<td class="table-cell-adjust-size text-left" ng-if="producerData.type === 'input'">
 											<b>Input</b>
 										</td>
+										<td class="table-cell-adjust-size text-left" ng-if="producerData.type === 'sink'">
+											<b class="pr-2">Sink</b>
+											<item-icon item="producer" size="24"></item-icon> {{ctrl.getItem(producer).name}}
+										</td>
 										<td></td>
 									</tr>
 									<tr ng-repeat="(consumer, consumerData) in data.consumers" ng-class="{'table-row-separator-double': $last}">
-										<td class="table-cell-micro text-right">
+										<td class="table-cell-micro text-right" ng-if="consumerData.type === 'recipe'">
 											<span class="fas fa-minus" tooltip title="Consumption"></span>
+										</td>
+										<td class="table-cell-micro text-right" ng-if="consumerData.type === 'sink'">
+											<span class="fas fa-ticket-alt" tooltip title="Sink"></span>
 										</td>
 										<td class="table-cell-adjust-size text-right">
 											{{consumerData.itemAmount|number}} / min
@@ -810,10 +1053,13 @@
 										<td class="table-cell-adjust-size text-right text-muted">
 											({{consumerData.itemPercentage|number}}% of consumption)
 										</td>
-										<td class="table-cell-adjust-size text-right">
+										<td class="table-cell-adjust-size text-right" ng-if="consumerData.type === 'recipe'">
 											<span ng-repeat="product in ctrl.getRecipe(consumer).products">
 												<item-icon item="product.item" size="24"></item-icon>
 											</span>
+										</td>
+										<td class="table-cell-adjust-size text-right" ng-if="consumerData.type === 'sink'">
+											<b>Sink</b>
 										</td>
 										<td class="table-cell-adjust-size text-left">
 											{{ctrl.getRecipe(consumer).name}}

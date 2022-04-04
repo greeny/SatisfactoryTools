@@ -32,27 +32,32 @@ export class MachineGroup
 
 		switch (this.mode) {
 			case 'roundUp':
-				this.machines.push(this.getMachineData(Math.ceil(this.recipeData.amount * 100 / this.recipeData.clockSpeed), this.recipeData.clockSpeed));
+				this.machines.push(this.getMachineData(Math.ceil(this.recipeData.amount), this.recipeData.clockSpeed));
 				break;
 			case 'underclockLast':
-				const amount = Math.floor(this.recipeData.amount * 100 / this.recipeData.clockSpeed);
+				const amount = Math.floor(this.recipeData.amount);
 				if (amount > 0) {
 					this.machines.push(this.getMachineData(amount, this.recipeData.clockSpeed));
 				}
 
-				const rest = this.recipeData.amount * 100 / this.recipeData.clockSpeed - Math.floor(this.recipeData.amount * 100 / this.recipeData.clockSpeed);
+				const rest = this.recipeData.amount - Math.floor(this.recipeData.amount);
 				if (rest > 0) {
 					this.machines.push(this.getMachineData(1, Numbers.ceil(rest * this.recipeData.clockSpeed, 4)));
 				}
 				break;
 			case 'underclockEqually':
-				const count = Math.ceil(this.recipeData.amount * 100 / this.recipeData.clockSpeed);
-				const eachExact = this.recipeData.amount * 100 / count;
+			case 'underclockEquallyEven':
+				let count = Math.ceil(this.recipeData.amount);
+				if (this.mode === 'underclockEquallyEven' && count % 2 === 1) {
+					count++;
+				}
+
+				const eachExact = this.recipeData.amount * this.recipeData.clockSpeed / count;
 				const each = Numbers.floor(eachExact, 4);
 				let boostedMachines = 0;
 
 				if (eachExact - each > 1e-8) {
-					boostedMachines = Math.ceil((this.recipeData.amount * 100 - each * count) / 0.0001);
+					boostedMachines = Math.ceil((eachExact - each) * count / 0.0001);
 				}
 
 				if (boostedMachines > 0) {

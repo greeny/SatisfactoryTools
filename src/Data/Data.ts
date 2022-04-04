@@ -9,6 +9,8 @@ import {IResourceSchema} from '@src/Schema/IResourceSchema';
 import {BuildingTypes} from '@src/Types/BuildingTypes';
 import {Constants} from '@src/Constants';
 import {April} from '@src/Utils/April';
+import * as angular from 'angular';
+import {IGeneratorSchema} from '@src/Schema/IGeneratorSchema';
 
 export class Data
 {
@@ -30,27 +32,36 @@ export class Data
 
 	public static resourceWeights = {
 		Desc_OreIron_C: 1,
-		Desc_OreCopper_C: 2.438669438669439,
+		Desc_OreCopper_C: 2.4386694386694385,
 		Desc_Stone_C: 1.3314415437003406,
-		Desc_Coal_C: 2.277669902912621,
+		Desc_Coal_C: 2.2776699029126215,
 		Desc_OreGold_C: 6.375,
 		Desc_LiquidOil_C: 6.015384615384615,
 		Desc_RawQuartz_C: 6.702857142857143,
 		Desc_Sulfur_C: 10.289473684210526,
 		Desc_OreBauxite_C: 7.196319018404908,
-		Desc_OreUranium_C: 33.51428571428572,
+		Desc_OreUranium_C: 33.51428571428571,
 		Desc_NitrogenGas_C: 5.865,
 		Desc_Water_C: 0,
 	};
+
+	private readonly itemsWithoutSpecial: {[key: string]: IItemSchema};
+
+	public constructor()
+	{
+		this.itemsWithoutSpecial = angular.copy(this.getRawData().items);
+		delete this.itemsWithoutSpecial[Constants.SINK_POINTS_CLASSNAME];
+		delete this.itemsWithoutSpecial[Constants.POWER_CLASSNAME];
+	}
 
 	public getRawData(): IJsonSchema
 	{
 		return April.isApril() ? rawAprilData as any : rawData as any;
 	}
 
-	public getAllItems(): {[key: string]: IItemSchema}
+	public getAllItems(includeSpecial: boolean = false): {[key: string]: IItemSchema}
 	{
-		return this.getRawData().items;
+		return includeSpecial ? this.getRawData().items : this.itemsWithoutSpecial;
 	}
 
 	public getAllBuildings(): {[key: string]: IBuildingSchema}
@@ -127,6 +138,13 @@ export class Data
 		return null;
 	}
 
+	public getGenerators(): IGeneratorSchema[]
+	{
+		return Object.values(this.getRawData().generators).filter((generator: IGeneratorSchema) => {
+			return generator.fuel.length;
+		});
+	}
+
 	public getBaseItemRecipes(): IRecipeSchema[]
 	{
 		const recipes: IRecipeSchema[] = [];
@@ -144,9 +162,9 @@ export class Data
 	{
 		const data = this.getRawData();
 		const items: IItemSchema[] = [];
-		for (const key in data.items) {
+		for (const key in this.getAllItems()) {
 			const item = data.items[key];
-			if (item.sinkPoints > 0) {
+			if (item.sinkPoints > 0 && !item.liquid && item.className !== Constants.COUPON_CLASSNAME) {
 				items.push(item);
 			}
 		}
@@ -161,6 +179,19 @@ export class Data
 		for (const key in data.recipes) {
 			const recipe = data.recipes[key];
 			if (recipe.alternate) {
+				recipes.push(recipe);
+			}
+		}
+		return recipes;
+	}
+
+	public getRecipes(): IRecipeSchema[]
+	{
+		const recipes: IRecipeSchema[] = [];
+		const data = this.getRawData();
+		for (const key in data.recipes) {
+			const recipe = data.recipes[key];
+			if (recipe.inMachine) {
 				recipes.push(recipe);
 			}
 		}
@@ -305,7 +336,8 @@ export class Data
 		return this.getRawData().generators.hasOwnProperty(entity.className.replace('Desc', 'Build'));
 	}
 
-	public isManualManufacturer(entity: BuildingTypes): boolean{
+	public isManualManufacturer(entity: BuildingTypes): boolean
+	{
 		return Constants.WORKBENCH_CLASSNAME === entity.className || Constants.WORKSHOP_CLASSNAME === entity.className;
 	}
 

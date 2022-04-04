@@ -11,6 +11,8 @@ import {DataStorageService} from '@src/Module/Services/DataStorageService';
 import axios from 'axios';
 import {IProductionData} from '@src/Tools/Production/IProductionData';
 import {IBuildingSchema} from '@src/Schema/IBuildingSchema';
+import {IGeneratorSchema} from '@src/Schema/IGeneratorSchema';
+import {Configuration} from '@src/Configuration';
 
 export class ProductionController
 {
@@ -19,18 +21,39 @@ export class ProductionController
 	public tabs: ProductionTab[] = [];
 	public addingInProgress: boolean;
 	public cloningInProgress: boolean;
+	public readonly generators: IGeneratorSchema[] = data.getGenerators();
 	public readonly rawResources: IResourceSchema[] = data.getResources();
-	public readonly craftableItems: IItemSchema[] = model.getAutomatableItems();
+	public readonly craftableItems: IItemSchema[] = model.getAutomatableItems(true, true);
 	public readonly inputableItems: IItemSchema[] = model.getInputableItems();
 	public readonly sinkableItems: IItemSchema[] = data.getSinkableItems();
 	public readonly alternateRecipes: IRecipeSchema[] = data.getAlternateRecipes();
 	public readonly basicRecipes: IRecipeSchema[] = data.getBaseItemRecipes();
+	public readonly recipes: IRecipeSchema[] = data.getRecipes().sort((recipe1, recipe2) => {
+		return recipe1.name.localeCompare(recipe2.name);
+	});
 
 	public result: string;
 
 	public options: {} = {
 		'items/min': Constants.PRODUCTION_TYPE.PER_MINUTE,
 		'maximize': Constants.PRODUCTION_TYPE.MAXIMIZE,
+	};
+	public powerOptions: {} = {
+		'MW': Constants.PRODUCTION_TYPE.PER_MINUTE,
+		'maximize': Constants.PRODUCTION_TYPE.MAXIMIZE,
+	};
+
+	public weightOptions: {} = {
+		'Based on resource rarity': 'rarity',
+		'Based on extraction limits': 'limit',
+		'All resources equal': 'equal',
+		'Custom weights': 'custom',
+	};
+
+	public optimisationOptions: {} = {
+		'Raw resource usage': 'resources',
+		'Power usage': 'power',
+		'Building count': 'buildings',
 	};
 
 	public static $inject = ['$scope', '$timeout', 'DataStorageService', '$location'];
@@ -51,7 +74,7 @@ export class ProductionController
 		if ('share' in query) {
 			axios({
 				method: 'GET',
-				url: 'https://api.satisfactorytools.com/v1/share/' + encodeURIComponent(query.share),
+				url: Configuration.getApiUrl() + '/v2/share/' + encodeURIComponent(query.share),
 			}).then((response) => {
 				$timeout(0).then(() => {
 					this.$location.search('');
@@ -85,7 +108,7 @@ export class ProductionController
 		this.$timeout(0).then(() => {
 			const clone = new ProductionTab(this.scope);
 			clone.data.request = angular.copy(tab.data.request);
-			clone.data.metadata.name = 'Clone: ' + clone.data.metadata.name;
+			clone.data.metadata.name = 'Clone: ' + tab.data.metadata.name;
 			this.tabs.push(clone);
 			this.tab = clone;
 			this.cloningInProgress = false;

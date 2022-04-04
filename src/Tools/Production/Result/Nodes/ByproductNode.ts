@@ -31,7 +31,7 @@ export class ByproductNode extends GraphNode
 
 	public getTitle(): string
 	{
-		return this.formatText('Byproduct: ' + this.resource.name) + '\n' + Strings.formatNumber(this.itemAmount.amount) + ' / min';
+		return this.formatText('Byproduct: ' + this.resource.name) + '\n' + Strings.formatItemAmount(this.itemAmount.amount, this.itemAmount.item);
 	}
 
 	public getTooltip(): string|null
@@ -46,10 +46,10 @@ export class ByproductNode extends GraphNode
 			label: this.getTitle(),
 			color: {
 				border: 'rgba(0, 0, 0, 0)',
-				background: 'rgba(27, 112, 137, 1)',
+				background: 'rgba(139, 69, 19, 1)',
 				highlight: {
 					border: 'rgba(238, 238, 238, 1)',
-					background: 'rgba(38, 159, 194, 1)',
+					background: 'rgba(169, 84, 23, 1)',
 				},
 			},
 			font: {

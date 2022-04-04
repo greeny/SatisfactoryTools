@@ -18353,6 +18353,57 @@
 				"a": 0
 			}
 		},
+		"Desc_Fireworks_Projectile_01_C": {
+			"slug": "sweet-fireworks",
+			"className": "Desc_Fireworks_Projectile_01_C",
+			"name": "Sweet Fireworks",
+			"sinkPoints": null,
+			"description": "Merry FICSMAS and a Happy New Year!\n\nAlternative Nobelisk Ammo. Use G to swap!",
+			"stackSize": 500,
+			"energyValue": 0,
+			"radioactiveDecay": 0,
+			"liquid": false,
+			"fluidColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			}
+		},
+		"Desc_Fireworks_Projectile_02_C": {
+			"slug": "fancy-fireworks",
+			"className": "Desc_Fireworks_Projectile_02_C",
+			"name": "Fancy Fireworks",
+			"sinkPoints": null,
+			"description": "Fireworks are produced from random ingredients. Primarily used for having a good time.\n\nAlternative Nobelisk Ammo. Use G to swap!",
+			"stackSize": 500,
+			"energyValue": 0,
+			"radioactiveDecay": 0,
+			"liquid": false,
+			"fluidColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			}
+		},
+		"Desc_Fireworks_Projectile_03_C": {
+			"slug": "sparkly-fireworks",
+			"className": "Desc_Fireworks_Projectile_03_C",
+			"name": "Sparkly Fireworks",
+			"sinkPoints": null,
+			"description": "Goes Pfffeeeeew... BOOM! *Sparkle*\n\nAlternative Nobelisk Ammo. Use G to swap!",
+			"stackSize": 500,
+			"energyValue": 0,
+			"radioactiveDecay": 0,
+			"liquid": false,
+			"fluidColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			}
+		},
 		"Desc_FlowerPetals_C": {
 			"slug": "flower-petals",
 			"className": "Desc_FlowerPetals_C",
@@ -19633,7 +19684,7 @@
 			"className": "Desc_SpaceElevatorPart_6_C",
 			"name": "Magnetic Field Generator",
 			"sinkPoints": 15650,
-			"description": "Project Part #7. Ship with the Space Elevator to complete phases of Project Assembly.\n\nThese modular generators use superconducting magnets and vast amounts of electricity to produce an easily expandible and powerful magnetic field.",
+			"description": "Project Part #7. Ship with the Space Elevator to complete phases of Project Assembly.\n\nThese modular generators use superconducting magnets and vast amounts of electricity to produce an easily expandable and powerful magnetic field.",
 			"stackSize": 50,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
@@ -19950,6 +20001,40 @@
 				"b": 0,
 				"a": 0
 			}
+		},
+		"special__power": {
+			"className": "special__power",
+			"description": "Power",
+			"energyValue": 0,
+			"fluidColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			},
+			"liquid": false,
+			"name": "Power",
+			"radioactiveDecay": 0,
+			"sinkPoints": 0,
+			"slug": "power",
+			"stackSize": 1
+		},
+		"special__sinkPoint": {
+			"className": "special__sinkPoint",
+			"description": "A special FICSIT bonus program Coupon, obtained through the AWESOME Sink. Can be redeemed in the AWESOME Shop for bonus milestones and rewards",
+			"energyValue": 0,
+			"fluidColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			},
+			"liquid": false,
+			"name": "Sink point",
+			"radioactiveDecay": 0,
+			"sinkPoints": 0,
+			"slug": "sink-point",
+			"stackSize": 500
 		}
 	},
 	"schematics": {
@@ -28952,8 +29037,8 @@
 		}
 	},
 	"generators": {
-		"Build_GeneratorBiomass_C": {
-			"className": "Build_GeneratorBiomass_C",
+		"Desc_GeneratorBiomass_C": {
+			"className": "Desc_GeneratorBiomass_C",
 			"fuel": [
 				"Desc_Biofuel_C",
 				"Desc_PackagedBiofuel_C",
@@ -28961,54 +29046,166 @@
 				"Desc_GenericBiomass_C",
 				"Desc_Leaves_C",
 				"Desc_Wood_C",
-				"Desc_LiquidBiofuel_C",
-				"Desc_PackagedAlumina_C",
 				"Desc_Fabric_C",
 				"Desc_Mycelia_C",
-				"Desc_PackagedSulfuricAcid_C",
-				"Desc_PackagedNitrogenGas_C",
-				"Desc_PackagedNitricAcid_C",
 				"Desc_HogParts_C",
 				"Desc_SpitterParts_C"
+			],
+			"fuels": [
+				{
+					"item": "Desc_Biofuel_C",
+					"supplementalItem": null,
+					"byproduct": null,
+					"byproductAmount": null
+				},
+				{
+					"item": "Desc_PackagedBiofuel_C",
+					"supplementalItem": null,
+					"byproduct": null,
+					"byproductAmount": null
+				},
+				{
+					"item": "Desc_FlowerPetals_C",
+					"supplementalItem": null,
+					"byproduct": null,
+					"byproductAmount": null
+				},
+				{
+					"item": "Desc_GenericBiomass_C",
+					"supplementalItem": null,
+					"byproduct": null,
+					"byproductAmount": null
+				},
+				{
+					"item": "Desc_Leaves_C",
+					"supplementalItem": null,
+					"byproduct": null,
+					"byproductAmount": null
+				},
+				{
+					"item": "Desc_Wood_C",
+					"supplementalItem": null,
+					"byproduct": null,
+					"byproductAmount": null
+				},
+				{
+					"item": "Desc_Fabric_C",
+					"supplementalItem": null,
+					"byproduct": null,
+					"byproductAmount": null
+				},
+				{
+					"item": "Desc_Mycelia_C",
+					"supplementalItem": null,
+					"byproduct": null,
+					"byproductAmount": null
+				},
+				{
+					"item": "Desc_HogParts_C",
+					"supplementalItem": null,
+					"byproduct": null,
+					"byproductAmount": null
+				},
+				{
+					"item": "Desc_SpitterParts_C",
+					"supplementalItem": null,
+					"byproduct": null,
+					"byproductAmount": null
+				}
 			],
 			"powerProduction": 30,
 			"powerProductionExponent": 1.3,
 			"waterToPowerRatio": 0
 		},
-		"Build_GeneratorCoal_C": {
-			"className": "Build_GeneratorCoal_C",
+		"Desc_GeneratorCoal_C": {
+			"className": "Desc_GeneratorCoal_C",
 			"fuel": [
 				"Desc_Coal_C",
 				"Desc_CompactedCoal_C",
 				"Desc_PetroleumCoke_C"
 			],
+			"fuels": [
+				{
+					"item": "Desc_Coal_C",
+					"supplementalItem": "Desc_Water_C",
+					"byproduct": null,
+					"byproductAmount": null
+				},
+				{
+					"item": "Desc_CompactedCoal_C",
+					"supplementalItem": "Desc_Water_C",
+					"byproduct": null,
+					"byproductAmount": null
+				},
+				{
+					"item": "Desc_PetroleumCoke_C",
+					"supplementalItem": "Desc_Water_C",
+					"byproduct": null,
+					"byproductAmount": null
+				}
+			],
 			"powerProduction": 75,
 			"powerProductionExponent": 1.3,
 			"waterToPowerRatio": 10
 		},
-		"Build_GeneratorFuel_C": {
-			"className": "Build_GeneratorFuel_C",
+		"Desc_GeneratorFuel_C": {
+			"className": "Desc_GeneratorFuel_C",
 			"fuel": [
 				"Desc_LiquidFuel_C",
 				"Desc_LiquidTurboFuel_C",
 				"Desc_LiquidBiofuel_C"
 			],
+			"fuels": [
+				{
+					"item": "Desc_LiquidFuel_C",
+					"supplementalItem": null,
+					"byproduct": null,
+					"byproductAmount": null
+				},
+				{
+					"item": "Desc_LiquidTurboFuel_C",
+					"supplementalItem": null,
+					"byproduct": null,
+					"byproductAmount": null
+				},
+				{
+					"item": "Desc_LiquidBiofuel_C",
+					"supplementalItem": null,
+					"byproduct": null,
+					"byproductAmount": null
+				}
+			],
 			"powerProduction": 150,
 			"powerProductionExponent": 1.3,
 			"waterToPowerRatio": 0
 		},
-		"Build_GeneratorGeoThermal_C": {
-			"className": "Build_GeneratorGeoThermal_C",
+		"Desc_GeneratorGeoThermal_C": {
+			"className": "Desc_GeneratorGeoThermal_C",
 			"fuel": [],
+			"fuels": [],
 			"powerProduction": 0,
 			"powerProductionExponent": 1.3,
 			"waterToPowerRatio": 0
 		},
-		"Build_GeneratorNuclear_C": {
-			"className": "Build_GeneratorNuclear_C",
+		"Desc_GeneratorNuclear_C": {
+			"className": "Desc_GeneratorNuclear_C",
 			"fuel": [
 				"Desc_NuclearFuelRod_C",
 				"Desc_PlutoniumFuelRod_C"
+			],
+			"fuels": [
+				{
+					"item": "Desc_NuclearFuelRod_C",
+					"supplementalItem": "Desc_Water_C",
+					"byproduct": "Desc_NuclearWaste_C",
+					"byproductAmount": 50
+				},
+				{
+					"item": "Desc_PlutoniumFuelRod_C",
+					"supplementalItem": "Desc_Water_C",
+					"byproduct": "Desc_PlutoniumWaste_C",
+					"byproductAmount": 10
+				}
 			],
 			"powerProduction": 2500,
 			"powerProductionExponent": 1.321928,

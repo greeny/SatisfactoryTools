@@ -47,16 +47,26 @@ export class Model
 		throw new Error('Unknown item ' + className);
 	}
 
-	public getAutomatableItems(includeWaste: boolean = false): IItemSchema[]
+	public getAutomatableItems(includeWaste: boolean = false, includeSpecial: boolean = false): IItemSchema[]
 	{
 		const items: Item[] = [];
 		itemLoop:
 		for (const k in this.items) {
 			if (this.items.hasOwnProperty(k)) {
+				if ((this.items[k].prototype.className === Constants.SINK_POINTS_CLASSNAME || this.items[k].prototype.className === Constants.POWER_CLASSNAME) && includeSpecial) {
+					items.push(this.items[k]);
+					continue;
+				}
+
+				if (includeWaste && (k === Constants.NUCLEAR_WASTE_CLASSNAME || k === Constants.PLUTONIUM_WASTE_CLASSNAME)) {
+					items.push(this.items[k]);
+					continue;
+				}
+
 				for (const l in this.recipes) {
 					if (this.recipes.hasOwnProperty(l) && this.recipes[l].prototype.inMachine) {
 						for (const product of this.recipes[l].products) {
-							if (product.item === this.items[k] || (includeWaste && k === Constants.NUCLEAR_WASTE_CLASSNAME)) {
+							if (product.item === this.items[k]) {
 								items.push(this.items[k]);
 								continue itemLoop;
 							}
@@ -66,6 +76,12 @@ export class Model
 			}
 		}
 		return items.sort((item1: Item, item2: Item) => {
+			if (item1.prototype.className === Constants.SINK_POINTS_CLASSNAME || item1.prototype.className === Constants.POWER_CLASSNAME) {
+				return -1;
+			}
+			if (item2.prototype.className === Constants.SINK_POINTS_CLASSNAME || item2.prototype.className === Constants.POWER_CLASSNAME) {
+				return 1;
+			}
 			return item1.prototype.name.localeCompare(item2.prototype.name);
 		}).map((item: Item) => {
 			return item.prototype;

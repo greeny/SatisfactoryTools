@@ -39,7 +39,7 @@ export class RecipeNode extends GraphNode
 
 	public getTitle(): string
 	{
-		return this.formatText(this.recipeData.recipe.name) + '\n' + Strings.formatNumber(this.recipeData.amount) + 'x ' + this.recipeData.machine.name;
+		return this.formatText(this.recipeData.recipe.name) + '\n' + Strings.formatNumber(this.recipeData.amount) + 'x ' + this.recipeData.machine.name + '\n<i>' + this.recipeData.clockSpeed + '% clock speed</i>';
 	}
 
 	public getTooltip(): string|null
@@ -54,10 +54,10 @@ export class RecipeNode extends GraphNode
 		title.push('');
 
 		for (const ingredient of this.ingredients) {
-			title.push('<b>IN:</b> ' + Strings.formatNumber(ingredient.maxAmount) + ' / min - ' + ingredient.resource.name);
+			title.push('<b>IN:</b> ' + Strings.formatItemAmount(ingredient.maxAmount, ingredient.resource.className) + ' - ' + ingredient.resource.name);
 		}
 		for (const product of this.products) {
-			title.push('<b>OUT:</b> ' + Strings.formatNumber(product.maxAmount) + ' / min - ' + product.resource.name);
+			title.push('<b>OUT:</b> ' + Strings.formatItemAmount(product.maxAmount, product.resource.className) + ' - ' + product.resource.name);
 		}
 
 		return title.join('<br>');

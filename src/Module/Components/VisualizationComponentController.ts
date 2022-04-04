@@ -1,5 +1,5 @@
 import {DataSet, Network} from 'vis-network';
-import {IController, IScope, ITimeoutService} from 'angular';
+import {IController, IIntervalService, IPromise, IScope, ITimeoutService} from 'angular';
 import ELK from 'elkjs/lib/elk.bundled';
 import cytoscape from 'cytoscape';
 import {IVisNode} from '@src/Tools/Production/Result/IVisNode';
@@ -14,14 +14,14 @@ export class VisualizationComponentController implements IController
 
 	public result: ProductionResult;
 
-	public static $inject = ['$element', '$scope', '$timeout'];
+	public static $inject = ['$element', '$scope', '$timeout', '$interval'];
 
 	private unregisterWatcherCallback: () => void;
 	private network: Network;
 	private fitted: boolean = false;
+	private interval: IPromise<any>;
 
-	public constructor(private readonly $element: any, private readonly $scope: IScope, private readonly $timeout: ITimeoutService) {}
-
+	public constructor(private readonly $element: any, private readonly $scope: IScope, private readonly $timeout: ITimeoutService, private readonly $interval: IIntervalService) {}
 
 	public $onInit(): void
 	{
@@ -30,11 +30,25 @@ export class VisualizationComponentController implements IController
 		}, (newValue) => {
 			this.updateData(newValue);
 		});
+		const resizable = this.$element.parent();
+		let lastHeight = resizable.height();
+
+		this.interval = this.$interval(() => {
+			const newHeight = resizable.height();
+			if (newHeight !== lastHeight && this.network) {
+				lastHeight = newHeight;
+				this.network.setOptions({
+					height: newHeight + 'px',
+				});
+				this.network.fit();
+			}
+		}, 100);
 	}
 
 	public $onDestroy(): void
 	{
 		this.unregisterWatcherCallback();
+		this.$interval.cancel(this.interval);
 	}
 
 	public useCytoscape(result: ProductionResult): void
@@ -130,7 +144,7 @@ export class VisualizationComponentController implements IController
 				id: edge.id,
 				from: edge.from.id,
 				to: edge.to.id,
-				label: model.getItem(edge.itemAmount.item).prototype.name + '\n' + Strings.formatNumber(edge.itemAmount.amount) + ' / min',
+				label: model.getItem(edge.itemAmount.item).prototype.name + '\n' + Strings.formatItemAmount(edge.itemAmount.amount, edge.itemAmount.item),
 				color: {
 					color: 'rgba(105, 125, 145, 1)',
 					highlight: 'rgba(134, 151, 167, 1)',
@@ -223,6 +237,7 @@ export class VisualizationComponentController implements IController
 			nodes: nodes,
 			edges: edges,
 		}, {
+			height: '800px',
 			edges: {
 				labelHighlightBold: false,
 				font: {

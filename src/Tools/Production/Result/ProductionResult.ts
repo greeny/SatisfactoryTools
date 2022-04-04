@@ -20,6 +20,8 @@ import {IProductionDataApiRequest} from '@src/Tools/Production/IProductionData';
 import {ProductNode} from '@src/Tools/Production/Result/Nodes/ProductNode';
 import {ByproductNode} from '@src/Tools/Production/Result/Nodes/ByproductNode';
 import {Numbers} from '@src/Utils/Numbers';
+import {SinkNode} from '@src/Tools/Production/Result/Nodes/SinkNode';
+import {Constants} from '@src/Constants';
 
 export class ProductionResult
 {
@@ -82,7 +84,7 @@ export class ProductionResult
 				buildings.buildings[className].amount += amount;
 				buildings.buildings[className].recipes[node.recipeData.recipe.className] = {
 					amount: amount,
-					resources: ProductionResult.calculateBuildingCost(className, amount, schema),
+					resources: ProductionResult.calculateBuildingCost(className, amount, node.recipeData.clockSpeed, schema),
 				}
 			}
 		}
@@ -417,10 +419,16 @@ export class ProductionResult
 			if (edge.to instanceof RecipeNode) {
 				ProductionResult.addRecipeAmount(items[className].consumers, edge.to.recipeData.recipe.className, amount);
 				items[className].consumed += amount;
+			} else if (edge.to instanceof SinkNode) {
+				ProductionResult.addRecipeAmount(items[className].consumers, edge.to.itemAmount.item, amount, 'sink');
+				items[className].consumed += amount;
 			}
 		} else if (outgoing === false) {
 			if (edge.from instanceof RecipeNode) {
 				ProductionResult.addRecipeAmount(items[className].producers, edge.from.recipeData.recipe.className, amount);
+				items[className].produced += amount;
+			} else if (edge.from instanceof SinkNode) {
+				ProductionResult.addRecipeAmount(items[className].producers, edge.from.itemAmount.item, amount, 'sink');
 				items[className].produced += amount;
 			} else if (edge.from instanceof MinerNode) {
 				ProductionResult.addRecipeAmount(items[className].producers, edge.from.itemAmount.item, amount, 'miner');
@@ -448,9 +456,14 @@ export class ProductionResult
 		data[className].itemAmount += amount;
 	}
 
-	private static calculateBuildingCost(buildingClass: string, amount: number, schema: IJsonSchema): {[key: string]: number}
+	private static calculateBuildingCost(buildingClass: string, amount: number, clockSpeed: number, schema: IJsonSchema): {[key: string]: number}
 	{
 		const cost: {[key: string]: number} = {};
+
+		if (clockSpeed > 100) {
+			cost[Constants.POWER_SHARD_CLASSNAME] = Math.min(3, Math.max(1, Math.ceil((clockSpeed - 100) / 50))) * amount;
+		}
+
 		for (const recipeClass in schema.recipes) {
 			const recipe = schema.recipes[recipeClass];
 			if (recipe.products.length && recipe.products[0].item === buildingClass) {

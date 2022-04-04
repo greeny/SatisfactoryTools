@@ -9,6 +9,7 @@ Satisfactory Tools for planning and building the perfect base.
 ## Installation
 - `git clone git@github.com:greeny/SatisfactoryTools.git`
 - `yarn install`
+- copy `env.prod.json` to `env.json`
 - `yarn build`
 - Set up a virtual host pointing to `/www` directory (using e.g. Apache or ngnix)
 
