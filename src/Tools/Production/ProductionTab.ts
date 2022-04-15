@@ -40,6 +40,7 @@ export class ProductionTab
 	public shareLink: string = '';
 	public resultStatus: ResultStatus = ResultStatus.NO_INPUT;
 	public resultNew: ProductionResult|undefined;
+	public easter: boolean = false;
 	public data: IProductionData;
 
 	private readonly unregisterCallback: () => void;
@@ -67,6 +68,12 @@ export class ProductionTab
 	public calculate($timeout?: ITimeoutService): void
 	{
 		let request = false;
+		this.easter = false;
+		for (const item of this.data.request.production) {
+			if (item.item === 'Desc_ColorCartridge_C' && item.amount === 69420) {
+				this.easter = true;
+			}
+		}
 
 		for (const product of this.data.request.production) {
 			if (product.item && product.amount > 0) {
@@ -174,6 +181,11 @@ export class ProductionTab
 
 	public copyShareLink(): void
 	{
+		if (this.easter) {
+			Strings.copyToClipboard('https://easter.ficsit.app/OptvkwO668wweaMB', 'You\'ve successfully crafted a blueprint for the broken assembly line! You may now proceed to the link that has been copied (just paste it in your browser). You can also copy this link: https://easter.ficsit.app/OptvkwO668wweaMB', 20000);
+			return;
+		}
+
 		if (this.shareLink) {
 			Strings.copyToClipboard(this.shareLink, 'Link for sharing has been copied to clipboard.');
 			return;

@@ -465,9 +465,12 @@
 		</div>
 	</div>
 
-	<div ng-show="ctrl.tab.resultStatus === 'noResult'" class="visualization-result">
+	<div ng-show="ctrl.tab.resultStatus === 'noResult' && !ctrl.tab.easter" class="visualization-result">
 		Unfortunately we couldn't calculate any result.<br>
-		<span>This can be due to many things: missing resource required for the production line, not enough resources for the requested amount, disabled recipes required for the product, etc.</span>
+		<span>This can be due to many things: missing resource required for the production line, not enough resources for the requested amount, disabled recipes required for the product, etc.</span><br>
+	</div>
+	<div ng-show="ctrl.tab.resultStatus === 'noResult' && ctrl.tab.easter" class="visualization-result">
+		<b title="Click the blue share button to get the share link.">Sharing is caring!</b>
 	</div>
 	<div ng-show="ctrl.tab.resultStatus === 'noInput'" class="visualization-result">
 		Select an item to calculate.
