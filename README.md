@@ -2,13 +2,14 @@
 Satisfactory Tools for planning and building the perfect base.
 
 ## Requirements
-- node.js
+- node.js version 16 (lower may work, 17+ doesn't work)
 - yarn
 - PHP 7.1+
 
 ## Installation
 - `git clone git@github.com:greeny/SatisfactoryTools.git`
 - `yarn install`
+- `yarn build`
 - Set up a virtual host pointing to `/www` directory (using e.g. Apache or ngnix)
 
 ## Contributing
@@ -33,4 +34,4 @@ First you need to extract the images out of the game pack. You need `umodel` (UE
 .\umodel.exe -path="C:\Program Files\Epic Games\SatisfactoryExperimental\FactoryGame\Content\Paks" -out=".\out256" -png -export *_256_New.uasset -game=ue4.22
 ```
 
-After the export is done, copy the resulting `out256` folder to `data/icons`. Then run `yarn generateImages`, which will automatically generate the images in correct sizes and places. `yarn parseDocs` has to be run before this command, if it wasn't run in the previous step.  
+After the export is done, copy the resulting `out256` folder to `data/icons`. Then run `yarn generateImages`, which will automatically generate the images in correct sizes and places. `yarn parseDocs` has to be run before this command, if it wasn't run in the previous step.

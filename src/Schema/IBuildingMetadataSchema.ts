@@ -13,6 +13,9 @@ export interface IBuildingMetadataSchema
 	flowLimit?: number;
 	maxPressure?: number;
 	storageCapacity?: number;
+	isVariablePower?: boolean;
+	minPowerConsumption?: number;
+	maxPowerConsumption?: number;
 
 }
 
@@ -24,3 +27,21 @@ export interface IManufacturerMetadataSchema extends IBuildingMetadataSchema
 	manufacturingSpeed: number;
 
 }
+
+export interface IManufacturerVariablePowerMetadataSchema extends IManufacturerMetadataSchema
+{
+
+	isVariablePower: true;
+	minPowerConsumption: number;
+	maxPowerConsumption: number;
+
+}
+
+export interface IManufacturerFixedPowerMetadataSchema extends IManufacturerMetadataSchema
+{
+
+	isVariablePower: true;
+
+}
+
+export type IManufacturerAnyPowerMetadataSchema = IManufacturerVariablePowerMetadataSchema | IManufacturerFixedPowerMetadataSchema;

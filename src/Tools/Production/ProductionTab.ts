@@ -10,12 +10,9 @@ import {Callbacks} from '@src/Utils/Callbacks';
 import {IProductionData, IProductionDataApiRequest, IProductionDataRequestInput, IProductionDataRequestItem} from '@src/Tools/Production/IProductionData';
 import {ResultStatus} from '@src/Tools/Production/ResultStatus';
 import {Solver} from '@src/Solver/Solver';
-import {RecipeResult} from '@src/Tools/Production/RecipeResult';
-import model from '@src/Data/Model';
-import {ProductionToolResult} from '@src/Tools/Production/ProductionToolResult';
-import {ProductionResultFactory} from '@src/Tools/Production/ProductionResultFactory';
-import {ProductionResult} from '@src/Tools/Production/ProductionResult';
 import {IJsonSchema} from '@src/Schema/IJsonSchema';
+import {ProductionResult} from '@src/Tools/Production/Result/ProductionResult';
+import {ProductionResultFactory} from '@src/Tools/Production/Result/ProductionResultFactory';
 
 export class ProductionTab
 {
@@ -32,14 +29,18 @@ export class ProductionTab
 		alternateRecipesQuery: '',
 		basicRecipesQuery: '',
 		resultLoading: false,
+		buildingsExpanded: {},
+		powerExpanded: {},
+		itemsExpanded: {},
+		overviewCollapsed: {},
 	};
 
 	public tab: string = 'production';
 	public resultTab: string = 'visualization';
 	public shareLink: string = '';
 	public resultStatus: ResultStatus = ResultStatus.NO_INPUT;
-	public result: ProductionToolResult|undefined;
 	public resultNew: ProductionResult|undefined;
+	public easter: boolean = false;
 	public data: IProductionData;
 
 	private readonly unregisterCallback: () => void;
@@ -67,6 +68,12 @@ export class ProductionTab
 	public calculate($timeout?: ITimeoutService): void
 	{
 		let request = false;
+		this.easter = false;
+		for (const item of this.data.request.production) {
+			if (item.item === 'Desc_ColorCartridge_C' && item.amount === 69420) {
+				this.easter = true;
+			}
+		}
 
 		for (const product of this.data.request.production) {
 			if (product.item && product.amount > 0) {
@@ -89,31 +96,22 @@ export class ProductionTab
 				const res = () => {
 					let length = 0;
 
-					const recipes: RecipeResult[] = [];
-
 					for (const k in result) {
 						if (!result.hasOwnProperty(k)) {
 							continue;
 						}
 
 						length++;
-
-						if (!(k in model.recipes) || result[k] < 1e-8) {
-							continue;
-						}
-						recipes.push(new RecipeResult(model.recipes[k], result[k] / 60));
 					}
 
 					if (!length) {
-						this.result = undefined;
 						this.resultNew = undefined;
 						this.resultStatus = ResultStatus.NO_RESULT;
 						return;
 					}
 
 					const factory = new ProductionResultFactory;
-					this.resultNew = factory.create(result, rawData as any as IJsonSchema);
-					//this.result = new ProductionToolResult(recipes, this.data.request);
+					this.resultNew = factory.create(apiRequest, result, rawData as any as IJsonSchema);
 					this.resultStatus = ResultStatus.RESULT;
 				};
 
@@ -183,6 +181,11 @@ export class ProductionTab
 
 	public copyShareLink(): void
 	{
+		if (this.easter) {
+			Strings.copyToClipboard('https://easter.ficsit.app/OptvkwO668wweaMB', 'You\'ve successfully crafted a blueprint for the broken assembly line! You may now proceed to the link that has been copied (just paste it in your browser). You can also copy this link: https://easter.ficsit.app/OptvkwO668wweaMB', 20000);
+			return;
+		}
+
 		if (this.shareLink) {
 			Strings.copyToClipboard(this.shareLink, 'Link for sharing has been copied to clipboard.');
 			return;

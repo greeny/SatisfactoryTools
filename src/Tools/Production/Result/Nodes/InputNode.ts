@@ -29,11 +29,21 @@ export class InputNode extends GraphNode
 		return this.outputs;
 	}
 
+	public getTitle(): string
+	{
+		return this.formatText('Input: ' + this.resource.name) + '\n' + Strings.formatNumber(this.itemAmount.amount) + ' / min';
+	}
+
+	public getTooltip(): string|null
+	{
+		return null;
+	}
+
 	public getVisNode(): IVisNode
 	{
 		return {
 			id: this.id,
-			label: this.getLabel(),
+			label: this.getTitle(),
 			color: {
 				border: 'rgba(0, 0, 0, 0)',
 				background: 'rgba(175, 109, 14, 1)',
@@ -52,13 +62,8 @@ export class InputNode extends GraphNode
 	{
 		return {
 			id: this.id,
-			label: this.getLabel(),
+			label: this.getTitle(),
 		};
-	}
-
-	private getLabel(): string
-	{
-		return this.formatText('Input: ' + this.resource.name) + '\n' + Strings.formatNumber(this.itemAmount.amount) + ' / min';
 	}
 
 }

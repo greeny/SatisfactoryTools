@@ -10,6 +10,7 @@ import {IResourceSchema} from '@src/Schema/IResourceSchema';
 import {DataStorageService} from '@src/Module/Services/DataStorageService';
 import axios from 'axios';
 import {IProductionData} from '@src/Tools/Production/IProductionData';
+import {IBuildingSchema} from '@src/Schema/IBuildingSchema';
 
 export class ProductionController
 {
@@ -125,6 +126,16 @@ export class ProductionController
 	public getItem(className: string): IItemSchema
 	{
 		return model.getItem(className).prototype;
+	}
+
+	public getBuilding(className: string): IBuildingSchema|null
+	{
+		return data.getRawData().buildings[className];
+	}
+
+	public getRecipe(className: string): IRecipeSchema|null
+	{
+		return data.getRawData().recipes[className];
 	}
 
 	private saveState(): void

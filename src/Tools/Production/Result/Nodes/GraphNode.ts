@@ -1,18 +1,30 @@
-import {IVisNode} from '@src/Tools/Production/Result/IVisNode';
 import {ResourceAmount} from '@src/Tools/Production/Result/ResourceAmount';
+import {GraphEdge} from '@src/Tools/Production/Result/Edges/GraphEdge';
+import {IVisNode} from '@src/Tools/Production/Result/IVisNode';
 
 export abstract class GraphNode
 {
 
 	public id: number;
 
-	public abstract getVisNode(): IVisNode;
+	public connectedEdges: GraphEdge[] = [];
+
 	public abstract getInputs(): ResourceAmount[];
 	public abstract getOutputs(): ResourceAmount[];
 
-	public getUpdateData(): IVisNode|null
+	public abstract getTitle(): string;
+	public abstract getTooltip(): string|null;
+
+	public abstract getVisNode(): IVisNode;
+
+	public hasOutputTo(target: GraphNode): boolean
 	{
-		return null;
+		for (const edge of this.connectedEdges) {
+			if (edge.from === this && edge.to === target) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	protected formatText(text: string, bold: boolean = true)
@@ -23,5 +35,4 @@ export abstract class GraphNode
 		}
 		return bold ? ('<b>' + parts.join(' ') + '</b>') : parts.join(' ');
 	}
-
 }

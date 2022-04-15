@@ -417,7 +417,7 @@ export class AppModule
 			} else if (value === ~~value) {
 				return value;
 			} else {
-				return value.toFixed(5).replace(/\.?0+$/, '');
+				return (Number(value)).toFixed(5).replace(/\.?0+$/, '');
 			}
 		};
 	}

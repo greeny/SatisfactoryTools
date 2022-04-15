@@ -29,11 +29,21 @@ export class MinerNode extends GraphNode
 		return this.outputs;
 	}
 
+	public getTitle(): string
+	{
+		return '<b>' + this.resource.name + '</b>\n' + Strings.formatNumber(this.itemAmount.amount) + ' / min';
+	}
+
+	public getTooltip(): string|null
+	{
+		return null;
+	}
+
 	public getVisNode(): IVisNode
 	{
 		return {
 			id: this.id,
-			label: this.getLabel(),
+			label: this.getTitle(),
 			color: {
 				border: 'rgba(0, 0, 0, 0)',
 				background: 'rgba(78, 93, 108, 1)',
@@ -46,11 +56,6 @@ export class MinerNode extends GraphNode
 				color: 'rgba(238, 238, 238, 1)',
 			},
 		};
-	}
-
-	private getLabel(): string
-	{
-		return '<b>' + this.resource.name + '</b>\n' + Strings.formatNumber(this.itemAmount.amount) + ' / min';
 	}
 
 }

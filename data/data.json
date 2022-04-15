@@ -29,7 +29,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_AdheredIronPlate_C": {
 			"slug": "alternate-adhered-iron-plate",
@@ -60,7 +61,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_AlcladCasing_C": {
 			"slug": "alternate-alclad-casing",
@@ -91,7 +93,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_AutomatedMiner_C": {
 			"slug": "alternate-automated-miner",
@@ -130,7 +133,8 @@
 			],
 			"producedIn": [
 				"Desc_ManufacturerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_Beacon_1_C": {
 			"slug": "alternate-crystal-beacon",
@@ -165,7 +169,8 @@
 			],
 			"producedIn": [
 				"Desc_ManufacturerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_BoltedFrame_C": {
 			"slug": "alternate-bolted-frame",
@@ -196,7 +201,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_Cable_1_C": {
 			"slug": "alternate-insulated-cable",
@@ -227,7 +233,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_Cable_2_C": {
 			"slug": "alternate-quickwire-cable",
@@ -258,7 +265,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_CircuitBoard_1_C": {
 			"slug": "alternate-silicon-circuit-board",
@@ -289,7 +297,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_CircuitBoard_2_C": {
 			"slug": "alternate-caterium-circuit-board",
@@ -320,7 +329,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_ClassicBattery_C": {
 			"slug": "alternate-classic-battery",
@@ -359,7 +369,8 @@
 			],
 			"producedIn": [
 				"Desc_ManufacturerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_Coal_1_C": {
 			"slug": "alternate-charcoal",
@@ -386,7 +397,8 @@
 			],
 			"producedIn": [
 				"Desc_ConstructorMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_Coal_2_C": {
 			"slug": "alternate-biocoal",
@@ -413,7 +425,8 @@
 			],
 			"producedIn": [
 				"Desc_ConstructorMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_CoatedCable_C": {
 			"slug": "alternate-coated-cable",
@@ -444,7 +457,8 @@
 			],
 			"producedIn": [
 				"Desc_OilRefinery_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_CoatedIronCanister_C": {
 			"slug": "alternate-coated-iron-canister",
@@ -475,7 +489,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_CoatedIronPlate_C": {
 			"slug": "alternate-coated-iron-plate",
@@ -506,7 +521,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_CokeSteelIngot_C": {
 			"slug": "alternate-coke-steel-ingot",
@@ -537,7 +553,8 @@
 			],
 			"producedIn": [
 				"Desc_FoundryMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_Computer_1_C": {
 			"slug": "alternate-caterium-computer",
@@ -572,7 +589,8 @@
 			],
 			"producedIn": [
 				"Desc_ManufacturerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_Computer_2_C": {
 			"slug": "alternate-crystal-computer",
@@ -603,7 +621,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_Concrete_C": {
 			"slug": "alternate-fine-concrete",
@@ -634,7 +653,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_CoolingDevice_C": {
 			"slug": "alternate-cooling-device",
@@ -669,7 +689,8 @@
 			],
 			"producedIn": [
 				"Desc_Blender_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_CopperAlloyIngot_C": {
 			"slug": "alternate-copper-alloy-ingot",
@@ -700,7 +721,8 @@
 			],
 			"producedIn": [
 				"Desc_FoundryMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_CopperRotor_C": {
 			"slug": "alternate-copper-rotor",
@@ -731,7 +753,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_CrystalOscillator_C": {
 			"slug": "alternate-insulated-crystal-oscillator",
@@ -766,7 +789,8 @@
 			],
 			"producedIn": [
 				"Desc_ManufacturerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_DilutedFuel_C": {
 			"slug": "alternate-diluted-fuel",
@@ -797,7 +821,8 @@
 			],
 			"producedIn": [
 				"Desc_Blender_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_DilutedPackagedFuel_C": {
 			"slug": "alternate-diluted-packaged-fuel",
@@ -828,7 +853,8 @@
 			],
 			"producedIn": [
 				"Desc_OilRefinery_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_ElectricMotor_C": {
 			"slug": "alternate-electric-motor",
@@ -859,7 +885,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_ElectroAluminumScrap_C": {
 			"slug": "alternate-electrode---aluminum-scrap",
@@ -894,7 +921,8 @@
 			],
 			"producedIn": [
 				"Desc_OilRefinery_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_ElectrodeCircuitBoard_C": {
 			"slug": "alternate-electrode-circuit-board",
@@ -925,7 +953,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_ElectromagneticControlRod_1_C": {
 			"slug": "alternate-electromagnetic-connection-rod",
@@ -956,7 +985,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_EncasedIndustrialBeam_C": {
 			"slug": "alternate-encased-industrial-pipe",
@@ -987,7 +1017,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_EnrichedCoal_C": {
 			"slug": "alternate-compacted-coal",
@@ -1018,7 +1049,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_FertileUranium_C": {
 			"slug": "alternate-fertile-uranium",
@@ -1061,7 +1093,8 @@
 			],
 			"producedIn": [
 				"Desc_Blender_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_FlexibleFramework_C": {
 			"slug": "alternate-flexible-framework",
@@ -1096,7 +1129,8 @@
 			],
 			"producedIn": [
 				"Desc_ManufacturerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_FusedWire_C": {
 			"slug": "alternate-fused-wire",
@@ -1127,7 +1161,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_Gunpowder_1_C": {
 			"slug": "alternate-fine-black-powder",
@@ -1158,7 +1193,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_HeatFusedFrame_C": {
 			"slug": "alternate-heat-fused-frame",
@@ -1197,7 +1233,8 @@
 			],
 			"producedIn": [
 				"Desc_Blender_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_HeatSink_1_C": {
 			"slug": "alternate-heat-exchanger",
@@ -1228,7 +1265,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_HeavyFlexibleFrame_C": {
 			"slug": "alternate-heavy-flexible-frame",
@@ -1267,7 +1305,8 @@
 			],
 			"producedIn": [
 				"Desc_ManufacturerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_HeavyOilResidue_C": {
 			"slug": "alternate-heavy-oil-residue",
@@ -1298,7 +1337,8 @@
 			],
 			"producedIn": [
 				"Desc_OilRefinery_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_HighSpeedConnector_C": {
 			"slug": "alternate-silicon-high-speed-connector",
@@ -1333,7 +1373,8 @@
 			],
 			"producedIn": [
 				"Desc_ManufacturerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_HighSpeedWiring_C": {
 			"slug": "alternate-automated-speed-wiring",
@@ -1368,7 +1409,8 @@
 			],
 			"producedIn": [
 				"Desc_ManufacturerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_IngotIron_C": {
 			"slug": "alternate-iron-alloy-ingot",
@@ -1399,7 +1441,8 @@
 			],
 			"producedIn": [
 				"Desc_FoundryMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_IngotSteel_1_C": {
 			"slug": "alternate-solid-steel-ingot",
@@ -1430,7 +1473,8 @@
 			],
 			"producedIn": [
 				"Desc_FoundryMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_IngotSteel_2_C": {
 			"slug": "alternate-compacted-steel-ingot",
@@ -1461,7 +1505,8 @@
 			],
 			"producedIn": [
 				"Desc_FoundryMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_InstantPlutoniumCell_C": {
 			"slug": "alternate-instant-plutonium-cell",
@@ -1492,7 +1537,10 @@
 			],
 			"producedIn": [
 				"Desc_HadronCollider_C"
-			]
+			],
+			"isVariablePower": true,
+			"minPower": 250,
+			"maxPower": 750
 		},
 		"Recipe_Alternate_InstantScrap_C": {
 			"slug": "alternate-instant-scrap",
@@ -1535,7 +1583,8 @@
 			],
 			"producedIn": [
 				"Desc_Blender_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_ModularFrameHeavy_C": {
 			"slug": "alternate-heavy-encased-frame",
@@ -1574,7 +1623,8 @@
 			],
 			"producedIn": [
 				"Desc_ManufacturerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_ModularFrame_C": {
 			"slug": "alternate-steeled-frame",
@@ -1605,7 +1655,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_Motor_1_C": {
 			"slug": "alternate-rigour-motor",
@@ -1640,7 +1691,8 @@
 			],
 			"producedIn": [
 				"Desc_ManufacturerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_Nobelisk_1_C": {
 			"slug": "alternate-seismic-nobelisk",
@@ -1675,7 +1727,8 @@
 			],
 			"producedIn": [
 				"Desc_ManufacturerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_NuclearFuelRod_1_C": {
 			"slug": "alternate-uranium-fuel-unit",
@@ -1714,7 +1767,8 @@
 			],
 			"producedIn": [
 				"Desc_ManufacturerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_OCSupercomputer_C": {
 			"slug": "alternate-oc-supercomputer",
@@ -1745,7 +1799,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_PlasticSmartPlating_C": {
 			"slug": "alternate-plastic-smart-plating",
@@ -1780,7 +1835,8 @@
 			],
 			"producedIn": [
 				"Desc_ManufacturerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_Plastic_1_C": {
 			"slug": "alternate-recycled-plastic",
@@ -1811,7 +1867,8 @@
 			],
 			"producedIn": [
 				"Desc_OilRefinery_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_PlutoniumFuelUnit_C": {
 			"slug": "alternate-plutonium-fuel-unit",
@@ -1842,7 +1899,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_PolyesterFabric_C": {
 			"slug": "alternate-polyester-fabric",
@@ -1873,7 +1931,8 @@
 			],
 			"producedIn": [
 				"Desc_OilRefinery_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_PolymerResin_C": {
 			"slug": "alternate-polymer-resin",
@@ -1904,7 +1963,8 @@
 			],
 			"producedIn": [
 				"Desc_OilRefinery_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_PureCateriumIngot_C": {
 			"slug": "alternate-pure-caterium-ingot",
@@ -1935,7 +1995,8 @@
 			],
 			"producedIn": [
 				"Desc_OilRefinery_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_PureCopperIngot_C": {
 			"slug": "alternate-pure-copper-ingot",
@@ -1966,7 +2027,8 @@
 			],
 			"producedIn": [
 				"Desc_OilRefinery_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_PureIronIngot_C": {
 			"slug": "alternate-pure-iron-ingot",
@@ -1997,7 +2059,8 @@
 			],
 			"producedIn": [
 				"Desc_OilRefinery_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_PureQuartzCrystal_C": {
 			"slug": "alternate-pure-quartz-crystal",
@@ -2028,7 +2091,8 @@
 			],
 			"producedIn": [
 				"Desc_OilRefinery_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_Quickwire_C": {
 			"slug": "alternate-fused-quickwire",
@@ -2059,7 +2123,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_RadioControlSystem_C": {
 			"slug": "alternate-radio-control-system",
@@ -2098,7 +2163,8 @@
 			],
 			"producedIn": [
 				"Desc_ManufacturerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_RadioControlUnit_1_C": {
 			"slug": "alternate-radio-connection-unit",
@@ -2133,7 +2199,8 @@
 			],
 			"producedIn": [
 				"Desc_ManufacturerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_RecycledRubber_C": {
 			"slug": "alternate-recycled-rubber",
@@ -2164,7 +2231,8 @@
 			],
 			"producedIn": [
 				"Desc_OilRefinery_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_ReinforcedIronPlate_1_C": {
 			"slug": "alternate-bolted-iron-plate",
@@ -2195,7 +2263,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_ReinforcedIronPlate_2_C": {
 			"slug": "alternate-stitched-iron-plate",
@@ -2226,7 +2295,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_Rotor_C": {
 			"slug": "alternate-steel-rotor",
@@ -2257,7 +2327,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_RubberConcrete_C": {
 			"slug": "alternate-rubber-concrete",
@@ -2288,7 +2359,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_Screw_2_C": {
 			"slug": "alternate-steel-screw",
@@ -2315,7 +2387,8 @@
 			],
 			"producedIn": [
 				"Desc_ConstructorMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_Screw_C": {
 			"slug": "alternate-cast-screw",
@@ -2342,7 +2415,8 @@
 			],
 			"producedIn": [
 				"Desc_ConstructorMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_Silica_C": {
 			"slug": "alternate-cheap-silica",
@@ -2373,7 +2447,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_SloppyAlumina_C": {
 			"slug": "alternate-sloppy-alumina",
@@ -2404,7 +2479,8 @@
 			],
 			"producedIn": [
 				"Desc_OilRefinery_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_Stator_C": {
 			"slug": "alternate-quickwire-stator",
@@ -2435,7 +2511,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_SteamedCopperSheet_C": {
 			"slug": "alternate-steamed-copper-sheet",
@@ -2466,7 +2543,8 @@
 			],
 			"producedIn": [
 				"Desc_OilRefinery_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_SteelCanister_C": {
 			"slug": "alternate-steel-canister",
@@ -2493,7 +2571,8 @@
 			],
 			"producedIn": [
 				"Desc_ConstructorMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_SteelCoatedPlate_C": {
 			"slug": "alternate-steel-coated-plate",
@@ -2524,7 +2603,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_SteelRod_C": {
 			"slug": "alternate-steel-rod",
@@ -2551,7 +2631,8 @@
 			],
 			"producedIn": [
 				"Desc_ConstructorMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_SuperStateComputer_C": {
 			"slug": "alternate-super-state-computer",
@@ -2590,7 +2671,8 @@
 			],
 			"producedIn": [
 				"Desc_ManufacturerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_TurboBlendFuel_C": {
 			"slug": "alternate-turbo-blend-fuel",
@@ -2629,7 +2711,8 @@
 			],
 			"producedIn": [
 				"Desc_Blender_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_TurboHeavyFuel_C": {
 			"slug": "alternate-turbo-heavy-fuel",
@@ -2660,7 +2743,8 @@
 			],
 			"producedIn": [
 				"Desc_OilRefinery_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_TurboMotor_1_C": {
 			"slug": "alternate-turbo-electric-motor",
@@ -2699,7 +2783,8 @@
 			],
 			"producedIn": [
 				"Desc_ManufacturerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_TurboPressureMotor_C": {
 			"slug": "alternate-turbo-pressure-motor",
@@ -2738,7 +2823,8 @@
 			],
 			"producedIn": [
 				"Desc_ManufacturerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_Turbofuel_C": {
 			"slug": "turbofuel",
@@ -2769,7 +2855,8 @@
 			],
 			"producedIn": [
 				"Desc_OilRefinery_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_UraniumCell_1_C": {
 			"slug": "alternate-infused-uranium-cell",
@@ -2808,7 +2895,8 @@
 			],
 			"producedIn": [
 				"Desc_ManufacturerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_WetConcrete_C": {
 			"slug": "alternate-wet-concrete",
@@ -2839,7 +2927,8 @@
 			],
 			"producedIn": [
 				"Desc_OilRefinery_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_Wire_1_C": {
 			"slug": "alternate-iron-wire",
@@ -2866,7 +2955,8 @@
 			],
 			"producedIn": [
 				"Desc_ConstructorMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Alternate_Wire_2_C": {
 			"slug": "alternate-caterium-wire",
@@ -2893,7 +2983,8 @@
 			],
 			"producedIn": [
 				"Desc_ConstructorMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_AluminaSolution_C": {
 			"slug": "alumina-solution",
@@ -2928,7 +3019,8 @@
 			],
 			"producedIn": [
 				"Desc_OilRefinery_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_AluminumCasing_C": {
 			"slug": "aluminum-casing",
@@ -2955,7 +3047,8 @@
 			],
 			"producedIn": [
 				"Desc_ConstructorMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_AluminumScrap_C": {
 			"slug": "aluminum-scrap",
@@ -2990,7 +3083,8 @@
 			],
 			"producedIn": [
 				"Desc_OilRefinery_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_AluminumSheet_C": {
 			"slug": "alclad-aluminum-sheet",
@@ -3021,7 +3115,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_AssemblerMk1_C": {
 			"slug": "assembler",
@@ -3054,7 +3149,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Battery_C": {
 			"slug": "battery",
@@ -3093,7 +3189,8 @@
 			],
 			"producedIn": [
 				"Desc_Blender_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Beacon_C": {
 			"slug": "beacon",
@@ -3132,7 +3229,8 @@
 			],
 			"producedIn": [
 				"Desc_ManufacturerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Beam_C": {
 			"slug": "metal-beam",
@@ -3157,7 +3255,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Beam_Connector_C": {
 			"slug": "beam-connector",
@@ -3182,7 +3281,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Beam_Connector_Double_C": {
 			"slug": "beam-connector-double",
@@ -3207,7 +3307,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Beam_Painted_C": {
 			"slug": "painted-beam",
@@ -3232,7 +3333,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Beam_Support_C": {
 			"slug": "beam-support",
@@ -3257,7 +3359,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Biofuel_C": {
 			"slug": "solid-biofuel",
@@ -3284,7 +3387,8 @@
 			],
 			"producedIn": [
 				"Desc_ConstructorMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Biomass_AlienCarapace_C": {
 			"slug": "biomass-(alien-carapace)",
@@ -3311,7 +3415,8 @@
 			],
 			"producedIn": [
 				"Desc_ConstructorMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Biomass_AlienOrgans_C": {
 			"slug": "biomass-(alien-organs)",
@@ -3338,7 +3443,8 @@
 			],
 			"producedIn": [
 				"Desc_ConstructorMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Biomass_Leaves_C": {
 			"slug": "biomass-(leaves)",
@@ -3365,7 +3471,8 @@
 			],
 			"producedIn": [
 				"Desc_ConstructorMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Biomass_Mycelia_C": {
 			"slug": "biomass-(mycelia)",
@@ -3392,7 +3499,8 @@
 			],
 			"producedIn": [
 				"Desc_ConstructorMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Biomass_Wood_C": {
 			"slug": "biomass-(wood)",
@@ -3419,7 +3527,8 @@
 			],
 			"producedIn": [
 				"Desc_ConstructorMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_BladeRunners_C": {
 			"slug": "blade-runners",
@@ -3452,7 +3561,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Blender_C": {
 			"slug": "blender",
@@ -3489,7 +3599,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Cable_C": {
 			"slug": "cable",
@@ -3516,7 +3627,8 @@
 			],
 			"producedIn": [
 				"Desc_ConstructorMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Cartridge_C": {
 			"slug": "rifle-cartridge",
@@ -3555,7 +3667,8 @@
 			],
 			"producedIn": [
 				"Desc_ManufacturerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Catwalk_Cross_C": {
 			"slug": "catwalk-crossing",
@@ -3584,7 +3697,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Catwalk_Ramp_C": {
 			"slug": "catwalk-ramp",
@@ -3613,7 +3727,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Catwalk_Stairs_C": {
 			"slug": "catwalk-stairs",
@@ -3642,7 +3757,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Catwalk_Straight_C": {
 			"slug": "catwalk-straight",
@@ -3671,7 +3787,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Catwalk_T_C": {
 			"slug": "catwalk-t-crossing",
@@ -3700,7 +3817,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Catwalk_Turn_C": {
 			"slug": "catwalk-corner",
@@ -3729,7 +3847,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_CeilingLight_C": {
 			"slug": "ceiling-light",
@@ -3762,7 +3881,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Chainsaw_C": {
 			"slug": "chainsaw",
@@ -3799,7 +3919,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_CircuitBoard_C": {
 			"slug": "circuit-board",
@@ -3830,7 +3951,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_ColorCartridge_C": {
 			"slug": "color-cartridge",
@@ -3857,7 +3979,8 @@
 			],
 			"producedIn": [
 				"Desc_ConstructorMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_ComputerSuper_C": {
 			"slug": "supercomputer",
@@ -3896,7 +4019,8 @@
 			],
 			"producedIn": [
 				"Desc_ManufacturerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Computer_C": {
 			"slug": "computer",
@@ -3935,7 +4059,8 @@
 			],
 			"producedIn": [
 				"Desc_ManufacturerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Concrete_Barrier_01_C": {
 			"slug": "road-barrier",
@@ -3960,7 +4085,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Concrete_C": {
 			"slug": "concrete",
@@ -3987,7 +4113,8 @@
 			],
 			"producedIn": [
 				"Desc_ConstructorMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_ConstructorMk1_C": {
 			"slug": "constructor",
@@ -4016,7 +4143,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_ConveyorAttachmentMerger_C": {
 			"slug": "conveyor-merger",
@@ -4045,7 +4173,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_ConveyorAttachmentSplitterProgrammable_C": {
 			"slug": "programmable-splitter",
@@ -4078,7 +4207,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_ConveyorAttachmentSplitterSmart_C": {
 			"slug": "smart-splitter",
@@ -4111,7 +4241,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_ConveyorAttachmentSplitter_C": {
 			"slug": "conveyor-splitter",
@@ -4140,7 +4271,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_ConveyorBeltMk1_C": {
 			"slug": "conveyor-belt-mk-1",
@@ -4165,7 +4297,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_ConveyorBeltMk2_C": {
 			"slug": "conveyor-belt-mk-2",
@@ -4190,7 +4323,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_ConveyorBeltMk3_C": {
 			"slug": "conveyor-belt-mk-3",
@@ -4215,7 +4349,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_ConveyorBeltMk4_C": {
 			"slug": "conveyor-belt-mk-4",
@@ -4240,7 +4375,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_ConveyorBeltMk5_C": {
 			"slug": "conveyor-belt-mk-5",
@@ -4265,7 +4401,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_ConveyorLiftMk1_C": {
 			"slug": "conveyor-lift-mk-1",
@@ -4290,7 +4427,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_ConveyorLiftMk2_C": {
 			"slug": "conveyor-lift-mk-2",
@@ -4315,7 +4453,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_ConveyorLiftMk3_C": {
 			"slug": "conveyor-lift-mk-3",
@@ -4340,7 +4479,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_ConveyorLiftMk4_C": {
 			"slug": "conveyor-lift-mk-4",
@@ -4365,7 +4505,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_ConveyorLiftMk5_C": {
 			"slug": "conveyor-lift-mk-5",
@@ -4390,7 +4531,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_ConveyorPoleStackable_C": {
 			"slug": "stackable-conveyor-pole",
@@ -4423,7 +4565,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_ConveyorPoleWall_C": {
 			"slug": "conveyor-wall-mount",
@@ -4456,7 +4599,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_ConveyorPole_C": {
 			"slug": "conveyor-pole",
@@ -4489,7 +4633,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_CoolingSystem_C": {
 			"slug": "cooling-system",
@@ -4528,7 +4673,8 @@
 			],
 			"producedIn": [
 				"Desc_Blender_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_CopperDust_C": {
 			"slug": "copper-powder",
@@ -4555,7 +4701,8 @@
 			],
 			"producedIn": [
 				"Desc_ConstructorMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_CopperSheet_C": {
 			"slug": "copper-sheet",
@@ -4582,7 +4729,8 @@
 			],
 			"producedIn": [
 				"Desc_ConstructorMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_CrystalOscillator_C": {
 			"slug": "crystal-oscillator",
@@ -4617,7 +4765,8 @@
 			],
 			"producedIn": [
 				"Desc_ManufacturerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_DroneStation_C": {
 			"slug": "drone-port",
@@ -4658,7 +4807,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_DroneTransport_C": {
 			"slug": "drone",
@@ -4699,7 +4849,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_ElectromagneticControlRod_C": {
 			"slug": "electromagnetic-control-rod",
@@ -4730,7 +4881,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_EncasedIndustrialBeam_C": {
 			"slug": "encased-industrial-beam",
@@ -4761,7 +4913,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Fabric_C": {
 			"slug": "fabric",
@@ -4792,7 +4945,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_FactoryCart_C": {
 			"slug": "factory-cart",
@@ -4825,7 +4979,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Fence_01_C": {
 			"slug": "industrial-railing",
@@ -4850,7 +5005,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_FilterGasMask_C": {
 			"slug": "gas-filter",
@@ -4885,7 +5041,8 @@
 			],
 			"producedIn": [
 				"Desc_ManufacturerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_FilterHazmat_C": {
 			"slug": "iodine-infused-filter",
@@ -4920,7 +5077,8 @@
 			],
 			"producedIn": [
 				"Desc_ManufacturerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Flat_Frame_01_C": {
 			"slug": "frame-floor",
@@ -4945,7 +5103,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_FloodlightPole_C": {
 			"slug": "flood-light-tower",
@@ -4978,7 +5137,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_FloodlightWall_C": {
 			"slug": "wall-mounted-flood-light",
@@ -5011,7 +5171,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_FluidCanister_C": {
 			"slug": "empty-canister",
@@ -5038,7 +5199,8 @@
 			],
 			"producedIn": [
 				"Desc_ConstructorMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_FoundationGlass_01_C": {
 			"slug": "glass-frame-foundation",
@@ -5067,7 +5229,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_FoundationPassthrough_Hypertube_C": {
 			"slug": "hypertube-floor-hole",
@@ -5100,7 +5263,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_FoundationPassthrough_Lift_C": {
 			"slug": "conveyor-lift-floor-hole",
@@ -5133,7 +5297,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_FoundationPassthrough_Pipe_C": {
 			"slug": "pipeline-floor-hole",
@@ -5166,7 +5331,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Foundation_8x1_01_C": {
 			"slug": "foundation-1m",
@@ -5191,7 +5357,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Foundation_8x2_01_C": {
 			"slug": "foundation-2m",
@@ -5216,7 +5383,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Foundation_8x4_01_C": {
 			"slug": "foundation-4m",
@@ -5241,7 +5409,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Foundation_Asphalt_8x1_C": {
 			"slug": "foundation-1m",
@@ -5266,7 +5435,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Foundation_Asphalt_8x2_C": {
 			"slug": "foundation-2m",
@@ -5291,7 +5461,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Foundation_Asphalt_8x4_C": {
 			"slug": "foundation-4m",
@@ -5316,7 +5487,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Foundation_ConcretePolished_8x1_C": {
 			"slug": "foundation-1m",
@@ -5341,7 +5513,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Foundation_ConcretePolished_8x2_C": {
 			"slug": "foundation-2m",
@@ -5366,7 +5539,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Foundation_ConcretePolished_8x4_C": {
 			"slug": "foundation-4m",
@@ -5391,7 +5565,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Foundation_Concrete_8x1_C": {
 			"slug": "foundation-1m",
@@ -5416,7 +5591,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Foundation_Concrete_8x2_C": {
 			"slug": "foundation-2m",
@@ -5441,7 +5617,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Foundation_Concrete_8x4_C": {
 			"slug": "foundation-4m",
@@ -5466,7 +5643,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Foundation_Frame_01_C": {
 			"slug": "frame-foundation",
@@ -5491,7 +5669,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Foundation_Metal_8x1_C": {
 			"slug": "foundation-1m",
@@ -5516,7 +5695,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Foundation_Metal_8x2_C": {
 			"slug": "foundation-2m",
@@ -5541,7 +5721,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Foundation_Metal_8x4_C": {
 			"slug": "foundation-4m",
@@ -5566,7 +5747,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_FrackingExtractor_C": {
 			"slug": "resource-well-extractor",
@@ -5595,7 +5777,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_FrackingSmasher_C": {
 			"slug": "resource-well-pressurizer",
@@ -5632,7 +5815,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Fuel_C": {
 			"slug": "packaged-fuel",
@@ -5663,7 +5847,8 @@
 			],
 			"producedIn": [
 				"Desc_Packager_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_FusedModularFrame_C": {
 			"slug": "fused-modular-frame",
@@ -5698,7 +5883,8 @@
 			],
 			"producedIn": [
 				"Desc_Blender_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_GasTank_C": {
 			"slug": "empty-fluid-tank",
@@ -5725,7 +5911,8 @@
 			],
 			"producedIn": [
 				"Desc_ConstructorMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Gasmask_C": {
 			"slug": "gas-mask",
@@ -5758,7 +5945,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Gate_Automated_8x4_C": {
 			"slug": "automated-gate",
@@ -5783,7 +5971,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_GeneratorBiomass_C": {
 			"slug": "biomass-burner",
@@ -5816,7 +6005,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_GeneratorCoal_C": {
 			"slug": "coal-generator",
@@ -5849,7 +6039,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_GeneratorFuel_C": {
 			"slug": "fuel-generator",
@@ -5890,7 +6081,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_GeneratorGeoThermal_C": {
 			"slug": "geothermal-generator",
@@ -5931,7 +6123,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_GeneratorNuclear_C": {
 			"slug": "nuclear-power-plant",
@@ -5972,7 +6165,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_GoldenCart_C": {
 			"slug": "golden-factory-cart",
@@ -6005,7 +6199,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Gunpowder_C": {
 			"slug": "black-powder",
@@ -6036,7 +6231,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_HadronCollider_C": {
 			"slug": "particle-accelerator",
@@ -6081,7 +6277,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_HazmatSuit_C": {
 			"slug": "hazmat-suit",
@@ -6118,7 +6315,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_HeatSink_C": {
 			"slug": "heat-sink",
@@ -6149,7 +6347,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_HighSpeedConnector_C": {
 			"slug": "high-speed-connector",
@@ -6184,7 +6383,8 @@
 			],
 			"producedIn": [
 				"Desc_ManufacturerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Hoverpack_C": {
 			"slug": "hover-pack",
@@ -6221,7 +6421,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_HyperPoleStackable_C": {
 			"slug": "stackable-hypertube-support",
@@ -6254,7 +6455,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_HyperTubeWallHole_C": {
 			"slug": "hypertube-wall-hole",
@@ -6283,7 +6485,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_HyperTubeWallSupport_C": {
 			"slug": "hypertube-wall-support",
@@ -6312,7 +6515,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_IndustrialTank_C": {
 			"slug": "industrial-fluid-buffer",
@@ -6341,7 +6545,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_IngotAluminum_C": {
 			"slug": "aluminum-ingot",
@@ -6372,7 +6577,8 @@
 			],
 			"producedIn": [
 				"Desc_FoundryMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_IngotCaterium_C": {
 			"slug": "caterium-ingot",
@@ -6399,7 +6605,8 @@
 			],
 			"producedIn": [
 				"Desc_SmelterMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_IngotCopper_C": {
 			"slug": "copper-ingot",
@@ -6426,7 +6633,8 @@
 			],
 			"producedIn": [
 				"Desc_SmelterMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_IngotIron_C": {
 			"slug": "iron-ingot",
@@ -6453,7 +6661,8 @@
 			],
 			"producedIn": [
 				"Desc_SmelterMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_IngotSteel_C": {
 			"slug": "steel-ingot",
@@ -6484,7 +6693,8 @@
 			],
 			"producedIn": [
 				"Desc_FoundryMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_InvertedRamp_Asphalt_8x1_C": {
 			"slug": "inv-ramp-1m",
@@ -6509,7 +6719,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_InvertedRamp_Asphalt_8x2_C": {
 			"slug": "inv-ramp-2m",
@@ -6534,7 +6745,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_InvertedRamp_Asphalt_8x4_C": {
 			"slug": "inv-ramp-4m",
@@ -6559,7 +6771,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_InvertedRamp_Concrete_8x1_C": {
 			"slug": "inv-ramp-1m",
@@ -6584,7 +6797,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_InvertedRamp_Concrete_8x2_C": {
 			"slug": "inv-ramp-2m",
@@ -6609,7 +6823,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_InvertedRamp_Concrete_8x4_C": {
 			"slug": "inv-ramp-4m",
@@ -6634,7 +6849,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_InvertedRamp_DCorner_Asphalt_8x1_C": {
 			"slug": "inv-down-corner-1m",
@@ -6659,7 +6875,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_InvertedRamp_DCorner_Asphalt_8x2_C": {
 			"slug": "inv-down-corner-2m",
@@ -6684,7 +6901,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_InvertedRamp_DCorner_Asphalt_8x4_C": {
 			"slug": "inv-down-corner-4m",
@@ -6709,7 +6927,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_InvertedRamp_DCorner_Concrete_8x1_C": {
 			"slug": "inv-down-corner-1m",
@@ -6734,7 +6953,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_InvertedRamp_DCorner_Concrete_8x2_C": {
 			"slug": "inv-down-corner-2m",
@@ -6759,7 +6979,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_InvertedRamp_DCorner_Concrete_8x4_C": {
 			"slug": "inv-down-corner-4m",
@@ -6784,7 +7005,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_InvertedRamp_DCorner_Metal_8x1_C": {
 			"slug": "inv-down-corner-1m",
@@ -6809,7 +7031,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_InvertedRamp_DCorner_Metal_8x2_C": {
 			"slug": "inv-down-corner-2m",
@@ -6834,7 +7057,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_InvertedRamp_DCorner_Metal_8x4_C": {
 			"slug": "inv-down-corner-4m",
@@ -6859,7 +7083,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_InvertedRamp_DCorner_Polished_8x1_C": {
 			"slug": "inv-down-corner-1m",
@@ -6884,7 +7109,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_InvertedRamp_DCorner_Polished_8x2_C": {
 			"slug": "inv-down-corner-2m",
@@ -6909,7 +7135,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_InvertedRamp_DCorner_Polished_8x4_C": {
 			"slug": "inv-down-corner-4m",
@@ -6934,7 +7161,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_InvertedRamp_Metal_8x1_C": {
 			"slug": "inv-ramp-1m",
@@ -6959,7 +7187,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_InvertedRamp_Metal_8x2_C": {
 			"slug": "inv-ramp-2m",
@@ -6984,7 +7213,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_InvertedRamp_Metal_8x4_C": {
 			"slug": "inv-ramp-4m",
@@ -7009,7 +7239,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_InvertedRamp_Polished_8x1_C": {
 			"slug": "inv-ramp-1m",
@@ -7034,7 +7265,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_InvertedRamp_Polished_8x2_C": {
 			"slug": "inv-ramp-2m",
@@ -7059,7 +7291,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_InvertedRamp_Polished_8x4_C": {
 			"slug": "inv-ramp-4m",
@@ -7084,7 +7317,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_InvertedRamp_UCorner_Asphalt_8x1_C": {
 			"slug": "inv-up-corner-1m",
@@ -7109,7 +7343,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_InvertedRamp_UCorner_Asphalt_8x2_C": {
 			"slug": "inv-up-corner-2m",
@@ -7134,7 +7369,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_InvertedRamp_UCorner_Asphalt_8x4_C": {
 			"slug": "inv-up-corner-4m",
@@ -7159,7 +7395,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_InvertedRamp_UCorner_Concrete_8x1_C": {
 			"slug": "inv-up-corner-1m",
@@ -7184,7 +7421,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_InvertedRamp_UCorner_Concrete_8x2_C": {
 			"slug": "inv-up-corner-2m",
@@ -7209,7 +7447,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_InvertedRamp_UCorner_Concrete_8x4_C": {
 			"slug": "inv-up-corner-4m",
@@ -7234,7 +7473,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_InvertedRamp_UCorner_Metal_8x1_C": {
 			"slug": "inv-up-corner-1m",
@@ -7259,7 +7499,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_InvertedRamp_UCorner_Metal_8x2_C": {
 			"slug": "inv-up-corner-2m",
@@ -7284,7 +7525,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_InvertedRamp_UCorner_Metal_8x4_C": {
 			"slug": "inv-up-corner-4m",
@@ -7309,7 +7551,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_InvertedRamp_UCorner_Polished_8x1_C": {
 			"slug": "inv-up-corner-1m",
@@ -7334,7 +7577,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_InvertedRamp_UCorner_Polished_8x2_C": {
 			"slug": "inv-up-corner-2m",
@@ -7359,7 +7603,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_InvertedRamp_UCorner_Polished_8x4_C": {
 			"slug": "inv-up-corner-4m",
@@ -7384,7 +7629,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_IronPlateReinforced_C": {
 			"slug": "reinforced-iron-plate",
@@ -7415,7 +7661,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_IronPlate_C": {
 			"slug": "iron-plate",
@@ -7442,7 +7689,8 @@
 			],
 			"producedIn": [
 				"Desc_ConstructorMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_IronRod_C": {
 			"slug": "iron-rod",
@@ -7469,7 +7717,8 @@
 			],
 			"producedIn": [
 				"Desc_ConstructorMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_JetPack_C": {
 			"slug": "jetpack",
@@ -7506,7 +7755,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_JumpPadAdjustable_C": {
 			"slug": "jump-pad",
@@ -7539,7 +7789,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ladder_C": {
 			"slug": "ladder",
@@ -7564,7 +7815,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_LightsControlPanel_C": {
 			"slug": "lights-control-panel",
@@ -7597,7 +7849,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_LiquidBiofuel_C": {
 			"slug": "liquid-biofuel",
@@ -7628,7 +7881,8 @@
 			],
 			"producedIn": [
 				"Desc_OilRefinery_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_LiquidFuel_C": {
 			"slug": "fuel",
@@ -7659,7 +7913,8 @@
 			],
 			"producedIn": [
 				"Desc_OilRefinery_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_LookoutTower_C": {
 			"slug": "lookout-tower",
@@ -7688,7 +7943,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Mam_C": {
 			"slug": "mam",
@@ -7721,7 +7977,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_ManufacturerMk1_C": {
 			"slug": "manufacturer",
@@ -7758,7 +8015,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_MedicinalInhalerAlienOrgans_C": {
 			"slug": "medicinal-inhaler-alien-organs",
@@ -7787,7 +8045,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_MedicinalInhaler_C": {
 			"slug": "nutritional-inhaler",
@@ -7824,7 +8083,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_MinerMk1_C": {
 			"slug": "miner-mk-1",
@@ -7857,7 +8117,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_MinerMk2_C": {
 			"slug": "miner-mk-2",
@@ -7894,7 +8155,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_MinerMk3_C": {
 			"slug": "miner-mk-3",
@@ -7935,7 +8197,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_ModularFrameHeavy_C": {
 			"slug": "heavy-modular-frame",
@@ -7974,7 +8237,8 @@
 			],
 			"producedIn": [
 				"Desc_ManufacturerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_ModularFrame_C": {
 			"slug": "modular-frame",
@@ -8005,7 +8269,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_MotorTurbo_C": {
 			"slug": "turbo-motor",
@@ -8044,7 +8309,8 @@
 			],
 			"producedIn": [
 				"Desc_ManufacturerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Motor_C": {
 			"slug": "motor",
@@ -8075,7 +8341,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_NitricAcid_C": {
 			"slug": "nitric-acid",
@@ -8110,7 +8377,8 @@
 			],
 			"producedIn": [
 				"Desc_Blender_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_NobeliskDetonator_C": {
 			"slug": "nobelisk-detonator",
@@ -8143,7 +8411,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Nobelisk_C": {
 			"slug": "nobelisk",
@@ -8174,7 +8443,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_NonFissileUranium_C": {
 			"slug": "non-fissile-uranium",
@@ -8217,7 +8487,8 @@
 			],
 			"producedIn": [
 				"Desc_Blender_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_NuclearFuelRod_C": {
 			"slug": "uranium-fuel-rod",
@@ -8252,7 +8523,8 @@
 			],
 			"producedIn": [
 				"Desc_ManufacturerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_NutritionalInhaler_C": {
 			"slug": "medicinal-inhaler",
@@ -8285,7 +8557,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_ObjectScanner_C": {
 			"slug": "object-scanner",
@@ -8318,7 +8591,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_OilPump_C": {
 			"slug": "oil-extractor",
@@ -8351,7 +8625,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_OilRefinery_C": {
 			"slug": "refinery",
@@ -8388,7 +8663,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_PackagedAlumina_C": {
 			"slug": "packaged-alumina-solution",
@@ -8419,7 +8695,8 @@
 			],
 			"producedIn": [
 				"Desc_Packager_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_PackagedBiofuel_C": {
 			"slug": "packaged-liquid-biofuel",
@@ -8450,7 +8727,8 @@
 			],
 			"producedIn": [
 				"Desc_Packager_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_PackagedCrudeOil_C": {
 			"slug": "packaged-oil",
@@ -8481,7 +8759,8 @@
 			],
 			"producedIn": [
 				"Desc_Packager_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_PackagedNitricAcid_C": {
 			"slug": "packaged-nitric-acid",
@@ -8512,7 +8791,8 @@
 			],
 			"producedIn": [
 				"Desc_Packager_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_PackagedNitrogen_C": {
 			"slug": "packaged-nitrogen-gas",
@@ -8543,7 +8823,8 @@
 			],
 			"producedIn": [
 				"Desc_Packager_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_PackagedOilResidue_C": {
 			"slug": "packaged-heavy-oil-residue",
@@ -8574,7 +8855,8 @@
 			],
 			"producedIn": [
 				"Desc_Packager_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_PackagedSulfuricAcid_C": {
 			"slug": "packaged-sulfuric-acid",
@@ -8605,7 +8887,8 @@
 			],
 			"producedIn": [
 				"Desc_Packager_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_PackagedTurboFuel_C": {
 			"slug": "packaged-turbofuel",
@@ -8636,7 +8919,8 @@
 			],
 			"producedIn": [
 				"Desc_Packager_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_PackagedWater_C": {
 			"slug": "packaged-water",
@@ -8667,7 +8951,8 @@
 			],
 			"producedIn": [
 				"Desc_Packager_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Packager_C": {
 			"slug": "packager",
@@ -8700,7 +8985,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Parachute_C": {
 			"slug": "parachute",
@@ -8729,7 +9015,8 @@
 					"amount": 5
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_PetroleumCoke_C": {
 			"slug": "petroleum-coke",
@@ -8756,7 +9043,8 @@
 			],
 			"producedIn": [
 				"Desc_OilRefinery_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_PillarBase_C": {
 			"slug": "big-pillar-support",
@@ -8781,7 +9069,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_PillarBase_Small_C": {
 			"slug": "small-pillar-support",
@@ -8806,7 +9095,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_PillarMiddle_C": {
 			"slug": "big-metal-pillar",
@@ -8835,7 +9125,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_PillarMiddle_Concrete_C": {
 			"slug": "big-concrete-pillar",
@@ -8860,7 +9151,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_PillarMiddle_Frame_C": {
 			"slug": "big-frame-pillar",
@@ -8885,7 +9177,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Pillar_Small_Concrete_C": {
 			"slug": "small-concrete-pillar",
@@ -8910,7 +9203,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Pillar_Small_Frame_C": {
 			"slug": "small-frame-pillar",
@@ -8935,7 +9229,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Pillar_Small_Metal_C": {
 			"slug": "small-metal-pillar",
@@ -8964,7 +9259,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_PipeHyperStart_C": {
 			"slug": "hypertube-entrance",
@@ -8997,7 +9293,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_PipeHyperSupport_C": {
 			"slug": "hypertube-support",
@@ -9026,7 +9323,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_PipeHyper_C": {
 			"slug": "hypertube",
@@ -9055,7 +9353,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_PipeStorageTank_C": {
 			"slug": "fluid-buffer",
@@ -9084,7 +9383,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_PipeSupportStackable_C": {
 			"slug": "stackable-pipeline-support",
@@ -9117,7 +9417,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_PipeSupportWallHole_C": {
 			"slug": "pipeline-wall-hole",
@@ -9150,7 +9451,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_PipeSupportWall_C": {
 			"slug": "pipeline-wall-support",
@@ -9183,7 +9485,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_PipeSupport_C": {
 			"slug": "pipeline-support",
@@ -9212,7 +9515,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_PipelineJunction_Cross_C": {
 			"slug": "pipeline-junction-cross",
@@ -9237,7 +9541,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_PipelineMK2_C": {
 			"slug": "pipeline-mk-2",
@@ -9266,7 +9571,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_PipelinePumpMK2_C": {
 			"slug": "pipeline-pump-mk-2",
@@ -9299,7 +9605,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_PipelinePump_C": {
 			"slug": "pipeline-pump-mk-1",
@@ -9328,7 +9635,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Pipeline_C": {
 			"slug": "pipeline-mk-1",
@@ -9353,7 +9661,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Plastic_C": {
 			"slug": "plastic",
@@ -9384,7 +9693,8 @@
 			],
 			"producedIn": [
 				"Desc_OilRefinery_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_PlutoniumCell_C": {
 			"slug": "encased-plutonium-cell",
@@ -9415,7 +9725,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_PlutoniumFuelRod_C": {
 			"slug": "plutonium-fuel-rod",
@@ -9454,7 +9765,8 @@
 			],
 			"producedIn": [
 				"Desc_ManufacturerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Plutonium_C": {
 			"slug": "plutonium-pellet",
@@ -9485,7 +9797,10 @@
 			],
 			"producedIn": [
 				"Desc_HadronCollider_C"
-			]
+			],
+			"isVariablePower": true,
+			"minPower": 250,
+			"maxPower": 750
 		},
 		"Recipe_PortableMiner_C": {
 			"slug": "portable-miner",
@@ -9514,7 +9829,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_PowerCrystalShard_1_C": {
 			"slug": "power-shard-(1)",
@@ -9541,7 +9857,8 @@
 			],
 			"producedIn": [
 				"Desc_ConstructorMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_PowerCrystalShard_2_C": {
 			"slug": "power-shard-(2)",
@@ -9568,7 +9885,8 @@
 			],
 			"producedIn": [
 				"Desc_ConstructorMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_PowerCrystalShard_3_C": {
 			"slug": "power-shard-(5)",
@@ -9595,7 +9913,8 @@
 			],
 			"producedIn": [
 				"Desc_ConstructorMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_PowerLine_C": {
 			"slug": "power-line",
@@ -9620,7 +9939,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_PowerPoleMk1_C": {
 			"slug": "power-pole-mk-1",
@@ -9653,7 +9973,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_PowerPoleMk2_C": {
 			"slug": "power-pole-mk-2",
@@ -9686,7 +10007,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_PowerPoleMk3_C": {
 			"slug": "power-pole-mk-3",
@@ -9719,7 +10041,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_PowerPoleWallDoubleMk2_C": {
 			"slug": "double-wall-outlet-mk-2",
@@ -9748,7 +10071,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_PowerPoleWallDoubleMk3_C": {
 			"slug": "double-wall-outlet-mk-3",
@@ -9777,7 +10101,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_PowerPoleWallDouble_C": {
 			"slug": "double-wall-outlet-mk-1",
@@ -9806,7 +10131,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_PowerPoleWallMk2_C": {
 			"slug": "wall-outlet-mk-2",
@@ -9835,7 +10161,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_PowerPoleWallMk3_C": {
 			"slug": "wall-outlet-mk-3",
@@ -9864,7 +10191,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_PowerPoleWall_C": {
 			"slug": "wall-outlet-mk-1",
@@ -9893,7 +10221,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_PowerStorageMk1_C": {
 			"slug": "power-storage",
@@ -9926,7 +10255,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_PowerSwitch_C": {
 			"slug": "power-switch",
@@ -9959,7 +10289,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_PressureConversionCube_C": {
 			"slug": "pressure-conversion-cube",
@@ -9990,7 +10321,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_PureAluminumIngot_C": {
 			"slug": "alternate-pure-aluminum-ingot",
@@ -10017,7 +10349,8 @@
 			],
 			"producedIn": [
 				"Desc_SmelterMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_QuarterPipeCorner_01_C": {
 			"slug": "inner-corner-quarter-pipe",
@@ -10046,7 +10379,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_QuarterPipeCorner_02_C": {
 			"slug": "inverted-inner-corner-quarter-pipe",
@@ -10075,7 +10409,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_QuarterPipeCorner_03_C": {
 			"slug": "outer-corner-quarter-pipe",
@@ -10104,7 +10439,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_QuarterPipeCorner_04_C": {
 			"slug": "inverted-outer-corner-quarter-pipe",
@@ -10133,7 +10469,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_QuarterPipe_02_C": {
 			"slug": "inverted-quarter-pipe",
@@ -10162,7 +10499,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_QuarterPipe_C": {
 			"slug": "quarter-pipe",
@@ -10191,7 +10529,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_QuartzCrystal_C": {
 			"slug": "quartz-crystal",
@@ -10218,7 +10557,8 @@
 			],
 			"producedIn": [
 				"Desc_ConstructorMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Quickwire_C": {
 			"slug": "quickwire",
@@ -10245,7 +10585,8 @@
 			],
 			"producedIn": [
 				"Desc_ConstructorMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_RadarTower_C": {
 			"slug": "radar-tower",
@@ -10282,7 +10623,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_RadioControlUnit_C": {
 			"slug": "radio-control-unit",
@@ -10317,7 +10659,8 @@
 			],
 			"producedIn": [
 				"Desc_ManufacturerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Railing_01_C": {
 			"slug": "modern-railing",
@@ -10342,7 +10685,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_RailroadBlockSignal_C": {
 			"slug": "block-signal",
@@ -10375,7 +10719,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_RailroadPathSignal_C": {
 			"slug": "path-signal",
@@ -10408,7 +10753,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_RailroadTrack_C": {
 			"slug": "railway",
@@ -10437,7 +10783,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_RampDouble_8x1_C": {
 			"slug": "double-ramp-2m",
@@ -10462,7 +10809,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_RampDouble_Asphalt_8x1_C": {
 			"slug": "double-ramp-2m",
@@ -10487,7 +10835,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_RampDouble_Asphalt_8x2_C": {
 			"slug": "double-ramp-4m",
@@ -10512,7 +10861,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_RampDouble_Asphalt_8x4_C": {
 			"slug": "double-ramp-8m",
@@ -10537,7 +10887,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_RampDouble_C": {
 			"slug": "double-ramp-4m",
@@ -10562,7 +10913,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_RampDouble_Concrete_8x1_C": {
 			"slug": "double-ramp-2m",
@@ -10587,7 +10939,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_RampDouble_Concrete_8x2_C": {
 			"slug": "double-ramp-4m",
@@ -10612,7 +10965,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_RampDouble_Concrete_8x4_C": {
 			"slug": "double-ramp-8m",
@@ -10637,7 +10991,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_RampDouble_Metal_8x1_C": {
 			"slug": "double-ramp-2m",
@@ -10662,7 +11017,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_RampDouble_Metal_8x2_C": {
 			"slug": "double-ramp-4m",
@@ -10687,7 +11043,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_RampDouble_Metal_8x4_C": {
 			"slug": "double-ramp-8m",
@@ -10712,7 +11069,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_RampDouble_Polished_8x1_C": {
 			"slug": "double-ramp-2m",
@@ -10737,7 +11095,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_RampDouble_Polished_8x2_C": {
 			"slug": "double-ramp-4m",
@@ -10762,7 +11121,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_RampDouble_Polished_8x4_C": {
 			"slug": "double-ramp-8m",
@@ -10787,7 +11147,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_RampInverted_8x1_C": {
 			"slug": "inv-ramp-1m",
@@ -10812,7 +11173,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_RampInverted_8x1_Corner_01_C": {
 			"slug": "inv-up-corner-1m",
@@ -10837,7 +11199,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_RampInverted_8x1_Corner_02_C": {
 			"slug": "inv-down-corner-1m",
@@ -10862,7 +11225,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_RampInverted_8x2_01_C": {
 			"slug": "inv-ramp-2m",
@@ -10887,7 +11251,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_RampInverted_8x2_Corner_01_C": {
 			"slug": "inv-up-corner-2m",
@@ -10912,7 +11277,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_RampInverted_8x2_Corner_02_C": {
 			"slug": "inv-down-corner-2m",
@@ -10937,7 +11303,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_RampInverted_8x4_Corner_01_C": {
 			"slug": "inv-up-corner-4m",
@@ -10962,7 +11329,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_RampInverted_8x4_Corner_02_C": {
 			"slug": "inv-down-corner-4m",
@@ -10987,7 +11355,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ramp_8x1_01_C": {
 			"slug": "ramp-1m",
@@ -11012,7 +11381,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ramp_8x2_01_C": {
 			"slug": "ramp-2m",
@@ -11037,7 +11407,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ramp_8x4_01_C": {
 			"slug": "ramp-4m",
@@ -11062,7 +11433,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ramp_8x4_Inverted_01_C": {
 			"slug": "inv-ramp-4m",
@@ -11087,7 +11459,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ramp_8x8x8_C": {
 			"slug": "double-ramp-8m",
@@ -11112,7 +11485,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ramp_Asphalt_8x1_C": {
 			"slug": "ramp-1m",
@@ -11137,7 +11511,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ramp_Asphalt_8x2_C": {
 			"slug": "ramp-2m",
@@ -11162,7 +11537,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ramp_Asphalt_8x4_C": {
 			"slug": "ramp-4m",
@@ -11187,7 +11563,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ramp_Concrete_8x1_C": {
 			"slug": "ramp-1m",
@@ -11212,7 +11589,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ramp_Concrete_8x2_C": {
 			"slug": "ramp-2m",
@@ -11237,7 +11615,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ramp_Concrete_8x4_C": {
 			"slug": "ramp-4m",
@@ -11262,7 +11641,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ramp_Diagonal_8x1_01_C": {
 			"slug": "down-corner-ramp-1m",
@@ -11287,7 +11667,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ramp_Diagonal_8x1_02_C": {
 			"slug": "up-corner-ramp-1m",
@@ -11312,7 +11693,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ramp_Diagonal_8x2_01_C": {
 			"slug": "down-corner-ramp-2m",
@@ -11337,7 +11719,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ramp_Diagonal_8x2_02_C": {
 			"slug": "up-corner-ramp-2m",
@@ -11362,7 +11745,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ramp_Diagonal_8x4_01_C": {
 			"slug": "down-corner-ramp-4m",
@@ -11387,7 +11771,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ramp_Diagonal_8x4_02_C": {
 			"slug": "up-corner-ramp-4m",
@@ -11412,7 +11797,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ramp_DownCorner_Asphalt_8x1_C": {
 			"slug": "down-corner-ramp-1m",
@@ -11437,7 +11823,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ramp_DownCorner_Asphalt_8x2_C": {
 			"slug": "down-corner-ramp-2m",
@@ -11462,7 +11849,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ramp_DownCorner_Asphalt_8x4_C": {
 			"slug": "down-corner-ramp-4m",
@@ -11487,7 +11875,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ramp_DownCorner_Concrete_8x1_C": {
 			"slug": "down-corner-ramp-1m",
@@ -11512,7 +11901,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ramp_DownCorner_Concrete_8x2_C": {
 			"slug": "down-corner-ramp-2m",
@@ -11537,7 +11927,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ramp_DownCorner_Concrete_8x4_C": {
 			"slug": "down-corner-ramp-4m",
@@ -11562,7 +11953,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ramp_DownCorner_Metal_8x1_C": {
 			"slug": "down-corner-ramp-1m",
@@ -11587,7 +11979,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ramp_DownCorner_Metal_8x2_C": {
 			"slug": "down-corner-ramp-2m",
@@ -11612,7 +12005,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ramp_DownCorner_Metal_8x4_C": {
 			"slug": "down-corner-ramp-4m",
@@ -11637,7 +12031,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ramp_DownCorner_Polished_8x1_C": {
 			"slug": "down-corner-ramp-1m",
@@ -11662,7 +12057,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ramp_DownCorner_Polished_8x2_C": {
 			"slug": "down-corner-ramp-2m",
@@ -11687,7 +12083,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ramp_DownCorner_Polished_8x4_C": {
 			"slug": "down-corner-ramp-4m",
@@ -11712,7 +12109,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ramp_Frame_01_C": {
 			"slug": "frame-ramp",
@@ -11737,7 +12135,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ramp_Frame_Inverted_01_C": {
 			"slug": "inverted-frame-ramp",
@@ -11762,7 +12161,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ramp_Metal_8x1_C": {
 			"slug": "ramp-1m",
@@ -11787,7 +12187,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ramp_Metal_8x2_C": {
 			"slug": "ramp-2m",
@@ -11812,7 +12213,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ramp_Metal_8x4_C": {
 			"slug": "ramp-4m",
@@ -11837,7 +12239,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ramp_Polished_8x1_C": {
 			"slug": "ramp-1m",
@@ -11862,7 +12265,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ramp_Polished_8x2_C": {
 			"slug": "ramp-2m",
@@ -11887,7 +12291,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ramp_Polished_8x4_C": {
 			"slug": "ramp-4m",
@@ -11912,7 +12317,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ramp_UpCorner_Asphalt_8x1_C": {
 			"slug": "up-corner-ramp-1m",
@@ -11937,7 +12343,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ramp_UpCorner_Asphalt_8x2_C": {
 			"slug": "up-corner-ramp-2m",
@@ -11962,7 +12369,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ramp_UpCorner_Asphalt_8x4_C": {
 			"slug": "up-corner-ramp-4m",
@@ -11987,7 +12395,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ramp_UpCorner_Concrete_8x1_C": {
 			"slug": "up-corner-ramp-1m",
@@ -12012,7 +12421,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ramp_UpCorner_Concrete_8x2_C": {
 			"slug": "up-corner-ramp-2m",
@@ -12037,7 +12447,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ramp_UpCorner_Concrete_8x4_C": {
 			"slug": "up-corner-ramp-4m",
@@ -12062,7 +12473,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ramp_UpCorner_Metal_8x1_C": {
 			"slug": "up-corner-ramp-1m",
@@ -12087,7 +12499,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ramp_UpCorner_Metal_8x2_C": {
 			"slug": "up-corner-ramp-2m",
@@ -12112,7 +12525,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ramp_UpCorner_Metal_8x4_C": {
 			"slug": "up-corner-ramp-4m",
@@ -12137,7 +12551,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ramp_UpCorner_Polished_8x1_C": {
 			"slug": "up-corner-ramp-1m",
@@ -12162,7 +12577,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ramp_UpCorner_Polished_8x2_C": {
 			"slug": "up-corner-ramp-2m",
@@ -12187,7 +12603,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Ramp_UpCorner_Polished_8x4_C": {
 			"slug": "up-corner-ramp-4m",
@@ -12212,7 +12629,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_RebarGun_C": {
 			"slug": "rebar-gun",
@@ -12245,7 +12663,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_ResidualFuel_C": {
 			"slug": "residual-fuel",
@@ -12272,7 +12691,8 @@
 			],
 			"producedIn": [
 				"Desc_OilRefinery_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_ResidualPlastic_C": {
 			"slug": "residual-plastic",
@@ -12303,7 +12723,8 @@
 			],
 			"producedIn": [
 				"Desc_OilRefinery_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_ResidualRubber_C": {
 			"slug": "residual-rubber",
@@ -12334,7 +12755,8 @@
 			],
 			"producedIn": [
 				"Desc_OilRefinery_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_ResourceSinkShop_C": {
 			"slug": "awesome-shop",
@@ -12367,7 +12789,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_ResourceSink_C": {
 			"slug": "awesome-sink",
@@ -12400,7 +12823,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Roof_A_01_C": {
 			"slug": "metal-roof-flat",
@@ -12425,7 +12849,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Roof_A_02_C": {
 			"slug": "metal-roof-1m",
@@ -12450,7 +12875,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Roof_A_03_C": {
 			"slug": "metal-roof-2m",
@@ -12475,7 +12901,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Roof_A_04_C": {
 			"slug": "metal-roof-4m",
@@ -12500,7 +12927,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Roof_Orange_01_C": {
 			"slug": "ficsit-roof-flat",
@@ -12525,7 +12953,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Roof_Orange_02_C": {
 			"slug": "ficsit-roof-1m",
@@ -12550,7 +12979,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Roof_Orange_03_C": {
 			"slug": "ficsit-roof-2m",
@@ -12575,7 +13005,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Roof_Orange_04_C": {
 			"slug": "ficsit-roof-4m",
@@ -12600,7 +13031,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Roof_Tar_01_C": {
 			"slug": "tar-roof-flat",
@@ -12625,7 +13057,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Roof_Tar_02_C": {
 			"slug": "tar-roof-1m",
@@ -12650,7 +13083,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Roof_Tar_03_C": {
 			"slug": "tar-roof-2m",
@@ -12675,7 +13109,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Roof_Tar_04_C": {
 			"slug": "tar-roof-4m",
@@ -12700,7 +13135,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Roof_Window_01_C": {
 			"slug": "glass-roof-flat",
@@ -12725,7 +13161,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Roof_Window_02_C": {
 			"slug": "glass-roof-1m",
@@ -12750,7 +13187,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Roof_Window_03_C": {
 			"slug": "glass-roof-2m",
@@ -12775,7 +13213,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Roof_Window_04_C": {
 			"slug": "glass-roof-4m",
@@ -12800,7 +13239,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Rotor_C": {
 			"slug": "rotor",
@@ -12831,7 +13271,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Rubber_C": {
 			"slug": "rubber",
@@ -12862,7 +13303,8 @@
 			],
 			"producedIn": [
 				"Desc_OilRefinery_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Screw_C": {
 			"slug": "screw",
@@ -12889,7 +13331,8 @@
 			],
 			"producedIn": [
 				"Desc_ConstructorMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Silica_C": {
 			"slug": "silica",
@@ -12916,7 +13359,8 @@
 			],
 			"producedIn": [
 				"Desc_ConstructorMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_SmelterBasicMk1_C": {
 			"slug": "smelter",
@@ -12945,7 +13389,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_SmelterMk1_C": {
 			"slug": "foundry",
@@ -12978,7 +13423,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_SpaceElevatorPart_1_C": {
 			"slug": "smart-plating",
@@ -13009,7 +13455,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_SpaceElevatorPart_2_C": {
 			"slug": "versatile-framework",
@@ -13040,7 +13487,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_SpaceElevatorPart_3_C": {
 			"slug": "automated-wiring",
@@ -13071,7 +13519,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_SpaceElevatorPart_4_C": {
 			"slug": "modular-engine",
@@ -13106,7 +13555,8 @@
 			],
 			"producedIn": [
 				"Desc_ManufacturerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_SpaceElevatorPart_5_C": {
 			"slug": "adaptive-control-unit",
@@ -13145,7 +13595,8 @@
 			],
 			"producedIn": [
 				"Desc_ManufacturerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_SpaceElevatorPart_6_C": {
 			"slug": "magnetic-field-generator",
@@ -13180,7 +13631,8 @@
 			],
 			"producedIn": [
 				"Desc_ManufacturerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_SpaceElevatorPart_7_C": {
 			"slug": "assembly-director-system",
@@ -13211,7 +13663,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_SpaceElevatorPart_8_C": {
 			"slug": "thermal-propulsion-rocket",
@@ -13250,7 +13703,8 @@
 			],
 			"producedIn": [
 				"Desc_ManufacturerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_SpaceElevatorPart_9_C": {
 			"slug": "nuclear-pasta",
@@ -13281,7 +13735,10 @@
 			],
 			"producedIn": [
 				"Desc_HadronCollider_C"
-			]
+			],
+			"isVariablePower": true,
+			"minPower": 500,
+			"maxPower": 1500
 		},
 		"Recipe_SpaceElevator_C": {
 			"slug": "space-elevator",
@@ -13318,7 +13775,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_SpaceRifleMk1_C": {
 			"slug": "rifle",
@@ -13355,7 +13813,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_SpikedRebar_C": {
 			"slug": "spiked-rebar",
@@ -13382,7 +13841,8 @@
 			],
 			"producedIn": [
 				"Desc_ConstructorMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Stairs_Left_01_C": {
 			"slug": "stairs-left",
@@ -13411,7 +13871,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Stairs_Right_01_C": {
 			"slug": "stairs-right",
@@ -13440,7 +13901,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_StandaloneWidgetSign_Huge_C": {
 			"slug": "large-billboard",
@@ -13473,7 +13935,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_StandaloneWidgetSign_Large_C": {
 			"slug": "small-billboard",
@@ -13506,7 +13969,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_StandaloneWidgetSign_Medium_C": {
 			"slug": "display-sign",
@@ -13535,7 +13999,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_StandaloneWidgetSign_Portrait_C": {
 			"slug": "portrait-sign",
@@ -13564,7 +14029,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_StandaloneWidgetSign_SmallVeryWide_C": {
 			"slug": "label-sign-4m",
@@ -13593,7 +14059,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_StandaloneWidgetSign_SmallWide_C": {
 			"slug": "label-sign-3m",
@@ -13622,7 +14089,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_StandaloneWidgetSign_Small_C": {
 			"slug": "label-sign-2m",
@@ -13651,7 +14119,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_StandaloneWidgetSign_Square_C": {
 			"slug": "square-sign-2m",
@@ -13680,7 +14149,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_StandaloneWidgetSign_Square_Small_C": {
 			"slug": "square-sign-1m",
@@ -13709,7 +14179,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_StandaloneWidgetSign_Square_Tiny_C": {
 			"slug": "square-sign-0-5m",
@@ -13738,7 +14209,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Stator_C": {
 			"slug": "stator",
@@ -13769,7 +14241,8 @@
 			],
 			"producedIn": [
 				"Desc_AssemblerMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_SteelBeam_C": {
 			"slug": "steel-beam",
@@ -13796,7 +14269,8 @@
 			],
 			"producedIn": [
 				"Desc_ConstructorMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_SteelPipe_C": {
 			"slug": "steel-pipe",
@@ -13823,7 +14297,8 @@
 			],
 			"producedIn": [
 				"Desc_ConstructorMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_SteelWall_8x1_C": {
 			"slug": "basic-wall-1m",
@@ -13848,7 +14323,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_SteelWall_8x4_Gate_01_C": {
 			"slug": "gate-hole-wall",
@@ -13873,7 +14349,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_SteelWall_8x4_Window_01_C": {
 			"slug": "single-window",
@@ -13898,7 +14375,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_SteelWall_8x4_Window_02_C": {
 			"slug": "reinforced-window",
@@ -13923,7 +14401,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_SteelWall_8x4_Window_03_C": {
 			"slug": "frame-window",
@@ -13948,7 +14427,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_SteelWall_8x4_Window_04_C": {
 			"slug": "panel-window",
@@ -13973,7 +14453,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_SteelWall_FlipTris_8x1_C": {
 			"slug": "inv-ramp-wall-1m",
@@ -13998,7 +14479,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_SteelWall_FlipTris_8x2_C": {
 			"slug": "inv-ramp-wall-2m",
@@ -14023,7 +14505,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_SteelWall_FlipTris_8x4_C": {
 			"slug": "inv-ramp-wall-4m",
@@ -14048,7 +14531,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_SteelWall_FlipTris_8x8_C": {
 			"slug": "inv-ramp-wall-8m",
@@ -14073,7 +14557,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_SteelWall_Tris_8x1_C": {
 			"slug": "ramp-wall-1m",
@@ -14098,7 +14583,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_SteelWall_Tris_8x2_C": {
 			"slug": "ramp-wall-2m",
@@ -14123,7 +14609,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_SteelWall_Tris_8x4_C": {
 			"slug": "ramp-wall-4m",
@@ -14148,7 +14635,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_SteelWall_Tris_8x8_C": {
 			"slug": "ramp-wall-8m",
@@ -14173,7 +14661,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_StorageContainerMk1_C": {
 			"slug": "storage-container",
@@ -14202,7 +14691,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_StorageContainerMk2_C": {
 			"slug": "industrial-storage-container",
@@ -14231,7 +14721,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_StorageHazard_C": {
 			"slug": "hazard-storage-box",
@@ -14260,7 +14751,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_StorageMedkit_C": {
 			"slug": "medical-storage-box",
@@ -14289,7 +14781,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_StoragePlayer_C": {
 			"slug": "personal-storage-box",
@@ -14318,7 +14811,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_StreetLight_C": {
 			"slug": "street-light",
@@ -14351,7 +14845,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_SulfuricAcid_C": {
 			"slug": "sulfuric-acid",
@@ -14382,7 +14877,8 @@
 			],
 			"producedIn": [
 				"Desc_OilRefinery_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_TradingPost_C": {
 			"slug": "the-hub",
@@ -14407,7 +14903,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_TrainDockingStationLiquid_C": {
 			"slug": "fluid-freight-platform",
@@ -14448,7 +14945,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_TrainDockingStation_C": {
 			"slug": "freight-platform",
@@ -14489,7 +14987,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_TrainPlatformEmpty_02_C": {
 			"slug": "empty-platform-with-catwalk",
@@ -14518,7 +15017,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_TrainPlatformEmpty_C": {
 			"slug": "empty-platform",
@@ -14547,7 +15047,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_TrainStation_C": {
 			"slug": "train-station",
@@ -14584,7 +15085,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_TruckStation_C": {
 			"slug": "truck-station",
@@ -14617,7 +15119,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_UJellyLandingPad_C": {
 			"slug": "u-jelly-landing-pad",
@@ -14650,7 +15153,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_UnpackageAlumina_C": {
 			"slug": "unpackage-alumina-solution",
@@ -14681,7 +15185,8 @@
 			],
 			"producedIn": [
 				"Desc_Packager_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_UnpackageBioFuel_C": {
 			"slug": "unpackage-liquid-biofuel",
@@ -14712,7 +15217,8 @@
 			],
 			"producedIn": [
 				"Desc_Packager_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_UnpackageFuel_C": {
 			"slug": "unpackage-fuel",
@@ -14743,7 +15249,8 @@
 			],
 			"producedIn": [
 				"Desc_Packager_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_UnpackageNitricAcid_C": {
 			"slug": "unpackage-nitric-acid",
@@ -14774,7 +15281,8 @@
 			],
 			"producedIn": [
 				"Desc_Packager_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_UnpackageNitrogen_C": {
 			"slug": "unpackage-nitrogen-gas",
@@ -14805,7 +15313,8 @@
 			],
 			"producedIn": [
 				"Desc_Packager_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_UnpackageOilResidue_C": {
 			"slug": "unpackage-heavy-oil-residue",
@@ -14836,7 +15345,8 @@
 			],
 			"producedIn": [
 				"Desc_Packager_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_UnpackageOil_C": {
 			"slug": "unpackage-oil",
@@ -14867,7 +15377,8 @@
 			],
 			"producedIn": [
 				"Desc_Packager_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_UnpackageSulfuricAcid_C": {
 			"slug": "unpackage-sulfuric-acid",
@@ -14898,7 +15409,8 @@
 			],
 			"producedIn": [
 				"Desc_Packager_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_UnpackageTurboFuel_C": {
 			"slug": "unpackage-turbofuel",
@@ -14929,7 +15441,8 @@
 			],
 			"producedIn": [
 				"Desc_Packager_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_UnpackageWater_C": {
 			"slug": "unpackage-water",
@@ -14960,7 +15473,8 @@
 			],
 			"producedIn": [
 				"Desc_Packager_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_UraniumCell_C": {
 			"slug": "encased-uranium-cell",
@@ -14999,7 +15513,8 @@
 			],
 			"producedIn": [
 				"Desc_Blender_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_Valve_C": {
 			"slug": "valve",
@@ -15028,7 +15543,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Walkway_Cross_C": {
 			"slug": "walkway-crossing",
@@ -15057,7 +15573,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Walkway_Ramp_C": {
 			"slug": "walkway-ramp",
@@ -15086,7 +15603,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Walkway_Straight_C": {
 			"slug": "walkway-straight",
@@ -15115,7 +15633,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Walkway_T_C": {
 			"slug": "walkway-t-crossing",
@@ -15144,7 +15663,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Walkway_Turn_C": {
 			"slug": "walkway-turn",
@@ -15173,7 +15693,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_WallSet_Steel_Angular_8x4_C": {
 			"slug": "tilted-wall-4m",
@@ -15198,7 +15719,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_WallSet_Steel_Angular_8x8_C": {
 			"slug": "tilted-wall-8m",
@@ -15223,7 +15745,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_8x4_01_C": {
 			"slug": "basic-wall-4m",
@@ -15248,7 +15771,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_8x4_02_C": {
 			"slug": "basic-wall-4m",
@@ -15273,7 +15797,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Concrete_8x1_C": {
 			"slug": "basic-wall-1m",
@@ -15298,7 +15823,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Concrete_8x4_C": {
 			"slug": "basic-wall-4m",
@@ -15323,7 +15849,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Concrete_8x4_ConveyorHole_01_C": {
 			"slug": "conveyor-wall-x1",
@@ -15348,7 +15875,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Concrete_8x4_ConveyorHole_02_C": {
 			"slug": "conveyor-wall-x2",
@@ -15373,7 +15901,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Concrete_8x4_ConveyorHole_03_C": {
 			"slug": "conveyor-wall-x3",
@@ -15398,7 +15927,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Concrete_8x4_Corner_01_C": {
 			"slug": "tilted-corner-wall-4m",
@@ -15423,7 +15953,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Concrete_8x4_Window_01_C": {
 			"slug": "single-window",
@@ -15448,7 +15979,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Concrete_8x4_Window_02_C": {
 			"slug": "frame-window",
@@ -15473,7 +16005,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Concrete_8x4_Window_03_C": {
 			"slug": "panel-window",
@@ -15498,7 +16031,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Concrete_8x4_Window_04_C": {
 			"slug": "reinforced-window",
@@ -15523,7 +16057,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Concrete_8x8_Corner_01_C": {
 			"slug": "tilted-corner-wall-8m",
@@ -15548,7 +16083,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Concrete_Angular_8x4_C": {
 			"slug": "tilted-wall-4m",
@@ -15573,7 +16109,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Concrete_Angular_8x8_C": {
 			"slug": "tilted-wall-8m",
@@ -15598,7 +16135,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Concrete_CDoor_8x4_C": {
 			"slug": "center-door-wall",
@@ -15623,7 +16161,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Concrete_FlipTris_8x1_C": {
 			"slug": "inv-ramp-wall-1m",
@@ -15648,7 +16187,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Concrete_FlipTris_8x2_C": {
 			"slug": "inv-ramp-wall-2m",
@@ -15673,7 +16213,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Concrete_FlipTris_8x4_C": {
 			"slug": "inv-ramp-wall-4m",
@@ -15698,7 +16239,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Concrete_FlipTris_8x8_C": {
 			"slug": "inv-ramp-wall-8m",
@@ -15723,7 +16265,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Concrete_Gate_8x4_C": {
 			"slug": "gate-hole-wall",
@@ -15748,7 +16291,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Concrete_SDoor_8x4_C": {
 			"slug": "side-door-wall",
@@ -15773,7 +16317,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Concrete_Tris_8x1_C": {
 			"slug": "ramp-wall-1m",
@@ -15798,7 +16343,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Concrete_Tris_8x2_C": {
 			"slug": "ramp-wall-2m",
@@ -15823,7 +16369,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Concrete_Tris_8x4_C": {
 			"slug": "ramp-wall-4m",
@@ -15848,7 +16395,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Concrete_Tris_8x8_C": {
 			"slug": "ramp-wall-8m",
@@ -15873,7 +16421,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Conveyor_8x4_01_C": {
 			"slug": "conveyor-wall-x3",
@@ -15898,7 +16447,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Conveyor_8x4_01_Steel_C": {
 			"slug": "conveyor-wall-x3",
@@ -15923,7 +16473,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Conveyor_8x4_02_C": {
 			"slug": "conveyor-wall-x2",
@@ -15948,7 +16499,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Conveyor_8x4_02_Steel_C": {
 			"slug": "conveyor-wall-x2",
@@ -15973,7 +16525,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Conveyor_8x4_03_C": {
 			"slug": "conveyor-wall-x1",
@@ -15998,7 +16551,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Conveyor_8x4_03_Steel_C": {
 			"slug": "conveyor-wall-x1",
@@ -16023,7 +16577,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Conveyor_8x4_04_C": {
 			"slug": "wall-conveyor-perpendicular",
@@ -16052,7 +16607,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Conveyor_8x4_04_Steel_C": {
 			"slug": "wall-conveyor-perpendicular",
@@ -16081,7 +16637,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Door_8x4_01_C": {
 			"slug": "center-door-wall",
@@ -16106,7 +16663,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Door_8x4_01_Steel_C": {
 			"slug": "center-door-wall",
@@ -16131,7 +16689,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Door_8x4_03_C": {
 			"slug": "side-door-wall",
@@ -16156,7 +16715,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Door_8x4_03_Steel_C": {
 			"slug": "side-door-wall",
@@ -16181,7 +16741,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Frame_01_C": {
 			"slug": "frame-wall",
@@ -16206,7 +16767,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Gate_8x4_01_C": {
 			"slug": "gate-hole-wall",
@@ -16231,7 +16793,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Orange_8x1_C": {
 			"slug": "basic-wall-1m",
@@ -16256,7 +16819,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Orange_8x4_Corner_01_C": {
 			"slug": "tilted-corner-wall-4m",
@@ -16281,7 +16845,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Orange_8x8_Corner_01_C": {
 			"slug": "tilted-corner-wall-8m",
@@ -16306,7 +16871,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Orange_Angular_8x4_C": {
 			"slug": "tilted-wall-4m",
@@ -16331,7 +16897,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Orange_Angular_8x8_C": {
 			"slug": "tilted-wall-8m",
@@ -16356,7 +16923,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Orange_FlipTris_8x1_C": {
 			"slug": "inv-ramp-wall-1m",
@@ -16381,7 +16949,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Orange_FlipTris_8x2_C": {
 			"slug": "inv-ramp-wall-2m",
@@ -16406,7 +16975,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Orange_FlipTris_8x4_C": {
 			"slug": "inv-ramp-wall-4m",
@@ -16431,7 +17001,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Orange_FlipTris_8x8_C": {
 			"slug": "inv-ramp-wall-8m",
@@ -16456,7 +17027,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Orange_Tris_8x1_C": {
 			"slug": "ramp-wall-1m",
@@ -16481,7 +17053,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Orange_Tris_8x2_C": {
 			"slug": "ramp-wall-2m",
@@ -16506,7 +17079,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Orange_Tris_8x4_C": {
 			"slug": "ramp-wall-4m",
@@ -16531,7 +17105,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Orange_Tris_8x8_C": {
 			"slug": "ramp-wall-8m",
@@ -16556,7 +17131,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Steel_8x4_Corner_01_C": {
 			"slug": "tilted-corner-wall-4m",
@@ -16581,7 +17157,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Steel_8x8_Corner_01_C": {
 			"slug": "tilted-corner-wall-8m",
@@ -16606,7 +17183,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Window_8x4_01_C": {
 			"slug": "single-window",
@@ -16631,7 +17209,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Window_8x4_02_C": {
 			"slug": "frame-window",
@@ -16656,7 +17235,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Window_8x4_03_C": {
 			"slug": "panel-window",
@@ -16681,7 +17261,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Window_8x4_04_C": {
 			"slug": "reinforced-window",
@@ -16706,7 +17287,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Window_Thin_8x4_01_C": {
 			"slug": "full-frame-window",
@@ -16735,7 +17317,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wall_Window_Thin_8x4_02_C": {
 			"slug": "hex-frame-window",
@@ -16764,7 +17347,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_WaterPump_C": {
 			"slug": "water-extractor",
@@ -16797,7 +17381,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Wire_C": {
 			"slug": "wire",
@@ -16824,7 +17409,8 @@
 			],
 			"producedIn": [
 				"Desc_ConstructorMk1_C"
-			]
+			],
+			"isVariablePower": false
 		},
 		"Recipe_WorkBench_C": {
 			"slug": "craft-bench",
@@ -16853,7 +17439,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_Workshop_C": {
 			"slug": "equipment-workshop",
@@ -16882,7 +17469,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_XenoBasher_C": {
 			"slug": "xeno-basher",
@@ -16919,7 +17507,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_XenoZapper_C": {
 			"slug": "xeno-zapper",
@@ -16956,7 +17545,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		},
 		"Recipe_ZipLine_C": {
 			"slug": "zipline",
@@ -16993,7 +17583,8 @@
 					"amount": 1
 				}
 			],
-			"producedIn": []
+			"producedIn": [],
+			"isVariablePower": false
 		}
 	},
 	"items": {
@@ -29855,8 +30446,11 @@
 			"buildMenuPriority": 21,
 			"className": "Desc_HadronCollider_C",
 			"metadata": {
-				"powerConsumption": 0,
+				"powerConsumption": 875,
 				"powerConsumptionExponent": 1.6,
+				"isVariablePower": true,
+				"minPowerConsumption": 250,
+				"maxPowerConsumption": 1500,
 				"manufacturingSpeed": 1
 			},
 			"size": {

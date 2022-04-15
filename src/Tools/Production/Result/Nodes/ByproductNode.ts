@@ -29,11 +29,21 @@ export class ByproductNode extends GraphNode
 		return [];
 	}
 
+	public getTitle(): string
+	{
+		return this.formatText('Byproduct: ' + this.resource.name) + '\n' + Strings.formatNumber(this.itemAmount.amount) + ' / min';
+	}
+
+	public getTooltip(): string|null
+	{
+		return null;
+	}
+
 	public getVisNode(): IVisNode
 	{
 		return {
 			id: this.id,
-			label: this.getLabel(),
+			label: this.getTitle(),
 			color: {
 				border: 'rgba(0, 0, 0, 0)',
 				background: 'rgba(27, 112, 137, 1)',
@@ -46,11 +56,6 @@ export class ByproductNode extends GraphNode
 				color: 'rgba(238, 238, 238, 1)',
 			},
 		};
-	}
-
-	private getLabel(): string
-	{
-		return this.formatText('Byproduct: ' + this.resource.name) + '\n' + Strings.formatNumber(this.itemAmount.amount) + ' / min';
 	}
 
 }

@@ -33,7 +33,7 @@ export class Strings
 		return name.replace(/[\s|.]+/gi, '-').replace(/[™:]/gi, '').toLowerCase();
 	}
 
-	public static copyToClipboard(text: string, displayNotification: string = ''): boolean
+	public static copyToClipboard(text: string, displayNotification: string = '', delay: number = 3000): boolean
 	{
 		const textArea = document.createElement('textarea');
 		textArea.style.position = 'fixed';
@@ -68,7 +68,7 @@ export class Strings
 				'<div class="toast-body">' + displayNotification + '</div>';
 			document.getElementById('toasts')?.appendChild(toast);
 			$(toast).toast({
-				delay: 3000,
+				delay: delay,
 			});
 			$(toast).toast('show');
 		}

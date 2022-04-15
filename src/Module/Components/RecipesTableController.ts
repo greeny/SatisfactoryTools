@@ -1,9 +1,10 @@
 import {IItemSchema} from '@src/Schema/IItemSchema';
 import data from '@src/Data/Data';
-import {IRecipeSchema} from '@src/Schema/IRecipeSchema';
+import {IAnyRecipeSchema, IRecipeSchema} from '@src/Schema/IRecipeSchema';
 import {IBuildingSchema, IManufacturerSchema} from '@src/Schema/IBuildingSchema';
 import {ComponentOptionsService} from '@src/Module/Services/ComponentOptionsService';
 import {Formula} from '@src/Formula';
+import {Numbers} from '@src/Utils/Numbers';
 
 export class RecipesTableController
 {
@@ -36,6 +37,22 @@ export class RecipesTableController
 	public getMachine(recipe: IRecipeSchema): IManufacturerSchema|null
 	{
 		return data.getManufacturerByClassName(recipe.producedIn[0]);
+	}
+
+	public getRecipeMinPower(recipe: IAnyRecipeSchema): number
+	{
+		if (recipe.isVariablePower) {
+			return Numbers.round(recipe.minPower * Math.pow(this.options.overclock / 100, 1 / (this.getMachine(recipe)?.metadata.powerConsumptionExponent || 1.3)));
+		}
+		return 0;
+	}
+
+	public getRecipeMaxPower(recipe: IAnyRecipeSchema): number
+	{
+		if (recipe.isVariablePower) {
+			return Numbers.round(recipe.maxPower * Math.pow(this.options.overclock / 100, 1 / (this.getMachine(recipe)?.metadata.powerConsumptionExponent || 1.3)));
+		}
+		return 0;
 	}
 
 }

@@ -1,4 +1,4 @@
-import {IBuildingMetadataSchema, IManufacturerMetadataSchema} from '@src/Schema/IBuildingMetadataSchema';
+import {IBuildingMetadataSchema, IManufacturerAnyPowerMetadataSchema} from '@src/Schema/IBuildingMetadataSchema';
 import {ISizeSchema} from '@src/Schema/ISizeSchema';
 
 export interface IBuildingSchema
@@ -18,6 +18,6 @@ export interface IBuildingSchema
 export interface IManufacturerSchema extends IBuildingSchema
 {
 
-	metadata: IManufacturerMetadataSchema;
+	metadata: IManufacturerAnyPowerMetadataSchema;
 
 }

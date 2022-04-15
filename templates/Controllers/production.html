@@ -465,70 +465,511 @@
 		</div>
 	</div>
 
-	<div ng-show="ctrl.tab.resultStatus === 'noResult'" class="visualization-result">
+	<div ng-show="ctrl.tab.resultStatus === 'noResult' && !ctrl.tab.easter" class="visualization-result">
 		Unfortunately we couldn't calculate any result.<br>
-		<span>This can be due to many things: missing resource required for the production line, not enough resources for the requested amount, disabled recipes required for the product, etc.</span>
+		<span>This can be due to many things: missing resource required for the production line, not enough resources for the requested amount, disabled recipes required for the product, etc.</span><br>
 	</div>
-	<div ng-show="ctrl.tab.resultStatus === 'calculating'" class="visualization-result">
-		<span class="fas fa-spin fa-sync-alt"></span>
-		Calculating ...
+	<div ng-show="ctrl.tab.resultStatus === 'noResult' && ctrl.tab.easter" class="visualization-result">
+		<b title="Click the blue share button to get the share link.">Sharing is caring!</b>
 	</div>
 	<div ng-show="ctrl.tab.resultStatus === 'noInput'" class="visualization-result">
 		Select an item to calculate.
 	</div>
-	<div ng-show="ctrl.tab.resultStatus === 'result'">
+	<div class="visualization-result-container" ng-show="ctrl.tab.resultStatus === 'result' || (ctrl.tab.resultStatus === 'calculating' && ctrl.tab.resultNew)" ng-class="{calculating: ctrl.tab.resultStatus === 'calculating'}">
+		<div class="calculating-alert">
+			<span class="fas fa-spin fa-sync-alt"></span>
+			Calculating ...
+		</div>
 		<ul class="nav nav-pills nav-justified result-nav">
 			<li class="nav-item">
+				<a class="nav-link" ng-class="{active: ctrl.tab.resultTab === 'overview'}" ng-click="ctrl.tab.resultTab = 'overview'">
+					<span class="fas fa-info-circle mr-1"></span> Overview
+				</a>
+			</li>
+			<li class="nav-item">
 				<a class="nav-link" ng-class="{active: ctrl.tab.resultTab === 'visualization'}" ng-click="ctrl.tab.resultTab = 'visualization'">
-					<span class="fas fa-project-diagram"></span> Visualization
+					<span class="fas fa-project-diagram mr-1"></span> Visualization
 				</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link" ng-class="{active: ctrl.tab.resultTab === 'power'}" ng-click="ctrl.tab.resultTab = 'power'">
-					<span class="fas fa-bolt"></span> Power
+					<span class="fas fa-bolt mr-1"></span> Power
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" ng-class="{active: ctrl.tab.resultTab === 'items'}" ng-click="ctrl.tab.resultTab = 'items'">
+					<span class="fas fa-pallet mr-1"></span> Items
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" ng-class="{active: ctrl.tab.resultTab === 'buildings'}" ng-click="ctrl.tab.resultTab = 'buildings'">
+					<span class="fas fa-industry mr-1"></span> Buildings
 				</a>
 			</li>
 		</ul>
-		<div ng-show="ctrl.tab.resultTab === 'visualization'">
-			<div class="border-left border-right border-secondary p-2">
-				You can move the nodes around by using drag'n'drop. Doubleclick a node to hide/show it (useful if you want e.g. to mark it as finished).
+		<div ng-show="ctrl.tab.resultTab === 'overview'" class="visualization-result">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="card mb-3" ng-if="ctrl.tab.resultNew.details.hasInput">
+						<h4 class="d-flex card-header cursor-pointer" ng-click="ctrl.tab.state.overviewCollapsed['input'] = !ctrl.tab.state.overviewCollapsed['input']">
+							<span class="fas fa-box-open mr-1"></span>
+							<span class="flex-grow-1 text-left">Input</span>
+							<span ng-class="{'fas': true, 'fa-chevron-down': ctrl.tab.state.overviewCollapsed['input'], 'fa-chevron-up': !ctrl.tab.state.overviewCollapsed['input']}"></span>
+						</h4>
+
+						<div class="card-body" ng-if="!ctrl.tab.state.overviewCollapsed['input']">
+							<table class="table table-sm table-hover">
+								<thead>
+									<tr>
+										<th>Used</th>
+										<th>Input</th>
+										<th>Limit</th>
+										<th tooltip title="Shows if the input wasn't enough and the item had to be produced as well.">Extra</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr ng-repeat="(item, inputData) in ctrl.tab.resultNew.details.input">
+										<td class="table-cell-adjust-size text-right pr-2">
+											{{inputData.used|number}}
+										</td>
+										<td class="table-cell-adjust-size text-left pr-2">
+											<item-icon item="item" size="24"></item-icon>
+											{{ctrl.getItem(item).name}}
+										</td>
+										<td class="table-cell-adjust-size text-left text-muted">
+											{{inputData.usedPercentage|number}}% of input ({{inputData.max|number}})
+										</td>
+										<td class="text-left">
+											<span ng-if="inputData.producedExtra">{{inputData.producedExtra|number}} / min</span>
+											<span ng-if="!inputData.producedExtra">-</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+					<div class="card mb-3">
+						<h4 class="d-flex card-header cursor-pointer" ng-click="ctrl.tab.state.overviewCollapsed['resources'] = !ctrl.tab.state.overviewCollapsed['resources']">
+							<span class="fas fa-gem mr-2"></span>
+							<span class="flex-grow-1 text-left">Resources</span>
+							<span ng-class="{'fas': true, 'fa-chevron-down': ctrl.tab.state.overviewCollapsed['resources'], 'fa-chevron-up': !ctrl.tab.state.overviewCollapsed['resources']}"></span>
+						</h4>
+
+						<div class="card-body" ng-if="!ctrl.tab.state.overviewCollapsed['resources']">
+							<table class="table table-sm table-hover">
+								<thead>
+									<tr>
+										<th>Used</th>
+										<th>Resource</th>
+										<th class="text-left">Limit</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr ng-repeat="(resource, data) in ctrl.tab.resultNew.details.rawResources" ng-class="{'text-muted': !data.enabled}">
+										<td class="table-cell-adjust-size text-right pr-2">
+											{{data.used|number}}
+										</td>
+										<td class="text-left table-cell-adjust-size pr-2">
+											<item-icon item="resource" size="24" tooltip="1"></item-icon>
+											{{ctrl.getItem(resource).name}}
+										</td>
+										<td class="text-left text-muted">
+											<span ng-if="data.enabled">{{data.usedPercentage|number}}% of limit ({{data.max}})</span>
+											<span ng-if="!data.enabled">Resource disabled</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="card mb-3">
+						<h4 class="d-flex card-header cursor-pointer" ng-click="ctrl.tab.state.overviewCollapsed['production'] = !ctrl.tab.state.overviewCollapsed['production']">
+							<span class="fas fa-chart-line mr-2"></span>
+							<span class="flex-grow-1 text-left">Production</span>
+							<span ng-class="{'fas': true, 'fa-chevron-down': ctrl.tab.state.overviewCollapsed['production'], 'fa-chevron-up': !ctrl.tab.state.overviewCollapsed['production']}"></span>
+						</h4>
+
+						<div class="card-body" ng-if="!ctrl.tab.state.overviewCollapsed['production']">
+							<table class="table table-sm table-hover">
+								<thead>
+									<tr>
+										<th>Produced</th>
+										<th>Item</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr ng-repeat="(item, amount) in ctrl.tab.resultNew.details.output">
+										<td class="table-cell-adjust-size text-right pr-2">
+											{{amount|number}}
+										</td>
+										<td class="text-left">
+											<item-icon item="item" size="24"></item-icon>
+											{{ctrl.getItem(item).name}}
+										</td>
+									</tr>
+									<tr ng-repeat="(item, amount) in ctrl.tab.resultNew.details.byproducts">
+										<td class="table-cell-adjust-size text-right pr-2 text-muted">
+											{{amount|number}}
+										</td>
+										<td class="text-left text-muted">
+											<item-icon item="item" size="24"></item-icon>
+											{{ctrl.getItem(item).name}}
+											(byproduct)
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+					<div class="card mb-3">
+						<h4 class="d-flex card-header cursor-pointer" ng-click="ctrl.tab.state.overviewCollapsed['buildings'] = !ctrl.tab.state.overviewCollapsed['buildings']">
+							<span class="fas fa-industry mr-2"></span>
+							<span class="flex-grow-1 text-left">Buildings</span>
+							<span ng-class="{'fas': true, 'fa-chevron-down': ctrl.tab.state.overviewCollapsed['buildings'], 'fa-chevron-up': !ctrl.tab.state.overviewCollapsed['buildings']}"></span>
+						</h4>
+
+						<div class="card-body" ng-if="!ctrl.tab.state.overviewCollapsed['buildings']">
+							<table class="table table-sm table-hover">
+								<thead>
+									<tr>
+										<th>Amount</th>
+										<th>Building</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr ng-repeat="(building, data) in ctrl.tab.resultNew.details.buildings.buildings">
+										<td class="table-cell-adjust-size text-right">
+											{{data.amount}}
+										</td>
+										<td class="text-left">
+											<item-icon item="building" size="24" tooltip="1"></item-icon>
+											{{ctrl.getBuilding(building).name}}
+										</td>
+									</tr>
+								</tbody>
+								<tfoot>
+									<tr>
+										<td colspan="2">
+											<b>Total: {{ctrl.tab.resultNew.details.buildings.amount}}</b>
+										</td>
+									</tr>
+								</tfoot>
+							</table>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="card mb-3">
+						<h4 class="d-flex card-header cursor-pointer" ng-click="ctrl.tab.state.overviewCollapsed['power'] = !ctrl.tab.state.overviewCollapsed['power']">
+							<span class="fas fa-bolt mr-2"></span>
+							<span class="flex-grow-1 text-left">Power</span>
+							<span ng-class="{'fas': true, 'fa-chevron-down': ctrl.tab.state.overviewCollapsed['power'], 'fa-chevron-up': !ctrl.tab.state.overviewCollapsed['power']}"></span>
+						</h4>
+
+						<div class="card-body" ng-if="!ctrl.tab.state.overviewCollapsed['power']">
+							<b>{{ctrl.tab.resultNew.details.power.total.average|number}} MW</b>
+							<span class="text-muted" ng-if="ctrl.tab.resultNew.details.power.total.isVariable">(up to {{ctrl.tab.resultNew.details.power.total.max|number}} MW)</span>
+						</div>
+					</div>
+
+					<div class="card mb-3">
+						<h4 class="d-flex card-header cursor-pointer" ng-click="ctrl.tab.state.overviewCollapsed['alternates'] = !ctrl.tab.state.overviewCollapsed['alternates']">
+							<span class="fas fa-sync-alt mr-2"></span>
+							<span class="flex-grow-1 text-left">Alternate recipes needed</span>
+							<span ng-class="{'fas': true, 'fa-chevron-down': ctrl.tab.state.overviewCollapsed['alternates'], 'fa-chevron-up': !ctrl.tab.state.overviewCollapsed['alternates']}"></span>
+						</h4>
+
+						<div class="card-body" ng-if="!ctrl.tab.state.overviewCollapsed['alternates']">
+							<table class="table table-sm table-hover">
+								<thead>
+									<tr>
+										<th></th>
+										<th>Recipe</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr ng-repeat="recipe in ctrl.tab.resultNew.details.alternatesNeeded" class="alt-recipe-row">
+										<td class="text-right table-cell-adjust-size">
+											<span ng-repeat="product in recipe.products" class="recipe-item">
+												<item-icon item="product.item" size="20" tooltip="1"></item-icon>
+											</span>
+										</td>
+										<td class="text-left">
+											{{ctrl.tab.convertAlternateRecipeName(recipe.name)}}
+										</td>
+									</tr>
+								</tbody>
+								<tfoot>
+									<tr>
+										<td colspan="2">
+											<b>Total: {{ctrl.tab.resultNew.details.alternatesNeeded.length}}</b>
+										</td>
+									</tr>
+								</tfoot>
+							</table>
+						</div>
+					</div>
+				</div>
 			</div>
-			<visualization result="ctrl.tab.resultNew" class="visualization" ng-class="{visualization: 1, loading: ctrl.tab.state.resultLoading}"></visualization>
 		</div>
 
-		<div ng-show="ctrl.tab.resultTab === 'power'" class="visualization-result">
-			<table class="table">
+		<div ng-show="ctrl.tab.resultTab === 'visualization'">
+			<div class="border-left border-right border-secondary p-2">
+				You can move the nodes around using drag'n'drop.
+			</div>
+			<visualization result="ctrl.tab.resultNew" ng-class="{visualization: 1, loading: ctrl.tab.state.resultLoading}"></visualization>
+		</div>
+
+		<div ng-show="ctrl.tab.resultTab === 'items'" class="visualization-result">
+			<table class="table table-hover">
 				<thead>
 					<tr>
-						<th>Machine</th>
-						<th>Average usage</th>
-						<th>Max usage</th>
+						<th class="table-cell-micro"></th>
+						<th class="text-right">
+							Item
+						</th>
+						<th class="text-right">
+							Production
+						</th>
+						<th></th>
 					</tr>
 				</thead>
 				<tbody>
-					<tr ng-repeat="(machine, powerDetail) in ctrl.tab.result.powerDetails">
+					<tr ng-repeat="(item, data) in ctrl.tab.resultNew.details.items" ng-click="ctrl.tab.state.itemsExpanded[item] = !ctrl.tab.state.itemsExpanded[item]" class="cursor-pointer">
 						<td>
-							<item-icon item="machine" size="24" tooltip="1"></item-icon>
-							{{powerDetail.amount|number}}x {{powerDetail.name}}
+							<span ng-if="!ctrl.tab.state.itemsExpanded[item]" class="fas fa-chevron-right"></span>
+							<span ng-if="ctrl.tab.state.itemsExpanded[item]" class="fas fa-chevron-down"></span>
 						</td>
-						<td>
-							{{powerDetail.average|number}} MW
+						<td class="text-right table-cell-adjust-size">
+							<item-icon item="item" size="24"></item-icon>
+							{{ctrl.getItem(item).name}}
 						</td>
+						<td class="text-right table-cell-adjust-size">
+							{{data.produced|number}} / min
+						</td>
+						<td class="text-left">
+							<small class="text-muted">
+								<span tooltip title="Total production" class="mx-3">
+									<span class="fas fa-plus mr-1"></span>
+									{{data.produced|number}} / min
+								</span>
+								<span tooltip title="Total consumption" class="mx-3">
+									<span class="fas fa-minus mr-1"></span>
+									{{data.consumed|number}} / min
+								</span>
+								<span tooltip title="Net amount" class="mx-3">
+									<span class="fas fa-chart-line mr-1"></span>
+									{{data.diff|number}} / min
+								</span>
+							</small>
+
+							<table ng-if="ctrl.tab.state.itemsExpanded[item]" class="table table-hover mt-3">
+								<tbody>
+									<tr ng-repeat="(producer, producerData) in data.producers" ng-class="{'table-row-separator-above': $first, 'table-row-separator': $last}">
+										<td class="table-cell-micro text-right" ng-if="producerData.type === 'recipe'">
+											<span class="fas fa-plus" tooltip title="Production"></span>
+										</td>
+										<td class="table-cell-micro text-right" ng-if="producerData.type === 'miner'">
+											<span class="fas fa-external-link-alt" tooltip title="Extracting/mining"></span>
+										</td>
+										<td class="table-cell-micro text-right" ng-if="producerData.type === 'input'">
+											<span class="fas fa-sign-in-alt" tooltip title="Input"></span>
+										</td>
+										<td class="table-cell-adjust-size text-right">
+											{{producerData.itemAmount|number}} / min
+										</td>
+										<td class="table-cell-adjust-size text-right text-muted">
+											<span ng-if="producerData.type !== 'input'">({{producerData.itemPercentage|number}}% of production)</span>
+										</td>
+										<td class="table-cell-adjust-size text-right pl-2">
+											<span ng-if="producerData.type === 'recipe'" ng-repeat="product in ctrl.getRecipe(producer).products">
+												<item-icon item="product.item" size="24"></item-icon>
+											</span>
+										</td>
+										<td class="table-cell-adjust-size text-left" ng-if="producerData.type === 'recipe'">
+											{{ctrl.getRecipe(producer).name}}
+										</td>
+										<td class="table-cell-adjust-size text-left" ng-if="producerData.type === 'miner'">
+											<b>Raw resource</b>
+										</td>
+										<td class="table-cell-adjust-size text-left" ng-if="producerData.type === 'input'">
+											<b>Input</b>
+										</td>
+										<td></td>
+									</tr>
+									<tr ng-repeat="(consumer, consumerData) in data.consumers" ng-class="{'table-row-separator-double': $last}">
+										<td class="table-cell-micro text-right">
+											<span class="fas fa-minus" tooltip title="Consumption"></span>
+										</td>
+										<td class="table-cell-adjust-size text-right">
+											{{consumerData.itemAmount|number}} / min
+										</td>
+										<td class="table-cell-adjust-size text-right text-muted">
+											({{consumerData.itemPercentage|number}}% of consumption)
+										</td>
+										<td class="table-cell-adjust-size text-right">
+											<span ng-repeat="product in ctrl.getRecipe(consumer).products">
+												<item-icon item="product.item" size="24"></item-icon>
+											</span>
+										</td>
+										<td class="table-cell-adjust-size text-left">
+											{{ctrl.getRecipe(consumer).name}}
+										</td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div ng-show="ctrl.tab.resultTab === 'buildings'" class="visualization-result">
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th class="table-cell-micro"></th>
+						<th class="text-right">
+							Building
+						</th>
+						<th class="text-left">
+							Building cost
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="(building, data) in ctrl.tab.resultNew.details.buildings.buildings" class="cursor-pointer" ng-click="ctrl.tab.state.buildingsExpanded[building] = !ctrl.tab.state.buildingsExpanded[building]">
 						<td>
-							{{powerDetail.max|number}} MW
+							<span ng-if="!ctrl.tab.state.buildingsExpanded[building]" class="fas fa-chevron-right"></span>
+							<span ng-if="ctrl.tab.state.buildingsExpanded[building]" class="fas fa-chevron-down"></span>
+						</td>
+						<td class="text-right table-cell-adjust-size">
+							<span class="mr-1">{{data.amount}}x</span>
+							<item-icon item="building" size="24"></item-icon>
+							{{ctrl.getBuilding(building).name}}
+						</td>
+						<td class="text-left">
+							<span ng-repeat="(item, amount) in data.resources" class="mx-2">
+								<span class="mr-1">{{amount}}x</span>
+								<item-icon item="item" size="24" tooltip="1"></item-icon>
+							</span>
+
+							<table class="table table-hover mt-2" ng-if="ctrl.tab.state.buildingsExpanded[building]">
+								<tbody>
+									<tr ng-repeat="(recipe, recipeData) in data.recipes">
+										<td class="text-right table-cell-adjust-size">
+											<span class="mr-1">{{recipeData.amount}}x</span> <item-icon item="building" size="24"></item-icon>
+										</td>
+										<td class="text-right table-cell-adjust-size">
+											<span ng-repeat="product in ctrl.getRecipe(recipe).products">
+												<item-icon item="product.item" size="24"></item-icon>
+											</span>
+										</td>
+										<td class="text-left table-cell-adjust-size">
+											{{ctrl.getRecipe(recipe).name}}
+										</td>
+										<td class="text-right table-cell-adjust-size" ng-repeat="(item, amount) in recipeData.resources">
+											<span class="mr-1">{{amount}}x</span>
+											<item-icon item="item" size="24" tooltip="1"></item-icon>
+										</td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
 						</td>
 					</tr>
 				</tbody>
 				<tfoot>
+					<tr class="table-secondary">
+						<td></td>
+						<td class="text-right">
+							<b>Total cost:</b>
+						</td>
+						<td class="text-left">
+							<span ng-repeat="(item, amount) in ctrl.tab.resultNew.details.buildings.resources" class="mx-2">
+								<span class="mr-1">{{amount}}x</span>&nbsp;<item-icon item="item" size="24" tooltip="1"></item-icon>
+							</span>
+						</td>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
+
+		<div ng-show="ctrl.tab.resultTab === 'power'" class="visualization-result">
+			<table class="table table-hover">
+				<thead>
 					<tr>
+						<th class="table-cell-micro"></th>
+						<th>Machine</th>
+						<th class="table-cell-adjust-size">Power usage</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="(machine, data) in ctrl.tab.resultNew.details.power.byBuilding"  class="cursor-pointer" ng-click="ctrl.tab.state.powerExpanded[machine] = !ctrl.tab.state.powerExpanded[machine]">
 						<td>
-							<b>Total</b>
+							<span ng-if="!ctrl.tab.state.powerExpanded[machine]" class="fas fa-chevron-right"></span>
+							<span ng-if="ctrl.tab.state.powerExpanded[machine]" class="fas fa-chevron-down"></span>
 						</td>
-						<td>
-							<b>{{ctrl.tab.result.powerUsage.average|number}} MW</b>
+						<td class="text-right table-cell-adjust-size">
+							<span class="mr-1">{{data.amount}}x</span>
+							<item-icon item="machine" size="24"></item-icon>
+							{{ctrl.getBuilding(machine).name}}
 						</td>
-						<td>
-							<b>{{ctrl.tab.result.powerUsage.max|number}} MW</b>
+						<td class="text-right table-cell-adjust-size">
+							{{data.power.average|number}} MW
+						</td>
+						<td class="text-left">
+							<span class="text-muted">
+								<span ng-if="data.power.isVariable">
+									(up to {{data.power.max|number}} MW)
+								</span>&nbsp;
+							</span>
+							<table class="table table-hover mt-2" ng-show="ctrl.tab.state.powerExpanded[machine]">
+								<tbody>
+									<tr ng-repeat="(recipe, recipeData) in data.recipes">
+										<td class="text-right table-cell-adjust-size">
+											<span class="mr-1">{{recipeData.amount|number}}x</span> <item-icon item="machine" size="24"></item-icon>
+										</td>
+										<td class="text-right table-cell-adjust-size">
+											{{recipeData.power.average|number}} MW
+										</td>
+										<td class="text-left table-cell-adjust-size">
+											<span class="text-muted" ng-if="recipeData.power.isVariable">(up to {{recipeData.power.max|number}} MW)</span>
+										</td>
+										<td class="text-right table-cell-adjust-size">
+											<span ng-repeat="product in ctrl.getRecipe(recipe).products">
+												<item-icon item="product.item" size="24"></item-icon>
+											</span>
+										</td>
+										<td class="text-left table-cell-adjust-size">
+											{{ctrl.getRecipe(recipe).name}}
+										</td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+				</tbody>
+				<tfoot class="table-secondary">
+					<tr>
+						<td></td>
+						<td class="text-left table-cell-adjust-size">
+							<b>Total:</b>
+						</td>
+						<td class="text-right table-cell-adjust-size">
+							<b>{{ctrl.tab.resultNew.details.power.total.average|number}} MW</b>
+						</td>
+						<td class="text-left">
+							<span class="text-muted" ng-if="ctrl.tab.resultNew.details.power.total.isVariable">(up to {{ctrl.tab.resultNew.details.power.total.max|number}} MW)</span>
 						</td>
 					</tr>
 				</tfoot>

@@ -16,5 +16,24 @@ export interface IRecipeSchema
 	ingredients: IItemAmountSchema[];
 	products: IItemAmountSchema[];
 	producedIn: string[];
+	isVariablePower: boolean;
 
 }
+
+export interface IRecipeVariablePowerSchema extends IRecipeSchema
+{
+
+	isVariablePower: true;
+	minPower: number;
+	maxPower: number;
+
+}
+
+export interface IRecipeFixedPowerSchema extends IRecipeSchema
+{
+
+	isVariablePower: false;
+
+}
+
+export type IAnyRecipeSchema = IRecipeVariablePowerSchema | IRecipeFixedPowerSchema;

@@ -4,12 +4,15 @@ import {IVisNode} from '@src/Tools/Production/Result/IVisNode';
 import {IJsonSchema} from '@src/Schema/IJsonSchema';
 import {ResourceAmount} from '@src/Tools/Production/Result/ResourceAmount';
 import {Strings} from '@src/Utils/Strings';
+import {MachineGroup} from '@src/Tools/Production/Result/MachineGroup';
+import {Numbers} from '@src/Utils/Numbers';
 
 export class RecipeNode extends GraphNode
 {
 
 	public ingredients: ResourceAmount[] = [];
 	public products: ResourceAmount[] = [];
+	public machineData: MachineGroup;
 
 	public constructor(public readonly recipeData: RecipeData, data: IJsonSchema)
 	{
@@ -21,26 +24,7 @@ export class RecipeNode extends GraphNode
 		for (const product of recipeData.recipe.products) {
 			this.products.push(new ResourceAmount(data.items[product.item], product.amount * multiplier, product.amount * multiplier));
 		}
-	}
-
-	public getVisNode(): IVisNode
-	{
-		return {
-			id: this.id,
-			label: this.getLabel(),
-			title: this.getTitle() as unknown as string,
-			color: {
-				border: 'rgba(0, 0, 0, 0)',
-				background: 'rgba(223, 105, 26, 1)',
-				highlight: {
-					border: 'rgba(238, 238, 238, 1)',
-					background: 'rgba(231, 122, 49, 1)',
-				},
-			},
-			font: {
-				color: 'rgba(238, 238, 238, 1)',
-			},
-		};
+		this.machineData = new MachineGroup(this.recipeData);
 	}
 
 	public getInputs(): ResourceAmount[]
@@ -53,27 +37,20 @@ export class RecipeNode extends GraphNode
 		return this.products;
 	}
 
-	private getLabel(): string
+	public getTitle(): string
 	{
 		return this.formatText(this.recipeData.recipe.name) + '\n' + Strings.formatNumber(this.recipeData.amount) + 'x ' + this.recipeData.machine.name;
 	}
 
-	private getTitle(): HTMLElement
+	public getTooltip(): string|null
 	{
 		const title: string[] = [];
-		let amount = this.recipeData.amount * 1e2;
-
-		if (amount >= this.recipeData.clockSpeed) {
-			title.push(Math.floor(amount / this.recipeData.clockSpeed) + 'x ' + this.recipeData.machine.name + ' at <b>' + this.recipeData.clockSpeed + '%</b> clock speed');
-			amount %= this.recipeData.clockSpeed;
+		for (const machine of this.machineData.machines) {
+			title.push(machine.amount + 'x ' + this.recipeData.machine.name + ' at <b>' + machine.clockSpeed + '%</b> clock speed');
 		}
 
-		if (amount >= 1e-9) {
-			amount = Math.ceil(amount * 1e4) / 1e4; // TODO this sometimes adds +0.0001%
-
-			title.push('1x ' + this.recipeData.machine.name + ' at <b>' + Strings.formatNumber(Math.max(1, amount), 4) + '%</b> clock speed');
-		}
-
+		title.push('');
+		title.push('Needed power: ' + Numbers.round(this.machineData.power.average) + ' MW');
 		title.push('');
 
 		for (const ingredient of this.ingredients) {
@@ -83,9 +60,29 @@ export class RecipeNode extends GraphNode
 			title.push('<b>OUT:</b> ' + Strings.formatNumber(product.maxAmount) + ' / min - ' + product.resource.name);
 		}
 
-		const container = document.createElement('div');
-		container.innerHTML = title.join('<br>');
-		return container;
+		return title.join('<br>');
+	}
+
+	public getVisNode(): IVisNode
+	{
+		const el = document.createElement('div');
+		el.innerHTML = this.getTooltip() || '';
+		return {
+			id: this.id,
+			label: this.getTitle(),
+			title: el as unknown as string,
+			color: {
+				border: 'rgba(0, 0, 0, 0)',
+				background: 'rgba(223, 105, 26, 1)',
+				highlight: {
+					border: 'rgba(238, 238, 238, 1)',
+					background: 'rgba(231, 122, 49, 1)',
+				},
+			},
+			font: {
+				color: 'rgba(238, 238, 238, 1)',
+			},
+		};
 	}
 
 	private getMultiplier(): number

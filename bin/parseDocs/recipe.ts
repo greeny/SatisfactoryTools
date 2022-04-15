@@ -1,4 +1,4 @@
-import {IRecipeSchema} from '@src/Schema/IRecipeSchema';
+import {IAnyRecipeSchema} from '@src/Schema/IRecipeSchema';
 import {Strings} from '@src/Utils/Strings';
 import {Arrays} from '@src/Utils/Arrays';
 import parseItemAmount from '@bin/parseDocs/itemAmount';
@@ -12,7 +12,9 @@ export default function parseRecipes(recipes: {
 	mManufactoringDuration: string;
 	mManualManufacturingMultiplier: string;
 	mProducedIn: string;
-}[]): IRecipeSchema[]
+	mVariablePowerConsumptionConstant: string;
+	mVariablePowerConsumptionFactor: string;
+}[]): IAnyRecipeSchema[]
 {
 	const ignoredProducts = [
 		'Desc_Truck_C',
@@ -50,7 +52,7 @@ export default function parseRecipes(recipes: {
 		'Recipe_Stair_1b_C',
 	];
 
-	const result: IRecipeSchema[] = [];
+	const result: IAnyRecipeSchema[] = [];
 
 	recipeLoop:
 	for (const recipe of recipes) {
@@ -110,21 +112,46 @@ export default function parseRecipes(recipes: {
 			alternate = true;
 		}
 
-		result.push({
-			slug: Strings.webalize(recipe.mDisplayName),
-			name: recipe.mDisplayName,
-			className: recipe.ClassName,
-			alternate: alternate,
-			time: parseFloat(recipe.mManufactoringDuration),
-			manualTimeMultiplier: parseFloat(recipe.mManualManufacturingMultiplier),
-			ingredients: ingredients,
-			forBuilding: forBuilding,
-			inMachine: inMachine,
-			inHand: inHand,
-			inWorkshop: inWorkshop,
-			products: products,
-			producedIn: machines,
-		});
+		const constant = parseFloat(recipe.mVariablePowerConsumptionConstant);
+		const factor = parseFloat(recipe.mVariablePowerConsumptionFactor);
+
+		if (constant > 0) {
+			result.push({
+				slug: Strings.webalize(recipe.mDisplayName),
+				name: recipe.mDisplayName,
+				className: recipe.ClassName,
+				alternate: alternate,
+				time: parseFloat(recipe.mManufactoringDuration),
+				manualTimeMultiplier: parseFloat(recipe.mManualManufacturingMultiplier),
+				ingredients: ingredients,
+				forBuilding: forBuilding,
+				inMachine: inMachine,
+				inHand: inHand,
+				inWorkshop: inWorkshop,
+				products: products,
+				producedIn: machines,
+				isVariablePower: true,
+				minPower: constant,
+				maxPower: constant + factor,
+			});
+		} else {
+			result.push({
+				slug: Strings.webalize(recipe.mDisplayName),
+				name: recipe.mDisplayName,
+				className: recipe.ClassName,
+				alternate: alternate,
+				time: parseFloat(recipe.mManufactoringDuration),
+				manualTimeMultiplier: parseFloat(recipe.mManualManufacturingMultiplier),
+				ingredients: ingredients,
+				forBuilding: forBuilding,
+				inMachine: inMachine,
+				inHand: inHand,
+				inWorkshop: inWorkshop,
+				products: products,
+				producedIn: machines,
+				isVariablePower: false,
+			});
+		}
 	}
 	return result;
 }
