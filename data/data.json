@@ -32,6 +32,34 @@
 			],
 			"isVariablePower": false
 		},
+		"Recipe_AlienDNACapsule_C": {
+			"slug": "organic-data-capsule",
+			"name": "Organic Data Capsule",
+			"className": "Recipe_AlienDNACapsule_C",
+			"alternate": false,
+			"time": 6,
+			"manualTimeMultiplier": 1.333333,
+			"ingredients": [
+				{
+					"item": "Desc_AlienProtein_C",
+					"amount": 1
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_AlienDNACapsule_C",
+					"amount": 1
+				}
+			],
+			"producedIn": [
+				"Desc_ConstructorMk1_C"
+			],
+			"isVariablePower": false
+		},
 		"Recipe_Alternate_AdheredIronPlate_C": {
 			"slug": "alternate-adhered-iron-plate",
 			"name": "Alternate: Adhered Iron Plate",
@@ -1694,42 +1722,6 @@
 			],
 			"isVariablePower": false
 		},
-		"Recipe_Alternate_Nobelisk_1_C": {
-			"slug": "alternate-seismic-nobelisk",
-			"name": "Alternate: Seismic Nobelisk",
-			"className": "Recipe_Alternate_Nobelisk_1_C",
-			"alternate": true,
-			"time": 40,
-			"manualTimeMultiplier": 1,
-			"ingredients": [
-				{
-					"item": "Desc_Gunpowder_C",
-					"amount": 8
-				},
-				{
-					"item": "Desc_SteelPipe_C",
-					"amount": 8
-				},
-				{
-					"item": "Desc_CrystalOscillator_C",
-					"amount": 1
-				}
-			],
-			"forBuilding": false,
-			"inMachine": true,
-			"inHand": false,
-			"inWorkshop": false,
-			"products": [
-				{
-					"item": "Desc_NobeliskExplosive_C",
-					"amount": 4
-				}
-			],
-			"producedIn": [
-				"Desc_ManufacturerMk1_C"
-			],
-			"isVariablePower": false
-		},
 		"Recipe_Alternate_NuclearFuelRod_1_C": {
 			"slug": "alternate-uranium-fuel-unit",
 			"name": "Alternate: Uranium Fuel Unit",
@@ -1907,16 +1899,16 @@
 			"name": "Alternate: Polyester Fabric",
 			"className": "Recipe_Alternate_PolyesterFabric_C",
 			"alternate": true,
-			"time": 12,
+			"time": 2,
 			"manualTimeMultiplier": 1,
 			"ingredients": [
 				{
 					"item": "Desc_PolymerResin_C",
-					"amount": 16
+					"amount": 1
 				},
 				{
 					"item": "Desc_Water_C",
-					"amount": 10
+					"amount": 1
 				}
 			],
 			"forBuilding": false,
@@ -3390,16 +3382,16 @@
 			],
 			"isVariablePower": false
 		},
-		"Recipe_Biomass_AlienCarapace_C": {
-			"slug": "biomass-(alien-carapace)",
-			"name": "Biomass (Alien Carapace)",
-			"className": "Recipe_Biomass_AlienCarapace_C",
+		"Recipe_Biomass_AlienProtein_C": {
+			"slug": "biomass-(alien-protein)",
+			"name": "Biomass (Alien Protein)",
+			"className": "Recipe_Biomass_AlienProtein_C",
 			"alternate": false,
 			"time": 4,
 			"manualTimeMultiplier": 1,
 			"ingredients": [
 				{
-					"item": "Desc_HogParts_C",
+					"item": "Desc_AlienProtein_C",
 					"amount": 1
 				}
 			],
@@ -3411,34 +3403,6 @@
 				{
 					"item": "Desc_GenericBiomass_C",
 					"amount": 100
-				}
-			],
-			"producedIn": [
-				"Desc_ConstructorMk1_C"
-			],
-			"isVariablePower": false
-		},
-		"Recipe_Biomass_AlienOrgans_C": {
-			"slug": "biomass-(alien-organs)",
-			"name": "Biomass (Alien Organs)",
-			"className": "Recipe_Biomass_AlienOrgans_C",
-			"alternate": false,
-			"time": 8,
-			"manualTimeMultiplier": 1,
-			"ingredients": [
-				{
-					"item": "Desc_SpitterParts_C",
-					"amount": 1
-				}
-			],
-			"forBuilding": false,
-			"inMachine": true,
-			"inHand": true,
-			"inWorkshop": false,
-			"products": [
-				{
-					"item": "Desc_GenericBiomass_C",
-					"amount": 200
 				}
 			],
 			"producedIn": [
@@ -3484,7 +3448,7 @@
 			"ingredients": [
 				{
 					"item": "Desc_Mycelia_C",
-					"amount": 10
+					"amount": 1
 				}
 			],
 			"forBuilding": false,
@@ -3535,12 +3499,12 @@
 			"name": "Blade Runners",
 			"className": "Recipe_BladeRunners_C",
 			"alternate": false,
-			"time": 80,
+			"time": 60,
 			"manualTimeMultiplier": 1,
 			"ingredients": [
 				{
-					"item": "Desc_HighSpeedWire_C",
-					"amount": 50
+					"item": "Desc_Silica_C",
+					"amount": 20
 				},
 				{
 					"item": "Desc_ModularFrame_C",
@@ -3630,43 +3594,139 @@
 			],
 			"isVariablePower": false
 		},
-		"Recipe_Cartridge_C": {
-			"slug": "rifle-cartridge",
-			"name": "Rifle Cartridge",
-			"className": "Recipe_Cartridge_C",
+		"Recipe_CartridgeChaos_C": {
+			"slug": "turbo-rifle-ammo",
+			"name": "Turbo Rifle Ammo",
+			"className": "Recipe_CartridgeChaos_C",
 			"alternate": false,
-			"time": 20,
-			"manualTimeMultiplier": 1,
+			"time": 12,
+			"manualTimeMultiplier": 3.333333,
 			"ingredients": [
 				{
-					"item": "BP_EquipmentDescriptorBeacon_C",
-					"amount": 1
+					"item": "Desc_CartridgeStandard_C",
+					"amount": 25
 				},
 				{
-					"item": "Desc_SteelPipe_C",
-					"amount": 10
+					"item": "Desc_AluminumCasing_C",
+					"amount": 3
 				},
 				{
-					"item": "Desc_Gunpowder_C",
-					"amount": 10
-				},
-				{
-					"item": "Desc_Rubber_C",
-					"amount": 10
+					"item": "Desc_LiquidTurboFuel_C",
+					"amount": 3
 				}
 			],
 			"forBuilding": false,
 			"inMachine": true,
-			"inHand": true,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_CartridgeChaos_C",
+					"amount": 50
+				}
+			],
+			"producedIn": [
+				"Desc_Blender_C"
+			],
+			"isVariablePower": false
+		},
+		"Recipe_CartridgeChaos_Packaged_C": {
+			"slug": "turbo-rifle-ammo",
+			"name": "Turbo Rifle Ammo",
+			"className": "Recipe_CartridgeChaos_Packaged_C",
+			"alternate": false,
+			"time": 12,
+			"manualTimeMultiplier": 3.333333,
+			"ingredients": [
+				{
+					"item": "Desc_CartridgeStandard_C",
+					"amount": 25
+				},
+				{
+					"item": "Desc_AluminumCasing_C",
+					"amount": 3
+				},
+				{
+					"item": "Desc_TurboFuel_C",
+					"amount": 3
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
 			"inWorkshop": true,
 			"products": [
 				{
-					"item": "Desc_CartridgeStandard_C",
-					"amount": 5
+					"item": "Desc_CartridgeChaos_C",
+					"amount": 50
 				}
 			],
 			"producedIn": [
 				"Desc_ManufacturerMk1_C"
+			],
+			"isVariablePower": false
+		},
+		"Recipe_CartridgeSmart_C": {
+			"slug": "homing-rifle-ammo",
+			"name": "Homing Rifle Ammo",
+			"className": "Recipe_CartridgeSmart_C",
+			"alternate": false,
+			"time": 24,
+			"manualTimeMultiplier": 0.666667,
+			"ingredients": [
+				{
+					"item": "Desc_CartridgeStandard_C",
+					"amount": 20
+				},
+				{
+					"item": "Desc_HighSpeedConnector_C",
+					"amount": 1
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": true,
+			"products": [
+				{
+					"item": "Desc_CartridgeSmartProjectile_C",
+					"amount": 10
+				}
+			],
+			"producedIn": [
+				"Desc_AssemblerMk1_C"
+			],
+			"isVariablePower": false
+		},
+		"Recipe_Cartridge_C": {
+			"slug": "rifle-ammo",
+			"name": "Rifle Ammo",
+			"className": "Recipe_Cartridge_C",
+			"alternate": false,
+			"time": 12,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_CopperSheet_C",
+					"amount": 3
+				},
+				{
+					"item": "Desc_GunpowderMK2_C",
+					"amount": 2
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": true,
+			"products": [
+				{
+					"item": "Desc_CartridgeStandard_C",
+					"amount": 15
+				}
+			],
+			"producedIn": [
+				"Desc_AssemblerMk1_C"
 			],
 			"isVariablePower": false
 		},
@@ -3959,7 +4019,7 @@
 			"name": "Color Cartridge",
 			"className": "Recipe_ColorCartridge_C",
 			"alternate": false,
-			"time": 8,
+			"time": 6,
 			"manualTimeMultiplier": 1,
 			"ingredients": [
 				{
@@ -3970,7 +4030,7 @@
 			"forBuilding": false,
 			"inMachine": true,
 			"inHand": true,
-			"inWorkshop": true,
+			"inWorkshop": false,
 			"products": [
 				{
 					"item": "Desc_ColorCartridge_C",
@@ -5031,7 +5091,7 @@
 			],
 			"forBuilding": false,
 			"inMachine": true,
-			"inHand": true,
+			"inHand": false,
 			"inWorkshop": true,
 			"products": [
 				{
@@ -5067,7 +5127,7 @@
 			],
 			"forBuilding": false,
 			"inMachine": true,
-			"inHand": true,
+			"inHand": false,
 			"inWorkshop": true,
 			"products": [
 				{
@@ -5919,7 +5979,7 @@
 			"name": "Gas Mask",
 			"className": "Recipe_Gasmask_C",
 			"alternate": false,
-			"time": 80,
+			"time": 60,
 			"manualTimeMultiplier": 1,
 			"ingredients": [
 				{
@@ -6202,13 +6262,45 @@
 			"producedIn": [],
 			"isVariablePower": false
 		},
+		"Recipe_GunpowderMK2_C": {
+			"slug": "smokeless-powder",
+			"name": "Smokeless Powder",
+			"className": "Recipe_GunpowderMK2_C",
+			"alternate": false,
+			"time": 6,
+			"manualTimeMultiplier": 0.5,
+			"ingredients": [
+				{
+					"item": "Desc_Gunpowder_C",
+					"amount": 2
+				},
+				{
+					"item": "Desc_HeavyOilResidue_C",
+					"amount": 1
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_GunpowderMK2_C",
+					"amount": 2
+				}
+			],
+			"producedIn": [
+				"Desc_OilRefinery_C"
+			],
+			"isVariablePower": false
+		},
 		"Recipe_Gunpowder_C": {
 			"slug": "black-powder",
 			"name": "Black Powder",
 			"className": "Recipe_Gunpowder_C",
 			"alternate": false,
-			"time": 8,
-			"manualTimeMultiplier": 0.5,
+			"time": 4,
+			"manualTimeMultiplier": 2,
 			"ingredients": [
 				{
 					"item": "Desc_Coal_C",
@@ -6216,17 +6308,17 @@
 				},
 				{
 					"item": "Desc_Sulfur_C",
-					"amount": 2
+					"amount": 1
 				}
 			],
 			"forBuilding": false,
 			"inMachine": true,
-			"inHand": true,
+			"inHand": false,
 			"inWorkshop": true,
 			"products": [
 				{
 					"item": "Desc_Gunpowder_C",
-					"amount": 1
+					"amount": 2
 				}
 			],
 			"producedIn": [
@@ -8019,20 +8111,20 @@
 			"isVariablePower": false
 		},
 		"Recipe_MedicinalInhalerAlienOrgans_C": {
-			"slug": "medicinal-inhaler-alien-organs",
-			"name": "Medicinal Inhaler: Alien Organs",
+			"slug": "protein-inhaler",
+			"name": "Protein Inhaler",
 			"className": "Recipe_MedicinalInhalerAlienOrgans_C",
 			"alternate": false,
 			"time": 20,
 			"manualTimeMultiplier": 1,
 			"ingredients": [
 				{
-					"item": "Desc_SpitterParts_C",
-					"amount": 3
+					"item": "Desc_AlienProtein_C",
+					"amount": 1
 				},
 				{
-					"item": "Desc_Mycelia_C",
-					"amount": 5
+					"item": "Desc_Nut_C",
+					"amount": 10
 				}
 			],
 			"forBuilding": false,
@@ -8049,27 +8141,19 @@
 			"isVariablePower": false
 		},
 		"Recipe_MedicinalInhaler_C": {
-			"slug": "nutritional-inhaler",
-			"name": "Nutritional Inhaler",
+			"slug": "vitamin-inhaler",
+			"name": "Vitamin Inhaler",
 			"className": "Recipe_MedicinalInhaler_C",
 			"alternate": false,
 			"time": 20,
 			"manualTimeMultiplier": 1,
 			"ingredients": [
 				{
-					"item": "Desc_Shroom_C",
-					"amount": 1
+					"item": "Desc_Mycelia_C",
+					"amount": 10
 				},
 				{
 					"item": "Desc_Berry_C",
-					"amount": 2
-				},
-				{
-					"item": "Desc_Nut_C",
-					"amount": 3
-				},
-				{
-					"item": "Desc_Mycelia_C",
 					"amount": 5
 				}
 			],
@@ -8380,6 +8464,38 @@
 			],
 			"isVariablePower": false
 		},
+		"Recipe_NobeliskCluster_C": {
+			"slug": "cluster-nobelisk",
+			"name": "Cluster Nobelisk",
+			"className": "Recipe_NobeliskCluster_C",
+			"alternate": false,
+			"time": 24,
+			"manualTimeMultiplier": 0.666667,
+			"ingredients": [
+				{
+					"item": "Desc_NobeliskExplosive_C",
+					"amount": 3
+				},
+				{
+					"item": "Desc_GunpowderMK2_C",
+					"amount": 4
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": true,
+			"products": [
+				{
+					"item": "Desc_NobeliskCluster_C",
+					"amount": 1
+				}
+			],
+			"producedIn": [
+				"Desc_AssemblerMk1_C"
+			],
+			"isVariablePower": false
+		},
 		"Recipe_NobeliskDetonator_C": {
 			"slug": "nobelisk-detonator",
 			"name": "Nobelisk Detonator",
@@ -8390,11 +8506,11 @@
 			"ingredients": [
 				{
 					"item": "BP_EquipmentDescriptorObjectScanner_C",
-					"amount": 5
+					"amount": 1
 				},
 				{
-					"item": "Desc_SteelPlateReinforced_C",
-					"amount": 5
+					"item": "Desc_SteelPlate_C",
+					"amount": 10
 				},
 				{
 					"item": "Desc_Cable_C",
@@ -8414,21 +8530,125 @@
 			"producedIn": [],
 			"isVariablePower": false
 		},
+		"Recipe_NobeliskGas_C": {
+			"slug": "gas-nobelisk",
+			"name": "Gas Nobelisk",
+			"className": "Recipe_NobeliskGas_C",
+			"alternate": false,
+			"time": 12,
+			"manualTimeMultiplier": 0.666667,
+			"ingredients": [
+				{
+					"item": "Desc_NobeliskExplosive_C",
+					"amount": 1
+				},
+				{
+					"item": "Desc_GenericBiomass_C",
+					"amount": 10
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": true,
+			"products": [
+				{
+					"item": "Desc_NobeliskGas_C",
+					"amount": 1
+				}
+			],
+			"producedIn": [
+				"Desc_AssemblerMk1_C"
+			],
+			"isVariablePower": false
+		},
+		"Recipe_NobeliskNuke_C": {
+			"slug": "nuke-nobelisk",
+			"name": "Nuke Nobelisk",
+			"className": "Recipe_NobeliskNuke_C",
+			"alternate": false,
+			"time": 120,
+			"manualTimeMultiplier": 0.5,
+			"ingredients": [
+				{
+					"item": "Desc_NobeliskExplosive_C",
+					"amount": 5
+				},
+				{
+					"item": "Desc_UraniumCell_C",
+					"amount": 20
+				},
+				{
+					"item": "Desc_GunpowderMK2_C",
+					"amount": 10
+				},
+				{
+					"item": "Desc_CircuitBoardHighSpeed_C",
+					"amount": 6
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": true,
+			"products": [
+				{
+					"item": "Desc_NobeliskNuke_C",
+					"amount": 1
+				}
+			],
+			"producedIn": [
+				"Desc_ManufacturerMk1_C"
+			],
+			"isVariablePower": false
+		},
+		"Recipe_NobeliskShockwave_C": {
+			"slug": "pulse-nobelisk",
+			"name": "Pulse Nobelisk",
+			"className": "Recipe_NobeliskShockwave_C",
+			"alternate": false,
+			"time": 60,
+			"manualTimeMultiplier": 0.666666,
+			"ingredients": [
+				{
+					"item": "Desc_NobeliskExplosive_C",
+					"amount": 5
+				},
+				{
+					"item": "Desc_CrystalOscillator_C",
+					"amount": 1
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": true,
+			"products": [
+				{
+					"item": "Desc_NobeliskShockwave_C",
+					"amount": 5
+				}
+			],
+			"producedIn": [
+				"Desc_AssemblerMk1_C"
+			],
+			"isVariablePower": false
+		},
 		"Recipe_Nobelisk_C": {
 			"slug": "nobelisk",
 			"name": "Nobelisk",
 			"className": "Recipe_Nobelisk_C",
 			"alternate": false,
-			"time": 20,
-			"manualTimeMultiplier": 1,
+			"time": 6,
+			"manualTimeMultiplier": 1.333333,
 			"ingredients": [
 				{
 					"item": "Desc_Gunpowder_C",
-					"amount": 5
+					"amount": 2
 				},
 				{
 					"item": "Desc_SteelPipe_C",
-					"amount": 10
+					"amount": 2
 				}
 			],
 			"forBuilding": false,
@@ -8527,8 +8747,8 @@
 			"isVariablePower": false
 		},
 		"Recipe_NutritionalInhaler_C": {
-			"slug": "medicinal-inhaler",
-			"name": "Medicinal Inhaler",
+			"slug": "nutritional-inhaler",
+			"name": "Nutritional Inhaler",
 			"className": "Recipe_NutritionalInhaler_C",
 			"alternate": false,
 			"time": 20,
@@ -8540,11 +8760,11 @@
 				},
 				{
 					"item": "Desc_Berry_C",
-					"amount": 3
+					"amount": 2
 				},
 				{
 					"item": "Desc_Nut_C",
-					"amount": 7
+					"amount": 5
 				}
 			],
 			"forBuilding": false,
@@ -8573,8 +8793,8 @@
 					"amount": 4
 				},
 				{
-					"item": "BP_EquipmentDescriptorBeacon_C",
-					"amount": 3
+					"item": "Desc_Wire_C",
+					"amount": 20
 				},
 				{
 					"item": "Desc_IronScrew_C",
@@ -8993,7 +9213,7 @@
 			"name": "Parachute",
 			"className": "Recipe_Parachute_C",
 			"alternate": false,
-			"time": 40,
+			"time": 20,
 			"manualTimeMultiplier": 1,
 			"ingredients": [
 				{
@@ -10324,6 +10544,118 @@
 			],
 			"isVariablePower": false
 		},
+		"Recipe_Protein_Crab_C": {
+			"slug": "hatcher-protein",
+			"name": "Hatcher Protein",
+			"className": "Recipe_Protein_Crab_C",
+			"alternate": false,
+			"time": 3,
+			"manualTimeMultiplier": 1.333333,
+			"ingredients": [
+				{
+					"item": "Desc_HogParts_C",
+					"amount": 1
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_AlienProtein_C",
+					"amount": 1
+				}
+			],
+			"producedIn": [
+				"Desc_ConstructorMk1_C"
+			],
+			"isVariablePower": false
+		},
+		"Recipe_Protein_Hog_C": {
+			"slug": "hog-protein",
+			"name": "Hog Protein",
+			"className": "Recipe_Protein_Hog_C",
+			"alternate": false,
+			"time": 3,
+			"manualTimeMultiplier": 1.333333,
+			"ingredients": [
+				{
+					"item": "Desc_HogParts_C",
+					"amount": 1
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_AlienProtein_C",
+					"amount": 1
+				}
+			],
+			"producedIn": [
+				"Desc_ConstructorMk1_C"
+			],
+			"isVariablePower": false
+		},
+		"Recipe_Protein_Spitter_C": {
+			"slug": "spitter-protein",
+			"name": "Spitter Protein",
+			"className": "Recipe_Protein_Spitter_C",
+			"alternate": false,
+			"time": 3,
+			"manualTimeMultiplier": 1.333333,
+			"ingredients": [
+				{
+					"item": "Desc_SpitterParts_C",
+					"amount": 1
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_AlienProtein_C",
+					"amount": 1
+				}
+			],
+			"producedIn": [
+				"Desc_ConstructorMk1_C"
+			],
+			"isVariablePower": false
+		},
+		"Recipe_Protein_Stinger_C": {
+			"slug": "stinger-protein",
+			"name": "Stinger Protein",
+			"className": "Recipe_Protein_Stinger_C",
+			"alternate": false,
+			"time": 3,
+			"manualTimeMultiplier": 1.333333,
+			"ingredients": [
+				{
+					"item": "Desc_StingerParts_C",
+					"amount": 1
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": true,
+			"inWorkshop": false,
+			"products": [
+				{
+					"item": "Desc_AlienProtein_C",
+					"amount": 1
+				}
+			],
+			"producedIn": [
+				"Desc_ConstructorMk1_C"
+			],
+			"isVariablePower": false
+		},
 		"Recipe_PureAluminumIngot_C": {
 			"slug": "alternate-pure-aluminum-ingot",
 			"name": "Alternate: Pure Aluminum Ingot",
@@ -10605,8 +10937,8 @@
 					"amount": 30
 				},
 				{
-					"item": "BP_EquipmentDescriptorBeacon_C",
-					"amount": 20
+					"item": "Desc_CircuitBoard_C",
+					"amount": 10
 				},
 				{
 					"item": "Desc_Cable_C",
@@ -12637,7 +12969,7 @@
 			"name": "Rebar Gun",
 			"className": "Recipe_RebarGun_C",
 			"alternate": false,
-			"time": 100,
+			"time": 60,
 			"manualTimeMultiplier": 1,
 			"ingredients": [
 				{
@@ -12664,6 +12996,106 @@
 				}
 			],
 			"producedIn": [],
+			"isVariablePower": false
+		},
+		"Recipe_Rebar_Explosive_C": {
+			"slug": "explosive-rebar",
+			"name": "Explosive Rebar",
+			"className": "Recipe_Rebar_Explosive_C",
+			"alternate": false,
+			"time": 12,
+			"manualTimeMultiplier": 1.333333,
+			"ingredients": [
+				{
+					"item": "Desc_SpikedRebar_C",
+					"amount": 2
+				},
+				{
+					"item": "Desc_GunpowderMK2_C",
+					"amount": 2
+				},
+				{
+					"item": "Desc_SteelPipe_C",
+					"amount": 2
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": true,
+			"products": [
+				{
+					"item": "Desc_Rebar_Explosive_C",
+					"amount": 1
+				}
+			],
+			"producedIn": [
+				"Desc_ManufacturerMk1_C"
+			],
+			"isVariablePower": false
+		},
+		"Recipe_Rebar_Spreadshot_C": {
+			"slug": "shatter-rebar",
+			"name": "Shatter Rebar",
+			"className": "Recipe_Rebar_Spreadshot_C",
+			"alternate": false,
+			"time": 12,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_SpikedRebar_C",
+					"amount": 2
+				},
+				{
+					"item": "Desc_QuartzCrystal_C",
+					"amount": 3
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": true,
+			"products": [
+				{
+					"item": "Desc_Rebar_Spreadshot_C",
+					"amount": 1
+				}
+			],
+			"producedIn": [
+				"Desc_AssemblerMk1_C"
+			],
+			"isVariablePower": false
+		},
+		"Recipe_Rebar_Stunshot_C": {
+			"slug": "stun-rebar",
+			"name": "Stun Rebar",
+			"className": "Recipe_Rebar_Stunshot_C",
+			"alternate": false,
+			"time": 6,
+			"manualTimeMultiplier": 1.333333,
+			"ingredients": [
+				{
+					"item": "Desc_SpikedRebar_C",
+					"amount": 1
+				},
+				{
+					"item": "Desc_HighSpeedWire_C",
+					"amount": 5
+				}
+			],
+			"forBuilding": false,
+			"inMachine": true,
+			"inHand": false,
+			"inWorkshop": true,
+			"products": [
+				{
+					"item": "Desc_Rebar_Stunshot_C",
+					"amount": 1
+				}
+			],
+			"producedIn": [
+				"Desc_AssemblerMk1_C"
+			],
 			"isVariablePower": false
 		},
 		"Recipe_ResidualFuel_C": {
@@ -13787,16 +14219,16 @@
 			"manualTimeMultiplier": 1,
 			"ingredients": [
 				{
+					"item": "Desc_Motor_C",
+					"amount": 2
+				},
+				{
+					"item": "Desc_Rubber_C",
+					"amount": 10
+				},
+				{
 					"item": "Desc_SteelPipe_C",
 					"amount": 25
-				},
-				{
-					"item": "Desc_ModularFrameHeavy_C",
-					"amount": 3
-				},
-				{
-					"item": "Desc_CircuitBoard_C",
-					"amount": 20
 				},
 				{
 					"item": "Desc_IronScrew_C",
@@ -13817,8 +14249,8 @@
 			"isVariablePower": false
 		},
 		"Recipe_SpikedRebar_C": {
-			"slug": "spiked-rebar",
-			"name": "Spiked Rebar",
+			"slug": "iron-rebar",
+			"name": "Iron Rebar",
 			"className": "Recipe_SpikedRebar_C",
 			"alternate": false,
 			"time": 4,
@@ -13831,7 +14263,7 @@
 			],
 			"forBuilding": false,
 			"inMachine": true,
-			"inHand": true,
+			"inHand": false,
 			"inWorkshop": true,
 			"products": [
 				{
@@ -14878,6 +15310,40 @@
 			"producedIn": [
 				"Desc_OilRefinery_C"
 			],
+			"isVariablePower": false
+		},
+		"Recipe_TherapeuticInhaler_C": {
+			"slug": "therapeutic-inhaler",
+			"name": "Therapeutic Inhaler",
+			"className": "Recipe_TherapeuticInhaler_C",
+			"alternate": false,
+			"time": 20,
+			"manualTimeMultiplier": 1,
+			"ingredients": [
+				{
+					"item": "Desc_Mycelia_C",
+					"amount": 15
+				},
+				{
+					"item": "Desc_AlienProtein_C",
+					"amount": 1
+				},
+				{
+					"item": "Desc_Shroom_C",
+					"amount": 1
+				}
+			],
+			"forBuilding": false,
+			"inMachine": false,
+			"inHand": false,
+			"inWorkshop": true,
+			"products": [
+				{
+					"item": "Desc_Medkit_C",
+					"amount": 1
+				}
+			],
+			"producedIn": [],
 			"isVariablePower": false
 		},
 		"Recipe_TradingPost_C": {
@@ -17610,7 +18076,7 @@
 			"className": "BP_EquipmentDescriptorBeacon_C",
 			"name": "Beacon",
 			"sinkPoints": 320,
-			"description": "Slot: Hands\nConsumable\n\nUsed to mark areas of interest. Displayed on your compass with the color and name you set for it.",
+			"description": "PENDING REMOVAL\nThis item will (likely) be removed in a future update.\n\nCurrently only used as an ingredient in an alternative recipe.",
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
@@ -17627,7 +18093,7 @@
 			"className": "BP_EquipmentDescriptorGasmask_C",
 			"name": "Gas Mask",
 			"sinkPoints": 55000,
-			"description": "Slot: Body\n\nAllows you to breathe normally in poison gas. Consumes Gas Filters from your inventory when you are in poison gas.",
+			"description": "Allows Pioneers to breathe normally while in toxic gas areas.\nConsumes Gas Filters from the inventory when in use.",
 			"stackSize": 1,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
@@ -17644,7 +18110,7 @@
 			"className": "BP_EquipmentDescriptorHazmatSuit_C",
 			"name": "Hazmat Suit",
 			"sinkPoints": 54100,
-			"description": "Slot: Body\n\nShields you from the adverse effects of radiation. \nConsumes Iodine Infused Filters from your inventory when you are in radioactive areas.",
+			"description": "Shields Pioneers from the adverse effects of radiation. \nConsumes Iodine Infused Filters from the inventory while worn in radioactive areas.",
 			"stackSize": 1,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
@@ -17661,7 +18127,7 @@
 			"className": "BP_EquipmentDescriptorHoverPack_C",
 			"name": "Hover Pack",
 			"sinkPoints": 413920,
-			"description": "Slot: Body\nPower consumption: 100 MW\n\nAllows for vertical movement and hovering in mid-air to improve building efficiency and factory traversal. Wirelessly connects to nearby power connections, such as Power Poles and Buildings, for power consumption.\n\nSlow-fall: Hold ascend input after losing connection mid-air.\nDisable Hoverpack: Double tap descend input while hovering.",
+			"description": "Power consumption: 100 MW\n\nAllows for vertical movement and hovering in mid-air to improve building efficiency and factory traversal. Wirelessly connects to nearby power connections, such as Power Poles and Buildings, for power consumption.\n\nSlow-fall: Hold {Jump_Drift} after losing connection mid-air.\nDisable Hoverpack: Double tap {Crouch} while hovering.",
 			"stackSize": 1,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
@@ -17678,7 +18144,7 @@
 			"className": "BP_EquipmentDescriptorJetPack_C",
 			"name": "Jetpack",
 			"sinkPoints": 49580,
-			"description": "Slot: Body\n\nAllows you to move more freely in the air. Consumes Fuel when used and refills with Fuel from your inventory when you're on the ground.",
+			"description": "The Jetpack allows Pioneers to travel through the air with increased control.\nConsumes Fuel when used and automatically refills the Fuel from the inventory, when on the ground.",
 			"stackSize": 1,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
@@ -17695,7 +18161,7 @@
 			"className": "BP_EquipmentDescriptorJumpingStilts_C",
 			"name": "Blade Runners",
 			"sinkPoints": 4988,
-			"description": "Slot: Body\n\nAn exoskeleton for your lower legs that assists movement, allowing you to sprint faster and jump higher.\nAlso dampens the impact of landing.",
+			"description": "An exoskeleton for the lower legs that assists movement, allowing Pioneers to sprint faster and jump higher.\nAlso dampens the impact of landing.",
 			"stackSize": 1,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
@@ -17712,7 +18178,7 @@
 			"className": "BP_EquipmentDescriptorNobeliskDetonator_C",
 			"name": "Nobelisk Detonator",
 			"sinkPoints": 39520,
-			"description": "Slot: Hands\nAmmo: Nobelisk\n\nUsed to blow up cracked boulders, rocks and invasive vegetation.",
+			"description": "A remote-control device used to handle and detonate Nobelisks.",
 			"stackSize": 1,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
@@ -17746,7 +18212,7 @@
 			"className": "BP_EquipmentDescriptorRifle_C",
 			"name": "Rifle",
 			"sinkPoints": 99160,
-			"description": "Slot: Hands\nAmmo: Rifle Cartridges\n\nRapid-firing weapon for self-defense.",
+			"description": "A long-range, rapid fire weapon. Specifically designed to deliver adequate performance within the designated work area.",
 			"stackSize": 1,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
@@ -17763,7 +18229,7 @@
 			"className": "BP_EquipmentDescriptorShockShank_C",
 			"name": "Xeno-Zapper",
 			"sinkPoints": 1880,
-			"description": "Slot: Hands\n\nStandard issue electroshock self defense weapon for melee range.",
+			"description": "Standard issue electroshock self-defense weapon for melee range.",
 			"stackSize": 1,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
@@ -17780,7 +18246,7 @@
 			"className": "BP_EquipmentDescriptorStunSpear_C",
 			"name": "Xeno-Basher",
 			"sinkPoints": 18800,
-			"description": "Slot: Hands\n\nHeavy electroshock self defense weapon for melee range.",
+			"description": "Heavy electroshock self-defense weapon for melee range.",
 			"stackSize": 1,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
@@ -17797,8 +18263,42 @@
 			"className": "BP_ItemDescriptorPortableMiner_C",
 			"name": "Portable Miner",
 			"sinkPoints": 56,
-			"description": "Slot: Hands\n\nCan be set up on a resource node to automatically extract the resource. Very limited storage space.",
+			"description": "Can be set up on a resource node to automatically extract the resource. Note that it has limited storage space.",
 			"stackSize": 1,
+			"energyValue": 0,
+			"radioactiveDecay": 0,
+			"liquid": false,
+			"fluidColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			}
+		},
+		"Desc_AlienDNACapsule_C": {
+			"slug": "organic-data-capsule",
+			"className": "Desc_AlienDNACapsule_C",
+			"name": "Organic Data Capsule",
+			"sinkPoints": null,
+			"description": "This data capsule translates organic chemicals into readable alien genetics information.\nUsed for researching alien organisms.",
+			"stackSize": 50,
+			"energyValue": 0,
+			"radioactiveDecay": 0,
+			"liquid": false,
+			"fluidColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			}
+		},
+		"Desc_AlienProtein_C": {
+			"slug": "alien-protein",
+			"className": "Desc_AlienProtein_C",
+			"name": "Alien Protein",
+			"sinkPoints": null,
+			"description": "Ground down Alien Remains in a neat little package.\nUsed for medical purposed and to research alien organisms.",
+			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
 			"liquid": false,
@@ -17979,13 +18479,47 @@
 				"a": 0
 			}
 		},
+		"Desc_CartridgeChaos_C": {
+			"slug": "turbo-rifle-ammo",
+			"className": "Desc_CartridgeChaos_C",
+			"name": "Turbo Rifle Ammo",
+			"sinkPoints": null,
+			"description": "Lightweight, compact, and volatile. These rounds provide extreme capacity and fire rates, at the cost of accuracy.",
+			"stackSize": 500,
+			"energyValue": 0,
+			"radioactiveDecay": 0,
+			"liquid": false,
+			"fluidColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			}
+		},
+		"Desc_CartridgeSmartProjectile_C": {
+			"slug": "homing-rifle-ammo",
+			"className": "Desc_CartridgeSmartProjectile_C",
+			"name": "Homing Rifle Ammo",
+			"sinkPoints": null,
+			"description": "The bullet guidance system, build into this ammunition, allows it to accurately hit any target within the reticle area.\nEspecially useful when dealing with agile threats, or for Pioneers who can't be bothered to aim properly.",
+			"stackSize": 500,
+			"energyValue": 0,
+			"radioactiveDecay": 0,
+			"liquid": false,
+			"fluidColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			}
+		},
 		"Desc_CartridgeStandard_C": {
-			"slug": "rifle-cartridge",
+			"slug": "rifle-ammo",
 			"className": "Desc_CartridgeStandard_C",
-			"name": "Rifle Cartridge",
+			"name": "Rifle Ammo",
 			"sinkPoints": 664,
-			"description": "Ammo for the Rifle.",
-			"stackSize": 100,
+			"description": "Standard issue Rifle ammunition, useful for establishing dominance.",
+			"stackSize": 500,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
 			"liquid": false,
@@ -18341,7 +18875,7 @@
 			"className": "Desc_Filter_C",
 			"name": "Gas Filter",
 			"sinkPoints": 830,
-			"description": "Used in gas masks to filter out pollutants in the air.",
+			"description": "Used in the Gas Mask to filter out toxics and pollutants from the air.",
 			"stackSize": 50,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
@@ -18489,12 +19023,29 @@
 				"a": 0
 			}
 		},
+		"Desc_GunpowderMK2_C": {
+			"slug": "smokeless-powder",
+			"className": "Desc_GunpowderMK2_C",
+			"name": "Smokeless Powder",
+			"sinkPoints": null,
+			"description": "An explosive powder that is commonly used to produce modern firearms.",
+			"stackSize": 100,
+			"energyValue": 0,
+			"radioactiveDecay": 0,
+			"liquid": false,
+			"fluidColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			}
+		},
 		"Desc_Gunpowder_C": {
 			"slug": "black-powder",
 			"className": "Desc_Gunpowder_C",
 			"name": "Black Powder",
 			"sinkPoints": 50,
-			"description": "An explosive powder that is commonly used in explosives and cartridges.",
+			"description": "An explosive powder that is commonly used to produce simple explosives.",
 			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
@@ -18528,7 +19079,7 @@
 			"className": "Desc_HazmatFilter_C",
 			"name": "Iodine Infused Filter",
 			"sinkPoints": 2718,
-			"description": "Used in hazmat suits to filter out radioactive particles in the air.",
+			"description": "Used in the Hazmat Suit to absorb radioactive particles.",
 			"stackSize": 50,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
@@ -18592,11 +19143,11 @@
 			}
 		},
 		"Desc_HogParts_C": {
-			"slug": "alien-carapace",
+			"slug": "hog-remains",
 			"className": "Desc_HogParts_C",
-			"name": "Alien Carapace",
+			"name": "Hog Remains",
 			"sinkPoints": 0,
-			"description": "Thick and sturdy natural armor plates from alien creatures.",
+			"description": "The carapace of the alien Hog creature.\nUsed for MAM research.",
 			"stackSize": 50,
 			"energyValue": 250,
 			"radioactiveDecay": 0,
@@ -18783,7 +19334,7 @@
 			"className": "Desc_Medkit_C",
 			"name": "Medicinal Inhaler",
 			"sinkPoints": 67,
-			"description": "Slot: Hands\nConsumable\n\nCan be inhaled to fully restore health.",
+			"description": "Fully restores health when used.\n\nThe FICSIT Medicinal Inhaler can be produced from a variety of different ingredients.",
 			"stackSize": 50,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
@@ -18948,12 +19499,80 @@
 				"a": 255
 			}
 		},
+		"Desc_NobeliskCluster_C": {
+			"slug": "cluster-nobelisk",
+			"className": "Desc_NobeliskCluster_C",
+			"name": "Cluster Nobelisk",
+			"sinkPoints": null,
+			"description": "A Nobelisk that detonates into multiple smaller explosions. Practical when clearing out large areas of vegetation and other inconveniences.",
+			"stackSize": 50,
+			"energyValue": 0,
+			"radioactiveDecay": 0,
+			"liquid": false,
+			"fluidColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			}
+		},
 		"Desc_NobeliskExplosive_C": {
 			"slug": "nobelisk",
 			"className": "Desc_NobeliskExplosive_C",
 			"name": "Nobelisk",
 			"sinkPoints": 980,
-			"description": "Can be used with the Nobelisk Detonator to blow up cracked boulders, vegetation or other vulnerable targets.",
+			"description": "A simple explosive, useful for clearing boulders, vegetation, and other obstacles.",
+			"stackSize": 50,
+			"energyValue": 0,
+			"radioactiveDecay": 0,
+			"liquid": false,
+			"fluidColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			}
+		},
+		"Desc_NobeliskGas_C": {
+			"slug": "gas-nobelisk",
+			"className": "Desc_NobeliskGas_C",
+			"name": "Gas Nobelisk",
+			"sinkPoints": null,
+			"description": "Instead of a regular explosion, this Nobelisk creates a deadly gas cloud.",
+			"stackSize": 50,
+			"energyValue": 0,
+			"radioactiveDecay": 0,
+			"liquid": false,
+			"fluidColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			}
+		},
+		"Desc_NobeliskNuke_C": {
+			"slug": "nuke-nobelisk",
+			"className": "Desc_NobeliskNuke_C",
+			"name": "Nuke Nobelisk",
+			"sinkPoints": null,
+			"description": "This Nobelisk uses a nuclear fission reaction to generate a massive explosion.\n\nWARNING: Ensure all FICSIT property is clear of the blast zone before detonation.\n",
+			"stackSize": 50,
+			"energyValue": 0,
+			"radioactiveDecay": 0,
+			"liquid": false,
+			"fluidColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			}
+		},
+		"Desc_NobeliskShockwave_C": {
+			"slug": "pulse-nobelisk",
+			"className": "Desc_NobeliskShockwave_C",
+			"name": "Pulse Nobelisk",
+			"sinkPoints": null,
+			"description": "Instead of a regular explosion, this Nobelisk generates a powerful shockwave.",
 			"stackSize": 50,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
@@ -19446,8 +20065,59 @@
 			"className": "Desc_RebarGunProjectile_C",
 			"name": "Rebar Gun",
 			"sinkPoints": 1968,
-			"description": "Slot: Hands\nAmmo: Spiked Rebar\n\nImprovised ranged weapon for self defense. Has to be reloaded after each use.",
+			"description": "Improvised ranged weapon for self-defense. Has to be reloaded after each use.",
 			"stackSize": 1,
+			"energyValue": 0,
+			"radioactiveDecay": 0,
+			"liquid": false,
+			"fluidColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			}
+		},
+		"Desc_Rebar_Explosive_C": {
+			"slug": "explosive-rebar",
+			"className": "Desc_Rebar_Explosive_C",
+			"name": "Explosive Rebar",
+			"sinkPoints": null,
+			"description": "Explodes on impact, dealing heavy damage.",
+			"stackSize": 100,
+			"energyValue": 0,
+			"radioactiveDecay": 0,
+			"liquid": false,
+			"fluidColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			}
+		},
+		"Desc_Rebar_Spreadshot_C": {
+			"slug": "shatter-rebar",
+			"className": "Desc_Rebar_Spreadshot_C",
+			"name": "Shatter Rebar",
+			"sinkPoints": null,
+			"description": "This rebar fractures when shot, launching deadly debris in a wide spread but with limited range.",
+			"stackSize": 100,
+			"energyValue": 0,
+			"radioactiveDecay": 0,
+			"liquid": false,
+			"fluidColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			}
+		},
+		"Desc_Rebar_Stunshot_C": {
+			"slug": "stun-rebar",
+			"className": "Desc_Rebar_Stunshot_C",
+			"name": "Stun Rebar",
+			"sinkPoints": null,
+			"description": "Electrocutes the target on impact, stunning it for a short time.\n\nStun duration: 5 seconds",
+			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
 			"liquid": false,
@@ -19633,7 +20303,7 @@
 			"className": "Desc_SpaceElevatorPart_6_C",
 			"name": "Magnetic Field Generator",
 			"sinkPoints": 15650,
-			"description": "Project Part #7. Ship with the Space Elevator to complete phases of Project Assembly.\n\nThese modular generators use superconducting magnets and vast amounts of electricity to produce an easily expandible and powerful magnetic field.",
+			"description": "Project Part #7. Ship with the Space Elevator to complete phases of Project Assembly.\n\nThese modular generators use superconducting magnets and vast amounts of electricity to produce an easily expandable and powerful magnetic field.",
 			"stackSize": 50,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
@@ -19697,12 +20367,12 @@
 			}
 		},
 		"Desc_SpikedRebar_C": {
-			"slug": "spiked-rebar",
+			"slug": "iron-rebar",
 			"className": "Desc_SpikedRebar_C",
-			"name": "Spiked Rebar",
+			"name": "Iron Rebar",
 			"sinkPoints": 8,
-			"description": "Ammo for the Rebar Gun.",
-			"stackSize": 50,
+			"description": "A simple iron rebar that can be shot using the Rebar Gun, for self-defense purposes.",
+			"stackSize": 100,
 			"energyValue": 0,
 			"radioactiveDecay": 0,
 			"liquid": false,
@@ -19714,11 +20384,11 @@
 			}
 		},
 		"Desc_SpitterParts_C": {
-			"slug": "alien-organs",
+			"slug": "plasma-spitter-remains",
 			"className": "Desc_SpitterParts_C",
-			"name": "Alien Organs",
+			"name": "Plasma Spitter Remains",
 			"sinkPoints": 0,
-			"description": "Organs from alien creatures.",
+			"description": "The remains of a plasma spitting alien creature.\nUsed for MAM research.",
 			"stackSize": 50,
 			"energyValue": 250,
 			"radioactiveDecay": 0,
@@ -19806,6 +20476,23 @@
 			"description": "Steel Beams are used most often when constructing a little more advanced buildings.",
 			"stackSize": 200,
 			"energyValue": 0,
+			"radioactiveDecay": 0,
+			"liquid": false,
+			"fluidColor": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			}
+		},
+		"Desc_StingerParts_C": {
+			"slug": "stinger-remains",
+			"className": "Desc_StingerParts_C",
+			"name": "Stinger Remains",
+			"sinkPoints": null,
+			"description": "The remains of whatever that creepy thing was.\nUsed for MAM research.",
+			"stackSize": 50,
+			"energyValue": 250,
 			"radioactiveDecay": 0,
 			"liquid": false,
 			"fluidColor": {
@@ -19955,8 +20642,8 @@
 	"schematics": {
 		"Research_ACarapace_0_C": {
 			"className": "Research_ACarapace_0_C",
-			"name": "Alien Carapace",
-			"slug": "alien-carapace-1",
+			"name": "Hog Research",
+			"slug": "hog-research",
 			"tier": 3,
 			"cost": [
 				{
@@ -19966,60 +20653,8 @@
 			],
 			"unlock": {
 				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": [],
-				"giveItems": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_MAM",
-			"time": 3,
-			"alternate": false,
-			"mam": false
-		},
-		"Research_ACarapace_1_C": {
-			"className": "Research_ACarapace_1_C",
-			"name": "Structural Analysis",
-			"slug": "structural-analysis",
-			"tier": 3,
-			"cost": [
-				{
-					"item": "Desc_HogParts_C",
-					"amount": 10
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
 				"recipes": [
-					"Recipe_Biomass_AlienCarapace_C"
-				],
-				"scannerResources": [],
-				"giveItems": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_MAM",
-			"time": 3,
-			"alternate": false,
-			"mam": false
-		},
-		"Research_ACarapace_2_1_C": {
-			"className": "Research_ACarapace_2_1_C",
-			"name": "Spiked Rebars",
-			"slug": "spiked-rebars",
-			"tier": 3,
-			"cost": [
-				{
-					"item": "Desc_Rotor_C",
-					"amount": 25
-				},
-				{
-					"item": "Desc_IronRod_C",
-					"amount": 200
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [
-					"Recipe_SpikedRebar_C"
+					"Recipe_Protein_Hog_C"
 				],
 				"scannerResources": [],
 				"giveItems": []
@@ -20032,17 +20667,17 @@
 		},
 		"Research_ACarapace_2_C": {
 			"className": "Research_ACarapace_2_C",
-			"name": "Rebar Gun",
-			"slug": "rebar-gun-1",
+			"name": "The Rebar Gun",
+			"slug": "the-rebar-gun",
 			"tier": 3,
 			"cost": [
 				{
-					"item": "Desc_IronPlateReinforced_C",
-					"amount": 50
-				},
-				{
 					"item": "Desc_Rotor_C",
 					"amount": 25
+				},
+				{
+					"item": "Desc_IronPlateReinforced_C",
+					"amount": 50
 				},
 				{
 					"item": "Desc_IronScrew_C",
@@ -20052,14 +20687,15 @@
 			"unlock": {
 				"inventorySlots": 0,
 				"recipes": [
-					"Recipe_RebarGun_C"
+					"Recipe_RebarGun_C",
+					"Recipe_SpikedRebar_C"
 				],
 				"scannerResources": [],
 				"giveItems": []
 			},
 			"requiredSchematics": [],
 			"type": "EST_MAM",
-			"time": 300,
+			"time": 3,
 			"alternate": false,
 			"mam": false
 		},
@@ -20070,12 +20706,12 @@
 			"tier": 3,
 			"cost": [
 				{
-					"item": "Desc_HogParts_C",
+					"item": "Desc_AlienDNACapsule_C",
 					"amount": 5
 				},
 				{
-					"item": "Desc_Wire_C",
-					"amount": 1000
+					"item": "Desc_SteelPlate_C",
+					"amount": 500
 				}
 			],
 			"unlock": {
@@ -20086,32 +20722,158 @@
 			},
 			"requiredSchematics": [],
 			"type": "EST_MAM",
-			"time": 300,
+			"time": 3,
 			"alternate": false,
 			"mam": false
 		},
-		"Research_AOrganisms_1_C": {
-			"className": "Research_AOrganisms_1_C",
-			"name": "Object Scanner Improvements",
-			"slug": "object-scanner-improvements",
+		"Research_AO_DNACapsule_C": {
+			"className": "Research_AO_DNACapsule_C",
+			"name": "Bio-Organic Properties",
+			"slug": "bio-organic-properties",
 			"tier": 3,
 			"cost": [
 				{
-					"item": "Desc_CrystalOscillator_C",
+					"item": "Desc_AlienProtein_C",
 					"amount": 5
 				},
 				{
-					"item": "Desc_Stator_C",
-					"amount": 10
-				},
+					"item": "Desc_GenericBiomass_C",
+					"amount": 15
+				}
+			],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_AlienDNACapsule_C",
+					"Recipe_Biomass_AlienProtein_C"
+				],
+				"scannerResources": [],
+				"giveItems": []
+			},
+			"requiredSchematics": [],
+			"type": "EST_MAM",
+			"time": 3,
+			"alternate": false,
+			"mam": false
+		},
+		"Research_AO_Hatcher_C": {
+			"className": "Research_AO_Hatcher_C",
+			"name": "Hatcher Research",
+			"slug": "hatcher-research",
+			"tier": 3,
+			"cost": [
 				{
-					"item": "BP_EquipmentDescriptorObjectScanner_C",
+					"item": "Desc_HatcherParts_C",
 					"amount": 1
 				}
 			],
 			"unlock": {
 				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_Protein_Crab_C"
+				],
+				"scannerResources": [],
+				"giveItems": []
+			},
+			"requiredSchematics": [],
+			"type": "EST_MAM",
+			"time": 3,
+			"alternate": false,
+			"mam": false
+		},
+		"Research_AO_Hog_C": {
+			"className": "Research_AO_Hog_C",
+			"name": "Hog Research",
+			"slug": "hog-research-1",
+			"tier": 3,
+			"cost": [
+				{
+					"item": "Desc_HogParts_C",
+					"amount": 1
+				}
+			],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_Protein_Hog_C"
+				],
+				"scannerResources": [],
+				"giveItems": []
+			},
+			"requiredSchematics": [],
+			"type": "EST_MAM",
+			"time": 3,
+			"alternate": false,
+			"mam": false
+		},
+		"Research_AO_Pre_Rebar_C": {
+			"className": "Research_AO_Pre_Rebar_C",
+			"name": "Structural Analysis",
+			"slug": "structural-analysis",
+			"tier": 3,
+			"cost": [
+				{
+					"item": "Desc_AlienDNACapsule_C",
+					"amount": 5
+				},
+				{
+					"item": "Desc_IronRod_C",
+					"amount": 100
+				}
+			],
+			"unlock": {
+				"inventorySlots": 0,
 				"recipes": [],
+				"scannerResources": [],
+				"giveItems": []
+			},
+			"requiredSchematics": [],
+			"type": "EST_MAM",
+			"time": 3,
+			"alternate": false,
+			"mam": false
+		},
+		"Research_AO_Spitter_C": {
+			"className": "Research_AO_Spitter_C",
+			"name": "Spitter Research",
+			"slug": "spitter-research",
+			"tier": 3,
+			"cost": [
+				{
+					"item": "Desc_SpitterParts_C",
+					"amount": 1
+				}
+			],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_Protein_Spitter_C"
+				],
+				"scannerResources": [],
+				"giveItems": []
+			},
+			"requiredSchematics": [],
+			"type": "EST_MAM",
+			"time": 3,
+			"alternate": false,
+			"mam": false
+		},
+		"Research_AO_Stinger_C": {
+			"className": "Research_AO_Stinger_C",
+			"name": "Stinger Research",
+			"slug": "stinger-research",
+			"tier": 3,
+			"cost": [
+				{
+					"item": "Desc_StingerParts_C",
+					"amount": 1
+				}
+			],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_Protein_Stinger_C"
+				],
 				"scannerResources": [],
 				"giveItems": []
 			},
@@ -20128,11 +20890,15 @@
 			"tier": 3,
 			"cost": [
 				{
-					"item": "Desc_SpitterParts_C",
+					"item": "Desc_AlienDNACapsule_C",
+					"amount": 10
+				},
+				{
+					"item": "Desc_CrystalOscillator_C",
 					"amount": 5
 				},
 				{
-					"item": "Desc_HogParts_C",
+					"item": "Desc_HighSpeedConnector_C",
 					"amount": 5
 				}
 			],
@@ -20150,8 +20916,8 @@
 		},
 		"Research_AOrgans_0_C": {
 			"className": "Research_AOrgans_0_C",
-			"name": "Alien Organs",
-			"slug": "alien-organs-1",
+			"name": "Spitter Research",
+			"slug": "spitter-research-1",
 			"tier": 3,
 			"cost": [
 				{
@@ -20161,31 +20927,8 @@
 			],
 			"unlock": {
 				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": [],
-				"giveItems": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_MAM",
-			"time": 3,
-			"alternate": false,
-			"mam": false
-		},
-		"Research_AOrgans_1_C": {
-			"className": "Research_AOrgans_1_C",
-			"name": "Organic Properties",
-			"slug": "organic-properties",
-			"tier": 3,
-			"cost": [
-				{
-					"item": "Desc_SpitterParts_C",
-					"amount": 3
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
 				"recipes": [
-					"Recipe_Biomass_AlienOrgans_C"
+					"Recipe_Protein_Spitter_C"
 				],
 				"scannerResources": [],
 				"giveItems": []
@@ -20198,21 +20941,21 @@
 		},
 		"Research_AOrgans_2_C": {
 			"className": "Research_AOrgans_2_C",
-			"name": "Medicinal Inhaler",
-			"slug": "medicinal-inhaler-spitterparts",
+			"name": "Protein Inhaler",
+			"slug": "protein-inhaler",
 			"tier": 3,
 			"cost": [
 				{
-					"item": "Desc_SpitterParts_C",
-					"amount": 5
+					"item": "Desc_AlienProtein_C",
+					"amount": 2
 				},
 				{
-					"item": "Desc_Mycelia_C",
-					"amount": 10
+					"item": "Desc_Nut_C",
+					"amount": 20
 				},
 				{
-					"item": "Desc_ModularFrame_C",
-					"amount": 100
+					"item": "Desc_Rotor_C",
+					"amount": 50
 				}
 			],
 			"unlock": {
@@ -20225,23 +20968,23 @@
 			},
 			"requiredSchematics": [],
 			"type": "EST_MAM",
-			"time": 300,
+			"time": 3,
 			"alternate": false,
 			"mam": false
 		},
 		"Research_AOrgans_3_C": {
 			"className": "Research_AOrgans_3_C",
 			"name": "Inflated Pocket Dimension",
-			"slug": "inflated-pocket-dimension-spitterparts",
+			"slug": "inflated-pocket-dimension-alienprotein",
 			"tier": 3,
 			"cost": [
 				{
-					"item": "Desc_SpitterParts_C",
-					"amount": 5
+					"item": "Desc_AlienProtein_C",
+					"amount": 3
 				},
 				{
-					"item": "Desc_Wire_C",
-					"amount": 2000
+					"item": "Desc_Cable_C",
+					"amount": 1000
 				}
 			],
 			"unlock": {
@@ -20252,7 +20995,7 @@
 			},
 			"requiredSchematics": [],
 			"type": "EST_MAM",
-			"time": 300,
+			"time": 3,
 			"alternate": false,
 			"mam": false
 		},
@@ -20331,7 +21074,7 @@
 			},
 			"requiredSchematics": [],
 			"type": "EST_MAM",
-			"time": 300,
+			"time": 3,
 			"alternate": false,
 			"mam": false
 		},
@@ -20363,20 +21106,12 @@
 		"Research_Caterium_3_1_C": {
 			"className": "Research_Caterium_3_1_C",
 			"name": "Inflated Pocket Dimension",
-			"slug": "inflated-pocket-dimension-goldingot",
+			"slug": "inflated-pocket-dimension-silica",
 			"tier": 3,
 			"cost": [
 				{
-					"item": "Desc_GoldIngot_C",
-					"amount": 10
-				},
-				{
-					"item": "Desc_Wire_C",
-					"amount": 500
-				},
-				{
-					"item": "Desc_IronPlateReinforced_C",
-					"amount": 50
+					"item": "Desc_Silica_C",
+					"amount": 200
 				}
 			],
 			"unlock": {
@@ -20387,7 +21122,36 @@
 			},
 			"requiredSchematics": [],
 			"type": "EST_MAM",
-			"time": 120,
+			"time": 3,
+			"alternate": false,
+			"mam": false
+		},
+		"Research_Caterium_3_2_C": {
+			"className": "Research_Caterium_3_2_C",
+			"name": "Stun Rebar",
+			"slug": "stun-rebar-1",
+			"tier": 3,
+			"cost": [
+				{
+					"item": "Desc_HighSpeedWire_C",
+					"amount": 50
+				},
+				{
+					"item": "Desc_SpikedRebar_C",
+					"amount": 10
+				}
+			],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_Rebar_Stunshot_C"
+				],
+				"scannerResources": [],
+				"giveItems": []
+			},
+			"requiredSchematics": [],
+			"type": "EST_MAM",
+			"time": 3,
 			"alternate": false,
 			"mam": false
 		},
@@ -20439,7 +21203,7 @@
 			},
 			"requiredSchematics": [],
 			"type": "EST_MAM",
-			"time": 300,
+			"time": 3,
 			"alternate": false,
 			"mam": false
 		},
@@ -20468,7 +21232,7 @@
 			},
 			"requiredSchematics": [],
 			"type": "EST_MAM",
-			"time": 300,
+			"time": 3,
 			"alternate": false,
 			"mam": false
 		},
@@ -20522,7 +21286,7 @@
 			},
 			"requiredSchematics": [],
 			"type": "EST_MAM",
-			"time": 300,
+			"time": 3,
 			"alternate": false,
 			"mam": false
 		},
@@ -20533,8 +21297,8 @@
 			"tier": 3,
 			"cost": [
 				{
-					"item": "Desc_HighSpeedWire_C",
-					"amount": 100
+					"item": "Desc_Silica_C",
+					"amount": 50
 				},
 				{
 					"item": "Desc_ModularFrame_C",
@@ -20551,7 +21315,7 @@
 			},
 			"requiredSchematics": [],
 			"type": "EST_MAM",
-			"time": 300,
+			"time": 3,
 			"alternate": false,
 			"mam": false
 		},
@@ -20642,34 +21406,36 @@
 			},
 			"requiredSchematics": [],
 			"type": "EST_MAM",
-			"time": 360,
+			"time": 3,
 			"alternate": false,
 			"mam": false
 		},
 		"Research_Caterium_6_3_C": {
 			"className": "Research_Caterium_6_3_C",
-			"name": "Inflated Pocket Dimension",
-			"slug": "inflated-pocket-dimension-highspeedconnector",
+			"name": "Bullet Guidance System",
+			"slug": "bullet-guidance-system",
 			"tier": 3,
 			"cost": [
 				{
 					"item": "Desc_HighSpeedConnector_C",
-					"amount": 50
+					"amount": 10
 				},
 				{
-					"item": "Desc_Motor_C",
-					"amount": 50
+					"item": "Desc_CartridgeStandard_C",
+					"amount": 500
 				}
 			],
 			"unlock": {
 				"inventorySlots": 0,
-				"recipes": [],
+				"recipes": [
+					"Recipe_CartridgeSmart_C"
+				],
 				"scannerResources": [],
 				"giveItems": []
 			},
 			"requiredSchematics": [],
 			"type": "EST_MAM",
-			"time": 180,
+			"time": 3,
 			"alternate": false,
 			"mam": false
 		},
@@ -20698,7 +21464,7 @@
 			},
 			"requiredSchematics": [],
 			"type": "EST_MAM",
-			"time": 480,
+			"time": 3,
 			"alternate": false,
 			"mam": false
 		},
@@ -20733,7 +21499,7 @@
 			},
 			"requiredSchematics": [],
 			"type": "EST_MAM",
-			"time": 480,
+			"time": 3,
 			"alternate": false,
 			"mam": false
 		},
@@ -20833,6 +21599,35 @@
 			"alternate": false,
 			"mam": false
 		},
+		"Research_Mycelia_2_1_C": {
+			"className": "Research_Mycelia_2_1_C",
+			"name": "Synthethic Polyester Fabric",
+			"slug": "synthethic-polyester-fabric",
+			"tier": 3,
+			"cost": [
+				{
+					"item": "Desc_Fabric_C",
+					"amount": 25
+				},
+				{
+					"item": "Desc_PolymerResin_C",
+					"amount": 100
+				}
+			],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_Alternate_PolyesterFabric_C"
+				],
+				"scannerResources": [],
+				"giveItems": []
+			},
+			"requiredSchematics": [],
+			"type": "EST_MAM",
+			"time": 3,
+			"alternate": false,
+			"mam": false
+		},
 		"Research_Mycelia_2_C": {
 			"className": "Research_Mycelia_2_C",
 			"name": "Fabric",
@@ -20898,16 +21693,12 @@
 			"tier": 3,
 			"cost": [
 				{
-					"item": "Desc_Shroom_C",
-					"amount": 1
+					"item": "Desc_Mycelia_C",
+					"amount": 25
 				},
 				{
-					"item": "Desc_Berry_C",
-					"amount": 2
-				},
-				{
-					"item": "Desc_Nut_C",
-					"amount": 3
+					"item": "Desc_Stator_C",
+					"amount": 10
 				}
 			],
 			"unlock": {
@@ -20924,8 +21715,8 @@
 		},
 		"Research_Mycelia_5_C": {
 			"className": "Research_Mycelia_5_C",
-			"name": "Medicinal Inhaler",
-			"slug": "medicinal-inhaler-mycelia",
+			"name": "Vitamin Inhaler",
+			"slug": "vitamin-inhaler",
 			"tier": 3,
 			"cost": [
 				{
@@ -20933,18 +21724,107 @@
 					"amount": 10
 				},
 				{
-					"item": "Desc_IronPlateReinforced_C",
-					"amount": 25
-				},
-				{
-					"item": "Desc_Rotor_C",
-					"amount": 25
+					"item": "Desc_Berry_C",
+					"amount": 5
 				}
 			],
 			"unlock": {
 				"inventorySlots": 0,
 				"recipes": [
 					"Recipe_MedicinalInhaler_C"
+				],
+				"scannerResources": [],
+				"giveItems": []
+			},
+			"requiredSchematics": [],
+			"type": "EST_MAM",
+			"time": 3,
+			"alternate": false,
+			"mam": false
+		},
+		"Research_Mycelia_6_C": {
+			"className": "Research_Mycelia_6_C",
+			"name": "Therapeutic Inhaler",
+			"slug": "therapeutic-inhaler",
+			"tier": 3,
+			"cost": [
+				{
+					"item": "Desc_Mycelia_C",
+					"amount": 15
+				},
+				{
+					"item": "Desc_Shroom_C",
+					"amount": 1
+				},
+				{
+					"item": "Desc_AlienProtein_C",
+					"amount": 1
+				}
+			],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_TherapeuticInhaler_C"
+				],
+				"scannerResources": [],
+				"giveItems": []
+			},
+			"requiredSchematics": [],
+			"type": "EST_MAM",
+			"time": 3,
+			"alternate": false,
+			"mam": false
+		},
+		"Research_Mycelia_7_C": {
+			"className": "Research_Mycelia_7_C",
+			"name": "Expanded Toolbelt",
+			"slug": "expanded-toolbelt-1",
+			"tier": 3,
+			"cost": [
+				{
+					"item": "Desc_Fabric_C",
+					"amount": 50
+				},
+				{
+					"item": "Desc_Rotor_C",
+					"amount": 100
+				}
+			],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [],
+				"scannerResources": [],
+				"giveItems": []
+			},
+			"requiredSchematics": [],
+			"type": "EST_MAM",
+			"time": 3,
+			"alternate": false,
+			"mam": false
+		},
+		"Research_Mycelia_8_C": {
+			"className": "Research_Mycelia_8_C",
+			"name": "Toxic Cellular Modification",
+			"slug": "toxic-cellular-modification",
+			"tier": 3,
+			"cost": [
+				{
+					"item": "Desc_NobeliskExplosive_C",
+					"amount": 10
+				},
+				{
+					"item": "Desc_Mycelia_C",
+					"amount": 100
+				},
+				{
+					"item": "Desc_GenericBiomass_C",
+					"amount": 200
+				}
+			],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_NobeliskGas_C"
 				],
 				"scannerResources": [],
 				"giveItems": []
@@ -21026,17 +21906,17 @@
 		},
 		"Research_Nutrients_3_C": {
 			"className": "Research_Nutrients_3_C",
-			"name": "Nutritional Mixture",
-			"slug": "nutritional-mixture",
+			"name": "Nutritional Processor",
+			"slug": "nutritional-processor",
 			"tier": 3,
 			"cost": [
 				{
-					"item": "Desc_Stator_C",
+					"item": "Desc_ModularFrame_C",
 					"amount": 25
 				},
 				{
 					"item": "Desc_SteelPipe_C",
-					"amount": 100
+					"amount": 50
 				},
 				{
 					"item": "Desc_Wire_C",
@@ -21120,8 +22000,8 @@
 			"tier": 3,
 			"cost": [
 				{
-					"item": "Desc_IronRod_C",
-					"amount": 50
+					"item": "Desc_CrystalShard_C",
+					"amount": 1
 				},
 				{
 					"item": "Desc_IronPlate_C",
@@ -21140,7 +22020,7 @@
 			},
 			"requiredSchematics": [],
 			"type": "EST_MAM",
-			"time": 300,
+			"time": 3,
 			"alternate": false,
 			"mam": false
 		},
@@ -21159,8 +22039,8 @@
 					"amount": 100
 				},
 				{
-					"item": "Desc_Cable_C",
-					"amount": 50
+					"item": "Desc_IronScrew_C",
+					"amount": 200
 				}
 			],
 			"unlock": {
@@ -21171,7 +22051,7 @@
 			},
 			"requiredSchematics": [],
 			"type": "EST_MAM",
-			"time": 120,
+			"time": 3,
 			"alternate": false,
 			"mam": false
 		},
@@ -21186,7 +22066,7 @@
 					"amount": 1
 				},
 				{
-					"item": "Desc_IronPlateReinforced_C",
+					"item": "Desc_Rotor_C",
 					"amount": 25
 				},
 				{
@@ -21223,8 +22103,8 @@
 					"amount": 25
 				},
 				{
-					"item": "Desc_Cable_C",
-					"amount": 200
+					"item": "Desc_CopperSheet_C",
+					"amount": 100
 				}
 			],
 			"unlock": {
@@ -21316,6 +22196,35 @@
 			"alternate": false,
 			"mam": false
 		},
+		"Research_Quartz_2_1_C": {
+			"className": "Research_Quartz_2_1_C",
+			"name": "Shatter Rebar",
+			"slug": "shatter-rebar-1",
+			"tier": 3,
+			"cost": [
+				{
+					"item": "Desc_QuartzCrystal_C",
+					"amount": 30
+				},
+				{
+					"item": "Desc_SpikedRebar_C",
+					"amount": 150
+				}
+			],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_Rebar_Spreadshot_C"
+				],
+				"scannerResources": [],
+				"giveItems": []
+			},
+			"requiredSchematics": [],
+			"type": "EST_MAM",
+			"time": 3,
+			"alternate": false,
+			"mam": false
+		},
 		"Research_Quartz_2_C": {
 			"className": "Research_Quartz_2_C",
 			"name": "Crystal Oscillator",
@@ -21370,56 +22279,29 @@
 			},
 			"requiredSchematics": [],
 			"type": "EST_MAM",
-			"time": 300,
+			"time": 3,
 			"alternate": false,
 			"mam": false
 		},
-		"Research_Quartz_3_2_C": {
-			"className": "Research_Quartz_3_2_C",
-			"name": "Frequency Mapping",
-			"slug": "frequency-mapping",
+		"Research_Quartz_3_4_C": {
+			"className": "Research_Quartz_3_4_C",
+			"name": "Explosive Resonance Application",
+			"slug": "explosive-resonance-application",
 			"tier": 3,
 			"cost": [
 				{
 					"item": "Desc_CrystalOscillator_C",
-					"amount": 10
+					"amount": 5
 				},
 				{
-					"item": "BP_EquipmentDescriptorBeacon_C",
-					"amount": 10
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [],
-				"scannerResources": [],
-				"giveItems": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_MAM",
-			"time": 300,
-			"alternate": false,
-			"mam": false
-		},
-		"Research_Quartz_3_3_C": {
-			"className": "Research_Quartz_3_3_C",
-			"name": "Radio Control Unit",
-			"slug": "radio-control-unit-1",
-			"tier": 3,
-			"cost": [
-				{
-					"item": "Desc_CrystalOscillator_C",
+					"item": "Desc_NobeliskExplosive_C",
 					"amount": 100
-				},
-				{
-					"item": "Desc_AluminumPlate_C",
-					"amount": 200
 				}
 			],
 			"unlock": {
 				"inventorySlots": 0,
 				"recipes": [
-					"Recipe_RadioControlUnit_C"
+					"Recipe_NobeliskShockwave_C"
 				],
 				"scannerResources": [],
 				"giveItems": []
@@ -21432,12 +22314,16 @@
 		},
 		"Research_Quartz_3_C": {
 			"className": "Research_Quartz_3_C",
-			"name": "Signal Technologies",
-			"slug": "signal-technologies",
+			"name": "Signal Systems",
+			"slug": "signal-systems",
 			"tier": 3,
 			"cost": [
 				{
 					"item": "Desc_CrystalOscillator_C",
+					"amount": 5
+				},
+				{
+					"item": "Desc_CircuitBoard_C",
 					"amount": 5
 				}
 			],
@@ -21461,15 +22347,15 @@
 			"cost": [
 				{
 					"item": "Desc_CrystalOscillator_C",
-					"amount": 50
+					"amount": 100
 				},
 				{
 					"item": "Desc_Motor_C",
 					"amount": 100
 				},
 				{
-					"item": "BP_EquipmentDescriptorBeacon_C",
-					"amount": 10
+					"item": "BP_EquipmentDescriptorObjectScanner_C",
+					"amount": 1
 				}
 			],
 			"unlock": {
@@ -21480,7 +22366,7 @@
 			},
 			"requiredSchematics": [],
 			"type": "EST_MAM",
-			"time": 300,
+			"time": 3,
 			"alternate": false,
 			"mam": false
 		},
@@ -21492,15 +22378,15 @@
 			"cost": [
 				{
 					"item": "Desc_CrystalOscillator_C",
-					"amount": 100
+					"amount": 50
 				},
 				{
 					"item": "Desc_ModularFrameHeavy_C",
 					"amount": 50
 				},
 				{
-					"item": "BP_EquipmentDescriptorBeacon_C",
-					"amount": 15
+					"item": "Desc_CircuitBoard_C",
+					"amount": 100
 				}
 			],
 			"unlock": {
@@ -21596,55 +22482,27 @@
 		},
 		"Research_Sulfur_3_1_C": {
 			"className": "Research_Sulfur_3_1_C",
-			"name": "Nobelisk Detonator",
-			"slug": "nobelisk-detonator-1",
-			"tier": 3,
-			"cost": [
-				{
-					"item": "Desc_SteelPlateReinforced_C",
-					"amount": 10
-				},
-				{
-					"item": "Desc_Cable_C",
-					"amount": 100
-				},
-				{
-					"item": "BP_EquipmentDescriptorObjectScanner_C",
-					"amount": 5
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [
-					"Recipe_NobeliskDetonator_C"
-				],
-				"scannerResources": [],
-				"giveItems": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_MAM",
-			"time": 180,
-			"alternate": false,
-			"mam": false
-		},
-		"Research_Sulfur_3_2_1_C": {
-			"className": "Research_Sulfur_3_2_1_C",
-			"name": "Nobelisk Explosives",
-			"slug": "nobelisk-explosives",
+			"name": "The Nobelisk Detonator",
+			"slug": "the-nobelisk-detonator",
 			"tier": 3,
 			"cost": [
 				{
 					"item": "Desc_Gunpowder_C",
-					"amount": 100
+					"amount": 50
 				},
 				{
 					"item": "Desc_SteelPipe_C",
 					"amount": 100
+				},
+				{
+					"item": "Desc_Cable_C",
+					"amount": 200
 				}
 			],
 			"unlock": {
 				"inventorySlots": 0,
 				"recipes": [
+					"Recipe_NobeliskDetonator_C",
 					"Recipe_Nobelisk_C"
 				],
 				"scannerResources": [],
@@ -21658,8 +22516,8 @@
 		},
 		"Research_Sulfur_3_2_C": {
 			"className": "Research_Sulfur_3_2_C",
-			"name": "Prototype Explosives",
-			"slug": "prototype-explosives",
+			"name": "",
+			"slug": "",
 			"tier": 3,
 			"cost": [
 				{
@@ -21679,38 +22537,36 @@
 			},
 			"requiredSchematics": [],
 			"type": "EST_MAM",
-			"time": 180,
+			"time": 3,
 			"alternate": false,
 			"mam": false
 		},
 		"Research_Sulfur_3_C": {
 			"className": "Research_Sulfur_3_C",
-			"name": "Detonator Prototype",
-			"slug": "detonator-prototype",
+			"name": "Smokeless Powder",
+			"slug": "smokeless-powder-1",
 			"tier": 3,
 			"cost": [
 				{
-					"item": "Desc_SteelPlate_C",
-					"amount": 10
+					"item": "Desc_Gunpowder_C",
+					"amount": 100
 				},
 				{
-					"item": "Desc_Cable_C",
+					"item": "Desc_Plastic_C",
 					"amount": 50
-				},
-				{
-					"item": "BP_EquipmentDescriptorObjectScanner_C",
-					"amount": 5
 				}
 			],
 			"unlock": {
 				"inventorySlots": 0,
-				"recipes": [],
+				"recipes": [
+					"Recipe_GunpowderMK2_C"
+				],
 				"scannerResources": [],
 				"giveItems": []
 			},
 			"requiredSchematics": [],
 			"type": "EST_MAM",
-			"time": 180,
+			"time": 3,
 			"alternate": false,
 			"mam": false
 		},
@@ -21721,45 +22577,12 @@
 			"tier": 3,
 			"cost": [
 				{
-					"item": "Desc_SteelPipe_C",
+					"item": "Desc_GunpowderMK2_C",
+					"amount": 50
+				},
+				{
+					"item": "Desc_Motor_C",
 					"amount": 100
-				},
-				{
-					"item": "Desc_CircuitBoard_C",
-					"amount": 100
-				},
-				{
-					"item": "Desc_ModularFrameHeavy_C",
-					"amount": 5
-				}
-			],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [
-					"Recipe_SpaceRifleMk1_C"
-				],
-				"scannerResources": [],
-				"giveItems": []
-			},
-			"requiredSchematics": [],
-			"type": "EST_MAM",
-			"time": 180,
-			"alternate": false,
-			"mam": false
-		},
-		"Research_Sulfur_4_2_1_C": {
-			"className": "Research_Sulfur_4_2_1_C",
-			"name": "Rifle Cartridges",
-			"slug": "rifle-cartridges",
-			"tier": 3,
-			"cost": [
-				{
-					"item": "Desc_Gunpowder_C",
-					"amount": 200
-				},
-				{
-					"item": "Desc_SteelPipe_C",
-					"amount": 200
 				},
 				{
 					"item": "Desc_Rubber_C",
@@ -21769,6 +22592,7 @@
 			"unlock": {
 				"inventorySlots": 0,
 				"recipes": [
+					"Recipe_SpaceRifleMk1_C",
 					"Recipe_Cartridge_C"
 				],
 				"scannerResources": [],
@@ -21782,70 +22606,136 @@
 		},
 		"Research_Sulfur_4_2_C": {
 			"className": "Research_Sulfur_4_2_C",
-			"name": "Prototype Cartridges",
-			"slug": "prototype-cartridges",
+			"name": "Explosive Rebar",
+			"slug": "explosive-rebar-1",
 			"tier": 3,
 			"cost": [
 				{
-					"item": "Desc_Gunpowder_C",
-					"amount": 100
+					"item": "Desc_GunpowderMK2_C",
+					"amount": 200
 				},
 				{
-					"item": "Desc_SteelPipe_C",
-					"amount": 100
+					"item": "Desc_SpikedRebar_C",
+					"amount": 200
 				},
 				{
-					"item": "BP_EquipmentDescriptorBeacon_C",
-					"amount": 5
+					"item": "Desc_SteelPlate_C",
+					"amount": 200
 				}
 			],
 			"unlock": {
 				"inventorySlots": 0,
-				"recipes": [],
+				"recipes": [
+					"Recipe_Rebar_Explosive_C"
+				],
 				"scannerResources": [],
 				"giveItems": []
 			},
 			"requiredSchematics": [],
 			"type": "EST_MAM",
-			"time": 180,
+			"time": 3,
 			"alternate": false,
 			"mam": false
 		},
 		"Research_Sulfur_4_C": {
 			"className": "Research_Sulfur_4_C",
-			"name": "Rifle Prototype",
-			"slug": "rifle-prototype",
+			"name": "Cluster Nobelisk",
+			"slug": "cluster-nobelisk-1",
 			"tier": 3,
 			"cost": [
 				{
-					"item": "Desc_SteelPipe_C",
-					"amount": 50
+					"item": "Desc_GunpowderMK2_C",
+					"amount": 100
 				},
 				{
-					"item": "Desc_CircuitBoard_C",
-					"amount": 50
-				},
-				{
-					"item": "Desc_IronScrew_C",
-					"amount": 250
+					"item": "Desc_NobeliskExplosive_C",
+					"amount": 200
 				}
 			],
 			"unlock": {
 				"inventorySlots": 0,
-				"recipes": [],
+				"recipes": [
+					"Recipe_NobeliskCluster_C"
+				],
 				"scannerResources": [],
 				"giveItems": []
 			},
 			"requiredSchematics": [],
 			"type": "EST_MAM",
-			"time": 180,
+			"time": 3,
+			"alternate": false,
+			"mam": false
+		},
+		"Research_Sulfur_5_1_C": {
+			"className": "Research_Sulfur_5_1_C",
+			"name": "Nuclear Deterrent Development",
+			"slug": "nuclear-deterrent-development",
+			"tier": 3,
+			"cost": [
+				{
+					"item": "Desc_NobeliskExplosive_C",
+					"amount": 500
+				},
+				{
+					"item": "Desc_UraniumCell_C",
+					"amount": 10
+				},
+				{
+					"item": "Desc_CircuitBoardHighSpeed_C",
+					"amount": 100
+				}
+			],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_NobeliskNuke_C"
+				],
+				"scannerResources": [],
+				"giveItems": []
+			},
+			"requiredSchematics": [],
+			"type": "EST_MAM",
+			"time": 3,
+			"alternate": false,
+			"mam": false
+		},
+		"Research_Sulfur_5_2_C": {
+			"className": "Research_Sulfur_5_2_C",
+			"name": "Turbo Rifle Ammo",
+			"slug": "turbo-rifle-ammo-1",
+			"tier": 3,
+			"cost": [
+				{
+					"item": "Desc_CartridgeStandard_C",
+					"amount": 1000
+				},
+				{
+					"item": "Desc_TurboFuel_C",
+					"amount": 50
+				},
+				{
+					"item": "Desc_AluminumCasing_C",
+					"amount": 100
+				}
+			],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_CartridgeChaos_C"
+				],
+				"scannerResources": [],
+				"giveItems": []
+			},
+			"requiredSchematics": [],
+			"type": "EST_MAM",
+			"time": 3,
 			"alternate": false,
 			"mam": false
 		},
 		"Research_Sulfur_5_C": {
 			"className": "Research_Sulfur_5_C",
 			"name": "Expanded Toolbelt",
-			"slug": "expanded-toolbelt-1",
+			"slug": "expanded-toolbelt-2",
 			"tier": 3,
 			"cost": [
 				{
@@ -21865,23 +22755,23 @@
 			},
 			"requiredSchematics": [],
 			"type": "EST_MAM",
-			"time": 180,
+			"time": 3,
 			"alternate": false,
 			"mam": false
 		},
 		"Research_Sulfur_6_C": {
 			"className": "Research_Sulfur_6_C",
 			"name": "Inflated Pocket Dimension",
-			"slug": "inflated-pocket-dimension-gunpowder",
+			"slug": "inflated-pocket-dimension-gunpowdermk2",
 			"tier": 3,
 			"cost": [
 				{
-					"item": "Desc_Gunpowder_C",
+					"item": "Desc_GunpowderMK2_C",
 					"amount": 50
 				},
 				{
-					"item": "Desc_SteelPlate_C",
-					"amount": 100
+					"item": "Desc_CircuitBoard_C",
+					"amount": 50
 				}
 			],
 			"unlock": {
@@ -21892,7 +22782,105 @@
 			},
 			"requiredSchematics": [],
 			"type": "EST_MAM",
-			"time": 180,
+			"time": 3,
+			"alternate": false,
+			"mam": false
+		},
+		"Research_Sulfur_CompactedCoal_C": {
+			"className": "Research_Sulfur_CompactedCoal_C",
+			"name": "Compacted Coal",
+			"slug": "compacted-coal-1",
+			"tier": 3,
+			"cost": [
+				{
+					"item": "Desc_HardDrive_C",
+					"amount": 1
+				},
+				{
+					"item": "Desc_Sulfur_C",
+					"amount": 25
+				},
+				{
+					"item": "Desc_Coal_C",
+					"amount": 25
+				}
+			],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_Alternate_EnrichedCoal_C"
+				],
+				"scannerResources": [],
+				"giveItems": []
+			},
+			"requiredSchematics": [],
+			"type": "EST_MAM",
+			"time": 3,
+			"alternate": false,
+			"mam": false
+		},
+		"Research_Sulfur_ExperimentalPower_C": {
+			"className": "Research_Sulfur_ExperimentalPower_C",
+			"name": "Experimental Power Generation",
+			"slug": "experimental-power-generation",
+			"tier": 3,
+			"cost": [
+				{
+					"item": "Desc_Sulfur_C",
+					"amount": 25
+				},
+				{
+					"item": "Desc_ModularFrame_C",
+					"amount": 50
+				},
+				{
+					"item": "Desc_Rotor_C",
+					"amount": 100
+				}
+			],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [],
+				"scannerResources": [],
+				"giveItems": []
+			},
+			"requiredSchematics": [],
+			"type": "EST_MAM",
+			"time": 3,
+			"alternate": false,
+			"mam": false
+		},
+		"Research_Sulfur_TurboFuel_C": {
+			"className": "Research_Sulfur_TurboFuel_C",
+			"name": "Turbo Fuel",
+			"slug": "turbo-fuel",
+			"tier": 3,
+			"cost": [
+				{
+					"item": "Desc_HardDrive_C",
+					"amount": 1
+				},
+				{
+					"item": "Desc_CompactedCoal_C",
+					"amount": 15
+				},
+				{
+					"item": "Desc_Fuel_C",
+					"amount": 50
+				}
+			],
+			"unlock": {
+				"inventorySlots": 0,
+				"recipes": [
+					"Recipe_Alternate_Turbofuel_C",
+					"Recipe_PackagedTurboFuel_C"
+				],
+				"scannerResources": [],
+				"giveItems": []
+			},
+			"requiredSchematics": [],
+			"type": "EST_MAM",
+			"time": 3,
 			"alternate": false,
 			"mam": false
 		},
@@ -25549,8 +26537,8 @@
 				"recipes": [
 					"Recipe_Mam_C",
 					"Recipe_ObjectScanner_C",
-					"Recipe_Beacon_C",
-					"Recipe_StoragePlayer_C"
+					"Recipe_StoragePlayer_C",
+					"Recipe_Beacon_C"
 				],
 				"scannerResources": [],
 				"giveItems": []
@@ -27816,29 +28804,6 @@
 			"alternate": false,
 			"mam": false
 		},
-		"Schematic_Alternate_Nobelisk1_C": {
-			"className": "Schematic_Alternate_Nobelisk1_C",
-			"name": "Alternate: Seismic Nobelisk",
-			"slug": "alternate-seismic-nobelisk",
-			"tier": 4,
-			"cost": [],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [
-					"Recipe_Alternate_Nobelisk_1_C"
-				],
-				"scannerResources": [],
-				"giveItems": []
-			},
-			"requiredSchematics": [
-				"Research_Sulfur_3_2_1_C",
-				"Research_Quartz_1_1_C"
-			],
-			"type": "EST_Alternate",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
 		"Schematic_Alternate_NuclearFuelRod1_C": {
 			"className": "Schematic_Alternate_NuclearFuelRod1_C",
 			"name": "Alternate: Uranium Fuel Unit",
@@ -27945,29 +28910,6 @@
 			},
 			"requiredSchematics": [
 				"Schematic_8-5_C"
-			],
-			"type": "EST_Alternate",
-			"time": 0,
-			"alternate": false,
-			"mam": false
-		},
-		"Schematic_Alternate_PolyesterFabric_C": {
-			"className": "Schematic_Alternate_PolyesterFabric_C",
-			"name": "Alternate: Polyester Fabric",
-			"slug": "alternate-polyester-fabric",
-			"tier": 0,
-			"cost": [],
-			"unlock": {
-				"inventorySlots": 0,
-				"recipes": [
-					"Recipe_Alternate_PolyesterFabric_C"
-				],
-				"scannerResources": [],
-				"giveItems": []
-			},
-			"requiredSchematics": [
-				"Research_Mycelia_2_C",
-				"Schematic_5-1_C"
 			],
 			"type": "EST_Alternate",
 			"time": 0,
@@ -28955,21 +29897,22 @@
 		"Build_GeneratorBiomass_C": {
 			"className": "Build_GeneratorBiomass_C",
 			"fuel": [
+				"Desc_HogParts_C",
+				"Desc_SpitterParts_C",
+				"Desc_FlowerPetals_C",
+				"Desc_Leaves_C",
+				"Desc_Mycelia_C",
+				"Desc_Wood_C",
 				"Desc_Biofuel_C",
 				"Desc_PackagedBiofuel_C",
-				"Desc_FlowerPetals_C",
 				"Desc_GenericBiomass_C",
-				"Desc_Leaves_C",
-				"Desc_Wood_C",
 				"Desc_LiquidBiofuel_C",
 				"Desc_PackagedAlumina_C",
-				"Desc_Fabric_C",
-				"Desc_Mycelia_C",
 				"Desc_PackagedSulfuricAcid_C",
 				"Desc_PackagedNitrogenGas_C",
 				"Desc_PackagedNitricAcid_C",
-				"Desc_HogParts_C",
-				"Desc_SpitterParts_C"
+				"Desc_Fabric_C",
+				"Desc_StingerParts_C"
 			],
 			"powerProduction": 30,
 			"powerProductionExponent": 1.3,
@@ -29211,7 +30154,7 @@
 			"categories": [
 				"SC_Manufacturers_C"
 			],
-			"buildMenuPriority": 2,
+			"buildMenuPriority": null,
 			"className": "Desc_AssemblerMk1_C",
 			"metadata": {
 				"powerConsumption": 15,
@@ -29231,7 +30174,7 @@
 			"categories": [
 				"SC_Beams_C"
 			],
-			"buildMenuPriority": 2,
+			"buildMenuPriority": null,
 			"className": "Desc_Beam_C",
 			"metadata": {
 				"maxLength": 4000
@@ -29249,7 +30192,7 @@
 			"categories": [
 				"SC_Beams_C"
 			],
-			"buildMenuPriority": 5,
+			"buildMenuPriority": null,
 			"className": "Desc_Beam_Connector_C",
 			"metadata": {},
 			"size": {
@@ -29265,7 +30208,7 @@
 			"categories": [
 				"SC_Beams_C"
 			],
-			"buildMenuPriority": 5,
+			"buildMenuPriority": null,
 			"className": "Desc_Beam_Connector_Double_C",
 			"metadata": {},
 			"size": {
@@ -29281,7 +30224,7 @@
 			"categories": [
 				"SC_Beams_C"
 			],
-			"buildMenuPriority": 4,
+			"buildMenuPriority": null,
 			"className": "Desc_Beam_Painted_C",
 			"metadata": {
 				"maxLength": 4000
@@ -29299,7 +30242,7 @@
 			"categories": [
 				"SC_Beams_C"
 			],
-			"buildMenuPriority": 6,
+			"buildMenuPriority": null,
 			"className": "Desc_Beam_Support_C",
 			"metadata": {},
 			"size": {
@@ -29315,7 +30258,7 @@
 			"categories": [
 				"SC_Manufacturers_C"
 			],
-			"buildMenuPriority": 13,
+			"buildMenuPriority": null,
 			"className": "Desc_Blender_C",
 			"metadata": {
 				"powerConsumption": 75,
@@ -29335,7 +30278,7 @@
 			"categories": [
 				"SC_Catwalks_C"
 			],
-			"buildMenuPriority": 102,
+			"buildMenuPriority": null,
 			"className": "Desc_CatwalkCross_C",
 			"metadata": {},
 			"size": {
@@ -29351,7 +30294,7 @@
 			"categories": [
 				"SC_Catwalks_C"
 			],
-			"buildMenuPriority": 102,
+			"buildMenuPriority": null,
 			"className": "Desc_CatwalkRamp_C",
 			"metadata": {},
 			"size": {
@@ -29367,7 +30310,7 @@
 			"categories": [
 				"SC_Catwalks_C"
 			],
-			"buildMenuPriority": 102,
+			"buildMenuPriority": null,
 			"className": "Desc_CatwalkStairs_C",
 			"metadata": {},
 			"size": {
@@ -29383,7 +30326,7 @@
 			"categories": [
 				"SC_Catwalks_C"
 			],
-			"buildMenuPriority": 99,
+			"buildMenuPriority": null,
 			"className": "Desc_CatwalkStraight_C",
 			"metadata": {},
 			"size": {
@@ -29399,7 +30342,7 @@
 			"categories": [
 				"SC_Catwalks_C"
 			],
-			"buildMenuPriority": 101,
+			"buildMenuPriority": null,
 			"className": "Desc_CatwalkT_C",
 			"metadata": {},
 			"size": {
@@ -29415,7 +30358,7 @@
 			"categories": [
 				"SC_Catwalks_C"
 			],
-			"buildMenuPriority": 100,
+			"buildMenuPriority": null,
 			"className": "Desc_CatwalkTurn_C",
 			"metadata": {},
 			"size": {
@@ -29431,7 +30374,7 @@
 			"categories": [
 				"SC_Lights_C"
 			],
-			"buildMenuPriority": 2,
+			"buildMenuPriority": null,
 			"className": "Desc_CeilingLight_C",
 			"metadata": {
 				"powerConsumption": 2
@@ -29449,7 +30392,7 @@
 			"categories": [
 				"SC_Attach_C"
 			],
-			"buildMenuPriority": 1,
+			"buildMenuPriority": null,
 			"className": "Desc_Concrete_Barrier_01_C",
 			"metadata": {},
 			"size": {
@@ -29465,7 +30408,7 @@
 			"categories": [
 				"SC_Manufacturers_C"
 			],
-			"buildMenuPriority": 1,
+			"buildMenuPriority": null,
 			"className": "Desc_ConstructorMk1_C",
 			"metadata": {
 				"powerConsumption": 4,
@@ -29485,7 +30428,7 @@
 			"categories": [
 				"SC_ConveyorAttachments_C"
 			],
-			"buildMenuPriority": 1,
+			"buildMenuPriority": null,
 			"className": "Desc_ConveyorAttachmentMerger_C",
 			"metadata": {
 				"powerConsumption": 0,
@@ -29504,7 +30447,7 @@
 			"categories": [
 				"SC_ConveyorAttachments_C"
 			],
-			"buildMenuPriority": 4,
+			"buildMenuPriority": null,
 			"className": "Desc_ConveyorAttachmentSplitterProgrammable_C",
 			"metadata": {
 				"powerConsumption": 0,
@@ -29523,7 +30466,7 @@
 			"categories": [
 				"SC_ConveyorAttachments_C"
 			],
-			"buildMenuPriority": 3,
+			"buildMenuPriority": null,
 			"className": "Desc_ConveyorAttachmentSplitterSmart_C",
 			"metadata": {
 				"powerConsumption": 0,
@@ -29542,7 +30485,7 @@
 			"categories": [
 				"SC_ConveyorAttachments_C"
 			],
-			"buildMenuPriority": 2,
+			"buildMenuPriority": null,
 			"className": "Desc_ConveyorAttachmentSplitter_C",
 			"metadata": {
 				"powerConsumption": 0,
@@ -29561,7 +30504,7 @@
 			"categories": [
 				"SC_ConveyorBelts_C"
 			],
-			"buildMenuPriority": 31,
+			"buildMenuPriority": null,
 			"className": "Desc_ConveyorBeltMk1_C",
 			"metadata": {
 				"beltSpeed": 60,
@@ -29582,7 +30525,7 @@
 			"categories": [
 				"SC_ConveyorBelts_C"
 			],
-			"buildMenuPriority": 32,
+			"buildMenuPriority": null,
 			"className": "Desc_ConveyorBeltMk2_C",
 			"metadata": {
 				"beltSpeed": 120,
@@ -29603,7 +30546,7 @@
 			"categories": [
 				"SC_ConveyorBelts_C"
 			],
-			"buildMenuPriority": 33,
+			"buildMenuPriority": null,
 			"className": "Desc_ConveyorBeltMk3_C",
 			"metadata": {
 				"beltSpeed": 270,
@@ -29624,7 +30567,7 @@
 			"categories": [
 				"SC_ConveyorBelts_C"
 			],
-			"buildMenuPriority": 34,
+			"buildMenuPriority": null,
 			"className": "Desc_ConveyorBeltMk4_C",
 			"metadata": {
 				"beltSpeed": 480,
@@ -29645,7 +30588,7 @@
 			"categories": [
 				"SC_ConveyorBelts_C"
 			],
-			"buildMenuPriority": 35,
+			"buildMenuPriority": null,
 			"className": "Desc_ConveyorBeltMk5_C",
 			"metadata": {
 				"beltSpeed": 780,
@@ -29666,7 +30609,7 @@
 			"categories": [
 				"SC_ConveyLift_C"
 			],
-			"buildMenuPriority": 1,
+			"buildMenuPriority": null,
 			"className": "Desc_ConveyorLiftMk1_C",
 			"metadata": {
 				"beltSpeed": 60,
@@ -29687,7 +30630,7 @@
 			"categories": [
 				"SC_ConveyLift_C"
 			],
-			"buildMenuPriority": 2,
+			"buildMenuPriority": null,
 			"className": "Desc_ConveyorLiftMk2_C",
 			"metadata": {
 				"beltSpeed": 120,
@@ -29708,7 +30651,7 @@
 			"categories": [
 				"SC_ConveyLift_C"
 			],
-			"buildMenuPriority": 3,
+			"buildMenuPriority": null,
 			"className": "Desc_ConveyorLiftMk3_C",
 			"metadata": {
 				"beltSpeed": 270,
@@ -29729,7 +30672,7 @@
 			"categories": [
 				"SC_ConveyLift_C"
 			],
-			"buildMenuPriority": 4,
+			"buildMenuPriority": null,
 			"className": "Desc_ConveyorLiftMk4_C",
 			"metadata": {
 				"beltSpeed": 480,
@@ -29750,7 +30693,7 @@
 			"categories": [
 				"SC_ConveyLift_C"
 			],
-			"buildMenuPriority": 5,
+			"buildMenuPriority": null,
 			"className": "Desc_ConveyorLiftMk5_C",
 			"metadata": {
 				"beltSpeed": 780,
@@ -29785,7 +30728,7 @@
 			"categories": [
 				"SC_ConverPole_C"
 			],
-			"buildMenuPriority": 31,
+			"buildMenuPriority": null,
 			"className": "Desc_ConveyorPoleWall_C",
 			"metadata": {},
 			"size": {
@@ -29829,7 +30772,7 @@
 			"categories": [
 				"SC_Vehicles_C"
 			],
-			"buildMenuPriority": 5,
+			"buildMenuPriority": null,
 			"className": "Desc_DroneStation_C",
 			"metadata": {
 				"powerConsumption": 100,
@@ -29876,7 +30819,7 @@
 			"categories": [
 				"SC_Attach_C"
 			],
-			"buildMenuPriority": 2,
+			"buildMenuPriority": null,
 			"className": "Desc_Fence_01_C",
 			"metadata": {},
 			"size": {
@@ -29892,7 +30835,7 @@
 			"categories": [
 				"SC_Frames_C"
 			],
-			"buildMenuPriority": 1,
+			"buildMenuPriority": null,
 			"className": "Desc_Flat_Frame_01_C",
 			"metadata": {},
 			"size": {
@@ -29908,7 +30851,7 @@
 			"categories": [
 				"SC_Lights_C"
 			],
-			"buildMenuPriority": 3,
+			"buildMenuPriority": null,
 			"className": "Desc_FloodlightPole_C",
 			"metadata": {
 				"powerConsumption": 6
@@ -29926,7 +30869,7 @@
 			"categories": [
 				"SC_Lights_C"
 			],
-			"buildMenuPriority": 4,
+			"buildMenuPriority": null,
 			"className": "Desc_FloodlightWall_C",
 			"metadata": {
 				"powerConsumption": 6
@@ -29944,7 +30887,7 @@
 			"categories": [
 				"SC_Frames_C"
 			],
-			"buildMenuPriority": 4,
+			"buildMenuPriority": null,
 			"className": "Desc_FoundationGlass_01_C",
 			"metadata": {},
 			"size": {
@@ -29960,7 +30903,7 @@
 			"categories": [
 				"SC_HyperTubes_C"
 			],
-			"buildMenuPriority": 8,
+			"buildMenuPriority": null,
 			"className": "Desc_FoundationPassthrough_Hypertube_C",
 			"metadata": {},
 			"size": {
@@ -29976,7 +30919,7 @@
 			"categories": [
 				"SC_ConverPole_C"
 			],
-			"buildMenuPriority": 8,
+			"buildMenuPriority": null,
 			"className": "Desc_FoundationPassthrough_Lift_C",
 			"metadata": {},
 			"size": {
@@ -29992,7 +30935,7 @@
 			"categories": [
 				"SC_PipeSupport_C"
 			],
-			"buildMenuPriority": 8,
+			"buildMenuPriority": null,
 			"className": "Desc_FoundationPassthrough_Pipe_C",
 			"metadata": {},
 			"size": {
@@ -30008,7 +30951,7 @@
 			"categories": [
 				"SC_Floors_C"
 			],
-			"buildMenuPriority": 1,
+			"buildMenuPriority": null,
 			"className": "Desc_Foundation_8x1_01_C",
 			"metadata": {},
 			"size": {
@@ -30024,7 +30967,7 @@
 			"categories": [
 				"SC_Floors_C"
 			],
-			"buildMenuPriority": 2,
+			"buildMenuPriority": null,
 			"className": "Desc_Foundation_8x2_01_C",
 			"metadata": {},
 			"size": {
@@ -30040,7 +30983,7 @@
 			"categories": [
 				"SC_Floors_C"
 			],
-			"buildMenuPriority": 3,
+			"buildMenuPriority": null,
 			"className": "Desc_Foundation_8x4_01_C",
 			"metadata": {},
 			"size": {
@@ -30056,7 +30999,7 @@
 			"categories": [
 				"SC_Floors_C"
 			],
-			"buildMenuPriority": 1,
+			"buildMenuPriority": null,
 			"className": "Desc_Foundation_Asphalt_8x1_C",
 			"metadata": {},
 			"size": {
@@ -30072,7 +31015,7 @@
 			"categories": [
 				"SC_Floors_C"
 			],
-			"buildMenuPriority": 2,
+			"buildMenuPriority": null,
 			"className": "Desc_Foundation_Asphalt_8x2_C",
 			"metadata": {},
 			"size": {
@@ -30088,7 +31031,7 @@
 			"categories": [
 				"SC_Floors_C"
 			],
-			"buildMenuPriority": 3,
+			"buildMenuPriority": null,
 			"className": "Desc_Foundation_Asphalt_8x4_C",
 			"metadata": {},
 			"size": {
@@ -30104,7 +31047,7 @@
 			"categories": [
 				"SC_Floors_C"
 			],
-			"buildMenuPriority": 0,
+			"buildMenuPriority": null,
 			"className": "Desc_Foundation_ConcretePolished_8x1_C",
 			"metadata": {},
 			"size": {
@@ -30148,7 +31091,7 @@
 			"categories": [
 				"SC_Floors_C"
 			],
-			"buildMenuPriority": 1,
+			"buildMenuPriority": null,
 			"className": "Desc_Foundation_Concrete_8x1_C",
 			"metadata": {},
 			"size": {
@@ -30164,7 +31107,7 @@
 			"categories": [
 				"SC_Floors_C"
 			],
-			"buildMenuPriority": 2,
+			"buildMenuPriority": null,
 			"className": "Desc_Foundation_Concrete_8x2_C",
 			"metadata": {},
 			"size": {
@@ -30180,7 +31123,7 @@
 			"categories": [
 				"SC_Floors_C"
 			],
-			"buildMenuPriority": 3,
+			"buildMenuPriority": null,
 			"className": "Desc_Foundation_Concrete_8x4_C",
 			"metadata": {},
 			"size": {
@@ -30196,7 +31139,7 @@
 			"categories": [
 				"SC_Frames_C"
 			],
-			"buildMenuPriority": 2,
+			"buildMenuPriority": null,
 			"className": "Desc_Foundation_Frame_01_C",
 			"metadata": {},
 			"size": {
@@ -30212,7 +31155,7 @@
 			"categories": [
 				"SC_Floors_C"
 			],
-			"buildMenuPriority": 1,
+			"buildMenuPriority": null,
 			"className": "Desc_Foundation_Metal_8x1_C",
 			"metadata": {},
 			"size": {
@@ -30228,7 +31171,7 @@
 			"categories": [
 				"SC_Floors_C"
 			],
-			"buildMenuPriority": 2,
+			"buildMenuPriority": null,
 			"className": "Desc_Foundation_Metal_8x2_C",
 			"metadata": {},
 			"size": {
@@ -30244,7 +31187,7 @@
 			"categories": [
 				"SC_Floors_C"
 			],
-			"buildMenuPriority": 3,
+			"buildMenuPriority": null,
 			"className": "Desc_Foundation_Metal_8x4_C",
 			"metadata": {},
 			"size": {
@@ -30260,7 +31203,7 @@
 			"categories": [
 				"SC_Smelters_C"
 			],
-			"buildMenuPriority": 8,
+			"buildMenuPriority": null,
 			"className": "Desc_FoundryMk1_C",
 			"metadata": {
 				"powerConsumption": 16,
@@ -30280,7 +31223,7 @@
 			"categories": [
 				"SC_OilProduction_C"
 			],
-			"buildMenuPriority": 4,
+			"buildMenuPriority": null,
 			"className": "Desc_FrackingExtractor_C",
 			"metadata": {
 				"powerConsumption": 0,
@@ -30299,7 +31242,7 @@
 			"categories": [
 				"SC_OilProduction_C"
 			],
-			"buildMenuPriority": 3,
+			"buildMenuPriority": null,
 			"className": "Desc_FrackingSmasher_C",
 			"metadata": {
 				"powerConsumption": 150,
@@ -30332,7 +31275,7 @@
 			"categories": [
 				"SC_Doors_C"
 			],
-			"buildMenuPriority": 3,
+			"buildMenuPriority": null,
 			"className": "Desc_Gate_Automated_8x4_C",
 			"metadata": {},
 			"size": {
@@ -30348,7 +31291,7 @@
 			"categories": [
 				"SC_Generators_C"
 			],
-			"buildMenuPriority": 1,
+			"buildMenuPriority": null,
 			"className": "Desc_GeneratorBiomass_C",
 			"metadata": {
 				"powerConsumption": 0,
@@ -30367,7 +31310,7 @@
 			"categories": [
 				"SC_Generators_C"
 			],
-			"buildMenuPriority": 3,
+			"buildMenuPriority": null,
 			"className": "Desc_GeneratorCoal_C",
 			"metadata": {
 				"powerConsumption": 0,
@@ -30386,7 +31329,7 @@
 			"categories": [
 				"SC_Generators_C"
 			],
-			"buildMenuPriority": 6,
+			"buildMenuPriority": null,
 			"className": "Desc_GeneratorFuel_C",
 			"metadata": {
 				"powerConsumption": 0,
@@ -30405,7 +31348,7 @@
 			"categories": [
 				"SC_Generators_C"
 			],
-			"buildMenuPriority": 7,
+			"buildMenuPriority": null,
 			"className": "Desc_GeneratorGeoThermal_C",
 			"metadata": {
 				"powerConsumption": 0,
@@ -30424,7 +31367,7 @@
 			"categories": [
 				"SC_Generators_C"
 			],
-			"buildMenuPriority": 8,
+			"buildMenuPriority": null,
 			"className": "Desc_GeneratorNuclear_C",
 			"metadata": {
 				"powerConsumption": 0,
@@ -30443,7 +31386,7 @@
 			"categories": [
 				"SC_Manufacturers_C"
 			],
-			"buildMenuPriority": 21,
+			"buildMenuPriority": null,
 			"className": "Desc_HadronCollider_C",
 			"metadata": {
 				"powerConsumption": 875,
@@ -30480,7 +31423,7 @@
 			"categories": [
 				"SC_HyperTubes_C"
 			],
-			"buildMenuPriority": 6,
+			"buildMenuPriority": null,
 			"className": "Desc_HyperTubeWallHole_C",
 			"metadata": {},
 			"size": {
@@ -30496,7 +31439,7 @@
 			"categories": [
 				"SC_HyperTubes_C"
 			],
-			"buildMenuPriority": 5,
+			"buildMenuPriority": null,
 			"className": "Desc_HyperTubeWallSupport_C",
 			"metadata": {},
 			"size": {
@@ -30512,7 +31455,7 @@
 			"categories": [
 				"SC_Storage_C"
 			],
-			"buildMenuPriority": 65,
+			"buildMenuPriority": null,
 			"className": "Desc_IndustrialTank_C",
 			"metadata": {
 				"powerConsumption": 0,
@@ -30532,7 +31475,7 @@
 			"categories": [
 				"SC_Inverted_C"
 			],
-			"buildMenuPriority": 1,
+			"buildMenuPriority": null,
 			"className": "Desc_InvertedRamp_Asphalt_8x1_C",
 			"metadata": {},
 			"size": {
@@ -30548,7 +31491,7 @@
 			"categories": [
 				"SC_Inverted_C"
 			],
-			"buildMenuPriority": 2,
+			"buildMenuPriority": null,
 			"className": "Desc_InvertedRamp_Asphalt_8x2_C",
 			"metadata": {},
 			"size": {
@@ -30564,7 +31507,7 @@
 			"categories": [
 				"SC_Inverted_C"
 			],
-			"buildMenuPriority": 3,
+			"buildMenuPriority": null,
 			"className": "Desc_InvertedRamp_Asphalt_8x4_C",
 			"metadata": {},
 			"size": {
@@ -30580,7 +31523,7 @@
 			"categories": [
 				"SC_Inverted_C"
 			],
-			"buildMenuPriority": 1,
+			"buildMenuPriority": null,
 			"className": "Desc_InvertedRamp_Concrete_8x1_C",
 			"metadata": {},
 			"size": {
@@ -30596,7 +31539,7 @@
 			"categories": [
 				"SC_Inverted_C"
 			],
-			"buildMenuPriority": 2,
+			"buildMenuPriority": null,
 			"className": "Desc_InvertedRamp_Concrete_8x2_C",
 			"metadata": {},
 			"size": {
@@ -30612,7 +31555,7 @@
 			"categories": [
 				"SC_Inverted_C"
 			],
-			"buildMenuPriority": 3,
+			"buildMenuPriority": null,
 			"className": "Desc_InvertedRamp_Concrete_8x4_C",
 			"metadata": {},
 			"size": {
@@ -30628,7 +31571,7 @@
 			"categories": [
 				"SC_Inverted_C"
 			],
-			"buildMenuPriority": 7,
+			"buildMenuPriority": null,
 			"className": "Desc_InvertedRamp_DCorner_Asphalt_8x1_C",
 			"metadata": {},
 			"size": {
@@ -30644,7 +31587,7 @@
 			"categories": [
 				"SC_Inverted_C"
 			],
-			"buildMenuPriority": 8,
+			"buildMenuPriority": null,
 			"className": "Desc_InvertedRamp_DCorner_Asphalt_8x2_C",
 			"metadata": {},
 			"size": {
@@ -30660,7 +31603,7 @@
 			"categories": [
 				"SC_Inverted_C"
 			],
-			"buildMenuPriority": 9,
+			"buildMenuPriority": null,
 			"className": "Desc_InvertedRamp_DCorner_Asphalt_8x4_C",
 			"metadata": {},
 			"size": {
@@ -30676,7 +31619,7 @@
 			"categories": [
 				"SC_Inverted_C"
 			],
-			"buildMenuPriority": 7,
+			"buildMenuPriority": null,
 			"className": "Desc_InvertedRamp_DCorner_Concrete_8x1_C",
 			"metadata": {},
 			"size": {
@@ -30692,7 +31635,7 @@
 			"categories": [
 				"SC_Inverted_C"
 			],
-			"buildMenuPriority": 8,
+			"buildMenuPriority": null,
 			"className": "Desc_InvertedRamp_DCorner_Concrete_8x2_C",
 			"metadata": {},
 			"size": {
@@ -30708,7 +31651,7 @@
 			"categories": [
 				"SC_Inverted_C"
 			],
-			"buildMenuPriority": 9,
+			"buildMenuPriority": null,
 			"className": "Desc_InvertedRamp_DCorner_Concrete_8x4_C",
 			"metadata": {},
 			"size": {
@@ -30724,7 +31667,7 @@
 			"categories": [
 				"SC_Inverted_C"
 			],
-			"buildMenuPriority": 7,
+			"buildMenuPriority": null,
 			"className": "Desc_InvertedRamp_DCorner_Metal_8x1_C",
 			"metadata": {},
 			"size": {
@@ -30740,7 +31683,7 @@
 			"categories": [
 				"SC_Inverted_C"
 			],
-			"buildMenuPriority": 8,
+			"buildMenuPriority": null,
 			"className": "Desc_InvertedRamp_DCorner_Metal_8x2_C",
 			"metadata": {},
 			"size": {
@@ -30756,7 +31699,7 @@
 			"categories": [
 				"SC_Inverted_C"
 			],
-			"buildMenuPriority": 9,
+			"buildMenuPriority": null,
 			"className": "Desc_InvertedRamp_DCorner_Metal_8x4_C",
 			"metadata": {},
 			"size": {
@@ -30772,7 +31715,7 @@
 			"categories": [
 				"SC_Inverted_C"
 			],
-			"buildMenuPriority": 7,
+			"buildMenuPriority": null,
 			"className": "Desc_InvertedRamp_DCorner_Polished_8x1_C",
 			"metadata": {},
 			"size": {
@@ -30788,7 +31731,7 @@
 			"categories": [
 				"SC_Inverted_C"
 			],
-			"buildMenuPriority": 8,
+			"buildMenuPriority": null,
 			"className": "Desc_InvertedRamp_DCorner_Polished_8x2_C",
 			"metadata": {},
 			"size": {
@@ -30804,7 +31747,7 @@
 			"categories": [
 				"SC_Inverted_C"
 			],
-			"buildMenuPriority": 9,
+			"buildMenuPriority": null,
 			"className": "Desc_InvertedRamp_DCorner_Polished_8x4_C",
 			"metadata": {},
 			"size": {
@@ -30820,7 +31763,7 @@
 			"categories": [
 				"SC_Inverted_C"
 			],
-			"buildMenuPriority": 1,
+			"buildMenuPriority": null,
 			"className": "Desc_InvertedRamp_Metal_8x1_C",
 			"metadata": {},
 			"size": {
@@ -30836,7 +31779,7 @@
 			"categories": [
 				"SC_Inverted_C"
 			],
-			"buildMenuPriority": 2,
+			"buildMenuPriority": null,
 			"className": "Desc_InvertedRamp_Metal_8x2_C",
 			"metadata": {},
 			"size": {
@@ -30852,7 +31795,7 @@
 			"categories": [
 				"SC_Inverted_C"
 			],
-			"buildMenuPriority": 3,
+			"buildMenuPriority": null,
 			"className": "Desc_InvertedRamp_Metal_8x4_C",
 			"metadata": {},
 			"size": {
@@ -30868,7 +31811,7 @@
 			"categories": [
 				"SC_Inverted_C"
 			],
-			"buildMenuPriority": 1,
+			"buildMenuPriority": null,
 			"className": "Desc_InvertedRamp_Polished_8x1_C",
 			"metadata": {},
 			"size": {
@@ -30884,7 +31827,7 @@
 			"categories": [
 				"SC_Inverted_C"
 			],
-			"buildMenuPriority": 2,
+			"buildMenuPriority": null,
 			"className": "Desc_InvertedRamp_Polished_8x2_C",
 			"metadata": {},
 			"size": {
@@ -30900,7 +31843,7 @@
 			"categories": [
 				"SC_Inverted_C"
 			],
-			"buildMenuPriority": 3,
+			"buildMenuPriority": null,
 			"className": "Desc_InvertedRamp_Polished_8x4_C",
 			"metadata": {},
 			"size": {
@@ -30916,7 +31859,7 @@
 			"categories": [
 				"SC_Inverted_C"
 			],
-			"buildMenuPriority": 4,
+			"buildMenuPriority": null,
 			"className": "Desc_InvertedRamp_UCorner_Asphalt_8x1_C",
 			"metadata": {},
 			"size": {
@@ -30932,7 +31875,7 @@
 			"categories": [
 				"SC_Inverted_C"
 			],
-			"buildMenuPriority": 5,
+			"buildMenuPriority": null,
 			"className": "Desc_InvertedRamp_UCorner_Asphalt_8x2_C",
 			"metadata": {},
 			"size": {
@@ -30948,7 +31891,7 @@
 			"categories": [
 				"SC_Inverted_C"
 			],
-			"buildMenuPriority": 6,
+			"buildMenuPriority": null,
 			"className": "Desc_InvertedRamp_UCorner_Asphalt_8x4_C",
 			"metadata": {},
 			"size": {
@@ -30964,7 +31907,7 @@
 			"categories": [
 				"SC_Inverted_C"
 			],
-			"buildMenuPriority": 4,
+			"buildMenuPriority": null,
 			"className": "Desc_InvertedRamp_UCorner_Concrete_8x1_C",
 			"metadata": {},
 			"size": {
@@ -30980,7 +31923,7 @@
 			"categories": [
 				"SC_Inverted_C"
 			],
-			"buildMenuPriority": 5,
+			"buildMenuPriority": null,
 			"className": "Desc_InvertedRamp_UCorner_Concrete_8x2_C",
 			"metadata": {},
 			"size": {
@@ -30996,7 +31939,7 @@
 			"categories": [
 				"SC_Inverted_C"
 			],
-			"buildMenuPriority": 6,
+			"buildMenuPriority": null,
 			"className": "Desc_InvertedRamp_UCorner_Concrete_8x4_C",
 			"metadata": {},
 			"size": {
@@ -31012,7 +31955,7 @@
 			"categories": [
 				"SC_Inverted_C"
 			],
-			"buildMenuPriority": 4,
+			"buildMenuPriority": null,
 			"className": "Desc_InvertedRamp_UCorner_Metal_8x1_C",
 			"metadata": {},
 			"size": {
@@ -31028,7 +31971,7 @@
 			"categories": [
 				"SC_Inverted_C"
 			],
-			"buildMenuPriority": 5,
+			"buildMenuPriority": null,
 			"className": "Desc_InvertedRamp_UCorner_Metal_8x2_C",
 			"metadata": {},
 			"size": {
@@ -31044,7 +31987,7 @@
 			"categories": [
 				"SC_Inverted_C"
 			],
-			"buildMenuPriority": 6,
+			"buildMenuPriority": null,
 			"className": "Desc_InvertedRamp_UCorner_Metal_8x4_C",
 			"metadata": {},
 			"size": {
@@ -31060,7 +32003,7 @@
 			"categories": [
 				"SC_Inverted_C"
 			],
-			"buildMenuPriority": 4,
+			"buildMenuPriority": null,
 			"className": "Desc_InvertedRamp_UCorner_Polished_8x1_C",
 			"metadata": {},
 			"size": {
@@ -31076,7 +32019,7 @@
 			"categories": [
 				"SC_Inverted_C"
 			],
-			"buildMenuPriority": 5,
+			"buildMenuPriority": null,
 			"className": "Desc_InvertedRamp_UCorner_Polished_8x2_C",
 			"metadata": {},
 			"size": {
@@ -31092,7 +32035,7 @@
 			"categories": [
 				"SC_Inverted_C"
 			],
-			"buildMenuPriority": 6,
+			"buildMenuPriority": null,
 			"className": "Desc_InvertedRamp_UCorner_Polished_8x4_C",
 			"metadata": {},
 			"size": {
@@ -31108,7 +32051,7 @@
 			"categories": [
 				"SC_JumpPads_C"
 			],
-			"buildMenuPriority": 65,
+			"buildMenuPriority": null,
 			"className": "Desc_JumpPadAdjustable_C",
 			"metadata": {
 				"powerConsumption": 5,
@@ -31127,7 +32070,7 @@
 			"categories": [
 				"SC_Attach_C"
 			],
-			"buildMenuPriority": 3,
+			"buildMenuPriority": null,
 			"className": "Desc_Ladder_C",
 			"metadata": {},
 			"size": {
@@ -31143,7 +32086,7 @@
 			"categories": [
 				"SC_JumpPads_C"
 			],
-			"buildMenuPriority": 66,
+			"buildMenuPriority": null,
 			"className": "Desc_LandingPad_C",
 			"metadata": {
 				"powerConsumption": 5,
@@ -31162,7 +32105,7 @@
 			"categories": [
 				"SC_Lights_C"
 			],
-			"buildMenuPriority": 10,
+			"buildMenuPriority": null,
 			"className": "Desc_LightsControlPanel_C",
 			"metadata": {},
 			"size": {
@@ -31194,7 +32137,7 @@
 			"categories": [
 				"SC_Towers_C"
 			],
-			"buildMenuPriority": 0,
+			"buildMenuPriority": null,
 			"className": "Desc_LookoutTower_C",
 			"metadata": {
 				"powerConsumption": 0,
@@ -31213,7 +32156,7 @@
 			"categories": [
 				"SC_Special_C"
 			],
-			"buildMenuPriority": 3,
+			"buildMenuPriority": null,
 			"className": "Desc_Mam_C",
 			"metadata": {},
 			"size": {
@@ -31229,7 +32172,7 @@
 			"categories": [
 				"SC_Manufacturers_C"
 			],
-			"buildMenuPriority": 3,
+			"buildMenuPriority": null,
 			"className": "Desc_ManufacturerMk1_C",
 			"metadata": {
 				"powerConsumption": 55,
@@ -31249,7 +32192,7 @@
 			"categories": [
 				"SC_Miners_C"
 			],
-			"buildMenuPriority": 3,
+			"buildMenuPriority": null,
 			"className": "Desc_MinerMk1_C",
 			"metadata": {
 				"powerConsumption": 5,
@@ -31268,7 +32211,7 @@
 			"categories": [
 				"SC_Miners_C"
 			],
-			"buildMenuPriority": 4,
+			"buildMenuPriority": null,
 			"className": "Desc_MinerMk2_C",
 			"metadata": {
 				"powerConsumption": 12,
@@ -31287,7 +32230,7 @@
 			"categories": [
 				"SC_Miners_C"
 			],
-			"buildMenuPriority": 5,
+			"buildMenuPriority": null,
 			"className": "Desc_MinerMk3_C",
 			"metadata": {
 				"powerConsumption": 30,
@@ -31306,7 +32249,7 @@
 			"categories": [
 				"SC_OilProduction_C"
 			],
-			"buildMenuPriority": 2,
+			"buildMenuPriority": null,
 			"className": "Desc_OilPump_C",
 			"metadata": {
 				"powerConsumption": 40,
@@ -31325,7 +32268,7 @@
 			"categories": [
 				"SC_Manufacturers_C"
 			],
-			"buildMenuPriority": 12,
+			"buildMenuPriority": null,
 			"className": "Desc_OilRefinery_C",
 			"metadata": {
 				"powerConsumption": 30,
@@ -31345,7 +32288,7 @@
 			"categories": [
 				"SC_Manufacturers_C"
 			],
-			"buildMenuPriority": 11,
+			"buildMenuPriority": null,
 			"className": "Desc_Packager_C",
 			"metadata": {
 				"powerConsumption": 10,
@@ -31365,7 +32308,7 @@
 			"categories": [
 				"SC_Pillars_C"
 			],
-			"buildMenuPriority": 0,
+			"buildMenuPriority": null,
 			"className": "Desc_PillarBase_C",
 			"metadata": {},
 			"size": {
@@ -31381,7 +32324,7 @@
 			"categories": [
 				"SC_Pillars_C"
 			],
-			"buildMenuPriority": 10,
+			"buildMenuPriority": null,
 			"className": "Desc_PillarBase_Small_C",
 			"metadata": {},
 			"size": {
@@ -31397,7 +32340,7 @@
 			"categories": [
 				"SC_Pillars_C"
 			],
-			"buildMenuPriority": 2,
+			"buildMenuPriority": null,
 			"className": "Desc_PillarMiddle_C",
 			"metadata": {},
 			"size": {
@@ -31413,7 +32356,7 @@
 			"categories": [
 				"SC_Pillars_C"
 			],
-			"buildMenuPriority": 3,
+			"buildMenuPriority": null,
 			"className": "Desc_PillarMiddle_Concrete_C",
 			"metadata": {},
 			"size": {
@@ -31429,7 +32372,7 @@
 			"categories": [
 				"SC_Pillars_C"
 			],
-			"buildMenuPriority": 4,
+			"buildMenuPriority": null,
 			"className": "Desc_PillarMiddle_Frame_C",
 			"metadata": {},
 			"size": {
@@ -31445,7 +32388,7 @@
 			"categories": [
 				"SC_Pillars_C"
 			],
-			"buildMenuPriority": 1,
+			"buildMenuPriority": null,
 			"className": "Desc_PillarTop_C",
 			"metadata": {},
 			"size": {
@@ -31461,7 +32404,7 @@
 			"categories": [
 				"SC_Pillars_C"
 			],
-			"buildMenuPriority": 13,
+			"buildMenuPriority": null,
 			"className": "Desc_Pillar_Small_Concrete_C",
 			"metadata": {},
 			"size": {
@@ -31477,7 +32420,7 @@
 			"categories": [
 				"SC_Pillars_C"
 			],
-			"buildMenuPriority": 14,
+			"buildMenuPriority": null,
 			"className": "Desc_Pillar_Small_Frame_C",
 			"metadata": {},
 			"size": {
@@ -31493,7 +32436,7 @@
 			"categories": [
 				"SC_Pillars_C"
 			],
-			"buildMenuPriority": 12,
+			"buildMenuPriority": null,
 			"className": "Desc_Pillar_Small_Metal_C",
 			"metadata": {},
 			"size": {
@@ -31509,7 +32452,7 @@
 			"categories": [
 				"SC_HyperTubes_C"
 			],
-			"buildMenuPriority": 2,
+			"buildMenuPriority": null,
 			"className": "Desc_PipeHyperStart_C",
 			"metadata": {
 				"powerConsumption": 10,
@@ -31542,7 +32485,7 @@
 			"categories": [
 				"SC_HyperTubes_C"
 			],
-			"buildMenuPriority": 1,
+			"buildMenuPriority": null,
 			"className": "Desc_PipeHyper_C",
 			"metadata": {},
 			"size": {
@@ -31558,7 +32501,7 @@
 			"categories": [
 				"SC_Storage_C"
 			],
-			"buildMenuPriority": 64,
+			"buildMenuPriority": null,
 			"className": "Desc_PipeStorageTank_C",
 			"metadata": {
 				"powerConsumption": 0,
@@ -31592,7 +32535,7 @@
 			"categories": [
 				"SC_Pipes_C"
 			],
-			"buildMenuPriority": 2,
+			"buildMenuPriority": null,
 			"className": "Desc_PipelineJunction_Cross_C",
 			"metadata": {
 				"powerConsumption": 0,
@@ -31611,7 +32554,7 @@
 			"categories": [
 				"SC_Pipes_C"
 			],
-			"buildMenuPriority": 1,
+			"buildMenuPriority": null,
 			"className": "Desc_PipelineMK2_C",
 			"metadata": {
 				"flowLimit": 10
@@ -31629,7 +32572,7 @@
 			"categories": [
 				"SC_Pipes_C"
 			],
-			"buildMenuPriority": 4,
+			"buildMenuPriority": null,
 			"className": "Desc_PipelinePumpMk2_C",
 			"metadata": {
 				"powerConsumption": 8,
@@ -31649,7 +32592,7 @@
 			"categories": [
 				"SC_Pipes_C"
 			],
-			"buildMenuPriority": 3,
+			"buildMenuPriority": null,
 			"className": "Desc_PipelinePump_C",
 			"metadata": {
 				"powerConsumption": 4,
@@ -31669,7 +32612,7 @@
 			"categories": [
 				"SC_PipeSupport_C"
 			],
-			"buildMenuPriority": 3,
+			"buildMenuPriority": null,
 			"className": "Desc_PipelineSupportWallHole_C",
 			"metadata": {},
 			"size": {
@@ -31685,7 +32628,7 @@
 			"categories": [
 				"SC_PipeSupport_C"
 			],
-			"buildMenuPriority": 2,
+			"buildMenuPriority": null,
 			"className": "Desc_PipelineSupportWall_C",
 			"metadata": {},
 			"size": {
@@ -31715,7 +32658,7 @@
 			"categories": [
 				"SC_Pipes_C"
 			],
-			"buildMenuPriority": 0,
+			"buildMenuPriority": null,
 			"className": "Desc_Pipeline_C",
 			"metadata": {
 				"flowLimit": 5
@@ -31733,7 +32676,7 @@
 			"categories": [
 				"SC_PowerPoles_C"
 			],
-			"buildMenuPriority": 0,
+			"buildMenuPriority": null,
 			"className": "Desc_PowerLine_C",
 			"metadata": {
 				"lengthPerCost": 2500,
@@ -31753,7 +32696,7 @@
 			"categories": [
 				"SC_PowerPoles_C"
 			],
-			"buildMenuPriority": 1,
+			"buildMenuPriority": null,
 			"className": "Desc_PowerPoleMk1_C",
 			"metadata": {},
 			"size": {
@@ -31769,7 +32712,7 @@
 			"categories": [
 				"SC_PowerPoles_C"
 			],
-			"buildMenuPriority": 2,
+			"buildMenuPriority": null,
 			"className": "Desc_PowerPoleMk2_C",
 			"metadata": {},
 			"size": {
@@ -31785,7 +32728,7 @@
 			"categories": [
 				"SC_PowerPoles_C"
 			],
-			"buildMenuPriority": 3,
+			"buildMenuPriority": null,
 			"className": "Desc_PowerPoleMk3_C",
 			"metadata": {},
 			"size": {
@@ -31801,7 +32744,7 @@
 			"categories": [
 				"SC_WallPoles_C"
 			],
-			"buildMenuPriority": 5,
+			"buildMenuPriority": null,
 			"className": "Desc_PowerPoleWallDoubleMk2_C",
 			"metadata": {},
 			"size": {
@@ -31817,7 +32760,7 @@
 			"categories": [
 				"SC_WallPoles_C"
 			],
-			"buildMenuPriority": 6,
+			"buildMenuPriority": null,
 			"className": "Desc_PowerPoleWallDoubleMk3_C",
 			"metadata": {},
 			"size": {
@@ -31833,7 +32776,7 @@
 			"categories": [
 				"SC_WallPoles_C"
 			],
-			"buildMenuPriority": 4,
+			"buildMenuPriority": null,
 			"className": "Desc_PowerPoleWallDouble_C",
 			"metadata": {},
 			"size": {
@@ -31849,7 +32792,7 @@
 			"categories": [
 				"SC_WallPoles_C"
 			],
-			"buildMenuPriority": 2,
+			"buildMenuPriority": null,
 			"className": "Desc_PowerPoleWallMk2_C",
 			"metadata": {},
 			"size": {
@@ -31865,7 +32808,7 @@
 			"categories": [
 				"SC_WallPoles_C"
 			],
-			"buildMenuPriority": 3,
+			"buildMenuPriority": null,
 			"className": "Desc_PowerPoleWallMk3_C",
 			"metadata": {},
 			"size": {
@@ -31881,7 +32824,7 @@
 			"categories": [
 				"SC_WallPoles_C"
 			],
-			"buildMenuPriority": 1,
+			"buildMenuPriority": null,
 			"className": "Desc_PowerPoleWall_C",
 			"metadata": {},
 			"size": {
@@ -31897,7 +32840,7 @@
 			"categories": [
 				"SC_Generators_C"
 			],
-			"buildMenuPriority": 10,
+			"buildMenuPriority": null,
 			"className": "Desc_PowerStorageMk1_C",
 			"metadata": {
 				"powerConsumption": 0,
@@ -31916,7 +32859,7 @@
 			"categories": [
 				"SC_PowerPoles_C"
 			],
-			"buildMenuPriority": 4,
+			"buildMenuPriority": null,
 			"className": "Desc_PowerSwitch_C",
 			"metadata": {},
 			"size": {
@@ -31932,7 +32875,7 @@
 			"categories": [
 				"SC_QuatPipes_C"
 			],
-			"buildMenuPriority": 72,
+			"buildMenuPriority": null,
 			"className": "Desc_QuarterPipeCorner_01_C",
 			"metadata": {},
 			"size": {
@@ -31948,7 +32891,7 @@
 			"categories": [
 				"SC_QuatPipes_C"
 			],
-			"buildMenuPriority": 72,
+			"buildMenuPriority": null,
 			"className": "Desc_QuarterPipeCorner_02_C",
 			"metadata": {},
 			"size": {
@@ -31964,7 +32907,7 @@
 			"categories": [
 				"SC_QuatPipes_C"
 			],
-			"buildMenuPriority": 72,
+			"buildMenuPriority": null,
 			"className": "Desc_QuarterPipeCorner_03_C",
 			"metadata": {},
 			"size": {
@@ -31980,7 +32923,7 @@
 			"categories": [
 				"SC_QuatPipes_C"
 			],
-			"buildMenuPriority": 72,
+			"buildMenuPriority": null,
 			"className": "Desc_QuarterPipeCorner_04_C",
 			"metadata": {},
 			"size": {
@@ -31996,7 +32939,7 @@
 			"categories": [
 				"SC_QuatPipes_C"
 			],
-			"buildMenuPriority": 72,
+			"buildMenuPriority": null,
 			"className": "Desc_QuarterPipe_02_C",
 			"metadata": {},
 			"size": {
@@ -32012,7 +32955,7 @@
 			"categories": [
 				"SC_QuatPipes_C"
 			],
-			"buildMenuPriority": 72,
+			"buildMenuPriority": null,
 			"className": "Desc_QuarterPipe_C",
 			"metadata": {},
 			"size": {
@@ -32028,7 +32971,7 @@
 			"categories": [
 				"SC_Towers_C"
 			],
-			"buildMenuPriority": 60,
+			"buildMenuPriority": null,
 			"className": "Desc_RadarTower_C",
 			"metadata": {
 				"powerConsumption": 30,
@@ -32047,7 +32990,7 @@
 			"categories": [
 				"SC_Attach_C"
 			],
-			"buildMenuPriority": 1,
+			"buildMenuPriority": null,
 			"className": "Desc_Railing_01_C",
 			"metadata": {},
 			"size": {
@@ -32063,7 +33006,7 @@
 			"categories": [
 				"SC_Trains_C"
 			],
-			"buildMenuPriority": 54,
+			"buildMenuPriority": null,
 			"className": "Desc_RailroadBlockSignal_C",
 			"metadata": {},
 			"size": {
@@ -32079,7 +33022,7 @@
 			"categories": [
 				"SC_Trains_C"
 			],
-			"buildMenuPriority": 54,
+			"buildMenuPriority": null,
 			"className": "Desc_RailroadPathSignal_C",
 			"metadata": {},
 			"size": {
@@ -32095,7 +33038,7 @@
 			"categories": [
 				"SC_Trains_C"
 			],
-			"buildMenuPriority": 53,
+			"buildMenuPriority": null,
 			"className": "Desc_RailroadTrack_C",
 			"metadata": {},
 			"size": {
@@ -32111,7 +33054,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 10,
+			"buildMenuPriority": null,
 			"className": "Desc_RampDouble_8x1_C",
 			"metadata": {},
 			"size": {
@@ -32127,7 +33070,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 11,
+			"buildMenuPriority": null,
 			"className": "Desc_RampDouble_Asphalt_8x1_C",
 			"metadata": {},
 			"size": {
@@ -32143,7 +33086,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 10,
+			"buildMenuPriority": null,
 			"className": "Desc_RampDouble_Asphalt_8x2_C",
 			"metadata": {},
 			"size": {
@@ -32159,7 +33102,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 12,
+			"buildMenuPriority": null,
 			"className": "Desc_RampDouble_Asphalt_8x4_C",
 			"metadata": {},
 			"size": {
@@ -32175,7 +33118,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 11,
+			"buildMenuPriority": null,
 			"className": "Desc_RampDouble_C",
 			"metadata": {},
 			"size": {
@@ -32191,7 +33134,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 11,
+			"buildMenuPriority": null,
 			"className": "Desc_RampDouble_Concrete_8x1_C",
 			"metadata": {},
 			"size": {
@@ -32207,7 +33150,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 10,
+			"buildMenuPriority": null,
 			"className": "Desc_RampDouble_Concrete_8x2_C",
 			"metadata": {},
 			"size": {
@@ -32223,7 +33166,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 12,
+			"buildMenuPriority": null,
 			"className": "Desc_RampDouble_Concrete_8x4_C",
 			"metadata": {},
 			"size": {
@@ -32239,7 +33182,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 11,
+			"buildMenuPriority": null,
 			"className": "Desc_RampDouble_Metal_8x1_C",
 			"metadata": {},
 			"size": {
@@ -32255,7 +33198,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 10,
+			"buildMenuPriority": null,
 			"className": "Desc_RampDouble_Metal_8x2_C",
 			"metadata": {},
 			"size": {
@@ -32271,7 +33214,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 12,
+			"buildMenuPriority": null,
 			"className": "Desc_RampDouble_Metal_8x4_C",
 			"metadata": {},
 			"size": {
@@ -32287,7 +33230,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 11,
+			"buildMenuPriority": null,
 			"className": "Desc_RampDouble_Polished_8x1_C",
 			"metadata": {},
 			"size": {
@@ -32303,7 +33246,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 10,
+			"buildMenuPriority": null,
 			"className": "Desc_RampDouble_Polished_8x2_C",
 			"metadata": {},
 			"size": {
@@ -32319,7 +33262,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 12,
+			"buildMenuPriority": null,
 			"className": "Desc_RampDouble_Polished_8x4_C",
 			"metadata": {},
 			"size": {
@@ -32335,7 +33278,7 @@
 			"categories": [
 				"SC_Inverted_C"
 			],
-			"buildMenuPriority": 1,
+			"buildMenuPriority": null,
 			"className": "Desc_RampInverted_8x1_C",
 			"metadata": {},
 			"size": {
@@ -32351,7 +33294,7 @@
 			"categories": [
 				"SC_Inverted_C"
 			],
-			"buildMenuPriority": 4,
+			"buildMenuPriority": null,
 			"className": "Desc_RampInverted_8x1_Corner_01_C",
 			"metadata": {},
 			"size": {
@@ -32367,7 +33310,7 @@
 			"categories": [
 				"SC_Inverted_C"
 			],
-			"buildMenuPriority": 7,
+			"buildMenuPriority": null,
 			"className": "Desc_RampInverted_8x1_Corner_02_C",
 			"metadata": {},
 			"size": {
@@ -32383,7 +33326,7 @@
 			"categories": [
 				"SC_Inverted_C"
 			],
-			"buildMenuPriority": 2,
+			"buildMenuPriority": null,
 			"className": "Desc_RampInverted_8x2_01_C",
 			"metadata": {},
 			"size": {
@@ -32399,7 +33342,7 @@
 			"categories": [
 				"SC_Inverted_C"
 			],
-			"buildMenuPriority": 5,
+			"buildMenuPriority": null,
 			"className": "Desc_RampInverted_8x2_Corner_01_C",
 			"metadata": {},
 			"size": {
@@ -32415,7 +33358,7 @@
 			"categories": [
 				"SC_Inverted_C"
 			],
-			"buildMenuPriority": 8,
+			"buildMenuPriority": null,
 			"className": "Desc_RampInverted_8x2_Corner_02_C",
 			"metadata": {},
 			"size": {
@@ -32431,7 +33374,7 @@
 			"categories": [
 				"SC_Inverted_C"
 			],
-			"buildMenuPriority": 6,
+			"buildMenuPriority": null,
 			"className": "Desc_RampInverted_8x4_Corner_01_C",
 			"metadata": {},
 			"size": {
@@ -32447,7 +33390,7 @@
 			"categories": [
 				"SC_Inverted_C"
 			],
-			"buildMenuPriority": 9,
+			"buildMenuPriority": null,
 			"className": "Desc_RampInverted_8x4_Corner_02_C",
 			"metadata": {},
 			"size": {
@@ -32463,7 +33406,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 1,
+			"buildMenuPriority": null,
 			"className": "Desc_Ramp_8x1_01_C",
 			"metadata": {},
 			"size": {
@@ -32479,7 +33422,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 2,
+			"buildMenuPriority": null,
 			"className": "Desc_Ramp_8x2_01_C",
 			"metadata": {},
 			"size": {
@@ -32495,7 +33438,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 3,
+			"buildMenuPriority": null,
 			"className": "Desc_Ramp_8x4_01_C",
 			"metadata": {},
 			"size": {
@@ -32511,7 +33454,7 @@
 			"categories": [
 				"SC_Inverted_C"
 			],
-			"buildMenuPriority": 3,
+			"buildMenuPriority": null,
 			"className": "Desc_Ramp_8x4_Inverted_01_C",
 			"metadata": {},
 			"size": {
@@ -32527,7 +33470,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 12,
+			"buildMenuPriority": null,
 			"className": "Desc_Ramp_8x8x8_C",
 			"metadata": {},
 			"size": {
@@ -32543,7 +33486,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 1,
+			"buildMenuPriority": null,
 			"className": "Desc_Ramp_Asphalt_8x1_C",
 			"metadata": {},
 			"size": {
@@ -32559,7 +33502,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 2,
+			"buildMenuPriority": null,
 			"className": "Desc_Ramp_Asphalt_8x2_C",
 			"metadata": {},
 			"size": {
@@ -32575,7 +33518,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 3,
+			"buildMenuPriority": null,
 			"className": "Desc_Ramp_Asphalt_8x4_C",
 			"metadata": {},
 			"size": {
@@ -32591,7 +33534,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 1,
+			"buildMenuPriority": null,
 			"className": "Desc_Ramp_Concrete_8x1_C",
 			"metadata": {},
 			"size": {
@@ -32607,7 +33550,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 2,
+			"buildMenuPriority": null,
 			"className": "Desc_Ramp_Concrete_8x2_C",
 			"metadata": {},
 			"size": {
@@ -32623,7 +33566,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 3,
+			"buildMenuPriority": null,
 			"className": "Desc_Ramp_Concrete_8x4_C",
 			"metadata": {},
 			"size": {
@@ -32639,7 +33582,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 7,
+			"buildMenuPriority": null,
 			"className": "Desc_Ramp_Diagonal_8x1_01_C",
 			"metadata": {},
 			"size": {
@@ -32655,7 +33598,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 4,
+			"buildMenuPriority": null,
 			"className": "Desc_Ramp_Diagonal_8x1_02_C",
 			"metadata": {},
 			"size": {
@@ -32671,7 +33614,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 9,
+			"buildMenuPriority": null,
 			"className": "Desc_Ramp_Diagonal_8x2_01_C",
 			"metadata": {},
 			"size": {
@@ -32687,7 +33630,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 5,
+			"buildMenuPriority": null,
 			"className": "Desc_Ramp_Diagonal_8x2_02_C",
 			"metadata": {},
 			"size": {
@@ -32703,7 +33646,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 8,
+			"buildMenuPriority": null,
 			"className": "Desc_Ramp_Diagonal_8x4_01_C",
 			"metadata": {},
 			"size": {
@@ -32719,7 +33662,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 6,
+			"buildMenuPriority": null,
 			"className": "Desc_Ramp_Diagonal_8x4_02_C",
 			"metadata": {},
 			"size": {
@@ -32735,7 +33678,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 7,
+			"buildMenuPriority": null,
 			"className": "Desc_Ramp_DownCorner_Asphalt_8x1_C",
 			"metadata": {},
 			"size": {
@@ -32751,7 +33694,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 9,
+			"buildMenuPriority": null,
 			"className": "Desc_Ramp_DownCorner_Asphalt_8x2_C",
 			"metadata": {},
 			"size": {
@@ -32767,7 +33710,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 8,
+			"buildMenuPriority": null,
 			"className": "Desc_Ramp_DownCorner_Asphalt_8x4_C",
 			"metadata": {},
 			"size": {
@@ -32783,7 +33726,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 7,
+			"buildMenuPriority": null,
 			"className": "Desc_Ramp_DownCorner_Concrete_8x1_C",
 			"metadata": {},
 			"size": {
@@ -32799,7 +33742,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 9,
+			"buildMenuPriority": null,
 			"className": "Desc_Ramp_DownCorner_Concrete_8x2_C",
 			"metadata": {},
 			"size": {
@@ -32815,7 +33758,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 8,
+			"buildMenuPriority": null,
 			"className": "Desc_Ramp_DownCorner_Concrete_8x4_C",
 			"metadata": {},
 			"size": {
@@ -32831,7 +33774,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 7,
+			"buildMenuPriority": null,
 			"className": "Desc_Ramp_DownCorner_Metal_8x1_C",
 			"metadata": {},
 			"size": {
@@ -32847,7 +33790,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 9,
+			"buildMenuPriority": null,
 			"className": "Desc_Ramp_DownCorner_Metal_8x2_C",
 			"metadata": {},
 			"size": {
@@ -32863,7 +33806,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 8,
+			"buildMenuPriority": null,
 			"className": "Desc_Ramp_DownCorner_Metal_8x4_C",
 			"metadata": {},
 			"size": {
@@ -32879,7 +33822,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 7,
+			"buildMenuPriority": null,
 			"className": "Desc_Ramp_DownCorner_Polished_8x1_C",
 			"metadata": {},
 			"size": {
@@ -32895,7 +33838,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 9,
+			"buildMenuPriority": null,
 			"className": "Desc_Ramp_DownCorner_Polished_8x2_C",
 			"metadata": {},
 			"size": {
@@ -32911,7 +33854,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 8,
+			"buildMenuPriority": null,
 			"className": "Desc_Ramp_DownCorner_Polished_8x4_C",
 			"metadata": {},
 			"size": {
@@ -32927,7 +33870,7 @@
 			"categories": [
 				"SC_Frames_C"
 			],
-			"buildMenuPriority": 4,
+			"buildMenuPriority": null,
 			"className": "Desc_Ramp_Frame_01_C",
 			"metadata": {},
 			"size": {
@@ -32943,7 +33886,7 @@
 			"categories": [
 				"SC_Frames_C"
 			],
-			"buildMenuPriority": 5,
+			"buildMenuPriority": null,
 			"className": "Desc_Ramp_Frame_Inverted_01_C",
 			"metadata": {},
 			"size": {
@@ -32959,7 +33902,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 1,
+			"buildMenuPriority": null,
 			"className": "Desc_Ramp_Metal_8x1_C",
 			"metadata": {},
 			"size": {
@@ -32975,7 +33918,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 2,
+			"buildMenuPriority": null,
 			"className": "Desc_Ramp_Metal_8x2_C",
 			"metadata": {},
 			"size": {
@@ -32991,7 +33934,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 3,
+			"buildMenuPriority": null,
 			"className": "Desc_Ramp_Metal_8x4_C",
 			"metadata": {},
 			"size": {
@@ -33007,7 +33950,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 1,
+			"buildMenuPriority": null,
 			"className": "Desc_Ramp_Polished_8x1_C",
 			"metadata": {},
 			"size": {
@@ -33023,7 +33966,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 2,
+			"buildMenuPriority": null,
 			"className": "Desc_Ramp_Polished_8x2_C",
 			"metadata": {},
 			"size": {
@@ -33039,7 +33982,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 3,
+			"buildMenuPriority": null,
 			"className": "Desc_Ramp_Polished_8x4_C",
 			"metadata": {},
 			"size": {
@@ -33055,7 +33998,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 4,
+			"buildMenuPriority": null,
 			"className": "Desc_Ramp_UpCorner_Asphalt_8x1_C",
 			"metadata": {},
 			"size": {
@@ -33071,7 +34014,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 5,
+			"buildMenuPriority": null,
 			"className": "Desc_Ramp_UpCorner_Asphalt_8x2_C",
 			"metadata": {},
 			"size": {
@@ -33087,7 +34030,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 6,
+			"buildMenuPriority": null,
 			"className": "Desc_Ramp_UpCorner_Asphalt_8x4_C",
 			"metadata": {},
 			"size": {
@@ -33103,7 +34046,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 4,
+			"buildMenuPriority": null,
 			"className": "Desc_Ramp_UpCorner_Concrete_8x1_C",
 			"metadata": {},
 			"size": {
@@ -33119,7 +34062,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 5,
+			"buildMenuPriority": null,
 			"className": "Desc_Ramp_UpCorner_Concrete_8x2_C",
 			"metadata": {},
 			"size": {
@@ -33135,7 +34078,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 6,
+			"buildMenuPriority": null,
 			"className": "Desc_Ramp_UpCorner_Concrete_8x4_C",
 			"metadata": {},
 			"size": {
@@ -33151,7 +34094,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 4,
+			"buildMenuPriority": null,
 			"className": "Desc_Ramp_UpCorner_Metal_8x1_C",
 			"metadata": {},
 			"size": {
@@ -33167,7 +34110,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 5,
+			"buildMenuPriority": null,
 			"className": "Desc_Ramp_UpCorner_Metal_8x2_C",
 			"metadata": {},
 			"size": {
@@ -33183,7 +34126,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 6,
+			"buildMenuPriority": null,
 			"className": "Desc_Ramp_UpCorner_Metal_8x4_C",
 			"metadata": {},
 			"size": {
@@ -33199,7 +34142,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 4,
+			"buildMenuPriority": null,
 			"className": "Desc_Ramp_UpCorner_Polished_8x1_C",
 			"metadata": {},
 			"size": {
@@ -33215,7 +34158,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 5,
+			"buildMenuPriority": null,
 			"className": "Desc_Ramp_UpCorner_Polished_8x2_C",
 			"metadata": {},
 			"size": {
@@ -33231,7 +34174,7 @@
 			"categories": [
 				"SC_Ramps_C"
 			],
-			"buildMenuPriority": 6,
+			"buildMenuPriority": null,
 			"className": "Desc_Ramp_UpCorner_Polished_8x4_C",
 			"metadata": {},
 			"size": {
@@ -33247,7 +34190,7 @@
 			"categories": [
 				"SC_Special_C"
 			],
-			"buildMenuPriority": 40,
+			"buildMenuPriority": null,
 			"className": "Desc_ResourceSinkShop_C",
 			"metadata": {
 				"powerConsumption": 0,
@@ -33266,7 +34209,7 @@
 			"categories": [
 				"SC_Special_C"
 			],
-			"buildMenuPriority": 36,
+			"buildMenuPriority": null,
 			"className": "Desc_ResourceSink_C",
 			"metadata": {
 				"powerConsumption": 30,
@@ -33285,7 +34228,7 @@
 			"categories": [
 				"SC_Roofs_C"
 			],
-			"buildMenuPriority": 4,
+			"buildMenuPriority": null,
 			"className": "Desc_Roof_A_01_C",
 			"metadata": {},
 			"size": {
@@ -33301,7 +34244,7 @@
 			"categories": [
 				"SC_Roofs_C"
 			],
-			"buildMenuPriority": 3,
+			"buildMenuPriority": null,
 			"className": "Desc_Roof_A_02_C",
 			"metadata": {},
 			"size": {
@@ -33317,7 +34260,7 @@
 			"categories": [
 				"SC_Roofs_C"
 			],
-			"buildMenuPriority": 2,
+			"buildMenuPriority": null,
 			"className": "Desc_Roof_A_03_C",
 			"metadata": {},
 			"size": {
@@ -33333,7 +34276,7 @@
 			"categories": [
 				"SC_Roofs_C"
 			],
-			"buildMenuPriority": 1,
+			"buildMenuPriority": null,
 			"className": "Desc_Roof_A_04_C",
 			"metadata": {},
 			"size": {
@@ -33349,7 +34292,7 @@
 			"categories": [
 				"SC_Roofs_C"
 			],
-			"buildMenuPriority": 12,
+			"buildMenuPriority": null,
 			"className": "Desc_Roof_Orange_01_C",
 			"metadata": {},
 			"size": {
@@ -33365,7 +34308,7 @@
 			"categories": [
 				"SC_Roofs_C"
 			],
-			"buildMenuPriority": 11,
+			"buildMenuPriority": null,
 			"className": "Desc_Roof_Orange_02_C",
 			"metadata": {},
 			"size": {
@@ -33381,7 +34324,7 @@
 			"categories": [
 				"SC_Roofs_C"
 			],
-			"buildMenuPriority": 10,
+			"buildMenuPriority": null,
 			"className": "Desc_Roof_Orange_03_C",
 			"metadata": {},
 			"size": {
@@ -33397,7 +34340,7 @@
 			"categories": [
 				"SC_Roofs_C"
 			],
-			"buildMenuPriority": 9,
+			"buildMenuPriority": null,
 			"className": "Desc_Roof_Orange_04_C",
 			"metadata": {},
 			"size": {
@@ -33413,7 +34356,7 @@
 			"categories": [
 				"SC_Roofs_C"
 			],
-			"buildMenuPriority": 8,
+			"buildMenuPriority": null,
 			"className": "Desc_Roof_Tar_01_C",
 			"metadata": {},
 			"size": {
@@ -33429,7 +34372,7 @@
 			"categories": [
 				"SC_Roofs_C"
 			],
-			"buildMenuPriority": 7,
+			"buildMenuPriority": null,
 			"className": "Desc_Roof_Tar_02_C",
 			"metadata": {},
 			"size": {
@@ -33445,7 +34388,7 @@
 			"categories": [
 				"SC_Roofs_C"
 			],
-			"buildMenuPriority": 6,
+			"buildMenuPriority": null,
 			"className": "Desc_Roof_Tar_03_C",
 			"metadata": {},
 			"size": {
@@ -33461,7 +34404,7 @@
 			"categories": [
 				"SC_Roofs_C"
 			],
-			"buildMenuPriority": 5,
+			"buildMenuPriority": null,
 			"className": "Desc_Roof_Tar_04_C",
 			"metadata": {},
 			"size": {
@@ -33477,7 +34420,7 @@
 			"categories": [
 				"SC_Roofs_C"
 			],
-			"buildMenuPriority": 16,
+			"buildMenuPriority": null,
 			"className": "Desc_Roof_Window_01_C",
 			"metadata": {},
 			"size": {
@@ -33493,7 +34436,7 @@
 			"categories": [
 				"SC_Roofs_C"
 			],
-			"buildMenuPriority": 15,
+			"buildMenuPriority": null,
 			"className": "Desc_Roof_Window_02_C",
 			"metadata": {},
 			"size": {
@@ -33509,7 +34452,7 @@
 			"categories": [
 				"SC_Roofs_C"
 			],
-			"buildMenuPriority": 14,
+			"buildMenuPriority": null,
 			"className": "Desc_Roof_Window_03_C",
 			"metadata": {},
 			"size": {
@@ -33525,7 +34468,7 @@
 			"categories": [
 				"SC_Roofs_C"
 			],
-			"buildMenuPriority": 13,
+			"buildMenuPriority": null,
 			"className": "Desc_Roof_Window_04_C",
 			"metadata": {},
 			"size": {
@@ -33541,7 +34484,7 @@
 			"categories": [
 				"SC_Smelters_C"
 			],
-			"buildMenuPriority": 6,
+			"buildMenuPriority": null,
 			"className": "Desc_SmelterMk1_C",
 			"metadata": {
 				"powerConsumption": 4,
@@ -33561,7 +34504,7 @@
 			"categories": [
 				"SC_Special_C"
 			],
-			"buildMenuPriority": 35,
+			"buildMenuPriority": null,
 			"className": "Desc_SpaceElevator_C",
 			"metadata": {
 				"powerConsumption": 0,
@@ -33580,7 +34523,7 @@
 			"categories": [
 				"SC_Attach_C"
 			],
-			"buildMenuPriority": 6,
+			"buildMenuPriority": null,
 			"className": "Desc_Stairs_Left_01_C",
 			"metadata": {},
 			"size": {
@@ -33596,7 +34539,7 @@
 			"categories": [
 				"SC_Attach_C"
 			],
-			"buildMenuPriority": 7,
+			"buildMenuPriority": null,
 			"className": "Desc_Stairs_Right_01_C",
 			"metadata": {},
 			"size": {
@@ -33612,7 +34555,7 @@
 			"categories": [
 				"SC_Signs_C"
 			],
-			"buildMenuPriority": 45,
+			"buildMenuPriority": null,
 			"className": "Desc_StandaloneWidgetSign_Huge_C",
 			"metadata": {},
 			"size": {
@@ -33628,7 +34571,7 @@
 			"categories": [
 				"SC_Signs_C"
 			],
-			"buildMenuPriority": 45,
+			"buildMenuPriority": null,
 			"className": "Desc_StandaloneWidgetSign_Large_C",
 			"metadata": {},
 			"size": {
@@ -33644,7 +34587,7 @@
 			"categories": [
 				"SC_Signs_C"
 			],
-			"buildMenuPriority": 45,
+			"buildMenuPriority": null,
 			"className": "Desc_StandaloneWidgetSign_Medium_C",
 			"metadata": {},
 			"size": {
@@ -33660,7 +34603,7 @@
 			"categories": [
 				"SC_Signs_C"
 			],
-			"buildMenuPriority": 45,
+			"buildMenuPriority": null,
 			"className": "Desc_StandaloneWidgetSign_Portrait_C",
 			"metadata": {},
 			"size": {
@@ -33676,7 +34619,7 @@
 			"categories": [
 				"SC_Signs_C"
 			],
-			"buildMenuPriority": 45,
+			"buildMenuPriority": null,
 			"className": "Desc_StandaloneWidgetSign_SmallVeryWide_C",
 			"metadata": {},
 			"size": {
@@ -33692,7 +34635,7 @@
 			"categories": [
 				"SC_Signs_C"
 			],
-			"buildMenuPriority": 45,
+			"buildMenuPriority": null,
 			"className": "Desc_StandaloneWidgetSign_SmallWide_C",
 			"metadata": {},
 			"size": {
@@ -33708,7 +34651,7 @@
 			"categories": [
 				"SC_Signs_C"
 			],
-			"buildMenuPriority": 45,
+			"buildMenuPriority": null,
 			"className": "Desc_StandaloneWidgetSign_Small_C",
 			"metadata": {},
 			"size": {
@@ -33724,7 +34667,7 @@
 			"categories": [
 				"SC_Signs_C"
 			],
-			"buildMenuPriority": 45,
+			"buildMenuPriority": null,
 			"className": "Desc_StandaloneWidgetSign_Square_C",
 			"metadata": {},
 			"size": {
@@ -33740,7 +34683,7 @@
 			"categories": [
 				"SC_Signs_C"
 			],
-			"buildMenuPriority": 45,
+			"buildMenuPriority": null,
 			"className": "Desc_StandaloneWidgetSign_Square_Small_C",
 			"metadata": {},
 			"size": {
@@ -33756,7 +34699,7 @@
 			"categories": [
 				"SC_Signs_C"
 			],
-			"buildMenuPriority": 45,
+			"buildMenuPriority": null,
 			"className": "Desc_StandaloneWidgetSign_Square_Tiny_C",
 			"metadata": {},
 			"size": {
@@ -33772,7 +34715,7 @@
 			"categories": [
 				"SC_Walls_C"
 			],
-			"buildMenuPriority": 4,
+			"buildMenuPriority": null,
 			"className": "Desc_SteelWall_8x1_C",
 			"metadata": {},
 			"size": {
@@ -33788,7 +34731,7 @@
 			"categories": [
 				"SC_Walls_C"
 			],
-			"buildMenuPriority": 3,
+			"buildMenuPriority": null,
 			"className": "Desc_SteelWall_8x4_C",
 			"metadata": {},
 			"size": {
@@ -33804,7 +34747,7 @@
 			"categories": [
 				"SC_Doors_C"
 			],
-			"buildMenuPriority": 3,
+			"buildMenuPriority": null,
 			"className": "Desc_SteelWall_8x4_Gate_01_C",
 			"metadata": {},
 			"size": {
@@ -33820,7 +34763,7 @@
 			"categories": [
 				"SC_Windows_C"
 			],
-			"buildMenuPriority": 4,
+			"buildMenuPriority": null,
 			"className": "Desc_SteelWall_8x4_Window_01_C",
 			"metadata": {},
 			"size": {
@@ -33836,7 +34779,7 @@
 			"categories": [
 				"SC_Windows_C"
 			],
-			"buildMenuPriority": 4,
+			"buildMenuPriority": null,
 			"className": "Desc_SteelWall_8x4_Window_02_C",
 			"metadata": {},
 			"size": {
@@ -33852,7 +34795,7 @@
 			"categories": [
 				"SC_Windows_C"
 			],
-			"buildMenuPriority": 4,
+			"buildMenuPriority": null,
 			"className": "Desc_SteelWall_8x4_Window_03_C",
 			"metadata": {},
 			"size": {
@@ -33868,7 +34811,7 @@
 			"categories": [
 				"SC_Windows_C"
 			],
-			"buildMenuPriority": 4,
+			"buildMenuPriority": null,
 			"className": "Desc_SteelWall_8x4_Window_04_C",
 			"metadata": {},
 			"size": {
@@ -33884,7 +34827,7 @@
 			"categories": [
 				"SC_UpperDiagonalWalls_C"
 			],
-			"buildMenuPriority": 5,
+			"buildMenuPriority": null,
 			"className": "Desc_SteelWall_FlipTris_8x1_C",
 			"metadata": {},
 			"size": {
@@ -33900,7 +34843,7 @@
 			"categories": [
 				"SC_UpperDiagonalWalls_C"
 			],
-			"buildMenuPriority": 6,
+			"buildMenuPriority": null,
 			"className": "Desc_SteelWall_FlipTris_8x2_C",
 			"metadata": {},
 			"size": {
@@ -33916,7 +34859,7 @@
 			"categories": [
 				"SC_UpperDiagonalWalls_C"
 			],
-			"buildMenuPriority": 7,
+			"buildMenuPriority": null,
 			"className": "Desc_SteelWall_FlipTris_8x4_C",
 			"metadata": {},
 			"size": {
@@ -33932,7 +34875,7 @@
 			"categories": [
 				"SC_UpperDiagonalWalls_C"
 			],
-			"buildMenuPriority": 8,
+			"buildMenuPriority": null,
 			"className": "Desc_SteelWall_FlipTris_8x8_C",
 			"metadata": {},
 			"size": {
@@ -33948,7 +34891,7 @@
 			"categories": [
 				"SC_DiagonalWalls_C"
 			],
-			"buildMenuPriority": 5,
+			"buildMenuPriority": null,
 			"className": "Desc_SteelWall_Tris_8x1_C",
 			"metadata": {},
 			"size": {
@@ -33964,7 +34907,7 @@
 			"categories": [
 				"SC_DiagonalWalls_C"
 			],
-			"buildMenuPriority": 6,
+			"buildMenuPriority": null,
 			"className": "Desc_SteelWall_Tris_8x2_C",
 			"metadata": {},
 			"size": {
@@ -33980,7 +34923,7 @@
 			"categories": [
 				"SC_DiagonalWalls_C"
 			],
-			"buildMenuPriority": 7,
+			"buildMenuPriority": null,
 			"className": "Desc_SteelWall_Tris_8x4_C",
 			"metadata": {},
 			"size": {
@@ -33996,7 +34939,7 @@
 			"categories": [
 				"SC_DiagonalWalls_C"
 			],
-			"buildMenuPriority": 8,
+			"buildMenuPriority": null,
 			"className": "Desc_SteelWall_Tris_8x8_C",
 			"metadata": {},
 			"size": {
@@ -34012,7 +34955,7 @@
 			"categories": [
 				"SC_Storage_C"
 			],
-			"buildMenuPriority": 62,
+			"buildMenuPriority": null,
 			"className": "Desc_StorageContainerMk1_C",
 			"metadata": {
 				"powerConsumption": 0,
@@ -34032,7 +34975,7 @@
 			"categories": [
 				"SC_Storage_C"
 			],
-			"buildMenuPriority": 63,
+			"buildMenuPriority": null,
 			"className": "Desc_StorageContainerMk2_C",
 			"metadata": {
 				"powerConsumption": 0,
@@ -34052,7 +34995,7 @@
 			"categories": [
 				"SC_Storage_C"
 			],
-			"buildMenuPriority": 3,
+			"buildMenuPriority": null,
 			"className": "Desc_StorageHazard_C",
 			"metadata": {
 				"powerConsumption": 0,
@@ -34072,7 +35015,7 @@
 			"categories": [
 				"SC_Storage_C"
 			],
-			"buildMenuPriority": 2,
+			"buildMenuPriority": null,
 			"className": "Desc_StorageMedkit_C",
 			"metadata": {
 				"powerConsumption": 0,
@@ -34092,7 +35035,7 @@
 			"categories": [
 				"SC_Storage_C"
 			],
-			"buildMenuPriority": 1,
+			"buildMenuPriority": null,
 			"className": "Desc_StoragePlayer_C",
 			"metadata": {
 				"powerConsumption": 0,
@@ -34112,7 +35055,7 @@
 			"categories": [
 				"SC_Lights_C"
 			],
-			"buildMenuPriority": 1,
+			"buildMenuPriority": null,
 			"className": "Desc_StreetLight_C",
 			"metadata": {
 				"powerConsumption": 1
@@ -34144,7 +35087,7 @@
 			"categories": [
 				"SC_Special_C"
 			],
-			"buildMenuPriority": 0,
+			"buildMenuPriority": null,
 			"className": "Desc_TradingPost_C",
 			"metadata": {
 				"powerConsumption": 0,
@@ -34163,7 +35106,7 @@
 			"categories": [
 				"SC_Trains_C"
 			],
-			"buildMenuPriority": 52,
+			"buildMenuPriority": null,
 			"className": "Desc_TrainDockingStationLiquid_C",
 			"metadata": {
 				"powerConsumption": 50,
@@ -34182,7 +35125,7 @@
 			"categories": [
 				"SC_Trains_C"
 			],
-			"buildMenuPriority": 52,
+			"buildMenuPriority": null,
 			"className": "Desc_TrainDockingStation_C",
 			"metadata": {
 				"powerConsumption": 50,
@@ -34201,7 +35144,7 @@
 			"categories": [
 				"SC_Trains_C"
 			],
-			"buildMenuPriority": 52,
+			"buildMenuPriority": null,
 			"className": "Desc_TrainPlatformEmpty_02_C",
 			"metadata": {
 				"powerConsumption": 0,
@@ -34220,7 +35163,7 @@
 			"categories": [
 				"SC_Trains_C"
 			],
-			"buildMenuPriority": 52,
+			"buildMenuPriority": null,
 			"className": "Desc_TrainPlatformEmpty_C",
 			"metadata": {
 				"powerConsumption": 0,
@@ -34239,7 +35182,7 @@
 			"categories": [
 				"SC_Trains_C"
 			],
-			"buildMenuPriority": 51,
+			"buildMenuPriority": null,
 			"className": "Desc_TrainStation_C",
 			"metadata": {
 				"powerConsumption": 50,
@@ -34258,7 +35201,7 @@
 			"categories": [
 				"SC_Vehicles_C"
 			],
-			"buildMenuPriority": 0,
+			"buildMenuPriority": null,
 			"className": "Desc_TruckStation_C",
 			"metadata": {
 				"powerConsumption": 20,
@@ -34291,7 +35234,7 @@
 			"categories": [
 				"SC_Pipes_C"
 			],
-			"buildMenuPriority": 5,
+			"buildMenuPriority": null,
 			"className": "Desc_Valve_C",
 			"metadata": {
 				"powerConsumption": 0,
@@ -34311,7 +35254,7 @@
 			"categories": [
 				"SC_Walkways_C"
 			],
-			"buildMenuPriority": 102,
+			"buildMenuPriority": null,
 			"className": "Desc_WalkwayCross_C",
 			"metadata": {},
 			"size": {
@@ -34327,7 +35270,7 @@
 			"categories": [
 				"SC_Walkways_C"
 			],
-			"buildMenuPriority": 102,
+			"buildMenuPriority": null,
 			"className": "Desc_WalkwayRamp_C",
 			"metadata": {},
 			"size": {
@@ -34343,7 +35286,7 @@
 			"categories": [
 				"SC_Walkways_C"
 			],
-			"buildMenuPriority": 99,
+			"buildMenuPriority": null,
 			"className": "Desc_WalkwayStraight_C",
 			"metadata": {},
 			"size": {
@@ -34359,7 +35302,7 @@
 			"categories": [
 				"SC_Walkways_C"
 			],
-			"buildMenuPriority": 101,
+			"buildMenuPriority": null,
 			"className": "Desc_WalkwayT_C",
 			"metadata": {},
 			"size": {
@@ -34375,7 +35318,7 @@
 			"categories": [
 				"SC_Walkways_C"
 			],
-			"buildMenuPriority": 100,
+			"buildMenuPriority": null,
 			"className": "Desc_WalkwayTurn_C",
 			"metadata": {},
 			"size": {
@@ -34391,7 +35334,7 @@
 			"categories": [
 				"SC_AngularWalls_C"
 			],
-			"buildMenuPriority": 7,
+			"buildMenuPriority": null,
 			"className": "Desc_WallSet_Steel_Angular_8x4_C",
 			"metadata": {},
 			"size": {
@@ -34407,7 +35350,7 @@
 			"categories": [
 				"SC_AngularWalls_C"
 			],
-			"buildMenuPriority": 8,
+			"buildMenuPriority": null,
 			"className": "Desc_WallSet_Steel_Angular_8x8_C",
 			"metadata": {},
 			"size": {
@@ -34423,7 +35366,7 @@
 			"categories": [
 				"SC_Walls_C"
 			],
-			"buildMenuPriority": 4,
+			"buildMenuPriority": null,
 			"className": "Desc_Wall_8x4_01_C",
 			"metadata": {},
 			"size": {
@@ -34439,7 +35382,7 @@
 			"categories": [
 				"SC_Walls_C"
 			],
-			"buildMenuPriority": 85,
+			"buildMenuPriority": null,
 			"className": "Desc_Wall_8x4_02_C",
 			"metadata": {},
 			"size": {
@@ -34455,7 +35398,7 @@
 			"categories": [
 				"SC_Walls_C"
 			],
-			"buildMenuPriority": 6,
+			"buildMenuPriority": null,
 			"className": "Desc_Wall_Concrete_8x1_C",
 			"metadata": {},
 			"size": {
@@ -34471,7 +35414,7 @@
 			"categories": [
 				"SC_Walls_C"
 			],
-			"buildMenuPriority": 5,
+			"buildMenuPriority": null,
 			"className": "Desc_Wall_Concrete_8x4_C",
 			"metadata": {},
 			"size": {
@@ -34487,7 +35430,7 @@
 			"categories": [
 				"SC_ConveyorConnections_C"
 			],
-			"buildMenuPriority": 5,
+			"buildMenuPriority": null,
 			"className": "Desc_Wall_Concrete_8x4_ConveyorHole_01_C",
 			"metadata": {},
 			"size": {
@@ -34503,7 +35446,7 @@
 			"categories": [
 				"SC_ConveyorConnections_C"
 			],
-			"buildMenuPriority": 5,
+			"buildMenuPriority": null,
 			"className": "Desc_Wall_Concrete_8x4_ConveyorHole_02_C",
 			"metadata": {},
 			"size": {
@@ -34519,7 +35462,7 @@
 			"categories": [
 				"SC_ConveyorConnections_C"
 			],
-			"buildMenuPriority": 5,
+			"buildMenuPriority": null,
 			"className": "Desc_Wall_Concrete_8x4_ConveyorHole_03_C",
 			"metadata": {},
 			"size": {
@@ -34535,7 +35478,7 @@
 			"categories": [
 				"SC_AngularWalls_C"
 			],
-			"buildMenuPriority": 15,
+			"buildMenuPriority": null,
 			"className": "Desc_Wall_Concrete_8x4_Corner_01_C",
 			"metadata": {},
 			"size": {
@@ -34551,7 +35494,7 @@
 			"categories": [
 				"SC_Windows_C"
 			],
-			"buildMenuPriority": 5,
+			"buildMenuPriority": null,
 			"className": "Desc_Wall_Concrete_8x4_Window_01_C",
 			"metadata": {},
 			"size": {
@@ -34567,7 +35510,7 @@
 			"categories": [
 				"SC_Windows_C"
 			],
-			"buildMenuPriority": 5,
+			"buildMenuPriority": null,
 			"className": "Desc_Wall_Concrete_8x4_Window_02_C",
 			"metadata": {},
 			"size": {
@@ -34583,7 +35526,7 @@
 			"categories": [
 				"SC_Windows_C"
 			],
-			"buildMenuPriority": 5,
+			"buildMenuPriority": null,
 			"className": "Desc_Wall_Concrete_8x4_Window_03_C",
 			"metadata": {},
 			"size": {
@@ -34599,7 +35542,7 @@
 			"categories": [
 				"SC_Windows_C"
 			],
-			"buildMenuPriority": 5,
+			"buildMenuPriority": null,
 			"className": "Desc_Wall_Concrete_8x4_Window_04_C",
 			"metadata": {},
 			"size": {
@@ -34615,7 +35558,7 @@
 			"categories": [
 				"SC_AngularWalls_C"
 			],
-			"buildMenuPriority": 16,
+			"buildMenuPriority": null,
 			"className": "Desc_Wall_Concrete_8x8_Corner_01_C",
 			"metadata": {},
 			"size": {
@@ -34631,7 +35574,7 @@
 			"categories": [
 				"SC_AngularWalls_C"
 			],
-			"buildMenuPriority": 13,
+			"buildMenuPriority": null,
 			"className": "Desc_Wall_Concrete_Angular_8x4_C",
 			"metadata": {},
 			"size": {
@@ -34647,7 +35590,7 @@
 			"categories": [
 				"SC_AngularWalls_C"
 			],
-			"buildMenuPriority": 14,
+			"buildMenuPriority": null,
 			"className": "Desc_Wall_Concrete_Angular_8x8_C",
 			"metadata": {},
 			"size": {
@@ -34663,7 +35606,7 @@
 			"categories": [
 				"SC_Doors_C"
 			],
-			"buildMenuPriority": 5,
+			"buildMenuPriority": null,
 			"className": "Desc_Wall_Concrete_CDoor_8x4_C",
 			"metadata": {},
 			"size": {
@@ -34735,7 +35678,7 @@
 			"categories": [
 				"SC_Doors_C"
 			],
-			"buildMenuPriority": 5,
+			"buildMenuPriority": null,
 			"className": "Desc_Wall_Concrete_Gate_8x4_C",
 			"metadata": {},
 			"size": {
@@ -34751,7 +35694,7 @@
 			"categories": [
 				"SC_Doors_C"
 			],
-			"buildMenuPriority": 5,
+			"buildMenuPriority": null,
 			"className": "Desc_Wall_Concrete_SDoor_8x4_C",
 			"metadata": {},
 			"size": {
@@ -34823,7 +35766,7 @@
 			"categories": [
 				"SC_ConveyorConnections_C"
 			],
-			"buildMenuPriority": 85,
+			"buildMenuPriority": null,
 			"className": "Desc_Wall_Conveyor_8x4_01_C",
 			"metadata": {},
 			"size": {
@@ -34839,7 +35782,7 @@
 			"categories": [
 				"SC_ConveyorConnections_C"
 			],
-			"buildMenuPriority": 85,
+			"buildMenuPriority": null,
 			"className": "Desc_Wall_Conveyor_8x4_01_Steel_C",
 			"metadata": {},
 			"size": {
@@ -34855,7 +35798,7 @@
 			"categories": [
 				"SC_ConveyorConnections_C"
 			],
-			"buildMenuPriority": 85,
+			"buildMenuPriority": null,
 			"className": "Desc_Wall_Conveyor_8x4_02_C",
 			"metadata": {},
 			"size": {
@@ -34871,7 +35814,7 @@
 			"categories": [
 				"SC_ConveyorConnections_C"
 			],
-			"buildMenuPriority": 85,
+			"buildMenuPriority": null,
 			"className": "Desc_Wall_Conveyor_8x4_02_Steel_C",
 			"metadata": {},
 			"size": {
@@ -34887,7 +35830,7 @@
 			"categories": [
 				"SC_ConveyorConnections_C"
 			],
-			"buildMenuPriority": 85,
+			"buildMenuPriority": null,
 			"className": "Desc_Wall_Conveyor_8x4_03_C",
 			"metadata": {},
 			"size": {
@@ -34903,7 +35846,7 @@
 			"categories": [
 				"SC_ConveyorConnections_C"
 			],
-			"buildMenuPriority": 85,
+			"buildMenuPriority": null,
 			"className": "Desc_Wall_Conveyor_8x4_03_Steel_C",
 			"metadata": {},
 			"size": {
@@ -34919,7 +35862,7 @@
 			"categories": [
 				"SC_ConveyorConnections_C"
 			],
-			"buildMenuPriority": 85,
+			"buildMenuPriority": null,
 			"className": "Desc_Wall_Conveyor_8x4_04_C",
 			"metadata": {},
 			"size": {
@@ -34935,7 +35878,7 @@
 			"categories": [
 				"SC_ConveyorConnections_C"
 			],
-			"buildMenuPriority": 85,
+			"buildMenuPriority": null,
 			"className": "Desc_Wall_Conveyor_8x4_04_Steel_C",
 			"metadata": {},
 			"size": {
@@ -34951,7 +35894,7 @@
 			"categories": [
 				"SC_Doors_C"
 			],
-			"buildMenuPriority": 2,
+			"buildMenuPriority": null,
 			"className": "Desc_Wall_Door_8x4_01_C",
 			"metadata": {},
 			"size": {
@@ -34967,7 +35910,7 @@
 			"categories": [
 				"SC_Doors_C"
 			],
-			"buildMenuPriority": 5,
+			"buildMenuPriority": null,
 			"className": "Desc_Wall_Door_8x4_01_Steel_C",
 			"metadata": {},
 			"size": {
@@ -34983,7 +35926,7 @@
 			"categories": [
 				"SC_Doors_C"
 			],
-			"buildMenuPriority": 3,
+			"buildMenuPriority": null,
 			"className": "Desc_Wall_Door_8x4_03_C",
 			"metadata": {},
 			"size": {
@@ -34999,7 +35942,7 @@
 			"categories": [
 				"SC_Doors_C"
 			],
-			"buildMenuPriority": 6,
+			"buildMenuPriority": null,
 			"className": "Desc_Wall_Door_8x4_03_Steel_C",
 			"metadata": {},
 			"size": {
@@ -35015,7 +35958,7 @@
 			"categories": [
 				"SC_Frames_C"
 			],
-			"buildMenuPriority": 3,
+			"buildMenuPriority": null,
 			"className": "Desc_Wall_Frame_01_C",
 			"metadata": {},
 			"size": {
@@ -35031,7 +35974,7 @@
 			"categories": [
 				"SC_Doors_C"
 			],
-			"buildMenuPriority": 85,
+			"buildMenuPriority": null,
 			"className": "Desc_Wall_Gate_8x4_01_C",
 			"metadata": {},
 			"size": {
@@ -35047,7 +35990,7 @@
 			"categories": [
 				"SC_Walls_C"
 			],
-			"buildMenuPriority": 2,
+			"buildMenuPriority": null,
 			"className": "Desc_Wall_Orange_8x1_C",
 			"metadata": {},
 			"size": {
@@ -35063,7 +36006,7 @@
 			"categories": [
 				"SC_AngularWalls_C"
 			],
-			"buildMenuPriority": 5,
+			"buildMenuPriority": null,
 			"className": "Desc_Wall_Orange_8x4_Corner_01_C",
 			"metadata": {},
 			"size": {
@@ -35079,7 +36022,7 @@
 			"categories": [
 				"SC_AngularWalls_C"
 			],
-			"buildMenuPriority": 6,
+			"buildMenuPriority": null,
 			"className": "Desc_Wall_Orange_8x8_Corner_01_C",
 			"metadata": {},
 			"size": {
@@ -35095,7 +36038,7 @@
 			"categories": [
 				"SC_AngularWalls_C"
 			],
-			"buildMenuPriority": 1,
+			"buildMenuPriority": null,
 			"className": "Desc_Wall_Orange_Angular_8x4_C",
 			"metadata": {},
 			"size": {
@@ -35111,7 +36054,7 @@
 			"categories": [
 				"SC_AngularWalls_C"
 			],
-			"buildMenuPriority": 2,
+			"buildMenuPriority": null,
 			"className": "Desc_Wall_Orange_Angular_8x8_C",
 			"metadata": {},
 			"size": {
@@ -35239,7 +36182,7 @@
 			"categories": [
 				"SC_AngularWalls_C"
 			],
-			"buildMenuPriority": 15,
+			"buildMenuPriority": null,
 			"className": "Desc_Wall_Steel_8x4_Corner_01_C",
 			"metadata": {},
 			"size": {
@@ -35255,7 +36198,7 @@
 			"categories": [
 				"SC_AngularWalls_C"
 			],
-			"buildMenuPriority": 16,
+			"buildMenuPriority": null,
 			"className": "Desc_Wall_Steel_8x8_Corner_01_C",
 			"metadata": {},
 			"size": {
@@ -35271,7 +36214,7 @@
 			"categories": [
 				"SC_Windows_C"
 			],
-			"buildMenuPriority": 85,
+			"buildMenuPriority": null,
 			"className": "Desc_Wall_Window_8x4_01_C",
 			"metadata": {},
 			"size": {
@@ -35287,7 +36230,7 @@
 			"categories": [
 				"SC_Windows_C"
 			],
-			"buildMenuPriority": 85,
+			"buildMenuPriority": null,
 			"className": "Desc_Wall_Window_8x4_02_C",
 			"metadata": {},
 			"size": {
@@ -35303,7 +36246,7 @@
 			"categories": [
 				"SC_Windows_C"
 			],
-			"buildMenuPriority": 85,
+			"buildMenuPriority": null,
 			"className": "Desc_Wall_Window_8x4_03_C",
 			"metadata": {},
 			"size": {
@@ -35319,7 +36262,7 @@
 			"categories": [
 				"SC_Windows_C"
 			],
-			"buildMenuPriority": 85,
+			"buildMenuPriority": null,
 			"className": "Desc_Wall_Window_8x4_04_C",
 			"metadata": {},
 			"size": {
@@ -35335,7 +36278,7 @@
 			"categories": [
 				"SC_Windows_C"
 			],
-			"buildMenuPriority": 85,
+			"buildMenuPriority": null,
 			"className": "Desc_Wall_Window_Thin_8x4_01_C",
 			"metadata": {},
 			"size": {
@@ -35351,7 +36294,7 @@
 			"categories": [
 				"SC_Windows_C"
 			],
-			"buildMenuPriority": 85,
+			"buildMenuPriority": null,
 			"className": "Desc_Wall_Window_Thin_8x4_02_C",
 			"metadata": {},
 			"size": {
@@ -35367,7 +36310,7 @@
 			"categories": [
 				"SC_OilProduction_C"
 			],
-			"buildMenuPriority": 1,
+			"buildMenuPriority": null,
 			"className": "Desc_WaterPump_C",
 			"metadata": {
 				"powerConsumption": 20,
@@ -35386,7 +36329,7 @@
 			"categories": [
 				"SC_Workstations_C"
 			],
-			"buildMenuPriority": 1,
+			"buildMenuPriority": null,
 			"className": "Desc_WorkBench_C",
 			"metadata": {},
 			"size": {
@@ -35402,7 +36345,7 @@
 			"categories": [
 				"SC_Workstations_C"
 			],
-			"buildMenuPriority": 2,
+			"buildMenuPriority": null,
 			"className": "Desc_Workshop_C",
 			"metadata": {},
 			"size": {

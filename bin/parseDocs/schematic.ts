@@ -50,6 +50,10 @@ export default function parseSchematics(schematics: {
 			continue;
 		}
 
+		if (schematic.mDisplayName.match('Discontinued')) {
+			continue;
+		}
+
 		const requiredSchematics: string[] = [];
 		const unlockData: ISchematicUnlockSchema = {
 			inventorySlots: 0,
