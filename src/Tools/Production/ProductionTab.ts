@@ -225,6 +225,16 @@ export class ProductionTab
 		});
 	}
 
+	public exportTab(): void
+	{
+		const factory = JSON.stringify(this.data);
+		const blob = new Blob([factory], {type: 'application/json;charset=utf-8;'});
+		const downloadLink = angular.element('<a></a>');
+		downloadLink.attr('href', window.URL.createObjectURL(blob));
+		downloadLink.attr('download', 'factory.json')
+		downloadLink[0].click();
+	}
+
 	public unregister(): void
 	{
 		this.unregisterCallback();

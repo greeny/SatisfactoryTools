@@ -36,6 +36,11 @@ $warning: $yellow !default;
 $danger: $red !default;
 $light: lighten($gray-200, 35%) !default;
 $dark: $gray-200 !default;
+$download: $purple !default;
+
+$custom-colors: (
+		"download": $download
+);
 
 $yiq-contrasted-threshold: 185 !default;
 
