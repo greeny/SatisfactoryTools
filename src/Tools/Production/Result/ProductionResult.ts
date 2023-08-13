@@ -44,7 +44,9 @@ export class ProductionResult
 		hasInput: false,
 		rawResources: {},
 		output: {},
+		hasOutput: false,
 		byproducts: {},
+		hasByproducts: false,
 		alternatesNeeded: [],
 	};
 
@@ -261,8 +263,11 @@ export class ProductionResult
 		for (const node of this.graph.nodes) {
 			if (node instanceof ProductNode) {
 				ProductionResult.addProduct(products, node.itemAmount.item, node.itemAmount.amount);
+				this.details.hasOutput = true;
 			} else if (node instanceof ByproductNode) {
 				ProductionResult.addProduct(byproducts, node.itemAmount.item, node.itemAmount.amount);
+				this.details.hasByproducts = true;
+				this.details.hasOutput = true;
 			}
 		}
 
