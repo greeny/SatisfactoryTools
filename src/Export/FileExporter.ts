@@ -48,14 +48,5 @@ export class FileExporter
 		return parsed.tabs;
 	}
 
-	public static importData(data: string): string
-	{
-		const version = data.charAt(0);
-		if (version !== FileExporter.version) {
-			throw new Error('Invalid version specified: ' + version);
-		}
-		console.log(Strings.stringToBuffer(Strings.base64decode(data.substring(1))));
-		return JSON.parse(pako.inflate(Strings.stringToBuffer(Strings.base64decode(data.substring(1))), {to: 'string'}));
-	}
 
 }

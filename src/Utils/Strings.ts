@@ -35,13 +35,13 @@ export class Strings
 		return name.replace(/[\s|.]+/gi, '-').replace(/[™:]/gi, '').toLowerCase();
 	}
 
-	public static stringToBuffer(string: string): ArrayBuffer
+	public static stringToBuffer(str: string): ArrayBuffer
 	{
-		const stringLength = string.length;
+		const stringLength = str.length;
 		const buffer = new ArrayBuffer(stringLength);
 		const bufferView = new Uint8Array(buffer);
 		for (let i = 0; i < stringLength; i++) {
-			bufferView[i] = string.charCodeAt(i);
+			bufferView[i] = str.charCodeAt(i);
 		}
 		return buffer;
 	}
@@ -59,14 +59,14 @@ export class Strings
 		saveAs(blob, Strings.webalize(filename));
 	}
 
-	public static base64encode(string: string): string
+	public static base64encode(str: string): string
 	{
-		return base64.encode(string);
+		return base64.encode(str);
 	}
 
-	public static base64decode(string: string): string
+	public static base64decode(str: string): string
 	{
-		return base64.decode(string);
+		return base64.decode(str);
 	}
 
 	public static copyToClipboard(text: string, displayNotification: string = '', delay: number = 3000): boolean
@@ -127,9 +127,9 @@ export class Strings
 			Strings.padNum(date.getSeconds());
 	}
 
-	public static padNum(number: number, length: number = 2): string
+	public static padNum(num: number, length: number = 2): string
 	{
-		return ('' + number).padStart(length, '0');
+		return ('' + num).padStart(length, '0');
 	}
 
 	public static stackSizeFromEnum(size: string): number
