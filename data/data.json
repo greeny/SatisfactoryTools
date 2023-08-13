@@ -3,6 +3,7 @@
         "Desc_NuclearWaste_C": {
             "slug": "uranium-waste",
             "name": "Uranium Waste",
+            "description": "The by-product of consuming Uranium Fuel Rods in the Nuclear Power Plant.\nNon-fissible Uranium can be extracted. Handle with caution.\n\nCaution: HIGHLY Radioactive.",
             "sinkPoints": 0,
             "className": "Desc_NuclearWaste_C",
             "stackSize": 500,
@@ -19,6 +20,7 @@
         "Desc_PlutoniumWaste_C": {
             "slug": "plutonium-waste",
             "name": "Plutonium Waste",
+            "description": "The by-product of consuming Plutonium Fuel Rods in the Nuclear Power Plant.\nNeeds to be stored in a safe location. Handle with caution.\n\nCaution: EXTREMELY Radioactive.",
             "sinkPoints": 0,
             "className": "Desc_PlutoniumWaste_C",
             "stackSize": 500,
@@ -35,6 +37,7 @@
         "Desc_Battery_C": {
             "slug": "battery",
             "name": "Battery",
+            "description": "Primarily used as fuel for Drones and Vehicles.",
             "sinkPoints": 465,
             "className": "Desc_Battery_C",
             "stackSize": 200,
@@ -51,6 +54,7 @@
         "Desc_AluminumIngot_C": {
             "slug": "aluminum-ingot",
             "name": "Aluminum Ingot",
+            "description": "Aluminum Ingots are made from Aluminum Scrap, which is refined from Alumina Solution.\nUsed to produce specialized aluminum-based parts.",
             "sinkPoints": 131,
             "className": "Desc_AluminumIngot_C",
             "stackSize": 100,
@@ -67,6 +71,7 @@
         "Desc_ColorCartridge_C": {
             "slug": "color-cartridge",
             "name": "Color Cartridge",
+            "description": "Used for applying Patterns to structures with the Customizer.\n\n(Patterns can be purchased in the AWESOME Shop.)",
             "sinkPoints": 10,
             "className": "Desc_ColorCartridge_C",
             "stackSize": 200,
@@ -83,6 +88,7 @@
         "Desc_Cable_C": {
             "slug": "cable",
             "name": "Cable",
+            "description": "Used for crafting.\nPrimarily used to build power lines.",
             "sinkPoints": 24,
             "className": "Desc_Cable_C",
             "stackSize": 200,
@@ -99,6 +105,7 @@
         "Desc_Cement_C": {
             "slug": "concrete",
             "name": "Concrete",
+            "description": "Used for building.\nGood for stable foundations.",
             "sinkPoints": 12,
             "className": "Desc_Cement_C",
             "stackSize": 500,
@@ -115,6 +122,7 @@
         "Desc_ModularFrame_C": {
             "slug": "modular-frame",
             "name": "Modular Frame",
+            "description": "Used for crafting.\nMulti-purpose building block.",
             "sinkPoints": 408,
             "className": "Desc_ModularFrame_C",
             "stackSize": 50,
@@ -131,6 +139,7 @@
         "Desc_SteelPlate_C": {
             "slug": "steel-beam",
             "name": "Steel Beam",
+            "description": "Steel Beams are used most often when constructing a little more advanced buildings.",
             "sinkPoints": 64,
             "className": "Desc_SteelPlate_C",
             "stackSize": 200,
@@ -147,6 +156,7 @@
         "Desc_NonFissibleUranium_C": {
             "slug": "non-fissile-uranium",
             "name": "Non-fissile Uranium",
+            "description": "The isotope Uranium-238 is non-fissile, meaning it cannot be used for nuclear fission. It can, however, be conversed into fissile Plutonium in the Particle Accelerator.\n\nCaution: Mildly Radioactive.",
             "sinkPoints": 0,
             "className": "Desc_NonFissibleUranium_C",
             "stackSize": 500,
@@ -163,6 +173,7 @@
         "Desc_PlutoniumPellet_C": {
             "slug": "plutonium-pellet",
             "name": "Plutonium Pellet",
+            "description": "Produced in the Particle Accelerator through conversion of Non-fissile Uranium.\nUsed to produce Encased Plutonium Cells for Plutonium Fuel Rods.\n\nPower Usage: 250-750 MW (500 MW average).\nCaution: Moderately Radioactive.",
             "sinkPoints": 0,
             "className": "Desc_PlutoniumPellet_C",
             "stackSize": 100,
@@ -179,6 +190,7 @@
         "Desc_PlutoniumCell_C": {
             "slug": "encased-plutonium-cell",
             "name": "Encased Plutonium Cell",
+            "description": "Plutonium Cells are concrete encased Plutonium Pellets.\nUsed to produce Plutonium Fuel Rods for Nuclear Power production.\n\nCaution: Moderately Radioactive.",
             "sinkPoints": 0,
             "className": "Desc_PlutoniumCell_C",
             "stackSize": 200,
@@ -195,6 +207,7 @@
         "Desc_Silica_C": {
             "slug": "silica",
             "name": "Silica",
+            "description": "Derived from Raw Quartz. Commonly used to create glass structures, advanced refinement processes, and alternative production of electronics.",
             "sinkPoints": 20,
             "className": "Desc_Silica_C",
             "stackSize": 200,
@@ -211,6 +224,7 @@
         "Desc_IronPlate_C": {
             "slug": "iron-plate",
             "name": "Iron Plate",
+            "description": "Used for crafting.\nOne of the most basic parts.",
             "sinkPoints": 6,
             "className": "Desc_IronPlate_C",
             "stackSize": 200,
@@ -227,6 +241,7 @@
         "Desc_CrystalShard_C": {
             "slug": "power-shard",
             "name": "Power Shard",
+            "description": "Mucus from the power slugs compressed into a solid crystal-like shard. \nIt radiates a strange power.",
             "sinkPoints": 0,
             "className": "Desc_CrystalShard_C",
             "stackSize": 100,
@@ -243,6 +258,7 @@
         "Desc_IronRod_C": {
             "slug": "iron-rod",
             "name": "Iron Rod",
+            "description": "Used for crafting.\nOne of the most basic parts.",
             "sinkPoints": 4,
             "className": "Desc_IronRod_C",
             "stackSize": 200,
@@ -259,6 +275,7 @@
         "Desc_Wire_C": {
             "slug": "wire",
             "name": "Wire",
+            "description": "Used for crafting.\nOne of the most basic parts.",
             "sinkPoints": 6,
             "className": "Desc_Wire_C",
             "stackSize": 500,
@@ -275,6 +292,7 @@
         "Desc_HUBParts_C": {
             "slug": "hub-parts",
             "name": "HUB Parts",
+            "description": "The parts required to build the basic structure of the HUB.",
             "sinkPoints": 0,
             "className": "Desc_HUBParts_C",
             "stackSize": 1,
@@ -291,6 +309,7 @@
         "Desc_IronIngot_C": {
             "slug": "iron-ingot",
             "name": "Iron Ingot",
+            "description": "Used for crafting.\nCrafted into the most basic parts.",
             "sinkPoints": 2,
             "className": "Desc_IronIngot_C",
             "stackSize": 100,
@@ -307,6 +326,7 @@
         "Desc_IronPlateReinforced_C": {
             "slug": "reinforced-iron-plate",
             "name": "Reinforced Iron Plate",
+            "description": "Used for crafting.\nA sturdier and more durable Iron Plate.",
             "sinkPoints": 120,
             "className": "Desc_IronPlateReinforced_C",
             "stackSize": 100,
@@ -323,6 +343,7 @@
         "Desc_Rotor_C": {
             "slug": "rotor",
             "name": "Rotor",
+            "description": "Used for crafting.\nThe moving parts of a motor.",
             "sinkPoints": 140,
             "className": "Desc_Rotor_C",
             "stackSize": 100,
@@ -339,6 +360,7 @@
         "Desc_CopperSheet_C": {
             "slug": "copper-sheet",
             "name": "Copper Sheet",
+            "description": "Used for crafting.\nPrimarily used for pipelines due to its high corrosion resistance.",
             "sinkPoints": 24,
             "className": "Desc_CopperSheet_C",
             "stackSize": 200,
@@ -355,6 +377,7 @@
         "Desc_IronScrew_C": {
             "slug": "screw",
             "name": "Screw",
+            "description": "Used for crafting.\nOne of the most basic parts.",
             "sinkPoints": 2,
             "className": "Desc_IronScrew_C",
             "stackSize": 500,
@@ -371,6 +394,7 @@
         "Desc_CompactedCoal_C": {
             "slug": "compacted-coal",
             "name": "Compacted Coal",
+            "description": "A much more efficient alternative for Coal. Used as fuel for vehicles & coal generators.",
             "sinkPoints": 28,
             "className": "Desc_CompactedCoal_C",
             "stackSize": 100,
@@ -387,6 +411,7 @@
         "Desc_HeavyOilResidue_C": {
             "slug": "heavy-oil-residue",
             "name": "Heavy Oil Residue",
+            "description": "A by-product of Plastic and Rubber production. Can be further refined into Fuel and Petroleum Coke.",
             "sinkPoints": 30000,
             "className": "Desc_HeavyOilResidue_C",
             "stackSize": 50000,
@@ -403,6 +428,7 @@
         "Desc_LiquidTurboFuel_C": {
             "slug": "turbofuel",
             "name": "Turbofuel",
+            "description": "A more efficient alternative to Fuel. Can be used to generate power or packaged to be used as fuel for Vehicles.",
             "sinkPoints": 225000,
             "className": "Desc_LiquidTurboFuel_C",
             "stackSize": 50000,
@@ -419,6 +445,7 @@
         "Desc_FluidCanister_C": {
             "slug": "empty-canister",
             "name": "Empty Canister",
+            "description": "Used to package fluids for transportation.",
             "sinkPoints": 60,
             "className": "Desc_FluidCanister_C",
             "stackSize": 100,
@@ -435,6 +462,7 @@
         "Desc_TurboFuel_C": {
             "slug": "packaged-turbofuel",
             "name": "Packaged Turbofuel",
+            "description": "Turbofuel, packaged for alternative transport. Can be used as fuel for Vehicles and the Jetpack.",
             "sinkPoints": 570,
             "className": "Desc_TurboFuel_C",
             "stackSize": 100,
@@ -451,6 +479,7 @@
         "Desc_CircuitBoard_C": {
             "slug": "circuit-board",
             "name": "Circuit Board",
+            "description": "Circuit Boards are advanced electronics that are used in a plethora of different ways.",
             "sinkPoints": 696,
             "className": "Desc_CircuitBoard_C",
             "stackSize": 200,
@@ -467,6 +496,7 @@
         "Desc_Plastic_C": {
             "slug": "plastic",
             "name": "Plastic",
+            "description": "A versatile and easy to manufacture material that can be used for a lot of things.",
             "sinkPoints": 75,
             "className": "Desc_Plastic_C",
             "stackSize": 200,
@@ -483,6 +513,7 @@
         "Desc_Motor_C": {
             "slug": "motor",
             "name": "Motor",
+            "description": "The Motor creates a mechanical force that is used to move things from machines to vehicles.",
             "sinkPoints": 1520,
             "className": "Desc_Motor_C",
             "stackSize": 50,
@@ -499,6 +530,7 @@
         "Desc_SteelPlateReinforced_C": {
             "slug": "encased-industrial-beam",
             "name": "Encased Industrial Beam",
+            "description": "Encased Industrial Beams utilizes the compressive strength of concrete and tensile strength of steel simultaneously.\nMostly used as a stable basis for constructing buildings.",
             "sinkPoints": 632,
             "className": "Desc_SteelPlateReinforced_C",
             "stackSize": 100,
@@ -515,6 +547,7 @@
         "Desc_SteelPipe_C": {
             "slug": "steel-pipe",
             "name": "Steel Pipe",
+            "description": "Steel Pipes are used most often when constructing a little more advanced buildings.",
             "sinkPoints": 24,
             "className": "Desc_SteelPipe_C",
             "stackSize": 200,
@@ -531,6 +564,7 @@
         "Desc_Rubber_C": {
             "slug": "rubber",
             "name": "Rubber",
+            "description": "Rubber is a material that is very flexible and has a lot of friction.",
             "sinkPoints": 60,
             "className": "Desc_Rubber_C",
             "stackSize": 200,
@@ -547,6 +581,7 @@
         "Desc_LiquidFuel_C": {
             "slug": "fuel",
             "name": "Fuel",
+            "description": "Fuel can be used to generate power or packaged to be used as fuel for Vehicles or the Jetpack.",
             "sinkPoints": 75000,
             "className": "Desc_LiquidFuel_C",
             "stackSize": 50000,
@@ -563,6 +598,7 @@
         "Desc_PolymerResin_C": {
             "slug": "polymer-resin",
             "name": "Polymer Resin",
+            "description": "Used for crafting.\nA by-product of oil refinement into fuel. Commonly used to manufacture plastics.",
             "sinkPoints": 12,
             "className": "Desc_PolymerResin_C",
             "stackSize": 200,
@@ -579,6 +615,7 @@
         "Desc_PetroleumCoke_C": {
             "slug": "petroleum-coke",
             "name": "Petroleum Coke",
+            "description": "Used for crafting.\nA carbon-rich material distilled from Heavy Oil Residue. \nUsed as a less efficient coal replacement or for aluminum refinement.",
             "sinkPoints": 20,
             "className": "Desc_PetroleumCoke_C",
             "stackSize": 200,
@@ -595,6 +632,7 @@
         "Desc_SteelIngot_C": {
             "slug": "steel-ingot",
             "name": "Steel Ingot",
+            "description": "Steel Ingots are made from Iron Ore that's been smelted with Coal. They are made into several parts used in building construction.",
             "sinkPoints": 8,
             "className": "Desc_SteelIngot_C",
             "stackSize": 100,
@@ -611,6 +649,7 @@
         "Desc_SpaceElevatorPart_2_C": {
             "slug": "versatile-framework",
             "name": "Versatile Framework",
+            "description": "Project Part #2. Ship with the Space Elevator to complete phases of Project Assembly.",
             "sinkPoints": 1176,
             "className": "Desc_SpaceElevatorPart_2_C",
             "stackSize": 50,
@@ -627,6 +666,7 @@
         "Desc_ModularFrameHeavy_C": {
             "slug": "heavy-modular-frame",
             "name": "Heavy Modular Frame",
+            "description": "A more robust multi-purpose frame.",
             "sinkPoints": 11520,
             "className": "Desc_ModularFrameHeavy_C",
             "stackSize": 50,
@@ -643,6 +683,7 @@
         "Desc_Fuel_C": {
             "slug": "packaged-fuel",
             "name": "Packaged Fuel",
+            "description": "Fuel, packaged for alternative transport. Can be used as fuel for Vehicles and the Jetpack.",
             "sinkPoints": 270,
             "className": "Desc_Fuel_C",
             "stackSize": 100,
@@ -659,6 +700,7 @@
         "Desc_PackagedOil_C": {
             "slug": "packaged-oil",
             "name": "Packaged Oil",
+            "description": "Crude Oil, packaged for alternative transport. Can be used as fuel for Vehicles.",
             "sinkPoints": 180,
             "className": "Desc_PackagedOil_C",
             "stackSize": 100,
@@ -675,6 +717,7 @@
         "Desc_PackagedOilResidue_C": {
             "slug": "packaged-heavy-oil-residue",
             "name": "Packaged Heavy Oil Residue",
+            "description": "Heavy Oil Residue, packaged for alternative transport. Can be used as fuel for Vehicles.",
             "sinkPoints": 180,
             "className": "Desc_PackagedOilResidue_C",
             "stackSize": 100,
@@ -691,6 +734,7 @@
         "Desc_PackagedWater_C": {
             "slug": "packaged-water",
             "name": "Packaged Water",
+            "description": "Water, packaged for alternative transport.",
             "sinkPoints": 130,
             "className": "Desc_PackagedWater_C",
             "stackSize": 100,
@@ -707,6 +751,7 @@
         "Desc_CopperIngot_C": {
             "slug": "copper-ingot",
             "name": "Copper Ingot",
+            "description": "Used for crafting.\nCrafted into the most basic parts.",
             "sinkPoints": 6,
             "className": "Desc_CopperIngot_C",
             "stackSize": 100,
@@ -723,6 +768,7 @@
         "Desc_QuartzCrystal_C": {
             "slug": "quartz-crystal",
             "name": "Quartz Crystal",
+            "description": "Derived from Raw Quartz. Used in the production of advanced radar technology and high-quality display screens.",
             "sinkPoints": 50,
             "className": "Desc_QuartzCrystal_C",
             "stackSize": 200,
@@ -739,6 +785,7 @@
         "Desc_GoldIngot_C": {
             "slug": "caterium-ingot",
             "name": "Caterium Ingot",
+            "description": "Caterium Ingots are smelted from Caterium Ore. Caterium Ingots are mostly used for advanced electronics.",
             "sinkPoints": 42,
             "className": "Desc_GoldIngot_C",
             "stackSize": 100,
@@ -755,6 +802,7 @@
         "Desc_AluminumScrap_C": {
             "slug": "aluminum-scrap",
             "name": "Aluminum Scrap",
+            "description": "Aluminum Scrap is pure aluminum refined from Alumina. Can be smelted down to Aluminum Ingots for industrial usage.",
             "sinkPoints": 27,
             "className": "Desc_AluminumScrap_C",
             "stackSize": 500,
@@ -771,6 +819,7 @@
         "Desc_SulfuricAcid_C": {
             "slug": "sulfuric-acid",
             "name": "Sulfuric Acid",
+            "description": "A mineral acid produced by combining Sulfur and Water in a complex reaction. Primarily used in refinement processes and Battery production.",
             "sinkPoints": 16000,
             "className": "Desc_SulfuricAcid_C",
             "stackSize": 50000,
@@ -787,6 +836,7 @@
         "Desc_UraniumCell_C": {
             "slug": "encased-uranium-cell",
             "name": "Encased Uranium Cell",
+            "description": "Uranium Cells are produced from Uranium Ore. \nUsed to produce Uranium Fuel Rods for Nuclear Power production.\n\nCaution: Mildly Radioactive.",
             "sinkPoints": 147,
             "className": "Desc_UraniumCell_C",
             "stackSize": 200,
@@ -803,6 +853,7 @@
         "Desc_AluminumPlateReinforced_C": {
             "slug": "heat-sink",
             "name": "Heat Sink",
+            "description": "Used to dissipate heat faster.",
             "sinkPoints": 2804,
             "className": "Desc_AluminumPlateReinforced_C",
             "stackSize": 100,
@@ -819,6 +870,7 @@
         "Desc_CoolingSystem_C": {
             "slug": "cooling-system",
             "name": "Cooling System",
+            "description": "Used to keep temperatures of advanced parts and buildings from exceeding to inefficient levels.",
             "sinkPoints": 12006,
             "className": "Desc_CoolingSystem_C",
             "stackSize": 100,
@@ -835,6 +887,7 @@
         "Desc_NitricAcid_C": {
             "slug": "nitric-acid",
             "name": "Nitric Acid",
+            "description": "Produced by reaction of Nitrogen Gas with Water. Its high corrosiveness and oxidizing properties make it an excellent choice for refinement and fuel production processes.",
             "sinkPoints": 94000,
             "className": "Desc_NitricAcid_C",
             "stackSize": 50000,
@@ -851,6 +904,7 @@
         "Desc_AluminumCasing_C": {
             "slug": "aluminum-casing",
             "name": "Aluminum Casing",
+            "description": "A versatile container cast from Aluminum Ingots.",
             "sinkPoints": 393,
             "className": "Desc_AluminumCasing_C",
             "stackSize": 200,
@@ -867,6 +921,7 @@
         "Desc_ModularFrameLightweight_C": {
             "slug": "radio-control-unit",
             "name": "Radio Control Unit",
+            "description": "Enhances and directs radio signals.",
             "sinkPoints": 19600,
             "className": "Desc_ModularFrameLightweight_C",
             "stackSize": 50,
@@ -883,6 +938,7 @@
         "Desc_AluminumPlate_C": {
             "slug": "alclad-aluminum-sheet",
             "name": "Alclad Aluminum Sheet",
+            "description": "Thin, lightweight, and highly durable sheets that are mainly used for products that require high heat conduction or a high specific strength.",
             "sinkPoints": 266,
             "className": "Desc_AluminumPlate_C",
             "stackSize": 200,
@@ -899,6 +955,7 @@
         "Desc_Computer_C": {
             "slug": "computer",
             "name": "Computer",
+            "description": "A Computer is a complex logic machine that is used to control advanced behaviour in machines.",
             "sinkPoints": 17260,
             "className": "Desc_Computer_C",
             "stackSize": 50,
@@ -915,6 +972,7 @@
         "Desc_CrystalOscillator_C": {
             "slug": "crystal-oscillator",
             "name": "Crystal Oscillator",
+            "description": "A crystal oscillator is an electronic oscillator circuit that uses the mechanical resonance of a vibrating crystal to create an electrical signal with a precise frequency.",
             "sinkPoints": 3072,
             "className": "Desc_CrystalOscillator_C",
             "stackSize": 100,
@@ -931,6 +989,7 @@
         "Desc_AluminaSolution_C": {
             "slug": "alumina-solution",
             "name": "Alumina Solution",
+            "description": "Dissolved Alumina, extracted from Bauxite. Can be further refined into Aluminum Scrap for Aluminum Ingot production.",
             "sinkPoints": 20000,
             "className": "Desc_AluminaSolution_C",
             "stackSize": 50000,
@@ -947,6 +1006,7 @@
         "Desc_SpaceElevatorPart_1_C": {
             "slug": "smart-plating",
             "name": "Smart Plating",
+            "description": "Project Part #1. Ship with the Space Elevator to complete phases of Project Assembly.",
             "sinkPoints": 520,
             "className": "Desc_SpaceElevatorPart_1_C",
             "stackSize": 50,
@@ -963,6 +1023,7 @@
         "Desc_HighSpeedConnector_C": {
             "slug": "high-speed-connector",
             "name": "High-Speed Connector",
+            "description": "The high-speed connector connects several cables and wires in a very efficient way. Uses a standard pattern so its applications are many and varied.",
             "sinkPoints": 3776,
             "className": "Desc_HighSpeedConnector_C",
             "stackSize": 100,
@@ -979,6 +1040,7 @@
         "Desc_SpaceElevatorPart_3_C": {
             "slug": "automated-wiring",
             "name": "Automated Wiring",
+            "description": "Project Part #3. Ship with the Space Elevator to complete phases of Project Assembly.",
             "sinkPoints": 1440,
             "className": "Desc_SpaceElevatorPart_3_C",
             "stackSize": 50,
@@ -995,6 +1057,7 @@
         "Desc_Stator_C": {
             "slug": "stator",
             "name": "Stator",
+            "description": "Used for crafting.\nThe static parts of a motor.",
             "sinkPoints": 240,
             "className": "Desc_Stator_C",
             "stackSize": 100,
@@ -1011,6 +1074,7 @@
         "Desc_CircuitBoardHighSpeed_C": {
             "slug": "ai-limiter",
             "name": "AI Limiter",
+            "description": "AI Limiters are super advanced electronics that are used to control AIs and keep them from evolving in malicious ways.",
             "sinkPoints": 920,
             "className": "Desc_CircuitBoardHighSpeed_C",
             "stackSize": 100,
@@ -1027,6 +1091,7 @@
         "Desc_HighSpeedWire_C": {
             "slug": "quickwire",
             "name": "Quickwire",
+            "description": "Caterium's high conductivity and resistance to corrosion makes it ideal for small, advanced electronics.",
             "sinkPoints": 17,
             "className": "Desc_HighSpeedWire_C",
             "stackSize": 500,
@@ -1043,6 +1108,7 @@
         "Desc_SpaceElevatorPart_4_C": {
             "slug": "modular-engine",
             "name": "Modular Engine",
+            "description": "Project Part #4. Ship with the Space Elevator to complete phases of Project Assembly.",
             "sinkPoints": 9960,
             "className": "Desc_SpaceElevatorPart_4_C",
             "stackSize": 50,
@@ -1059,6 +1125,7 @@
         "Desc_SpaceElevatorPart_5_C": {
             "slug": "adaptive-control-unit",
             "name": "Adaptive Control Unit",
+            "description": "Project Part #5. Ship with the Space Elevator to complete phases of Project Assembly.",
             "sinkPoints": 86120,
             "className": "Desc_SpaceElevatorPart_5_C",
             "stackSize": 50,
@@ -1075,6 +1142,7 @@
         "Desc_MotorLightweight_C": {
             "slug": "turbo-motor",
             "name": "Turbo Motor",
+            "description": "The Turbo Motor is a more complex, and more powerful, version of the regular Motor.",
             "sinkPoints": 242720,
             "className": "Desc_MotorLightweight_C",
             "stackSize": 50,
@@ -1091,6 +1159,7 @@
         "Desc_PressureConversionCube_C": {
             "slug": "pressure-conversion-cube",
             "name": "Pressure Conversion Cube",
+            "description": "Converts outgoing force into internal pressure. Required to contain unstable, high-energy matter.",
             "sinkPoints": 257312,
             "className": "Desc_PressureConversionCube_C",
             "stackSize": 50,
@@ -1107,6 +1176,7 @@
         "Desc_ModularFrameFused_C": {
             "slug": "fused-modular-frame",
             "name": "Fused Modular Frame",
+            "description": "A corrosion resistant, nitride hardened, highly robust, yet lightweight modular frame.",
             "sinkPoints": 62840,
             "className": "Desc_ModularFrameFused_C",
             "stackSize": 50,
@@ -1123,6 +1193,7 @@
         "Desc_ComputerSuper_C": {
             "slug": "supercomputer",
             "name": "Supercomputer",
+            "description": "The supercomputer is the next-gen version of the computer.",
             "sinkPoints": 99576,
             "className": "Desc_ComputerSuper_C",
             "stackSize": 50,
@@ -1139,6 +1210,7 @@
         "Desc_ElectromagneticControlRod_C": {
             "slug": "electromagnetic-control-rod",
             "name": "Electromagnetic Control Rod",
+            "description": "Control Rods regulate power output via electromagnetism.",
             "sinkPoints": 2560,
             "className": "Desc_ElectromagneticControlRod_C",
             "stackSize": 100,
@@ -1155,6 +1227,7 @@
         "Desc_CopperDust_C": {
             "slug": "copper-powder",
             "name": "Copper Powder",
+            "description": "Ground down Copper Ingots.\nThe high natural density of Copper, combined with the granularity of the powder, make this part fit for producing Nuclear Pasta in the Particle Accelerator.",
             "sinkPoints": 72,
             "className": "Desc_CopperDust_C",
             "stackSize": 500,
@@ -1171,6 +1244,7 @@
         "Desc_GasTank_C": {
             "slug": "empty-fluid-tank",
             "name": "Empty Fluid Tank",
+            "description": "Used to package gases and volatile liquids for transportation.",
             "sinkPoints": 225,
             "className": "Desc_GasTank_C",
             "stackSize": 100,
@@ -1187,6 +1261,7 @@
         "Desc_SpaceElevatorPart_9_C": {
             "slug": "nuclear-pasta",
             "name": "Nuclear Pasta",
+            "description": "Project Part #9. Ship with the Space Elevator to complete phases of Project Assembly.\nPower Usage: 500-1500 MW (1000 MW average).\n\nNuclear Pasta is extremely dense degenerate matter, formed when extreme pressure forces protons and electrons together into neutrons. It is theorized to exist naturally within the crust of neutron stars.",
             "sinkPoints": 543424,
             "className": "Desc_SpaceElevatorPart_9_C",
             "stackSize": 50,
@@ -1203,6 +1278,7 @@
         "Desc_SpaceElevatorPart_7_C": {
             "slug": "assembly-director-system",
             "name": "Assembly Director System",
+            "description": "Project Part #6. Ship with the Space Elevator to complete phases of Project Assembly.\n\nThis extremely fast and precise computing system is specifically designed to direct the Project Assembly: Assembly Phase.",
             "sinkPoints": 543632,
             "className": "Desc_SpaceElevatorPart_7_C",
             "stackSize": 50,
@@ -1219,6 +1295,7 @@
         "Desc_SpaceElevatorPart_6_C": {
             "slug": "magnetic-field-generator",
             "name": "Magnetic Field Generator",
+            "description": "Project Part #7. Ship with the Space Elevator to complete phases of Project Assembly.\n\nThese modular generators use superconducting magnets and vast amounts of electricity to produce an easily expandable and powerful magnetic field.",
             "sinkPoints": 15650,
             "className": "Desc_SpaceElevatorPart_6_C",
             "stackSize": 50,
@@ -1235,6 +1312,7 @@
         "Desc_SpaceElevatorPart_8_C": {
             "slug": "thermal-propulsion-rocket",
             "name": "Thermal Propulsion Rocket",
+            "description": "Project Part #8. Ship with the Space Elevator to complete phases of Project Assembly.\n\nUses extreme heat to produce the high pressure plasma required to get Project Assembly into motion.",
             "sinkPoints": 732956,
             "className": "Desc_SpaceElevatorPart_8_C",
             "stackSize": 50,
@@ -1251,6 +1329,7 @@
         "Desc_Gunpowder_C": {
             "slug": "black-powder",
             "name": "Black Powder",
+            "description": "An explosive powder that is commonly used to produce simple explosives.",
             "sinkPoints": 14,
             "className": "Desc_Gunpowder_C",
             "stackSize": 200,
@@ -1267,6 +1346,7 @@
         "Desc_Filter_C": {
             "slug": "gas-filter",
             "name": "Gas Filter",
+            "description": "Used in the Gas Mask to filter out toxics and pollutants from the air.",
             "sinkPoints": 830,
             "className": "Desc_Filter_C",
             "stackSize": 50,
@@ -1283,6 +1363,7 @@
         "Desc_HazmatFilter_C": {
             "slug": "iodine-infused-filter",
             "name": "Iodine Infused Filter",
+            "description": "Used in the Hazmat Suit to absorb radioactive particles.",
             "sinkPoints": 2718,
             "className": "Desc_HazmatFilter_C",
             "stackSize": 50,
@@ -1299,6 +1380,7 @@
         "Desc_AlienDNACapsule_C": {
             "slug": "alien-dna-capsule",
             "name": "Alien DNA Capsule",
+            "description": "This data capsule translates organic chemicals into readable alien genetics information.\nUsed for researching alien organisms.\n\nGo the extra kilometer! Knowledge is power, and power is just efficiency with fewer steps. Depositing Alien DNA Capsules in the AWESOME Sink provides FICSIT with knowledge, and Pioneers with Coupons.",
             "sinkPoints": 0,
             "className": "Desc_AlienDNACapsule_C",
             "stackSize": 50,
@@ -1315,6 +1397,7 @@
         "Desc_Crystal_C": {
             "slug": "blue-power-slug",
             "name": "Blue Power Slug",
+            "description": "A strange slug radiating a weak strange power.",
             "sinkPoints": 0,
             "className": "Desc_Crystal_C",
             "stackSize": 50,
@@ -1331,6 +1414,7 @@
         "Desc_AlienProtein_C": {
             "slug": "alien-protein",
             "name": "Alien Protein",
+            "description": "Ground down Alien Remains in a neat little package.\nUsed for medical purposes and to research alien organisms.",
             "sinkPoints": 0,
             "className": "Desc_AlienProtein_C",
             "stackSize": 100,
@@ -1347,6 +1431,7 @@
         "Desc_Crystal_mk3_C": {
             "slug": "purple-power-slug",
             "name": "Purple Power Slug",
+            "description": "A strange slug radiating a powerful strange power.",
             "sinkPoints": 0,
             "className": "Desc_Crystal_mk3_C",
             "stackSize": 50,
@@ -1363,6 +1448,7 @@
         "Desc_Crystal_mk2_C": {
             "slug": "yellow-power-slug",
             "name": "Yellow Power Slug",
+            "description": "A strange slug radiating a strange power.",
             "sinkPoints": 0,
             "className": "Desc_Crystal_mk2_C",
             "stackSize": 50,
@@ -1379,6 +1465,7 @@
         "Desc_GunpowderMK2_C": {
             "slug": "smokeless-powder",
             "name": "Smokeless Powder",
+            "description": "An explosive powder that is commonly used to produce modern firearms.",
             "sinkPoints": 58,
             "className": "Desc_GunpowderMK2_C",
             "stackSize": 100,
@@ -1395,6 +1482,7 @@
         "Desc_Water_C": {
             "slug": "water",
             "name": "Water",
+            "description": "It's water.",
             "sinkPoints": 5000,
             "className": "Desc_Water_C",
             "stackSize": 50000,
@@ -1411,6 +1499,7 @@
         "Desc_OreIron_C": {
             "slug": "iron-ore",
             "name": "Iron Ore",
+            "description": "Used for crafting.\nThe most essential basic resource.",
             "sinkPoints": 1,
             "className": "Desc_OreIron_C",
             "stackSize": 100,
@@ -1427,6 +1516,7 @@
         "Desc_Stone_C": {
             "slug": "limestone",
             "name": "Limestone",
+            "description": "Used for crafting.\nBasic resource mainly used for stable foundations.",
             "sinkPoints": 2,
             "className": "Desc_Stone_C",
             "stackSize": 100,
@@ -1443,6 +1533,7 @@
         "Desc_Coal_C": {
             "slug": "coal",
             "name": "Coal",
+            "description": "Mainly used as fuel for vehicles & coal generators and for steel production.",
             "sinkPoints": 3,
             "className": "Desc_Coal_C",
             "stackSize": 100,
@@ -1459,6 +1550,7 @@
         "Desc_Sulfur_C": {
             "slug": "sulfur",
             "name": "Sulfur",
+            "description": "Sulfur is primarily used for Black Powder.",
             "sinkPoints": 11,
             "className": "Desc_Sulfur_C",
             "stackSize": 100,
@@ -1475,6 +1567,7 @@
         "Desc_LiquidOil_C": {
             "slug": "crude-oil",
             "name": "Crude Oil",
+            "description": "Crude Oil is refined into all kinds of Oil-based resources, like Fuel and Plastic.",
             "sinkPoints": 30000,
             "className": "Desc_LiquidOil_C",
             "stackSize": 50000,
@@ -1491,6 +1584,7 @@
         "Desc_RawQuartz_C": {
             "slug": "raw-quartz",
             "name": "Raw Quartz",
+            "description": "Raw Quartz can be processed into Quartz Crystals and Silica, which both offer a variety of applications.",
             "sinkPoints": 15,
             "className": "Desc_RawQuartz_C",
             "stackSize": 100,
@@ -1507,6 +1601,7 @@
         "Desc_OreCopper_C": {
             "slug": "copper-ore",
             "name": "Copper Ore",
+            "description": "Used for crafting.\nBasic resource mainly used for electricity.",
             "sinkPoints": 3,
             "className": "Desc_OreCopper_C",
             "stackSize": 100,
@@ -1523,6 +1618,7 @@
         "Desc_OreGold_C": {
             "slug": "caterium-ore",
             "name": "Caterium Ore",
+            "description": "Caterium Ore is smelted into Caterium Ingots. Caterium Ingots are mostly used for advanced electronics.",
             "sinkPoints": 7,
             "className": "Desc_OreGold_C",
             "stackSize": 100,
@@ -1539,6 +1635,7 @@
         "Desc_OreUranium_C": {
             "slug": "uranium",
             "name": "Uranium",
+            "description": "Uranium is a radioactive element. \nUsed to produce Encased Uranium Cells for Uranium Fuel Rods.\n\nCaution: Moderately Radioactive.",
             "sinkPoints": 35,
             "className": "Desc_OreUranium_C",
             "stackSize": 100,
@@ -1555,6 +1652,7 @@
         "Desc_NitrogenGas_C": {
             "slug": "nitrogen-gas",
             "name": "Nitrogen Gas",
+            "description": "Nitrogen can be used in a variety of ways, such as metallurgy, cooling, and Nitric Acid production. On Massage-2(AB)b, it can be extracted from underground gas wells.",
             "sinkPoints": 10000,
             "className": "Desc_NitrogenGas_C",
             "stackSize": 50000,
@@ -1571,6 +1669,7 @@
         "Desc_OreBauxite_C": {
             "slug": "bauxite",
             "name": "Bauxite",
+            "description": "Bauxite is used to produce Alumina, which can be further refined into the Aluminum Scrap required to produce Aluminum Ingots.",
             "sinkPoints": 8,
             "className": "Desc_OreBauxite_C",
             "stackSize": 100,
@@ -1587,6 +1686,7 @@
         "BP_EquipmentDescriptorShockShank_C": {
             "slug": "xeno-zapper",
             "name": "Xeno-Zapper",
+            "description": "Standard issue electroshock self-defense weapon for melee range.",
             "sinkPoints": 1880,
             "className": "BP_EquipmentDescriptorShockShank_C",
             "stackSize": 1,
@@ -1603,6 +1703,7 @@
         "BP_EquipmentDescriptorStunSpear_C": {
             "slug": "xeno-basher",
             "name": "Xeno-Basher",
+            "description": "Heavy electroshock self-defense weapon for melee range.",
             "sinkPoints": 18800,
             "className": "BP_EquipmentDescriptorStunSpear_C",
             "stackSize": 1,
@@ -1619,6 +1720,7 @@
         "BP_ItemDescriptorPortableMiner_C": {
             "slug": "portable-miner",
             "name": "Portable Miner",
+            "description": "Can be set up on a resource node to automatically extract the resource. Note that it has limited storage space.",
             "sinkPoints": 56,
             "className": "BP_ItemDescriptorPortableMiner_C",
             "stackSize": 1,
@@ -1635,6 +1737,7 @@
         "BP_EquipmentDescriptorHoverPack_C": {
             "slug": "hover-pack",
             "name": "Hover Pack",
+            "description": "Power consumption: 100 MW\n\nAllows for vertical movement and hovering in mid-air to improve building efficiency and factory traversal. Wirelessly connects to nearby power connections, such as Power Poles and Buildings, for power consumption.\n\nSlow-fall: Hold {PlayerMovement_Jump} after losing connection mid-air.\nDisable Hoverpack: Double tap {PlayerMovement_Crouch} while hovering.",
             "sinkPoints": 413920,
             "className": "BP_EquipmentDescriptorHoverPack_C",
             "stackSize": 1,
@@ -1651,6 +1754,7 @@
         "BP_EquipmentDescriptorHazmatSuit_C": {
             "slug": "hazmat-suit",
             "name": "Hazmat Suit",
+            "description": "Shields Pioneers from the adverse effects of radiation. \nConsumes Iodine Infused Filters from the inventory while worn in radioactive areas.",
             "sinkPoints": 54100,
             "className": "BP_EquipmentDescriptorHazmatSuit_C",
             "stackSize": 1,
@@ -1667,6 +1771,7 @@
         "BP_EquipmentDescriptorGasmask_C": {
             "slug": "gas-mask",
             "name": "Gas Mask",
+            "description": "Allows Pioneers to breathe normally while in toxic gas areas.\nConsumes Gas Filters from the inventory when in use.",
             "sinkPoints": 55000,
             "className": "BP_EquipmentDescriptorGasmask_C",
             "stackSize": 1,
@@ -1683,6 +1788,7 @@
         "BP_EquipmentDescriptorJetPack_C": {
             "slug": "jetpack",
             "name": "Jetpack",
+            "description": "The Jetpack allows Pioneers to travel through the air with increased control.\n\nFuel is automatically consumed from the inventory to refill the Jetpack while on the ground.\nDifferent fuel types can be used and provide different levels of Jetpack efficiency. The preferred fuel type will be used if available and can be set in the equipment inventory.",
             "sinkPoints": 49580,
             "className": "BP_EquipmentDescriptorJetPack_C",
             "stackSize": 1,
@@ -1699,6 +1805,7 @@
         "Desc_Chainsaw_C": {
             "slug": "chainsaw",
             "name": "Chainsaw",
+            "description": "Slot: Hands\nFuel: Biofuel\n\nUsed to clear an area of flora that is too difficult to remove by hand.",
             "sinkPoints": 2760,
             "className": "Desc_Chainsaw_C",
             "stackSize": 1,
@@ -1715,6 +1822,7 @@
         "BP_EquipmentDescriptorObjectScanner_C": {
             "slug": "object-scanner",
             "name": "Object Scanner",
+            "description": "Scans the area for a set item. Beeps at a rate proportional to proximity and direction.",
             "sinkPoints": 1400,
             "className": "BP_EquipmentDescriptorObjectScanner_C",
             "stackSize": 1,
@@ -1731,6 +1839,7 @@
         "Desc_RebarGunProjectile_C": {
             "slug": "rebar-gun",
             "name": "Rebar Gun",
+            "description": "Improvised ranged weapon for self-defense. Has to be reloaded after each use.",
             "sinkPoints": 1968,
             "className": "Desc_RebarGunProjectile_C",
             "stackSize": 1,
@@ -1747,6 +1856,7 @@
         "BP_EquipmentDescriptorRifle_C": {
             "slug": "rifle",
             "name": "Rifle",
+            "description": "A long-range, rapid fire weapon. Specifically designed to deliver adequate performance within the designated work area.",
             "sinkPoints": 9480,
             "className": "BP_EquipmentDescriptorRifle_C",
             "stackSize": 1,
@@ -1763,6 +1873,7 @@
         "BP_EquipmentDescriptorJumpingStilts_C": {
             "slug": "blade-runners",
             "name": "Blade Runners",
+            "description": "An exoskeleton for the lower legs that assists movement, allowing Pioneers to sprint faster and jump higher.\nAlso dampens the impact of landing.",
             "sinkPoints": 4088,
             "className": "BP_EquipmentDescriptorJumpingStilts_C",
             "stackSize": 1,
@@ -1779,6 +1890,7 @@
         "BP_EqDescZipLine_C": {
             "slug": "zipline",
             "name": "Zipline",
+            "description": "Provides faster traversal in factories by allowing Pioneers to zip along Power lines.\nActivate the Zipline and aim at a nearby Power Line to connect to it.",
             "sinkPoints": 5284,
             "className": "BP_EqDescZipLine_C",
             "stackSize": 1,
@@ -1795,6 +1907,7 @@
         "BP_EquipmentDescriptorNobeliskDetonator_C": {
             "slug": "nobelisk-detonator",
             "name": "Nobelisk Detonator",
+            "description": "A remote-control device used to handle and detonate Nobelisks.",
             "sinkPoints": 6480,
             "className": "BP_EquipmentDescriptorNobeliskDetonator_C",
             "stackSize": 1,
@@ -1811,6 +1924,7 @@
         "Desc_GolfCart_C": {
             "slug": "factory-carttm",
             "name": "Factory Cart™",
+            "description": "The one and only FICSIT Factory Cart™\nNow with special - FICSIT Foundation only - Grip Wheels, for an even smoother and faster factory floor experience!",
             "sinkPoints": 1552,
             "className": "Desc_GolfCart_C",
             "stackSize": 1,
@@ -1827,6 +1941,7 @@
         "Desc_GolfCartGold_C": {
             "slug": "golden-factory-carttm",
             "name": "Golden Factory Cart™",
+            "description": "The one and only Golden FICSIT Factory Cart™\n\nYou have now officially ascended. \nGo forth now, Master of Spaghetti, God of the Factory, Sinker of Cups, Employee of the Planet... travel in STYLE!",
             "sinkPoints": 1852,
             "className": "Desc_GolfCartGold_C",
             "stackSize": 1,
@@ -1843,6 +1958,7 @@
         "Desc_FlowerPetals_C": {
             "slug": "flower-petals",
             "name": "Flower Petals",
+            "description": "Used for crafting.\nColorful native flower petals.",
             "sinkPoints": 10,
             "className": "Desc_FlowerPetals_C",
             "stackSize": 500,
@@ -1859,6 +1975,7 @@
         "Desc_Wood_C": {
             "slug": "wood",
             "name": "Wood",
+            "description": "Primarily used as fuel.\nBiomass Burners and vehicles can use it for power.",
             "sinkPoints": 30,
             "className": "Desc_Wood_C",
             "stackSize": 200,
@@ -1875,6 +1992,7 @@
         "Desc_GenericBiomass_C": {
             "slug": "biomass",
             "name": "Biomass",
+            "description": "Primarily used as fuel.\nBiomass burners and vehicles can use it for power.\nBiomass is much more energy-efficient than raw biological matter.",
             "sinkPoints": 12,
             "className": "Desc_GenericBiomass_C",
             "stackSize": 200,
@@ -1891,6 +2009,7 @@
         "Desc_Biofuel_C": {
             "slug": "solid-biofuel",
             "name": "Solid Biofuel",
+            "description": "The most energy-efficient form of solid biomass. Can be used as fuel for the Chainsaw.",
             "sinkPoints": 48,
             "className": "Desc_Biofuel_C",
             "stackSize": 200,
@@ -1907,6 +2026,7 @@
         "Desc_LiquidBiofuel_C": {
             "slug": "liquid-biofuel",
             "name": "Liquid Biofuel",
+            "description": "Liquid Biofuel can be used to generate power or packaged to be used as fuel for Vehicles.",
             "sinkPoints": 261000,
             "className": "Desc_LiquidBiofuel_C",
             "stackSize": 50000,
@@ -1923,6 +2043,7 @@
         "Desc_PackagedBiofuel_C": {
             "slug": "packaged-liquid-biofuel",
             "name": "Packaged Liquid Biofuel",
+            "description": "Liquid Biofuel, packaged for alternative transport. Can be used as fuel for Vehicles and the Jetpack.",
             "sinkPoints": 370,
             "className": "Desc_PackagedBiofuel_C",
             "stackSize": 100,
@@ -1939,6 +2060,7 @@
         "Desc_PackagedAlumina_C": {
             "slug": "packaged-alumina-solution",
             "name": "Packaged Alumina Solution",
+            "description": "Alumina Solution, packaged for alternative transport.",
             "sinkPoints": 160,
             "className": "Desc_PackagedAlumina_C",
             "stackSize": 100,
@@ -1955,6 +2077,7 @@
         "Desc_PackagedNitrogenGas_C": {
             "slug": "packaged-nitrogen-gas",
             "name": "Packaged Nitrogen Gas",
+            "description": "Nitrogen Gas, packaged for alternative transport.",
             "sinkPoints": 312,
             "className": "Desc_PackagedNitrogenGas_C",
             "stackSize": 100,
@@ -1971,6 +2094,7 @@
         "Desc_PackagedNitricAcid_C": {
             "slug": "packaged-nitric-acid",
             "name": "Packaged Nitric Acid",
+            "description": "Nitric Acid, packaged for alternative transport.",
             "sinkPoints": 412,
             "className": "Desc_PackagedNitricAcid_C",
             "stackSize": 100,
@@ -1987,6 +2111,7 @@
         "Desc_PackagedSulfuricAcid_C": {
             "slug": "packaged-sulfuric-acid",
             "name": "Packaged Sulfuric Acid",
+            "description": "Sulfuric Acid, packaged for alternative transport.",
             "sinkPoints": 152,
             "className": "Desc_PackagedSulfuricAcid_C",
             "stackSize": 100,
@@ -2003,6 +2128,7 @@
         "Desc_Fabric_C": {
             "slug": "fabric",
             "name": "Fabric",
+            "description": "Used for equipment crafting.\nFlexible but durable fabric.",
             "sinkPoints": 140,
             "className": "Desc_Fabric_C",
             "stackSize": 100,
@@ -2019,6 +2145,7 @@
         "Desc_StingerParts_C": {
             "slug": "stinger-remains",
             "name": "Stinger Remains",
+            "description": "The remains of whatever that creepy thing was.\nUsed for MAM research.",
             "sinkPoints": 0,
             "className": "Desc_StingerParts_C",
             "stackSize": 50,
@@ -2035,6 +2162,7 @@
         "Desc_SpitterParts_C": {
             "slug": "plasma-spitter-remains",
             "name": "Plasma Spitter Remains",
+            "description": "The remains of a plasma spitting alien creature.\nUsed for MAM research.",
             "sinkPoints": 0,
             "className": "Desc_SpitterParts_C",
             "stackSize": 50,
@@ -2051,6 +2179,7 @@
         "Desc_HogParts_C": {
             "slug": "hog-remains",
             "name": "Hog Remains",
+            "description": "The carapace of the alien Hog creature.\nUsed for MAM research.",
             "sinkPoints": 0,
             "className": "Desc_HogParts_C",
             "stackSize": 50,
@@ -2067,6 +2196,7 @@
         "Desc_HatcherParts_C": {
             "slug": "hatcher-remains",
             "name": "Hatcher Remains",
+            "description": "The shell-like remains an alien... thing.\nUsed for MAM research.",
             "sinkPoints": 0,
             "className": "Desc_HatcherParts_C",
             "stackSize": 50,
@@ -2083,6 +2213,7 @@
         "Desc_Mycelia_C": {
             "slug": "mycelia",
             "name": "Mycelia",
+            "description": "Used for crafting.\nBiomass Burners and vehicles can use it for power.",
             "sinkPoints": 10,
             "className": "Desc_Mycelia_C",
             "stackSize": 200,
@@ -2099,6 +2230,7 @@
         "Desc_Leaves_C": {
             "slug": "leaves",
             "name": "Leaves",
+            "description": "Primarily used as fuel.\nBiomass Burners and vehicles can use it for power.",
             "sinkPoints": 3,
             "className": "Desc_Leaves_C",
             "stackSize": 500,
@@ -2115,6 +2247,7 @@
         "Desc_NuclearFuelRod_C": {
             "slug": "uranium-fuel-rod",
             "name": "Uranium Fuel Rod",
+            "description": "Used as fuel for the Nuclear Power Plant.\n\nCaution: Produces radioactive Uranium Waste when consumed.\nCaution: Moderately Radioactive.",
             "sinkPoints": 44092,
             "className": "Desc_NuclearFuelRod_C",
             "stackSize": 50,
@@ -2131,6 +2264,7 @@
         "Desc_PlutoniumFuelRod_C": {
             "slug": "plutonium-fuel-rod",
             "name": "Plutonium Fuel Rod",
+            "description": "Used as fuel for the Nuclear Power Plant.\n\nCaution: Produces radioactive Plutonium Waste when consumed.\nCaution: HIGHLY Radioactive.",
             "sinkPoints": 153184,
             "className": "Desc_PlutoniumFuelRod_C",
             "stackSize": 50,
@@ -2147,6 +2281,7 @@
         "BP_EquipmentDescriptorBeacon_C": {
             "slug": "beacon",
             "name": "Beacon",
+            "description": "PENDING REMOVAL\nThis item will (likely) be removed in a future update.\n\nCurrently only used as an ingredient in an alternative recipe.",
             "sinkPoints": 320,
             "className": "BP_EquipmentDescriptorBeacon_C",
             "stackSize": 100,
@@ -2163,6 +2298,7 @@
         "Desc_Medkit_C": {
             "slug": "medicinal-inhaler",
             "name": "Medicinal Inhaler",
+            "description": "Fully restores health when used.\n\nThe FICSIT Medicinal Inhaler can be produced from a variety of different ingredients.",
             "sinkPoints": 125,
             "className": "Desc_Medkit_C",
             "stackSize": 50,
@@ -2179,6 +2315,7 @@
         "Desc_Shroom_C": {
             "slug": "bacon-agaric",
             "name": "Bacon Agaric",
+            "description": "Slot: Hands\nConsumable\n\nCan be eaten to restore two health segments.",
             "sinkPoints": 0,
             "className": "Desc_Shroom_C",
             "stackSize": 50,
@@ -2195,6 +2332,7 @@
         "Desc_Berry_C": {
             "slug": "paleberry",
             "name": "Paleberry",
+            "description": "Slot: Hands\nConsumable\n\nCan be eaten to restore one health segment.",
             "sinkPoints": 0,
             "className": "Desc_Berry_C",
             "stackSize": 50,
@@ -2211,6 +2349,7 @@
         "Desc_Nut_C": {
             "slug": "beryl-nut",
             "name": "Beryl Nut",
+            "description": "Slot: Hands\nConsumable\n\nCan be eaten to restore half a health segment.",
             "sinkPoints": 0,
             "className": "Desc_Nut_C",
             "stackSize": 100,
@@ -2227,6 +2366,7 @@
         "Desc_Parachute_C": {
             "slug": "parachute",
             "name": "Parachute",
+            "description": "Slows down your fall when activated in mid-air.",
             "sinkPoints": 608,
             "className": "Desc_Parachute_C",
             "stackSize": 1,
@@ -2243,6 +2383,7 @@
         "Desc_Rebar_Explosive_C": {
             "slug": "explosive-rebar",
             "name": "Explosive Rebar",
+            "description": "Explodes on impact, dealing heavy damage.",
             "sinkPoints": 360,
             "className": "Desc_Rebar_Explosive_C",
             "stackSize": 100,
@@ -2259,6 +2400,7 @@
         "Desc_Rebar_Stunshot_C": {
             "slug": "stun-rebar",
             "name": "Stun Rebar",
+            "description": "Electrocutes the target on impact, stunning it for a short time.\n\nStun duration: 5 seconds",
             "sinkPoints": 186,
             "className": "Desc_Rebar_Stunshot_C",
             "stackSize": 100,
@@ -2275,6 +2417,7 @@
         "Desc_SpikedRebar_C": {
             "slug": "iron-rebar",
             "name": "Iron Rebar",
+            "description": "A simple iron rebar that can be shot using the Rebar Gun, for self-defense purposes.",
             "sinkPoints": 8,
             "className": "Desc_SpikedRebar_C",
             "stackSize": 100,
@@ -2291,6 +2434,7 @@
         "Desc_CartridgeSmartProjectile_C": {
             "slug": "homing-rifle-ammo",
             "name": "Homing Rifle Ammo",
+            "description": "The bullet guidance system, build into this ammunition, allows it to accurately hit any target within the reticle area.\nEspecially useful when dealing with agile threats, or for Pioneers who can't be bothered to aim properly.",
             "sinkPoints": 855,
             "className": "Desc_CartridgeSmartProjectile_C",
             "stackSize": 500,
@@ -2307,6 +2451,7 @@
         "Desc_NobeliskExplosive_C": {
             "slug": "nobelisk",
             "name": "Nobelisk",
+            "description": "A simple explosive, useful for clearing boulders, vegetation, and other obstacles.",
             "sinkPoints": 152,
             "className": "Desc_NobeliskExplosive_C",
             "stackSize": 50,
@@ -2323,6 +2468,7 @@
         "Desc_NobeliskCluster_C": {
             "slug": "cluster-nobelisk",
             "name": "Cluster Nobelisk",
+            "description": "A Nobelisk that detonates into multiple smaller explosions. Practical when clearing out large areas of vegetation and other inconveniences.",
             "sinkPoints": 1376,
             "className": "Desc_NobeliskCluster_C",
             "stackSize": 50,
@@ -2339,6 +2485,7 @@
         "Desc_NobeliskGas_C": {
             "slug": "gas-nobelisk",
             "name": "Gas Nobelisk",
+            "description": "Instead of a regular explosion, this Nobelisk creates a deadly gas cloud.",
             "sinkPoints": 544,
             "className": "Desc_NobeliskGas_C",
             "stackSize": 50,
@@ -2355,6 +2502,7 @@
         "Desc_NobeliskNuke_C": {
             "slug": "nuke-nobelisk",
             "name": "Nuke Nobelisk",
+            "description": "This Nobelisk uses a nuclear fission reaction to generate a massive explosion.\n\nWARNING: Ensure all FICSIT property is clear of the blast zone before detonation.",
             "sinkPoints": 19600,
             "className": "Desc_NobeliskNuke_C",
             "stackSize": 50,
@@ -2371,6 +2519,7 @@
         "Desc_NobeliskShockwave_C": {
             "slug": "pulse-nobelisk",
             "name": "Pulse Nobelisk",
+            "description": "Instead of a regular explosion, this Nobelisk generates a powerful shockwave.",
             "sinkPoints": 1533,
             "className": "Desc_NobeliskShockwave_C",
             "stackSize": 50,
@@ -2387,6 +2536,7 @@
         "Desc_Rebar_Spreadshot_C": {
             "slug": "shatter-rebar",
             "name": "Shatter Rebar",
+            "description": "This rebar fractures when shot, launching deadly debris in a wide spread but with limited range.",
             "sinkPoints": 332,
             "className": "Desc_Rebar_Spreadshot_C",
             "stackSize": 100,
@@ -2403,6 +2553,7 @@
         "Desc_CartridgeChaos_C": {
             "slug": "turbo-rifle-ammo",
             "name": "Turbo Rifle Ammo",
+            "description": "Lightweight, compact, and volatile. These rounds provide extreme capacity and fire rates, at the cost of accuracy.",
             "sinkPoints": 120,
             "className": "Desc_CartridgeChaos_C",
             "stackSize": 500,
@@ -2419,6 +2570,7 @@
         "Desc_CartridgeStandard_C": {
             "slug": "rifle-ammo",
             "name": "Rifle Ammo",
+            "description": "Standard issue Rifle ammunition, useful for establishing dominance.",
             "sinkPoints": 25,
             "className": "Desc_CartridgeStandard_C",
             "stackSize": 500,
@@ -39562,7 +39714,7 @@
             "metadata": {
                 "powerConsumption": 0,
                 "powerConsumptionExponent": 1.321929,
-                "manufacturingSpeed": 0
+                "manufacturingSpeed": 1
             },
             "size": {
                 "width": 0,

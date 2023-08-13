@@ -91,7 +91,7 @@ export class ProductionTab
 
 		const calc = () => {
 			const apiRequest: IProductionDataApiRequest = this.data.request as IProductionDataApiRequest;
-			apiRequest.gameVersion = '0.6.0';
+			apiRequest.gameVersion = '0.8.0';
 			Solver.solveProduction(apiRequest, (result) => {
 				const res = () => {
 					let length = 0;
@@ -195,7 +195,7 @@ export class ProductionTab
 		shareData.metadata.icon = this.icon;
 		axios({
 			method: 'POST',
-			url: 'https://api.satisfactorytools.com/v1/share?experimental=true',
+			url: 'https://api.satisfactorytools.com/v2/share',
 			data: shareData,
 		}).then((response) => {
 			this.scope.$timeout(0).then(() => {
