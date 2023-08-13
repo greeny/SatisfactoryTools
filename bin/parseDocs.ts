@@ -43,6 +43,9 @@ for (const definitions of docs) {
 		case 'Class\'/Script/FactoryGame.FGItemDescAmmoTypeProjectile\'':
 		case 'Class\'/Script/FactoryGame.FGItemDescAmmoTypeColorCartridge\'':
 		case 'Class\'/Script/FactoryGame.FGItemDescAmmoTypeInstantHit\'':
+		case 'Class\'/Script/FactoryGame.FGAmmoTypeProjectile\'':
+		case 'Class\'/Script/FactoryGame.FGAmmoTypeSpreadshot\'':
+		case 'Class\'/Script/FactoryGame.FGAmmoTypeInstantHit\'':
 			for (const item of parseItemDescriptors(definitions.Classes)) {
 				json.items[item.className] = item;
 			}
@@ -295,7 +298,7 @@ for (const key in json.recipes) {
 
 	for (const ingredient of recipe.ingredients) {
 		if (!json.items[ingredient.item]) {
-			throw new Error('Invalid item ' + ingredient.item);
+			throw new Error('Invalid item ' + ingredient.item + ' (' + key + ')');
 		}
 		if (json.items[ingredient.item].liquid) {
 			ingredient.amount /= 1000;

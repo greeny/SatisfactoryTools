@@ -1,5 +1,7 @@
 import {Objects} from '@src/Utils/Objects';
 import {Constants} from '@src/Constants';
+import {saveAs} from 'file-saver';
+import * as base64 from 'base-64';
 
 export class Strings
 {
@@ -11,7 +13,7 @@ export class Strings
 	public static readonly SEPARATOR = 'separator';
 	public static readonly UNKNOWN = 'unknown';
 
-	private static schematicTypes: {[key: string]: string} = {
+	private static schematicTypes: { [key: string]: string } = {
 		EST_Milestone: 'Milestone',
 		EST_MAM: 'MAM Research',
 		EST_Alternate: 'Alternate recipe',
@@ -20,7 +22,7 @@ export class Strings
 		EST_ResourceSink: 'AWESOME Sink',
 	};
 
-	public static formatNumber(num: number|string, decimals: number = 3)
+	public static formatNumber(num: number | string, decimals: number = 3)
 	{
 		if (typeof num === 'string') {
 			num = parseFloat(num);
@@ -31,6 +33,40 @@ export class Strings
 	public static webalize(name: string): string
 	{
 		return name.replace(/[\s|.]+/gi, '-').replace(/[™:]/gi, '').toLowerCase();
+	}
+
+	public static stringToBuffer(str: string): ArrayBuffer
+	{
+		const stringLength = str.length;
+		const buffer = new ArrayBuffer(stringLength);
+		const bufferView = new Uint8Array(buffer);
+		for (let i = 0; i < stringLength; i++) {
+			bufferView[i] = str.charCodeAt(i);
+		}
+		return buffer;
+	}
+
+	public static bufferToString(buffer: ArrayBuffer): string
+	{
+		return String.fromCharCode.apply(null, Array.from(new Uint16Array(buffer)));
+	}
+
+	public static downloadFile(filename: string, data: string, type: string = 'text/plain'): void
+	{
+		const blob = new Blob([data], {
+			type: type + ';charset=utf-8',
+		})
+		saveAs(blob, Strings.webalize(filename));
+	}
+
+	public static base64encode(str: string): string
+	{
+		return base64.encode(str);
+	}
+
+	public static base64decode(str: string): string
+	{
+		return base64.decode(str);
 	}
 
 	public static copyToClipboard(text: string, displayNotification: string = '', delay: number = 3000): boolean
@@ -62,18 +98,38 @@ export class Strings
 		document.body.removeChild(textArea);
 
 		if (displayNotification !== '') {
-			const toast = document.createElement('div');
-			toast.className = 'toast';
-			toast.innerHTML = '<div class="toast-header"><span class="far fa-copy mr-2"></span><strong class="mr-auto">Copied</strong><button type="button" class="close" data-dismiss="toast"><span class="fas fa-times"></span></button></div>' +
-				'<div class="toast-body">' + displayNotification + '</div>';
-			document.getElementById('toasts')?.appendChild(toast);
-			$(toast).toast({
-				delay: delay,
-			});
-			$(toast).toast('show');
+			Strings.addNotification('Copied', displayNotification, delay);
 		}
 
 		return result;
+	}
+
+	public static addNotification(header: string, body: string, delay: number = 3000): void
+	{
+		const toast = document.createElement('div');
+		toast.className = 'toast';
+		toast.innerHTML = '<div class="toast-header"><span class="far fa-copy mr-2"></span><strong class="mr-auto">' + header + '</strong><button type="button" class="close" data-dismiss="toast"><span class="fas fa-times"></span></button></div>' +
+			'<div class="toast-body">' + body + '</div>';
+		document.getElementById('toasts')?.appendChild(toast);
+		$(toast).toast({
+			delay: delay,
+		});
+		$(toast).toast('show');
+	}
+
+	public static dateToIso(date: Date): string
+	{
+		return date.getFullYear() + '-' +
+			Strings.padNum(date.getMonth()) + '-' +
+			Strings.padNum(date.getDay()) + '-' +
+			Strings.padNum(date.getHours()) + '-' +
+			Strings.padNum(date.getMinutes()) + '-' +
+			Strings.padNum(date.getSeconds());
+	}
+
+	public static padNum(num: number, length: number = 2): string
+	{
+		return ('' + num).padStart(length, '0');
 	}
 
 	public static stackSizeFromEnum(size: string): number

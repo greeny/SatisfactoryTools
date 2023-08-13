@@ -344,6 +344,10 @@ export class AppModule
 			return AppModule.generateNumberFormattingFunction();
 		});
 
+		this.app.filter('numberShort', () => {
+			return AppModule.generateShortNumberFormattingFunction();
+		});
+
 		this.app.directive('app', () => {
 			return new AppDirective;
 		});
@@ -418,6 +422,19 @@ export class AppModule
 				return value;
 			} else {
 				return (Number(value)).toFixed(5).replace(/\.?0+$/, '');
+			}
+		};
+	}
+
+	private static generateShortNumberFormattingFunction()
+	{
+		return (value: number) => {
+			if (typeof value === 'undefined') {
+				return 'NaN';
+			} else if (value === ~~value) {
+				return value;
+			} else {
+				return (Number(value)).toFixed(3).replace(/\.?0+$/, '');
 			}
 		};
 	}

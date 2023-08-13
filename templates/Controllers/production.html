@@ -1,22 +1,105 @@
 <h2>Production</h2>
 
 <p>
-	Each tab is a separate production line. You can have multiple tabs and they will be automatically saved in your browser. You can also share them using the share button or reorganize by dragging them.
+	Each tab is a separate production line. You can have multiple tabs, and they will be automatically saved in your browser. You can also share them using the share button or reorganize by dragging them.
 </p>
 
 <ul class="nav nav-tabs production-nav-tabs" ui-sortable="{axis: 'x',  'ui-floating': true}" ng-model="ctrl.tabs">
+	<li class="nav-item d-flex">
+		<a class="nav-link align-self-center" ng-click="ctrl.tab = null" ng-class="{active: ctrl.tab === null}" title="Manage production lines, export and import" tooltip>
+			<span class="fas fa-tasks"></span>
+		</a>
+	</li>
 	<li class="nav-item" ng-repeat="tab in ctrl.tabs">
-		<span class="nav-link cursor-pointer"  ng-class="{active: tab === ctrl.tab}" ng-click="ctrl.tab = tab" tooltip title="{{tab.name}}">
+		<span class="nav-link cursor-pointer" ng-class="{active: tab === ctrl.tab}" ng-click="ctrl.tab = tab" tooltip title="{{tab.name}}">
 			<item-icon hide-tooltip="true" dynamic="true" item="tab.icon" size="32" ng-if="tab.icon"></item-icon>
 			<span class="fas fa-fw fa-question" ng-if="!tab.icon"></span>
 		</span>
 	</li>
 	<li class="nav-item d-flex new-tab">
-		<a class="nav-link align-self-center"  ng-click="ctrl.addEmptyTab();" title="Add new production line" tooltip>
+		<a class="nav-link align-self-center" ng-click="ctrl.addEmptyTab();" title="Add new production line" tooltip>
 			<span ng-class="{'fas': true, 'fa-plus': !ctrl.addingInProgress, 'fa-spin': ctrl.addingInProgress, 'fa-sync-alt': ctrl.addingInProgress}"></span>
 		</a>
 	</li>
 </ul>
+
+<div ng-hide="ctrl.tab">
+	<div class="card production-input">
+		<div class="card-header d-flex">
+			<span class="mx-3 production-line-name">
+				{{ctrl.selectedTabs.length}} out of {{ctrl.tabs.length}} selected
+			</span>
+			<span class="btn-group">
+				<a class="btn btn-dark w-auto" ng-click="ctrl.selectAllTabs()">All</a>
+				<a class="btn btn-dark w-auto" ng-click="ctrl.selectedTabs = []">None</a>
+			</span>
+
+			<span class="btn-group">
+				<a class="btn btn-info" ng-click="ctrl.exportSelectedTabs()" tooltip title="Export selected tabs">
+					<span class="fas fa-fw fa-file-export"></span>
+				</a>
+				<a class="btn btn-danger" ng-click="ctrl.removeSelectedTabs()" tooltip title="Remove selected tabs">
+					<span class="fas fa-fw fa-trash-alt"></span>
+				</a>
+			</span>
+		</div>
+		<div class="card-body">
+
+			<div class="row">
+				<div class="col-md-9">
+					<h4>Production lines</h4>
+					<p>
+						Select production lines that you want to export (or delete).
+					</p>
+					<table class="alternate-recipe-list">
+						<tr ng-repeat="tab in ctrl.tabs" ng-click="ctrl.toggleTab(tab)">
+							<td class="table-cell-adjust-size p-2">
+								<span class="fas fa-check-square" ng-show="ctrl.isTabSelected(tab)"></span>
+								<span class="fas fa-square" ng-show="!ctrl.isTabSelected(tab)"></span>
+							</td>
+							<td class="table-cell-adjust-size p-2">
+								<item-icon hide-tooltip="true" dynamic="true" item="tab.icon" size="32" ng-if="tab.icon"></item-icon>
+								<span class="fas fa-fw fa-question" ng-if="!tab.icon"></span>
+							</td>
+							<td class="table-cell-adjust-size p-2">
+								<span>{{tab.name}}</span>
+							</td>
+							<td class="p-2 text-muted">
+								<span ng-if="!tab.resultNew.details.hasOutput">No production</span>
+
+								<span class="mr-3" ng-if="tab.resultNew.details.power.total.average">
+									<span class="fas fa-bolt"></span>
+									{{tab.resultNew.details.power.total.average|numberShort}} MW
+								</span>
+
+								<span ng-repeat="(item, amount) in tab.resultNew.details.output" class="mr-3">
+									<item-icon item="item" size="16"></item-icon>
+									{{amount|number}}
+								</span>
+								<span ng-if="tab.resultNew.details.hasByproducts">
+									(byproducts:
+									<span ng-repeat="(item, amount) in tab.resultNew.details.byproducts" class="ml-2">
+										<item-icon item="item" size="16"></item-icon>
+										{{amount|numberShort}}
+									</span>
+									)
+								</span>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="col-md-3 border-left border-light">
+					<h4>Import (.sft file)</h4>
+
+					<label>
+						<input type="file" id="importFile">
+					</label>
+					<a ng-click="ctrl.tryImport()" class="btn btn-success">Import</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
 <div ng-show="ctrl.tab">
 	<div class="card production-input">

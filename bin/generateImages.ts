@@ -14,6 +14,9 @@ function processImage(file: string, slug: string) {
 		file = file.replace('_512', '_256');
 	}
 	if (!fs.existsSync(file)) {
+		file = file.replace('_64', '_256');
+	}
+	if (!fs.existsSync(file)) {
 		console.error('Invalid mapping for ' + slug + ', file not found: ' + file);
 	} else {
 		fs.copyFileSync(file, path.join(baseTargetPath, slug + '_256.png'));

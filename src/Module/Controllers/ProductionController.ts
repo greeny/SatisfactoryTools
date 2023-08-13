@@ -11,14 +11,20 @@ import {DataStorageService} from '@src/Module/Services/DataStorageService';
 import axios from 'axios';
 import {IProductionData} from '@src/Tools/Production/IProductionData';
 import {IBuildingSchema} from '@src/Schema/IBuildingSchema';
+import {FileExporter} from '@src/Export/FileExporter';
+import {Strings} from '@src/Utils/Strings';
 
 export class ProductionController
 {
 
+	public selectedTabs: ProductionTab[] = [];
 	public tab: ProductionTab|null = null;
 	public tabs: ProductionTab[] = [];
 	public addingInProgress: boolean;
 	public cloningInProgress: boolean;
+	public importOpen: boolean = false;
+	public importFiles: File[] = [];
+
 	public readonly rawResources: IResourceSchema[] = data.getResources();
 	public readonly craftableItems: IItemSchema[] = model.getAutomatableItems();
 	public readonly inputableItems: IItemSchema[] = model.getInputableItems();
@@ -65,6 +71,85 @@ export class ProductionController
 				this.$location.search('');
 			});
 		}
+	}
+
+	public toggleImport(): void
+	{
+		this.importOpen = !this.importOpen;
+	}
+
+	public tryImport(): void
+	{
+		const input: HTMLInputElement = document.getElementById('importFile') as HTMLInputElement;
+		const files = input.files as FileList;
+
+		if (files.length === 0) {
+			return;
+		}
+
+		const file = files[0];
+		const reader = new FileReader();
+		reader.readAsText(file, 'utf-8');
+		reader.onload = () => {
+			try {
+				const tabs = FileExporter.importTabs(reader.result as string);
+
+				for (const tab of tabs) {
+					this.tabs.push(new ProductionTab(this.scope, tab));
+				}
+
+				Strings.addNotification('Import complete', 'Successfuly imported ' + tabs.length + ' tab' + (tabs.length === 1 ? '' : 's') + '.');
+				this.scope.$apply();
+				input.value = '';
+			} catch (e) {
+				Strings.addNotification('ERROR', 'Couldn\'t import file: ' + e.message, 5000);
+				return;
+			}
+		}
+	}
+
+	public selectAllTabs(): void
+	{
+		this.selectedTabs = [];
+		for (const tab of this.tabs) {
+			this.selectedTabs.push(tab);
+		}
+	}
+
+	public toggleTab(tab: ProductionTab): void
+	{
+		const index = this.selectedTabs.indexOf(tab);
+		if (index === -1) {
+			this.selectedTabs.push(tab);
+		} else {
+			this.selectedTabs.splice(index, 1);
+		}
+	}
+
+	public isTabSelected(tab: ProductionTab): boolean
+	{
+		return this.selectedTabs.indexOf(tab) !== -1;
+	}
+
+	public removeSelectedTabs(): void
+	{
+		if (this.selectedTabs.length === 0) {
+			return;
+		}
+		if (confirm('Do you really want to remove ' + this.selectedTabs.length + ' tab' + (this.selectedTabs.length > 1 ? 's?' : '?'))) {
+			for (const tab of this.selectedTabs) {
+				this.removeTab(tab);
+			}
+			this.selectedTabs = [];
+		}
+	}
+
+	public exportSelectedTabs(): void
+	{
+		if (this.selectedTabs.length === 0) {
+			return;
+		}
+		Strings.downloadFile('sftools-export-' + Strings.dateToIso(new Date()) + '.sft', FileExporter.exportTabs(this.selectedTabs));
 	}
 
 	public addEmptyTab(): void

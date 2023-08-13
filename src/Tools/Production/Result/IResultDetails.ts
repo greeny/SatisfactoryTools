@@ -24,7 +24,9 @@ export interface IResultDetails
 	hasInput: boolean;
 	rawResources: {[key: string]: IRawResourceResultDetails};
 	output: {[key: string]: number};
+	hasOutput: boolean;
 	byproducts: {[key: string]: number};
+	hasByproducts: boolean;
 	alternatesNeeded: IRecipeSchema[],
 
 }

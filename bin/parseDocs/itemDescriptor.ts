@@ -42,6 +42,9 @@ export default function parseItemDescriptors(items: {
 			'Desc_Snowman_C',
 			'Desc_WreathDecor_C',
 			'Desc_XmassTree_C',
+			'Desc_Fireworks_Projectile_01_C',
+			'Desc_Fireworks_Projectile_02_C',
+			'Desc_Fireworks_Projectile_03_C',
 		];
 
 		if (ignored.indexOf(item.ClassName) !== -1) {
