@@ -19,7 +19,7 @@ export class Data
 		Desc_OreIron_C: 70380,
 		Desc_OreCopper_C: 28860,
 		Desc_Stone_C: 52860,
-		Desc_Coal_C: 30900,
+		Desc_Coal_C: 30120,
 		Desc_OreGold_C: 11040,
 		Desc_LiquidOil_C: 11700,
 		Desc_RawQuartz_C: 10500,
