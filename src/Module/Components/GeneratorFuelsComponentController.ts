@@ -25,7 +25,7 @@ export class GeneratorFuelsComponentController implements IOnInit
 
 	public getGenerator(className: string): IGeneratorSchema
 	{
-		return data.getRawData().generators[className.replace('Desc', 'Build')];
+		return data.getRawData().generators[className];
 	}
 
 	public $onInit(): void

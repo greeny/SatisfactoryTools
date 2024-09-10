@@ -1,6 +1,5 @@
 import angular, {ITimeoutService} from 'angular';
 import {Constants} from '@src/Constants';
-import rawData from '@data/data.json';
 import data, {Data} from '@src/Data/Data';
 import {IProductionControllerScope} from '@src/Module/Controllers/ProductionController';
 import axios from 'axios';
@@ -10,9 +9,9 @@ import {Callbacks} from '@src/Utils/Callbacks';
 import {IProductionData, IProductionDataApiRequest, IProductionDataRequestInput, IProductionDataRequestItem} from '@src/Tools/Production/IProductionData';
 import {ResultStatus} from '@src/Tools/Production/ResultStatus';
 import {Solver} from '@src/Solver/Solver';
-import {IJsonSchema} from '@src/Schema/IJsonSchema';
 import {ProductionResult} from '@src/Tools/Production/Result/ProductionResult';
 import {ProductionResultFactory} from '@src/Tools/Production/Result/ProductionResultFactory';
+import {DataProvider} from '@src/Data/DataProvider';
 
 export class ProductionTab
 {
@@ -46,7 +45,7 @@ export class ProductionTab
 	private readonly unregisterCallback: () => void;
 	private firstRun: boolean = true;
 
-	public constructor(private readonly scope: IProductionControllerScope, productionData?: IProductionData)
+	public constructor(private readonly scope: IProductionControllerScope, private readonly version: string, productionData?: IProductionData)
 	{
 		if (productionData) {
 			this.data = productionData;
@@ -91,7 +90,7 @@ export class ProductionTab
 
 		const calc = () => {
 			const apiRequest: IProductionDataApiRequest = this.data.request as IProductionDataApiRequest;
-			apiRequest.gameVersion = '0.8.0';
+			apiRequest.gameVersion = this.version === '0.8' ? '0.8.0' : '1.0.0';
 			Solver.solveProduction(apiRequest, (result) => {
 				const res = () => {
 					let length = 0;
@@ -111,7 +110,7 @@ export class ProductionTab
 					}
 
 					const factory = new ProductionResultFactory;
-					this.resultNew = factory.create(apiRequest, result, rawData as any as IJsonSchema);
+					this.resultNew = factory.create(apiRequest, result, DataProvider.get());
 					this.resultStatus = ResultStatus.RESULT;
 				};
 

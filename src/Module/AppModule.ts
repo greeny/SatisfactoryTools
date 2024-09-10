@@ -1,5 +1,5 @@
 import {ILocationProvider, IModule, ISCEProvider, IScope} from 'angular';
-import {StateParams, UrlRouterProvider} from 'angular-ui-router';
+import {StateService, StateParams, UrlRouterProvider} from 'angular-ui-router';
 import {HomeController} from '@src/Module/Controllers/HomeController';
 import {AppDirective} from '@src/Module/Directives/AppDirective';
 import {ItemController} from '@src/Module/Controllers/ItemController';
@@ -36,6 +36,7 @@ import {SchematicFiltersService} from '@src/Module/Services/SchematicFiltersServ
 import {SchematicFilterComponent} from '@src/Module/Components/SchematicFilterComponent';
 import {SchematicController} from '@src/Module/Controllers/SchematicController';
 import {April} from '@src/Utils/April';
+import {DataProvider} from '@src/Data/DataProvider';
 
 export class AppModule
 {
@@ -79,13 +80,32 @@ export class AppModule
 					},
 				},
 				{
+					name: 'version',
+					ncyBreadcrumb: {
+						label: 'Ver',
+					},
+					parent: 'page_content',
+					abstract: true,
+					url: '/{version}?share={shareId}',
+					params: {
+						version: {
+							value: null,
+							squash: true,
+						},
+					},
+					onEnter: ['$stateParams', '$state$', ($stateParams: StateParams, $state$: IAppState) => {
+						$state$.ncyBreadcrumb = $state$.ncyBreadcrumb || {};
+						$state$.ncyBreadcrumb.label = 'Game version: ' + $stateParams.version;
+					}],
+				},
+				{
 					name: 'listing',
 					ncyBreadcrumb: {
 						skip: true,
 					},
 					abstract: true,
 					url: '',
-					parent: 'page_content',
+					parent: 'version',
 					views: {
 						'page_content@root': 'entityListing',
 					},
@@ -326,9 +346,26 @@ export class AppModule
 				});
 			},
 		]);
-		this.app.run(['$transitions', '$rootScope', ($transitions: any, $rootScope: any) => {
+		this.app.run(['$transitions', '$rootScope', '$state', ($transitions: any, $rootScope: any, $state: StateService) => {
 			$rootScope.aprilMode = April.isApril();
 			$rootScope.aprilModePossible = April.isAprilPossible();
+
+			const v = document.location.href.indexOf('/1.0') === -1 ? '0.8' : '1.0';
+			$rootScope.version = v;
+			DataProvider.change(v);
+
+			$rootScope.changeVersion = (ver: string) => {
+				document.location.href = document.location.href.replace($rootScope.version, ver);
+			};
+
+			$transitions.onStart({}, (transition: ITransitionObject<{version: string, share?: string}>) => {
+				const version = transition.params().version;
+				const valid = ['0.8', '1.0'];
+				if (!valid.includes(version)) {
+					transition.abort();
+					$state.go(transition.to().name + '', {...transition.params(), version: '0.8'}, {location: 'replace', reload: true, inherit: true});
+				}
+			})
 
 			$transitions.onFinish({}, () => {
 				const elements = document.getElementsByClassName('tooltip');
@@ -337,6 +374,10 @@ export class AppModule
 						elements[index].remove();
 					}
 				}
+				setTimeout(() => {
+					$rootScope.version = $state.params.version;
+					DataProvider.change($state.params.version);
+				});
 			});
 		}]);
 

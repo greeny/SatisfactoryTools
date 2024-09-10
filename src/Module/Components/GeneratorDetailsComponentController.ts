@@ -23,12 +23,12 @@ export class GeneratorDetailsComponentController
 
 	public get powerProduction(): number|undefined
 	{
-		return this.generator.powerProduction * Math.pow(this.options.overclock / 100, 1 / this.generator.powerProductionExponent);
+		return this.generator.powerProduction * this.options.overclock / 100;
 	}
 
 	public getGenerator(className: string): IGeneratorSchema
 	{
-		return data.getRawData().generators[className.replace('Desc', 'Build')];
+		return data.getRawData().generators[className];
 	}
 
 	public get canBeOverclocked(): boolean

@@ -5,8 +5,8 @@
 	"author": "greeny",
 	"private": true,
 	"scripts": {
-		"build": "webpack --mode production",
-		"start": "webpack --mode development --progress --color --watch",
+		"build": "export SET NODE_OPTIONS=--openssl-legacy-provider && webpack --mode production",
+		"start": "export SET NODE_OPTIONS=--openssl-legacy-provider && webpack --mode development --progress --color --watch",
 		"parseDocs": "ts-node -r tsconfig-paths/register bin/parseDocs.ts",
 		"parsePak": "ts-node -r tsconfig-paths/register bin/parsePak.ts",
 		"generateImages": "ts-node -r tsconfig-paths/register bin/generateImages.ts"

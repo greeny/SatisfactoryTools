@@ -52,16 +52,16 @@
 						Enable April mode
 					</a>
 				</li>
-				<li class="nav-item dropdown">
+				<li class="nav-item" uib-dropdown>
 					<a class="nav-link dropdown-toggle" data-toggle="dropdown">
-						<b>Update 8 (Latest)</b>
+						<b>Version: {{$root.version}}</b>
 					</a>
 					<div class="dropdown-menu dropdown-menu-right">
-						<a class="dropdown-item active" href="https://www.satisfactorytools.com/" target="_blank">
-							Update 8 (Latest)
+						<a class="dropdown-item" ng-class="{'active': $root.version == '0.8'}" ng-click="$root.changeVersion('0.8')">
+							0.8
 						</a>
-						<a class="dropdown-item" href="https://u6.satisfactorytools.com/" target="_blank">
-							Update 6/7 (Old)
+						<a class="dropdown-item" ng-class="{'active': $root.version == '1.0'}" ng-click="$root.changeVersion('1.0')">
+							1.0
 						</a>
 					</div>
 				</li>
@@ -98,6 +98,12 @@
 </nav>
 
 <div class="container-fluid px-xl-5 px-lg-4 px-md-3 px-sm-2 px-1" style="margin-top: 60px;">
+	<div class="alert alert-danger alert-dismissible fade show" ng-if="version === '0.8'">
+		<b>You're looking at Tools for Update 8!</b> If you want to calculate builds for full release (1.0), change version in top menu.<br>
+		You can use the export/import functionality to move production lines to 1.0 Tools.
+		<button class="close" data-dismiss="alert">&times;</button>
+	</div>
+
 	<div ui-view></div>
 
 	<hr>

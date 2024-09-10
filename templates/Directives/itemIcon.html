@@ -7,7 +7,6 @@
 	     img-src="/assets/images/items/{{$root.aprilMode ? 'snutt' : itemEntity.slug}}_{{imageSize}}.png"
 	     width="{{size}}"
 	     height="{{size}}"
-	     alt="{{$root.aprilMode ? 'Snutt' : itemEntity.name}}"
 	     tooltip
 	     title="{{$root.aprilMode ? 'Snutt' : itemEntity.name? itemEntity.name : null }}"
 	     lazy-load>
@@ -20,7 +19,6 @@
 	     img-src="/assets/images/items/{{$root.aprilMode ? 'snutt' : itemEntity.slug}}_{{imageSize}}.png"
 	     width="{{size}}"
 	     height="{{size}}"
-	     alt="{{$root.aprilMode ? 'Snutt' : itemEntity.name}}"
 	     lazy-load>
 	<span ng-if="!itemEntity" class="fas fa-question" data-not-found="{{item.className ? item.className : item}}"></span>
 </script>

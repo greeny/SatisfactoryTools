@@ -3,7 +3,7 @@
         "Desc_NuclearWaste_C": {
             "slug": "uranium-waste",
             "name": "Uranium Waste",
-            "description": "The by-product of consuming Uranium Fuel Rods in the Nuclear Power Plant.\nNon-fissible Uranium can be extracted. Handle with caution.\n\nCaution: HIGHLY Radioactive.",
+            "description": "The by-product of consuming Uranium Fuel Rods in the Nuclear Power Plant.\nNon-fissile Uranium can be extracted. Handle with caution.\n\nCaution: HIGHLY Radioactive.",
             "sinkPoints": 0,
             "className": "Desc_NuclearWaste_C",
             "stackSize": 500,
@@ -156,7 +156,7 @@
         "Desc_NonFissibleUranium_C": {
             "slug": "non-fissile-uranium",
             "name": "Non-fissile Uranium",
-            "description": "The isotope Uranium-238 is non-fissile, meaning it cannot be used for nuclear fission. It can, however, be conversed into fissile Plutonium in the Particle Accelerator.\n\nCaution: Mildly Radioactive.",
+            "description": "The isotope Uranium-238 is non-fissile, meaning it cannot be used for nuclear fission. It can, however, be converted into fissile Plutonium in the Particle Accelerator.\n\nCaution: Mildly Radioactive.",
             "sinkPoints": 0,
             "className": "Desc_NonFissibleUranium_C",
             "stackSize": 500,
@@ -394,7 +394,7 @@
         "Desc_CompactedCoal_C": {
             "slug": "compacted-coal",
             "name": "Compacted Coal",
-            "description": "A much more efficient alternative for Coal. Used as fuel for vehicles & coal generators.",
+            "description": "A much more efficient alternative to Coal. Used as fuel for vehicles and coal generators.",
             "sinkPoints": 28,
             "className": "Desc_CompactedCoal_C",
             "stackSize": 100,
@@ -615,7 +615,7 @@
         "Desc_PetroleumCoke_C": {
             "slug": "petroleum-coke",
             "name": "Petroleum Coke",
-            "description": "Used for crafting.\nA carbon-rich material distilled from Heavy Oil Residue. \nUsed as a less efficient coal replacement or for aluminum refinement.",
+            "description": "Used for crafting.\nA carbon-rich material distilled from Heavy Oil Residue. \nUsed as a less efficient coal replacement.",
             "sinkPoints": 20,
             "className": "Desc_PetroleumCoke_C",
             "stackSize": 200,
@@ -938,7 +938,7 @@
         "Desc_AluminumPlate_C": {
             "slug": "alclad-aluminum-sheet",
             "name": "Alclad Aluminum Sheet",
-            "description": "Thin, lightweight, and highly durable sheets that are mainly used for products that require high heat conduction or a high specific strength.",
+            "description": "Thin, lightweight, and highly durable sheets mainly used for products that require high heat conduction or a high specific strength.",
             "sinkPoints": 266,
             "className": "Desc_AluminumPlate_C",
             "stackSize": 200,
@@ -955,7 +955,7 @@
         "Desc_Computer_C": {
             "slug": "computer",
             "name": "Computer",
-            "description": "A Computer is a complex logic machine that is used to control advanced behaviour in machines.",
+            "description": "A Computer is a complex logic machine that is used to control advanced behavior in machines.",
             "sinkPoints": 17260,
             "className": "Desc_Computer_C",
             "stackSize": 50,
@@ -1142,7 +1142,7 @@
         "Desc_MotorLightweight_C": {
             "slug": "turbo-motor",
             "name": "Turbo Motor",
-            "description": "The Turbo Motor is a more complex, and more powerful, version of the regular Motor.",
+            "description": "The Turbo Motor is a more complex and more powerful version of the regular Motor.",
             "sinkPoints": 242720,
             "className": "Desc_MotorLightweight_C",
             "stackSize": 50,
@@ -1227,7 +1227,7 @@
         "Desc_CopperDust_C": {
             "slug": "copper-powder",
             "name": "Copper Powder",
-            "description": "Ground down Copper Ingots.\nThe high natural density of Copper, combined with the granularity of the powder, make this part fit for producing Nuclear Pasta in the Particle Accelerator.",
+            "description": "Ground down Copper Ingots.\nThe high natural density of Copper, combined with the granularity of the powder, makes this part fit for producing Nuclear Pasta in the Particle Accelerator.",
             "sinkPoints": 72,
             "className": "Desc_CopperDust_C",
             "stackSize": 500,
@@ -1312,7 +1312,7 @@
         "Desc_SpaceElevatorPart_8_C": {
             "slug": "thermal-propulsion-rocket",
             "name": "Thermal Propulsion Rocket",
-            "description": "Project Part #8. Ship with the Space Elevator to complete phases of Project Assembly.\n\nUses extreme heat to produce the high pressure plasma required to get Project Assembly into motion.",
+            "description": "Project Part #8. Ship with the Space Elevator to complete phases of Project Assembly.\n\nUses extreme heat to produce the high-pressure plasma required to get Project Assembly into motion.",
             "sinkPoints": 732956,
             "className": "Desc_SpaceElevatorPart_8_C",
             "stackSize": 50,
@@ -1346,7 +1346,7 @@
         "Desc_Filter_C": {
             "slug": "gas-filter",
             "name": "Gas Filter",
-            "description": "Used in the Gas Mask to filter out toxics and pollutants from the air.",
+            "description": "Used in the Gas Mask to filter out toxins and pollutants from the air.",
             "sinkPoints": 830,
             "className": "Desc_Filter_C",
             "stackSize": 50,
@@ -1377,40 +1377,6 @@
                 "a": 0
             }
         },
-        "Desc_AlienDNACapsule_C": {
-            "slug": "alien-dna-capsule",
-            "name": "Alien DNA Capsule",
-            "description": "This data capsule translates organic chemicals into readable alien genetics information.\nUsed for researching alien organisms.\n\nGo the extra kilometer! Knowledge is power, and power is just efficiency with fewer steps. Depositing Alien DNA Capsules in the AWESOME Sink provides FICSIT with knowledge, and Pioneers with Coupons.",
-            "sinkPoints": 0,
-            "className": "Desc_AlienDNACapsule_C",
-            "stackSize": 50,
-            "energyValue": 0.0,
-            "radioactiveDecay": 0.0,
-            "liquid": false,
-            "fluidColor": {
-                "r": 0,
-                "g": 0,
-                "b": 0,
-                "a": 0
-            }
-        },
-        "Desc_Crystal_C": {
-            "slug": "blue-power-slug",
-            "name": "Blue Power Slug",
-            "description": "A strange slug radiating a weak strange power.",
-            "sinkPoints": 0,
-            "className": "Desc_Crystal_C",
-            "stackSize": 50,
-            "energyValue": 0.0,
-            "radioactiveDecay": 0.0,
-            "liquid": false,
-            "fluidColor": {
-                "r": 0,
-                "g": 0,
-                "b": 0,
-                "a": 0
-            }
-        },
         "Desc_AlienProtein_C": {
             "slug": "alien-protein",
             "name": "Alien Protein",
@@ -1418,6 +1384,23 @@
             "sinkPoints": 0,
             "className": "Desc_AlienProtein_C",
             "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 0,
+                "g": 0,
+                "b": 0,
+                "a": 0
+            }
+        },
+        "Desc_AlienDNACapsule_C": {
+            "slug": "alien-dna-capsule",
+            "name": "Alien DNA Capsule",
+            "description": "This data capsule translates organic chemicals into readable alien genetics information.\nUsed for researching alien organisms.\n\nGo the extra kilometer! Knowledge is power, and power is just efficiency with fewer steps. Depositing Alien DNA Capsules in the AWESOME Sink provides FICSIT with knowledge, and Pioneers with Coupons.",
+            "sinkPoints": 0,
+            "className": "Desc_AlienDNACapsule_C",
+            "stackSize": 50,
             "energyValue": 0.0,
             "radioactiveDecay": 0.0,
             "liquid": false,
@@ -1451,6 +1434,23 @@
             "description": "A strange slug radiating a strange power.",
             "sinkPoints": 0,
             "className": "Desc_Crystal_mk2_C",
+            "stackSize": 50,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 0,
+                "g": 0,
+                "b": 0,
+                "a": 0
+            }
+        },
+        "Desc_Crystal_C": {
+            "slug": "blue-power-slug",
+            "name": "Blue Power Slug",
+            "description": "A strange slug radiating a weak strange power.",
+            "sinkPoints": 0,
+            "className": "Desc_Crystal_C",
             "stackSize": 50,
             "energyValue": 0.0,
             "radioactiveDecay": 0.0,
@@ -1856,7 +1856,7 @@
         "BP_EquipmentDescriptorRifle_C": {
             "slug": "rifle",
             "name": "Rifle",
-            "description": "A long-range, rapid fire weapon. Specifically designed to deliver adequate performance within the designated work area.",
+            "description": "A long-range, rapid-fire weapon. Specifically designed to deliver adequate performance within the designated work area.",
             "sinkPoints": 9480,
             "className": "BP_EquipmentDescriptorRifle_C",
             "stackSize": 1,
@@ -2196,7 +2196,7 @@
         "Desc_HatcherParts_C": {
             "slug": "hatcher-remains",
             "name": "Hatcher Remains",
-            "description": "The shell-like remains an alien... thing.\nUsed for MAM research.",
+            "description": "The shell-like remains of an alien... thing.\nUsed for MAM research.",
             "sinkPoints": 0,
             "className": "Desc_HatcherParts_C",
             "stackSize": 50,
@@ -2312,6 +2312,23 @@
                 "a": 0
             }
         },
+        "Desc_Nut_C": {
+            "slug": "beryl-nut",
+            "name": "Beryl Nut",
+            "description": "Slot: Hands\nConsumable\n\nCan be eaten to restore half a health segment.",
+            "sinkPoints": 0,
+            "className": "Desc_Nut_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 0,
+                "g": 0,
+                "b": 0,
+                "a": 0
+            }
+        },
         "Desc_Shroom_C": {
             "slug": "bacon-agaric",
             "name": "Bacon Agaric",
@@ -2336,23 +2353,6 @@
             "sinkPoints": 0,
             "className": "Desc_Berry_C",
             "stackSize": 50,
-            "energyValue": 0.0,
-            "radioactiveDecay": 0.0,
-            "liquid": false,
-            "fluidColor": {
-                "r": 0,
-                "g": 0,
-                "b": 0,
-                "a": 0
-            }
-        },
-        "Desc_Nut_C": {
-            "slug": "beryl-nut",
-            "name": "Beryl Nut",
-            "description": "Slot: Hands\nConsumable\n\nCan be eaten to restore half a health segment.",
-            "sinkPoints": 0,
-            "className": "Desc_Nut_C",
-            "stackSize": 100,
             "energyValue": 0.0,
             "radioactiveDecay": 0.0,
             "liquid": false,
@@ -2434,7 +2434,7 @@
         "Desc_CartridgeSmartProjectile_C": {
             "slug": "homing-rifle-ammo",
             "name": "Homing Rifle Ammo",
-            "description": "The bullet guidance system, build into this ammunition, allows it to accurately hit any target within the reticle area.\nEspecially useful when dealing with agile threats, or for Pioneers who can't be bothered to aim properly.",
+            "description": "The bullet guidance system built into this ammunition allows it to accurately hit any target within the reticle area.\nEspecially useful when dealing with agile threats, or for Pioneers who can't be bothered to aim properly.",
             "sinkPoints": 855,
             "className": "Desc_CartridgeSmartProjectile_C",
             "stackSize": 500,
@@ -3076,7 +3076,7 @@
         },
         "Recipe_Wall_Concrete_FlipTris_8x1_C": {
             "slug": "recipe-wall-concrete-fliptris-8x1-c",
-            "name": "Inv. Ramp Wall 1m",
+            "name": "Wall 1a",
             "className": "Recipe_Wall_Concrete_FlipTris_8x1_C",
             "alternate": false,
             "time": 1,
@@ -8532,7 +8532,7 @@
         },
         "Recipe_Alternate_ElectroAluminumScrap_C": {
             "slug": "recipe-alternate-electroaluminumscrap-c",
-            "name": "Alternate: Electrode - Aluminum Scrap",
+            "name": "Alternate: Electrode Aluminum Scrap",
             "className": "Recipe_Alternate_ElectroAluminumScrap_C",
             "alternate": true,
             "time": 4,
@@ -25081,8 +25081,8 @@
         "CustomizerUnlock_ColourSwatches_C": {
             "className": "CustomizerUnlock_ColourSwatches_C",
             "type": "EST_Custom",
-            "name": "Customizer Colour Swatches",
-            "slug": "customizer-colour-swatches",
+            "name": "Customizer Color Swatches",
+            "slug": "customizer-color-swatches",
             "cost": [],
             "unlock": {
                 "recipes": [
@@ -28758,137 +28758,6 @@
             "mam": true,
             "alternate": false
         },
-        "Research_AOrganisms_2_C": {
-            "className": "Research_AOrganisms_2_C",
-            "type": "EST_MAM",
-            "name": "Hostile Organism Detection",
-            "slug": "hostile-organism-detection",
-            "cost": [
-                {
-                    "item": "Desc_AlienDNACapsule_C",
-                    "amount": 10.0
-                },
-                {
-                    "item": "Desc_CrystalOscillator_C",
-                    "amount": 5.0
-                },
-                {
-                    "item": "Desc_HighSpeedConnector_C",
-                    "amount": 5.0
-                }
-            ],
-            "unlock": {
-                "recipes": [],
-                "scannerResources": [],
-                "inventorySlots": 0,
-                "giveItems": []
-            },
-            "requiredSchematics": [],
-            "tier": 3,
-            "time": 3.0,
-            "mam": true,
-            "alternate": false
-        },
-        "Research_PowerSlugs_3_C": {
-            "className": "Research_PowerSlugs_3_C",
-            "type": "EST_MAM",
-            "name": "Slug Scanning",
-            "slug": "slug-scanning",
-            "cost": [
-                {
-                    "item": "Desc_IronRod_C",
-                    "amount": 50.0
-                },
-                {
-                    "item": "Desc_Wire_C",
-                    "amount": 100.0
-                },
-                {
-                    "item": "Desc_IronScrew_C",
-                    "amount": 200.0
-                }
-            ],
-            "unlock": {
-                "recipes": [],
-                "scannerResources": [],
-                "inventorySlots": 0,
-                "giveItems": []
-            },
-            "requiredSchematics": [],
-            "tier": 3,
-            "time": 3.0,
-            "mam": true,
-            "alternate": false
-        },
-        "Research_Nutrients_2_C": {
-            "className": "Research_Nutrients_2_C",
-            "type": "EST_MAM",
-            "name": "Bacon Agaric",
-            "slug": "bacon-agaric",
-            "cost": [
-                {
-                    "item": "Desc_Shroom_C",
-                    "amount": 1.0
-                }
-            ],
-            "unlock": {
-                "recipes": [],
-                "scannerResources": [],
-                "inventorySlots": 0,
-                "giveItems": []
-            },
-            "requiredSchematics": [],
-            "tier": 3,
-            "time": 3.0,
-            "mam": true,
-            "alternate": false
-        },
-        "Research_Nutrients_0_C": {
-            "className": "Research_Nutrients_0_C",
-            "type": "EST_MAM",
-            "name": "Paleberry",
-            "slug": "paleberry",
-            "cost": [
-                {
-                    "item": "Desc_Berry_C",
-                    "amount": 2.0
-                }
-            ],
-            "unlock": {
-                "recipes": [],
-                "scannerResources": [],
-                "inventorySlots": 0,
-                "giveItems": []
-            },
-            "requiredSchematics": [],
-            "tier": 3,
-            "time": 3.0,
-            "mam": true,
-            "alternate": false
-        },
-        "Research_Nutrients_1_C": {
-            "className": "Research_Nutrients_1_C",
-            "type": "EST_MAM",
-            "name": "Beryl Nut",
-            "slug": "beryl-nut",
-            "cost": [
-                {
-                    "item": "Desc_Nut_C",
-                    "amount": 5.0
-                }
-            ],
-            "unlock": {
-                "recipes": [],
-                "scannerResources": [],
-                "inventorySlots": 0,
-                "giveItems": []
-            },
-            "requiredSchematics": [],
-            "tier": 3,
-            "time": 3.0,
-            "mam": true,
-            "alternate": false
-        },
         "Schematic_1-3_C": {
             "className": "Schematic_1-3_C",
             "type": "EST_Milestone",
@@ -29229,6 +29098,37 @@
                 "recipes": [
                     "Recipe_Protein_Spitter_C"
                 ],
+                "scannerResources": [],
+                "inventorySlots": 0,
+                "giveItems": []
+            },
+            "requiredSchematics": [],
+            "tier": 3,
+            "time": 3.0,
+            "mam": true,
+            "alternate": false
+        },
+        "Research_AOrganisms_2_C": {
+            "className": "Research_AOrganisms_2_C",
+            "type": "EST_MAM",
+            "name": "Hostile Organism Detection",
+            "slug": "hostile-organism-detection",
+            "cost": [
+                {
+                    "item": "Desc_AlienDNACapsule_C",
+                    "amount": 10.0
+                },
+                {
+                    "item": "Desc_CrystalOscillator_C",
+                    "amount": 5.0
+                },
+                {
+                    "item": "Desc_HighSpeedConnector_C",
+                    "amount": 5.0
+                }
+            ],
+            "unlock": {
+                "recipes": [],
                 "scannerResources": [],
                 "inventorySlots": 0,
                 "giveItems": []
@@ -29858,6 +29758,29 @@
             "mam": true,
             "alternate": false
         },
+        "Research_Nutrients_2_C": {
+            "className": "Research_Nutrients_2_C",
+            "type": "EST_MAM",
+            "name": "Bacon Agaric",
+            "slug": "bacon-agaric",
+            "cost": [
+                {
+                    "item": "Desc_Shroom_C",
+                    "amount": 1.0
+                }
+            ],
+            "unlock": {
+                "recipes": [],
+                "scannerResources": [],
+                "inventorySlots": 0,
+                "giveItems": []
+            },
+            "requiredSchematics": [],
+            "tier": 3,
+            "time": 3.0,
+            "mam": true,
+            "alternate": false
+        },
         "Research_Mycelia_6_C": {
             "className": "Research_Mycelia_6_C",
             "type": "EST_MAM",
@@ -29979,8 +29902,8 @@
         "Research_Mycelia_2_1_C": {
             "className": "Research_Mycelia_2_1_C",
             "type": "EST_MAM",
-            "name": "Synthethic Polyester Fabric",
-            "slug": "synthethic-polyester-fabric",
+            "name": "Synthetic Polyester Fabric",
+            "slug": "synthetic-polyester-fabric",
             "cost": [
                 {
                     "item": "Desc_Fabric_C",
@@ -30123,6 +30046,52 @@
             "mam": true,
             "alternate": false
         },
+        "Research_Nutrients_1_C": {
+            "className": "Research_Nutrients_1_C",
+            "type": "EST_MAM",
+            "name": "Beryl Nut",
+            "slug": "beryl-nut",
+            "cost": [
+                {
+                    "item": "Desc_Nut_C",
+                    "amount": 5.0
+                }
+            ],
+            "unlock": {
+                "recipes": [],
+                "scannerResources": [],
+                "inventorySlots": 0,
+                "giveItems": []
+            },
+            "requiredSchematics": [],
+            "tier": 3,
+            "time": 3.0,
+            "mam": true,
+            "alternate": false
+        },
+        "Research_Nutrients_0_C": {
+            "className": "Research_Nutrients_0_C",
+            "type": "EST_MAM",
+            "name": "Paleberry",
+            "slug": "paleberry",
+            "cost": [
+                {
+                    "item": "Desc_Berry_C",
+                    "amount": 2.0
+                }
+            ],
+            "unlock": {
+                "recipes": [],
+                "scannerResources": [],
+                "inventorySlots": 0,
+                "giveItems": []
+            },
+            "requiredSchematics": [],
+            "tier": 3,
+            "time": 3.0,
+            "mam": true,
+            "alternate": false
+        },
         "Research_PowerSlugs_5_C": {
             "className": "Research_PowerSlugs_5_C",
             "type": "EST_MAM",
@@ -30179,6 +30148,37 @@
                 "recipes": [
                     "Recipe_PowerCrystalShard_2_C"
                 ],
+                "scannerResources": [],
+                "inventorySlots": 0,
+                "giveItems": []
+            },
+            "requiredSchematics": [],
+            "tier": 3,
+            "time": 3.0,
+            "mam": true,
+            "alternate": false
+        },
+        "Research_PowerSlugs_3_C": {
+            "className": "Research_PowerSlugs_3_C",
+            "type": "EST_MAM",
+            "name": "Slug Scanning",
+            "slug": "slug-scanning",
+            "cost": [
+                {
+                    "item": "Desc_IronRod_C",
+                    "amount": 50.0
+                },
+                {
+                    "item": "Desc_Wire_C",
+                    "amount": 100.0
+                },
+                {
+                    "item": "Desc_IronScrew_C",
+                    "amount": 200.0
+                }
+            ],
+            "unlock": {
+                "recipes": [],
                 "scannerResources": [],
                 "inventorySlots": 0,
                 "giveItems": []
@@ -30395,8 +30395,8 @@
         "Research_Sulfur_TurboFuel_C": {
             "className": "Research_Sulfur_TurboFuel_C",
             "type": "EST_MAM",
-            "name": "Turbo Fuel",
-            "slug": "turbo-fuel",
+            "name": "Turbofuel",
+            "slug": "turbofuel",
             "cost": [
                 {
                     "item": "Desc_HardDrive_C",
@@ -34048,8 +34048,8 @@
         "ResourceSink_Customizer_SteelRoofMaterial_C": {
             "className": "ResourceSink_Customizer_SteelRoofMaterial_C",
             "type": "EST_ResourceSink",
-            "name": "Steel Roof Material",
-            "slug": "steel-roof-material",
+            "name": "Metal Roof Material",
+            "slug": "metal-roof-material",
             "cost": [
                 {
                     "item": "Desc_ResourceSinkCoupon_C",
@@ -36557,8 +36557,8 @@
         "ResourceSink_AlcladSheet_C": {
             "className": "ResourceSink_AlcladSheet_C",
             "type": "EST_ResourceSink",
-            "name": "Aluminum Alclad Sheet",
-            "slug": "aluminum-alclad-sheet",
+            "name": "Alclad Aluminum Sheet",
+            "slug": "alclad-aluminum-sheet",
             "cost": [
                 {
                     "item": "Desc_ResourceSinkCoupon_C",
@@ -37109,8 +37109,8 @@
         "Schematic_LeMichael_C": {
             "className": "Schematic_LeMichael_C",
             "type": "EST_ResourceSink",
-            "name": "Classic Michael Boombox Tape",
-            "slug": "classic-michael-boombox-tape",
+            "name": "Le Michael Boombox Tape",
+            "slug": "le-michael-boombox-tape",
             "cost": [
                 {
                     "item": "Desc_ResourceSinkCoupon_C",
@@ -37735,14 +37735,24 @@
             "allowedResources": [
                 "Desc_LiquidOil_C"
             ],
-            "allowLiquids": false,
+            "allowLiquids": true,
             "allowSolids": false,
             "itemsPerCycle": 2000,
             "extractCycleTime": 1.0
         },
         "Desc_MinerMk2_C": {
             "className": "Desc_MinerMk2_C",
-            "allowedResources": [],
+            "allowedResources": [
+                "Desc_OreIron_C",
+                "Desc_Stone_C",
+                "Desc_Coal_C",
+                "Desc_Sulfur_C",
+                "Desc_RawQuartz_C",
+                "Desc_OreCopper_C",
+                "Desc_OreGold_C",
+                "Desc_OreUranium_C",
+                "Desc_OreBauxite_C"
+            ],
             "allowLiquids": false,
             "allowSolids": true,
             "itemsPerCycle": 1,
@@ -37755,14 +37765,24 @@
                 "Desc_NitrogenGas_C",
                 "Desc_Water_C"
             ],
-            "allowLiquids": false,
+            "allowLiquids": true,
             "allowSolids": false,
             "itemsPerCycle": 1000,
             "extractCycleTime": 1.0
         },
         "Desc_MinerMk3_C": {
             "className": "Desc_MinerMk3_C",
-            "allowedResources": [],
+            "allowedResources": [
+                "Desc_OreIron_C",
+                "Desc_Stone_C",
+                "Desc_Coal_C",
+                "Desc_Sulfur_C",
+                "Desc_RawQuartz_C",
+                "Desc_OreCopper_C",
+                "Desc_OreGold_C",
+                "Desc_OreUranium_C",
+                "Desc_OreBauxite_C"
+            ],
             "allowLiquids": false,
             "allowSolids": true,
             "itemsPerCycle": 1,
@@ -37770,7 +37790,17 @@
         },
         "Desc_MinerMk1_C": {
             "className": "Desc_MinerMk1_C",
-            "allowedResources": [],
+            "allowedResources": [
+                "Desc_OreIron_C",
+                "Desc_Stone_C",
+                "Desc_Coal_C",
+                "Desc_Sulfur_C",
+                "Desc_RawQuartz_C",
+                "Desc_OreCopper_C",
+                "Desc_OreGold_C",
+                "Desc_OreUranium_C",
+                "Desc_OreBauxite_C"
+            ],
             "allowLiquids": false,
             "allowSolids": true,
             "itemsPerCycle": 1,
@@ -37799,7 +37829,7 @@
         "Desc_BlueprintDesigner_C": {
             "slug": "blueprint-designer",
             "name": "Blueprint Designer",
-            "description": "The Blueprint Designer is used to create custom factory designs and save them as Blueprints.\nBlueprints can be accessed from the Build Menu - Blueprint tab.\n\nNote that buildings can only be placed within the Blueprint Designer if they are fully within the boundry frame.\n\nDesigner Dimensions: 32m x 32m x 32m",
+            "description": "The Blueprint Designer is used to create custom factory designs and save them as Blueprints.\nBlueprints can be accessed from the Build Menu - Blueprint tab.\n\nNote that buildings can only be placed within the Blueprint Designer if they are fully within the boundary frame.\n\nDesigner Dimensions: 32m x 32m x 32m",
             "className": "Desc_BlueprintDesigner_C",
             "categories": [],
             "buildMenuPriority": 0,
@@ -38087,7 +38117,7 @@
         "Desc_Wall_Concrete_CDoor_8x4_C": {
             "slug": "center-door-wall",
             "name": "Center Door Wall",
-            "description": "The door allows Pioneers to pass through the wall.\nDoor settings can be configured.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
+            "description": "Allows Pioneers to pass through the wall.\nDoor settings can be configured.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
             "className": "Desc_Wall_Concrete_CDoor_8x4_C",
             "categories": [],
             "buildMenuPriority": 0,
@@ -38177,7 +38207,7 @@
         "Desc_Wall_Concrete_Gate_8x4_C": {
             "slug": "gate-hole-wall",
             "name": "Gate Hole Wall",
-            "description": "The gate allows Pioneers to pass through the wall.\nSnaps to foundations and other walls.\n\nSize: 8m x 4m",
+            "description": "The gate allows Pioneers to pass through walls.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
             "className": "Desc_Wall_Concrete_Gate_8x4_C",
             "categories": [],
             "buildMenuPriority": 0,
@@ -38195,7 +38225,7 @@
         "Desc_Wall_Concrete_SDoor_8x4_C": {
             "slug": "side-door-wall",
             "name": "Side Door Wall",
-            "description": "The door allows Pioneers to pass through the wall.\nDoor settings can be configured.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
+            "description": "Allows Pioneers to pass through the wall.\nDoor settings can be configured.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
             "className": "Desc_Wall_Concrete_SDoor_8x4_C",
             "categories": [],
             "buildMenuPriority": 0,
@@ -38357,7 +38387,7 @@
         "Desc_Wall_Door_8x4_01_C": {
             "slug": "center-door-wall",
             "name": "Center Door Wall",
-            "description": "The door allows Pioneers to pass through the wall.\nDoor settings can be configured.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
+            "description": "Allows Pioneers to pass through the wall.\nDoor settings can be configured.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
             "className": "Desc_Wall_Door_8x4_01_C",
             "categories": [],
             "buildMenuPriority": 0,
@@ -38375,7 +38405,7 @@
         "Desc_Wall_Door_8x4_03_C": {
             "slug": "side-door-wall",
             "name": "Side Door Wall",
-            "description": "The door allows Pioneers to pass through the wall.\nDoor settings can be configured.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
+            "description": "Allows Pioneers to pass through the wall.\nDoor settings can be configured.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
             "className": "Desc_Wall_Door_8x4_03_C",
             "categories": [],
             "buildMenuPriority": 0,
@@ -38393,7 +38423,7 @@
         "Desc_Wall_Gate_8x4_01_C": {
             "slug": "gate-hole-wall",
             "name": "Gate Hole Wall",
-            "description": "The gate allows Pioneers to pass through the wall.\nSnaps to foundations and other walls.\n\nSize: 8m x 4m",
+            "description": "Allows Pioneers to pass through walls.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
             "className": "Desc_Wall_Gate_8x4_01_C",
             "categories": [],
             "buildMenuPriority": 0,
@@ -39131,7 +39161,7 @@
         "Desc_Wall_Conveyor_8x4_03_Steel_C": {
             "slug": "conveyor-wall-x1",
             "name": "Conveyor Wall x1",
-            "description": "Has 1 Conveyor Belt connections.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
+            "description": "Has 1 Conveyor Belt connection.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
             "className": "Desc_Wall_Conveyor_8x4_03_Steel_C",
             "categories": [],
             "buildMenuPriority": 0,
@@ -39149,7 +39179,7 @@
         "Desc_Wall_Door_8x4_01_Steel_C": {
             "slug": "center-door-wall",
             "name": "Center Door Wall",
-            "description": "The door allows Pioneers to pass through the wall.\nDoor settings can be configured.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
+            "description": "Allows Pioneers to pass through the wall.\nDoor settings can be configured.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
             "className": "Desc_Wall_Door_8x4_01_Steel_C",
             "categories": [],
             "buildMenuPriority": 0,
@@ -39167,7 +39197,7 @@
         "Desc_Wall_Door_8x4_03_Steel_C": {
             "slug": "side-door-wall",
             "name": "Side Door Wall",
-            "description": "The door allows Pioneers to pass through the wall.\nDoor settings can be configured.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
+            "description": "Allows Pioneers to pass through the wall.\nDoor settings can be configured.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
             "className": "Desc_Wall_Door_8x4_03_Steel_C",
             "categories": [],
             "buildMenuPriority": 0,
@@ -39419,7 +39449,7 @@
         "Desc_PipelineJunction_Cross_C": {
             "slug": "pipeline-junction-cross",
             "name": "Pipeline Junction Cross",
-            "description": "Can be attached to a pipeline to split it 4-way.",
+            "description": "Can be attached to a pipeline to split it 3-way.",
             "className": "Desc_PipelineJunction_Cross_C",
             "categories": [],
             "buildMenuPriority": 0,
@@ -39491,7 +39521,7 @@
         "Desc_ResourceSink_C": {
             "slug": "awesome-sink",
             "name": "AWESOME Sink",
-            "description": "Got excess resources? Fear not, for FICSIT does not waste! The newly developed AWESOME Sink turns any useful part straight into research data, as fast as you can supply it! \nParticipating pioneers will be compensated with Coupons to be spend at the AWESOME Shop.",
+            "description": "Got excess resources? Fear not, for FICSIT does not waste! The newly developed AWESOME Sink turns any useful part straight into research data, as fast as you can supply it! \nParticipating pioneers will be compensated with Coupons to be spent at the AWESOME Shop.",
             "className": "Desc_ResourceSink_C",
             "categories": [],
             "buildMenuPriority": 0,
@@ -40229,7 +40259,7 @@
         "Desc_TruckStation_C": {
             "slug": "truck-station",
             "name": "Truck Station",
-            "description": "Either send or receive resources to vehicles. Has an inventory with 48 slots.\nTransfers up to 120 stacks per minute to/from docked vehicle. \nAlways refuels vehicles if it has access to a matching fuel type.",
+            "description": "Either sends or receives resources to vehicles. Has an inventory with 48 slots.\nTransfers up to 120 stacks per minute to/from docked vehicles. \nAlways refuels vehicles if it has access to a matching fuel type.",
             "className": "Desc_TruckStation_C",
             "categories": [],
             "buildMenuPriority": 0,
@@ -40319,7 +40349,7 @@
         "Desc_Mam_C": {
             "slug": "mam",
             "name": "MAM",
-            "description": "The Molecular Analysis Machine is used to analyse new and exotic materials found on alien planets.\nR&D will assist Pioneers through the MAM to turn any valuable data into usable research options and new technologies.",
+            "description": "The Molecular Analysis Machine is used to analyze new and exotic materials found on alien planets.\nR&D will assist Pioneers through the MAM to turn any valuable data into usable research options and new technologies.",
             "className": "Desc_Mam_C",
             "categories": [],
             "buildMenuPriority": 0,
@@ -43883,7 +43913,7 @@
         "Desc_RampDouble_Asphalt_8x4_C": {
             "slug": "double-ramp-8m",
             "name": "Double Ramp 8m",
-            "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
+            "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 8m",
             "className": "Desc_RampDouble_Asphalt_8x4_C",
             "categories": [],
             "buildMenuPriority": 0,
@@ -43955,7 +43985,7 @@
         "Desc_PriorityPowerSwitch_C": {
             "slug": "priority-power-switch",
             "name": "Priority Power Switch",
-            "description": "Priority Power Switches can be organised by priority. In cases of low power the Switches will start turning off automatically until the power stabalizes, starting from Priority Group 8.",
+            "description": "Priority Power Switches can be organized by priority. In cases of low power the Switches will start turning off automatically until the power stabilizes, starting from Priority Group 8.",
             "className": "Desc_PriorityPowerSwitch_C",
             "categories": [],
             "buildMenuPriority": 0,
@@ -43991,7 +44021,7 @@
         "Desc_PowerSwitch_C": {
             "slug": "power-switch",
             "name": "Power Switch",
-            "description": "Can be switched ON/OFF to enable/disable the connection between two Power Grids.\n\nNote the location of the A and B connection.",
+            "description": "Can be switched ON/OFF to enable/disable the connection between two Power Grids.\n\nNote the location of the A and B connections.",
             "className": "Desc_PowerSwitch_C",
             "categories": [],
             "buildMenuPriority": 0,
@@ -44189,7 +44219,7 @@
         "Desc_Foundation_Frame_01_C": {
             "slug": "frame-foundation",
             "name": "Frame Foundation",
-            "description": "Snaps to other structural buildings.\nFrames provide a more open factory aesthetic.\n\nSize: 8m x 4m",
+            "description": "Snaps to other structural buildings.\n\nFrames provide a more open factory aesthetic.\n\nSize: 8m x 4m",
             "className": "Desc_Foundation_Frame_01_C",
             "categories": [],
             "buildMenuPriority": 0,
@@ -44225,7 +44255,7 @@
         "Desc_Ramp_Frame_01_C": {
             "slug": "frame-ramp",
             "name": "Frame Ramp",
-            "description": "Snaps to other structural buildings.\nFrames provide a more open factory aesthetic.\n\nSize: 8m x 4m",
+            "description": "Snaps to other structural buildings.\n\nFrames provide a more open factory aesthetic.\n\nSize: 8m x 4m",
             "className": "Desc_Ramp_Frame_01_C",
             "categories": [],
             "buildMenuPriority": 0,
@@ -44243,7 +44273,7 @@
         "Desc_Ramp_Frame_Inverted_01_C": {
             "slug": "inverted-frame-ramp",
             "name": "Inverted Frame Ramp",
-            "description": "Snaps to other structural buildings.\nFrames provide a more open factory aesthetic.\n\nSize: 8m x 4m",
+            "description": "Snaps to other structural buildings.\n\nFrames provide a more open factory aesthetic.\n\nSize: 8m x 4m",
             "className": "Desc_Ramp_Frame_Inverted_01_C",
             "categories": [],
             "buildMenuPriority": 0,
@@ -44261,7 +44291,7 @@
         "Desc_Wall_Frame_01_C": {
             "slug": "frame-wall",
             "name": "Frame Wall",
-            "description": "Snaps to other structural buildings.\nFrames provide a more open factory aesthetic.\n\nSize: 8m x 4m",
+            "description": "Snaps to other structural buildings.\n\nFrames provide a more open factory aesthetic.\n\nSize: 8m x 4m",
             "className": "Desc_Wall_Frame_01_C",
             "categories": [],
             "buildMenuPriority": 0,
@@ -44387,7 +44417,7 @@
         "Desc_Stairs_Left_01_C": {
             "slug": "stairs-left",
             "name": "Stairs Left",
-            "description": "Snaps to foundations.\nMakes it easier to get to other floors of your structures.",
+            "description": "Snaps to foundations.\n\nMakes it easier to get to other floors of your structures.",
             "className": "Desc_Stairs_Left_01_C",
             "categories": [],
             "buildMenuPriority": 0,
@@ -44405,7 +44435,7 @@
         "Desc_Stairs_Right_01_C": {
             "slug": "stairs-right",
             "name": "Stairs Right",
-            "description": "Snaps to foundations.\nMakes it easier to get to other floors of your structures.",
+            "description": "Snaps to foundations.\n\nMakes it easier to get to other floors of your structures.",
             "className": "Desc_Stairs_Right_01_C",
             "categories": [],
             "buildMenuPriority": 0,
@@ -44423,7 +44453,7 @@
         "Desc_Gate_Automated_8x4_C": {
             "slug": "automated-gate",
             "name": "Automated Gate",
-            "description": "Automatically opens when living beings or vehicles approach it.\nGate settings can be configured.\nSnaps to foundations and other walls.\n\nSize: 8m x 4m",
+            "description": "Automatically opens when living beings or vehicles approach it.\nGate settings can be configured.\nSnaps to foundations and walls.\n\nSize: 8m x 4m",
             "className": "Desc_Gate_Automated_8x4_C",
             "categories": [],
             "buildMenuPriority": 0,
@@ -45017,7 +45047,7 @@
         "Desc_Roof_A_01_C": {
             "slug": "roof-flat",
             "name": "Roof Flat",
-            "description": "Snaps to Foundations, Walls, and other Roofs.\n\nSize: 8m x flat",
+            "description": "Snaps to Foundations, Walls, and other Roofs.\n\nSize: 8m x 0.51m",
             "className": "Desc_Roof_A_01_C",
             "categories": [],
             "buildMenuPriority": 0,
@@ -45629,7 +45659,7 @@
         "Desc_Concrete_Barrier_01_C": {
             "slug": "road-barrier",
             "name": "Road Barrier",
-            "description": "A concrete Barrier, used to create a safer working environment.",
+            "description": "A concrete Road Barrier, used to create a safer working environment.",
             "className": "Desc_Concrete_Barrier_01_C",
             "categories": [],
             "buildMenuPriority": 0,
@@ -45917,7 +45947,7 @@
         "Desc_Beam_C": {
             "slug": "metal-beam",
             "name": "Metal Beam",
-            "description": "Snaps to other Beams and various other structural buildings.\nBeams support multiple build modes for different use cases.",
+            "description": "Snaps to other Beams and various other structural buildings.\n\nBeams support multiple build modes for different use cases.",
             "className": "Desc_Beam_C",
             "categories": [],
             "buildMenuPriority": 0,
@@ -45971,7 +46001,7 @@
         "Desc_Beam_Painted_C": {
             "slug": "painted-beam",
             "name": "Painted Beam",
-            "description": "Snaps to other Beams and various other structural buildings.\nBeams support multiple build modes for different use cases.",
+            "description": "Snaps to other Beams and various other structural buildings.\n\nBeams support multiple build modes for different use cases.",
             "className": "Desc_Beam_Painted_C",
             "categories": [],
             "buildMenuPriority": 0,
@@ -45989,7 +46019,7 @@
         "Desc_Beam_Support_C": {
             "slug": "beam-support",
             "name": "Beam Support",
-            "description": "Snaps to Beams and various other structural buildings.\nUsed to aesthetically connect beams to surfaces.",
+            "description": "Snaps to Beams and various other structural buildings.\n\nUsed to aesthetically connect beams to surfaces.",
             "className": "Desc_Beam_Support_C",
             "categories": [],
             "buildMenuPriority": 0,
@@ -46187,7 +46217,7 @@
         "Desc_HyperPoleStackable_C": {
             "slug": "stackable-hypertube-support",
             "name": "Stackable Hypertube Support",
-            "description": "Support for Hypertubes. Can be stacked on other stackable supports.",
+            "description": "Support for hypertubes. Can be stacked on other stackable supports.",
             "className": "Desc_HyperPoleStackable_C",
             "categories": [],
             "buildMenuPriority": 0,
@@ -46241,7 +46271,7 @@
         "Desc_Truck_C": {
             "slug": "truck",
             "name": "Truck",
-            "description": "Fuel: Any fuel type\n\n48-slot inventory. Has a built-in craft bench.\nCan be automated to pick up and deliver resources at truck stations.\n\nNicknamed the Unit by FICSIT pioneers because of its massive frame.",
+            "description": "Fuel: Any fuel type\n\n48-slot inventory. Has a built-in craft bench.\nCan be automated to pick up and deliver resources at Truck Stations.\n\nNicknamed the Unit by FICSIT pioneers because of its massive frame.",
             "className": "Desc_Truck_C",
             "categories": [],
             "buildMenuPriority": 0,
@@ -46277,7 +46307,7 @@
         "Desc_FreightWagon_C": {
             "slug": "freight-car",
             "name": "Freight Car",
-            "description": "The Freight Car can be built on Railways and attached to an Electric Locomotive or other Freight Car to transport resources. \nResources are loaded and unloaded at Freight Platforms.\nHas a 1600m³ or 32 slot capacity, depending on the resources.",
+            "description": "The Freight Car can be built on Railways and attached to an Electric Locomotive or other Freight Car to transport resources. \nResources are loaded and unloaded at Freight Platforms.\nHas a 1600m³ or 32-slot capacity, depending on the resources.",
             "className": "Desc_FreightWagon_C",
             "categories": [],
             "buildMenuPriority": 0,
@@ -46313,7 +46343,7 @@
         "Desc_Tractor_C": {
             "slug": "tractor",
             "name": "Tractor",
-            "description": "Fuel: Any fuel type\n\n25-slot inventory. Has a built-in craft bench.\nCan be automated to pick up and deliver resources at truck stations.\n\nNicknamed the Sugarcube by FICSIT pioneers with the justification “It’s pretty sweet, y’know”.",
+            "description": "Fuel: Any fuel type\n\n25-slot inventory. Has a built-in craft bench.\nCan be automated to pick up and deliver resources at Truck Stations.\n\nNicknamed the Sugarcube by FICSIT pioneers with the justification “It’s pretty sweet, y’know”.",
             "className": "Desc_Tractor_C",
             "categories": [],
             "buildMenuPriority": 0,

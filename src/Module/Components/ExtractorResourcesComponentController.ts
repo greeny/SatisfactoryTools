@@ -21,7 +21,7 @@ export class ExtractorResourcesComponentController implements IOnInit
 
 	public $onInit(): void
 	{
-		this.extractor = data.getRawData().miners[this.building.className.replace('Desc', 'Build')];
+		this.extractor = data.getRawData().miners[this.building.className];
 		this.resources = this.extractor.allowedResources.map((resource: string) => {
 			return data.getRawData().items[resource];
 		});

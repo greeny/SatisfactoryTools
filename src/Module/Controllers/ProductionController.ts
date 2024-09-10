@@ -4,7 +4,7 @@ import {ILocationService, IScope, ITimeoutService} from 'angular';
 import {ProductionTab} from '@src/Tools/Production/ProductionTab';
 import {IItemSchema} from '@src/Schema/IItemSchema';
 import {Constants} from '@src/Constants';
-import data from '@src/Data/Data';
+import data, {Data} from '@src/Data/Data';
 import {IRecipeSchema} from '@src/Schema/IRecipeSchema';
 import {IResourceSchema} from '@src/Schema/IResourceSchema';
 import {DataStorageService} from '@src/Module/Services/DataStorageService';
@@ -13,6 +13,7 @@ import {IProductionData} from '@src/Tools/Production/IProductionData';
 import {IBuildingSchema} from '@src/Schema/IBuildingSchema';
 import {FileExporter} from '@src/Export/FileExporter';
 import {Strings} from '@src/Utils/Strings';
+import {IRootScope} from '@src/Types/IRootScope';
 
 export class ProductionController
 {
@@ -39,38 +40,44 @@ export class ProductionController
 		'maximize': Constants.PRODUCTION_TYPE.MAXIMIZE,
 	};
 
-	public static $inject = ['$scope', '$timeout', 'DataStorageService', '$location'];
+	public static $inject = ['$scope', '$timeout', 'DataStorageService', '$location', '$rootScope'];
+	private readonly storageKey: string;
 
 	public constructor(
 		private readonly scope: IProductionControllerScope,
 		private readonly $timeout: ITimeoutService,
 		private readonly dataStorageService: DataStorageService,
 		private readonly $location: ILocationService,
+		private readonly $rootScope: IRootScope,
 	)
 	{
+		this.storageKey = $rootScope.version === '1.0' ? 'production1' : 'tmpProduction';
 		scope.$timeout = $timeout;
 		scope.saveState = () => {
 			this.saveState();
 		};
 		this.loadState();
-		const query = this.$location.search();
-		if ('share' in query) {
-			axios({
-				method: 'GET',
-				url: 'https://api.satisfactorytools.com/v1/share/' + encodeURIComponent(query.share),
-			}).then((response) => {
-				$timeout(0).then(() => {
+		$timeout(() => {
+			const query = this.$location.search();
+			if ('share' in query) {
+				axios({
+					method: 'GET',
+					url: 'https://api.satisfactorytools.com/v1/share/' + encodeURIComponent(query.share),
+				}).then((response) => {
+					$timeout(0).then(() => {
+						const tabData: IProductionData = response.data.data;
+						tabData.metadata.name = 'Shared: ' + tabData.metadata.name;
+						const tab = new ProductionTab(this.scope, $rootScope.version, tabData);
+						this.tabs.push(tab);
+						this.tab = tab;
+						this.saveState();
+						this.$location.search('');
+					});
+				}).catch(() => {
 					this.$location.search('');
-					const tabData: IProductionData = response.data.data;
-					tabData.metadata.name = 'Shared: ' + tabData.metadata.name;
-					const tab = new ProductionTab(this.scope, tabData);
-					this.tabs.push(tab);
-					this.tab = tab;
 				});
-			}).catch(() => {
-				this.$location.search('');
-			});
-		}
+			}
+		});
 	}
 
 	public toggleImport(): void
@@ -95,7 +102,16 @@ export class ProductionController
 				const tabs = FileExporter.importTabs(reader.result as string);
 
 				for (const tab of tabs) {
-					this.tabs.push(new ProductionTab(this.scope, tab));
+					if (JSON.stringify(tab.request.resourceMax) === JSON.stringify(Data.resourceAmountsU8)) {
+						tab.request.resourceMax = Data.resourceAmounts;
+					}
+
+					if (typeof tab.request.resourceMax.Desc_SAM_C === 'undefined') {
+						tab.request.resourceMax.Desc_SAM_C = 0;
+					}
+
+					tab.request.resourceWeight = Data.resourceWeights;
+					this.tabs.push(new ProductionTab(this.scope, this.$rootScope.version, tab));
 				}
 
 				Strings.addNotification('Import complete', 'Successfuly imported ' + tabs.length + ' tab' + (tabs.length === 1 ? '' : 's') + '.');
@@ -156,7 +172,7 @@ export class ProductionController
 	{
 		this.addingInProgress = true;
 		this.$timeout(0).then(() => {
-			const tab = new ProductionTab(this.scope);
+			const tab = new ProductionTab(this.scope, this.$rootScope.version);
 			this.tabs.push(tab);
 			this.tab = tab;
 			this.addingInProgress = false;
@@ -168,7 +184,7 @@ export class ProductionController
 	{
 		this.cloningInProgress = true;
 		this.$timeout(0).then(() => {
-			const clone = new ProductionTab(this.scope);
+			const clone = new ProductionTab(this.scope, this.$rootScope.version);
 			clone.data.request = angular.copy(tab.data.request);
 			clone.data.metadata.name = 'Clone: ' + clone.data.metadata.name;
 			this.tabs.push(clone);
@@ -229,17 +245,17 @@ export class ProductionController
 		for (const tab of this.tabs) {
 			save.push(tab.data);
 		}
-		this.dataStorageService.saveData('tmpProduction', save);
+		this.dataStorageService.saveData(this.storageKey, save);
 	}
 
 	private loadState(): void
 	{
-		const loaded = this.dataStorageService.loadData('tmpProduction', null);
+		const loaded = this.dataStorageService.loadData(this.storageKey, null);
 		if (loaded === null) {
 			this.addEmptyTab();
 		} else {
 			for (const item of loaded) {
-				this.tabs.push(new ProductionTab(this.scope, item));
+				this.tabs.push(new ProductionTab(this.scope, this.$rootScope.version, item));
 			}
 			if (this.tabs.length) {
 				this.tab = this.tabs[0];

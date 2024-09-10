@@ -48,7 +48,7 @@ export class ExtractorDetailsComponentController
 
 	public getExtractor(className: string): IMinerSchema
 	{
-		return data.getRawData().miners[className.replace('Desc', 'Build')];
+		return data.getRawData().miners[className];
 	}
 
 	public getExtractionValues(building: IBuildingSchema, extractor: IMinerSchema, purity: RESOURCE_PURITY): number
