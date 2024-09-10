@@ -65,7 +65,7 @@ export class Model
 				for (const l in this.recipes) {
 					if (this.recipes.hasOwnProperty(l) && this.recipes[l].prototype.inMachine) {
 						for (const product of this.recipes[l].products) {
-							if (product.item === this.items[k] || (includeWaste && k === Constants.NUCLEAR_WASTE_CLASSNAME)) {
+							if (product.item === this.items[k] || (includeWaste && (k === Constants.NUCLEAR_WASTE_CLASSNAME || k === Constants.PLUTONIUM_WASTE_CLASSNAME))) {
 								items.push(this.items[k]);
 								continue itemLoop;
 							}
@@ -84,7 +84,7 @@ export class Model
 	public getInputableItems(): IItemSchema[]
 	{
 		return this.getAutomatableItems(true).filter((item) => {
-			return !(item.className in this.data.resources) || item.className === Constants.NUCLEAR_WASTE_CLASSNAME;
+			return !(item.className in this.data.resources) || item.className === Constants.NUCLEAR_WASTE_CLASSNAME || item.className === Constants.PLUTONIUM_WASTE_CLASSNAME;
 		});
 	}
 

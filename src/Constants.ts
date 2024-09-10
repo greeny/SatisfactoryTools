@@ -23,6 +23,7 @@ export class Constants
 	public static WATER_EXTRACTOR_CLASSNAME = 'Desc_WaterPump_C';
 	public static WATER_CLASSNAME = 'Desc_Water_C';
 	public static NUCLEAR_WASTE_CLASSNAME = 'Desc_NuclearWaste_C';
+	public static PLUTONIUM_WASTE_CLASSNAME = 'Desc_PlutoniumWaste_C';
 	public static NUCLEAR_FUEL_ROD_CLASSNAME = 'Desc_NuclearFuelRod_C';
 	public static GEOTHERMAL_GENERATOR_CLASSNAME = 'Build_GeneratorGeoThermal_C';
 
