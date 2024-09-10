@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>[U8] Satisfactory Tools</title>
+	<title ng-bind="version === '0.8' ? '[U8] Satisfactory Tools' : '[1.0] Satisfactory Tools'">Satisfactory Tools</title>
 
 	<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
