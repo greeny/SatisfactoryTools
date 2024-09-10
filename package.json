@@ -6,6 +6,7 @@
 	"private": true,
 	"scripts": {
 		"build": "export SET NODE_OPTIONS=--openssl-legacy-provider && webpack --mode production",
+		"buildCI": "webpack --mode production",
 		"start": "export SET NODE_OPTIONS=--openssl-legacy-provider && webpack --mode development --progress --color --watch",
 		"parseDocs": "ts-node -r tsconfig-paths/register bin/parseDocs.ts",
 		"parsePak": "ts-node -r tsconfig-paths/register bin/parsePak.ts",
