@@ -12,6 +12,14 @@ export class MachineGroup
 
 	public constructor(public recipeData: RecipeData, public mode: MachineGroupMode = 'underclockLast')
 	{
+		// could be done better in some new "options tab". But at least it works..?
+		const url = new URL(window.location.href);
+		const params = new URLSearchParams(url.search);
+		const urlParamMode = params.get('MachineGroupMode') as MachineGroupMode;
+		if (urlParamMode) {
+			this.mode = urlParamMode;
+		}
+		
 		this.recalculate();
 	}
 
