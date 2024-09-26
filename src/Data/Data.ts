@@ -370,7 +370,7 @@ export class Data
 			return true;
 		}
 
-		return typeof entity.metadata.manufacturingSpeed !== 'undefined';;
+		return entity.metadata.manufacturingSpeed !== 0;
 	}
 
 	public isExtractorBuilding(entity: BuildingTypes): boolean
@@ -387,6 +387,15 @@ export class Data
 			const itemA = this.getItemByClassName(a.item) as IItemSchema;
 			const itemB = this.getItemByClassName(b.item) as IItemSchema;
 			return itemA.name.localeCompare(itemB.name);
+		});
+	}
+
+	public getManufacturers(): IBuildingSchema[]
+	{
+		return Object.values(this.getRawData().buildings).filter((building) => {
+			return this.isManufacturerBuilding(building) && !this.isManualManufacturer(building);
+		}).sort((a, b) => {
+			return a.name.localeCompare(b.name);
 		});
 	}
 

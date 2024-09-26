@@ -12,6 +12,7 @@ import {Solver} from '@src/Solver/Solver';
 import {ProductionResult} from '@src/Tools/Production/Result/ProductionResult';
 import {ProductionResultFactory} from '@src/Tools/Production/Result/ProductionResultFactory';
 import {DataProvider} from '@src/Data/DataProvider';
+import {IRecipeSchema} from '@src/Schema/IRecipeSchema';
 
 export class ProductionTab
 {
@@ -54,6 +55,10 @@ export class ProductionTab
 			this.addEmptyProduct();
 		}
 
+		if (typeof this.data.request.blockedMachines === 'undefined') {
+			this.data.request.blockedMachines = [];
+		}
+
 		this.unregisterCallback = scope.$watch(() => {
 			return this.data.request;
 		}, Callbacks.debounce((newValue, oldValue) => {
@@ -61,7 +66,7 @@ export class ProductionTab
 			this.scope.saveState();
 			this.shareLink = '';
 			this.calculate(this.scope.$timeout);
-		}, 300), true);
+		}, 400), true);
 	}
 
 	public calculate($timeout?: ITimeoutService): void
@@ -89,8 +94,43 @@ export class ProductionTab
 		this.resultStatus = ResultStatus.CALCULATING;
 
 		const calc = () => {
-			const apiRequest: IProductionDataApiRequest = this.data.request as IProductionDataApiRequest;
+			const apiRequest: IProductionDataApiRequest = angular.copy(this.data.request) as IProductionDataApiRequest;
 			apiRequest.gameVersion = this.version === '0.8' ? '0.8.0' : '1.0.0';
+
+			const blockedMachines = apiRequest.blockedMachines || [];
+			const allowedAlts: string[] = [];
+			for (const recipeClass of apiRequest.allowedAlternateRecipes) {
+				const recipe = data.getRecipeByClassName(recipeClass);
+				if (recipe) {
+					let allowed = true;
+					for (const machineClass of blockedMachines) {
+						if (recipe.producedIn.indexOf(machineClass) !== -1) {
+							allowed = false;
+						}
+					}
+					if (allowed) {
+						allowedAlts.push(recipeClass);
+					}
+				}
+			}
+			apiRequest.allowedAlternateRecipes = allowedAlts;
+
+			const blockedRecipes: string[] = [];
+			for (const recipe of data.getBaseItemRecipes()) {
+				let allowed = apiRequest.blockedRecipes.indexOf(recipe.className) === -1;
+				for (const machineClass of blockedMachines) {
+					if (recipe.producedIn.indexOf(machineClass) !== -1) {
+						allowed = false;
+					}
+				}
+				if (!allowed) {
+					blockedRecipes.push(recipe.className);
+				}
+			}
+			apiRequest.blockedRecipes = blockedRecipes;
+
+			delete apiRequest.blockedMachines;
+
 			Solver.solveProduction(apiRequest, (result) => {
 				const res = () => {
 					let length = 0;
@@ -142,6 +182,7 @@ export class ProductionTab
 			request: {
 				allowedAlternateRecipes: [],
 				blockedRecipes: [],
+				blockedMachines: [],
 				blockedResources: [],
 				sinkableResources: [],
 				production: [],
@@ -356,6 +397,40 @@ export class ProductionTab
 	public isBasicRecipeEnabled(className: string): boolean
 	{
 		return this.data.request.blockedRecipes.indexOf(className) === -1;
+	}
+
+	public isMachineEnabled(className: string): boolean
+	{
+		if (typeof this.data.request.blockedMachines === 'undefined') {
+			return false;
+		}
+		return this.data.request.blockedMachines.indexOf(className) === -1;
+	}
+
+	public toggleMachine(className: string): void
+	{
+		if (typeof this.data.request.blockedMachines === 'undefined') {
+			return;
+		}
+		const index = this.data.request.blockedMachines.indexOf(className);
+		if (index === -1) {
+			this.data.request.blockedMachines.push(className);
+		} else {
+			this.data.request.blockedMachines.splice(index, 1);
+		}
+	}
+
+	public recipeMachineDisabled(recipe: IRecipeSchema): boolean
+	{
+		if (typeof this.data.request.blockedMachines === 'undefined') {
+			return false;
+		}
+		for (const madeIn of recipe.producedIn) {
+			if (this.data.request.blockedMachines.indexOf(madeIn) !== -1) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	public convertAlternateRecipeName(name: string): string

@@ -98,12 +98,6 @@
 </nav>
 
 <div class="container-fluid px-xl-5 px-lg-4 px-md-3 px-sm-2 px-1" style="margin-top: 60px;">
-	<div class="alert alert-danger alert-dismissible fade show" ng-if="version === '0.8'">
-		<b>You're looking at Tools for Update 8!</b> If you want to calculate builds for full release (1.0), change version in top menu.<br>
-		You can use the export/import functionality to move production lines to 1.0 Tools.
-		<button class="close" data-dismiss="alert">&times;</button>
-	</div>
-
 	<div ui-view></div>
 
 	<hr>
@@ -114,5 +108,25 @@
 			Old website: <a href="https://satisfactory.greeny.dev/">https://satisfactory.greeny.dev/</a>.
 		</p>
 	</footer>
+</div>
+
+<div class="modal" tabindex="-1" ng-if="version === '0.8'" id="modal">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h3 class="modal-title">Old version!</h3>
+			</div>
+			<div class="modal-body">
+				<p class="alert alert-danger">
+					<b>You're looking at Tools for Update 8!</b> If you want to calculate builds for full release (1.0), use the button below to switch.<br>
+					You can use the export/import functionality to move production lines to 1.0 Tools.
+				</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-danger" data-dismiss="modal">Stay on 0.8 Tools</button>
+				<a ng-click="changeVersion('1.0')" class="btn btn-success">Go to 1.0 Tools</a>
+			</div>
+		</div>
+	</div>
 </div>
 

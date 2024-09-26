@@ -272,6 +272,11 @@ $border: 1px solid rgba(0, 0, 0, 0.125);
 		background-color: $gray-700;
 	}
 
+	tr.disabled {
+		color: $gray-600;
+		text-decoration: line-through;
+	}
+
 	td {
 		padding: 2px;
 		.recipe-item {

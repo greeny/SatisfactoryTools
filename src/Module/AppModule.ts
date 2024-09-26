@@ -1,4 +1,4 @@
-import {ILocationProvider, IModule, ISCEProvider, IScope} from 'angular';
+import {ILocationProvider, IModule, ISCEProvider, IScope, ITimeoutService} from 'angular';
 import {StateService, StateParams, UrlRouterProvider} from 'angular-ui-router';
 import {HomeController} from '@src/Module/Controllers/HomeController';
 import {AppDirective} from '@src/Module/Directives/AppDirective';
@@ -346,7 +346,7 @@ export class AppModule
 				});
 			},
 		]);
-		this.app.run(['$transitions', '$rootScope', '$state', ($transitions: any, $rootScope: any, $state: StateService) => {
+		this.app.run(['$transitions', '$rootScope', '$state', '$timeout', ($transitions: any, $rootScope: any, $state: StateService, $timeout: ITimeoutService) => {
 			$rootScope.aprilMode = April.isApril();
 			$rootScope.aprilModePossible = April.isAprilPossible();
 
@@ -379,6 +379,13 @@ export class AppModule
 					DataProvider.change($state.params.version);
 				});
 			});
+
+			$timeout(() => {
+				$('#modal').modal({
+					backdrop: 'static',
+					keyboard: false,
+				});
+			})
 		}]);
 
 		this.app.filter('number', () => {

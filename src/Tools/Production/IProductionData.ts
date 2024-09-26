@@ -24,6 +24,7 @@ export interface IProductionDataRequest
 
 	blockedResources: string[]; // whether the raw resource is available for usage or not
 	blockedRecipes: string[]; // whether normal recipe can be used
+	blockedMachines?: string[]; // which machines are blocked
 	allowedAlternateRecipes: string[]; // whether alt is available or not (doesn't guarantee usage)
 
 	sinkableResources: string[]; // whether or not you can sink a given resource

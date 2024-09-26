@@ -170,7 +170,14 @@
 								<span class="fas fa-fw fa-scroll mr-1"></span>
 								Recipes
 							</a>
-						<!--</li><li class="nav-item">
+						</li>
+						<li class="nav-item">
+							<a href="javascript: void(0);" class="nav-link" ng-class="{active: ctrl.tab.tab === 'machines'}" ng-click="ctrl.tab.tab = 'machines'">
+								<span class="fas fa-fw fa-industry mr-1"></span>
+								Machines
+							</a>
+						</li>
+						<!--<li class="nav-item">
 							<a href="javascript: void(0);" class="nav-link" ng-class="{active: ctrl.tab.tab === 'sink'}" ng-click="ctrl.tab.tab = 'sink'">
 								<span class="fas fa-fw fa-ticket-alt mr-1"></span>
 								Sink points
@@ -402,7 +409,7 @@
 
 								<div class="card-body" ng-show="ctrl.tab.state.alternateRecipesExpanded">
 									<table class="alternate-recipe-list">
-										<tr ng-repeat="recipe in ctrl.alternateRecipes | filter: {name: ctrl.tab.state.alternateRecipesQuery} | orderBy:'name'" ng-click="ctrl.tab.toggleAlternateRecipe(recipe.className)">
+										<tr ng-repeat="recipe in ctrl.alternateRecipes | filter: {name: ctrl.tab.state.alternateRecipesQuery} | orderBy:'name'" ng-click="ctrl.tab.toggleAlternateRecipe(recipe.className)" ng-class="{'disabled': ctrl.tab.recipeMachineDisabled(recipe)}" data-tooltip title="{{ctrl.tab.recipeMachineDisabled(recipe) ? 'Recipe disabled because corresponding building is disabled.' : ''}}">
 											<td>
 												<span class="fas fa-check-square" ng-show="ctrl.tab.isAlternateRecipeEnabled(recipe.className)"></span>
 												<span class="fas fa-square" ng-show="!ctrl.tab.isAlternateRecipeEnabled(recipe.className)"></span>
@@ -452,7 +459,7 @@
 								</h3>
 								<div class="card-body" ng-show="ctrl.tab.state.basicRecipesExpanded">
 									<table class="alternate-recipe-list">
-										<tr ng-repeat="recipe in ctrl.basicRecipes | filter: {name: ctrl.tab.state.basicRecipesQuery} | orderBy:'name'" ng-click="ctrl.tab.toggleBasicRecipe(recipe.className)">
+										<tr ng-repeat="recipe in ctrl.basicRecipes | filter: {name: ctrl.tab.state.basicRecipesQuery} | orderBy:'name'" ng-click="ctrl.tab.toggleBasicRecipe(recipe.className)" ng-class="{'disabled': ctrl.tab.recipeMachineDisabled(recipe)}" data-tooltip title="{{ctrl.tab.recipeMachineDisabled(recipe) ? 'Recipe disabled because corresponding building is disabled.' : ''}}">
 											<td>
 												<span class="fas fa-check-square" ng-show="ctrl.tab.isBasicRecipeEnabled(recipe.className)"></span>
 												<span class="fas fa-square" ng-show="!ctrl.tab.isBasicRecipeEnabled(recipe.className)"></span>
@@ -471,6 +478,41 @@
 												<span ng-repeat="product in recipe.products" class="recipe-item">
 													{{product.amount}}&times;
 													<item-icon item="product.item" size="20"></item-icon>
+												</span>
+											</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-10" ng-if="ctrl.tab.tab === 'machines'">
+					<p>
+						Select machines you have available. Disabling a machine will automatically disable all recipes in that machine.
+					</p>
+
+					<div class="row">
+						<div class="col-md-6">
+							<div class="recipe-list-card card">
+								<div class="card-header d-flex">
+									<span class="recipe-list-card-title text-nowrap">
+										Available machines
+									</span>
+								</div>
+
+								<div class="card-body">
+									<table class="alternate-recipe-list">
+										<tr ng-repeat="machine in ctrl.machines | orderBy:'name'" ng-click="ctrl.tab.toggleMachine(machine.className)">
+											<td>
+												<span class="fas fa-check-square" ng-show="ctrl.tab.isMachineEnabled(machine.className)"></span>
+												<span class="fas fa-square" ng-show="!ctrl.tab.isMachineEnabled(machine.className)"></span>
+											</td>
+											<td class="d-flex justify-content-between">
+												<span>
+													<item-icon item="machine.className" size="20"></item-icon>
+													{{machine.name}}
 												</span>
 											</td>
 										</tr>

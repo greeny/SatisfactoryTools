@@ -32,6 +32,7 @@ export class ProductionController
 	public readonly sinkableItems: IItemSchema[] = data.getSinkableItems();
 	public readonly alternateRecipes: IRecipeSchema[] = data.getAlternateRecipes();
 	public readonly basicRecipes: IRecipeSchema[] = data.getBaseItemRecipes();
+	public readonly machines: IBuildingSchema[] = data.getManufacturers();
 
 	public result: string;
 
