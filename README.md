@@ -1,6 +1,7 @@
 # SatisfactoryTools
 Satisfactory Tools for planning and building the perfect base.
 
+# Standard application development
 ## Requirements
 - node.js version 16 (lower may work, 17+ doesn't work)
 - yarn
@@ -12,14 +13,25 @@ Satisfactory Tools for planning and building the perfect base.
 - `yarn build`
 - Set up a virtual host pointing to `/www` directory (using e.g. Apache or ngnix)
 
+## Development
+Run `yarn start` to start the automated build process. It will watch over the code and rebuild it on change.
+
+# Dockerized application development
+## Requirements
+- docker
+- docker-compose
+
+## Installation / Building
+- docker build .
+
+## Development
+- docker compose up -d
+
 ## Contributing
 Any pull requests are welcome, though some rules must be followed:
 - try to follow current coding style (there's `tslint` and `.editorconfig`, those should help you with that)
 - one PR per feature
 - all PRs must target `dev` branch
-
-## Development
-Run `yarn start` to start the automated build process. It will watch over the code and rebuild it on change.
 
 ## Updating data
 Get the latest Docs.json from your game installation and place it into `data` folder.
