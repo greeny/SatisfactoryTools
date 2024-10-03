@@ -46,10 +46,10 @@ export class MinerNode extends GraphNode
 			label: this.getTitle(),
 			color: {
 				border: 'rgba(0, 0, 0, 0)',
-				background: 'rgba(78, 93, 108, 1)',
+				background: `rgba(78, 93, 108, ${this.done ? GraphNode.DONE_OPACITY : 1})`,
 				highlight: {
 					border: 'rgba(238, 238, 238, 1)',
-					background: 'rgba(105, 125, 145, 1)',
+					background: `rgba(105, 125, 145, ${this.done ? GraphNode.DONE_OPACITY : 1})`,
 				},
 			},
 			font: {

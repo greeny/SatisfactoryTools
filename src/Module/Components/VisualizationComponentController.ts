@@ -139,6 +139,16 @@ export class VisualizationComponentController implements IController
 					color: 'rgba(238, 238, 238, 1)',
 				},
 				smooth: smooth,
+				// the following options are needed to "cut" the edges when the opacity of the node is less than 1,
+				// without this the edges will start and end at the center of the nodes
+				arrowStrikethrough: false,
+				arrows: {
+					from: {
+						enabled: true,
+						scaleFactor: 0,
+						type: 'image'
+					},
+				},
 			} as any);
 		}
 
@@ -219,7 +229,7 @@ export class VisualizationComponentController implements IController
 
 	private drawVisualisation(nodes: DataSet<IVisNode>, edges: DataSet<IVisEdge>): Network
 	{
-		return new Network(this.$element[0], {
+		const network = new Network(this.$element[0], {
 			nodes: nodes,
 			edges: edges,
 		}, {
@@ -264,6 +274,20 @@ export class VisualizationComponentController implements IController
 				tooltipDelay: 0,
 			},
 		});
+
+		network.on('doubleClick', (event) => {
+			if (event.nodes?.length) {
+				(event.nodes as number[]).forEach((nodeId) => {
+					const node = this.result.graph.nodes.find((graphNode) => graphNode.id === nodeId);
+					if (!node) return;
+
+					node.toggleDone();
+					nodes.update(node.getVisNode());
+				});
+			}
+		});
+
+		return network;
 	}
 
 }
