@@ -67,10 +67,13 @@ export default function parseRecipes(recipes: {
 		const producedIn = Arrays.ensureArray(Strings.unserializeDocs(recipe.mProducedIn)).map(parseBlueprintClass).map((className: string) => {
 			return className.replace('Build_', 'Desc_');
 		});
-
-		const products = Arrays.ensureArray(Strings.unserializeDocs(recipe.mProduct)).map(parseItemAmount);
-		const ingredients = Arrays.ensureArray(Strings.unserializeDocs(recipe.mIngredients)).map(parseItemAmount);
-
+		const products = recipe.mProduct && recipe.mProduct !== ""
+		? Arrays.ensureArray(Strings.unserializeDocs(recipe.mProduct)).map(parseItemAmount)
+		: [];
+		const ingredients = recipe.mIngredients && recipe.mIngredients !== ""
+			? Arrays.ensureArray(Strings.unserializeDocs(recipe.mIngredients)).map(parseItemAmount)
+			: [];
+		
 		for (const ingredient of ingredients) {
 			if (ignored.indexOf(ingredient.item) !== -1) {
 				continue recipeLoop;

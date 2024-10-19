@@ -37,13 +37,16 @@ let imageMapping: { [key: string]: string } = {};
 
 for (const definitions of docs) {
 	switch (definitions.NativeClass) {
-		case 'Class\'/Script/FactoryGame.FGItemDescriptor\'':
-		case 'Class\'/Script/FactoryGame.FGEquipmentDescriptor\'':
-		case 'Class\'/Script/FactoryGame.FGConsumableDescriptor\'':
-		case 'Class\'/Script/FactoryGame.FGItemDescriptorNuclearFuel\'':
-		case 'Class\'/Script/FactoryGame.FGItemDescAmmoTypeProjectile\'':
-		case 'Class\'/Script/FactoryGame.FGItemDescAmmoTypeColorCartridge\'':
-		case 'Class\'/Script/FactoryGame.FGItemDescAmmoTypeInstantHit\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGItemDescriptor\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGEquipmentDescriptor\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGConsumableDescriptor\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGItemDescriptorNuclearFuel\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGAmmoTypeProjectile\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGAmmoTypeSpreadshot\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGAmmoTypeInstantHit\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGPowerShardDescriptor\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGItemDescriptorPowerBoosterFuel\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGPoleDescriptor\'':
 			for (const item of parseItemDescriptors(definitions.Classes)) {
 				json.items[item.className] = item;
 			}
@@ -51,12 +54,12 @@ for (const definitions of docs) {
 				imageMapping[item.className] = item.image;
 			}
 			break;
-		case 'Class\'/Script/FactoryGame.FGRecipe\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGRecipe\'':
 			for (const recipe of parseRecipes(definitions.Classes)) {
 				json.recipes[recipe.className] = recipe;
 			}
 			break;
-		case 'Class\'/Script/FactoryGame.FGResourceDescriptor\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGResourceDescriptor\'':
 			for (const item of parseItemDescriptors(definitions.Classes)) {
 				json.items[item.className] = item;
 			}
@@ -67,7 +70,7 @@ for (const definitions of docs) {
 				json.resources[resource.item] = resource;
 			}
 			break;
-		case 'Class\'/Script/FactoryGame.FGItemDescriptorBiomass\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGItemDescriptorBiomass\'':
 			biomass = parseItemDescriptors(definitions.Classes);
 			for (const item of biomass) {
 				json.items[item.className] = item;
@@ -79,62 +82,76 @@ for (const definitions of docs) {
 				return item.energyValue && !item.liquid;
 			});
 			break;
-		case 'Class\'/Script/FactoryGame.FGBuildablePole\'':
-		case 'Class\'/Script/FactoryGame.FGBuildableConveyorBelt\'':
-		case 'Class\'/Script/FactoryGame.FGBuildableWire\'':
-		case 'Class\'/Script/FactoryGame.FGBuildablePowerPole\'':
-		case 'Class\'/Script/FactoryGame.FGBuildableDroneStation\'':
-		case 'Class\'/Script/FactoryGame.FGBuildableTradingPost\'':
-		case 'Class\'/Script/FactoryGame.FGBuildableSpaceElevator\'':
-		case 'Class\'/Script/FactoryGame.FGBuildableManufacturer\'':
-		case 'Class\'/Script/FactoryGame.FGBuildableStorage\'':
-		case 'Class\'/Script/FactoryGame.FGBuildable\'':
-		case 'Class\'/Script/FactoryGame.FGBuildableWall\'':
-		case 'Class\'/Script/FactoryGame.FGBuildableStair\'':
-		case 'Class\'/Script/FactoryGame.FGBuildableConveyorLift\'':
-		case 'Class\'/Script/FactoryGame.FGBuildablePipelineSupport\'':
-		case 'Class\'/Script/FactoryGame.FGBuildablePipeline\'':
-		case 'Class\'/Script/FactoryGame.FGBuildablePipelineJunction\'':
-		case 'Class\'/Script/FactoryGame.FGBuildablePipelinePump\'':
-		case 'Class\'/Script/FactoryGame.FGBuildablePipeReservoir\'':
-		case 'Class\'/Script/FactoryGame.FGBuildableWaterPump\'':
-		case 'Class\'/Script/FactoryGame.FGBuildableFrackingExtractor\'':
-		case 'Class\'/Script/FactoryGame.FGBuildableFrackingActivator\'':
-		case 'Class\'/Script/FactoryGame.FGBuildableManufacturerVariablePower\'':
-		case 'Class\'/Script/FactoryGame.FGBuildableTrainPlatformCargo\'':
-		case 'Class\'/Script/FactoryGame.FGBuildableRailroadStation\'':
-		case 'Class\'/Script/FactoryGame.FGBuildableRailroadTrack\'':
-		case 'Class\'/Script/FactoryGame.FGBuildableFoundation\'':
-		case 'Class\'/Script/FactoryGame.FGBuildableFactory\'':
-		case 'Class\'/Script/FactoryGame.FGBuildableAttachmentMerger\'':
-		case 'Class\'/Script/FactoryGame.FGBuildableAttachmentSplitter\'':
-		case 'Class\'/Script/FactoryGame.FGBuildableResourceSink\'':
-		case 'Class\'/Script/FactoryGame.FGBuildableResourceSinkShop\'':
-		case 'Class\'/Script/FactoryGame.FGConveyorPoleStackable\'':
-		case 'Class\'/Script/FactoryGame.FGBuildableDockingStation\'':
-		case 'Class\'/Script/FactoryGame.FGPipeHyperStart\'':
-		case 'Class\'/Script/FactoryGame.FGBuildablePipeHyper\'':
-		case 'Class\'/Script/FactoryGame.FGBuildablePowerStorage\'':
-		case 'Class\'/Script/FactoryGame.FGBuildableTrainPlatformEmpty\'':
-		case 'Class\'/Script/FactoryGame.FGBuildableCircuitSwitch\'':
-		case 'Class\'/Script/FactoryGame.FGBuildableSplitterSmart\'':
-		case 'Class\'/Script/FactoryGame.FGBuildableWalkway\'':
-		case 'Class\'/Script/FactoryGame.FGVehicleDescriptor\'':
-		case 'Class\'/Script/FactoryGame.FGBuildableLightSource\'':
-		case 'Class\'/Script/FactoryGame.FGBuildableFloodlight\'':
-		case 'Class\'/Script/FactoryGame.FGBuildableLightsControlPanel\'':
-		case 'Class\'/Script/FactoryGame.FGBuildableDoor\'':
-		case 'Class\'/Script/FactoryGame.FGBuildableCornerWall\'':
-		case 'Class\'/Script/FactoryGame.FGBuildableMAM\'':
-		case 'Class\'/Script/FactoryGame.FGBuildablePillar\'':
-		case 'Class\'/Script/FactoryGame.FGBuildableRamp\'':
-		case 'Class\'/Script/FactoryGame.FGBuildableJumppad\'':
-		case 'Class\'/Script/FactoryGame.FGBuildableRailroadSignal\'':
-		case 'Class\'/Script/FactoryGame.FGBuildableBeam\'':
-		case 'Class\'/Script/FactoryGame.FGBuildableFactoryBuilding\'':
-		case 'Class\'/Script/FactoryGame.FGBuildableWidgetSign\'':
-		case 'Class\'/Script/FactoryGame.FGBuildableLadder\'':
-		case 'Class\'/Script/FactoryGame.FGBuildablePassthrough\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildablePole\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableConveyorBelt\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableWire\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildablePowerPole\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableDroneStation\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableTradingPost\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableSpaceElevator\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableManufacturer\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableStorage\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildable\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableWall\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableWallLightweight\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableConveyorLift\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildablePipelineSupport\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildablePipeline\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildablePipelineJunction\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildablePipelinePump\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildablePipeReservoir\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableWaterPump\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableFrackingExtractor\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableFrackingActivator\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableManufacturerVariablePower\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableTrainPlatformCargo\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableRailroadStation\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableRailroadTrack\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableFoundationLightweight\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableFactory\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableFactorySimpleProducer\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableFactoryBuilding\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableAttachmentMerger\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableAttachmentSplitter\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableResourceSink\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableResourceSinkShop\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGConveyorPoleStackable\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableDockingStation\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGPipeHyperStart\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildablePipeHyper\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildablePowerStorage\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableTrainPlatformEmpty\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableCircuitSwitch\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableSplitterSmart\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableWalkway\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableWalkwayLightweight\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGVehicleDescriptor\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableLightSource\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableFloodlight\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableLightsControlPanel\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableDoor\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableCornerWall\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableCornerWallLightweight\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableMAM\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildablePillarLightweight\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableRampLightweight\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableJumppad\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableRailroadSignal\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableBeamLightweight\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableFactoryBuilding\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableWidgetSign\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableLadder\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildablePassthrough\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildablePassthroughPipeHyper\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildablePortal\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildablePortalSatellite\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableBlueprintDesigner\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildablePowerBooster\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildablePriorityPowerSwitch\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableSnowDispenser\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildablePoleBase\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildablePoleLightweight\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGCentralStorageContainer\'':
 			for (const building of parseBuildings(definitions.Classes, true)) {
 				json.buildings[building.className] = building;
 			}
@@ -142,12 +159,12 @@ for (const definitions of docs) {
 				imageMapping[item.className] = item.image;
 			}
 			break;
-		case 'Class\'/Script/FactoryGame.FGBuildableRadarTower\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableRadarTower\'':
 			for (const building of parseBuildings(definitions.Classes, true)) {
 				json.buildings[building.className] = building;
 			}
 			break;
-		case 'Class\'/Script/FactoryGame.FGBuildableResourceExtractor\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableResourceExtractor\'':
 			for (const building of parseBuildings(definitions.Classes, true)) {
 				json.buildings[building.className] = building;
 			}
@@ -158,9 +175,9 @@ for (const definitions of docs) {
 				json.miners[miner.className] = miner;
 			}
 			break;
-		case 'Class\'/Script/FactoryGame.FGBuildableGeneratorFuel\'':
-		case 'Class\'/Script/FactoryGame.FGBuildableGeneratorNuclear\'':
-		case 'Class\'/Script/FactoryGame.FGBuildableGeneratorGeoThermal\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableGeneratorFuel\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableGeneratorNuclear\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildableGeneratorGeoThermal\'':
 			for (const building of parseBuildings(definitions.Classes, true)) {
 				json.buildings[building.className] = building;
 			}
@@ -171,13 +188,13 @@ for (const definitions of docs) {
 				json.generators[generator.className] = generator;
 			}
 			break;
-		case 'Class\'/Script/FactoryGame.FGBuildingDescriptor\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGBuildingDescriptor\'':
 			extraInfo = parseBuildingDescriptors(definitions.Classes);
 			for (const item of parseImageMapping(definitions.Classes)) {
 				imageMapping[item.className] = item.image;
 			}
 			break;
-		case 'Class\'/Script/FactoryGame.FGSchematic\'':
+		case '/Script/CoreUObject.Class\'/Script/FactoryGame.FGSchematic\'':
 			for (const schematic of parseSchematics(definitions.Classes)) {
 				json.schematics[schematic.className] = schematic;
 			}
@@ -186,7 +203,7 @@ for (const definitions of docs) {
 			}
 			break;
 		default:
-			// console.log(definitions.NativeClass);
+			console.log('Skipped: ' + definitions.NativeClass);
 			break;
 	}
 }
@@ -258,7 +275,7 @@ for (const info of extraInfo) {
 		json.buildings[info.className].buildMenuPriority = info.priority;
 		json.buildings[info.className].categories = info.categories;
 	} else {
-		console.log(info.className);
+		console.log('Cannot assign extra info for ' + info.className);
 	}
 }
 
@@ -349,7 +366,7 @@ for (const key in json.recipes) {
 
 	for (const ingredient of recipe.ingredients) {
 		if (!json.items[ingredient.item]) {
-			throw new Error('Invalid item ' + ingredient.item);
+			throw new Error('Invalid item \"' + ingredient.item + '\" of recipe ' + recipe.className);
 		}
 		if (json.items[ingredient.item].liquid) {
 			ingredient.amount /= 1000;

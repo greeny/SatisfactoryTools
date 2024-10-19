@@ -9,7 +9,11 @@ export default function parseBlueprintClass(blueprint: string): string
 	}
 	if (match) {
 		const parts = match[1].split('.');
-		return parts[parts.length - 1];
+		const name = parts[parts.length - 1];
+		if (name[name.length - 1] === "'") {
+			return name.slice(0, -1);
+		}
+		return name;
 	}
 	return 'Undefined';
 }

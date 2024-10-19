@@ -19,3 +19,4 @@ www/assets/app.js
 
 # Local config
 env.json
+data/data.min.json
