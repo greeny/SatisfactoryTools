@@ -363,7 +363,7 @@ export class AppModule
 				const valid = ['0.8', '1.0'];
 				if (!valid.includes(version)) {
 					transition.abort();
-					$state.go(transition.to().name + '', {...transition.params(), version: '0.8'}, {location: 'replace', reload: true, inherit: true});
+					$state.go(transition.to().name + '', {...transition.params(), version: '1.0'}, {location: 'replace', reload: true, inherit: true});
 				}
 			})
 
