@@ -234,78 +234,6 @@
                 "a": 0
             }
         },
-        "Desc_CompactedCoal_C": {
-            "slug": "compacted-coal",
-            "icon": "desc-compactedcoal-c",
-            "name": "Compacted Coal",
-            "description": "A much more efficient alternative to Coal. Used as fuel for vehicles and Coal-Powered Generators.",
-            "sinkPoints": 28,
-            "className": "Desc_CompactedCoal_C",
-            "stackSize": 100,
-            "energyValue": 630.0,
-            "radioactiveDecay": 0.0,
-            "liquid": false,
-            "fluidColor": {
-                "r": 255,
-                "g": 255,
-                "b": 255,
-                "a": 0
-            }
-        },
-        "Desc_PackagedOilResidue_C": {
-            "slug": "packaged-heavy-oil-residue",
-            "icon": "desc-packagedoilresidue-c",
-            "name": "Packaged Heavy Oil Residue",
-            "description": "Heavy Oil Residue, packaged for alternative transport. Can be used as fuel for vehicles.",
-            "sinkPoints": 180,
-            "className": "Desc_PackagedOilResidue_C",
-            "stackSize": 100,
-            "energyValue": 400.0,
-            "radioactiveDecay": 0.0,
-            "liquid": false,
-            "fluidColor": {
-                "r": 109,
-                "g": 45,
-                "b": 120,
-                "a": 255
-            }
-        },
-        "Desc_PetroleumCoke_C": {
-            "slug": "petroleum-coke",
-            "icon": "desc-petroleumcoke-c",
-            "name": "Petroleum Coke",
-            "description": "Used for crafting.\nA carbon-rich material distilled from Heavy Oil Residue. \nUsed as a less efficient Coal replacement.",
-            "sinkPoints": 20,
-            "className": "Desc_PetroleumCoke_C",
-            "stackSize": 200,
-            "energyValue": 180.0,
-            "radioactiveDecay": 0.0,
-            "liquid": false,
-            "fluidColor": {
-                "r": 255,
-                "g": 255,
-                "b": 255,
-                "a": 0
-            }
-        },
-        "Desc_PackagedOil_C": {
-            "slug": "packaged-oil",
-            "icon": "desc-packagedoil-c",
-            "name": "Packaged Oil",
-            "description": "Crude Oil, packaged for alternative transport. Can be used as fuel for vehicles.",
-            "sinkPoints": 180,
-            "className": "Desc_PackagedOil_C",
-            "stackSize": 100,
-            "energyValue": 320.0,
-            "radioactiveDecay": 0.0,
-            "liquid": false,
-            "fluidColor": {
-                "r": 255,
-                "g": 255,
-                "b": 255,
-                "a": 0
-            }
-        },
         "Desc_IronRod_C": {
             "slug": "iron-rod",
             "icon": "desc-ironrod-c",
@@ -405,6 +333,24 @@
             "className": "Desc_Rotor_C",
             "stackSize": 100,
             "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_CompactedCoal_C": {
+            "slug": "compacted-coal",
+            "icon": "desc-compactedcoal-c",
+            "name": "Compacted Coal",
+            "description": "A much more efficient alternative to Coal. Used as fuel for vehicles and Coal-Powered Generators.",
+            "sinkPoints": 28,
+            "className": "Desc_CompactedCoal_C",
+            "stackSize": 100,
+            "energyValue": 630.0,
             "radioactiveDecay": 0.0,
             "liquid": false,
             "fluidColor": {
@@ -850,7 +796,7 @@
             "slug": "ai-expansion-server",
             "icon": "desc-spaceelevatorpart-12-c",
             "name": "AI Expansion Server",
-            "description": "Project Part #12. Ship via the Space Elevator to complete phases of Project Assembly.\nPower Usage: 1500-2500 MW (2000 MW average).\n\nGrowth is the metric by which we measure success.",
+            "description": "Project Part #12. Ship via the Space Elevator to complete phases of Project Assembly.\nPower Usage: 0-2000 MW (1000 MW average).\n\nGrowth is the metric by which we measure success.",
             "sinkPoints": 597652,
             "className": "Desc_SpaceElevatorPart_12_C",
             "stackSize": 50,
@@ -1152,6 +1098,24 @@
                 "a": 0
             }
         },
+        "Desc_PetroleumCoke_C": {
+            "slug": "petroleum-coke",
+            "icon": "desc-petroleumcoke-c",
+            "name": "Petroleum Coke",
+            "description": "Used for crafting.\nA carbon-rich material distilled from Heavy Oil Residue. \nUsed as a less efficient Coal replacement.",
+            "sinkPoints": 20,
+            "className": "Desc_PetroleumCoke_C",
+            "stackSize": 200,
+            "energyValue": 180.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
         "Desc_QuartzCrystal_C": {
             "slug": "quartz-crystal",
             "icon": "desc-quartzcrystal-c",
@@ -1204,6 +1168,42 @@
                 "g": 255,
                 "b": 255,
                 "a": 0
+            }
+        },
+        "Desc_PackagedOil_C": {
+            "slug": "packaged-oil",
+            "icon": "desc-packagedoil-c",
+            "name": "Packaged Oil",
+            "description": "Crude Oil, packaged for alternative transport. Can be used as fuel for vehicles.",
+            "sinkPoints": 180,
+            "className": "Desc_PackagedOil_C",
+            "stackSize": 100,
+            "energyValue": 320.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_PackagedOilResidue_C": {
+            "slug": "packaged-heavy-oil-residue",
+            "icon": "desc-packagedoilresidue-c",
+            "name": "Packaged Heavy Oil Residue",
+            "description": "Heavy Oil Residue, packaged for alternative transport. Can be used as fuel for vehicles.",
+            "sinkPoints": 180,
+            "className": "Desc_PackagedOilResidue_C",
+            "stackSize": 100,
+            "energyValue": 400.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 109,
+                "g": 45,
+                "b": 120,
+                "a": 255
             }
         },
         "Desc_PackagedWater_C": {
@@ -1750,7 +1750,7 @@
             "slug": "ballistic-warp-drive",
             "icon": "desc-spaceelevatorpart-11-c",
             "name": "Ballistic Warp Drive",
-            "description": "Project Part #11. Ship via the Space Elevator to complete phases of Project Assembly.\nPower Usage: 1000-2000 MW (1500 MW average).\n\nA large amount of force is required for the Warp Drives to activate, so sticking them to rockets was the logical next step. Additionally, results improved immensely when the observers were further removed from the Warp Drives upon activation.",
+            "description": "Project Part #11. Ship via the Space Elevator to complete phases of Project Assembly.\n\nA large amount of force is required for the Warp Drives to activate, so sticking them to rockets was the logical next step. Additionally, results improved immensely when the observers were further removed from the Warp Drives upon activation.",
             "sinkPoints": 2895334,
             "className": "Desc_SpaceElevatorPart_11_C",
             "stackSize": 50,
@@ -1912,7 +1912,7 @@
             "slug": "ficsmas-wonder-star",
             "icon": "desc-xmasstar-c",
             "name": "FICSMAS Wonder Star",
-            "description": "This special FICSMAS Star signifies FICSIT's productivity all across the universe. It also signifies the fact that you have nearly completed the Holiday Event, so it's time to get back to work.",
+            "description": "A symbol of appreciation for all the hard work FICSIT has done for its employees. It seems to have an aura of gratitude. Seeing this also means the seasonal event is nearly done, and we can finally get back to Saving The Day.",
             "sinkPoints": 6540,
             "className": "Desc_XmasStar_C",
             "stackSize": 50,
@@ -1930,7 +1930,7 @@
             "slug": "ficsmas-ornament-bundle",
             "icon": "desc-xmasballcluster-c",
             "name": "FICSMAS Ornament Bundle",
-            "description": "All the FICSMAS Ornaments smashed together to make even more FICSMAS Decorations!",
+            "description": "A collection of FICSMAS ornaments and also an eyesore.",
             "sinkPoints": 100,
             "className": "Desc_XmasBallCluster_C",
             "stackSize": 100,
@@ -1944,14 +1944,32 @@
                 "a": 0
             }
         },
+        "Desc_XmasBranch_C": {
+            "slug": "ficsmas-tree-branch",
+            "icon": "desc-xmasbranch-c",
+            "name": "FICSMAS Tree Branch",
+            "description": "This FICSMAS Tree Branch is very different from regular tree branches: it's used to produce parts and buildings during the FICSMAS event, rather than for combustion.",
+            "sinkPoints": 2,
+            "className": "Desc_XmasBranch_C",
+            "stackSize": 500,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
         "Desc_XmasWreath_C": {
-            "slug": "ficsmas-decoration",
+            "slug": "ficsmas-wreath",
             "icon": "desc-xmaswreath-c",
-            "name": "FICSMAS Decoration",
-            "description": "A decoration used to make decorations. Its use cases are questionable.",
+            "name": "FICSMAS Wreath",
+            "description": "FICSIT's newest holiday innovation: decorations that can be turned into decorations! Efficiency and waste-conscious design at its best.",
             "sinkPoints": 630,
             "className": "Desc_XmasWreath_C",
-            "stackSize": 100,
+            "stackSize": 50,
             "energyValue": 0.0,
             "radioactiveDecay": 0.0,
             "liquid": false,
@@ -1966,10 +1984,10 @@
             "slug": "candy-cane",
             "icon": "desc-candycane-c",
             "name": "Candy Cane",
-            "description": "A delicious Candy Cane to be enjoyed during the FICSMAS Holidays. \n*Disclaimer: Not for consumption...",
+            "description": "A delicious Candy Cane to be enjoyed during the FICSMAS Holidays.\n*Disclaimer: Not for human consumption…",
             "sinkPoints": 6,
             "className": "Desc_CandyCane_C",
-            "stackSize": 500,
+            "stackSize": 100,
             "energyValue": 0.0,
             "radioactiveDecay": 0.0,
             "liquid": false,
@@ -1981,10 +1999,10 @@
             }
         },
         "Desc_Snow_C": {
-            "slug": "actual-snow",
+            "slug": "ficsmas-actual-snow",
             "icon": "desc-snow-c",
-            "name": "Actual Snow",
-            "description": "It's snow. Not the nice, thick, crunchy kind, though... more the disgustingly wet, slushy kind... Guess we can make stuff from it.",
+            "name": "FICSMAS Actual Snow",
+            "description": "This Actual Snow is made from several chemical elements and experiences 100% like naturally occuring snow after extensive user testing.",
             "sinkPoints": 5,
             "className": "Desc_Snow_C",
             "stackSize": 500,
@@ -2002,100 +2020,10 @@
             "slug": "ficsmas-bow",
             "icon": "desc-xmasbow-c",
             "name": "FICSMAS Bow",
-            "description": "A fancy Bow. Maybe someone could wear this? You certainly can't! What you can do is make parts and decorations from it. Probably.",
+            "description": "A fancy bow. Not for wearing, eating, admiring, Lizard Doggos, humans, aliens, or anything not related to FICSMAS factory production.",
             "sinkPoints": 4,
             "className": "Desc_XmasBow_C",
-            "stackSize": 500,
-            "energyValue": 0.0,
-            "radioactiveDecay": 0.0,
-            "liquid": false,
-            "fluidColor": {
-                "r": 255,
-                "g": 255,
-                "b": 255,
-                "a": 0
-            }
-        },
-        "Desc_XmasBall3_C": {
-            "slug": "copper-ficsmas-ornament",
-            "icon": "desc-xmasball3-c",
-            "name": "Copper FICSMAS Ornament",
-            "description": "Still used for making FICSMAS Decorations.",
-            "sinkPoints": 32,
-            "className": "Desc_XmasBall3_C",
-            "stackSize": 200,
-            "energyValue": 0.0,
-            "radioactiveDecay": 0.0,
-            "liquid": false,
-            "fluidColor": {
-                "r": 255,
-                "g": 255,
-                "b": 255,
-                "a": 0
-            }
-        },
-        "Desc_XmasBall4_C": {
-            "slug": "iron-ficsmas-ornament",
-            "icon": "desc-xmasball4-c",
-            "name": "Iron FICSMAS Ornament",
-            "description": "A super special- Nope! Still just used for making FICSMAS Decorations.",
-            "sinkPoints": 18,
-            "className": "Desc_XmasBall4_C",
-            "stackSize": 200,
-            "energyValue": 0.0,
-            "radioactiveDecay": 0.0,
-            "liquid": false,
-            "fluidColor": {
-                "r": 255,
-                "g": 255,
-                "b": 255,
-                "a": 0
-            }
-        },
-        "Desc_XmasBranch_C": {
-            "slug": "ficsmas-tree-branch",
-            "icon": "desc-xmasbranch-c",
-            "name": "FICSMAS Tree Branch",
-            "description": "A special Tree Branch used to produce parts and buildings during the FICSMAS Event.",
-            "sinkPoints": 2,
-            "className": "Desc_XmasBranch_C",
-            "stackSize": 500,
-            "energyValue": 0.0,
-            "radioactiveDecay": 0.0,
-            "liquid": false,
-            "fluidColor": {
-                "r": 255,
-                "g": 255,
-                "b": 255,
-                "a": 0
-            }
-        },
-        "Desc_XmasBall1_C": {
-            "slug": "red-ficsmas-ornament",
-            "icon": "desc-xmasball1-c",
-            "name": "Red FICSMAS Ornament",
-            "description": "Used for making FICSMAS Decorations.",
-            "sinkPoints": 2,
-            "className": "Desc_XmasBall1_C",
-            "stackSize": 500,
-            "energyValue": 0.0,
-            "radioactiveDecay": 0.0,
-            "liquid": false,
-            "fluidColor": {
-                "r": 255,
-                "g": 255,
-                "b": 255,
-                "a": 0
-            }
-        },
-        "Desc_XmasBall2_C": {
-            "slug": "blue-ficsmas-ornament",
-            "icon": "desc-xmasball2-c",
-            "name": "Blue FICSMAS Ornament",
-            "description": "Again, used for making FICSMAS Decorations.",
-            "sinkPoints": 1,
-            "className": "Desc_XmasBall2_C",
-            "stackSize": 500,
+            "stackSize": 100,
             "energyValue": 0.0,
             "radioactiveDecay": 0.0,
             "liquid": false,
@@ -2110,10 +2038,82 @@
             "slug": "ficsmas-gift",
             "icon": "desc-gift-c",
             "name": "FICSMAS Gift",
-            "description": "Special FICSMAS buildings and parts can be obtained and produced from this FICSIT Holiday present.\n\n*Watch the sky for deliveries from orbit!",
+            "description": "Gifts that have inexplicably fallen from the sky or spawned from a FICSMAS Gift Tree.\n\nDon’t question it—they’re used to produce FICSMAS buildings and parts.\n\nThese Gifts are part of the FICSMAS Event, like the calendar in the HUB.",
             "sinkPoints": 1,
             "className": "Desc_Gift_C",
-            "stackSize": 500,
+            "stackSize": 200,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_XmasBall1_C": {
+            "slug": "red-ficsmas-ornament",
+            "icon": "desc-xmasball1-c",
+            "name": "Red FICSMAS Ornament",
+            "description": "An ornament for making FICSMAS Decorations. An acceptable red.",
+            "sinkPoints": 2,
+            "className": "Desc_XmasBall1_C",
+            "stackSize": 200,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_XmasBall2_C": {
+            "slug": "blue-ficsmas-ornament",
+            "icon": "desc-xmasball2-c",
+            "name": "Blue FICSMAS Ornament",
+            "description": "An ornament for making FICSMAS Decorations. A mildly pleasing blue.",
+            "sinkPoints": 1,
+            "className": "Desc_XmasBall2_C",
+            "stackSize": 200,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_XmasBall3_C": {
+            "slug": "copper-ficsmas-ornament",
+            "icon": "desc-xmasball3-c",
+            "name": "Copper FICSMAS Ornament",
+            "description": "An ornament for making FICSMAS Decorations. A slightly dignified copper.",
+            "sinkPoints": 32,
+            "className": "Desc_XmasBall3_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_XmasBall4_C": {
+            "slug": "iron-ficsmas-ornament",
+            "icon": "desc-xmasball4-c",
+            "name": "Iron FICSMAS Ornament",
+            "description": "An ornament for making FICSMAS Decorations. An okay iron.",
+            "sinkPoints": 18,
+            "className": "Desc_XmasBall4_C",
+            "stackSize": 100,
             "energyValue": 0.0,
             "radioactiveDecay": 0.0,
             "liquid": false,
@@ -2362,10 +2362,10 @@
             "slug": "sweet-fireworks",
             "icon": "desc-fireworks-projectile-01-c",
             "name": "Sweet Fireworks",
-            "description": "Merry FICSMAS and a Happy New Year!",
+            "description": "Has the minimum safety requirements.",
             "sinkPoints": 60,
             "className": "Desc_Fireworks_Projectile_01_C",
-            "stackSize": 500,
+            "stackSize": 100,
             "energyValue": 0.0,
             "radioactiveDecay": 0.0,
             "liquid": false,
@@ -2380,10 +2380,10 @@
             "slug": "fancy-fireworks",
             "icon": "desc-fireworks-projectile-02-c",
             "name": "Fancy Fireworks",
-            "description": "Fireworks are produced from random ingredients. Primarily used for having a good time.",
+            "description": "Poses acceptable amount of risk to pioneers.",
             "sinkPoints": 40,
             "className": "Desc_Fireworks_Projectile_02_C",
-            "stackSize": 500,
+            "stackSize": 100,
             "energyValue": 0.0,
             "radioactiveDecay": 0.0,
             "liquid": false,
@@ -2398,10 +2398,10 @@
             "slug": "sparkly-fireworks",
             "icon": "desc-fireworks-projectile-03-c",
             "name": "Sparkly Fireworks",
-            "description": "Goes Pfffeeeeew... BOOM! *Sparkle*",
+            "description": "Keep away from easily distracted pioneers.",
             "sinkPoints": 32,
             "className": "Desc_Fireworks_Projectile_03_C",
-            "stackSize": 500,
+            "stackSize": 100,
             "energyValue": 0.0,
             "radioactiveDecay": 0.0,
             "liquid": false,
@@ -2416,10 +2416,10 @@
             "slug": "snowball",
             "icon": "desc-snowballprojectile-c",
             "name": "Snowball",
-            "description": "Compressed dihydrogen monoxide crystals.",
+            "description": "Compressed dihydrogen monoxide crystals for weaponized fun!",
             "sinkPoints": 30,
             "className": "Desc_SnowballProjectile_C",
-            "stackSize": 500,
+            "stackSize": 100,
             "energyValue": 0.0,
             "radioactiveDecay": 0.0,
             "liquid": false,
@@ -2473,42 +2473,6 @@
             "description": "A remote-control device used to handle and detonate Nobelisks.",
             "sinkPoints": 6480,
             "className": "BP_EquipmentDescriptorNobeliskDetonator_C",
-            "stackSize": 1,
-            "energyValue": 0.0,
-            "radioactiveDecay": 0.0,
-            "liquid": false,
-            "fluidColor": {
-                "r": 255,
-                "g": 255,
-                "b": 255,
-                "a": 0
-            }
-        },
-        "Desc_GolfCart_C": {
-            "slug": "factory-carttm",
-            "icon": "desc-golfcart-c",
-            "name": "Factory Cart™",
-            "description": "The one and only FICSIT Factory Cart™.\nNow with special FICSIT-Foundation-only Grip Wheels, for an even smoother and faster factory floor experience!",
-            "sinkPoints": 1552,
-            "className": "Desc_GolfCart_C",
-            "stackSize": 1,
-            "energyValue": 0.0,
-            "radioactiveDecay": 0.0,
-            "liquid": false,
-            "fluidColor": {
-                "r": 255,
-                "g": 255,
-                "b": 255,
-                "a": 0
-            }
-        },
-        "Desc_GolfCartGold_C": {
-            "slug": "golden-factory-carttm",
-            "icon": "desc-golfcartgold-c",
-            "name": "Golden Factory Cart™",
-            "description": "The one and only Golden FICSIT Factory Cart™\n\nYou have now officially ascended. \nGo forth now, Master of Spaghetti, God of the Factory, Sinker of Cups, Employee of the Planet... travel in STYLE!",
-            "sinkPoints": 1852,
-            "className": "Desc_GolfCartGold_C",
             "stackSize": 1,
             "energyValue": 0.0,
             "radioactiveDecay": 0.0,
@@ -2704,9 +2668,45 @@
             "slug": "candy-cane-basher",
             "icon": "bp-equipmentdescriptorcandycane-c",
             "name": "Candy Cane Basher",
-            "description": "A heavy, delicious self-defense weapon for use at melee range.",
+            "description": "Self-defense is now not only fun, but also delicious for the target! Do not lick or consume.",
             "sinkPoints": 7850,
             "className": "BP_EquipmentDescriptorCandyCane_C",
+            "stackSize": 1,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_GolfCart_C": {
+            "slug": "factory-carttm",
+            "icon": "desc-golfcart-c",
+            "name": "Factory Cart™",
+            "description": "The one and only FICSIT Factory Cart™.\nNow with special FICSIT-Foundation-only Grip Wheels, for an even smoother and faster factory floor experience!",
+            "sinkPoints": 1552,
+            "className": "Desc_GolfCart_C",
+            "stackSize": 1,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_GolfCartGold_C": {
+            "slug": "golden-factory-carttm",
+            "icon": "desc-golfcartgold-c",
+            "name": "Golden Factory Cart™",
+            "description": "The one and only Golden FICSIT Factory Cart™\n\nYou have now officially ascended. \nGo forth now, Master of Spaghetti, God of the Factory, Sinker of Cups, Employee of the Planet... travel in STYLE!",
+            "sinkPoints": 1852,
+            "className": "Desc_GolfCartGold_C",
             "stackSize": 1,
             "energyValue": 0.0,
             "radioactiveDecay": 0.0,
@@ -2790,24 +2790,6 @@
                 "a": 0
             }
         },
-        "Desc_Coal_C": {
-            "slug": "coal",
-            "icon": "desc-coal-c",
-            "name": "Coal",
-            "description": "Mainly used as fuel for vehicles & Coal-Powered Generators, or in Steel production.",
-            "sinkPoints": 3,
-            "className": "Desc_Coal_C",
-            "stackSize": 100,
-            "energyValue": 300.0,
-            "radioactiveDecay": 0.0,
-            "liquid": false,
-            "fluidColor": {
-                "r": 255,
-                "g": 255,
-                "b": 255,
-                "a": 0
-            }
-        },
         "Desc_Water_C": {
             "slug": "water",
             "icon": "desc-water-c",
@@ -2823,6 +2805,24 @@
                 "r": 122,
                 "g": 176,
                 "b": 212,
+                "a": 0
+            }
+        },
+        "Desc_Coal_C": {
+            "slug": "coal",
+            "icon": "desc-coal-c",
+            "name": "Coal",
+            "description": "Mainly used as fuel for vehicles & Coal-Powered Generators, or in Steel production.",
+            "sinkPoints": 3,
+            "className": "Desc_Coal_C",
+            "stackSize": 100,
+            "energyValue": 300.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
                 "a": 0
             }
         },
@@ -3024,15 +3024,15 @@
                 "a": 0
             }
         },
-        "Desc_Biofuel_C": {
-            "slug": "solid-biofuel",
-            "icon": "desc-biofuel-c",
-            "name": "Solid Biofuel",
-            "description": "The most energy-efficient form of solid Biomass. Can be used as fuel for the Chainsaw.",
-            "sinkPoints": 48,
-            "className": "Desc_Biofuel_C",
-            "stackSize": 200,
-            "energyValue": 450.0,
+        "Desc_CrystalShard_C": {
+            "slug": "power-shard",
+            "icon": "desc-crystalshard-c",
+            "name": "Power Shard",
+            "description": "Power Slug mucus compressed into a solid crystal-like shard. \nIt radiates a strange power.",
+            "sinkPoints": 0,
+            "className": "Desc_CrystalShard_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
             "radioactiveDecay": 0.0,
             "liquid": false,
             "fluidColor": {
@@ -3042,33 +3042,15 @@
                 "a": 0
             }
         },
-        "Desc_PackagedBiofuel_C": {
-            "slug": "packaged-liquid-biofuel",
-            "icon": "desc-packagedbiofuel-c",
-            "name": "Packaged Liquid Biofuel",
-            "description": "Liquid Biofuel, packaged for alternative transport. Can be used as fuel for vehicles and the Jetpack.",
-            "sinkPoints": 370,
-            "className": "Desc_PackagedBiofuel_C",
-            "stackSize": 100,
-            "energyValue": 750.0,
-            "radioactiveDecay": 0.0,
-            "liquid": false,
-            "fluidColor": {
-                "r": 58,
-                "g": 83,
-                "b": 42,
-                "a": 255
-            }
-        },
-        "Desc_GenericBiomass_C": {
-            "slug": "biomass",
-            "icon": "desc-genericbiomass-c",
-            "name": "Biomass",
-            "description": "Primarily used as fuel.\nBiomass Burners and vehicles can use it for power.\nBiomass is much more energy-efficient than raw biological matter.",
-            "sinkPoints": 12,
-            "className": "Desc_GenericBiomass_C",
-            "stackSize": 200,
-            "energyValue": 180.0,
+        "Desc_WAT1_C": {
+            "slug": "somersloop",
+            "icon": "desc-wat1-c",
+            "name": "Somersloop",
+            "description": "An odd alien object with a mind-bending, yet somehow familiar shape. It emits an unsettling energy.",
+            "sinkPoints": 0,
+            "className": "Desc_WAT1_C",
+            "stackSize": 50,
+            "energyValue": 0.0,
             "radioactiveDecay": 0.0,
             "liquid": false,
             "fluidColor": {
@@ -3096,24 +3078,6 @@
                 "a": 0
             }
         },
-        "Desc_Mycelia_C": {
-            "slug": "mycelia",
-            "icon": "desc-mycelia-c",
-            "name": "Mycelia",
-            "description": "Used for crafting.\nBiomass Burners and vehicles can also use Mycelia for power.",
-            "sinkPoints": 10,
-            "className": "Desc_Mycelia_C",
-            "stackSize": 200,
-            "energyValue": 20.0,
-            "radioactiveDecay": 0.0,
-            "liquid": false,
-            "fluidColor": {
-                "r": 255,
-                "g": 255,
-                "b": 255,
-                "a": 0
-            }
-        },
         "Desc_Wood_C": {
             "slug": "wood",
             "icon": "desc-wood-c",
@@ -3123,6 +3087,42 @@
             "className": "Desc_Wood_C",
             "stackSize": 200,
             "energyValue": 100.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_GenericBiomass_C": {
+            "slug": "biomass",
+            "icon": "desc-genericbiomass-c",
+            "name": "Biomass",
+            "description": "Primarily used as fuel.\nBiomass Burners and vehicles can use it for power.\nBiomass is much more energy-efficient than raw biological matter.",
+            "sinkPoints": 12,
+            "className": "Desc_GenericBiomass_C",
+            "stackSize": 200,
+            "energyValue": 180.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_Biofuel_C": {
+            "slug": "solid-biofuel",
+            "icon": "desc-biofuel-c",
+            "name": "Solid Biofuel",
+            "description": "The most energy-efficient form of solid Biomass. Can be used as fuel for the Chainsaw.",
+            "sinkPoints": 48,
+            "className": "Desc_Biofuel_C",
+            "stackSize": 200,
+            "energyValue": 450.0,
             "radioactiveDecay": 0.0,
             "liquid": false,
             "fluidColor": {
@@ -3148,6 +3148,24 @@
                 "g": 83,
                 "b": 44,
                 "a": 0
+            }
+        },
+        "Desc_PackagedBiofuel_C": {
+            "slug": "packaged-liquid-biofuel",
+            "icon": "desc-packagedbiofuel-c",
+            "name": "Packaged Liquid Biofuel",
+            "description": "Liquid Biofuel, packaged for alternative transport. Can be used as fuel for vehicles and the Jetpack.",
+            "sinkPoints": 370,
+            "className": "Desc_PackagedBiofuel_C",
+            "stackSize": 100,
+            "energyValue": 750.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 58,
+                "g": 83,
+                "b": 42,
+                "a": 255
             }
         },
         "Desc_PackagedAlumina_C": {
@@ -3240,6 +3258,24 @@
                 "a": 0
             }
         },
+        "Desc_Mycelia_C": {
+            "slug": "mycelia",
+            "icon": "desc-mycelia-c",
+            "name": "Mycelia",
+            "description": "Used for crafting.\nBiomass Burners and vehicles can also use Mycelia for power.",
+            "sinkPoints": 10,
+            "className": "Desc_Mycelia_C",
+            "stackSize": 200,
+            "energyValue": 20.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
         "Desc_HogParts_C": {
             "slug": "hog-remains",
             "icon": "desc-hogparts-c",
@@ -3301,42 +3337,6 @@
             "description": "The shell-like remains of an alien... thing.\nUsed for MAM research.",
             "sinkPoints": 0,
             "className": "Desc_HatcherParts_C",
-            "stackSize": 50,
-            "energyValue": 0.0,
-            "radioactiveDecay": 0.0,
-            "liquid": false,
-            "fluidColor": {
-                "r": 255,
-                "g": 255,
-                "b": 255,
-                "a": 0
-            }
-        },
-        "Desc_CrystalShard_C": {
-            "slug": "power-shard",
-            "icon": "desc-crystalshard-c",
-            "name": "Power Shard",
-            "description": "Power Slug mucus compressed into a solid crystal-like shard. \nIt radiates a strange power.",
-            "sinkPoints": 0,
-            "className": "Desc_CrystalShard_C",
-            "stackSize": 100,
-            "energyValue": 0.0,
-            "radioactiveDecay": 0.0,
-            "liquid": false,
-            "fluidColor": {
-                "r": 255,
-                "g": 255,
-                "b": 255,
-                "a": 0
-            }
-        },
-        "Desc_WAT1_C": {
-            "slug": "somersloop",
-            "icon": "desc-wat1-c",
-            "name": "Somersloop",
-            "description": "An odd alien object with a mind-bending, yet somehow familiar shape. It emits an unsettling energy.",
-            "sinkPoints": 0,
-            "className": "Desc_WAT1_C",
             "stackSize": 50,
             "energyValue": 0.0,
             "radioactiveDecay": 0.0,
@@ -25017,6 +25017,40 @@
             "minPower": 0,
             "maxPower": 1
         },
+        "Recipe_XmasWreath_C": {
+            "slug": "recipe-xmaswreath-c",
+            "name": "FICSMAS Wreath",
+            "className": "Recipe_XmasWreath_C",
+            "alternate": false,
+            "time": 60.0,
+            "inHand": false,
+            "forBuilding": false,
+            "inWorkshop": false,
+            "inMachine": true,
+            "manualTimeMultiplier": 1.0,
+            "ingredients": [
+                {
+                    "item": "Desc_XmasBranch_C",
+                    "amount": 15.0
+                },
+                {
+                    "item": "Desc_XmasBallCluster_C",
+                    "amount": 6.0
+                }
+            ],
+            "products": [
+                {
+                    "item": "Desc_XmasWreath_C",
+                    "amount": 2.0
+                }
+            ],
+            "producedIn": [
+                "Desc_AssemblerMk1_C"
+            ],
+            "isVariablePower": false,
+            "minPower": 0,
+            "maxPower": 1
+        },
         "Recipe_Snowball_C": {
             "slug": "recipe-snowball-c",
             "name": "Snowball",
@@ -25049,7 +25083,7 @@
         },
         "Recipe_WreathDecor_C": {
             "slug": "recipe-wreathdecor-c",
-            "name": "FICSMAS Wreath",
+            "name": "FICSMAS Decoration",
             "className": "Recipe_WreathDecor_C",
             "alternate": false,
             "time": 1.0,
@@ -25113,6 +25147,110 @@
             "minPower": 0,
             "maxPower": 1
         },
+        "Recipe_XmasBall3_C": {
+            "slug": "recipe-xmasball3-c",
+            "name": "Copper FICSMAS Ornament",
+            "className": "Recipe_XmasBall3_C",
+            "alternate": false,
+            "time": 12.0,
+            "inHand": false,
+            "forBuilding": false,
+            "inWorkshop": false,
+            "inMachine": true,
+            "manualTimeMultiplier": 1.0,
+            "ingredients": [
+                {
+                    "item": "Desc_XmasBall1_C",
+                    "amount": 2.0
+                },
+                {
+                    "item": "Desc_CopperIngot_C",
+                    "amount": 2.0
+                }
+            ],
+            "products": [
+                {
+                    "item": "Desc_XmasBall3_C",
+                    "amount": 1.0
+                }
+            ],
+            "producedIn": [
+                "Desc_FoundryMk1_C"
+            ],
+            "isVariablePower": false,
+            "minPower": 0,
+            "maxPower": 1
+        },
+        "Recipe_XmasBall4_C": {
+            "slug": "recipe-xmasball4-c",
+            "name": "Iron FICSMAS Ornament",
+            "className": "Recipe_XmasBall4_C",
+            "alternate": false,
+            "time": 12.0,
+            "inHand": false,
+            "forBuilding": false,
+            "inWorkshop": false,
+            "inMachine": true,
+            "manualTimeMultiplier": 1.0,
+            "ingredients": [
+                {
+                    "item": "Desc_XmasBall2_C",
+                    "amount": 3.0
+                },
+                {
+                    "item": "Desc_IronIngot_C",
+                    "amount": 3.0
+                }
+            ],
+            "products": [
+                {
+                    "item": "Desc_XmasBall4_C",
+                    "amount": 1.0
+                }
+            ],
+            "producedIn": [
+                "Desc_FoundryMk1_C"
+            ],
+            "isVariablePower": false,
+            "minPower": 0,
+            "maxPower": 1
+        },
+        "Recipe_SnowCannon_C": {
+            "slug": "recipe-snowcannon-c",
+            "name": "FICSMAS Snow Cannon",
+            "className": "Recipe_SnowCannon_C",
+            "alternate": false,
+            "time": 1.0,
+            "inHand": false,
+            "forBuilding": true,
+            "inWorkshop": false,
+            "inMachine": false,
+            "manualTimeMultiplier": 1.0,
+            "ingredients": [
+                {
+                    "item": "Desc_XmasBow_C",
+                    "amount": 10.0
+                },
+                {
+                    "item": "Desc_Snow_C",
+                    "amount": 100.0
+                },
+                {
+                    "item": "Desc_XmasBall3_C",
+                    "amount": 20.0
+                }
+            ],
+            "products": [
+                {
+                    "item": "Desc_SnowCannon_C",
+                    "amount": 1.0
+                }
+            ],
+            "producedIn": [],
+            "isVariablePower": false,
+            "minPower": 0,
+            "maxPower": 1
+        },
         "Recipe_SnowDispenser_C": {
             "slug": "recipe-snowdispenser-c",
             "name": "FICSMAS Snow Dispenser",
@@ -25134,8 +25272,8 @@
                     "amount": 100.0
                 },
                 {
-                    "item": "Desc_XmasWreath_C",
-                    "amount": 2.0
+                    "item": "Desc_XmasBall4_C",
+                    "amount": 20.0
                 }
             ],
             "products": [
@@ -25145,40 +25283,6 @@
                 }
             ],
             "producedIn": [],
-            "isVariablePower": false,
-            "minPower": 0,
-            "maxPower": 1
-        },
-        "Recipe_XmasWreath_C": {
-            "slug": "recipe-xmaswreath-c",
-            "name": "FICSMAS Decoration",
-            "className": "Recipe_XmasWreath_C",
-            "alternate": false,
-            "time": 60.0,
-            "inHand": false,
-            "forBuilding": false,
-            "inWorkshop": false,
-            "inMachine": true,
-            "manualTimeMultiplier": 1.0,
-            "ingredients": [
-                {
-                    "item": "Desc_XmasBranch_C",
-                    "amount": 15.0
-                },
-                {
-                    "item": "Desc_XmasBallCluster_C",
-                    "amount": 6.0
-                }
-            ],
-            "products": [
-                {
-                    "item": "Desc_XmasWreath_C",
-                    "amount": 2.0
-                }
-            ],
-            "producedIn": [
-                "Desc_AssemblerMk1_C"
-            ],
             "isVariablePower": false,
             "minPower": 0,
             "maxPower": 1
@@ -25309,74 +25413,6 @@
             "minPower": 0,
             "maxPower": 1
         },
-        "Recipe_XmasBall3_C": {
-            "slug": "recipe-xmasball3-c",
-            "name": "Copper FICSMAS Ornament",
-            "className": "Recipe_XmasBall3_C",
-            "alternate": false,
-            "time": 12.0,
-            "inHand": false,
-            "forBuilding": false,
-            "inWorkshop": false,
-            "inMachine": true,
-            "manualTimeMultiplier": 1.0,
-            "ingredients": [
-                {
-                    "item": "Desc_XmasBall1_C",
-                    "amount": 2.0
-                },
-                {
-                    "item": "Desc_CopperIngot_C",
-                    "amount": 2.0
-                }
-            ],
-            "products": [
-                {
-                    "item": "Desc_XmasBall3_C",
-                    "amount": 1.0
-                }
-            ],
-            "producedIn": [
-                "Desc_FoundryMk1_C"
-            ],
-            "isVariablePower": false,
-            "minPower": 0,
-            "maxPower": 1
-        },
-        "Recipe_XmasBall4_C": {
-            "slug": "recipe-xmasball4-c",
-            "name": "Iron FICSMAS Ornament",
-            "className": "Recipe_XmasBall4_C",
-            "alternate": false,
-            "time": 12.0,
-            "inHand": false,
-            "forBuilding": false,
-            "inWorkshop": false,
-            "inMachine": true,
-            "manualTimeMultiplier": 1.0,
-            "ingredients": [
-                {
-                    "item": "Desc_XmasBall2_C",
-                    "amount": 3.0
-                },
-                {
-                    "item": "Desc_IronIngot_C",
-                    "amount": 3.0
-                }
-            ],
-            "products": [
-                {
-                    "item": "Desc_XmasBall4_C",
-                    "amount": 1.0
-                }
-            ],
-            "producedIn": [
-                "Desc_FoundryMk1_C"
-            ],
-            "isVariablePower": false,
-            "minPower": 0,
-            "maxPower": 1
-        },
         "Recipe_TreeGiftProducer_C": {
             "slug": "recipe-treegiftproducer-c",
             "name": "FICSMAS Gift Tree",
@@ -25398,12 +25434,12 @@
                     "amount": 100.0
                 },
                 {
-                    "item": "Desc_XmasBall3_C",
-                    "amount": 20.0
+                    "item": "Desc_XmasBall1_C",
+                    "amount": 30.0
                 },
                 {
-                    "item": "Desc_XmasBall4_C",
-                    "amount": 20.0
+                    "item": "Desc_XmasBall2_C",
+                    "amount": 30.0
                 }
             ],
             "products": [
@@ -25419,7 +25455,7 @@
         },
         "Recipe_Snowman_C": {
             "slug": "recipe-snowman-c",
-            "name": "Snowman",
+            "name": "FICSMAS Snowman",
             "className": "Recipe_Snowman_C",
             "alternate": false,
             "time": 1.0,
@@ -25463,7 +25499,7 @@
         },
         "Recipe_Snow_C": {
             "slug": "recipe-snow-c",
-            "name": "Actual Snow",
+            "name": "FICSMAS Actual Snow",
             "className": "Recipe_Snow_C",
             "alternate": false,
             "time": 12.0,
@@ -25559,7 +25595,7 @@
         },
         "Recipe_CandyCaneDecor_C": {
             "slug": "recipe-candycanedecor-c",
-            "name": "Candy Cane",
+            "name": "FICSMAS Candy Cane",
             "className": "Recipe_CandyCaneDecor_C",
             "alternate": false,
             "time": 1.0,
@@ -33546,6 +33582,25 @@
             "mam": false,
             "alternate": false
         },
+        "Schematic_Helmet_Ficsmas_C": {
+            "className": "Schematic_Helmet_Ficsmas_C",
+            "type": "EST_Customization",
+            "name": "FICSMAS Hat",
+            "slug": "ficsmas-hat",
+            "icon": "schematic-helmet-ficsmas-c",
+            "cost": [],
+            "unlock": {
+                "recipes": [],
+                "scannerResources": [],
+                "inventorySlots": 0,
+                "giveItems": []
+            },
+            "requiredSchematics": [],
+            "tier": 0,
+            "time": 600.0,
+            "mam": false,
+            "alternate": false
+        },
         "Schematic_Helmet_Default_C": {
             "className": "Schematic_Helmet_Default_C",
             "type": "EST_Customization",
@@ -33660,6 +33715,44 @@
             "mam": false,
             "alternate": false
         },
+        "Schematic_Trinket_FicsmasStar_C": {
+            "className": "Schematic_Trinket_FicsmasStar_C",
+            "type": "EST_Customization",
+            "name": "Wonder Star Trinket",
+            "slug": "wonder-star-trinket",
+            "icon": "schematic-trinket-ficsmasstar-c",
+            "cost": [],
+            "unlock": {
+                "recipes": [],
+                "scannerResources": [],
+                "inventorySlots": 0,
+                "giveItems": []
+            },
+            "requiredSchematics": [],
+            "tier": 0,
+            "time": 600.0,
+            "mam": false,
+            "alternate": false
+        },
+        "Schematic_Trinket_FicsmasBall_C": {
+            "className": "Schematic_Trinket_FicsmasBall_C",
+            "type": "EST_Customization",
+            "name": "Red Ornament Trinket",
+            "slug": "red-ornament-trinket",
+            "icon": "schematic-trinket-ficsmasball-c",
+            "cost": [],
+            "unlock": {
+                "recipes": [],
+                "scannerResources": [],
+                "inventorySlots": 0,
+                "giveItems": []
+            },
+            "requiredSchematics": [],
+            "tier": 0,
+            "time": 600.0,
+            "mam": false,
+            "alternate": false
+        },
         "Schematic_Trinket_FicsitCoupon_C": {
             "className": "Schematic_Trinket_FicsitCoupon_C",
             "type": "EST_Customization",
@@ -33704,6 +33797,25 @@
             "name": "Checkit Trinket",
             "slug": "checkit-trinket",
             "icon": "schematic-trinket-checkit-c",
+            "cost": [],
+            "unlock": {
+                "recipes": [],
+                "scannerResources": [],
+                "inventorySlots": 0,
+                "giveItems": []
+            },
+            "requiredSchematics": [],
+            "tier": 0,
+            "time": 600.0,
+            "mam": false,
+            "alternate": false
+        },
+        "Schematic_Trinket_AirFreshener_C": {
+            "className": "Schematic_Trinket_AirFreshener_C",
+            "type": "EST_Customization",
+            "name": "Fresh Factory Trinket",
+            "slug": "fresh-factory-trinket",
+            "icon": "schematic-trinket-airfreshener-c",
             "cost": [],
             "unlock": {
                 "recipes": [],
@@ -36100,6 +36212,34 @@
             "mam": true,
             "alternate": false
         },
+        "Research_Mycelia_7_C": {
+            "className": "Research_Mycelia_7_C",
+            "type": "EST_MAM",
+            "name": "Expanded Toolbelt",
+            "slug": "expanded-toolbelt",
+            "icon": "research-mycelia-7-c",
+            "cost": [
+                {
+                    "item": "Desc_Fabric_C",
+                    "amount": 50.0
+                },
+                {
+                    "item": "Desc_Rotor_C",
+                    "amount": 100.0
+                }
+            ],
+            "unlock": {
+                "recipes": [],
+                "scannerResources": [],
+                "inventorySlots": 0,
+                "giveItems": []
+            },
+            "requiredSchematics": [],
+            "tier": 3,
+            "time": 3.0,
+            "mam": true,
+            "alternate": false
+        },
         "Research_Nutrients_2_C": {
             "className": "Research_Nutrients_2_C",
             "type": "EST_MAM",
@@ -36296,34 +36436,6 @@
                 "recipes": [
                     "Recipe_Fabric_C"
                 ],
-                "scannerResources": [],
-                "inventorySlots": 0,
-                "giveItems": []
-            },
-            "requiredSchematics": [],
-            "tier": 3,
-            "time": 3.0,
-            "mam": true,
-            "alternate": false
-        },
-        "Research_Mycelia_7_C": {
-            "className": "Research_Mycelia_7_C",
-            "type": "EST_MAM",
-            "name": "Expanded Toolbelt",
-            "slug": "expanded-toolbelt",
-            "icon": "research-mycelia-7-c",
-            "cost": [
-                {
-                    "item": "Desc_Fabric_C",
-                    "amount": 50.0
-                },
-                {
-                    "item": "Desc_Rotor_C",
-                    "amount": 100.0
-                }
-            ],
-            "unlock": {
-                "recipes": [],
                 "scannerResources": [],
                 "inventorySlots": 0,
                 "giveItems": []
@@ -37120,11 +37232,11 @@
             "icon": "research-xmas-4-c",
             "cost": [
                 {
-                    "item": "Desc_XmasStar_C",
+                    "item": "Desc_XmasDataCartridge4_C",
                     "amount": 1.0
                 },
                 {
-                    "item": "Desc_XmasWreath_C",
+                    "item": "Desc_XmasBranch_C",
                     "amount": 200.0
                 },
                 {
@@ -37133,7 +37245,9 @@
                 }
             ],
             "unlock": {
-                "recipes": [],
+                "recipes": [
+                    "Recipe_XmasWreath_C"
+                ],
                 "scannerResources": [],
                 "inventorySlots": 0,
                 "giveItems": []
@@ -37181,8 +37295,8 @@
         "Research_XMas_4-1_C": {
             "className": "Research_XMas_4-1_C",
             "type": "EST_MAM",
-            "name": "FICSMAS Wreath",
-            "slug": "ficsmas-wreath",
+            "name": "FICSMAS Decoration",
+            "slug": "ficsmas-decoration",
             "icon": "research-xmas-4-1-c",
             "cost": [
                 {
@@ -37221,20 +37335,27 @@
             "icon": "research-xmas-3-c",
             "cost": [
                 {
-                    "item": "Desc_XmasBallCluster_C",
+                    "item": "Desc_XmasDataCartridge3_C",
                     "amount": 1.0
                 },
                 {
-                    "item": "Desc_XmasBall3_C",
+                    "item": "Desc_XmasBall1_C",
                     "amount": 200.0
                 },
                 {
-                    "item": "Desc_XmasBall4_C",
+                    "item": "Desc_XmasBall2_C",
                     "amount": 200.0
+                },
+                {
+                    "item": "Desc_Gift_C",
+                    "amount": 100.0
                 }
             ],
             "unlock": {
-                "recipes": [],
+                "recipes": [
+                    "Recipe_XmasBall3_C",
+                    "Recipe_XmasBall4_C"
+                ],
                 "scannerResources": [],
                 "inventorySlots": 0,
                 "giveItems": []
@@ -37253,22 +37374,26 @@
             "icon": "research-xmas-3-2-c",
             "cost": [
                 {
-                    "item": "Desc_XmasBallCluster_C",
-                    "amount": 10.0
-                },
-                {
                     "item": "Desc_Snow_C",
                     "amount": 100.0
                 },
                 {
-                    "item": "Desc_XmasBranch_C",
-                    "amount": 500.0
+                    "item": "Desc_XmasBall3_C",
+                    "amount": 200.0
+                },
+                {
+                    "item": "Desc_XmasBall4_C",
+                    "amount": 200.0
+                },
+                {
+                    "item": "Desc_CandyCane_C",
+                    "amount": 200.0
                 }
             ],
             "unlock": {
                 "recipes": [
                     "Recipe_SnowDispenser_C",
-                    "Recipe_XmasWreath_C"
+                    "Recipe_SnowCannon_C"
                 ],
                 "scannerResources": [],
                 "inventorySlots": 0,
@@ -37327,7 +37452,7 @@
             "icon": "research-xmas-2-c",
             "cost": [
                 {
-                    "item": "Desc_XmasBall1_C",
+                    "item": "Desc_XmasDataCartridge2_C",
                     "amount": 1.0
                 },
                 {
@@ -37376,9 +37501,7 @@
             ],
             "unlock": {
                 "recipes": [
-                    "Recipe_TreeGiftProducer_C",
-                    "Recipe_XmasBall3_C",
-                    "Recipe_XmasBall4_C"
+                    "Recipe_TreeGiftProducer_C"
                 ],
                 "scannerResources": [],
                 "inventorySlots": 0,
@@ -37429,8 +37552,8 @@
             "icon": "research-xmas-1-c",
             "cost": [
                 {
-                    "item": "Desc_Gift_C",
-                    "amount": 100.0
+                    "item": "Desc_XmasDataCartridge1_C",
+                    "amount": 1.0
                 }
             ],
             "unlock": {
@@ -42651,22 +42774,22 @@
             },
             "speed": 1
         },
-        "Desc_Coal_C": {
-            "item": "Desc_Coal_C",
-            "pingColor": {
-                "r": 255,
-                "g": 255,
-                "b": 255,
-                "a": 0
-            },
-            "speed": 1
-        },
         "Desc_Water_C": {
             "item": "Desc_Water_C",
             "pingColor": {
                 "r": 122,
                 "g": 176,
                 "b": 212,
+                "a": 0
+            },
+            "speed": 1
+        },
+        "Desc_Coal_C": {
+            "item": "Desc_Coal_C",
+            "pingColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
                 "a": 0
             },
             "speed": 1
@@ -45252,7 +45375,7 @@
             "slug": "drone-port",
             "icon": "desc-dronestation-c",
             "name": "Drone Port",
-            "description": "Functions as home Port to a single Drone, which transports available input back and forth between its home Port and destination Ports.\nDrone Ports can have one other Port assigned as their transport destination.\n\nThe Drone Port interface provides delivery details and allows management of Port connections.",
+            "description": "Functions as home Port to a single Drone, which transports available input back and forth between its home Port and destination Port.\nDrone Ports can have one other Port assigned as their transport destination.\n\nThe Drone Port interface provides delivery details and allows management of Port connections.",
             "className": "Desc_DroneStation_C",
             "categories": [],
             "buildMenuPriority": 0,
@@ -50227,11 +50350,30 @@
             }
         },
         "Desc_WreathDecor_C": {
-            "slug": "ficsmas-wreath",
+            "slug": "ficsmas-decoration",
             "icon": "desc-wreathdecor-c",
-            "name": "FICSMAS Wreath",
-            "description": "Can be attached to Walls. Pretty.",
+            "name": "FICSMAS Decoration",
+            "description": "A wreath woven from dead plants to bring that holiday spirit to your Walls.",
             "className": "Desc_WreathDecor_C",
+            "categories": [],
+            "buildMenuPriority": 0,
+            "metadata": {
+                "powerConsumption": 0,
+                "powerConsumptionExponent": 0.0,
+                "manufacturingSpeed": 0
+            },
+            "size": {
+                "width": 0,
+                "height": 0,
+                "length": 0
+            }
+        },
+        "Desc_SnowCannon_C": {
+            "slug": "ficsmas-snow-cannon",
+            "icon": "desc-snowcannon-c",
+            "name": "FICSMAS Snow Cannon",
+            "description": "For those who want to aggressively celebrate the holidays.",
+            "className": "Desc_SnowCannon_C",
             "categories": [],
             "buildMenuPriority": 0,
             "metadata": {
@@ -50249,7 +50391,7 @@
             "slug": "ficsmas-snow-dispenser",
             "icon": "desc-snowdispenser-c",
             "name": "FICSMAS Snow Dispenser",
-            "description": "Makes it snow!\nAttaches to Walls and ceilings.",
+            "description": "Dispenses a mixture of water, air, and liquid nitrogen, practically identical to actual snow. Can be attached to Walls and ceilings.",
             "className": "Desc_SnowDispenser_C",
             "categories": [],
             "buildMenuPriority": 0,
@@ -50268,7 +50410,7 @@
             "slug": "ficsmas-power-light",
             "icon": "desc-xmasslights-c",
             "name": "FICSMAS Power Light",
-            "description": "Used to connect Power Poles, Power Generators and factory buildings. Has pretty lights to boot!",
+            "description": "A more festive take on the Power Line.",
             "className": "Desc_xmassLights_C",
             "categories": [],
             "buildMenuPriority": 0,
@@ -50287,7 +50429,7 @@
             "slug": "ficsmas-gift-tree",
             "icon": "desc-treegiftproducer-c",
             "name": "FICSMAS Gift Tree",
-            "description": "It comes bearing gifts.\nProduces 15 Gifts per minute.",
+            "description": "A festively disguised production building. Reminder: Nothing is ever truly free.\nProduces 15 Gifts per minute.",
             "className": "Desc_TreeGiftProducer_C",
             "categories": [],
             "buildMenuPriority": 0,
@@ -50303,16 +50445,16 @@
             }
         },
         "Desc_Snowman_C": {
-            "slug": "snowman",
+            "slug": "ficsmas-snowman",
             "icon": "desc-snowman-c",
-            "name": "Snowman",
-            "description": "Do you wanna build it?\nYou will finally have a friend!\n\n*Disclaimer: It is not actually your friend.",
+            "name": "FICSMAS Snowman",
+            "description": "The closest thing you'll get to having a friend.",
             "className": "Desc_Snowman_C",
             "categories": [],
             "buildMenuPriority": 0,
             "metadata": {
                 "powerConsumption": 0,
-                "powerConsumptionExponent": 1.6,
+                "powerConsumptionExponent": 0.0,
                 "manufacturingSpeed": 0
             },
             "size": {
@@ -50325,7 +50467,7 @@
             "slug": "giant-ficsmas-tree",
             "icon": "desc-xmasstree-c",
             "name": "Giant FICSMAS Tree",
-            "description": "This special-delivery gigantic FICSMAS Tree can be decorated by progressing through the FICSMAS Holiday Event Tree in the MAM.",
+            "description": "Decorate this unique one-of-a-kind tree by progressing through the FICSMAS Holiday Event in the MAM.",
             "className": "Desc_XMassTree_C",
             "categories": [],
             "buildMenuPriority": 0,
@@ -50341,16 +50483,16 @@
             }
         },
         "Desc_CandyCaneDecor_C": {
-            "slug": "candy-cane",
+            "slug": "ficsmas-candy-cane",
             "icon": "desc-candycanedecor-c",
-            "name": "Candy Cane",
-            "description": "A giant, delicious Candy Cane.\n\n*Warning: Not actually delicious... or edible, for that matter.",
+            "name": "FICSMAS Candy Cane",
+            "description": "A giant Candy Cane decoration.\n\n- Not for consumption.\n- Do not inhale close to it without appropriate protection.\n- Do not put in your eyes.\n- Keep away from overly curious wildlife.",
             "className": "Desc_CandyCaneDecor_C",
             "categories": [],
             "buildMenuPriority": 0,
             "metadata": {
                 "powerConsumption": 0,
-                "powerConsumptionExponent": 1.6,
+                "powerConsumptionExponent": 0.0,
                 "manufacturingSpeed": 0
             },
             "size": {
