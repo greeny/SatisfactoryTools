@@ -4,6 +4,7 @@ export interface IItemSchema
 {
 
 	slug: string;
+	icon?: string;
 	name: string;
 	sinkPoints: number;
 	description: string;

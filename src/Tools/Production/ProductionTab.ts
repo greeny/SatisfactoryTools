@@ -95,7 +95,16 @@ export class ProductionTab
 
 		const calc = () => {
 			const apiRequest: IProductionDataApiRequest = angular.copy(this.data.request) as IProductionDataApiRequest;
-			apiRequest.gameVersion = this.version === '0.8' ? '0.8.0' : '1.0.0';
+			switch (this.version) {
+				case '0.8':
+					apiRequest.gameVersion = '0.8.0';
+					break;
+				case '1.0-ficsmas':
+					apiRequest.gameVersion = '1.0.0-ficsmas';
+					break;
+				default:
+					apiRequest.gameVersion = '1.0.0';
+			}
 
 			const blockedMachines = apiRequest.blockedMachines || [];
 			const allowedAlts: string[] = [];

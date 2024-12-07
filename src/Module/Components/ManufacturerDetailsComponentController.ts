@@ -19,6 +19,7 @@ export class ManufacturerDetailsComponentController
 		if (this.building.metadata.powerConsumption && this.building.metadata.powerConsumptionExponent) {
 			return Numbers.round(this.building.metadata.powerConsumption * Math.pow(this.options.overclock / 100, this.building.metadata.powerConsumptionExponent));
 		}
+		return 0;
 	}
 
 	public get minPowerConsumption(): number|undefined

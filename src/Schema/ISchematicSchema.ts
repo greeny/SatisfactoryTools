@@ -7,6 +7,7 @@ export interface ISchematicSchema
 	type: string;
 	name: string;
 	slug: string;
+	icon?: string;
 	cost: IItemAmountSchema[];
 	unlock: ISchematicUnlockSchema;
 	requiredSchematics: string[];

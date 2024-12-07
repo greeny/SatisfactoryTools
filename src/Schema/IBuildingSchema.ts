@@ -5,6 +5,7 @@ export interface IBuildingSchema
 {
 
 	slug: string;
+	icon?: string;
 	name: string;
 	description: string;
 	className: string;

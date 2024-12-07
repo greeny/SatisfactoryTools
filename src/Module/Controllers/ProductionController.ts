@@ -52,7 +52,14 @@ export class ProductionController
 		private readonly $rootScope: IRootScope,
 	)
 	{
-		this.storageKey = $rootScope.version === '1.0' ? 'production1' : 'tmpProduction';
+		if ($rootScope.version === '1.0') {
+			this.storageKey = 'production1';
+		} else if ($rootScope.version === '1.0-ficsmas') {
+			this.storageKey = 'production-ficsmas';
+		} else {
+			this.storageKey = 'tmpProduction';
+		}
+
 		scope.$timeout = $timeout;
 		scope.saveState = () => {
 			this.saveState();
@@ -63,7 +70,7 @@ export class ProductionController
 			if ('share' in query) {
 				axios({
 					method: 'GET',
-					url: 'https://api.satisfactorytools.com/v1/share/' + encodeURIComponent(query.share),
+					url: 'https://api.satisfactorytools.com/v2/share/' + encodeURIComponent(query.share),
 				}).then((response) => {
 					$timeout(0).then(() => {
 						const tabData: IProductionData = response.data.data;
