@@ -10,8 +10,6 @@ import {Numbers} from '@src/Utils/Numbers';
 export class RecipeNode extends GraphNode
 {
 
-	public readonly DELTA = 1e-8;
-
 	public ingredients: ResourceAmount[] = [];
 	public products: ResourceAmount[] = [];
 	public machineData: MachineGroup;
@@ -81,7 +79,7 @@ export class RecipeNode extends GraphNode
 
 	public getVisNode(): IVisNode
 	{
-		const alpha = Math.abs(this.getAmount() - this.completed) < this.DELTA
+		const alpha = (Math.round(this.getAmount() - this.completed) <= 0) || this.userIgnore
 			? '0.25'
 			: '1.0';
 

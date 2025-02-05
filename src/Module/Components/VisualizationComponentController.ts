@@ -288,7 +288,11 @@ export class VisualizationComponentController implements IController
 				(event.nodes as number[]).forEach((nodeId) => {
 					const node = this.result.graph.nodes.find((graphNode) => graphNode.id === nodeId);
 					if (node) {
-						this.result.graph.highlight(node);
+						if (event.event?.srcEvent?.ctrlKey) {
+							this.result.graph.toogleNode(node);
+						} else {
+							this.result.graph.highlight(node);
+						}
 						this.updateData(this.result);
 					}
 				});

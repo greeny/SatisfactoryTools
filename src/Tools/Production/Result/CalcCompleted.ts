@@ -49,7 +49,7 @@ export class CalcCompleted {
 				.map((x) => x.itemAmount.getAvailable())
 				.reduce((acc, sum) => acc + sum, 0));
 
-			node.visible = node.isAvailable()
+			node.visible = node.highlighted !== 'unrelated'
 				&& (this.graph.settings.showCompleted
 					|| output > 0
 					|| node instanceof ProductNode

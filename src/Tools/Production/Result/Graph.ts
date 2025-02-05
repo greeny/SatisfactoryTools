@@ -19,6 +19,7 @@ export class Graph
 	public edges: GraphEdge[] = [];
 	public completedMap: CompletedMap = { };
 	public highlightedNode?: GraphNode;
+	public highlightedLimit?: number;
 
 	private lastId = 1;
 	private outputToNodeMap?: ItemToNodeMap;
@@ -45,6 +46,10 @@ export class Graph
 
 	public highlight(node: GraphNode) {
 		new CalcHighlight(this).set(node);
+	}
+
+	public toogleNode(node: GraphNode) {
+		new CalcHighlight(this).toggle(node);
 	}
 
 	public generateEdges(completed: IProductionDataRequestCompleted[]): void

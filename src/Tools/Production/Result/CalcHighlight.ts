@@ -9,23 +9,31 @@ export class CalcHighlight extends CalcCompleted {
 	public set(node: GraphNode) {
 		if (this.graph.highlightedNode === node) {
 			this.graph.highlightedNode = undefined;
+			this.graph.highlightedLimit = undefined;
 		} else {
 			this.graph.highlightedNode = node;
+
+			if (this.graph.highlightedNode instanceof RecipeNode) {
+				const recipeNode = (node as RecipeNode);
+				this.graph.highlightedLimit = recipeNode.limit || recipeNode.recipeData.amount;
+			}
 		}
 
 		this.update();
 	}
 
-	public update() {
-		let limit = 0;
-		if (this.graph.highlightedNode instanceof RecipeNode) {
-			limit = this.graph.highlightedNode.limit || this.graph.highlightedNode.recipeData.amount;
-		}
+	public toggle(node: GraphNode) {
+		node.userIgnore = !node.userIgnore;
 
+		this.update();
+	}
+
+	public update() {
 		super.resetConsumed();
 
 		if (!this.graph.highlightedNode) {
 			for (const n of this.graph.nodes) {
+				n.userIgnore = false;
 				n.highlighted = undefined;
 			}
 		} else {
@@ -43,6 +51,8 @@ export class CalcHighlight extends CalcCompleted {
 
 			if (this.graph.settings.showHighlightLimits) {
 				if (this.graph.highlightedNode instanceof RecipeNode) {
+					const recipeNode = this.graph.highlightedNode as RecipeNode;
+					const limit = this.graph.highlightedLimit || recipeNode.limit || 0;
 					this.setNodeLimit(this.graph.highlightedNode, limit);
 				}
 
@@ -50,7 +60,9 @@ export class CalcHighlight extends CalcCompleted {
 					for (const node of this.graph.nodes) {
 						if (node instanceof RecipeNode) {
 							const recipeNode = node as RecipeNode;
-							this.setNodeLimit(node, node.recipeData.amount);
+							if (recipeNode.highlighted === 'dependent') {
+								this.setNodeLimit(node, node.recipeData.amount);
+							}
 						}
 					}
 				}
@@ -109,7 +121,7 @@ export class CalcHighlight extends CalcCompleted {
 
 	private setNodeLimit(node: RecipeNode, limit: number): void {
 		const diff = limit - (node.limit || 0);
-		if (Numbers.floor(diff) <= 0) {
+		if (Numbers.floor(diff) <= 0 || node.userIgnore) {
 			return;
 		}
 
@@ -153,7 +165,7 @@ export class CalcHighlight extends CalcCompleted {
 				let outputAmount = product.amount * multiplier;
 
 				for (const edge of node.getEdgesOut(output.resource.className)) {
-					if (!edge.to.isAvailable()) {
+					if (edge.to.highlighted !== 'product') {
 						continue;
 					}
 
@@ -194,7 +206,7 @@ export class CalcHighlight extends CalcCompleted {
 			const inputLimit = inputUsed * node.recipeData.amount;
 
 			this.setNodeLimit(node, inputLimit);
-		} else if (node.highlighted === 'dependency') {
+		} else if (node.highlighted !== 'unrelated') {
 			const outputsUsed = node.getOutputs().map((output) => {
 				const limit = node
 					.getEdgesOut(output.resource.className)

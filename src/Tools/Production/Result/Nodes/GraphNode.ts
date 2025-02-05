@@ -9,6 +9,7 @@ export abstract class GraphNode
 
 	public id: number;
 	public visible: boolean = true;
+	public userIgnore: boolean = false;
 	public highlighted?: HighlightState;
 
 	public connectedEdges: GraphEdge[] = [];
@@ -40,7 +41,7 @@ export abstract class GraphNode
 	}
 
 	public isAvailable(): boolean {
-		return this.highlighted !== 'unrelated';
+		return this.highlighted !== 'unrelated' && !this.userIgnore;
 	}
 
 	protected formatText(text: string, bold: boolean = true)
