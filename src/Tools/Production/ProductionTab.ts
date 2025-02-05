@@ -6,13 +6,14 @@ import axios from 'axios';
 import {Strings} from '@src/Utils/Strings';
 import {IItemSchema} from '@src/Schema/IItemSchema';
 import {Callbacks} from '@src/Utils/Callbacks';
-import {IProductionData, IProductionDataApiRequest, IProductionDataRequestInput, IProductionDataRequestItem} from '@src/Tools/Production/IProductionData';
+import {IProductionData, IProductionDataApiRequest, IProductionDataRequestCompleted, IProductionDataRequestInput, IProductionDataRequestItem} from '@src/Tools/Production/IProductionData';
 import {ResultStatus} from '@src/Tools/Production/ResultStatus';
 import {Solver} from '@src/Solver/Solver';
 import {ProductionResult} from '@src/Tools/Production/Result/ProductionResult';
 import {ProductionResultFactory} from '@src/Tools/Production/Result/ProductionResultFactory';
 import {DataProvider} from '@src/Data/DataProvider';
 import {IRecipeSchema} from '@src/Schema/IRecipeSchema';
+import { GraphSettings } from './Result/Graph';
 
 export class ProductionTab
 {
@@ -33,6 +34,13 @@ export class ProductionTab
 		powerExpanded: {},
 		itemsExpanded: {},
 		overviewCollapsed: {},
+	};
+
+	public graphSettings: GraphSettings = {
+		applyCompleted: true,
+		showCompleted: true,
+		showHighlightDependents: true,
+		showHighlightLimits: true,
 	};
 
 	public tab: string = 'production';
@@ -138,7 +146,10 @@ export class ProductionTab
 			}
 			apiRequest.blockedRecipes = blockedRecipes;
 
+			const completed = apiRequest.completed;
+
 			delete apiRequest.blockedMachines;
+			delete apiRequest.completed;
 
 			Solver.solveProduction(apiRequest, (result) => {
 				const res = () => {
@@ -158,8 +169,10 @@ export class ProductionTab
 						return;
 					}
 
+					apiRequest.completed = completed;
+
 					const factory = new ProductionResultFactory;
-					this.resultNew = factory.create(apiRequest, result, DataProvider.get());
+					this.resultNew = factory.create(this.graphSettings, apiRequest, result, DataProvider.get());
 					this.resultStatus = ResultStatus.RESULT;
 				};
 
@@ -196,6 +209,7 @@ export class ProductionTab
 				sinkableResources: [],
 				production: [],
 				input: [],
+				completed: [],
 				resourceMax: angular.copy(Data.resourceAmounts),
 				resourceWeight: angular.copy(Data.resourceWeights),
 			},
@@ -338,6 +352,44 @@ export class ProductionTab
 		}
 	}
 
+	public addEmptyCompleted(): void
+	{
+		this.addCompletedItem({
+			recipe: null,
+			amount: 10,
+		});
+	}
+
+	public addCompletedItem(item: IProductionDataRequestCompleted): void
+	{
+		this.data.request.completed = this.data.request.completed || [];
+		this.data.request.completed.push(item);
+	}
+
+	public cloneCompleted(item: IProductionDataRequestCompleted): void
+	{
+		this.data.request.completed = this.data.request.completed || [];
+		this.data.request.completed.push({
+			recipe: item.recipe,
+			amount: item.amount,
+		});
+	}
+
+	public clearCompleted(): void
+	{
+		this.data.request.completed = [];
+		this.addEmptyCompleted();
+	}
+
+	public removeCompleted(item: IProductionDataRequestCompleted): void
+	{
+		this.data.request.completed = this.data.request.completed || [];
+		const index = this.data.request.completed.indexOf(item);
+		if (index in this.data.request.completed) {
+			this.data.request.completed.splice(index, 1);
+		}
+	}
+
 	public setSinkableResourcesSort(sort: string)
 	{
 		if (this.state.sinkableResourcesSortBy === sort) {
@@ -427,6 +479,22 @@ export class ProductionTab
 		} else {
 			this.data.request.blockedMachines.splice(index, 1);
 		}
+	}
+
+	public toggleApplyCompleted(): void {
+		this.graphSettings.applyCompleted = !this.graphSettings.applyCompleted;
+	}
+
+	public toggleShowCompleted(): void {
+		this.graphSettings.showCompleted = !this.graphSettings.showCompleted;
+	}
+
+	public toggleHighlightDependents(): void {
+		this.graphSettings.showHighlightDependents = !this.graphSettings.showHighlightDependents;
+	}
+
+	public toggleHighlightLimits(): void {
+		this.graphSettings.showHighlightLimits = !this.graphSettings.showHighlightLimits;
 	}
 
 	public recipeMachineDisabled(recipe: IRecipeSchema): boolean

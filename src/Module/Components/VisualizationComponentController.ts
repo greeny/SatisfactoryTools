@@ -5,18 +5,20 @@ import cytoscape from 'cytoscape';
 import {IVisNode} from '@src/Tools/Production/Result/IVisNode';
 import {IVisEdge} from '@src/Tools/Production/Result/IVisEdge';
 import {IElkGraph} from '@src/Solver/IElkGraph';
-import {Strings} from '@src/Utils/Strings';
-import model from '@src/Data/Model';
 import {ProductionResult} from '@src/Tools/Production/Result/ProductionResult';
+import {GraphSettings} from '@src/Tools/Production/Result/Graph';
 
 export class VisualizationComponentController implements IController
 {
 
 	public result: ProductionResult;
+	public settings: GraphSettings;
 
 	public static $inject = ['$element', '$scope', '$timeout'];
 
-	private unregisterWatcherCallback: () => void;
+	private unregisterResultWatcher: () => void;
+	private unregisterSettingsWatcher: () => void;
+
 	private network: Network;
 	private fitted: boolean = false;
 
@@ -25,16 +27,26 @@ export class VisualizationComponentController implements IController
 
 	public $onInit(): void
 	{
-		this.unregisterWatcherCallback = this.$scope.$watch(() => {
+		this.unregisterResultWatcher = this.$scope.$watch(() => {
 			return this.result;
-		}, (newValue) => {
-			this.updateData(newValue);
+		}, (data) => {
+			this.updateData(data);
 		});
+
+		this.unregisterSettingsWatcher = this.$scope.$watch(() => {
+			return this.settings;
+		}, (data) => {
+			if (this.result) {
+				this.result.graph.setSettings(data);
+				this.updateData(this.result);
+			}
+		}, true);
 	}
 
 	public $onDestroy(): void
 	{
-		this.unregisterWatcherCallback();
+		this.unregisterResultWatcher();
+		this.unregisterSettingsWatcher();
 	}
 
 	public useCytoscape(result: ProductionResult): void
@@ -112,10 +124,16 @@ export class VisualizationComponentController implements IController
 		const edges = new DataSet<IVisEdge>();
 
 		for (const node of result.graph.nodes) {
-			nodes.add(node.getVisNode());
+			if (node.visible) {
+				nodes.add(node.getVisNode());
+			}
 		}
 
 		for (const edge of result.graph.edges) {
+			if (!edge.to.visible || !edge.from.visible) {
+				continue
+			}
+
 			const smooth: any = {
 				enabled: false,
 			};
@@ -130,7 +148,7 @@ export class VisualizationComponentController implements IController
 				id: edge.id,
 				from: edge.from.id,
 				to: edge.to.id,
-				label: model.getItem(edge.itemAmount.item).prototype.name + '\n' + Strings.formatNumber(edge.itemAmount.amount) + ' / min',
+				label: edge.getText(),
 				color: {
 					color: 'rgba(105, 125, 145, 1)',
 					highlight: 'rgba(134, 151, 167, 1)',
@@ -219,7 +237,7 @@ export class VisualizationComponentController implements IController
 
 	private drawVisualisation(nodes: DataSet<IVisNode>, edges: DataSet<IVisEdge>): Network
 	{
-		return new Network(this.$element[0], {
+		const network = new Network(this.$element[0], {
 			nodes: nodes,
 			edges: edges,
 		}, {
@@ -264,6 +282,20 @@ export class VisualizationComponentController implements IController
 				tooltipDelay: 0,
 			},
 		});
+
+		network.on('doubleClick', (event) => {
+			if (event.nodes?.length) {
+				(event.nodes as number[]).forEach((nodeId) => {
+					const node = this.result.graph.nodes.find((graphNode) => graphNode.id === nodeId);
+					if (node) {
+						this.result.graph.highlight(node);
+						this.updateData(this.result);
+					}
+				});
+			}
+		});
+
+		return network;
 	}
 
 }
