@@ -10,6 +10,7 @@ export interface GraphSettings {
 	showCompleted: boolean,
 	showHighlightDependents: boolean,
 	showHighlightLimits: boolean,
+	showDisabledNodes: boolean,
 }
 
 export class Graph

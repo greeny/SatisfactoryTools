@@ -50,6 +50,7 @@ export class CalcCompleted {
 				.reduce((acc, sum) => acc + sum, 0));
 
 			node.visible = node.highlighted !== 'unrelated'
+				&& (this.graph.settings.showDisabledNodes || !node.userIgnore)
 				&& (this.graph.settings.showCompleted
 					|| output > 0
 					|| node instanceof ProductNode

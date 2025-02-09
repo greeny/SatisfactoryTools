@@ -41,6 +41,7 @@ export class ProductionTab
 		showCompleted: true,
 		showHighlightDependents: true,
 		showHighlightLimits: true,
+		showDisabledNodes: true,
 	};
 
 	public tab: string = 'production';
@@ -495,6 +496,10 @@ export class ProductionTab
 
 	public toggleHighlightLimits(): void {
 		this.graphSettings.showHighlightLimits = !this.graphSettings.showHighlightLimits;
+	}
+
+	public toggleShowDisabledNodes(): void {
+		this.graphSettings.showDisabledNodes = !this.graphSettings.showDisabledNodes;
 	}
 
 	public recipeMachineDisabled(recipe: IRecipeSchema): boolean

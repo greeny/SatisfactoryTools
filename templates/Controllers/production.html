@@ -952,6 +952,17 @@
 							</span>
 						</td>
 					</tr>
+					<tr ng-click="ctrl.tab.toggleShowDisabledNodes()">
+						<td>
+							<span class="fas fa-check-square" ng-show="ctrl.tab.graphSettings.showDisabledNodes"></span>
+							<span class="fas fa-square" ng-show="!ctrl.tab.graphSettings.showDisabledNodes"></span>
+						</td>
+						<td class="d-flex justify-content-between">
+							<span>
+								Show the nodes that were disabled by the user (ctrl + double click).
+							</span>
+						</td>
+					</tr>
 				</table>
 			</div>
 
