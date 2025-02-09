@@ -47,7 +47,7 @@ export class CalcHighlight extends CalcCompleted {
 
 			this.graph.highlightedNode.highlighted = 'highlighted';
 
-			this.setHighlighted(this.graph.highlightedNode, true, this.graph.settings.showHighlightDependents);
+			this.setHighlighted(this.graph.highlightedNode, true, true);
 
 			if (this.graph.settings.showHighlightLimits) {
 				if (this.graph.highlightedNode instanceof RecipeNode) {
@@ -102,7 +102,7 @@ export class CalcHighlight extends CalcCompleted {
 					}
 				}
 
-				this.setHighlighted(edge.to, false, false);
+				this.setHighlighted(edge.to, false, edge.to.highlighted === 'product');
 			}
 		}
 
@@ -129,7 +129,12 @@ export class CalcHighlight extends CalcCompleted {
 
 		const multiplier = node.getMultiplier(diff);
 
-		if (node.highlighted === 'highlighted' || node.highlighted === 'dependent' || node.highlighted === 'dependency') {
+		if (node.highlighted === 'highlighted'
+			|| node.highlighted === 'dependent'
+			|| node.highlighted === 'dependency'
+			|| (node.highlighted === 'product'
+				&& this.graph.settings.showHighlightDependents))
+		{
 			for (const input of node.getInputs()) {
 				const ingredient = node.recipeData.recipe.ingredients.find((x) => x.item === input.resource.className);
 				if (!ingredient) {
@@ -155,7 +160,8 @@ export class CalcHighlight extends CalcCompleted {
 			}
 		}
 
-		if (node.highlighted === 'highlighted') {
+		if (node.highlighted === 'highlighted'
+			&& !this.graph.settings.showHighlightDependents) {
 			for (const output of node.getOutputs()) {
 				const product = node.recipeData.recipe.products.find((x) => x.item === output.resource.className);
 				if (!product) {
@@ -190,7 +196,7 @@ export class CalcHighlight extends CalcCompleted {
 		const cache = this.cache[node.id];
 		cache.visited = true;
 
-		if (node.highlighted === 'product') {
+		if (node.highlighted === 'product' && !this.graph.settings.showHighlightDependents) {
 			const inputsUsed = node.getInputs().map((input) => {
 				const limit = node
 					.getEdgesIn(input.resource.className)
