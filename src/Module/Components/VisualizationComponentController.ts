@@ -130,7 +130,7 @@ export class VisualizationComponentController implements IController
 		}
 
 		for (const edge of result.graph.edges) {
-			if (!edge.to.visible || !edge.from.visible) {
+			if (!edge.isAvailable()) {
 				continue
 			}
 

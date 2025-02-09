@@ -76,7 +76,10 @@ export class Graph
 						}
 
 						for (const output of nodeOut.getOutputs()) {
-							if (input.resource === output.resource && input.amount < input.maxAmount) {
+							if (	input.resource === output.resource
+								&& 	input.amount < input.maxAmount
+								&& 	output.amount > 0.0)
+							{
 								const diff = Numbers.round(Math.min(input.maxAmount - input.amount, output.amount));
 
 								if (diff <= 0) {

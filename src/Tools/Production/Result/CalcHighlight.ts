@@ -47,7 +47,7 @@ export class CalcHighlight extends CalcCompleted {
 
 			this.graph.highlightedNode.highlighted = 'highlighted';
 
-			this.setHighlighted(this.graph.highlightedNode, true, true);
+			this.setHighlighted(this.graph.highlightedNode, true, this.graph.settings.showHighlightDependents);
 
 			if (this.graph.settings.showHighlightLimits) {
 				if (this.graph.highlightedNode instanceof RecipeNode) {
@@ -114,7 +114,7 @@ export class CalcHighlight extends CalcCompleted {
 					edge.from.highlighted = 'dependency';
 				}
 
-				this.setHighlighted(edge.from, true, edge.from instanceof RecipeNode);
+				this.setHighlighted(edge.from, true, this.graph.settings.showHighlightDependents && edge.from instanceof RecipeNode);
 			}
 		}
 	}
