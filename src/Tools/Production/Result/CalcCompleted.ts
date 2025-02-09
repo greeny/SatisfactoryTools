@@ -46,7 +46,9 @@ export class CalcCompleted {
 		for (const node of this.graph.nodes) {
 			const output = Numbers.round(node
 				.getEdgesOut()
-				.map((x) => x.itemAmount.getAvailable())
+				.map((x) => (x.to.highlighted === 'unrelated' || x.to.userIgnore)
+					? 0.0
+					: x.itemAmount.getAvailable())
 				.reduce((acc, sum) => acc + sum, 0));
 
 			node.visible = node.highlighted !== 'unrelated'
