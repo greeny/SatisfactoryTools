@@ -74,6 +74,8 @@ export class RecipeNode extends GraphNode
 			title.push('<b>OUT:</b> ' + Strings.formatNumber(product.maxAmount) + ' / min - ' + product.resource.name);
 		}
 
+		title.push(`<b>Status:</b> ${this.highlighted || '-'}`);
+
 		return title.join('<br>');
 	}
 

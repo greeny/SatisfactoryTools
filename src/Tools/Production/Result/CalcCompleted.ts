@@ -59,6 +59,7 @@ export class CalcCompleted {
 					|| node instanceof SinkNode
 					|| node instanceof ByproductNode
 					|| node.highlighted === 'product'
+					|| node.highlighted === 'highlighted'
 					|| node.highlighted === 'dependent');
 		}
 	}
