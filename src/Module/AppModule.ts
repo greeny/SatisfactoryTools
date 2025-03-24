@@ -350,11 +350,11 @@ export class AppModule
 			$rootScope.aprilMode = April.isApril();
 			$rootScope.aprilModePossible = April.isAprilPossible();
 
-			let v = '0.8';
+			let v = '1.0';
 			if (document.location.href.indexOf('/1.0-ficsmas') !== -1) {
 				v = '1.0-ficsmas';
-			} else if (document.location.href.indexOf('/1.0') !== -1) {
-				v = '1.0';
+			} else if (document.location.href.indexOf('/0.8') !== -1) {
+				v = '0.8';
 			}
 			$rootScope.version = v;
 			DataProvider.change(v);
@@ -368,7 +368,7 @@ export class AppModule
 				const valid = ['0.8', '1.0', '1.0-ficsmas'];
 				if (!valid.includes(version)) {
 					transition.abort();
-					$state.go(transition.to().name + '', {...transition.params(), version: '0.8'}, {location: 'replace', reload: true, inherit: true});
+					$state.go(transition.to().name + '', {...transition.params(), version: '1.0'}, {location: 'replace', reload: true, inherit: true});
 				}
 			})
 
