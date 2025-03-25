@@ -350,11 +350,12 @@ export class AppModule
 			$rootScope.aprilMode = April.isApril();
 			$rootScope.aprilModePossible = April.isAprilPossible();
 
-			let v = '1.0';
-			if (document.location.href.indexOf('/1.0-ficsmas') !== -1) {
+			const path = document.location.pathname;
+			let v = '0.8';
+			if (path.indexOf('/1.0-ficsmas') !== -1) {
 				v = '1.0-ficsmas';
-			} else if (document.location.href.indexOf('/0.8') !== -1) {
-				v = '0.8';
+			} else if (path === '/' || path.indexOf('/1.0') !== -1) {
+				v = '1.0';
 			}
 			$rootScope.version = v;
 			DataProvider.change(v);
@@ -366,9 +367,15 @@ export class AppModule
 			$transitions.onStart({}, (transition: ITransitionObject<{version: string, share?: string}>) => {
 				const version = transition.params().version;
 				const valid = ['0.8', '1.0', '1.0-ficsmas'];
+
+				let defaultVersion = '0.8';
+				if (transition.to().name === 'home') {
+					defaultVersion = '1.0';
+				}
+
 				if (!valid.includes(version)) {
 					transition.abort();
-					$state.go(transition.to().name + '', {...transition.params(), version: '1.0'}, {location: 'replace', reload: true, inherit: true});
+					$state.go(transition.to().name + '', {...transition.params(), version: defaultVersion}, {location: 'replace', reload: true, inherit: true});
 				}
 			})
 
