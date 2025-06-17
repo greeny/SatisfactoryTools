@@ -41265,7 +41265,7 @@
             ],
             "allowLiquids": true,
             "allowSolids": false,
-            "itemsPerCycle": 2000,
+            "itemsPerCycle": 2,
             "extractCycleTime": 1.0
         },
         "Desc_MinerMk2_C": {
@@ -41335,6 +41335,16 @@
             "allowLiquids": false,
             "allowSolids": true,
             "itemsPerCycle": 1,
+            "extractCycleTime": 1.0
+        },
+        "Desc_WaterPump_C": {
+            "className": "Desc_WaterPump_C",
+            "allowedResources": [
+                "Desc_Water_C"
+            ],
+            "allowLiquids": true,
+            "allowSolids": false,
+            "itemsPerCycle": 2,
             "extractCycleTime": 1.0
         }
     },
