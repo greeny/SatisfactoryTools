@@ -10,6 +10,10 @@ export class CalcHighlight extends CalcCompleted {
 		if (this.graph.highlightedNode === node) {
 			this.graph.highlightedNode = undefined;
 			this.graph.highlightedLimit = undefined;
+
+			for (const n of this.graph.nodes) {
+				n.userIgnore = false;
+			}
 		} else {
 			this.graph.highlightedNode = node;
 
@@ -33,7 +37,6 @@ export class CalcHighlight extends CalcCompleted {
 
 		if (!this.graph.highlightedNode) {
 			for (const n of this.graph.nodes) {
-				n.userIgnore = false;
 				n.highlighted = undefined;
 			}
 		} else {
