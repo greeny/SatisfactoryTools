@@ -366,7 +366,65 @@
 												</td>
 												<td></td>
 												<td>
-													<span class="btn btn-outline-danger" ng-click="ctrl.tab.clearInputs()" tooltip title="Clear inputs">
+													<span class="btn btn-outline-danger" ng-click="ctrl.tab.clearInput()" tooltip title="Clear inputs">
+														<span class="fas fa-fw fa-trash-alt"></span>
+													</span>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+
+							<div class="card completed-card">
+								<h3 class="card-header card-header-with-buttons">
+									<span class="card-header-text">
+										Completed recipes
+									</span>
+								</h3>
+								<div class="card-body">
+									<p>
+										Provide a list of recipes that are already constructed in your factory. The amount of already implemented factories (including their ingredients), will be hidden in the visualization.
+									</p>
+									<table class="completed-table">
+										<tbody ui-sortable="{axis: 'y',  'ui-floating': true, handle: '> .sortable-handler'}" ng-model="ctrl.tab.data.request.completed">
+											<tr ng-repeat="item in ctrl.tab.data.request.completed track by $index">
+												<td class="sortable-handler">
+													<span class="fas fa-arrows-alt-v cursor-drag"></span>
+												</td>
+												<td>
+													<ui-select ng-model="item.recipe" class="production-item-picker">
+														<ui-select-match placeholder="Search or select item">
+															<span>{{$select.selected.name}}</span>
+														</ui-select-match>
+														<ui-select-choices repeat="item.className as item in (ctrl.recipes|filter:{name:$select.search}) track by item.className">
+															<span class="pl-2" ng-bind="item.name"></span>
+														</ui-select-choices>
+													</ui-select>
+												</td>
+												<td>
+													<input class="form-control" ng-show="item.recipe" type="number" ng-model="item.amount" step="any">
+												</td>
+												<td>
+													<span class="btn btn-success" ng-click="ctrl.tab.cloneCompleted(item)" tooltip title="Clone factory">
+														<span class="far fa-fw fa-clone"></span>
+													</span>
+													<span class="btn btn-danger" ng-click="ctrl.tab.removeCompleted(item)" tooltip title="Remove factory">
+														<span class="fas fa-fw fa-times"></span>
+													</span>
+												</td>
+											</tr>
+											<tr>
+												<td></td>
+												<td>
+													<span class="btn btn-outline-success btn-block" ng-click="ctrl.tab.addEmptyCompleted()">
+														<span class="fas fa-plus"></span>
+														Add factory
+													</span>
+												</td>
+												<td></td>
+												<td>
+													<span class="btn btn-outline-danger" ng-click="ctrl.tab.clearCompleted()" tooltip title="Clear factories">
 														<span class="fas fa-fw fa-trash-alt"></span>
 													</span>
 												</td>
@@ -846,9 +904,69 @@
 
 		<div ng-show="ctrl.tab.resultTab === 'visualization'">
 			<div class="border-left border-right border-secondary p-2">
-				You can move the nodes around using drag'n'drop.
+				<p>You can move the nodes around using drag'n'drop.</p>
+				<p>Double click a node to highlight it. In highlight mode only elements and dependencies related to this node is shown.</p>
+
+				<table class="visualization-settings">
+					<tr ng-click="ctrl.tab.toggleApplyCompleted()">
+						<td>
+							<span class="fas fa-check-square" ng-show="ctrl.tab.graphSettings.applyCompleted"></span>
+							<span class="fas fa-square" ng-show="!ctrl.tab.graphSettings.applyCompleted"></span>
+						</td>
+						<td class="d-flex justify-content-between">
+							<span>
+								Apply completed recipes.
+							</span>
+						</td>
+					</tr>
+					<tr ng-click="ctrl.tab.toggleShowCompleted()">
+						<td>
+							<span class="fas fa-check-square" ng-show="ctrl.tab.graphSettings.showCompleted"></span>
+							<span class="fas fa-square" ng-show="!ctrl.tab.graphSettings.showCompleted"></span>
+						</td>
+						<td class="d-flex justify-content-between">
+							<span>
+								Show completed nodes.
+							</span>
+						</td>
+					</tr>
+					<tr ng-click="ctrl.tab.toggleHighlightDependents()">
+						<td>
+							<span class="fas fa-check-square" ng-show="ctrl.tab.graphSettings.showHighlightDependents"></span>
+							<span class="fas fa-square" ng-show="!ctrl.tab.graphSettings.showHighlightDependents"></span>
+						</td>
+						<td class="d-flex justify-content-between">
+							<span>
+								Show the dependents of a recipe in highlight mode.
+							</span>
+						</td>
+					</tr>
+					<tr ng-click="ctrl.tab.toggleHighlightLimits()">
+						<td>
+							<span class="fas fa-check-square" ng-show="ctrl.tab.graphSettings.showHighlightLimits"></span>
+							<span class="fas fa-square" ng-show="!ctrl.tab.graphSettings.showHighlightLimits"></span>
+						</td>
+						<td class="d-flex justify-content-between">
+							<span>
+								Show only resources needed for the current selection in highlight mode.
+							</span>
+						</td>
+					</tr>
+					<tr ng-click="ctrl.tab.toggleShowDisabledNodes()">
+						<td>
+							<span class="fas fa-check-square" ng-show="ctrl.tab.graphSettings.showDisabledNodes"></span>
+							<span class="fas fa-square" ng-show="!ctrl.tab.graphSettings.showDisabledNodes"></span>
+						</td>
+						<td class="d-flex justify-content-between">
+							<span>
+								Show the nodes that were disabled by the user (ctrl + double click).
+							</span>
+						</td>
+					</tr>
+				</table>
 			</div>
-			<visualization result="ctrl.tab.resultNew" ng-class="{visualization: 1, loading: ctrl.tab.state.resultLoading}"></visualization>
+
+			<visualization result="ctrl.tab.resultNew" settings="ctrl.tab.graphSettings" ng-class="{visualization: 1, loading: ctrl.tab.state.resultLoading}"></visualization>
 		</div>
 
 		<div ng-show="ctrl.tab.resultTab === 'items'" class="visualization-result">

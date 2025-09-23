@@ -84,7 +84,12 @@ $border: 1px solid rgba(0, 0, 0, 0.125);
 		}
 	}
 
-	.input-table {
+	.completed-card {
+		margin-top: 15px;
+	}
+
+	.input-table,
+	.completed-table {
 		width: 100%;
 
 		tr {
@@ -261,6 +266,12 @@ $border: 1px solid rgba(0, 0, 0, 0.125);
 			align-items: center;
 			justify-content: center;
 		}
+	}
+}
+
+.visualization-settings {
+	tr {
+		cursor: pointer;
 	}
 }
 

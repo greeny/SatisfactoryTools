@@ -7,21 +7,21 @@ import {MinerNode} from '@src/Tools/Production/Result/Nodes/MinerNode';
 import {ProductNode} from '@src/Tools/Production/Result/Nodes/ProductNode';
 import {ByproductNode} from '@src/Tools/Production/Result/Nodes/ByproductNode';
 import {InputNode} from '@src/Tools/Production/Result/Nodes/InputNode';
-import {Graph} from '@src/Tools/Production/Result/Graph';
+import {Graph, GraphSettings} from '@src/Tools/Production/Result/Graph';
 import {ProductionResult} from '@src/Tools/Production/Result/ProductionResult';
 import {SinkNode} from '@src/Tools/Production/Result/Nodes/SinkNode';
 
 export class ProductionResultFactory
 {
 
-	public create(request: IProductionDataApiRequest, response: IProductionDataApiResponse, data: IJsonSchema): ProductionResult
+	public create(settings: GraphSettings, request: IProductionDataApiRequest, response: IProductionDataApiResponse, data: IJsonSchema): ProductionResult
 	{
-		return new ProductionResult(request, ProductionResultFactory.createGraph(response, data), data);
+		return new ProductionResult(request, ProductionResultFactory.createGraph(settings, request, response, data), data);
 	}
 
-	private static createGraph(response: IProductionDataApiResponse, data: IJsonSchema): Graph
+	private static createGraph(settings: GraphSettings, request: IProductionDataApiRequest, response: IProductionDataApiResponse, data: IJsonSchema): Graph
 	{
-		const graph = new Graph;
+		const graph = new Graph(settings);
 
 		for (const recipeData in response) {
 			if (!response.hasOwnProperty(recipeData)) {
@@ -83,7 +83,7 @@ export class ProductionResultFactory
 			}
 		}
 
-		graph.generateEdges();
+		graph.generateEdges(request.completed || []);
 
 		return graph;
 	}
