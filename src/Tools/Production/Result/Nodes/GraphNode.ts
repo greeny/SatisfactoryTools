@@ -8,6 +8,9 @@ export abstract class GraphNode
 	public id: number;
 
 	public connectedEdges: GraphEdge[] = [];
+	public done: boolean = false;
+
+	public static readonly DONE_OPACITY = '0.2';
 
 	public abstract getInputs(): ResourceAmount[];
 	public abstract getOutputs(): ResourceAmount[];
@@ -25,6 +28,11 @@ export abstract class GraphNode
 			}
 		}
 		return false;
+	}
+
+	public toggleDone(): void
+	{
+		this.done = !this.done;
 	}
 
 	protected formatText(text: string, bold: boolean = true)

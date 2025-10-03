@@ -46,10 +46,10 @@ export class InputNode extends GraphNode
 			label: this.getTitle(),
 			color: {
 				border: 'rgba(0, 0, 0, 0)',
-				background: 'rgba(175, 109, 14, 1)',
+				background: `rgba(175, 109, 14, ${this.done ? GraphNode.DONE_OPACITY : 1})`,
 				highlight: {
 					border: 'rgba(238, 238, 238, 1)',
-					background: 'rgba(234, 146, 18, 1)',
+					background: `rgba(234, 146, 18, ${this.done ? GraphNode.DONE_OPACITY : 1})`,
 				},
 			},
 			font: {

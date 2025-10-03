@@ -46,10 +46,10 @@ export class ByproductNode extends GraphNode
 			label: this.getTitle(),
 			color: {
 				border: 'rgba(0, 0, 0, 0)',
-				background: 'rgba(27, 112, 137, 1)',
+				background: `rgba(27, 112, 137, ${this.done ? GraphNode.DONE_OPACITY : 1})`,
 				highlight: {
 					border: 'rgba(238, 238, 238, 1)',
-					background: 'rgba(38, 159, 194, 1)',
+					background: `rgba(38, 159, 194, ${this.done ? GraphNode.DONE_OPACITY : 1})`,
 				},
 			},
 			font: {

@@ -73,10 +73,10 @@ export class RecipeNode extends GraphNode
 			title: el as unknown as string,
 			color: {
 				border: 'rgba(0, 0, 0, 0)',
-				background: 'rgba(223, 105, 26, 1)',
+				background: `rgba(223, 105, 26, ${this.done ? GraphNode.DONE_OPACITY : 1})`,
 				highlight: {
 					border: 'rgba(238, 238, 238, 1)',
-					background: 'rgba(231, 122, 49, 1)',
+					background: `rgba(231, 122, 49, ${this.done ? GraphNode.DONE_OPACITY : 1})`,
 				},
 			},
 			font: {
