@@ -101,9 +101,25 @@
 </nav>
 
 <div class="container-fluid px-xl-5 px-lg-4 px-md-3 px-sm-2 px-1" style="margin-top: 60px;">
-	<div class="alert alert-danger alert-dismissible fade show" ng-if="$root.version == '1.0'">
+	<!--<div class="alert alert-danger alert-dismissible fade show" ng-if="$root.version == '1.0'">
 		<b>Looking for FICSMAS production?</b> Change your version in top right corner! Merry FICSMAS!
 		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	</div>-->
+
+	<div class="alert alert-success alert-dismissible fade show">
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+		<div class="row">
+			<div class="col-sm-3">
+				<img src="/assets/images/cart-race.png" class="img-fluid" style="max-height: 175px;">
+			</div>
+
+			<div class="col-sm-9">
+				<p><strong>Join fellow pioneers for a fun, goofy Satisfactory community competition!</strong></p>
+
+				<a href="https://www.reddit.com/r/SatisfactoryGame/comments/1nmrjty/we_are_hosting_the_goofiest_competition_in/" target="_blank" class="alert-link">Click here for more info.</a>
+			</div>
+		</div>
 	</div>
 
 	<div ui-view></div>
