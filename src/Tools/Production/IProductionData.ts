@@ -31,6 +31,7 @@ export interface IProductionDataRequest
 
 	production: IProductionDataRequestItem[];
 	input: IProductionDataRequestInput[];
+	completed?: IProductionDataRequestCompleted[];
 
 }
 
@@ -56,6 +57,14 @@ export interface IProductionDataRequestInput
 
 	item: string|null; // classname of the item
 	amount: number; // amount of items/min
+
+}
+
+export interface IProductionDataRequestCompleted
+{
+
+	recipe: string|null; // classname of the recipe
+	amount: number; // amount of factories executing the recipe
 
 }
 

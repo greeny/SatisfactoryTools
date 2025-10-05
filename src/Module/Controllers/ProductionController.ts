@@ -33,6 +33,7 @@ export class ProductionController
 	public readonly alternateRecipes: IRecipeSchema[] = data.getAlternateRecipes();
 	public readonly basicRecipes: IRecipeSchema[] = data.getBaseItemRecipes();
 	public readonly machines: IBuildingSchema[] = data.getManufacturers();
+	public readonly recipes: IRecipeSchema[] = this.basicRecipes.concat(this.alternateRecipes);
 
 	public result: string;
 
