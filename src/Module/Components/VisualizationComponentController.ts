@@ -276,15 +276,15 @@ export class VisualizationComponentController implements IController
 		});
 
 		network.on('doubleClick', (event) => {
-			if (event.nodes?.length) {
-				(event.nodes as number[]).forEach((nodeId) => {
-					const node = this.result.graph.nodes.find((graphNode) => graphNode.id === nodeId);
-					if (!node) return;
+			if (!event.nodes?.length) return
 
-					node.toggleDone();
-					nodes.update(node.getVisNode());
-				});
-			}
+			(event.nodes as number[]).forEach((nodeId) => {
+				const node = this.result.graph.nodes.find((graphNode) => graphNode.id === nodeId);
+				if (!node) return;
+
+				node.toggleDone();
+				nodes.update(node.getVisNode());
+			});
 		});
 
 		return network;
