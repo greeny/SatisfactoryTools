@@ -2,13 +2,13 @@ version: 2
 jobs:
     build:
         docker:
-            - image: cimg/node:16.13
+            - image: circleci/node:16.13
 
         working_directory: ~/repo
 
         steps:
             - checkout
-            - run: sudo apt install -y rsync
+            - run: sudo apt update && sudo apt install -y rsync
 
             - restore_cache:
                 keys:
@@ -31,7 +31,7 @@ jobs:
                     cp env.prod.json env.json
                 fi
 
-            - run: yarn build
+            - run: yarn buildCI
 
             - deploy:
                 command: |

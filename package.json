@@ -6,6 +6,7 @@
 	"private": true,
 	"scripts": {
 		"build": "webpack --mode production",
+		"buildCI": "webpack --mode production",
 		"start": "webpack --mode development --progress --color --watch",
 		"parseDocs": "ts-node -r tsconfig-paths/register bin/parseDocs.ts",
 		"parsePak": "ts-node -r tsconfig-paths/register bin/parsePak.ts",
