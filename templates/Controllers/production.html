@@ -562,7 +562,7 @@
 													</span>
 													<span class="pl-md-4 pl-2">
 														<span class="recipe-item">
-															<span class="pr-1">{{generator.powerProduction / ctrl.getItem(fuel.item).energyValue * 60 / (ctrl.getItem(fuel.item).liquid ? 1000 : 1)|number}} / min</span>
+															<span class="pr-1">{{generator.powerProduction / ctrl.getItem(fuel.item).energyValue * 60|number}} / min</span>
 															<item-icon item="fuel.item" size="20" tooltip="1"></item-icon>
 														</span>
 														<span ng-if="generator.waterToPowerRatio" class="recipe-item ml-2">
