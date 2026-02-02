@@ -21,13 +21,12 @@ export class GeneratorNode extends GraphNode
 			if (fuelData.item === generatorData.fuel.className) {
 				const powerProduction = generatorData.generator.powerProduction * Math.pow(generatorData.clockSpeed / 100, generatorData.generator.powerProductionExponent);
 				this.powerProduced = powerProduction * generatorData.amount;
-				let ratio = 60 / (generatorData.fuel.liquid ? 1000 : 1);
+				let ratio = 60;
 				const fuelConsumption = powerProduction / generatorData.fuel.energyValue * ratio;
 
 				this.ingredients.push(new ResourceAmount(generatorData.fuel, fuelConsumption * generatorData.amount, 0));
 
 				if (fuelData.supplementalItem) {
-					ratio = 60 / (data.items[fuelData.supplementalItem].liquid ? 1000 : 1);
 					this.ingredients.push(new ResourceAmount(data.items[fuelData.supplementalItem], powerProduction * generatorData.generator.waterToPowerRatio * ratio * generatorData.amount, 0));
 				}
 

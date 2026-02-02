@@ -36,7 +36,7 @@ export class Formula
 
 	public static calculateFuelConsumption(generator: IGeneratorSchema, fuel: IItemSchema, overclock: number)
 	{
-		return (((generator.powerProduction / fuel.energyValue) * 60) / (fuel.liquid ? 1000 : 1)) * Math.pow(overclock / 100, 1 / generator.powerProductionExponent);
+		return (((generator.powerProduction / fuel.energyValue) * 60)) * Math.pow(overclock / 100, 1 / generator.powerProductionExponent);
 	}
 
 	public static calculateProductAmountsPerMinute(building: IManufacturerSchema, recipe: IRecipeSchema, recipeProductAmount: number, overclock: number): number
@@ -47,7 +47,7 @@ export class Formula
 
 	public static calculateGeneratorWaterConsumption(building: IGeneratorSchema, overclock: number): number
 	{
-		return (60 * (Formula.calculatePowerGeneratorPowerCapacity(building, overclock) * building.waterToPowerRatio)) / 1000;
+		return (60 * (Formula.calculatePowerGeneratorPowerCapacity(building, overclock) * building.waterToPowerRatio));
 	}
 
 	public static calculatePowerGeneratorPowerCapacity(generator: IGeneratorSchema, overclock: number)

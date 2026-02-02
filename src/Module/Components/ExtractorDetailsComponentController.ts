@@ -54,7 +54,7 @@ export class ExtractorDetailsComponentController
 	public getExtractionValues(building: IBuildingSchema, extractor: IMinerSchema, purity: RESOURCE_PURITY): number
 	{
 		const extractorMultiplier = Constants.WATER_EXTRACTOR_CLASSNAME === building.className ? 0 : 1;
-		const extractedValue = (60 / extractor.extractCycleTime) * (extractor.itemsPerCycle / (extractor.allowLiquids ? 1000 : 1));
+		const extractedValue = (60 / extractor.extractCycleTime) * (extractor.itemsPerCycle);
 		switch (purity) {
 			case 'impure':
 				return extractedValue * Constants.RESOURCE_MULTIPLIER_IMPURE * extractorMultiplier;

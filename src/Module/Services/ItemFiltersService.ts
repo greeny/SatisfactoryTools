@@ -53,10 +53,6 @@ export class ItemFiltersService implements IFilterService<IItemSchema>
 
 		if (this.filter.stackSize) {
 			itemsToFilter = itemsToFilter.filter((item) => {
-				if (item.liquid) {
-					// Liters to m3 conversion
-					return parseInt(this.filter.stackSize + '', 10) === (item.stackSize / 1000);
-				}
 				// parseInt because angular somehow treats option value as string
 				return parseInt(this.filter.stackSize + '', 10) === item.stackSize;
 			});
