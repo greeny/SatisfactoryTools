@@ -62,31 +62,36 @@ export class Strings
 
 	public static copyToClipboard(text: string, displayNotification: string = ''): boolean
 	{
-		const textArea = document.createElement('textarea');
-		textArea.style.position = 'fixed';
-		textArea.style.top = '0';
-		textArea.style.left = '0';
-		textArea.style.width = '2em';
-		textArea.style.height = '2em';
-		textArea.style.padding = '0';
-		textArea.style.border = 'none';
-		textArea.style.outline = 'none';
-		textArea.style.boxShadow = 'none';
-		textArea.style.background = 'transparent';
-		textArea.value = text;
+		if (navigator.clipboard) {
+			navigator.clipboard.writeText(text).catch((err) => {
+				console.error(err);
+			});
+		} else {
+			const textArea = document.createElement('textarea');
+			textArea.style.position = 'fixed';
+			textArea.style.top = '0';
+			textArea.style.left = '0';
+			textArea.style.width = '2em';
+			textArea.style.height = '2em';
+			textArea.style.padding = '0';
+			textArea.style.border = 'none';
+			textArea.style.outline = 'none';
+			textArea.style.boxShadow = 'none';
+			textArea.style.background = 'transparent';
+			textArea.value = text;
 
-		document.body.appendChild(textArea);
-		textArea.focus();
-		textArea.select();
+			document.body.appendChild(textArea);
+			textArea.focus();
+			textArea.select();
 
-		let result = false;
-		try {
-			result = document.execCommand('copy');
-		} catch (err) {
-			console.error(err);
+			try {
+				document.execCommand('copy');
+			} catch (err) {
+				console.error(err);
+			}
+
+			document.body.removeChild(textArea);
 		}
-
-		document.body.removeChild(textArea);
 
 		if (displayNotification !== '') {
 			const toast = document.createElement('div');
@@ -100,7 +105,7 @@ export class Strings
 			$(toast).toast('show');
 		}
 
-		return result;
+		return true;
 	}
 
 	public static stackSizeFromEnum(size: string): number
@@ -241,14 +246,14 @@ export class Strings
 			}
 			if (m) {
 				tokens.push({
-					token: text.substr(0, m),
+					token: text.substring(0, m),
 					type: defaultToken || 'unknown',
 				});
 			}
 			if (t) {
 				tokens.push(t);
 			}
-			text = text.substr(m + (t ? t.token.length : 0));
+			text = text.substring(m + (t ? t.token.length : 0));
 		}
 		return tokens;
 	}
