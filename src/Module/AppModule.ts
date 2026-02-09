@@ -331,12 +331,9 @@ export class AppModule
 			$rootScope.aprilModePossible = April.isAprilPossible();
 
 			$transitions.onFinish({}, () => {
-				const elements = document.getElementsByClassName('tooltip');
-				for (const index in elements) {
-					if (elements.hasOwnProperty(index)) {
-						elements[index].remove();
-					}
-				}
+				Array.from(document.getElementsByClassName('tooltip')).forEach((element) => {
+					element.remove();
+				});
 			});
 		}]);
 
