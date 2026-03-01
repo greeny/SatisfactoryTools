@@ -262,6 +262,9 @@ export class VisualizationComponentController implements IController
 			},
 			interaction: {
 				tooltipDelay: 0,
+				zoomSpeed: 0,
+				zoomView: false,
+
 			},
 		});
 	}
