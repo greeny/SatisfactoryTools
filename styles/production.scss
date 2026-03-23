@@ -1,3 +1,7 @@
+@use "sass:math";
+
+@use "sass:color";
+
 @import 'theme/theme_variables';
 
 $defaultPadding: 8px;
@@ -130,7 +134,7 @@ $border: 1px solid rgba(0, 0, 0, 0.125);
 				@include defaultSquare($primary);
 
 				&:hover {
-					background-color: darken($primary, 10%);
+					background-color: color.adjust($primary, $lightness: -10%, $space: hsl);
 					cursor: pointer;
 				}
 
@@ -162,7 +166,7 @@ $border: 1px solid rgba(0, 0, 0, 0.125);
 					max-height: 30vh;
 
 					.dropdown-item {
-						flex: 100/$entriesLimit ($maxEntryWidth - $defaultPadding);
+						flex: math.div(100, $entriesLimit) ($maxEntryWidth - $defaultPadding);
 						max-width: $maxEntryWidth;
 						padding: $defaultPadding;
 

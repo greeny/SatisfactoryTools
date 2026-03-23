@@ -24,7 +24,7 @@ export class FileExporter
 
 		let result = '# Satisfactory Tools export (version 1)\n\n# Contains these production lines:\n' + info + '\n';
 
-		result += FileExporter.version + Strings.base64encode(Strings.bufferToString(pako.deflate(JSON.stringify(data))));
+		result += FileExporter.version + Strings.base64encode(Strings.bufferToString(pako.deflate(JSON.stringify(data)).buffer));
 
 		result += '\n\n# Exported on ' + new Date().toISOString() + '\n';
 

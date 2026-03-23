@@ -1,5 +1,5 @@
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
-const TSLintPlugin = require('tslint-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const webpack = require('webpack');
 
@@ -14,8 +14,10 @@ module.exports = {
 		new webpack.IgnorePlugin({
 			resourceRegExp: /(fs|child_process)/
 		}),
-		new TSLintPlugin({
-			files: ['./src/**/*.ts'],
+		new ESLintPlugin({
+			extensions: ['ts', 'tsx'],
+			eslintPath: require.resolve('eslint'),
+			overrideConfigFile: '.eslintrc.js',
 		}),
 	],
 	resolve: {

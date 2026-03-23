@@ -1,7 +1,7 @@
 export class April
 {
 
-	private static readonly KEY = 'aprilModeDisabled';
+	private static readonly KEY = 'aprilUIDisabled';
 
 	public static isApril(): boolean
 	{

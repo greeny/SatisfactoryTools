@@ -46,7 +46,7 @@ export class Strings
 		return buffer;
 	}
 
-	public static bufferToString(buffer: ArrayBuffer): string
+	public static bufferToString(buffer: ArrayBufferLike): string
 	{
 		return String.fromCharCode.apply(null, Array.from(new Uint16Array(buffer)));
 	}

@@ -101,7 +101,7 @@
 	<link rel="stylesheet" href="/assets/css/fontawesome.min.css">
 	<base href="/">
 </head>
-<body>
+<body ng-class="{'april-ui': $root.aprilMode}">
 
 <div id="toasts" class="toasts"></div>
 

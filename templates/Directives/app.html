@@ -46,10 +46,10 @@
 			<ul class="navbar-nav">
 				<li class="nav-item" ng-if="$root.aprilModePossible">
 					<a class="nav-link" ng-if="$root.aprilMode" ng-click="disable()">
-						Disable April mode
+						Disable April UI
 					</a>
 					<a class="nav-link" ng-if="!$root.aprilMode" ng-click="enable()">
-						Enable April mode
+						Enable April UI
 					</a>
 				</li>
 				<li class="nav-item" uib-dropdown>
@@ -101,6 +101,13 @@
 </nav>
 
 <div class="container-fluid px-xl-5 px-lg-4 px-md-3 px-sm-2 px-1" style="margin-top: 60px;">
+	<div class="april-marquee-bar" ng-if="$root.aprilMode">
+		<div class="april-marquee">
+			★ WELCOME TO MY CALCULATOR ★ BEST VIEWED IN NETSCAPE NAVIGATOR 4.0 AT 800×600 ★
+			&nbsp;&nbsp;&nbsp; THIS PAGE IS UNDER CONSTRUCTION &nbsp;&nbsp;&nbsp; VISITORS: 000847 ★
+		</div>
+	</div>
+
 	<!--<div class="alert alert-danger alert-dismissible fade show" ng-if="$root.version == '1.0'">
 		<b>Looking for FICSMAS production?</b> Change your version in top right corner! Merry FICSMAS!
 		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -111,6 +118,8 @@
 	<hr>
 
 	<footer>
+		<div class="april-counter" ng-if="$root.aprilMode">You are visitor #<span>000847</span></div>
+
 		<p class="text-secondary">
 			Made by <a href="https://github.com/greeny">greeny</a>. Source code available at <a href="https://github.com/greeny/SatisfactoryTools">Github</a>.
 			Old website: <a href="https://satisfactory.greeny.dev/">https://satisfactory.greeny.dev/</a>.

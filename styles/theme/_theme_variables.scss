@@ -1,3 +1,5 @@
+@use "sass:color";
+
 // Superhero 4.5.0
 // Bootswatch
 
@@ -34,7 +36,7 @@ $success: $green !default;
 $info: $cyan !default;
 $warning: $yellow !default;
 $danger: $red !default;
-$light: lighten($gray-200, 35%) !default;
+$light: color.adjust($gray-200, $lightness: 35%, $space: hsl) !default;
 $dark: $gray-200 !default;
 
 $yiq-contrasted-threshold: 185 !default;
