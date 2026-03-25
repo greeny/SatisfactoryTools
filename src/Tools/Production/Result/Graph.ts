@@ -1,20 +1,41 @@
 import {GraphNode} from '@src/Tools/Production/Result/Nodes/GraphNode';
 import {GraphEdge} from '@src/Tools/Production/Result/Edges/GraphEdge';
 import {ItemAmount} from '@src/Tools/Production/Result/ItemAmount';
+import {IProductionDataRequestCompleted} from '@src/Tools/Production/IProductionData';
+import {CalcHighlight} from '@src/Tools/Production/Result/CalcHighlight';
+import {Numbers} from '@src/Utils/Numbers';
+
+export interface GraphSettings {
+	applyCompleted: boolean,
+	showCompleted: boolean,
+	showHighlightDependents: boolean,
+	showHighlightLimits: boolean,
+	showDisabledNodes: boolean,
+}
 
 export class Graph
 {
 
-	public readonly DELTA = 1e-8;
-
 	public nodes: GraphNode[] = [];
 	public edges: GraphEdge[] = [];
+	public completedMap: CompletedMap = { };
+	public highlightedNode?: GraphNode;
+	public highlightedLimit?: number;
 
 	private lastId = 1;
+	private outputToNodeMap?: ItemToNodeMap;
+
+	public constructor(public settings: GraphSettings) { }
+
+	public setSettings(settings: GraphSettings) {
+		this.settings = settings;
+		this.recalculate();
+	}
 
 	public addNode(node: GraphNode): void
 	{
 		this.nodes.push(node);
+		this.outputToNodeMap = undefined;
 		node.id = this.lastId++;
 	}
 
@@ -24,36 +45,106 @@ export class Graph
 		edge.id = this.lastId++;
 	}
 
-	public generateEdges(): void
+	public highlight(node: GraphNode) {
+		new CalcHighlight(this).set(node);
+	}
+
+	public toogleNode(node: GraphNode) {
+		new CalcHighlight(this).toggle(node);
+	}
+
+	public generateEdges(completed: IProductionDataRequestCompleted[]): void
 	{
-		for (const nodeOut of this.nodes) {
-			outputLoop:
-			for (const output of nodeOut.getOutputs()) {
+		this.edges = [];
+		this.completedMap = { };
 
-				for (const nodeIn of this.nodes) {
-					for (const input of nodeIn.getInputs()) {
-						if (input.resource === output.resource && input.amount < input.maxAmount) {
-							const diff = Math.min(input.maxAmount - input.amount, output.amount);
+		const outputToNodeMap = this.getOutputToNodeMap();
 
-							output.amount -= diff;
-							input.amount += diff;
-							if (Math.abs(input.maxAmount - input.amount) < this.DELTA) {
-								input.amount = input.maxAmount;
-							}
-							if (Math.abs(output.amount) < this.DELTA) {
-								output.amount = 0;
-							}
+		for (const item of completed) {
+			if (item.recipe) {
+				this.completedMap[item.recipe] = (this.completedMap[item.recipe] || 0) + item.amount;
+			}
+		}
 
-							this.addEdge(new GraphEdge(nodeOut, nodeIn, new ItemAmount(output.resource.className, diff)));
+		for (const checkSharedResources of [true, false]) {
+			for (const nodeIn of this.nodes) {
+				for (const input of nodeIn.getInputs()) {
+					const nodesOut = outputToNodeMap[input.resource.className];
+					for (const nodeOut of nodesOut) {
+						if (checkSharedResources && !hasSharedResources(nodeIn, nodeOut)) {
+							continue;
+						}
 
-							if (output.amount === 0) {
-								continue outputLoop;
+						for (const output of nodeOut.getOutputs()) {
+							if (	input.resource === output.resource
+								&& 	input.amount < input.maxAmount
+								&& 	output.amount > 0.0)
+							{
+								const diff = Numbers.round(Math.min(input.maxAmount - input.amount, output.amount));
+
+								if (diff <= 0) {
+									continue;
+								}
+
+								output.decrease(diff);
+								input.increase(diff);
+
+								this.addEdge(new GraphEdge(nodeOut, nodeIn, new ItemAmount(output.resource.className, diff)));
 							}
 						}
 					}
 				}
 			}
 		}
+
+		this.recalculate();
+	}
+
+	private recalculate() {
+		new CalcHighlight(this).update();
+	}
+
+	private getOutputToNodeMap(): ItemToNodeMap {
+		if (!this.outputToNodeMap) {
+			this.outputToNodeMap = { };
+
+			for (const node of this.nodes) {
+				for (const output of node.getOutputs()) {
+					const className = output.resource.className;
+					const  nodeList = this.outputToNodeMap[className] || [];
+					nodeList.push(node);
+					this.outputToNodeMap[className] = nodeList;
+				}
+			}
+		}
+
+		return this.outputToNodeMap;
 	}
 
 }
+
+function hasSharedResources(nodeIn: GraphNode, nodeOut: GraphNode): boolean {
+	let sharedInputs = 0;
+	let sharedOutputs = 0;
+
+	for (const input of nodeIn.getInputs()) {
+		for (const output of nodeOut.getOutputs()) {
+			if (input.resource === output.resource) {
+				++sharedInputs;
+			}
+		}
+	}
+
+	for (const output of nodeIn.getOutputs()) {
+		for (const input of nodeOut.getInputs()) {
+			if (input.resource === output.resource) {
+				++sharedOutputs;
+			}
+		}
+	}
+
+	return (sharedInputs > 0) && (sharedOutputs > 0);
+}
+
+interface ItemToNodeMap { [key:string]: GraphNode[] }
+interface CompletedMap { [key:string]: number }

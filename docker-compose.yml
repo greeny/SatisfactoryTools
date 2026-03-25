@@ -1,0 +1,38 @@
+version: "3.2"
+services:
+    nginx:
+        build:
+            context: .
+            target: nginx
+        depends_on:
+            - php
+            - node
+        ports:
+            - "80:80"
+        links:
+            - php
+        volumes:
+            - ./.docker/nginx/conf.d/domain.conf:/etc/nginx/conf.d/default.conf:ro
+            - ./www:/var/www/www:ro
+    php:
+        build:
+            context: .
+            target: php
+        depends_on:
+            - node
+        volumes:
+            - ./www:/var/www/www
+            - ./node_modules:/var/www/node_modules
+    node:
+        build:
+            context: .
+            target: node
+        environment:
+            PHP_HOST: php
+            PHP_PORT: 9000
+        volumes:
+            - ./src:/var/www/src
+            - ./styles:/var/www/styles
+            - ./templates:/var/www/templates
+            - ./bin:/var/www/bin
+            - ./data:/var/www/data

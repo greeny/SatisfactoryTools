@@ -8,6 +8,7 @@ export class VisualizationComponent implements IComponentOptions
 	public controller = VisualizationComponentController;
 	public bindings = {
 		result: '=',
+		settings: '=',
 	};
 
 }
