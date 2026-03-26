@@ -19,6 +19,8 @@ const DONE_EDGE_COLOR = 'rgba(105, 125, 145, 0.3)';
 const DONE_EDGE_COLOR_HL = 'rgba(134, 151, 167, 0.45)';
 const DONE_EDGE_FONT_COLOR = 'rgba(238, 238, 238, 0.3)';
 
+const STORAGE_KEY_PREFIX = 'doneNodes_';
+
 function fadeRgba(rgba: string, alpha: number): string
 {
 	const m = rgba.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/);
@@ -29,8 +31,6 @@ function fadeRgba(rgba: string, alpha: number): string
 
 	return `rgba(${m[1]}, ${m[2]}, ${m[3]}, ${alpha})`;
 }
-
-const STORAGE_KEY_PREFIX = 'doneNodes_';
 
 export class VisualizationComponentController implements IController
 {
@@ -59,10 +59,13 @@ export class VisualizationComponentController implements IController
 	public $onInit(): void
 	{
 		this.unregisterWatcherCallback = this.$scope.$watch(() => {
-			return this.result;
-		}, (newValue) => {
-			this.updateData(newValue);
-		});
+			return {
+				result: this.result,
+				storageKey: this.storageKey,
+			};
+		}, (newValue: { result: ProductionResult; storageKey: string }) => {
+			this.updateData(newValue.result, newValue.storageKey);
+		}, true);
 	}
 
 	public $onDestroy(): void
@@ -70,15 +73,10 @@ export class VisualizationComponentController implements IController
 		this.unregisterWatcherCallback();
 	}
 
-	private getPersistenceKey(): string
-	{
-		return STORAGE_KEY_PREFIX + (this.storageKey || 'default');
-	}
-
-	private loadDoneKeys(): void
+	private loadDoneKeys(key: string): void
 	{
 		try {
-			const raw = localStorage.getItem(this.getPersistenceKey());
+			const raw = localStorage.getItem(STORAGE_KEY_PREFIX + key);
 
 			this.doneKeys = raw ? new Set(JSON.parse(raw)) : new Set();
 		} catch {
@@ -89,7 +87,9 @@ export class VisualizationComponentController implements IController
 	private saveDoneKeys(): void
 	{
 		try {
-			localStorage.setItem(this.getPersistenceKey(), JSON.stringify([...this.doneKeys]));
+			const key = STORAGE_KEY_PREFIX + (this.storageKey || 'default');
+
+			localStorage.setItem(key, JSON.stringify([...this.doneKeys]));
 		} catch { /* storage full: silently ignore */ }
 	}
 
@@ -123,10 +123,10 @@ export class VisualizationComponentController implements IController
 		} else {
 			this.visNodes.update({
 				id,
-				color:       meta.originalColor,
+				color: meta.originalColor,
 				borderWidth: 0,
 				borderWidthSelected: 1,
-				font:        meta.originalFont,
+				font: meta.originalFont,
 			} as any);
 		}
 	}
@@ -139,7 +139,7 @@ export class VisualizationComponentController implements IController
 			this.visEdges.update({
 				id,
 				color: {
-					color:     DONE_EDGE_COLOR,
+					color: DONE_EDGE_COLOR,
 					highlight: DONE_EDGE_COLOR_HL,
 				},
 				font: {
@@ -151,7 +151,7 @@ export class VisualizationComponentController implements IController
 			this.visEdges.update({
 				id,
 				color: meta.originalColor,
-				font:  meta.originalFont,
+				font: meta.originalFont,
 				dashes: false,
 			} as any);
 		}
@@ -166,15 +166,11 @@ export class VisualizationComponentController implements IController
 		}
 
 		const key = meta.stableKey;
+		const isDone = !this.doneKeys.has(key);
 
-		if (this.doneKeys.has(key)) {
-			this.doneKeys.delete(key);
-			this.applyDoneNodeStyle(visId, false);
-		} else {
-			this.doneKeys.add(key);
-			this.applyDoneNodeStyle(visId, true);
-		}
+		isDone ? this.doneKeys.add(key) : this.doneKeys.delete(key);
 
+		this.applyDoneNodeStyle(visId, isDone);
 		this.saveDoneKeys();
 	}
 
@@ -187,15 +183,11 @@ export class VisualizationComponentController implements IController
 		}
 
 		const key = meta.stableKey;
+		const isDone = !this.doneKeys.has(key);
 
-		if (this.doneKeys.has(key)) {
-			this.doneKeys.delete(key);
-			this.applyDoneEdgeStyle(visId, false);
-		} else {
-			this.doneKeys.add(key);
-			this.applyDoneEdgeStyle(visId, true);
-		}
+		isDone ? this.doneKeys.add(key) : this.doneKeys.delete(key);
 
+		this.applyDoneEdgeStyle(visId, isDone);
 		this.saveDoneKeys();
 	}
 
@@ -268,9 +260,11 @@ export class VisualizationComponentController implements IController
 		const cy = cytoscape(options as any);
 	}
 
-	public useVis(result: ProductionResult): void
+	public useVis(result: ProductionResult, storageKey: string): void
 	{
-		this.loadDoneKeys();
+		this.storageKey = storageKey;
+		this.loadDoneKeys(storageKey);
+
 		this.nodeStyles.clear();
 		this.edgeStyles.clear();
 
@@ -284,9 +278,9 @@ export class VisualizationComponentController implements IController
 
 			// Store original style + stable key for later toggling.
 			this.nodeStyles.set(node.id, {
-				stableKey:    node.getStableKey(),
+				stableKey: node.getStableKey(),
 				originalColor: visNode.color ? { ...visNode.color, highlight: { ...visNode.color.highlight } } : undefined,
-				originalFont:  visNode.font  ? { ...visNode.font }  : { color: 'rgba(238, 238, 238, 1)' },
+				originalFont: visNode.font ? { ...visNode.font } : { color: 'rgba(238, 238, 238, 1)' },
 			});
 		}
 
@@ -302,7 +296,7 @@ export class VisualizationComponentController implements IController
 			}
 
 			const edgeColor = {
-				color:     'rgba(105, 125, 145, 1)',
+				color: 'rgba(105, 125, 145, 1)',
 				highlight: 'rgba(134, 151, 167, 1)',
 			};
 			const edgeFont = {
@@ -320,9 +314,9 @@ export class VisualizationComponentController implements IController
 			} as any);
 
 			this.edgeStyles.set(edge.id, {
-				stableKey:    edge.getStableKey(),
+				stableKey: edge.getStableKey(),
 				originalColor: { ...edgeColor },
-				originalFont:  { ...edgeFont },
+				originalFont: { ...edgeFont },
 			});
 		}
 
@@ -403,7 +397,7 @@ export class VisualizationComponentController implements IController
 		});
 	}
 
-	public updateData(result: ProductionResult|undefined): void
+	public updateData(result: ProductionResult|undefined, storageKey?: string): void
 	{
 		if (!result) {
 			return;
@@ -411,13 +405,14 @@ export class VisualizationComponentController implements IController
 
 		this.fitted = false;
 
+		const key = storageKey || this.storageKey || 'default';
 		let use;
 		use = 'vis';
 
 		if (use === 'cytoscape') {
 			this.useCytoscape(result);
 		} else {
-			this.useVis(result);
+			this.useVis(result, key);
 		}
 	}
 
@@ -440,7 +435,6 @@ export class VisualizationComponentController implements IController
 			nodes: {
 				labelHighlightBold: false,
 				font: {
-					// align: 'left',
 					size: 14,
 					multi: 'html',
 				},
