@@ -11,13 +11,13 @@ import {ProductionResult} from '@src/Tools/Production/Result/ProductionResult';
 
 const DONE_NODE_BORDER = 'rgba(180, 255, 180, 0.9)';
 const DONE_NODE_BORDER_HL = 'rgba(220, 255, 220, 1)';
-const DONE_NODE_BORDER_WIDTH = 3;
+const DONE_NODE_BORDER_WIDTH = 1;
 const DONE_NODE_BG_ALPHA = 0.35;
 const DONE_FONT_ALPHA = 0.45;
 
-const DONE_EDGE_COLOR         = 'rgba(105, 125, 145, 0.3)';
-const DONE_EDGE_COLOR_HL      = 'rgba(134, 151, 167, 0.45)';
-const DONE_EDGE_FONT_COLOR    = 'rgba(238, 238, 238, 0.3)';
+const DONE_EDGE_COLOR = 'rgba(105, 125, 145, 0.3)';
+const DONE_EDGE_COLOR_HL = 'rgba(134, 151, 167, 0.45)';
+const DONE_EDGE_FONT_COLOR = 'rgba(238, 238, 238, 0.3)';
 
 function fadeRgba(rgba: string, alpha: number): string
 {
@@ -296,8 +296,8 @@ export class VisualizationComponentController implements IController
 			};
 
 			if (edge.to.hasOutputTo(edge.from)) {
-				smooth.enabled  = true;
-				smooth.type     = 'curvedCW';
+				smooth.enabled = true;
+				smooth.type = 'curvedCW';
 				smooth.roundness = 0.2;
 			}
 
