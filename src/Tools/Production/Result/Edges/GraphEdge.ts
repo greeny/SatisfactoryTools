@@ -12,4 +12,8 @@ export class GraphEdge
 		to.connectedEdges.push(this);
 	}
 
+	public getStableKey(): string
+	{
+		return `edge:${this.from.getStableKey()}=>${this.to.getStableKey()}:${this.itemAmount.item}`;
+	}
 }
