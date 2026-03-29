@@ -48,7 +48,7 @@ export class Strings
 
 	public static bufferToString(buffer: ArrayBufferLike): string
 	{
-		return String.fromCharCode.apply(null, Array.from(new Uint16Array(buffer)));
+		return String.fromCharCode.apply(null, Array.from(new Uint8Array(buffer)));
 	}
 
 	public static downloadFile(filename: string, data: string, type: string = 'text/plain'): void
