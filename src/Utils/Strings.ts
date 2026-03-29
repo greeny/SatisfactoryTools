@@ -51,12 +51,12 @@ export class Strings
 		return String.fromCharCode.apply(null, Array.from(new Uint8Array(buffer)));
 	}
 
-	public static downloadFile(filename: string, data: string, type: string = 'text/plain'): void
+	public static downloadFile(filename: string, extension: string, data: string, type: string = 'text/plain'): void
 	{
 		const blob = new Blob([data], {
 			type: type + ';charset=utf-8',
 		})
-		saveAs(blob, Strings.webalize(filename));
+		saveAs(blob, Strings.webalize(filename) + '.' + extension);
 	}
 
 	public static base64encode(str: string): string

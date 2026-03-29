@@ -173,7 +173,7 @@ export class ProductionController
 		if (this.selectedTabs.length === 0) {
 			return;
 		}
-		Strings.downloadFile('sftools-export-' + Strings.dateToIso(new Date()) + '.sft', FileExporter.exportTabs(this.selectedTabs));
+		Strings.downloadFile('sftools-export-' + Strings.dateToIso(new Date()), 'sft', FileExporter.exportTabs(this.selectedTabs));
 	}
 
 	public addEmptyTab(): void
