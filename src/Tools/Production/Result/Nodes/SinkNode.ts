@@ -39,6 +39,11 @@ export class SinkNode extends GraphNode
 		return null;
 	}
 
+	public getStableKey(): string
+	{
+		return `sink:${this.resource.className}`;
+	}
+
 	public getVisNode(): IVisNode
 	{
 		return {
