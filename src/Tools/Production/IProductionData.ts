@@ -65,3 +65,15 @@ export interface IProductionDataApiResponse
 	[key: string]: number;
 
 }
+
+/**
+ * What a share link stores: the production line plus, when it was calculated, the solver's raw
+ * answer. The new Satisfactory Tools read the result on import so the factory arrives as it was
+ * shown here instead of being recalculated by a different solver.
+ */
+export interface IProductionShareData extends IProductionData
+{
+
+	result?: IProductionDataApiResponse;
+
+}

@@ -37,6 +37,8 @@ import {SchematicFilterComponent} from '@src/Module/Components/SchematicFilterCo
 import {SchematicController} from '@src/Module/Controllers/SchematicController';
 import {April} from '@src/Utils/April';
 import {DataProvider} from '@src/Data/DataProvider';
+import {NewToolsService} from '@src/Module/Services/NewToolsService';
+import {BasePath} from '@src/Utils/BasePath';
 
 export class AppModule
 {
@@ -350,7 +352,7 @@ export class AppModule
 			$rootScope.aprilMode = April.isApril();
 			$rootScope.aprilModePossible = April.isAprilPossible();
 
-			const path = document.location.pathname;
+			const path = BasePath.strip(document.location.pathname);
 			let v = '0.8';
 			if (path.indexOf('/1.0-ficsmas') !== -1) {
 				v = '1.0-ficsmas';
@@ -361,7 +363,16 @@ export class AppModule
 			DataProvider.change(v);
 
 			$rootScope.changeVersion = (ver: string) => {
-				document.location.href = document.location.href.replace($rootScope.version, ver);
+				// swap only the first path segment after the base, never the base itself or the query string;
+				// the location is read now, not at load time, because ui-router has changed it since (pushState)
+				const base = BasePath.get();
+				const segments = BasePath.strip(document.location.pathname).substring(1).split('/');
+				if (segments[0] === $rootScope.version) {
+					segments[0] = ver;
+				} else {
+					segments.unshift(ver);
+				}
+				document.location.href = base + segments.join('/') + document.location.search + document.location.hash;
 			};
 
 			$transitions.onStart({}, (transition: ITransitionObject<{version: string, share?: string}>) => {
@@ -393,11 +404,12 @@ export class AppModule
 			});
 
 			$timeout(() => {
+				// the "Old version!" warning; the modal only exists on 0.8 (ng-if), elsewhere this is a no-op
 				$('#modal').modal({
 					backdrop: 'static',
 					keyboard: false,
 				});
-			})
+			});
 		}]);
 
 		this.app.filter('number', () => {
@@ -464,6 +476,7 @@ export class AppModule
 		this.app.service('BuildingFiltersService', BuildingFiltersService);
 		this.app.service('SchematicFiltersService', SchematicFiltersService);
 		this.app.service('DataStorageService', DataStorageService);
+		this.app.service('NewToolsService', NewToolsService);
 		this.app.service('ComponentOptionsService', ComponentOptionsService);
 
 		this.app.controller('HomeController', HomeController);

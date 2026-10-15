@@ -9,7 +9,13 @@ Allow from all
 # enable cool URL
 <IfModule mod_rewrite.c>
 	RewriteEngine On
-	# RewriteBase /
+
+	# This app is served both at the document root (/) and, since the new tools took over the root, from a subfolder
+	# via an Apache Alias in the vhost: `Alias /old /path/to/old/www`. There is no RewriteBase: the base is computed
+	# per request instead. %{REQUEST_URI} is the full URL path (e.g. /old/1.0/production) and $1 is the path
+	# relative to this directory (e.g. 1.0/production); stripping $1 from the end of the URI leaves the base (/old/ or /).
+	RewriteCond %{REQUEST_URI}::$1 ^(.*?/)(.*)::\2$
+	RewriteRule ^(.*)$ - [E=BASE:%1]
 
 	# prevents files starting with dot to be viewed by browser
 	RewriteRule /\.|^\.(?!well-known/) - [F]
@@ -17,7 +23,7 @@ Allow from all
 	# front controller
 	RewriteCond %{REQUEST_FILENAME} !-f
 	RewriteCond %{REQUEST_FILENAME} !-d
-	RewriteRule !\.(pdf|js|ico|gif|jpg|png|css|rar|zip|tar\.gz|map)$ index.php [L]
+	RewriteRule !\.(pdf|js|ico|gif|jpg|png|css|rar|zip|tar\.gz|map)$ %{ENV:BASE}index.php [L]
 </IfModule>
 
 # enable gzip compression

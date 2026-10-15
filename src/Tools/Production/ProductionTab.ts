@@ -6,7 +6,7 @@ import axios from 'axios';
 import {Strings} from '@src/Utils/Strings';
 import {IItemSchema} from '@src/Schema/IItemSchema';
 import {Callbacks} from '@src/Utils/Callbacks';
-import {IProductionData, IProductionDataApiRequest, IProductionDataRequestInput, IProductionDataRequestItem} from '@src/Tools/Production/IProductionData';
+import {IProductionData, IProductionDataApiRequest, IProductionDataApiResponse, IProductionDataRequest, IProductionDataRequestInput, IProductionDataRequestItem, IProductionShareData} from '@src/Tools/Production/IProductionData';
 import {ResultStatus} from '@src/Tools/Production/ResultStatus';
 import {Solver} from '@src/Solver/Solver';
 import {ProductionResult} from '@src/Tools/Production/Result/ProductionResult';
@@ -40,6 +40,9 @@ export class ProductionTab
 	public shareLink: string = '';
 	public resultStatus: ResultStatus = ResultStatus.NO_INPUT;
 	public resultNew: ProductionResult|undefined;
+	// the solver's raw answer behind resultNew, kept so a share can carry the calculated result
+	// over to the new tools instead of making them recalculate it (their solver differs)
+	public lastResponse: IProductionDataApiResponse|undefined;
 	public easter: boolean = false;
 	public data: IProductionData;
 
@@ -94,51 +97,7 @@ export class ProductionTab
 		this.resultStatus = ResultStatus.CALCULATING;
 
 		const calc = () => {
-			const apiRequest: IProductionDataApiRequest = angular.copy(this.data.request) as IProductionDataApiRequest;
-			switch (this.version) {
-				case '0.8':
-					apiRequest.gameVersion = '0.8.0';
-					break;
-				case '1.0-ficsmas':
-					apiRequest.gameVersion = '1.0.0-ficsmas';
-					break;
-				default:
-					apiRequest.gameVersion = '1.0.0';
-			}
-
-			const blockedMachines = apiRequest.blockedMachines || [];
-			const allowedAlts: string[] = [];
-			for (const recipeClass of apiRequest.allowedAlternateRecipes) {
-				const recipe = data.getRecipeByClassName(recipeClass);
-				if (recipe) {
-					let allowed = true;
-					for (const machineClass of blockedMachines) {
-						if (recipe.producedIn.indexOf(machineClass) !== -1) {
-							allowed = false;
-						}
-					}
-					if (allowed) {
-						allowedAlts.push(recipeClass);
-					}
-				}
-			}
-			apiRequest.allowedAlternateRecipes = allowedAlts;
-
-			const blockedRecipes: string[] = [];
-			for (const recipe of data.getBaseItemRecipes()) {
-				let allowed = apiRequest.blockedRecipes.indexOf(recipe.className) === -1;
-				for (const machineClass of blockedMachines) {
-					if (recipe.producedIn.indexOf(machineClass) !== -1) {
-						allowed = false;
-					}
-				}
-				if (!allowed) {
-					blockedRecipes.push(recipe.className);
-				}
-			}
-			apiRequest.blockedRecipes = blockedRecipes;
-
-			delete apiRequest.blockedMachines;
+			const apiRequest = ProductionTab.buildApiRequest(this.data.request, this.version);
 
 			Solver.solveProduction(apiRequest, (result) => {
 				const res = () => {
@@ -154,12 +113,14 @@ export class ProductionTab
 
 					if (!length) {
 						this.resultNew = undefined;
+						this.lastResponse = undefined;
 						this.resultStatus = ResultStatus.NO_RESULT;
 						return;
 					}
 
 					const factory = new ProductionResultFactory;
 					this.resultNew = factory.create(apiRequest, result, DataProvider.get());
+					this.lastResponse = result;
 					this.resultStatus = ResultStatus.RESULT;
 				};
 
@@ -228,6 +189,61 @@ export class ProductionTab
 		return this.state.sinkableResourcesSortBy === 'name' ? item.name : item.sinkPoints;
 	}
 
+	/**
+	 * The request as the solver API wants it: machine blocks are folded into the recipe lists
+	 * (the API knows nothing about machines) and the game version is named the API's way.
+	 * Static so the migration to the new tools can solve tabs that are not open.
+	 */
+	public static buildApiRequest(request: IProductionDataRequest, version: string): IProductionDataApiRequest
+	{
+		const apiRequest: IProductionDataApiRequest = angular.copy(request) as IProductionDataApiRequest;
+		switch (version) {
+			case '0.8':
+				apiRequest.gameVersion = '0.8.0';
+				break;
+			case '1.0-ficsmas':
+				apiRequest.gameVersion = '1.0.0-ficsmas';
+				break;
+			default:
+				apiRequest.gameVersion = '1.0.0';
+		}
+
+		const blockedMachines = apiRequest.blockedMachines || [];
+		const allowedAlts: string[] = [];
+		for (const recipeClass of apiRequest.allowedAlternateRecipes) {
+			const recipe = data.getRecipeByClassName(recipeClass);
+			if (recipe) {
+				let allowed = true;
+				for (const machineClass of blockedMachines) {
+					if (recipe.producedIn.indexOf(machineClass) !== -1) {
+						allowed = false;
+					}
+				}
+				if (allowed) {
+					allowedAlts.push(recipeClass);
+				}
+			}
+		}
+		apiRequest.allowedAlternateRecipes = allowedAlts;
+
+		const blockedRecipes: string[] = [];
+		for (const recipe of data.getBaseItemRecipes()) {
+			let allowed = apiRequest.blockedRecipes.indexOf(recipe.className) === -1;
+			for (const machineClass of blockedMachines) {
+				if (recipe.producedIn.indexOf(machineClass) !== -1) {
+					allowed = false;
+				}
+			}
+			if (!allowed) {
+				blockedRecipes.push(recipe.className);
+			}
+		}
+		apiRequest.blockedRecipes = blockedRecipes;
+
+		delete apiRequest.blockedMachines;
+		return apiRequest;
+	}
+
 	public copyShareLink(): void
 	{
 		if (this.easter) {
@@ -239,9 +255,13 @@ export class ProductionTab
 			Strings.copyToClipboard(this.shareLink, 'Link for sharing has been copied to clipboard.');
 			return;
 		}
-		const shareData = angular.copy(this.data);
+		const shareData: IProductionShareData = angular.copy(this.data);
 		shareData.metadata.name = this.name;
 		shareData.metadata.icon = this.icon;
+		// the new tools import shares too; with the result attached they can show this exact factory
+		if (this.lastResponse) {
+			shareData.result = this.lastResponse;
+		}
 		axios({
 			method: 'POST',
 			url: 'https://api.satisfactorytools.com/v2/share/?version=' + this.version,

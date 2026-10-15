@@ -1,8 +1,8 @@
 <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-primary">
 	<div class="container-fluid px-xl-5 px-lg-4 px-md-3 px-sm-2 px-1">
 		<a class="navbar-brand" ui-sref="home">
-			<img src="/assets/images/logo/satisfactorySmall.png" height="40" class="d-sm-inline-block d-none">
-			<img src="/assets/images/logo/tools.png" height="40">
+			<img src="assets/images/logo/satisfactorySmall.png" height="40" class="d-sm-inline-block d-none">
+			<img src="assets/images/logo/tools.png" height="40">
 		</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -44,6 +44,13 @@
 				</li>
 			</ul>
 			<ul class="navbar-nav">
+				<li class="nav-item" ng-if="newTools.visible">
+					<a class="nav-link" ng-href="{{newTools.url}}?from=old-tools" target="_self" ng-click="newTools.trackNavbarLink()">
+						<span class="fas fa-fw fa-rocket"></span>
+						Open the new Tools
+						<span class="badge badge-success">NEW</span>
+					</a>
+				</li>
 				<li class="nav-item" ng-if="$root.aprilModePossible">
 					<a class="nav-link" ng-if="$root.aprilMode" ng-click="disable()">
 						Disable April UI
@@ -108,6 +115,12 @@
 		</div>
 	</div>
 
+	<div class="alert alert-info py-1 mb-2" ng-if="newTools.visible">
+		You are using the old Satisfactory Tools. The new version lives at
+		<a class="alert-link" ng-href="{{newTools.url}}?from=old-tools" target="_self" ng-click="newTools.trackNavbarLink()">the main address</a>
+		now and already has your production lines - this old version stays here for a while.
+	</div>
+
 	<!--<div class="alert alert-danger alert-dismissible fade show" ng-if="$root.version == '1.0'">
 		<b>Looking for FICSMAS production?</b> Change your version in top right corner! Merry FICSMAS!
 		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -146,4 +159,3 @@
 		</div>
 	</div>
 </div>
-
