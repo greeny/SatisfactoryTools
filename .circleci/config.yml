@@ -1,4 +1,4 @@
-version: 2
+version: 2.1
 jobs:
     build:
         docker:
@@ -28,8 +28,13 @@ jobs:
                 command: |
                     if [ "${CIRCLE_BRANCH}" == "master" ]
                     then
-                        rsync -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" -arvc www/* $DEPLOY_USER@$DEPLOY_SERVER:$DEPLOY_PATH/www
+                        rsync -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" -arvc www/ $DEPLOY_USER@$DEPLOY_SERVER:$DEPLOY_PATH/www
                     elif [ "${CIRCLE_BRANCH}" == "dev" ]
                     then
-                        rsync -e "ssh -o StrictHostKeyChecking=no -o  UserKnownHostsFile=/dev/null" -arvc www/* $DEPLOY_USER@$DEPLOY_SERVER:$DEPLOY_PATH_TEST/www
+                        rsync -e "ssh -o StrictHostKeyChecking=no -o  UserKnownHostsFile=/dev/null" -arvc www/ $DEPLOY_USER@$DEPLOY_SERVER:$DEPLOY_PATH_TEST/www
                     fi
+
+workflows:
+    build:
+        jobs:
+            - build
