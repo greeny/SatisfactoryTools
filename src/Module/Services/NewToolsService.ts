@@ -14,7 +14,7 @@ export class NewToolsService
 	// whether the navbar item and the banner pointing at the new tools are shown; off while this app is only being
 	// moved to its subfolder (the root is still this app, so there is nothing to point at yet), on once the new
 	// tools answer at the root - flip it and deploy
-	public static readonly PROMOTE_NEW_TOOLS = false;
+	public static readonly PROMOTE_NEW_TOOLS = true;
 
 	public static $inject = ['$window'];
 
