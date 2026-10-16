@@ -1,3 +1,5 @@
+# **Deprecated, replaced by https://github.com/SatisfactoryTools/SFTools**
+
 # SatisfactoryTools
 Satisfactory Tools for planning and building the perfect base.
 
