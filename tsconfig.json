@@ -12,7 +12,7 @@
 			"esnext",
 			"dom"
 		],
-		"target": "es5",
+		"target": "es2015",
 		"paths": {
 			"@src/*": ["./src/*"],
 			"@data/*": ["./data/*"],

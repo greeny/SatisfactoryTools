@@ -85,6 +85,11 @@ export class RecipeNode extends GraphNode
 		};
 	}
 
+	public getStableKey(): string
+	{
+		return `recipe:${this.recipeData.recipe.className}@${this.recipeData.machine.className}`;
+	}
+
 	private getMultiplier(): number
 	{
 		return this.recipeData.amount * this.recipeData.machine.metadata.manufacturingSpeed * (this.recipeData.clockSpeed / 100) * (60 / this.recipeData.recipe.time);

@@ -13,6 +13,7 @@ export interface IProductionDataMetadata
 	icon: string|null;
 	schemaVersion: number;
 	gameVersion: string;
+	tabId?: string;
 
 }
 

@@ -53,6 +53,11 @@ export class ProductionTab
 	{
 		if (productionData) {
 			this.data = productionData;
+
+			// Back-fill tabId for tabs that were saved before this feature existed.
+			if (!this.data.metadata.tabId) {
+				this.data.metadata.tabId = ProductionTab.generateTabId();
+			}
 		} else {
 			this.resetData();
 			this.addEmptyProduct();
@@ -148,6 +153,7 @@ export class ProductionTab
 				icon: null,
 				schemaVersion: 1,
 				gameVersion: '0',
+				tabId: ProductionTab.generateTabId(),
 			},
 			request: {
 				allowedAlternateRecipes: [],
@@ -161,6 +167,17 @@ export class ProductionTab
 				resourceWeight: angular.copy(Data.resourceWeights),
 			},
 		};
+	}
+
+	private static generateTabId(): string
+	{
+		// crypto.randomUUID is available in all modern browsers
+		if (typeof crypto !== 'undefined' && crypto.randomUUID) {
+			return crypto.randomUUID();
+		}
+
+		// Fallback for older environments
+		return 'tab-' + Date.now().toString(36) + '-' + Math.random().toString(36).slice(2);
 	}
 
 	get icon(): string|null

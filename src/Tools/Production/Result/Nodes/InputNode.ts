@@ -39,6 +39,11 @@ export class InputNode extends GraphNode
 		return null;
 	}
 
+	public getStableKey(): string
+	{
+		return `input:${this.resource.className}`;
+	}
+
 	public getVisNode(): IVisNode
 	{
 		return {

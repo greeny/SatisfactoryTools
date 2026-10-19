@@ -17,6 +17,8 @@ export abstract class GraphNode
 
 	public abstract getVisNode(): IVisNode;
 
+	public abstract getStableKey(): string;
+
 	public hasOutputTo(target: GraphNode): boolean
 	{
 		for (const edge of this.connectedEdges) {

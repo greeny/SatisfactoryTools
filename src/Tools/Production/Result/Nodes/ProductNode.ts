@@ -39,6 +39,11 @@ export class ProductNode extends GraphNode
 		return null;
 	}
 
+	public getStableKey(): string
+	{
+		return `product:${this.resource.className}`;
+	}
+
 	public getVisNode(): IVisNode
 	{
 		return {

@@ -39,6 +39,11 @@ export class MinerNode extends GraphNode
 		return null;
 	}
 
+	public getStableKey(): string
+	{
+		return `miner:${this.resource.className}`;
+	}
+
 	public getVisNode(): IVisNode
 	{
 		return {

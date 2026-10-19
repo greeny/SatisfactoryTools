@@ -39,6 +39,11 @@ export class ByproductNode extends GraphNode
 		return null;
 	}
 
+	public getStableKey(): string
+	{
+		return `byproduct:${this.resource.className}`;
+	}
+
 	public getVisNode(): IVisNode
 	{
 		return {
