@@ -1,0 +1,75 @@
+// Mobile (< 768px) and small-phone (< 576px) fixes for Satisfactory Tools personal.
+
+@media (max-width: 767px) {
+	// Tab card header: icon + long name + 5-button group must wrap instead of overflowing
+	.production-input > .card-header {
+		flex-wrap: wrap;
+
+		.production-line-name {
+			font-size: 18px;
+			min-width: 0;
+			flex: 1 1 auto;
+		}
+
+		.production-line-name-title span {
+			font-size: 18px;
+		}
+
+		.btn-group {
+			flex-wrap: wrap;
+		}
+	}
+
+	// Recipe list card headers: fixed 48px height with title + input + buttons does not fit
+	.recipe-list-card .card-header {
+		height: auto;
+		min-height: 48px;
+		flex-wrap: wrap;
+
+		input {
+			flex: 1 1 120px;
+			min-width: 0;
+		}
+	}
+
+	.card-header-with-buttons {
+		height: auto;
+		min-height: 48px;
+		flex-wrap: wrap;
+
+		input {
+			flex: 1 1 120px;
+			min-width: 0;
+		}
+	}
+
+	// Big result messages should not be huge on a phone
+	.visualization-result {
+		font-size: 18px;
+		padding: 15px 5px;
+	}
+
+	// Graph: use viewport height instead of a fixed 800px
+	.visualization {
+		height: 70vh;
+	}
+
+	// Toasts should not cover the whole screen width
+	.toasts {
+		left: 10px;
+		max-width: calc(100vw - 20px);
+	}
+}
+
+@media (max-width: 575px) {
+	// Allow table cells to wrap instead of forcing horizontal page scroll
+	.table-cell-adjust-size {
+		white-space: normal;
+	}
+
+	// "X out of Y selected" header wraps its buttons too
+	.production-input > .card-header .btn-group .btn {
+		width: auto;
+		min-width: 40px;
+	}
+}
