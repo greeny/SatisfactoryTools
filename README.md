@@ -14,6 +14,12 @@ Satisfactory Tools for planning and building the perfect base.
 - `yarn build`
 - Set up a virtual host pointing to `/www` directory (using e.g. Apache or ngnix)
 
+## MCP Server (AI assistants)
+
+SatisfactoryTools includes an MCP server published to npm as [`satisfactory-tools-mcp`](mcp/README.md). It lets AI assistants query game data, plan production chains, and read/write `.sft` save files.
+
+Supported clients include **Claude**, **ChatGPT**, **Cursor**, **Windsurf**, **VS Code Copilot**, **Zed**, and **Continue.dev**. See [`mcp/README.md`](mcp/README.md) for setup instructions for each.
+
 ## Contributing
 Any pull requests are welcome, though some rules must be followed:
 - try to follow current coding style (there's `tslint` and `.editorconfig`, those should help you with that)

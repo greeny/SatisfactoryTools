@@ -1,0 +1,37 @@
+{
+  "name": "satisfactory-tools-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for querying Satisfactory game data and planning production",
+  "private": false,
+  "main": "dist/index.js",
+  "bin": {
+    "satisfactory-tools-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist/"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "esbuild src/index.ts --bundle=true --platform=node --target=node18 --format=cjs --outfile=dist/index.js \"--banner:js=#!/usr/bin/env node\"",
+    "postbuild": "chmod +x dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "start": "node dist/index.js"
+  },
+  "keywords": [
+    "satisfactory",
+    "mcp",
+    "model-context-protocol",
+    "claude"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "esbuild": "^0.25.0",
+    "typescript": "^5.0.0"
+  }
+}
