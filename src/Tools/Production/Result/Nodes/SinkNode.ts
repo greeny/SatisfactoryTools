@@ -46,10 +46,10 @@ export class SinkNode extends GraphNode
 			label: this.getTitle(),
 			color: {
 				border: 'rgba(0, 0, 0, 0)',
-				background: 'rgba(217, 83, 79, 1)',
+				background: `rgba(217, 83, 79, ${this.done ? GraphNode.DONE_OPACITY : 1})`,
 				highlight: {
 					border: 'rgba(238, 238, 238, 1)',
-					background: 'rgba(224, 117, 114, 1)',
+					background: `rgba(224, 117, 114, ${this.done ? GraphNode.DONE_OPACITY : 1})`,
 				},
 			},
 			font: {
